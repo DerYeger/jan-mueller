@@ -45,6 +45,11 @@ export default defineComponent({
       items: Object.values(routes),
     }
   },
+  head() {
+    return {
+      title: this.$store.state.title,
+    }
+  },
   computed: {
     title() {
       return this.$store.state.title
