@@ -11,9 +11,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from '@nuxtjs/composition-api'
 
-export default Vue.extend({
+export default defineComponent({
   layout: 'empty',
   props: {
     error: {
@@ -28,7 +28,7 @@ export default Vue.extend({
     }
   },
   head() {
-    const title =
+    const title: string =
       this.error.statusCode === 404 ? this.pageNotFound : this.otherError
     return {
       title,
