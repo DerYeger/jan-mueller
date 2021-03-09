@@ -13,11 +13,11 @@
 
 <script lang="ts">
 import { contentFunc } from '@nuxt/content/types/content'
-import Vue from 'vue'
+import { defineComponent } from '@nuxtjs/composition-api'
 import { Project } from '~/model/project'
 import { routes } from '~/model/routes'
 
-export default Vue.extend({
+export default defineComponent({
   async asyncData({ $content }: { $content: contentFunc }) {
     const projects = (await $content('projects')
       .only(['title', 'slug', 'description'])

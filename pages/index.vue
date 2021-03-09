@@ -5,10 +5,10 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from '@nuxtjs/composition-api'
 import { routes } from '~/model/routes'
 
-export default Vue.extend({
+export default defineComponent({
   mounted() {
     this.$store.commit('setTitle', routes.home.title)
   },

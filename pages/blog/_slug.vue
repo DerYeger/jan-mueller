@@ -9,12 +9,12 @@
 
 <script lang="ts">
 import { contentFunc } from '@nuxt/content/types/content'
-import Vue from 'vue'
+import { defineComponent } from '@nuxtjs/composition-api'
 import { Dictionary } from 'vue-router/types/router'
 import { BlogPost, hasTags } from '~/model/blog-post'
 import { formatDate } from '~/model/utils'
 
-export default Vue.extend({
+export default defineComponent({
   async asyncData({
     $content,
     params,
