@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - jan-mueller',
-    title: 'jan-mueller',
+    titleTemplate: '%s - Jan Müller',
+    title: 'Jan Müller',
     htmlAttrs: {
       lang: 'en',
     },
