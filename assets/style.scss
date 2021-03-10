@@ -2,9 +2,26 @@ html {
   overflow-y: auto !important;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 64rem;
+  }
+}
+
+.article-container {
+  width: 100%;
+}
+
 article {
+  margin-bottom: 3rem;
+
   h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   h2 {

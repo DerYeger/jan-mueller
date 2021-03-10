@@ -1,19 +1,21 @@
 <template>
-  <article>
-    <h1>{{ project.title }}</h1>
-    <p>Last update: {{ formatDate(project.updatedAt) }}</p>
-    <img :src="repoCardSrc" alt="Repository card." />
-    <table-of-contents
-      v-if="project.toc.length > 0"
-      :document="project"
-    ></table-of-contents>
-    <nuxt-content :document="project" />
+  <div class="article-container">
+    <article>
+      <h1>{{ project.title }}</h1>
+      <p>Last update: {{ formatDate(project.updatedAt) }}</p>
+      <img :src="repoCardSrc" alt="Repository card." />
+      <table-of-contents
+        v-if="project.toc.length > 0"
+        :document="project"
+      ></table-of-contents>
+      <nuxt-content :document="project" />
+    </article>
     <document-switcher
       :collection="'projects'"
       :prev="prev"
       :next="next"
     ></document-switcher>
-  </article>
+  </div>
 </template>
 
 <script lang="ts">
