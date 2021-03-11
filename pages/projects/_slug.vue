@@ -22,36 +22,39 @@
 import { contentFunc, IContentDocument } from '@nuxt/content/types/content'
 import { defineComponent } from '@nuxtjs/composition-api'
 import { Dictionary } from 'vue-router/types/router'
+import { NuxtAppOptions } from '@nuxt/types'
 import { Project } from '~/model/project'
 import { formatDate } from '~/model/utils'
-import { routes } from '~/model/routes'
+import { localizePath, routes } from '~/model/routes'
 
 export default defineComponent({
   async asyncData({
+    app,
     $content,
     params,
   }: {
+    app: NuxtAppOptions
     $content: contentFunc
     params: Dictionary<string>
   }) {
     const project = (await $content(
-      'projects',
+      'en/projects',
       params.slug
     ).fetch<Project>()) as Project
 
-    const [prev, next] = (await $content('projects')
-      .only(['title', 'slug'])
+    const [prev, next] = (await $content('en/projects')
+      .only(['title', 'path'])
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
-      .fetch()) as Array<IContentDocument>
+      .fetch()) as Array<IContentDocument | null>
 
     return {
       project,
       repoCardSrc:
         'https://github-readme-stats.vercel.app/api/pin/?username=DerYeger&repo=' +
         project.repository,
-      prev,
-      next,
+      prev: localizePath(prev, app),
+      next: localizePath(next, app),
     }
   },
   mounted() {

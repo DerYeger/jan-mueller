@@ -10,11 +10,7 @@
       ></table-of-contents>
       <nuxt-content :document="post" />
     </article>
-    <document-switcher
-      :collection="'blog'"
-      :prev="prev"
-      :next="next"
-    ></document-switcher>
+    <document-switcher :prev="prev" :next="next"></document-switcher>
   </div>
 </template>
 
@@ -22,33 +18,36 @@
 import { contentFunc, IContentDocument } from '@nuxt/content/types/content'
 import { defineComponent } from '@nuxtjs/composition-api'
 import { Dictionary } from 'vue-router/types/router'
+import { NuxtAppOptions } from '@nuxt/types'
 import { BlogPost, hasTags } from '~/model/blog-post'
+import { localizePath, routes } from '~/model/routes'
 import { formatDate } from '~/model/utils'
-import { routes } from '~/model/routes'
 
 export default defineComponent({
   async asyncData({
+    app,
     $content,
     params,
   }: {
+    app: NuxtAppOptions
     $content: contentFunc
     params: Dictionary<string>
   }) {
     const post = (await $content(
-      'blog',
+      'en/blog/',
       params.slug
     ).fetch<BlogPost>()) as BlogPost
 
-    const [prev, next] = (await $content('blog')
-      .only(['title', 'slug'])
+    const [prev, next] = (await $content('en/blog')
+      .only(['title', 'path'])
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
-      .fetch()) as Array<IContentDocument>
+      .fetch()) as Array<IContentDocument | null>
 
     return {
       post,
-      prev,
-      next,
+      prev: localizePath(prev, app),
+      next: localizePath(next, app),
     }
   },
   mounted() {

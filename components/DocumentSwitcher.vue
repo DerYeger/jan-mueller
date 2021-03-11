@@ -1,55 +1,53 @@
 <template>
   <p class="link-container">
-    <span v-if="prev">
-      Previous:
-      <NuxtLink
-        :to="{ name: toName, params: { slug: prev.slug } }"
-        class="text-primary font-bold hover:underline"
-        >{{ prev.title }}
-      </NuxtLink>
-    </span>
+    <NuxtLink v-if="prev" :to="prev.path">
+      <v-icon color="'primary">mdi-chevron-left</v-icon>
+      <span>{{ prev.title }}</span>
+    </NuxtLink>
     <span v-else></span>
-    <span v-if="next">
-      Next:
-      <NuxtLink
-        :to="{ name: toName, params: { slug: next.slug } }"
-        class="font-bold hover:underline"
-        >{{ next.title }}
-      </NuxtLink>
-    </span>
+    <NuxtLink v-if="next" to="next.path">
+      <span>{{ next.title }}</span>
+      <v-icon>mdi-chevron-right</v-icon>
+    </NuxtLink>
     <span v-else></span>
   </p>
 </template>
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
+import { IContentDocument } from '@nuxt/content/types/content'
 
 export default defineComponent({
   props: {
-    collection: {
-      type: String,
-      required: true,
-    },
     prev: {
-      type: Object,
+      type: Object as () => IContentDocument | undefined,
       default: undefined,
     },
     next: {
-      type: Object,
+      type: Object as () => IContentDocument | undefined,
       default: undefined,
     },
-  },
-  data() {
-    return {
-      toName: `${this.collection}-slug`,
-    }
   },
 })
 </script>
 
-<style>
+<style lang="scss">
 .link-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  a {
+    display: flex;
+    align-items: center;
+    color: unset;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    .v-icon + span,
+    span + .v-icon {
+      margin-left: 0.25rem;
+    }
+  }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="post of posts" :key="post.slug">
-      <v-card :to="{ name: 'blog-slug', params: { slug: post.slug } }">
+      <v-card :to="post.path">
         <v-card-title class="headline">{{ post.title }}</v-card-title>
         <v-card-text>
           <p>{{ formatDate(post.createdAt) }}</p>
@@ -15,19 +15,25 @@
 <script lang="ts">
 import { contentFunc } from '@nuxt/content/types/content'
 import { defineComponent } from '@nuxtjs/composition-api'
+import { NuxtAppOptions } from '@nuxt/types'
 import { BlogPost, hasTags } from '~/model/blog-post'
-import { routes } from '~/model/routes'
+import { localizePaths, routes } from '~/model/routes'
 import { formatDate } from '~/model/utils'
 
 export default defineComponent({
-  async asyncData({ $content }: { $content: contentFunc }) {
-    const posts = (await $content('blog')
+  async asyncData({
+    app,
+    $content,
+  }: {
+    app: NuxtAppOptions
+    $content: contentFunc
+  }) {
+    const posts = (await $content('en/blog')
       .only(['title', 'slug', 'createdAt', 'tags'])
       .sortBy('createdAt', 'desc')
       .fetch<BlogPost>()) as BlogPost[]
-
     return {
-      posts,
+      posts: localizePaths(posts, app),
     }
   },
   mounted() {

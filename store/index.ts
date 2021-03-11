@@ -3,7 +3,7 @@ export interface State {
 }
 
 export const state: () => State = () => ({
-  title: 'Home',
+  title: 'home.title',
 })
 
 export const mutations = {
