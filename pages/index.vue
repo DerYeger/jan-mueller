@@ -23,6 +23,7 @@ export default defineComponent({
   },
   mounted() {
     this.$store.commit('setTitle', routes.home.title)
+    this.$store.commit('setBreadcrumbs', [])
   },
 })
 </script>

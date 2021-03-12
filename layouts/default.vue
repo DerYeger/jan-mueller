@@ -22,7 +22,9 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="$t(title)" />
       <v-spacer />
-      <language-toggle></language-toggle>
+      <breadcrumbs />
+      <v-spacer />
+      <language-toggle />
     </v-app-bar>
     <v-main>
       <v-container>
@@ -54,6 +56,9 @@ export default defineComponent({
   computed: {
     title() {
       return this.$store.state.title
+    },
+    breadcrumbs() {
+      return this.$store.state.breadcrumbs
     },
   },
 })

@@ -17,8 +17,9 @@ import { contentFunc } from '@nuxt/content/types/content'
 import { defineComponent } from '@nuxtjs/composition-api'
 import { NuxtAppOptions } from '@nuxt/types'
 import { BlogPost, hasTags } from '~/model/blog-post'
-import { localizePaths, routes } from '~/model/routes'
+import { localizeDocumentPaths, routes } from '~/model/routes'
 import { formatDate } from '~/model/utils'
+import { blogBreadcrumb, homeBreadcrumb } from '~/model/breadcrumbs'
 
 export default defineComponent({
   async asyncData({
@@ -29,15 +30,16 @@ export default defineComponent({
     $content: contentFunc
   }) {
     const posts = (await $content('en/blog')
-      .only(['title', 'slug', 'createdAt', 'tags'])
+      .only(['title', 'path', 'createdAt', 'tags'])
       .sortBy('createdAt', 'desc')
       .fetch<BlogPost>()) as BlogPost[]
     return {
-      posts: localizePaths(posts, app),
+      posts: localizeDocumentPaths(posts, app.i18n.locale),
     }
   },
   mounted() {
     this.$store.commit('setTitle', routes.blog.title)
+    this.$store.commit('setBreadcrumbs', [homeBreadcrumb, blogBreadcrumb])
   },
   methods: {
     hasTags,

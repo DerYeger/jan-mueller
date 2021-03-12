@@ -16,7 +16,8 @@ import { contentFunc } from '@nuxt/content/types/content'
 import { defineComponent } from '@nuxtjs/composition-api'
 import { NuxtAppOptions } from '@nuxt/types'
 import { Project } from '~/model/project'
-import { localizePaths, routes } from '~/model/routes'
+import { localizeDocumentPaths, routes } from '~/model/routes'
+import { homeBreadcrumb, projectsBreadcrumb } from '~/model/breadcrumbs'
 
 export default defineComponent({
   async asyncData({
@@ -27,15 +28,16 @@ export default defineComponent({
     $content: contentFunc
   }) {
     const projects = (await $content('en/projects')
-      .only(['title', 'slug', 'description'])
+      .only(['title', 'path', 'description'])
       .sortBy('title', 'asc')
       .fetch<Project>()) as Project[]
     return {
-      projects: localizePaths(projects, app),
+      projects: localizeDocumentPaths(projects, app.i18n.locale),
     }
   },
   mounted() {
     this.$store.commit('setTitle', routes.projects.title)
+    this.$store.commit('setBreadcrumbs', [homeBreadcrumb, projectsBreadcrumb])
   },
 })
 </script>
