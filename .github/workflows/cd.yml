@@ -69,7 +69,7 @@ jobs:
           name: static-site-artifact
           path: ./dist
       - name: Create 404.html file
-        run: cp ./dist/index.html ./dist/404.html
+        run: cp ./dist/200.html ./dist/404.html
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
