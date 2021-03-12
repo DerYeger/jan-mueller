@@ -49,5 +49,9 @@ export default defineComponent({
       margin-left: 0.25rem;
     }
   }
+
+  a:hover span {
+    text-decoration: underline;
+  }
 }
 </style>

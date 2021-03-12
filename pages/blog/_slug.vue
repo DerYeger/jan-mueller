@@ -14,44 +14,40 @@
   </div>
 </template>
 
-<script lang="ts">
-import { contentFunc, IContentDocument } from '@nuxt/content/types/content'
+<script>
 import { defineComponent } from '@nuxtjs/composition-api'
-import { Dictionary } from 'vue-router/types/router'
-import { NuxtAppOptions } from '@nuxt/types'
-import { BlogPost, hasTags } from '~/model/blog-post'
-import { localizePath, routes } from '~/model/routes'
+import { hasTags } from '~/model/blog-post'
+import { localizeDocumentPath, routes } from '~/model/routes'
 import { formatDate } from '~/model/utils'
+import {
+  blogBreadcrumb,
+  documentBreadcrumb,
+  homeBreadcrumb,
+} from '~/model/breadcrumbs'
 
 export default defineComponent({
-  async asyncData({
-    app,
-    $content,
-    params,
-  }: {
-    app: NuxtAppOptions
-    $content: contentFunc
-    params: Dictionary<string>
-  }) {
-    const post = (await $content(
-      'en/blog/',
-      params.slug
-    ).fetch<BlogPost>()) as BlogPost
+  async asyncData({ app, $content, params }) {
+    const post = await $content('en/blog/', params.slug).fetch()
 
-    const [prev, next] = (await $content('en/blog')
+    const [prev, next] = await $content('en/blog')
       .only(['title', 'path'])
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
-      .fetch()) as Array<IContentDocument | null>
+      .fetch()
 
     return {
       post,
-      prev: localizePath(prev, app),
-      next: localizePath(next, app),
+      prev: localizeDocumentPath(prev, app.i18n.locale),
+      next: localizeDocumentPath(next, app.i18n.locale),
     }
   },
   mounted() {
     this.$store.commit('setTitle', routes.blog.title)
+    this.$store.commit('setBreadcrumbs', [
+      homeBreadcrumb,
+      blogBreadcrumb,
+      documentBreadcrumb(this.post, this.$i18n.locale),
+    ])
   },
   methods: {
     hasTags,

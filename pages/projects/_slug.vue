@@ -18,47 +18,42 @@
   </div>
 </template>
 
-<script lang="ts">
-import { contentFunc, IContentDocument } from '@nuxt/content/types/content'
+<script>
 import { defineComponent } from '@nuxtjs/composition-api'
-import { Dictionary } from 'vue-router/types/router'
-import { NuxtAppOptions } from '@nuxt/types'
-import { Project } from '~/model/project'
 import { formatDate } from '~/model/utils'
-import { localizePath, routes } from '~/model/routes'
+import { localizeDocumentPath, routes } from '~/model/routes'
+import {
+  documentBreadcrumb,
+  homeBreadcrumb,
+  projectsBreadcrumb,
+} from '~/model/breadcrumbs'
 
 export default defineComponent({
-  async asyncData({
-    app,
-    $content,
-    params,
-  }: {
-    app: NuxtAppOptions
-    $content: contentFunc
-    params: Dictionary<string>
-  }) {
-    const project = (await $content(
-      'en/projects',
-      params.slug
-    ).fetch<Project>()) as Project
+  async asyncData({ app, $content, params }) {
+    const project = await $content('en/projects', params.slug).fetch()
 
-    const [prev, next] = (await $content('en/projects')
+    const [prev, next] = await $content('en/projects')
       .only(['title', 'path'])
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
-      .fetch()) as Array<IContentDocument | null>
+      .fetch()
 
     return {
       project,
       repoCardSrc:
         'https://github-readme-stats.vercel.app/api/pin/?username=DerYeger&repo=' +
         project.repository,
-      prev: localizePath(prev, app),
-      next: localizePath(next, app),
+      prev: localizeDocumentPath(prev, app.i18n.locale),
+      next: localizeDocumentPath(next, app.i18n.locale),
     }
   },
   mounted() {
     this.$store.commit('setTitle', routes.projects.title)
+    this.$store.commit('setBreadcrumbs', [
+      homeBreadcrumb,
+      projectsBreadcrumb,
+      documentBreadcrumb(this.project, this.$i18n.locale),
+    ])
   },
   methods: {
     formatDate,

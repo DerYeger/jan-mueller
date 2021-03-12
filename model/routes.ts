@@ -1,4 +1,3 @@
-import { NuxtAppOptions } from '@nuxt/types'
 import { IContentDocument } from '@nuxt/content/types/content'
 
 export interface Route {
@@ -25,27 +24,36 @@ export const routes: Record<string, Route> = {
   },
 }
 
-export function localizePaths<T extends IContentDocument>(
+export function localizeDocumentPaths<T extends IContentDocument>(
   documents: T[],
-  app: NuxtAppOptions
+  locale: string
 ): T[] {
-  const prefix = app.i18n.locale === 'en' ? '' : `/${app.i18n.locale}`
+  const prefix = locale === 'en' ? '' : `/${locale}`
   return documents.map((document) => ({
     ...document,
     path: document.path.replace('/en', prefix),
   }))
 }
 
-export function localizePath<T extends IContentDocument>(
+export function localizeDocumentPath<T extends IContentDocument>(
   document: T | null,
-  app: NuxtAppOptions
+  locale: string
 ): T | undefined {
   if (document === null) {
     return undefined
   }
-  const prefix = app.i18n.locale === 'en' ? '' : `/${app.i18n.locale}`
+  const prefix = locale === 'en' ? '' : `/${locale}`
   return {
     ...document,
     path: document.path.replace('/en', prefix),
+  }
+}
+
+export function localizePath(path: string, locale: string): string {
+  const prefix = locale === 'en' ? '' : `/${locale}`
+  if (path.startsWith('/en')) {
+    return path.replace('/en', prefix)
+  } else {
+    return `${prefix}${path}`
   }
 }
