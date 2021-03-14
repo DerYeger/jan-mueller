@@ -1,4 +1,7 @@
 {
+  "actions": {
+    "read-more": "Mehr lesen"
+  },
   "blog": {
     "title": "Blog"
   },
