@@ -1,15 +1,11 @@
 <template>
-  <div>
-    <div v-for="post of posts" :key="post.slug">
-      <v-card :to="post.path">
-        <v-card-title class="headline">{{ post.title }}</v-card-title>
-        <v-card-text>
-          <p>{{ formatDate(post.createdAt) }}</p>
-          <p v-if="hasTags(post)">Tags: {{ post.tags.join(', ') }}</p>
-        </v-card-text>
-      </v-card>
-    </div>
-  </div>
+  <v-container>
+    <v-row>
+      <v-col v-for="post of posts" :key="post.slug">
+        <blog-post-card :blog-post="post" />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script lang="ts">
@@ -30,7 +26,7 @@ export default defineComponent({
     $content: contentFunc
   }) {
     const posts = (await $content('en/blog')
-      .only(['title', 'path', 'createdAt', 'tags'])
+      .only(['title', 'path', 'createdAt', 'tags', 'image'])
       .sortBy('createdAt', 'desc')
       .fetch<BlogPost>()) as BlogPost[]
     return {

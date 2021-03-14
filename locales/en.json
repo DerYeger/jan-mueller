@@ -1,9 +1,15 @@
 {
+  "actions": {
+    "read-more": "Read More"
+  },
   "blog": {
     "title": "Blog"
   },
   "home": {
     "title": "Home"
+  },
+  "misc": {
+    "tags": "Tags"
   },
   "projects": {
     "title": "Projects"
