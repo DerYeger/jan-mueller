@@ -2,13 +2,13 @@ html {
   overflow-y: auto !important;
 }
 
-.container {
+.page-container {
   display: flex;
   justify-content: center;
 }
 
 @media (min-width: 1024px) {
-  .container {
+  .page-container {
     width: 64rem;
   }
 }
