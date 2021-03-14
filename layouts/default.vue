@@ -21,18 +21,17 @@
     <v-app-bar :clipped-left="true" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="$t(title)" />
-      <v-spacer />
-      <breadcrumbs />
-      <v-spacer />
-      <language-toggle />
     </v-app-bar>
     <v-main>
+      <breadcrumbs />
       <v-container class="page-container">
         <nuxt />
       </v-container>
     </v-main>
     <v-footer app>
       <span>&copy; {{ new Date().getFullYear() }}, Jan Müller</span>
+      <v-spacer />
+      <language-toggle />
     </v-footer>
   </v-app>
 </template>
