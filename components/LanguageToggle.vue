@@ -4,7 +4,8 @@
       v-for="locale of locales"
       :key="locale.code"
       :to="switchLocalePath(locale.code)"
-      elevation="0"
+      text
+      small
     >
       {{ locale.name }}
     </v-btn>
