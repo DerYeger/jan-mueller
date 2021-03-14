@@ -12,7 +12,7 @@
       >
         <v-icon v-if="item.text.startsWith('mdi-')">{{ item.text }}</v-icon>
         <template v-else>
-          {{ item.text }}
+          {{ $t(item.text) }}
         </template>
       </v-breadcrumbs-item>
     </template>
@@ -31,7 +31,7 @@ export default defineComponent({
         return []
       }
       return rawCrumbs.map((crumb, index) => ({
-        text: this.$t(crumb.text),
+        text: crumb.text,
         to: this.localePath(crumb.to, locale),
         disabled: index >= rawCrumbs.length - 1,
       }))
