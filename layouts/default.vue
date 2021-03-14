@@ -27,7 +27,7 @@
       <language-toggle />
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container class="page-container">
         <nuxt />
       </v-container>
     </v-main>
