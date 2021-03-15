@@ -1,14 +1,18 @@
 <template>
-  <div>
-    <div v-for="project of projects" :key="project.slug">
-      <v-card :to="project.path">
-        <v-card-title class="headline">{{ project.title }}</v-card-title>
+  <vue-masonry-wall
+    :items="projects"
+    :ssr="{ columns: 1 }"
+    :options="{ width: 400, padding: 12 }"
+  >
+    <template #default="{ item }">
+      <v-card :to="item.path">
+        <v-card-title class="headline">{{ item.title }}</v-card-title>
         <v-card-text>
-          <p>{{ project.description }}</p>
+          <p>{{ item.description }}</p>
         </v-card-text>
       </v-card>
-    </div>
-  </div>
+    </template>
+  </vue-masonry-wall>
 </template>
 
 <script lang="ts">

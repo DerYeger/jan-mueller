@@ -1,5 +1,5 @@
 <template>
-  <v-card :to="blogPost.path" min-width="16rem">
+  <v-card :to="blogPost.path">
     <v-img
       v-if="blogPost.image"
       :src="require('~/assets/images/' + blogPost.image)"

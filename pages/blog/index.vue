@@ -1,11 +1,13 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col v-for="post of posts" :key="post.slug">
-        <blog-post-card :blog-post="post" />
-      </v-col>
-    </v-row>
-  </v-container>
+  <vue-masonry-wall
+    :items="posts"
+    :ssr="{ columns: 1 }"
+    :options="{ width: 400, padding: 12 }"
+  >
+    <template #default="{ item }">
+      <blog-post-card :blog-post="item" />
+    </template>
+  </vue-masonry-wall>
 </template>
 
 <script lang="ts">
@@ -13,9 +15,9 @@ import { contentFunc } from '@nuxt/content/types/content'
 import { defineComponent } from '@nuxtjs/composition-api'
 import { NuxtAppOptions } from '@nuxt/types'
 import { BlogPost, hasTags } from '~/model/blog-post'
+import { blogBreadcrumb, homeBreadcrumb } from '~/model/breadcrumbs'
 import { localizeDocumentPaths, routes } from '~/model/routes'
 import { formatDate } from '~/model/utils'
-import { blogBreadcrumb, homeBreadcrumb } from '~/model/breadcrumbs'
 
 export default defineComponent({
   async asyncData({
