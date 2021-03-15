@@ -1,7 +1,7 @@
 <template>
-  <v-breadcrumbs :items="breadcrumbs" nuxt="true" dark large>
+  <v-breadcrumbs :items="breadcrumbs" nuxt="true" large>
     <template #divider>
-      <v-icon>mdi-chevron-right</v-icon>
+      <v-icon v-text="'mdi-chevron-right'" />
     </template>
     <template #item="{ item }">
       <v-breadcrumbs-item
@@ -10,7 +10,7 @@
         :exact="true"
         color="primary"
       >
-        <v-icon v-if="item.text.startsWith('mdi-')">{{ item.text }}</v-icon>
+        <v-icon v-if="item.text.startsWith('mdi-')" v-text="item.text" />
         <template v-else>
           {{ $t(item.text) }}
         </template>
@@ -49,6 +49,9 @@ export default defineComponent({
 
   a {
     font-weight: bold;
+  }
+
+  a:not(.v-breadcrumbs__item--disabled) {
     color: unset;
   }
 }
