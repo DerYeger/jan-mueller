@@ -1,6 +1,7 @@
 {
   "actions": {
-    "read-more": "Mehr lesen"
+    "read-more": "Mehr lesen",
+    "search": "Suchen"
   },
   "blog": {
     "title": "Blog"

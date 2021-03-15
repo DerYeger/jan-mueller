@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" :clipped="true" fixed app>
+    <v-navigation-drawer v-model="drawer" :clipped="true" fixed app dark>
       <v-list>
         <v-list-item
           v-for="(item, i) in items"
@@ -18,9 +18,11 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar :clipped-left="true" fixed app>
+    <v-app-bar :clipped-left="true" fixed app dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="$t(title)" />
+      <v-spacer />
+      <content-search />
       <v-spacer />
       <logo />
     </v-app-bar>
@@ -30,7 +32,7 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer app>
+    <v-footer app dark>
       <span>&copy; {{ new Date().getFullYear() }}, Jan Müller</span>
       <v-spacer />
       <theme-toggle />
