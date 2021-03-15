@@ -30,6 +30,8 @@ article {
 
   .nuxt-content {
     .nuxt-content-highlight {
+      position: relative;
+
       & + p {
         margin-top: 1rem;
       }
@@ -38,13 +40,20 @@ article {
         all: unset !important;
       }
 
+      pre {
+        border-radius: 0.25rem;
+      }
+
       .filename {
         position: absolute;
         right: 0;
+        top: 0;
         z-index: 1;
-        margin: 0.5rem;
-        font-weight: lighter;
-        font-size: smaller;
+        margin-right: 0.5rem;
+        margin-top: 0.25rem;
+        font-weight: 300;
+        font-size: 0.875rem;
+        color: #c3cee3;
       }
     }
   }
