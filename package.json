@@ -28,8 +28,9 @@
     "@nuxtjs/composition-api": "^0.22.0",
     "core-js": "3.9.1",
     "nuxt-i18n": "^6.21.0",
-    "prism-themes": "^1.5.0"
     "nuxt": "2.15.3"
+    "prism-themes": "^1.5.0"
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@commitlint/cli": "12.0.1",

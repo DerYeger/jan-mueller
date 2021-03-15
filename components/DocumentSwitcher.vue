@@ -1,15 +1,15 @@
 <template>
   <p class="link-container">
     <NuxtLink v-if="prev" :to="prev.path">
-      <v-icon color="'primary">mdi-chevron-left</v-icon>
+      <v-icon v-text="'mdi-chevron-left'" />
       <span>{{ prev.title }}</span>
     </NuxtLink>
-    <span v-else></span>
-    <NuxtLink v-if="next" to="next.path">
+    <span v-else />
+    <NuxtLink v-if="next" :to="next.path">
       <span>{{ next.title }}</span>
-      <v-icon>mdi-chevron-right</v-icon>
+      <v-icon v-text="'mdi-chevron-right'" />
     </NuxtLink>
-    <span v-else></span>
+    <span v-else />
   </p>
 </template>
 <script lang="ts">
@@ -39,7 +39,7 @@ export default defineComponent({
   a {
     display: flex;
     align-items: center;
-    color: unset;
+    color: unset !important;
     font-size: 1.25rem;
     font-weight: bold;
     text-decoration: none;

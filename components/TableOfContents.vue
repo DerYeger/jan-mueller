@@ -4,7 +4,7 @@
       <h2>Content</h2>
       <ul>
         <li v-for="link of document.toc" :key="link.id">
-          <NuxtLink :to="`#${link.id}`">{{ link.text }}</NuxtLink>
+          <NuxtLink :to="`#${link.id}`" v-text="link.text" />
         </li>
       </ul>
     </nav>

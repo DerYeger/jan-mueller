@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-navigation-drawer v-model="drawer" :clipped="true" fixed app>
       <v-list>
         <v-list-item
@@ -21,6 +21,8 @@
     <v-app-bar :clipped-left="true" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="$t(title)" />
+      <v-spacer />
+      <logo />
     </v-app-bar>
     <v-main>
       <breadcrumbs />
@@ -31,13 +33,16 @@
     <v-footer app>
       <span>&copy; {{ new Date().getFullYear() }}, Jan Müller</span>
       <v-spacer />
+      <theme-toggle />
+      <v-spacer />
       <language-toggle />
     </v-footer>
   </v-app>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from '@nuxtjs/composition-api'
+import { mapState } from 'vuex'
 import { routes } from '~/model/routes'
 
 export default defineComponent({
@@ -49,16 +54,9 @@ export default defineComponent({
   },
   head() {
     return {
-      title: (this.$t as any)(this.$store.state.title),
+      title: this.$t(this.$store.state.title),
     }
   },
-  computed: {
-    title() {
-      return this.$store.state.title
-    },
-    breadcrumbs() {
-      return this.$store.state.breadcrumbs
-    },
-  },
+  computed: mapState(['title', 'breadcrumbs']),
 })
 </script>
