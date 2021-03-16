@@ -10,6 +10,7 @@
         hide-details="auto"
         prepend-inner-icon="mdi-magnify"
         :placeholder="$t('actions.search')"
+        class="search-input"
         v-on="on"
       />
     </template>
@@ -78,3 +79,9 @@ export default defineComponent({
   },
 })
 </script>
+
+<style>
+.search-input {
+  max-width: 16rem;
+}
+</style>
