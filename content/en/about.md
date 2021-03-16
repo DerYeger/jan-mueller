@@ -40,8 +40,6 @@ Illegal contents were not recognizable at the time of linking.
 However, a permanent control of the contents of the linked pages is not reasonable without concrete evidence of a violation of the law.
 If we become aware of any infringements, we will remove such links immediately.
 
-Translated with www.DeepL.com/Translator (free version)
-
 **Copyright**
 
 The content and works created by the site operators on these pages are subject to German copyright law.
