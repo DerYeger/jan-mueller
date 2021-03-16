@@ -50,7 +50,7 @@ In particular, third-party content is identified as such.
 Should you nevertheless become aware of a copyright infringement, please inform us accordingly.
 If we become aware of any infringements, we will remove such content immediately.
 
-**Datenschutz**
+**Data protection**
 
 The use of our website is generally possible without providing personal data.
 Insofar as personal data (for example, name, address or e-mail addresses) are collected on our pages, this is always done, as far as possible, on a voluntary basis.
