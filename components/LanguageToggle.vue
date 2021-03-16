@@ -5,7 +5,8 @@
       :key="locale.code"
       :to="switchLocalePath(locale.code)"
       text
-      small
+      :x-small="$vuetify.breakpoint.xs"
+      :small="$vuetify.breakpoint.smAndUp"
     >
       {{ locale.name }}
     </v-btn>
@@ -35,6 +36,6 @@ export default defineComponent({
 
 <style scoped>
 .v-btn {
-  margin: 0.5rem;
+  margin: 0.25rem;
 }
 </style>
