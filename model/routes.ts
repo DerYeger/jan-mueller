@@ -22,6 +22,11 @@ export const routes: Record<string, Route> = {
     to: '/blog',
     icon: 'mdi-blogger',
   },
+  about: {
+    title: 'about.title',
+    to: '/about',
+    icon: 'mdi-file-document',
+  },
 }
 
 export function localizeDocumentPaths<T extends IContentDocument>(
