@@ -20,14 +20,13 @@
     </v-navigation-drawer>
     <v-app-bar :clipped-left="true" fixed app dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title v-text="$t(title)" />
       <v-spacer />
       <content-search />
       <v-spacer />
       <logo />
     </v-app-bar>
     <v-main>
-      <breadcrumbs />
+      <breadcrumbs v-if="breadcrumbs.length > 0" />
       <v-container class="page-container">
         <nuxt />
       </v-container>
