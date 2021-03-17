@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/DerYeger/jan-mueller/compare/v1.0.0...v1.0.1) (2021-03-17)
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([43ceb63](https://github.com/DerYeger/jan-mueller/commit/43ceb63fb3b1ea5540f43b9ab73b08ecc352f1f2))
+
 # 1.0.0 (2021-03-17)
 
 
