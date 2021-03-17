@@ -5,10 +5,10 @@
         <nuxt-content :document="document"></nuxt-content>
       </v-col>
       <v-col :sm="3" :xl="2">
-        <v-row justify="center" class="mb-4">
+        <v-row justify="center" class="ma-3">
           <v-avatar size="100%" justify="center">
             <img
-              :src="require('~/assets/images/profile-image.jpg')"
+              :src="require('~/assets/images/profile-image.webp')"
               alt="Jan"
             />
           </v-avatar>
