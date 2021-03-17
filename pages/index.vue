@@ -5,14 +5,7 @@
         <nuxt-content :document="document"></nuxt-content>
       </v-col>
       <v-col :sm="3" :xl="2">
-        <v-row justify="center" class="ma-3">
-          <v-avatar size="100%" justify="center">
-            <img
-              :src="require('~/assets/images/profile-image.webp')"
-              alt="Jan"
-            />
-          </v-avatar>
-        </v-row>
+        <v-row justify="center" class="ma-3"><avatar /></v-row>
         <v-row justify="center" align-items="center">
           <a
             href="https://github.com/DerYeger"
