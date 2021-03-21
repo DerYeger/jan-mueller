@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/DerYeger/jan-mueller/compare/v1.0.5...v1.1.0) (2021-03-21)
+
+
+### Features
+
+* make logo link to home page ([23a8fac](https://github.com/DerYeger/jan-mueller/commit/23a8facccfeb179ae798d3ddef94d08bb87a8d0b))
+
 ## [1.0.5](https://github.com/DerYeger/jan-mueller/compare/v1.0.4...v1.0.5) (2021-03-21)
 
 
