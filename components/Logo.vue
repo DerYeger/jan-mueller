@@ -1,5 +1,9 @@
 <template>
-  <img :src="logo" alt="logo" width="36px" height="36px" style="margin: 6px" />
+  <div class="link-container">
+    <nuxt-link :to="localePath('/')" class="icon-link">
+      <img :src="logo" alt="logo" />
+    </nuxt-link>
+  </div>
 </template>
 
 <script>
@@ -13,3 +17,17 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+.link-container {
+  width: 48px;
+  height: 48px;
+  margin-right: -12px;
+}
+
+img {
+  width: 36px;
+  height: 36px;
+  margin: 6px;
+}
+</style>
