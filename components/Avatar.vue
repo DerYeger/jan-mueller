@@ -1,10 +1,5 @@
 <template>
   <v-avatar size="100%">
-    <v-img
-      :src="require('~/assets/images/avatar.webp')"
-      :lazy-src="require('~/assets/images/avatar-lazy.webp')"
-      alt="Jan"
-    >
-    </v-img>
+    <asset-image src="avatar.webp" lazy-src="avatar-lazy.webp" alt="Jan" />
   </v-avatar>
 </template>
