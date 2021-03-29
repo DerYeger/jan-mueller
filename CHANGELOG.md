@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/DerYeger/jan-mueller/compare/v1.3.0...v1.3.1) (2021-03-29)
+
+
+### Bug Fixes
+
+* update docker icon ([66c8f4c](https://github.com/DerYeger/jan-mueller/commit/66c8f4c4f364cfb187a566378993ef6405bb93d8))
+
 # [1.3.0](https://github.com/DerYeger/jan-mueller/compare/v1.2.0...v1.3.0) (2021-03-29)
 
 
