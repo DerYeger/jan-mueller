@@ -1,23 +1,21 @@
 <template>
-  <v-col>
-    <v-row class="flex-wrap-reverse">
-      <v-col :sm="9" :xl="10">
-        <nuxt-content :document="document"></nuxt-content>
-      </v-col>
-      <v-col :sm="3" :xl="2">
-        <v-row justify="center" class="ma-3"><avatar /></v-row>
-        <v-row justify="center" align-items="center">
-          <a
-            href="https://github.com/DerYeger"
-            class="account-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <v-icon x-large v-text="'fab fa-github'" />
-            <span>GitHub</span>
-            <v-icon small v-text="'mdi-open-in-new'" />
-          </a>
+  <v-col class="mt-4">
+    <v-row class="flex-wrap">
+      <v-col :xs="6" :sm="5" :md="4" :lg="3" :xl="2">
+        <v-row justify="center" class="mb-4 mt-2 ml-1 mr-1"><avatar /></v-row>
+        <v-row justify="center">
+          <account-link
+            v-for="(account, index) of accounts"
+            :key="index"
+            :name="account.name"
+            :icon="account.icon"
+            :href="account.href"
+            :color="account.color"
+          />
         </v-row>
+      </v-col>
+      <v-col :xs="6" :sm="7" :md="8" :lg="9" :xl="10">
+        <nuxt-content :document="document"></nuxt-content>
       </v-col>
     </v-row>
   </v-col>
@@ -42,21 +40,20 @@ export default defineComponent({
       document,
     }
   },
+  data() {
+    return {
+      accounts: [
+        {
+          name: 'GitHub',
+          href: 'https://github.com/DerYeger',
+          icon: 'fab fa-github',
+        },
+      ],
+    }
+  },
   mounted() {
     this.$store.commit('setTitle', routes.home.title)
     this.$store.commit('setBreadcrumbs', [])
   },
 })
 </script>
-
-<style lang="scss">
-.account-link {
-  text-decoration: none;
-  color: unset !important;
-
-  span {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-}
-</style>

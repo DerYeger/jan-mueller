@@ -4,13 +4,12 @@
       <v-icon v-text="'mdi-chevron-right'" />
     </template>
     <template #item="{ item }">
-      <v-breadcrumbs-item
-        :to="item.to"
-        :disabled="item.disabled"
-        :exact="true"
-        color="primary"
-      >
-        <v-icon v-if="item.text.startsWith('mdi-')" v-text="item.text" />
+      <v-breadcrumbs-item :to="item.to" :disabled="item.disabled" :exact="true">
+        <v-icon
+          v-if="item.text.startsWith('mdi-')"
+          class="text--primary"
+          v-text="item.text"
+        />
         <template v-else>
           {{ $t(item.text) }}
         </template>

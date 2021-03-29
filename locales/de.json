@@ -12,6 +12,9 @@
   "home": {
     "title": "Startseite"
   },
+  "misc": {
+    "and-more": "... und mehr!"
+  },
   "projects": {
     "title": "Projekte"
   }

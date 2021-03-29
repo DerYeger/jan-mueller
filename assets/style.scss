@@ -2,6 +2,28 @@ html {
   overflow-y: auto !important;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bitter', serif !important;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 3vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 2vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 1.5vw, 2rem);
+}
+
 .page-container {
   display: flex;
   justify-content: center;
@@ -18,16 +40,6 @@ html {
 }
 
 article {
-  margin-bottom: 3rem;
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  h2 {
-    margin-top: 3rem;
-  }
-
   .nuxt-content {
     .nuxt-content-highlight {
       position: relative;
@@ -56,9 +68,40 @@ article {
         color: #c3cee3;
       }
     }
+
+    video,
+    .v-image,
+    .nuxt-content-highlight {
+      margin-bottom: 1rem;
+    }
   }
 }
 
 .masonry-wall {
   width: 100%;
+}
+
+.responsive-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: -1rem;
+
+  > * {
+    margin-top: 1rem;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.svg-icon {
+  font-size: 0;
+
+  abbr,
+  svg {
+    width: 36px !important;
+    height: 36px !important;
+  }
 }

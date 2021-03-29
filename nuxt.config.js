@@ -1,6 +1,5 @@
-import colors from 'vuetify/es5/util/colors'
 import i18n from './locales/i18n'
-import { themes } from './theme.config'
+import { primaryColor, themes } from './theme.config'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -23,8 +22,17 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+      },
+      {
         rel: 'stylesheet',
-        href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css',
+        href:
+          'https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,600&display=swap" rel="stylesheet',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.15.3/css/all.css',
       },
     ],
   },
@@ -89,6 +97,7 @@ export default {
       dark: true,
       themes: {
         dark: themes.dark,
+        light: themes.light,
       },
     },
   },
@@ -97,6 +106,6 @@ export default {
   build: {},
 
   loading: {
-    color: colors.blue.darken2,
+    color: primaryColor,
   },
 }
