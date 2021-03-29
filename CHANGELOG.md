@@ -1,3 +1,18 @@
+# [1.2.0](https://github.com/DerYeger/jan-mueller/compare/v1.1.3...v1.2.0) (2021-03-29)
+
+
+### Bug Fixes
+
+* add 0.25rem bottom margin to h3 ([6c18863](https://github.com/DerYeger/jan-mueller/commit/6c1886382de668d2926fae02b6349aa703d43943))
+* add 0.5rem bottom margin to h2 ([f256aff](https://github.com/DerYeger/jan-mueller/commit/f256aff8c66610c8f348a2a204e397e7f0bf0fe3))
+* remove empty blog posts ([2b6372c](https://github.com/DerYeger/jan-mueller/commit/2b6372cedded2e499bdd532dd666ffc4dec0c7e5))
+
+
+### Features
+
+* add content to home page ([9efe42f](https://github.com/DerYeger/jan-mueller/commit/9efe42f6d974b8daf90edb5a6e5a92b5245bfda1))
+* update project content ([17304b9](https://github.com/DerYeger/jan-mueller/commit/17304b9bbf14285019550377504b50147bd7e351))
+
 ## [1.1.3](https://github.com/DerYeger/jan-mueller/compare/v1.1.2...v1.1.3) (2021-03-26)
 
 
