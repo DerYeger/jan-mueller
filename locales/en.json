@@ -4,7 +4,9 @@
   },
   "actions": {
     "read-more": "Read More",
-    "search": "Search"
+    "search": "Search",
+    "view-demo": "View demo",
+    "view-on": "View on"
   },
   "blog": {
     "title": "Blog"

@@ -3,18 +3,11 @@
     <article>
       <h1>{{ project.title }}</h1>
       <p>Last update: {{ formatDate(project.updatedAt) }}</p>
-      <img :src="repoCardSrc" alt="Repository card." />
-      <table-of-contents
-        v-if="project.toc.length > 0"
-        :document="project"
-      ></table-of-contents>
+      <repository-link :repository="project.repository"></repository-link>
+      <demo-link v-if="project.demo" :href="project.demo"></demo-link>
       <nuxt-content :document="project" />
     </article>
-    <document-switcher
-      :collection="'projects'"
-      :prev="prev"
-      :next="next"
-    ></document-switcher>
+    <document-switcher :prev="prev" :next="next"></document-switcher>
   </div>
 </template>
 
@@ -40,9 +33,6 @@ export default defineComponent({
 
     return {
       project,
-      repoCardSrc:
-        'https://github-readme-stats.vercel.app/api/pin/?username=DerYeger&repo=' +
-        project.repository,
       prev: localizeDocumentPath(prev, app.i18n.locale),
       next: localizeDocumentPath(next, app.i18n.locale),
     }

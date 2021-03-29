@@ -1,7 +1,5 @@
 # About me
 
-<p></p>
-
 *Jan // 22 // Kassel // Software Engineer*
 
 Under construction

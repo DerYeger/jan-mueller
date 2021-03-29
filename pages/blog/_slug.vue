@@ -4,10 +4,7 @@
       <h1>{{ post.title }}</h1>
       <p>Last update: {{ formatDate(post.updatedAt) }}</p>
       <p v-if="hasTags(post)">Tags: {{ post.tags.join(', ') }}</p>
-      <table-of-contents
-        v-if="post.toc.length > 0"
-        :document="post"
-      ></table-of-contents>
+      <table-of-contents v-if="post.toc.length > 0" :document="post" />
       <nuxt-content :document="post" />
     </article>
     <document-switcher :prev="prev" :next="next"></document-switcher>

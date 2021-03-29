@@ -8,7 +8,7 @@
       <v-card :to="item.path">
         <v-card-title class="headline">{{ item.title }}</v-card-title>
         <v-card-text>
-          <p>{{ item.description }}</p>
+          {{ item.description }}
         </v-card-text>
       </v-card>
     </template>

@@ -1,7 +1,5 @@
 # Über mich
 
-<p></p>
-
 *Jan // 22 // Kassel // Softwareentwickler*
 
 2021 beendete ich mein Bachelorstudium der Informatik an der Universität Kassel.
