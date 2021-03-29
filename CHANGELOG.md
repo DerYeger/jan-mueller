@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/DerYeger/jan-mueller/compare/v1.2.0...v1.3.0) (2021-03-29)
+
+
+### Features
+
+* unify card design ([74ee58a](https://github.com/DerYeger/jan-mueller/commit/74ee58a0fcfd8d48f689347dca7e7686e83b40a1))
+
 # [1.2.0](https://github.com/DerYeger/jan-mueller/compare/v1.1.3...v1.2.0) (2021-03-29)
 
 
