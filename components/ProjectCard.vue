@@ -1,13 +1,13 @@
 <template>
   <v-hover v-slot="{ hover }">
     <v-card
-      :to="blogPost.path"
+      :to="project.path"
       :elevation="hover ? 12 : 2"
       :class="hover ? 'primary--text' : 'text'"
     >
       <v-img
-        v-if="blogPost.image"
-        :src="require('~/assets/images/' + blogPost.image)"
+        v-if="project.image"
+        :src="require('~/assets/images/' + project.image)"
         :aspect-ratio="2"
         max-height="8rem"
       >
@@ -17,33 +17,22 @@
           </v-row>
         </template>
       </v-img>
-      <v-card-title>{{ blogPost.title }}</v-card-title>
-      <v-card-subtitle>{{
-        $d(new Date(blogPost.createdAt), 'long')
-      }}</v-card-subtitle>
-      <template v-if="hasTags(blogPost)">
-        <v-divider class="mx-4" />
-        <v-card-text>
-          {{ $t('misc.tags') }}: {{ blogPost.tags.join(', ') }}
-        </v-card-text>
-      </template>
+      <v-card-title>{{ project.title }}</v-card-title>
+      <v-card-subtitle>{{ project.description }}</v-card-subtitle>
     </v-card>
   </v-hover>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import { BlogPost, hasTags } from '~/model/blog-post'
+import { Project } from '~/model/project'
 
 export default defineComponent({
   props: {
-    blogPost: {
-      type: Object as () => BlogPost,
+    project: {
+      type: Object as () => Project,
       required: true,
     },
-  },
-  methods: {
-    hasTags,
   },
 })
 </script>

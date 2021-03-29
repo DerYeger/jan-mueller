@@ -2,7 +2,7 @@
   <div class="article-container">
     <article>
       <h1>{{ project.title }}</h1>
-      <p>Last update: {{ formatDate(project.updatedAt) }}</p>
+      <p>Last update: {{ $d(new Date(project.updatedAt), 'long') }}</p>
       <repository-link :repository="project.repository"></repository-link>
       <demo-link v-if="project.demo" :href="project.demo"></demo-link>
       <nuxt-content :document="project" />
@@ -13,7 +13,6 @@
 
 <script>
 import { defineComponent } from '@nuxtjs/composition-api'
-import { formatDate } from '~/model/utils'
 import { localizeDocumentPath, routes } from '~/model/routes'
 import {
   documentBreadcrumb,
@@ -44,9 +43,6 @@ export default defineComponent({
       projectsBreadcrumb,
       documentBreadcrumb(this.project, this.$i18n.locale),
     ])
-  },
-  methods: {
-    formatDate,
   },
 })
 </script>

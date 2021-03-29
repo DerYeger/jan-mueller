@@ -5,12 +5,7 @@
     :options="{ width: 400, padding: 12 }"
   >
     <template #default="{ item }">
-      <v-card :to="item.path">
-        <v-card-title class="headline">{{ item.title }}</v-card-title>
-        <v-card-text>
-          {{ item.description }}
-        </v-card-text>
-      </v-card>
+      <project-card :project="item" />
     </template>
   </vue-masonry-wall>
 </template>

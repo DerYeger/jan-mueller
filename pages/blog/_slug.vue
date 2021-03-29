@@ -2,7 +2,7 @@
   <div class="article-container">
     <article>
       <h1>{{ post.title }}</h1>
-      <p>Last update: {{ formatDate(post.updatedAt) }}</p>
+      <p>Last update: {{ $d(new Date(post.updatedAt), 'long') }}</p>
       <p v-if="hasTags(post)">Tags: {{ post.tags.join(', ') }}</p>
       <table-of-contents v-if="post.toc.length > 0" :document="post" />
       <nuxt-content :document="post" />
@@ -15,7 +15,6 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 import { hasTags } from '~/model/blog-post'
 import { localizeDocumentPath, routes } from '~/model/routes'
-import { formatDate } from '~/model/utils'
 import {
   blogBreadcrumb,
   documentBreadcrumb,
@@ -48,7 +47,6 @@ export default defineComponent({
   },
   methods: {
     hasTags,
-    formatDate,
   },
 })
 </script>

@@ -20,7 +20,7 @@ export const routes: Record<string, Route> = {
   blog: {
     title: 'blog.title',
     to: '/blog',
-    icon: 'mdi-blogger',
+    icon: 'mdi-pen',
   },
   about: {
     title: 'about.title',

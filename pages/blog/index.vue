@@ -17,7 +17,6 @@ import { NuxtAppOptions } from '@nuxt/types'
 import { BlogPost, hasTags } from '~/model/blog-post'
 import { blogBreadcrumb, homeBreadcrumb } from '~/model/breadcrumbs'
 import { localizeDocumentPaths, routes } from '~/model/routes'
-import { formatDate } from '~/model/utils'
 
 export default defineComponent({
   async asyncData({
@@ -41,7 +40,6 @@ export default defineComponent({
   },
   methods: {
     hasTags,
-    formatDate,
   },
 })
 </script>
