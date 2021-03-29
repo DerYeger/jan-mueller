@@ -9,4 +9,3 @@ Under construction
 
 ### Libraries, frameworks and tools
 <software-list class="mt-4 mb-4"></software-list>
-
