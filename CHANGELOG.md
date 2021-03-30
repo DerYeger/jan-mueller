@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/DerYeger/jan-mueller/compare/v1.6.0...v1.7.0) (2021-03-30)
+
+
+### Bug Fixes
+
+* add aria-labels to buttons ([3fb403e](https://github.com/DerYeger/jan-mueller/commit/3fb403e38c1a61d1dfe74a79169731d6917fd96f))
+
+
+### Features
+
+* add link to xing account ([6d3a21c](https://github.com/DerYeger/jan-mueller/commit/6d3a21c99493db866ef08c4efce2de8ab69034dd))
+
 # [1.6.0](https://github.com/DerYeger/jan-mueller/compare/v1.5.0...v1.6.0) (2021-03-30)
 
 
