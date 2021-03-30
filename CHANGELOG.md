@@ -1,3 +1,10 @@
+## [1.4.7](https://github.com/DerYeger/jan-mueller/compare/v1.4.6...v1.4.7) (2021-03-30)
+
+
+### Bug Fixes
+
+* add meta description ([686b23d](https://github.com/DerYeger/jan-mueller/commit/686b23d5c5f06673e53313ad1601dab67ad48d34))
+
 ## [1.4.6](https://github.com/DerYeger/jan-mueller/compare/v1.4.5...v1.4.6) (2021-03-30)
 
 
