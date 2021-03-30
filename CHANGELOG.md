@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/DerYeger/jan-mueller/compare/v1.4.4...v1.4.5) (2021-03-30)
+
+
+### Bug Fixes
+
+* minor changes to content ([f357dad](https://github.com/DerYeger/jan-mueller/commit/f357dad8ed0c5286a8e2acbcf8b8da6e2e08855d))
+
 ## [1.4.4](https://github.com/DerYeger/jan-mueller/compare/v1.4.3...v1.4.4) (2021-03-30)
 
 
