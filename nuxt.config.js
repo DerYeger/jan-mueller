@@ -75,6 +75,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -84,6 +85,22 @@ export default {
         theme: 'prism-themes/themes/prism-material-oceanic.css',
       },
     },
+  },
+
+  sitemap: {
+    hostname: 'https://jan-mueller.at',
+    gzip: true,
+    routes: async () => {
+      const { $content } = require('@nuxt/content')
+      const files = await $content({ deep: true }).only(['path']).fetch()
+
+      return files.flatMap((file) =>
+        file.path === '/index'
+          ? ['/']
+          : [file.path.replace('/en/', ''), file.path.replace('/en/', '/de/')]
+      )
+    },
+    i18n: true,
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
