@@ -1,0 +1,41 @@
+<template>
+  <a
+    ref="noopener"
+    :href="href"
+    target="_blank"
+    class="svg-icon"
+    :aria-label="name"
+  >
+    <abbr :title="name">
+      <img :src="require(`~/assets/images/icons/${icon}.svg`)" alt="logo" />
+    </abbr>
+  </a>
+</template>
+
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api'
+
+export default defineComponent({
+  props: {
+    name: {
+      type: String,
+      required: true,
+    },
+    icon: {
+      type: String,
+      required: true,
+    },
+    href: {
+      type: String,
+      required: true,
+    },
+  },
+})
+</script>
+
+<style scoped>
+img {
+  width: 36px;
+  height: 36px;
+}
+</style>
