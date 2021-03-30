@@ -36,6 +36,7 @@
         icon="rxjs"
         href="https://rxjs-dev.firebaseapp.com/"
       />
+      <icon-link name="Spring" icon="spring" href="https://spring.io/" />
       <icon-link name="Vue" icon="vue" href="https://vuejs.org/" />
       <div style="display: flex; align-items: center">
         {{ $t('misc.and-more') }}
