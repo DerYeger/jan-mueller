@@ -4,7 +4,7 @@
   </v-avatar>
 </template>
 
-<style>
+<style scoped>
 .avatar::after {
   content: '';
   display: block;

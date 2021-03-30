@@ -6,7 +6,7 @@
         md="4"
         lg="3"
         xl="2"
-        :class="$vuetify.breakpoint.xs ? 'forced-wrap' : ''"
+        :class="$vuetify.breakpoint.xs ? 'max-width' : ''"
       >
         <v-row justify="center" class="mb-4 mt-2 ml-1 mr-1">
           <avatar />
@@ -22,7 +22,7 @@
           />
         </v-row>
       </v-col>
-      <v-col :min-width="$vuetify.breakpoint.xs ? '100%' : '0'">
+      <v-col>
         <nuxt-content :document="document"></nuxt-content>
       </v-col>
     </v-row>
@@ -66,8 +66,8 @@ export default defineComponent({
 })
 </script>
 
-<style>
-.forced-wrap {
+<style scoped>
+.max-width {
   flex-basis: 100%;
 }
 </style>
