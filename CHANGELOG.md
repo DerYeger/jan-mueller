@@ -1,3 +1,11 @@
+## [1.4.3](https://github.com/DerYeger/jan-mueller/compare/v1.4.2...v1.4.3) (2021-03-30)
+
+
+### Bug Fixes
+
+* add spring icon ([0fde151](https://github.com/DerYeger/jan-mueller/commit/0fde1515a1a2acd63ce11c2be8dcb55a5d035b3c))
+* use correct syntax for meta tag ([2dc12c6](https://github.com/DerYeger/jan-mueller/commit/2dc12c6b9ece3c74292c64729e5a7db09858164e))
+
 ## [1.4.2](https://github.com/DerYeger/jan-mueller/compare/v1.4.1...v1.4.2) (2021-03-30)
 
 
