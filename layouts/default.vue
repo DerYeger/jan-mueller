@@ -56,6 +56,16 @@ export default defineComponent({
   head() {
     return {
       title: this.$t(this.$store.state.title),
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+      },
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('meta.description'),
+        },
+      ],
     }
   },
   computed: mapState(['title', 'breadcrumbs']),

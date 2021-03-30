@@ -12,6 +12,9 @@
   "home": {
     "title": "Startseite"
   },
+  "meta": {
+    "description": "Personal website of Jan Müller, a passionate software engineer."
+  },
   "misc": {
     "and-more": "... und mehr!"
   },

@@ -14,6 +14,9 @@
   "home": {
     "title": "Home"
   },
+  "meta": {
+    "description": "Persönliche Website von Jan Müller, einem leidenschaftlichen Softwareentwickler."
+  },
   "misc": {
     "and-more": "... and more!",
     "tags": "Tags"
