@@ -19,7 +19,10 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar :clipped-left="true" fixed app dark>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon
+        :aria-label="$t(drawer ? 'actions.close-menu' : 'actions.open-menu')"
+        @click.stop="drawer = !drawer"
+      />
       <v-spacer />
       <content-search />
       <v-spacer />

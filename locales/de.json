@@ -3,8 +3,11 @@
     "title": "Impressum"
   },
   "actions": {
-    "read-more": "Mehr lesen",
-    "search": "Suchen"
+    "close-menu": "Menü schließen",
+    "open-menu": "Menü öffnen",
+    "search": "Suchen",
+    "use-dark-theme": "Zum dunklen Design wechseln",
+    "use-light-theme": "Zum hellen Design wechseln"
   },
   "blog": {
     "title": "Blog"

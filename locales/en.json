@@ -3,8 +3,11 @@
     "title": "Legal Disclosure"
   },
   "actions": {
-    "read-more": "Read More",
+    "close-menu": "Close menu",
+    "open-menu": "Open menu",
     "search": "Search",
+    "use-dark-theme": "Switch to dark theme",
+    "use-light-theme": "Switch to light theme",
     "view-demo": "View demo",
     "view-on": "View on"
   },
