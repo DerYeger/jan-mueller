@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/DerYeger/jan-mueller/compare/v1.4.8...v1.5.0) (2021-03-30)
+
+
+### Features
+
+* configure sitemap ([791f5b1](https://github.com/DerYeger/jan-mueller/commit/791f5b1ba991beda47835fedb4bad724b195fb4a))
+
 ## [1.4.8](https://github.com/DerYeger/jan-mueller/compare/v1.4.7...v1.4.8) (2021-03-30)
 
 
