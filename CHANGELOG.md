@@ -1,3 +1,16 @@
+# [1.6.0](https://github.com/DerYeger/jan-mueller/compare/v1.5.0...v1.6.0) (2021-03-30)
+
+
+### Bug Fixes
+
+* correct swapped translations ([2463230](https://github.com/DerYeger/jan-mueller/commit/24632309378cab619c5b8810715605d9cb3fb058))
+* disable i18n sitemap ([2c925b9](https://github.com/DerYeger/jan-mueller/commit/2c925b95f943062a71f81b05268ff10689d0cb48))
+
+
+### Features
+
+* add robots.txt ([47660b5](https://github.com/DerYeger/jan-mueller/commit/47660b5d310efc394b914842f4f2f52042d25687))
+
 # [1.5.0](https://github.com/DerYeger/jan-mueller/compare/v1.4.8...v1.5.0) (2021-03-30)
 
 
