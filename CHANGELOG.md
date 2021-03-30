@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/DerYeger/jan-mueller/compare/v1.4.5...v1.4.6) (2021-03-30)
+
+
+### Bug Fixes
+
+* improve layout changes ([3f06876](https://github.com/DerYeger/jan-mueller/commit/3f0687641ae88a860f551d2df0c3d2112b04c196))
+
 ## [1.4.5](https://github.com/DerYeger/jan-mueller/compare/v1.4.4...v1.4.5) (2021-03-30)
 
 
