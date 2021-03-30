@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/DerYeger/jan-mueller/compare/v1.4.3...v1.4.4) (2021-03-30)
+
+
+### Bug Fixes
+
+* correct edge case localization of content paths ([59b6de8](https://github.com/DerYeger/jan-mueller/commit/59b6de829f76f65f0e9e57b7ae31d2300d6e8f54))
+
 ## [1.4.3](https://github.com/DerYeger/jan-mueller/compare/v1.4.2...v1.4.3) (2021-03-30)
 
 
