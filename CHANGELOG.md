@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/DerYeger/jan-mueller/compare/v1.4.1...v1.4.2) (2021-03-30)
+
+
+### Bug Fixes
+
+* replace icon components with svg files ([d1a2549](https://github.com/DerYeger/jan-mueller/commit/d1a2549f192bf3d0754f10ee384e0d1f5dbc156e))
+
 ## [1.4.1](https://github.com/DerYeger/jan-mueller/compare/v1.4.0...v1.4.1) (2021-03-30)
 
 
