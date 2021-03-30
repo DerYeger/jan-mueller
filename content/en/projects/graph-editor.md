@@ -6,8 +6,8 @@ demo: https://graph.yeger.eu
 ---
 
 My bachelor thesis required an interactive graph editor.
-Based on that implementation I created a stripped down demonstration tool.
-I removed domain specific features, like adding labels to nodes and links, and ported it from Angular to Vue.
+Based on that implementation I created a stripped-down demonstration tool.
+I removed domain specific-features, like adding labels to nodes and links and ported it from Angular to Vue.
 
 Getting cross-browser touch controls to work was quite difficult, because of wildly different behaviour for some events.
 Even though I relied on `PointerEvent` for creating links, mouse and touch interaction resulted in events firing for different DOM elements.

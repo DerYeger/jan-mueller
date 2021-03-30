@@ -17,7 +17,7 @@ My problem was the file structure:
 
 When navigating from `/blog` to e.g. `/blog/hello-world`, the route changed and the component was instantiated, but the DOM didn't change.
 After some trial and error I found an easy fix (which I should have discovered earlier to be fair):
-Moving `blog.vue` to the `/blog/index.vue`, as seen below.
+Moving `blog.vue` to `/blog/index.vue`, as seen below.
 
 ```
 ├── pages
@@ -30,8 +30,9 @@ Moving `blog.vue` to the `/blog/index.vue`, as seen below.
 ## Problems with type checking
 
 Even though I selected TypeScript in `create-nuxt-app`, the generated code wasn't set up properly.
+(**Update:** The problem has been fixed in a new version of `create-nuxt-app`.)
 For one, the TypeScript dependency was missing in `package.json`.
-Furthermore, I replaced all `nuxt-ts` command with `nuxt` since it was causing warnings.
+Furthermore, I replaced all `nuxt-ts` commands with `nuxt` since they were causing warnings.
 Components declared as
 
 ```ts[pages/index.vue]
@@ -79,3 +80,5 @@ So far using Nuxt was a refreshing experience.
 The possibility to iterate rather quickly compared to Angular is nice.
 Build times and nearly instantaneous changes are awesome.
 Though opaque (and in some cases missing) error messages resulted in an avoidable and cumbersome roadblock.
+After building multiple websites using the Nuxt, Vue, and TypeScript stack and learning about most of its quirks, my opinion has shifted to the positive.
+The speed of development and ease of UI development that comes with frameworks like Vuetify has resulted in a highly enjoyable experience.
