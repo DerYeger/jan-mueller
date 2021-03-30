@@ -56,6 +56,11 @@ export default defineComponent({
           href: 'https://github.com/DerYeger',
           icon: 'fab fa-github',
         },
+        {
+          name: 'XING',
+          href: 'https://www.xing.com/profile/Jan_Mueller1092/cv',
+          icon: 'fab fa-xing',
+        },
       ],
     }
   },
