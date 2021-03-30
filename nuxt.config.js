@@ -100,7 +100,6 @@ export default {
           : [file.path.replace('/en/', ''), file.path.replace('/en/', '/de/')]
       )
     },
-    i18n: true,
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
