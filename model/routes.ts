@@ -33,10 +33,10 @@ export function localizeDocumentPaths<T extends IContentDocument>(
   documents: T[],
   locale: string
 ): T[] {
-  const prefix = locale === 'en' ? '' : `/${locale}`
+  const prefix = locale === 'en' ? '/' : `/${locale}/`
   return documents.map((document) => ({
     ...document,
-    path: document.path.replace('/en', prefix),
+    path: document.path.replace('/en/', prefix),
   }))
 }
 
@@ -47,17 +47,17 @@ export function localizeDocumentPath<T extends IContentDocument>(
   if (document === null) {
     return undefined
   }
-  const prefix = locale === 'en' ? '' : `/${locale}`
+  const prefix = locale === 'en' ? '/' : `/${locale}/`
   return {
     ...document,
-    path: document.path.replace('/en', prefix),
+    path: document.path.replace('/en/', prefix),
   }
 }
 
 export function localizePath(path: string, locale: string): string {
-  const prefix = locale === 'en' ? '' : `/${locale}`
-  if (path.startsWith('/en')) {
-    return path.replace('/en', prefix)
+  const prefix = locale === 'en' ? '/' : `/${locale}/`
+  if (path.startsWith('/en/')) {
+    return path.replace('/en/', prefix)
   } else {
     return `${prefix}${path}`
   }
