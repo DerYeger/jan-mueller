@@ -1,3 +1,12 @@
+## [1.7.3](https://github.com/DerYeger/jan-mueller/compare/v1.7.2...v1.7.3) (2021-03-31)
+
+
+### Bug Fixes
+
+* add link to website source code ([f4fbbd3](https://github.com/DerYeger/jan-mueller/commit/f4fbbd3fd2f8042831507a978dff1d5c3e8e5539))
+* update sitemap configuration ([e72636a](https://github.com/DerYeger/jan-mueller/commit/e72636a230ae05e76d36db90fe5d1166bbfefdb8))
+* use correct html attribute ([d5ae19b](https://github.com/DerYeger/jan-mueller/commit/d5ae19bb293812d42b0eae5aeffcad608db5ec34))
+
 ## [1.7.2](https://github.com/DerYeger/jan-mueller/compare/v1.7.1...v1.7.2) (2021-03-31)
 
 
