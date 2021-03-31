@@ -1,3 +1,10 @@
+## [1.7.4](https://github.com/DerYeger/jan-mueller/compare/v1.7.3...v1.7.4) (2021-03-31)
+
+
+### Bug Fixes
+
+* use fixed display in drawer ([2208648](https://github.com/DerYeger/jan-mueller/commit/2208648d6fca059f9be2a548c254bc8fd98a6057))
+
 ## [1.7.3](https://github.com/DerYeger/jan-mueller/compare/v1.7.2...v1.7.3) (2021-03-31)
 
 
