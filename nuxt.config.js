@@ -95,11 +95,12 @@ export default {
       const files = await $content({ deep: true }).only(['path']).fetch()
 
       return files.flatMap((file) =>
-        file.path === '/index'
-          ? ['/']
+        file.path === '/de/home' || file.path === '/en/home'
+          ? []
           : [file.path.replace('/en/', ''), file.path.replace('/en/', '/de/')]
       )
     },
+    i18n: true,
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
