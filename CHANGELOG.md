@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/DerYeger/jan-mueller/compare/v1.7.0...v1.7.1) (2021-03-31)
+
+
+### Bug Fixes
+
+* minor change to content ([ed8d6a4](https://github.com/DerYeger/jan-mueller/commit/ed8d6a4fbe4807aedf5d07db8e648278129b6f4c))
+
 # [1.7.0](https://github.com/DerYeger/jan-mueller/compare/v1.6.0...v1.7.0) (2021-03-30)
 
 
