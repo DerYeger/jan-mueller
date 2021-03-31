@@ -1,6 +1,6 @@
 <template>
   <v-btn
-    ref="noopener"
+    rel="noopener"
     text
     :aria-label="$t('actions.view-demo')"
     :href="href"

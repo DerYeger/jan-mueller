@@ -1,6 +1,6 @@
 <template>
   <v-btn
-    ref="noopener"
+    rel="noopener"
     icon
     x-large
     target="_blank"

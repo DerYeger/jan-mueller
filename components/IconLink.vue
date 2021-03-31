@@ -1,6 +1,6 @@
 <template>
   <a
-    ref="noopener"
+    rel="noopener"
     :href="href"
     target="_blank"
     class="svg-icon"

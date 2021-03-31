@@ -2,7 +2,7 @@
   <v-menu offset-y bottom open-on-hover rounded="4">
     <template #activator="{ on, attrs }">
       <v-btn
-        ref="noopener"
+        rel="noopener"
         text
         :aria-label="$t('actions.view-on') + ' GitHub'"
         :href="href"
@@ -15,7 +15,7 @@
         <v-icon class="ml-2" v-text="'fab fa-github'" />
       </v-btn>
     </template>
-    <a ref="noopener" :href="href" target="_blank">
+    <a rel="noopener" :href="href" target="_blank">
       <img :src="repoCardSrc" alt="Repository card" style="display: block" />
     </a>
   </v-menu>
