@@ -1,3 +1,11 @@
+## [1.7.5](https://github.com/DerYeger/jan-mueller/compare/v1.7.4...v1.7.5) (2021-04-03)
+
+
+### Bug Fixes
+
+* add elevation to avatar ([c46940d](https://github.com/DerYeger/jan-mueller/commit/c46940dc7f374ac2b1ba232a5977f3f9a941ade4))
+* update document switcher style ([1a1599b](https://github.com/DerYeger/jan-mueller/commit/1a1599b388860807392a41240ad86f23d925de36))
+
 ## [1.7.4](https://github.com/DerYeger/jan-mueller/compare/v1.7.3...v1.7.4) (2021-03-31)
 
 
