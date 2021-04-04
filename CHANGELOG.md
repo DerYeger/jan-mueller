@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/DerYeger/jan-mueller/compare/v1.7.5...v1.8.0) (2021-04-04)
+
+
+### Features
+
+* overhaul style ([374c1a4](https://github.com/DerYeger/jan-mueller/commit/374c1a4d989fd83346b82efbb7c0deaac1d71067))
+
 ## [1.7.5](https://github.com/DerYeger/jan-mueller/compare/v1.7.4...v1.7.5) (2021-04-03)
 
 
