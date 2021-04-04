@@ -9,6 +9,9 @@ describe('TableOfContents', () => {
           toc: [],
         },
       },
+      mocks: {
+        $t: () => {},
+      },
     })
     expect(wrapper.vm).toBeTruthy()
   })
