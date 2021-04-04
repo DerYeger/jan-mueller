@@ -33,8 +33,12 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '/assets/style.scss';
+
 img {
+  @extend .unselectable;
+
   width: 36px;
   height: 36px;
 }

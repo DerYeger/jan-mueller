@@ -1,13 +1,13 @@
 <template>
-  <v-app>
+  <div>
     <h1 v-if="error.statusCode === 404">
       {{ pageNotFound }}
     </h1>
     <h1 v-else>
       {{ otherError }}
     </h1>
-    <NuxtLink to="/"> Home page </NuxtLink>
-  </v-app>
+    <nuxt-link :to="localePath('/')">{{ $t('home.title') }}</nuxt-link>
+  </div>
 </template>
 
 <script lang="ts">
@@ -36,9 +36,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style scoped>
-h1 {
-  font-size: 20px;
-}
-</style>

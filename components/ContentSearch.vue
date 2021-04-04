@@ -10,7 +10,7 @@
         hide-details="auto"
         prepend-inner-icon="mdi-magnify"
         :placeholder="$t('actions.search')"
-        class="search-input"
+        class="search-input unselectable"
         v-on="on"
       />
     </template>

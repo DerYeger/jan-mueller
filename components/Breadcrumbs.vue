@@ -1,5 +1,5 @@
 <template>
-  <v-breadcrumbs :items="breadcrumbs" nuxt="true" large>
+  <v-breadcrumbs :items="breadcrumbs" nuxt="true" large class="breadcrumbs">
     <template #divider>
       <v-icon v-text="'mdi-chevron-right'" />
     </template>
@@ -40,13 +40,16 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.v-breadcrumbs--large,
-.v-breadcrumbs {
+@import '/assets/style.scss';
+
+.breadcrumbs {
   li .v-icon {
     font-size: 24px;
   }
 
   a {
+    @extend .unselectable;
+
     font-weight: bold;
   }
 

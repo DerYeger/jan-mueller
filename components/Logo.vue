@@ -18,7 +18,9 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '/assets/style.scss';
+
 .link-container {
   width: 48px;
   height: 48px;
@@ -26,6 +28,8 @@ export default defineComponent({
 }
 
 img {
+  @extend .unselectable;
+
   width: 36px;
   height: 36px;
   margin: 6px;

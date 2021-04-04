@@ -22,6 +22,7 @@
           rel="noopener"
           href="https://github.com/DerYeger/jan-mueller"
           target="_blank"
+          class="unselectable"
         >
           Website Source Code
         </a>
@@ -44,7 +45,10 @@
       </v-container>
     </v-main>
     <v-footer app dark>
-      <span :style="$vuetify.breakpoint.xs ? 'font-size: 0.8rem' : ''">
+      <span
+        :style="$vuetify.breakpoint.xs ? 'font-size: 0.8rem' : ''"
+        class="unselectable"
+      >
         &copy; {{ new Date().getFullYear() }}, Jan Müller
       </span>
       <v-spacer />

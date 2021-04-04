@@ -1,13 +1,15 @@
 <template>
-  <div class="article-container">
-    <article>
+  <div style="width: 100%">
+    <article class="justify-text" lang="en">
       <h1>{{ post.title }}</h1>
-      <p>Last update: {{ $d(new Date(post.updatedAt), 'long') }}</p>
+      <p>
+        {{ $t('misc.last-update') }}: {{ $d(new Date(post.updatedAt), 'long') }}
+      </p>
       <p v-if="hasTags(post)">Tags: {{ post.tags.join(', ') }}</p>
       <table-of-contents v-if="post.toc.length > 0" :document="post" />
       <nuxt-content :document="post" />
     </article>
-    <document-switcher :prev="prev" :next="next"></document-switcher>
+    <document-switcher v-if="prev || next" :prev="prev" :next="next" />
   </div>
 </template>
 

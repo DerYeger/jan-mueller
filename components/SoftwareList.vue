@@ -38,7 +38,7 @@
       />
       <icon-link name="Spring" icon="spring" href="https://spring.io/" />
       <icon-link name="Vue" icon="vue" href="https://vuejs.org/" />
-      <div style="display: flex; align-items: center">
+      <div style="display: flex; align-items: center" class="unselectable">
         {{ $t('misc.and-more') }}
       </div>
     </div>

@@ -1,14 +1,13 @@
 <template>
-  <div>
+  <div class="mb-4">
     <nav>
-      <h2>Content</h2>
+      <h2>{{ $t('misc.content') }}</h2>
       <ul>
         <li v-for="link of document.toc" :key="link.id">
-          <NuxtLink :to="`#${link.id}`" v-text="link.text" />
+          <nuxt-link :to="`#${link.id}`" v-text="link.text" />
         </li>
       </ul>
     </nav>
-    <p></p>
   </div>
 </template>
 

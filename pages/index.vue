@@ -1,11 +1,10 @@
 <template>
-  <v-col class="mt-4">
+  <v-col class="mt-4" style="max-width: 60rem">
     <v-row>
       <v-col
+        xs="6"
         sm="5"
         md="4"
-        lg="3"
-        xl="2"
         :class="$vuetify.breakpoint.xs ? 'max-width' : ''"
       >
         <v-row justify="center" class="mb-4 mt-2 ml-1 mr-1">
@@ -22,8 +21,14 @@
           />
         </v-row>
       </v-col>
-      <v-col>
-        <nuxt-content :document="document"></nuxt-content>
+      <v-col
+        :style="
+          $vuetify.breakpoint.xs ? 'padding-left: 0; padding-right: 0' : ''
+        "
+      >
+        <article :class="$vuetify.breakpoint.xs ? 'justify-text' : ''">
+          <nuxt-content :document="document" />
+        </article>
       </v-col>
     </v-row>
   </v-col>
