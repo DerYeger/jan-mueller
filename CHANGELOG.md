@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/DerYeger/jan-mueller/compare/v1.8.0...v1.8.1) (2021-04-06)
+
+
+### Bug Fixes
+
+* use manual hyphens and justify legal disclosure text ([ee23326](https://github.com/DerYeger/jan-mueller/commit/ee2332667e3f399d33a972e2196f48ce240e2f70))
+
 # [1.8.0](https://github.com/DerYeger/jan-mueller/compare/v1.7.5...v1.8.0) (2021-04-04)
 
 
