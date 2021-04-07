@@ -36,7 +36,13 @@
         </v-list-item-content>
       </v-list-item>
     </v-navigation-drawer>
-    <v-app-bar fixed app dense elevate-on-scroll color="background">
+    <v-app-bar
+      fixed
+      app
+      dense
+      elevate-on-scroll
+      :color="$vuetify.theme.dark ? '#121212' : 'white'"
+    >
       <div
         v-if="$vuetify.breakpoint.mdAndDown"
         class="flex-item"
