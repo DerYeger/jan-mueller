@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/DerYeger/jan-mueller/compare/v1.10.0...v1.10.1) (2021-04-07)
+
+
+### Bug Fixes
+
+* remove console statement ([793990a](https://github.com/DerYeger/jan-mueller/commit/793990ac28f1389771dfbf0436ac38d16ededd22))
+
 # [1.10.0](https://github.com/DerYeger/jan-mueller/compare/v1.9.3...v1.10.0) (2021-04-07)
 
 
