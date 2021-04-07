@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/DerYeger/jan-mueller/compare/v1.9.0...v1.9.1) (2021-04-07)
+
+
+### Bug Fixes
+
+* decrease footer height ([232552e](https://github.com/DerYeger/jan-mueller/commit/232552e8f9aabdfc66c9015255a2c1f42562de85))
+
 # [1.9.0](https://github.com/DerYeger/jan-mueller/compare/v1.8.1...v1.9.0) (2021-04-07)
 
 
