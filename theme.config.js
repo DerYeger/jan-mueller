@@ -6,6 +6,7 @@ export const themes = {
   light: {
     primary: primaryColor,
     secondary: colors.amber.darken4,
+    background: colors.shades.white,
   },
   dark: {
     primary: primaryColor,
@@ -15,5 +16,6 @@ export const themes = {
     warning: colors.amber.base,
     error: colors.deepOrange.accent4,
     success: colors.green.accent3,
+    background: '#121212',
   },
 }

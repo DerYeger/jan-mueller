@@ -1,10 +1,11 @@
 <template>
-  <v-col class="mt-4 bound-width">
+  <v-col class="bound-width">
     <v-row>
       <v-col
         xs="6"
         sm="5"
         md="4"
+        class="pt-0"
         :class="$vuetify.breakpoint.xs ? 'max-width' : ''"
       >
         <v-row justify="center" class="mb-4 mt-2 ml-1 mr-1">
@@ -22,6 +23,7 @@
         </v-row>
       </v-col>
       <v-col
+        class="pt-0"
         :style="
           $vuetify.breakpoint.xs ? 'padding-left: 0; padding-right: 0' : ''
         "

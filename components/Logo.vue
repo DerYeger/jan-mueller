@@ -24,7 +24,6 @@ export default defineComponent({
 .link-container {
   width: 48px;
   height: 48px;
-  margin-right: -12px;
 }
 
 img {

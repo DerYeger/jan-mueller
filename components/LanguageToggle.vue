@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="width: max-content">
     <v-btn
       v-for="locale of locales"
       :key="locale.code"
