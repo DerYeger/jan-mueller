@@ -4,5 +4,9 @@
   "extends": ["config:base"],
   "major": {
     "automerge": false
-  }
+  },
+  "schedule": [
+    "after 1am",
+    "before 6am"
+  ]
 }
