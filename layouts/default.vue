@@ -45,10 +45,7 @@
       </v-container>
     </v-main>
     <v-footer app dark>
-      <span
-        :style="$vuetify.breakpoint.xs ? 'font-size: 0.8rem' : ''"
-        class="unselectable"
-      >
+      <span style="font-size: 0.75rem" class="unselectable">
         &copy; {{ new Date().getFullYear() }}, Jan Müller
       </span>
       <v-spacer />

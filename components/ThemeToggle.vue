@@ -1,6 +1,7 @@
 <template>
   <v-btn
     icon
+    x-small
     :aria-label="
       $t(useDarkTheme ? 'actions.use-light-theme' : 'actions.use-dark-theme')
     "

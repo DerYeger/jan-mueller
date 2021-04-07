@@ -4,10 +4,8 @@
       v-for="locale of locales"
       :key="locale.code"
       plain
-      class="ma-1"
+      x-small
       :to="switchLocalePath(locale.code)"
-      :x-small="$vuetify.breakpoint.xs"
-      :small="$vuetify.breakpoint.smAndUp"
     >
       {{ locale.name }}
     </v-btn>
