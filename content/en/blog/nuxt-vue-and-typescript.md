@@ -1,11 +1,14 @@
 ---
 title: Nuxt, Vue and TypeScript
+description: My early experiences and troubles with the creation of a blog using Nuxt Content.
+createdAt: 2021-03-17
+tags: [Nuxt, Vue, TypeScript, Nuxt Content]
 ---
 
 ## Routing
 
-Following an [official guide](https://nuxtjs.org/blog/creating-blog-with-nuxt-content) to get started I had weird issues with routing.
-My problem was the file structure:
+After following an [official guide](https://nuxtjs.org/blog/creating-blog-with-nuxt-content) to get started, I had weird issues with routing.
+My problem was the following project structure:
 
 ```
 ├── pages

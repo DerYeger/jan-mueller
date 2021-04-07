@@ -1,5 +1,5 @@
 <template>
-  <v-col class="mt-4" style="max-width: 60rem">
+  <v-col class="mt-4 bound-width">
     <v-row>
       <v-col
         xs="6"

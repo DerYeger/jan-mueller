@@ -1,7 +1,7 @@
 <template>
   <v-btn
     rel="noopener"
-    text
+    plain
     :aria-label="$t('actions.view-demo')"
     :href="href"
     target="_blank"
@@ -9,6 +9,7 @@
     class="mb-4"
   >
     {{ $t('actions.view-demo') }}
+    <v-icon class="ml-2" v-text="'mdi-television-play'" />
   </v-btn>
 </template>
 

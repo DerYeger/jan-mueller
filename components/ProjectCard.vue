@@ -17,8 +17,22 @@
           </v-row>
         </template>
       </v-img>
-      <v-card-title>{{ project.title }}</v-card-title>
-      <v-card-subtitle>{{ project.description }}</v-card-subtitle>
+      <v-card-title class="headline" style="word-break: normal">
+        {{ project.title }}
+        <v-spacer />
+        <v-icon
+          v-if="project.repository"
+          small
+          class="mr-2"
+          v-text="'fab fa-github'"
+        />
+        <v-icon v-if="project.demo" small v-text="'mdi-television-play'" />
+      </v-card-title>
+      <v-card-subtitle>
+        <i>{{ project.readingTime }}</i>
+      </v-card-subtitle>
+      <v-divider class="mx-4" />
+      <v-card-text>{{ project.description }}</v-card-text>
     </v-card>
   </v-hover>
 </template>

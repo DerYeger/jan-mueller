@@ -3,7 +3,7 @@
     <v-btn
       v-for="locale of locales"
       :key="locale.code"
-      text
+      plain
       class="ma-1"
       :to="switchLocalePath(locale.code)"
       :x-small="$vuetify.breakpoint.xs"

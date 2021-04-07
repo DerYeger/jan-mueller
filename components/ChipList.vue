@@ -1,10 +1,6 @@
 <template>
-  <div class="response-list">
-    <v-chip
-      v-for="(element, index) of elements"
-      :key="index"
-      class="program-chip"
-    >
+  <div class="responsive-list">
+    <v-chip v-for="(element, index) of elements" :key="index">
       {{ element }}
     </v-chip>
   </div>

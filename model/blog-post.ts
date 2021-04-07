@@ -1,6 +1,7 @@
 import { IContentDocument } from '@nuxt/content/types/content'
 
 export interface BlogPost extends IContentDocument {
+  readingTime: string
   tags?: string[]
   image?: string
 }

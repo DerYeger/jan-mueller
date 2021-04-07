@@ -27,7 +27,7 @@ export default defineComponent({
     $content: contentFunc
   }) {
     const posts = (await $content('en/blog')
-      .only(['title', 'path', 'createdAt', 'tags', 'image'])
+      .without(['body', 'bodyText', 'toc'])
       .sortBy('createdAt', 'desc')
       .fetch<BlogPost>()) as BlogPost[]
     return {

@@ -2,10 +2,6 @@
   <div style="width: 100%">
     <article class="justify-text" lang="en">
       <h1>{{ project.title }}</h1>
-      <p>
-        {{ $t('misc.last-update') }}:
-        {{ $d(new Date(project.updatedAt), 'long') }}
-      </p>
       <repository-link :repository="project.repository"></repository-link>
       <demo-link v-if="project.demo" :href="project.demo"></demo-link>
       <nuxt-content :document="project" />

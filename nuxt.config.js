@@ -1,6 +1,8 @@
 import i18n from './locales/i18n'
 import { primaryColor, themes } from './theme.config'
 
+const host = 'https://jan-mueller.at'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -75,7 +77,9 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/markdownit',
     '@nuxtjs/sitemap',
+    '@nuxtjs/feed',
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -87,8 +91,56 @@ export default {
     },
   },
 
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    use: ['markdown-it-div', 'markdown-it-attrs'],
+  },
+
+  feed() {
+    const blogUrl = `${host}/blog`
+    const feedFormats = {
+      rss: { type: 'rss2', file: 'rss.xml' },
+      json: { type: 'json1', file: 'feed.json' },
+    }
+    const { $content } = require('@nuxt/content')
+
+    const createFeedArticles = async function (feed) {
+      feed.options = {
+        title: "Jan's Blog",
+        description: 'Software engineering and computer science.',
+        link: blogUrl,
+        language: 'en',
+      }
+      const posts = await $content('en/blog').fetch()
+
+      posts.forEach((post) => {
+        const url = `${blogUrl}/${post.slug}`
+
+        const item = {
+          title: post.title,
+          id: url,
+          link: url,
+          date: new Date(post.createdAt),
+          description: post.description,
+          content: post.bodyText,
+          categories: post.tags,
+        }
+
+        feed.addItem(item)
+      })
+    }
+
+    return Object.values(feedFormats).map(({ file, type }) => ({
+      path: `/feed/${file}`,
+      type,
+      create: createFeedArticles,
+    }))
+  },
+
   sitemap: {
-    hostname: 'https://jan-mueller.at',
+    hostname: host,
     gzip: true,
     routes: async () => {
       const { $content } = require('@nuxt/content')
@@ -120,5 +172,16 @@ export default {
 
   loading: {
     color: primaryColor,
+  },
+
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      const md = require('markdown-it')()
+      if (document.extension === '.md') {
+        const { text } = require('reading-time')(document.text)
+        document.readingTime = text
+        document.bodyText = md.render(document.text)
+      }
+    },
   },
 }

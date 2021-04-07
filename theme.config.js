@@ -5,11 +5,12 @@ export const primaryColor = '#007aff'
 export const themes = {
   light: {
     primary: primaryColor,
+    secondary: colors.amber.darken4,
   },
   dark: {
     primary: primaryColor,
     accent: colors.grey.darken3,
-    secondary: colors.amber.darken3,
+    secondary: colors.orange.lighten2,
     info: colors.teal.lighten1,
     warning: colors.amber.base,
     error: colors.deepOrange.accent4,

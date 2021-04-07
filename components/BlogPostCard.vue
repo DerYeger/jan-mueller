@@ -17,16 +17,20 @@
           </v-row>
         </template>
       </v-img>
-      <v-card-title>{{ blogPost.title }}</v-card-title>
-      <v-card-subtitle>{{
-        $d(new Date(blogPost.createdAt), 'long')
-      }}</v-card-subtitle>
-      <template v-if="hasTags(blogPost)">
-        <v-divider class="mx-4" />
-        <v-card-text>
-          {{ $t('misc.tags') }}: {{ blogPost.tags.join(', ') }}
-        </v-card-text>
-      </template>
+      <v-card-title class="headline" style="word-break: normal">
+        {{ blogPost.title }}
+      </v-card-title>
+      <v-card-subtitle>
+        <i>
+          {{ $d(new Date(blogPost.createdAt), 'short') }} ·
+          {{ blogPost.readingTime }}
+        </i>
+      </v-card-subtitle>
+      <v-divider class="mx-4" />
+      <v-card-text>
+        {{ blogPost.description }}
+        <tag-list v-if="hasTags(blogPost)" :tags="blogPost.tags" class="mt-2" />
+      </v-card-text>
     </v-card>
   </v-hover>
 </template>

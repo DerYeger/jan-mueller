@@ -27,7 +27,7 @@ export default defineComponent({
     $content: contentFunc
   }) {
     const projects = (await $content('en/projects')
-      .only(['title', 'path', 'description'])
+      .without(['body', 'bodyText', 'toc'])
       .sortBy('title', 'asc')
       .fetch<Project>()) as Project[]
     return {

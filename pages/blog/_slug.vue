@@ -3,9 +3,14 @@
     <article class="justify-text" lang="en">
       <h1>{{ post.title }}</h1>
       <p>
-        {{ $t('misc.last-update') }}: {{ $d(new Date(post.updatedAt), 'long') }}
+        <i>
+          {{ $d(new Date(post.createdAt), 'long') }} ·
+          {{ post.readingTime }}
+        </i>
       </p>
-      <p v-if="hasTags(post)">Tags: {{ post.tags.join(', ') }}</p>
+      <p>
+        {{ post.description }}
+      </p>
       <table-of-contents v-if="post.toc.length > 0" :document="post" />
       <nuxt-content :document="post" />
     </article>

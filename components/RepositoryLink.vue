@@ -3,7 +3,7 @@
     <template #activator="{ on, attrs }">
       <v-btn
         rel="noopener"
-        text
+        plain
         :aria-label="$t('actions.view-on') + ' GitHub'"
         :href="href"
         target="_blank"
