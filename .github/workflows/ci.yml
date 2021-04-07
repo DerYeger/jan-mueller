@@ -18,7 +18,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('./package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('./package.json', './package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Install dependencies
@@ -40,7 +40,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('./package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('./package.json', './package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Build
@@ -61,7 +61,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('./package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('./package.json', './package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Lint
@@ -82,7 +82,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('./package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('./package.json', './package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Test
