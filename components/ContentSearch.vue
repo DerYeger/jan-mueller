@@ -83,7 +83,6 @@ export default defineComponent({
     reset() {
       this.query = ''
       this.showResults = false
-      console.log('hamlo')
     },
   },
 })
