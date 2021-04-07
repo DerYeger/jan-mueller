@@ -1,3 +1,10 @@
+## [1.10.2](https://github.com/DerYeger/jan-mueller/compare/v1.10.1...v1.10.2) (2021-04-07)
+
+
+### Bug Fixes
+
+* use explicit color for app bar ([f61433b](https://github.com/DerYeger/jan-mueller/commit/f61433bb786debf03b97ecd285a3ced0acc61148))
+
 ## [1.10.1](https://github.com/DerYeger/jan-mueller/compare/v1.10.0...v1.10.1) (2021-04-07)
 
 
