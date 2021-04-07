@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/DerYeger/jan-mueller/compare/v1.9.1...v1.9.2) (2021-04-07)
+
+
+### Bug Fixes
+
+* **deps:** pin dependency markdown-it to 12.0.4 ([b47664a](https://github.com/DerYeger/jan-mueller/commit/b47664afcc660a9edea1814cbd26d8f7a7f3ffc1))
+
 ## [1.9.1](https://github.com/DerYeger/jan-mueller/compare/v1.9.0...v1.9.1) (2021-04-07)
 
 
