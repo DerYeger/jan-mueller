@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/DerYeger/jan-mueller/compare/v1.8.1...v1.9.0) (2021-04-07)
+
+
+### Features
+
+* configure feed ([fafb291](https://github.com/DerYeger/jan-mueller/commit/fafb2916007b422009f380f7c9930187feaf061a))
+
 ## [1.8.1](https://github.com/DerYeger/jan-mueller/compare/v1.8.0...v1.8.1) (2021-04-06)
 
 
