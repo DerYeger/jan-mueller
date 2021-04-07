@@ -1,3 +1,15 @@
+# [1.10.0](https://github.com/DerYeger/jan-mueller/compare/v1.9.3...v1.10.0) (2021-04-07)
+
+
+### Bug Fixes
+
+* improve content-search ux ([f3e3c12](https://github.com/DerYeger/jan-mueller/commit/f3e3c12af62f055af36bf7657f73814fcac1f879))
+
+
+### Features
+
+* overhaul page layout ([384ba11](https://github.com/DerYeger/jan-mueller/commit/384ba11ecdec26ecc63c133732f4464422b9d11d))
+
 ## [1.9.3](https://github.com/DerYeger/jan-mueller/compare/v1.9.2...v1.9.3) (2021-04-07)
 
 
