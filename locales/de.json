@@ -19,7 +19,8 @@
     "description": "Persönliche Website von Jan Müller, einem leidenschaftlichen Softwareentwickler."
   },
   "misc": {
-    "and-more": "... und mehr!"
+    "and-more": "... und mehr!",
+    "no-results": "Keine Ergebnisse"
   },
   "projects": {
     "title": "Projekte"
