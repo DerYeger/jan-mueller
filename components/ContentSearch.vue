@@ -90,6 +90,6 @@ export default defineComponent({
 
 <style>
 .search-input {
-  max-width: min(100%, 24rem);
+  max-width: 16rem;
 }
 </style>

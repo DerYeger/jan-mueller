@@ -57,7 +57,7 @@ h3 {
 }
 
 .bound-width {
-  max-width: 960px;
+  max-width: 960px !important;
 }
 
 article {
@@ -148,4 +148,21 @@ article {
 
 .svg-icon {
   font-size: 0;
+}
+
+.v-toolbar__content,
+.v-footer {
+  display: flex;
+
+  > div {
+    flex: 1;
+  }
+
+  div:first-child > * {
+    margin-right: auto;
+  }
+
+  div:last-child > * {
+    margin-left: auto;
+  }
 }
