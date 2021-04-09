@@ -19,7 +19,11 @@
     </div>
     <div
       style="display: flex; justify-content: center"
-      :style="$vuetify.breakpoint.mdAndDown ? 'flex-basis: auto' : ''"
+      :style="
+        $vuetify.breakpoint.mdAndDown
+          ? 'flex-basis: auto'
+          : 'margin-left: -56px'
+      "
     >
       <content-search />
     </div>
