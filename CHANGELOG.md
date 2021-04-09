@@ -1,3 +1,10 @@
+## [1.10.5](https://github.com/DerYeger/jan-mueller/compare/v1.10.4...v1.10.5) (2021-04-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency nuxt-i18n to v6.24.0 ([09fec9e](https://github.com/DerYeger/jan-mueller/commit/09fec9ef4ffebe7e41a03eca6cb4d6cf64a2eefd))
+
 ## [1.10.4](https://github.com/DerYeger/jan-mueller/compare/v1.10.3...v1.10.4) (2021-04-09)
 
 
