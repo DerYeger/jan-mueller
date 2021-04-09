@@ -1,3 +1,10 @@
+## [1.10.4](https://github.com/DerYeger/jan-mueller/compare/v1.10.3...v1.10.4) (2021-04-09)
+
+
+### Bug Fixes
+
+* offset search input when nav drawer is present ([d359971](https://github.com/DerYeger/jan-mueller/commit/d359971f3f473693692f560b3861b25c96f3d410))
+
 ## [1.10.3](https://github.com/DerYeger/jan-mueller/compare/v1.10.2...v1.10.3) (2021-04-08)
 
 
