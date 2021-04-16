@@ -52,7 +52,7 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    '@nuxtjs/composition-api',
+    '@nuxtjs/composition-api/module',
     [
       'nuxt-i18n',
       {
