@@ -4,6 +4,7 @@
       :to="project.path"
       :elevation="hover ? 12 : 2"
       :class="hover ? 'primary--text' : 'text'"
+      class="project-card"
     >
       <v-img
         v-if="project.image"
@@ -17,16 +18,13 @@
           </v-row>
         </template>
       </v-img>
-      <v-card-title class="headline" style="word-break: normal">
+      <v-card-title class="headline card-title" style="word-break: normal">
         {{ project.title }}
-        <v-spacer />
-        <v-icon
-          v-if="project.repository"
-          small
-          class="mr-2"
-          v-text="'fab fa-github'"
-        />
-        <v-icon v-if="project.demo" small v-text="'mdi-television-play'" />
+        <v-spacer style="min-width: 1rem" />
+        <div>
+          <v-icon v-if="project.repository" small v-text="'fab fa-github'" />
+          <v-icon v-if="project.demo" small v-text="'mdi-television-play'" />
+        </div>
       </v-card-title>
       <v-card-subtitle>
         <i>{{ project.readingTime }}</i>
@@ -50,3 +48,10 @@ export default defineComponent({
   },
 })
 </script>
+
+<style>
+.project-card .headline {
+  display: flex;
+  flex-wrap: nowrap;
+}
+</style>
