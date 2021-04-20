@@ -13,8 +13,8 @@
       </p>
       <table-of-contents v-if="post.toc.length > 0" :document="post" />
       <nuxt-content :document="post" />
+      <document-switcher v-if="prev || next" :prev="prev" :next="next" />
     </article>
-    <document-switcher v-if="prev || next" :prev="prev" :next="next" />
   </div>
 </template>
 

@@ -5,8 +5,8 @@
       <repository-link :repository="project.repository"></repository-link>
       <demo-link v-if="project.demo" :href="project.demo"></demo-link>
       <nuxt-content :document="project" />
+      <document-switcher v-if="prev || next" :prev="prev" :next="next" />
     </article>
-    <document-switcher v-if="prev || next" :prev="prev" :next="next" />
   </div>
 </template>
 
