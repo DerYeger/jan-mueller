@@ -1,3 +1,11 @@
+## [1.10.13](https://github.com/DerYeger/jan-mueller/compare/v1.10.12...v1.10.13) (2021-04-20)
+
+
+### Bug Fixes
+
+* improve spacing of project card titles ([9563b78](https://github.com/DerYeger/jan-mueller/commit/9563b78f11a1e339da9bab6add4461e473a97ccd))
+* limit document switcher position to article width ([2493614](https://github.com/DerYeger/jan-mueller/commit/249361496c0c3a762f6b99a13004f47ee691adc5))
+
 ## [1.10.12](https://github.com/DerYeger/jan-mueller/compare/v1.10.11...v1.10.12) (2021-04-20)
 
 
