@@ -21,11 +21,12 @@ import {
 
 export default defineComponent({
   async asyncData({ app, $content, params }) {
-    const project = await $content('en/projects', params.slug).fetch()
+    const projectsDir = `${app.i18n.locale}/projects`
+    const project = await $content(projectsDir, params.slug).fetch()
 
-    const [prev, next] = await $content('en/projects')
+    const [prev, next] = await $content(projectsDir)
       .only(['title', 'path'])
-      .sortBy('createdAt', 'asc')
+      .sortBy('title', 'asc')
       .surround(params.slug)
       .fetch()
 

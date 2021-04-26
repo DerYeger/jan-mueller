@@ -15,7 +15,7 @@ In particular, touch input always provided the same elements for both `pointerdo
 This happened regardless of the actual element `pointerup` should have provided and did not match the behavior of mouse inputs.
 
 The solution I came up with was to use separate events for mouse and touch input.
-In addition, touch events now check for intersections between nodes and the pointer to handle the creating of links.
+In addition, touch events now check for intersections between nodes, and the pointer to handle the creating of links.
 
 ## Demo
 <demo-frame src="https://graph.yeger.eu" title="Graph Editor"></demo-frame>

@@ -26,7 +26,7 @@ export default defineComponent({
     app: NuxtAppOptions
     $content: contentFunc
   }) {
-    const projects = (await $content('en/projects')
+    const projects = (await $content(`${app.i18n.locale}/projects`)
       .without(['body', 'bodyText', 'toc'])
       .sortBy('title', 'asc')
       .fetch<Project>()) as Project[]
