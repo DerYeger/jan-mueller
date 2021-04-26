@@ -26,9 +26,6 @@
           <v-icon v-if="project.demo" small v-text="'mdi-television-play'" />
         </div>
       </v-card-title>
-      <v-card-subtitle>
-        <i>{{ project.readingTime }}</i>
-      </v-card-subtitle>
       <v-divider class="mx-4" />
       <v-card-text>{{ project.description }}</v-card-text>
     </v-card>
