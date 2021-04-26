@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/DerYeger/jan-mueller/compare/v1.11.0...v1.11.1) (2021-04-26)
+
+
+### Bug Fixes
+
+* update legal disclosure ([ede8659](https://github.com/DerYeger/jan-mueller/commit/ede86594480d41cf641a71c4c302a7c3fba18d0e))
+
 # [1.11.0](https://github.com/DerYeger/jan-mueller/compare/v1.10.16...v1.11.0) (2021-04-26)
 
 
