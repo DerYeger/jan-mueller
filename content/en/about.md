@@ -1,64 +1,44 @@
-# Legal Disclosure
+# Legal Notice
 
-Information in accordance with § 5 TMG
+Information in accordance with §5 of the E-Commerce Act, §14 of the Unternehmensgesetzbuch, §63 of the Commercial Code and disclosure requirements under §25 of the Media Act.
 
-Jan Müller\
-Käthe-Kollwitz-Straße 7\
-34246 Vellmar
-
-**Represented by:**\
 Jan Müller
 
-**Contact:**\
-Phone: +49-157-33286421\
-E-Mail: mail@jan-mueller.at
+1090 Wien,\
+Österreich
 
-**Responsible for the content according to § 55 para. 2 RStV:**\
-Jan Müller\
-Käthe-Kollwitz-Straße 7\
-34246 Vellmar
+**Email:** mail@jan-mueller.at
 
-**Disclaimer:**
+Source: Created with the [Impressum Generator](https://www.adsimple.at/impressum-generator/) by AdSimple
 
-**Accountability for content**
+# Privacy policy
 
-The contents of our pages were created with the utmost care.
-However, we cannot guarantee the accuracy, completeness and timeliness of the content.
-As a service provider, we are responsible for our own content on these pages under the general laws according to § 7 para.1 TMG.
-According to §§ 8 to 10 TMG, however, we are not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.
-Obligations to remove or block the use of information under the general laws remain unaffected.
-However, liability in this regard is only possible from the point in time at which a concrete infringement of the law becomes known.
-If we become aware of such infringements, we will remove this content immediately.
+## Privacy Policy
 
-**Accountability for links**
+We have written this privacy policy (version 01.01.1970-121692304) to provide you with information in accordance with the requirements of the [General Data Protection Regulation (EU) 2016/679](https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32016R0679&amp%3Btid=%5Badsimpletextid]) as well as to explain what information we collect, how we use data and what choices you have as a visitor to this website.
 
-Our offer contains links to external websites of third parties, on whose contents we have no influence.
-Therefore, we cannot assume any liability for these external contents.
-The respective provider or operator of the pages is always responsible for the content of the linked pages.
-The linked pages were checked for possible legal violations at the time of linking.
-Illegal contents were not recognizable at the time of linking.
-However, a permanent control of the contents of the linked pages is not reasonable without concrete evidence of a violation of the law.
-If we become aware of any infringements, we will remove such links immediately.
+Privacy policies usually sound very technical. However, this version should describe the most important things as simply and clearly as possible. Moreover, technical terms are explained in a reader-friendly manner whenever possible. We would also like to convey that we only collect and use information via this website if there is a corresponding legal basis for it. This is certainly not possible if you give very brief technical explanations, as are often standard on the Internet when it comes to data protection. We hope you find the following explanations interesting and informative. Maybe you will also find some information that you did not know yet.
+Should you still have questions, we kindly ask you to follow the existing links to see further information on third-party websites, or to simply write us an email. You can find our contact information in our website’s imprint.
 
-**Copyright**
+## Rights in accordance with the General Data Protection Regulation
 
-The content and works created by the site operators on these pages are subject to German copyright law.
-The reproduction, editing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator.
-Downloads and copies of this site are only permitted for private, non-commercial use.
-Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected.
-In particular, third-party content is identified as such.
-Should you nevertheless become aware of a copyright infringement, please inform us accordingly.
-If we become aware of any infringements, we will remove such content immediately.
+You are granted the following rights in accordance with the provisions of the GDPR (General Data Protection Regulation) and the Austrian Data Protection Act (DSG):
 
-**Data protection**
+- right to rectification (article 16 GDPR)
+- right to erasure (“right to be forgotten“) (article 17 GDPR)
+- right to restrict processing (article 18 GDPR)
+- right to notification – notification obligation regarding rectification or erasure of personal data or restriction of processing (article 19 GDPR)
+- right to data portability (article 20 GDPR)
+- right to object (article 21 GDPR)
+- right not to be subject to a decision based solely on automated processing – including profiling – (article 22 GDPR)
 
-The use of our website is generally possible without providing personal data.
-Insofar as personal data (for example, name, address or e-mail addresses) are collected on our pages, this is always done, as far as possible, on a voluntary basis.
-This data will not be passed on to third parties without your express consent.
-We point out that data transmission over the Internet (eg communication by e-mail) security gaps.
-Complete protection of data against access by third parties is not possible.
-The use of contact data published within the framework of the imprint obligation by third parties for the purpose of sending unsolicited advertising and information materials is hereby expressly prohibited.
-The operators of the pages expressly reserve the right to take legal action in the event of the unsolicited sending of advertising information, such as spam e-mails.
+If you think that the processing of your data violates the data protection law, or that your data protection rights have been infringed in any other way, you can lodge a complaint with your respective regulatory authority. For Austria this is the data protection authority, whose website you can access at https://www.data-protection-authority.gv.at/.
 
-Imprint by the [Impressum Generator](https://www.impressum-generator.de/) of the [Kanzlei Hasselbach, Rechtsanwälte für Arbeitsrecht und Familienrecht](https://www.kanzlei-hasselbach.de/)\
-Translated with www.DeepL.com/Translator (free version)
+## TLS encryption with https
+
+The terms TLS, encryption and https sound very technical, which they are indeed. We use HTTPS (Hypertext Transfer Protocol Secure) to securely transfer data on the Internet.
+This means that the entire transmission of all data from your browser to our web server is secured – nobody can “listen in”.
+
+We have thus introduced an additional layer of security and meet privacy requirements through technology design [Article 25 Section 1 GDPR](https://eur-lex.europa.eu/legal-content/en/TXT/HTML/?uri=CELEX:32016R0679&from=EN&tid=121692304). With the use of TLS (Transport Layer Security), which is an encryption protocol for safe data transfer on the internet, we can ensure the protection of confidential information.
+You can recognise the use of this safeguarding tool by the little lock-symbol, which is situated in your browser’s top left corner in the left of the internet address (e.g. examplepage.uk), as well as by the display of the letters https (instead of http) as a part of our web address.
+If you want to know more about encryption, we recommend you to do a Google search for “Hypertext Transfer Protocol Secure wiki” to find good links to further information.
