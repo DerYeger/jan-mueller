@@ -1,9 +1,9 @@
 <template>
   <iframe
-    src="https://graph.yeger.eu"
+    :src="src"
     title="Graph Editor"
     width="100%"
-    class="elevation-6"
+    class="elevation-6 mb-4"
   />
 </template>
 
