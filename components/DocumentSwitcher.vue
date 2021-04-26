@@ -1,5 +1,5 @@
 <template>
-  <p class="link-container">
+  <div class="document-link-container">
     <NuxtLink v-if="prev" :to="prev.path" class="mr-4">
       <v-icon v-text="'mdi-chevron-left'" />
       <span>{{ prev.title }}</span>
@@ -10,7 +10,7 @@
       <v-icon v-text="'mdi-chevron-right'" />
     </NuxtLink>
     <span v-else />
-  </p>
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
@@ -31,7 +31,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.link-container {
+.document-link-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -39,19 +39,16 @@ export default defineComponent({
   a {
     display: flex;
     align-items: center;
-    color: unset !important;
     font-size: clamp(1rem, 2vw, 1.25rem);
-    font-weight: bold;
-    text-decoration: none;
+
+    .v-icon {
+      color: var(--v-primary);
+    }
 
     .v-icon + span,
     span + .v-icon {
       margin-left: 0.25rem;
     }
-  }
-
-  a:hover span {
-    text-decoration: underline;
   }
 }
 </style>
