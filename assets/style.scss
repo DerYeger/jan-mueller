@@ -2,6 +2,14 @@ html {
   overflow-y: auto !important;
 }
 
+.v-application a {
+  text-decoration: none;
+
+  &:hover {
+    color: var(--v-secondary-base);
+  }
+}
+
 .unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;

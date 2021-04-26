@@ -159,6 +159,9 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
+      options: {
+        customProperties: true,
+      },
       dark: true,
       themes: {
         dark: themes.dark,
