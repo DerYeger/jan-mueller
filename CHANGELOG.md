@@ -1,3 +1,10 @@
+## [1.10.16](https://github.com/DerYeger/jan-mueller/compare/v1.10.15...v1.10.16) (2021-04-26)
+
+
+### Bug Fixes
+
+* update location in home page ([b8b0e8d](https://github.com/DerYeger/jan-mueller/commit/b8b0e8d0a28932f66c4d834341a441c53c7049a7))
+
 ## [1.10.15](https://github.com/DerYeger/jan-mueller/compare/v1.10.14...v1.10.15) (2021-04-25)
 
 
