@@ -1,3 +1,19 @@
+# [1.11.0](https://github.com/DerYeger/jan-mueller/compare/v1.10.16...v1.11.0) (2021-04-26)
+
+
+### Bug Fixes
+
+* add bottom margin to demo frame ([60eba49](https://github.com/DerYeger/jan-mueller/commit/60eba4928a594a597b3641562e3b8655d784af4c))
+* improve document switcher ([dd1a214](https://github.com/DerYeger/jan-mueller/commit/dd1a2141d6b50c9a8a316452df71bee5a3d61d5b))
+* improve link design ([245df36](https://github.com/DerYeger/jan-mueller/commit/245df3645e2265ca70cc83f19c5f0ffabb5cb054))
+* remove reading time from project card ([87e28af](https://github.com/DerYeger/jan-mueller/commit/87e28af7f07f608a846aee9458bf34779cc26fca))
+
+
+### Features
+
+* add cyk-algorithm and cyk-visualizer projects ([c79d207](https://github.com/DerYeger/jan-mueller/commit/c79d20789fcd70214a0c78eeae16de9a3a35d32a))
+* translate projects ([e65d43f](https://github.com/DerYeger/jan-mueller/commit/e65d43f3ee581042476e337d545227047d302a78))
+
 ## [1.10.16](https://github.com/DerYeger/jan-mueller/compare/v1.10.15...v1.10.16) (2021-04-26)
 
 
