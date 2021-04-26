@@ -1,9 +1,9 @@
 # About me
 
-*Jan // 22 // B.Sc. // Software Engineer // Kassel*
+*Jan // 22 // B.Sc. // Software Engineer // Vienna*
 
 In 2021, I finished my bachelor's degree in computer science at the University of Kassel.
-April 2021, I will move to Vienna, where I aim to complete the master's program *Software Engineering & Internet Computing* at the TU Wien.
+April 2021, I moved to Vienna, where I aim to complete the master's program *Software Engineering & Internet Computing* at the TU Wien.
 
 Programming is one of my hobbies in particular.
 I work on various open source and hobby projects, which I use as a platform for learning.
