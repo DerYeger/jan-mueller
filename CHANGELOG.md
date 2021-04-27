@@ -1,3 +1,10 @@
+## [1.11.2](https://github.com/DerYeger/jan-mueller/compare/v1.11.1...v1.11.2) (2021-04-27)
+
+
+### Bug Fixes
+
+* set canonical link in default layout ([3b6b68d](https://github.com/DerYeger/jan-mueller/commit/3b6b68dfddffb0bdfb17638202652f34e973a822))
+
 ## [1.11.1](https://github.com/DerYeger/jan-mueller/compare/v1.11.0...v1.11.1) (2021-04-26)
 
 
