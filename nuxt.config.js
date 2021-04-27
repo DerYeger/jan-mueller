@@ -140,8 +140,10 @@ export default {
   },
 
   sitemap: {
-    hostname: host,
     gzip: true,
+    hostname: host,
+    i18n: true,
+    trailingSlash: true,
     routes: async () => {
       const { $content } = require('@nuxt/content')
       const files = await $content({ deep: true }).only(['path']).fetch()
@@ -152,7 +154,6 @@ export default {
           : [file.path.replace('/en/', ''), file.path.replace('/en/', '/de/')]
       )
     },
-    i18n: true,
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
