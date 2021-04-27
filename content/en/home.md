@@ -17,8 +17,8 @@ In internships as a software developer as well as multiple jobs as a grader and 
 I find my inspiration while listening to music, walking, and reading, where I like to lose myself in science fiction worlds like Frank Herbert's *Dune*.
 Both melancholic songs by Ben Howard and breathtaking soundtracks of my favorite video games accompany me during hours of programming and inspire me to look for solutions to even the trickiest problems.
 
-### Languages
+## Languages
 <language-list class="mt-4 mb-4"></language-list>
 
-### Libraries, frameworks and tools
+## Libraries, frameworks and tools
 <software-list class="mt-4 mb-4"></software-list>

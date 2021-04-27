@@ -17,8 +17,8 @@ In Berufspraktika als Softwareentwickler sowie mehrfachen Anstellungen als Korre
 Meine Inspiration finde ich beim Musikhören, Spazierengehen und Lesen, wobei ich mich gerne in Science-Fiction Welten wie Frank Herberts *Dune* verliere.
 Sowohl melancholische Lieder von Ben Howard als auch atemberaubende Soundtracks meiner Lieblingsvideospiele helfen mir beim stundenlangen Programmieren und inspirieren mich auch bei den kniffligsten Problemen nach Lösungen zu suchen.
 
-### Sprachen
+## Sprachen
 <language-list class="mt-4 mb-4"></language-list>
 
-### Bibliotheken, Frameworks und Werkzeuge
+## Bibliotheken, Frameworks und Werkzeuge
 <software-list class="mt-4 mb-4"></software-list>
