@@ -1,3 +1,11 @@
+## [1.11.3](https://github.com/DerYeger/jan-mueller/compare/v1.11.2...v1.11.3) (2021-04-27)
+
+
+### Bug Fixes
+
+* do not skip heading order ([4c3f174](https://github.com/DerYeger/jan-mueller/commit/4c3f17426e44935d3b5780638806b00afb56d073))
+* use use trailing slash in sitemap ([32c482f](https://github.com/DerYeger/jan-mueller/commit/32c482fc6ca237b008d0724cb44ba2a095c2e330))
+
 ## [1.11.2](https://github.com/DerYeger/jan-mueller/compare/v1.11.1...v1.11.2) (2021-04-27)
 
 
