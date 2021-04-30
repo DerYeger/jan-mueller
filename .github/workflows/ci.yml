@@ -98,7 +98,7 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
       - name: Semantic release
-        uses: cycjimmy/semantic-release-action@v2.5.3
+        uses: cycjimmy/semantic-release-action@v2.5.4
         with:
           extra_plugins: |
             @semantic-release/changelog
