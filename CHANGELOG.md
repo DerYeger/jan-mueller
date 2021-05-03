@@ -1,3 +1,16 @@
+# [1.12.0](https://github.com/DerYeger/jan-mueller/compare/v1.11.5...v1.12.0) (2021-05-03)
+
+
+### Bug Fixes
+
+* simplify stylesheet ([0e09185](https://github.com/DerYeger/jan-mueller/commit/0e09185172b25ca4e9150fac843e44c56f351dc2))
+* update model to include all fields of documents ([67d408d](https://github.com/DerYeger/jan-mueller/commit/67d408df65ff82fbf31e8a8570678e5d0aa94546))
+
+
+### Features
+
+* update content ([fe51e1f](https://github.com/DerYeger/jan-mueller/commit/fe51e1f7c417b93c0a720d18504a92cc8800c1fb))
+
 ## [1.11.5](https://github.com/DerYeger/jan-mueller/compare/v1.11.4...v1.11.5) (2021-04-28)
 
 
