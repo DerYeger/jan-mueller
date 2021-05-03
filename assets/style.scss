@@ -73,64 +73,61 @@ article {
 
   margin: auto;
 
-  .nuxt-content {
-    .nuxt-content-highlight {
-      position: relative;
-      border-radius: 3px;
-      box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
-        0 1px 10px 0 rgb(0 0 0 / 12%);
+  ul,
+  video,
+  .v-image,
+  .nuxt-content-highlight {
+    margin-bottom: 1rem;
+  }
 
-      & + p {
-        margin-top: 1rem;
-      }
+  .nuxt-content-highlight {
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
+      0 1px 10px 0 rgb(0 0 0 / 12%);
 
-      code {
-        all: unset !important;
-      }
-
-      pre {
-        border-radius: 3px;
-      }
-
-      .filename {
-        @extend .unselectable;
-
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 1;
-        margin-right: 0.5rem;
-        margin-top: 0.25rem;
-        font-weight: 300;
-        font-size: 0.875rem;
-        color: #c3cee3;
-      }
+    & + p {
+      margin-top: 1rem;
     }
 
-    video,
-    .v-image,
-    .nuxt-content-highlight {
-      margin-bottom: 1rem;
+    code {
+      all: unset !important;
+    }
+
+    pre {
+      border-radius: 3px;
+    }
+
+    .filename {
+      @extend .unselectable;
+
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      margin-right: 0.5rem;
+      margin-top: 0.25rem;
+      font-weight: 300;
+      font-size: 0.875rem;
+      color: #c3cee3;
     }
   }
 }
 
 @media (max-width: 960px) {
   article {
-    .nuxt-content {
-      iframe,
-      .nuxt-content-highlight {
-        margin-left: -12px;
-        margin-right: -12px;
-      }
+    iframe,
+    .nuxt-content-highlight {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
 
-      iframe {
-        width: calc(100% + 24px);
-      }
+    iframe {
+      width: calc(100% + 24px);
+    }
 
-      .nuxt-content-highlight pre {
-        border-radius: 0;
-      }
+    .nuxt-content-highlight pre {
+      border-radius: 0;
     }
   }
 }
