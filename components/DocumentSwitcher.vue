@@ -14,16 +14,16 @@
 </template>
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import { IContentDocument } from '@nuxt/content/types/content'
+import { Content } from '~/model/content'
 
 export default defineComponent({
   props: {
     prev: {
-      type: Object as () => IContentDocument | undefined,
+      type: Object as () => Content | undefined,
       default: undefined,
     },
     next: {
-      type: Object as () => IContentDocument | undefined,
+      type: Object as () => Content | undefined,
       default: undefined,
     },
   },

@@ -48,7 +48,7 @@ export default defineComponent({
       link: [
         {
           rel: 'canonical',
-          href: 'https://jan-mueller.at' + this.$route.path,
+          href: `https://jan-mueller.at${this.$route.path}/`,
         },
       ],
     }

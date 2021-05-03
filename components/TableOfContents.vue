@@ -13,12 +13,12 @@
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import { IContentDocument } from '@nuxt/content/types/content'
+import { Content } from '~/model/content'
 
 export default defineComponent({
   props: {
     document: {
-      type: Object as () => IContentDocument,
+      type: Object as () => Content,
       required: true,
     },
   },

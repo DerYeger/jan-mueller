@@ -1,4 +1,4 @@
-import { IContentDocument } from '@nuxt/content/types/content'
+import { Content } from '~/model/content'
 
 export interface Route {
   title: string
@@ -29,7 +29,7 @@ export const routes: Record<string, Route> = {
   },
 }
 
-export function localizeDocumentPaths<T extends IContentDocument>(
+export function localizeDocumentPaths<T extends Content>(
   documents: T[],
   locale: string
 ): T[] {
@@ -40,7 +40,7 @@ export function localizeDocumentPaths<T extends IContentDocument>(
   }))
 }
 
-export function localizeDocumentPath<T extends IContentDocument>(
+export function localizeDocumentPath<T extends Content>(
   document: T | null,
   locale: string
 ): T | undefined {

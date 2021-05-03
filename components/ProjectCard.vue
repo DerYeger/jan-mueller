@@ -7,10 +7,11 @@
       class="project-card"
     >
       <v-img
-        v-if="project.image"
-        :src="require('~/assets/images/' + project.image)"
-        :aspect-ratio="2"
-        max-height="8rem"
+        v-if="project.thumbnail"
+        :src="require('~/assets/images/projects/' + project.thumbnail)"
+        aspect-ratio="2"
+        contain="contain"
+        max-height="16rem"
       >
         <template #placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">

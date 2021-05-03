@@ -1,6 +1,6 @@
-import { IContentDocument } from '@nuxt/content/types/content'
+import { Content } from '~/model/content'
 
-export interface BlogPost extends IContentDocument {
+export interface BlogPost extends Content {
   readingTime: string
   tags?: string[]
   image?: string

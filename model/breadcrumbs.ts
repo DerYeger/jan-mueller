@@ -1,5 +1,5 @@
-import { IContentDocument } from '@nuxt/content/types/content'
 import { localizeDocumentPath, routes } from '~/model/routes'
+import { Content } from '~/model/content'
 
 export interface Breadcrumb {
   text: string
@@ -27,7 +27,7 @@ export const aboutBreadcrumb: Breadcrumb = {
 }
 
 export function documentBreadcrumb(
-  document: IContentDocument,
+  document: Content,
   locale: string
 ): Breadcrumb {
   return {
