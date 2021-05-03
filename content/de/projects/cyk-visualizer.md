@@ -3,6 +3,7 @@ title: CYK Visualizer
 description: CYK Visualizer geschrieben in Kotlin/JS.
 repository: cyk-visualizer
 demo: https://cyk.yeger.eu
+thumbnail: cyk-visualizer/thumbnail.webp
 ---
 
 Basierend auf meiner [Implementierung des CYK-Algorithmus](/de/projects/cyk-algorithm), habe ich eine Website zur Visualisierung der Auswertungsschritte erstellt.

@@ -2,6 +2,7 @@
 title: CYK Algorithm
 description: Kotlin Multiplatform Implementierung des CYK-Algorithmus.
 repository: cyk-algorithm
+thumbnail: cyk-algorithm/thumbnail.webp
 ---
 
 Bei der Entwicklung dieser Bibliothek habe ich meine ersten Erfahrungen mit Kotlin Multiplatform gemacht.
