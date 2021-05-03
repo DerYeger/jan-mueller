@@ -71,8 +71,12 @@ export default defineComponent({
       ],
     }
   },
+  head() {
+    return {
+      title: (this.$t as Function)(routes.home.title),
+    }
+  },
   mounted() {
-    this.$store.commit('setTitle', routes.home.title)
     this.$store.commit('setBreadcrumbs', [])
   },
 })

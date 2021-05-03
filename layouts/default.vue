@@ -34,7 +34,6 @@ export default defineComponent({
   },
   head() {
     return {
-      title: this.$t(this.$store.state.title),
       htmlAttrs: {
         lang: this.$i18n.locale,
       },
@@ -53,7 +52,7 @@ export default defineComponent({
       ],
     }
   },
-  computed: mapState(['title', 'breadcrumbs']),
+  computed: mapState(['breadcrumbs']),
   methods: {
     toggleDrawer() {
       this.drawerOpen = !this.drawerOpen

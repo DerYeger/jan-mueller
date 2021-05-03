@@ -1,21 +1,16 @@
 import { Breadcrumb } from '~/model/breadcrumbs'
 
 export interface State {
-  title: string
   useDarkTheme: boolean
   breadcrumbs: Breadcrumb[]
 }
 
 export const state: () => State = () => ({
-  title: 'home.title',
   useDarkTheme: true,
   breadcrumbs: [] as Breadcrumb[],
 })
 
 export const mutations = {
-  setTitle(state: State, title: string) {
-    state.title = title
-  },
   setBreadcrumbs(state: State, breadcrumbs: Breadcrumb[]) {
     state.breadcrumbs = breadcrumbs
   },

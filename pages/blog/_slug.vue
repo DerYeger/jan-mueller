@@ -21,7 +21,7 @@
 <script>
 import { defineComponent } from '@nuxtjs/composition-api'
 import { hasTags } from '~/model/blog-post'
-import { localizeDocumentPath, routes } from '~/model/routes'
+import { localizeDocumentPath } from '~/model/routes'
 import {
   blogBreadcrumb,
   documentBreadcrumb,
@@ -44,8 +44,12 @@ export default defineComponent({
       next: localizeDocumentPath(next, app.i18n.locale),
     }
   },
+  head() {
+    return {
+      title: this.$t(this.post.title),
+    }
+  },
   mounted() {
-    this.$store.commit('setTitle', routes.blog.title)
     this.$store.commit('setBreadcrumbs', [
       homeBreadcrumb,
       blogBreadcrumb,

@@ -12,7 +12,7 @@
 
 <script>
 import { defineComponent } from '@nuxtjs/composition-api'
-import { localizeDocumentPath, routes } from '~/model/routes'
+import { localizeDocumentPath } from '~/model/routes'
 import {
   documentBreadcrumb,
   homeBreadcrumb,
@@ -36,8 +36,12 @@ export default defineComponent({
       next: localizeDocumentPath(next, app.i18n.locale),
     }
   },
+  head() {
+    return {
+      title: this.$t(this.project.title),
+    }
+  },
   mounted() {
-    this.$store.commit('setTitle', routes.projects.title)
     this.$store.commit('setBreadcrumbs', [
       homeBreadcrumb,
       projectsBreadcrumb,

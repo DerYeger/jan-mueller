@@ -34,8 +34,12 @@ export default defineComponent({
       posts: localizeDocumentPaths(posts, app.i18n.locale),
     }
   },
+  head() {
+    return {
+      title: (this.$t as Function)(routes.blog.title),
+    }
+  },
   mounted() {
-    this.$store.commit('setTitle', routes.blog.title)
     this.$store.commit('setBreadcrumbs', [homeBreadcrumb, blogBreadcrumb])
   },
   methods: {
