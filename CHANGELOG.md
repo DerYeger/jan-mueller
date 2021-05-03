@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/DerYeger/jan-mueller/compare/v1.12.0...v1.12.1) (2021-05-03)
+
+
+### Bug Fixes
+
+* use static titles instead of store ([36a57d9](https://github.com/DerYeger/jan-mueller/commit/36a57d951b26b3cffb56cd07ca8eb19e9c5a198b))
+
 # [1.12.0](https://github.com/DerYeger/jan-mueller/compare/v1.11.5...v1.12.0) (2021-05-03)
 
 
