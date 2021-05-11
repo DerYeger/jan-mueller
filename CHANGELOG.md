@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/DerYeger/jan-mueller/compare/v1.12.7...v1.13.0) (2021-05-11)
+
+
+### Features
+
+* update content ([5dfb6e4](https://github.com/DerYeger/jan-mueller/commit/5dfb6e489efca9120c38133eba00dde4a6a58552))
+
 ## [1.12.7](https://github.com/DerYeger/jan-mueller/compare/v1.12.6...v1.12.7) (2021-05-09)
 
 
