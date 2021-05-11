@@ -43,6 +43,21 @@ export function generateSocialTags(
       content: formattedTitle,
     },
     {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      hid: 'twitter:site',
+      name: 'twitter:site',
+      content: '@DerYeger',
+    },
+    {
+      hid: 'twitter:creator',
+      name: 'twitter:creator',
+      content: '@DerYeger',
+    },
+    {
       hid: 'og:title',
       property: 'og:title',
       content: formattedTitle,
