@@ -5,17 +5,19 @@ repository: refunk
 thumbnail: refunk/thumbnail.webp
 ---
 
-*REFUNK* was my first Kotlin project.
+**_REFUNK_** was my first Kotlin project.
 It's a library for studying and evaluating primitive recursive functions which I developed in parallel to the University of Kassel's course *Theoretical computer science: Computability and formal languages*.
 Thus, it follows closely the syntax and formalities of that course and provides an expressive DSL.
+
+My project [**_REFUNK_ Playground**](/projects/refunk-playground) provides an interactive editor for this library.
 
 ## Basic functions
 
 The entire library, including every provided function, builds on the three basic functions:
 
-- Constants: `val c = Constant(value)` with the helpers `constant(value)`, `const(value)`, `zero` and `one`.
-- Successor: `val s = Successor()` with the helper `successor`.
-- Projection: `val p = Projection(index)` with the helpers `projection(index)` and `first` to `tenth`.
+- `constant(value)`, `const(value)`, `zero` and `one`.
+- `Successor` and `successor`.
+- `projection(index)` and `first` to `tenth`.
 
 ## Composition
 
