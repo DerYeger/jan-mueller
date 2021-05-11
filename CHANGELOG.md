@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/DerYeger/jan-mueller/compare/v1.13.0...v1.13.1) (2021-05-11)
+
+
+### Bug Fixes
+
+* add social meta tags ([968b31a](https://github.com/DerYeger/jan-mueller/commit/968b31a44d66b6035ed7cc7593c0dfc09c1c3ffd))
+
 # [1.13.0](https://github.com/DerYeger/jan-mueller/compare/v1.12.7...v1.13.0) (2021-05-11)
 
 
