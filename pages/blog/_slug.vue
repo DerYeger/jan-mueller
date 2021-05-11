@@ -27,6 +27,7 @@ import {
   documentBreadcrumb,
   homeBreadcrumb,
 } from '~/model/breadcrumbs'
+import { generateSocialTags } from '~/model/meta'
 
 export default defineComponent({
   async asyncData({ app, $content, params }) {
@@ -45,8 +46,10 @@ export default defineComponent({
     }
   },
   head() {
+    const title = this.$t(this.post.title)
     return {
-      title: this.$t(this.post.title),
+      title,
+      meta: [...generateSocialTags(title, this.post.description)],
     }
   },
   mounted() {

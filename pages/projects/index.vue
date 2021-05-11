@@ -17,6 +17,7 @@ import { NuxtAppOptions } from '@nuxt/types'
 import { Project } from '~/model/project'
 import { localizeDocumentPaths, routes } from '~/model/routes'
 import { homeBreadcrumb, projectsBreadcrumb } from '~/model/breadcrumbs'
+import { generateSocialTags } from '~/model/meta'
 
 export default defineComponent({
   async asyncData({
@@ -35,8 +36,11 @@ export default defineComponent({
     }
   },
   head() {
+    const title = (this.$t as Function)(routes.projects.title)
+    const description = (this.$t as Function)('meta.description')
     return {
-      title: (this.$t as Function)(routes.projects.title),
+      title,
+      meta: [...generateSocialTags(title, description)],
     }
   },
   mounted() {

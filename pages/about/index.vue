@@ -10,6 +10,7 @@ import { NuxtAppOptions } from '@nuxt/types'
 import { contentFunc } from '@nuxt/content/types/content'
 import { routes } from '~/model/routes'
 import { aboutBreadcrumb, homeBreadcrumb } from '~/model/breadcrumbs'
+import { generateSocialTags } from '~/model/meta'
 
 export default defineComponent({
   async asyncData({
@@ -25,8 +26,11 @@ export default defineComponent({
     }
   },
   head() {
+    const title = (this.$t as Function)(routes.about.title)
+    const description = (this.$t as Function)('meta.description')
     return {
-      title: (this.$t as Function)(routes.about.title),
+      title,
+      meta: [...generateSocialTags(title, description)],
     }
   },
   mounted() {

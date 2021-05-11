@@ -41,6 +41,7 @@ import { defineComponent } from '@nuxtjs/composition-api'
 import { NuxtAppOptions } from '@nuxt/types'
 import { contentFunc } from '@nuxt/content/types/content'
 import { routes } from '~/model/routes'
+import { generateSocialTags } from '~/model/meta'
 
 export default defineComponent({
   async asyncData({
@@ -72,8 +73,11 @@ export default defineComponent({
     }
   },
   head() {
+    const title = (this.$t as Function)(routes.home.title)
+    const description = (this.$t as Function)('meta.description')
     return {
-      title: (this.$t as Function)(routes.home.title),
+      title,
+      meta: [...generateSocialTags(title, description)],
     }
   },
   mounted() {
