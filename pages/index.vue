@@ -73,8 +73,8 @@ export default defineComponent({
     }
   },
   head() {
-    const title = (this.$t as Function)(routes.home.title)
-    const description = (this.$t as Function)('meta.description')
+    const title = this.$t(routes.home.title) as string
+    const description = this.$t('meta.description') as string
     return {
       title,
       meta: [...generateSocialTags(title, description)],
