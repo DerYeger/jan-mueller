@@ -20,14 +20,14 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ./node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('./package.json', './package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('./package.json', './yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Install dependencies
         if: steps.node-cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: yarn install
       - name: Generate static files
-        run: npm run generate
+        run: yarn generate
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
