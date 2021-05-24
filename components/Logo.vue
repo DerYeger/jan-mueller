@@ -1,5 +1,5 @@
 <template>
-  <div class="link-container">
+  <div class="logo-container">
     <nuxt-link :to="localePath('/')" class="icon-link">
       <img :src="logo" alt="logo" />
     </nuxt-link>
@@ -21,7 +21,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import '/assets/style.scss';
 
-.link-container {
+.logo-container {
   width: 48px;
   height: 48px;
 }

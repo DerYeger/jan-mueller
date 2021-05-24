@@ -6,7 +6,7 @@
       app
       :expand-on-hover="$vuetify.breakpoint.lgAndUp"
     >
-      <app-navigation />
+      <app-sidebar />
     </v-navigation-drawer>
     <app-header :drawer-open="drawerOpen" :on-nav-icon-clicked="toggleDrawer" />
     <v-main>

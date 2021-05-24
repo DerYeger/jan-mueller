@@ -1,5 +1,8 @@
+@import 'typography';
+
 html {
   overflow-y: auto !important;
+  overflow-x: hidden !important;
 }
 
 .v-application a {
@@ -22,46 +25,9 @@ html {
   @extend .unselectable;
 }
 
-.bitter-font {
-  font-family: 'Bitter', serif !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @extend .bitter-font;
-
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 3vw, 3.5rem);
-  margin-bottom: 1rem;
-}
-
-h2 {
-  font-size: clamp(2rem, 2vw, 2.5rem);
-  margin-bottom: 0.5rem;
-}
-
-h3 {
-  font-size: clamp(1.5rem, 1.5vw, 2rem);
-  margin-bottom: 0.25rem;
-}
-
 .page-container {
   display: flex;
   justify-content: center;
-}
-
-.justify-text {
-  p {
-    hyphens: manual;
-    text-align: justify;
-  }
 }
 
 .bound-width {

@@ -6,13 +6,12 @@
     dense
     :color="$vuetify.theme.dark ? '#121212' : 'white'"
   >
-    <div>
+    <div :class="{ 'ml-n4': $vuetify.breakpoint.mdAndDown }">
       <v-app-bar-nav-icon
         v-show="$vuetify.breakpoint.mdAndDown"
         :aria-label="
           $t(drawerOpen ? 'actions.close-menu' : 'actions.open-menu')
         "
-        style="margin-left: -16px"
         @click.stop="onNavIconClicked()"
       />
       <breadcrumbs v-show="$vuetify.breakpoint.lgAndUp" class="pa-0" />

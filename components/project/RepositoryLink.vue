@@ -12,7 +12,7 @@
         v-on="on"
       >
         {{ $t('actions.view-on') }}
-        <v-icon class="ml-2" v-text="'fab fa-github'" />
+        <v-icon class="ml-2" v-text="'mdi-github'" />
       </v-btn>
     </template>
     <a rel="noopener" :href="href" target="_blank">

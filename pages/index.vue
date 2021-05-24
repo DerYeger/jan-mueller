@@ -6,21 +6,12 @@
         sm="5"
         md="4"
         class="pt-0"
-        :class="$vuetify.breakpoint.xs ? 'max-width' : ''"
+        :class="{ 'max-width': $vuetify.breakpoint.xs }"
       >
         <v-row justify="center" class="mb-4 mt-2 ml-1 mr-1">
           <avatar />
         </v-row>
-        <v-row justify="center">
-          <account-link
-            v-for="(account, index) of accounts"
-            :key="index"
-            :name="account.name"
-            :icon="account.icon"
-            :href="account.href"
-            :color="account.color"
-          />
-        </v-row>
+        <account-link-row />
       </v-col>
       <v-col
         class="pt-0"
@@ -28,7 +19,7 @@
           $vuetify.breakpoint.xs ? 'padding-left: 0; padding-right: 0' : ''
         "
       >
-        <article :class="$vuetify.breakpoint.xs ? 'justify-text' : ''">
+        <article :class="{ 'justify-text': $vuetify.breakpoint.xs }">
           <nuxt-content :document="document" />
         </article>
       </v-col>
@@ -54,22 +45,6 @@ export default defineComponent({
     const document = await $content(`${app.i18n.locale}/home`).fetch()
     return {
       document,
-    }
-  },
-  data() {
-    return {
-      accounts: [
-        {
-          name: 'GitHub',
-          href: 'https://github.com/DerYeger',
-          icon: 'fab fa-github',
-        },
-        {
-          name: 'XING',
-          href: 'https://www.xing.com/profile/Jan_Mueller1092/cv',
-          icon: 'fab fa-xing',
-        },
-      ],
     }
   },
   head() {
