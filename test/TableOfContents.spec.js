@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import TableOfContents from '@/components/TableOfContents.vue'
+import TableOfContents from '~/components/blog/TableOfContents.vue'
 
 describe('TableOfContents', () => {
   test('is a Vue instance', () => {
