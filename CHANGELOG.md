@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/DerYeger/jan-mueller/compare/v1.13.3...v1.14.0) (2021-05-24)
+
+
+### Features
+
+* update sidebar design ([b993f98](https://github.com/DerYeger/jan-mueller/commit/b993f98d3d78744d7d340f5d3f514f03cccb35ac))
+
 ## [1.13.3](https://github.com/DerYeger/jan-mueller/compare/v1.13.2...v1.13.3) (2021-05-21)
 
 
