@@ -29,7 +29,7 @@
     "@nuxtjs/feed": "1.1.0",
     "@nuxtjs/markdownit": "2.0.0",
     "@nuxtjs/sitemap": "2.4.0",
-    "core-js": "3.12.1",
+    "core-js": "3.13.0",
     "markdown-it": "12.0.6",
     "markdown-it-attrs": "4.0.0",
     "markdown-it-div": "1.1.0",
