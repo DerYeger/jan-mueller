@@ -1,3 +1,10 @@
+## [1.14.6](https://github.com/DerYeger/jan-mueller/compare/v1.14.5...v1.14.6) (2021-06-02)
+
+
+### Bug Fixes
+
+* remove deprecated attributes ([2cb5363](https://github.com/DerYeger/jan-mueller/commit/2cb53632a5b1dc37ab1b95d01fe7449ae86c4999))
+
 ## [1.14.5](https://github.com/DerYeger/jan-mueller/compare/v1.14.4...v1.14.5) (2021-06-02)
 
 
