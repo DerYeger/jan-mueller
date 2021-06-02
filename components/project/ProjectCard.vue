@@ -19,7 +19,7 @@
           </v-row>
         </template>
       </v-img>
-      <v-card-title class="headline card-title" style="word-break: normal">
+      <v-card-title class="text-h5 card-title" style="word-break: normal">
         {{ project.title }}
         <v-spacer style="min-width: 1rem" />
         <div>

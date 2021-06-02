@@ -17,7 +17,7 @@
           </v-row>
         </template>
       </v-img>
-      <v-card-title class="headline" style="word-break: normal">
+      <v-card-title class="text-h5" style="word-break: normal">
         {{ blogPost.title }}
       </v-card-title>
       <v-card-subtitle>
