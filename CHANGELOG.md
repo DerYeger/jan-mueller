@@ -1,3 +1,10 @@
+## [1.14.8](https://github.com/DerYeger/jan-mueller/compare/v1.14.7...v1.14.8) (2021-06-06)
+
+
+### Bug Fixes
+
+* update content ([818673c](https://github.com/DerYeger/jan-mueller/commit/818673c63ca845d93985474ea6f686c8dcf3daf1))
+
 ## [1.14.7](https://github.com/DerYeger/jan-mueller/compare/v1.14.6...v1.14.7) (2021-06-05)
 
 
