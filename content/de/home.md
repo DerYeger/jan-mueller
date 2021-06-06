@@ -1,6 +1,6 @@
 # Über mich
 
-*Jan // 22 // B.Sc. // Softwareentwickler // Wien*
+*Jan // 23 // B.Sc. // Softwareentwickler // Wien*
 
 2021 beendete ich mein Bachelorstudium der Informatik an der Universität Kassel.
 April 2021 bin ich nach Wien umgezogen, wo ich den Masterstudiengang *Software Engineering & Internet Computing* an der Technischen Universität Wien absolvieren möchte.
