@@ -11,28 +11,23 @@
 </template>
 
 <script lang="ts">
-import { contentFunc } from '@nuxt/content/types/content'
 import { defineComponent } from '@nuxtjs/composition-api'
-import { NuxtAppOptions } from '@nuxt/types'
+import { Context } from '@nuxt/types'
 import { Project } from '~/model/project'
 import { localizeDocumentPaths, routes } from '~/model/routes'
 import { homeBreadcrumb, projectsBreadcrumb } from '~/model/breadcrumbs'
 import { generateSocialTags } from '~/model/meta'
 
 export default defineComponent({
-  async asyncData({
-    app,
-    $content,
-  }: {
-    app: NuxtAppOptions
-    $content: contentFunc
-  }) {
-    const projects = (await $content(`${app.i18n.locale}/projects`)
+  async asyncData(context: Context) {
+    const locale = context.app.i18n.locale
+    const projects = (await context
+      .$content(`${locale}/projects`)
       .without(['body', 'bodyText', 'toc'])
       .sortBy('title', 'asc')
       .fetch<Project>()) as Project[]
     return {
-      projects: localizeDocumentPaths(projects, app.i18n.locale),
+      projects: localizeDocumentPaths(projects, locale),
     }
   },
   head() {
