@@ -69,6 +69,6 @@
     "stylelint-scss": "3.19.0",
     "ts-jest": "27.0.3",
     "vue-jest": "3.0.7",
-    "vuetify": "2.5.4"
+    "vuetify": "2.5.5"
   }
 }
