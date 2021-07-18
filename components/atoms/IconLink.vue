@@ -34,7 +34,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '/assets/style.scss';
+@import '../../assets/style';
 
 img {
   @extend .unselectable;

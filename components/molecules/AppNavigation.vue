@@ -22,7 +22,7 @@ import { defineComponent } from '@nuxtjs/composition-api'
 import { routes } from '~/model/routes'
 
 export default defineComponent({
-  data() {
+  setup() {
     return {
       routes: Object.values(routes),
     }

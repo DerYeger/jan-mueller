@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
@@ -19,7 +19,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '/assets/style.scss';
+@import '../../assets/style';
 
 .logo-container {
   width: 48px;

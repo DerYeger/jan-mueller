@@ -23,8 +23,9 @@
   </v-breadcrumbs>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
+import { Breadcrumb } from '~/model/breadcrumbs'
 
 export default defineComponent({
   computed: {
@@ -34,7 +35,7 @@ export default defineComponent({
       if (rawCrumbs.length < 2) {
         return []
       }
-      return rawCrumbs.map((crumb, index) => ({
+      return rawCrumbs.map((crumb: Breadcrumb, index: number) => ({
         text: crumb.text,
         to: this.localePath(crumb.to, locale),
         disabled: index >= rawCrumbs.length - 1,

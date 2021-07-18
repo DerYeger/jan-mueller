@@ -31,51 +31,52 @@
   </v-menu>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import { localizeDocumentPaths } from '@/model/routes'
+import { localizeDocumentPaths } from '~/model/routes'
+import { Content } from '~/model/content'
 
 export default defineComponent({
   data() {
     return {
-      results: [],
+      results: [] as Content[],
       query: '',
       showResults: false,
     }
   },
   computed: {
-    currentLocale() {
+    currentLocale(): string {
       return this.$i18n.locale
     },
   },
   watch: {
-    async currentLocale(val) {
-      return await this.updateSearchResults(this.query, val)
+    async currentLocale(val: string) {
+      await this.updateSearchResults(this.query, val)
     },
-    async query(val) {
-      return await this.updateSearchResults(val, this.currentLocale)
+    async query(val: string) {
+      await this.updateSearchResults(val, this.currentLocale)
     },
   },
   methods: {
-    async updateSearchResults(query, locale) {
+    async updateSearchResults(query: string, locale: string) {
       if (!query) {
         this.results = []
         return
       }
       this.results = localizeDocumentPaths(
         [
-          ...(await this.$content('en/blog', { deep: true })
+          ...((await this.$content('en/blog', { deep: true })
             .only(['title', 'path'])
             .search('title', query)
             .sortBy('title', 'asc')
             .limit(4)
-            .fetch()),
-          ...(await this.$content('en/projects', { deep: true })
+            .fetch()) as Content[]),
+          ...((await this.$content('en/projects', { deep: true })
             .only(['title', 'path'])
             .search('title', query)
             .sortBy('title', 'asc')
             .limit(4)
-            .fetch()),
+            .fetch()) as Content[]),
         ],
         locale
       )

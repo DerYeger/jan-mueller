@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import DocumentSwitcher from '@/components/DocumentSwitcher.vue'
+import DocumentSwitcher from '~/components/atoms/DocumentSwitcher.vue'
 
 describe('DocumentSwitcher', () => {
   test('is a Vue instance', () => {
