@@ -37,7 +37,7 @@
     "nuxt-i18n": "6.27.3",
     "prism-themes": "1.7.0",
     "reading-time": "1.3.0",
-    "vue": "^2.6.14",
+    "vue": "2.6.14",
     "vue-masonry-wall": "0.3.2",
     "vuex": "3.6.2"
   },
