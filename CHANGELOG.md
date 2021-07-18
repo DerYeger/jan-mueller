@@ -1,3 +1,10 @@
+## [1.14.20](https://github.com/DerYeger/jan-mueller/compare/v1.14.19...v1.14.20) (2021-07-18)
+
+
+### Bug Fixes
+
+* **deps:** pin dependency vue to 2.6.14 ([fd450fe](https://github.com/DerYeger/jan-mueller/commit/fd450fefebd5a8e53f72efdb5a08c0e835faa151))
+
 ## [1.14.19](https://github.com/DerYeger/jan-mueller/compare/v1.14.18...v1.14.19) (2021-07-12)
 
 
