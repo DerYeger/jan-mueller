@@ -1,3 +1,10 @@
+## [1.16.6](https://github.com/DerYeger/jan-mueller/compare/v1.16.5...v1.16.6) (2021-07-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue-marmoset-viewer to v1.3.2 ([afc12dc](https://github.com/DerYeger/jan-mueller/commit/afc12dcae81886714a896aa97d9dac04c4040f29))
+
 ## [1.16.5](https://github.com/DerYeger/jan-mueller/compare/v1.16.4...v1.16.5) (2021-07-19)
 
 
