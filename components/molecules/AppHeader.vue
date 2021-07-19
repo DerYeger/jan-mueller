@@ -9,10 +9,8 @@
     <div :class="{ 'ml-n4': $vuetify.breakpoint.mdAndDown }">
       <v-app-bar-nav-icon
         v-show="$vuetify.breakpoint.mdAndDown"
-        :aria-label="
-          $t(drawerOpen ? 'actions.close-menu' : 'actions.open-menu')
-        "
-        @click.stop="onNavIconClicked()"
+        :aria-label="$t(value ? 'actions.close-menu' : 'actions.open-menu')"
+        @click="$emit('input', !value)"
       />
       <breadcrumbs v-show="$vuetify.breakpoint.lgAndUp" class="pa-0" />
     </div>
@@ -37,12 +35,8 @@ import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
-    drawerOpen: {
+    value: {
       type: Boolean,
-      required: true,
-    },
-    onNavIconClicked: {
-      type: Function,
       required: true,
     },
   },
