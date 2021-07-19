@@ -1,3 +1,10 @@
+## [1.16.5](https://github.com/DerYeger/jan-mueller/compare/v1.16.4...v1.16.5) (2021-07-19)
+
+
+### Bug Fixes
+
+* remove duplicate line ([0b8f706](https://github.com/DerYeger/jan-mueller/commit/0b8f706911b393d43440b67ebfacb581421bf2ad))
+
 ## [1.16.4](https://github.com/DerYeger/jan-mueller/compare/v1.16.3...v1.16.4) (2021-07-19)
 
 
