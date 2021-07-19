@@ -12687,10 +12687,10 @@ vue-loader@^15.9.7:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-marmoset-viewer@1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-1.3.1.tgz#53211ab2d370554005ddb016dd851f73bfcf27bf"
-  integrity sha512-KGB9Z4SYAP3Df/Kgzv5z+KyT+HZhSA9rNkoos5ehDyT/IVeRGA9N+drqKhSueW+z12YAmBZ7e6gQHcGIK3pgdA==
+vue-marmoset-viewer@1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-1.3.2.tgz#d80b538175a17fdd2cce9073923352ca417153b4"
+  integrity sha512-dvon1RObFLWNtTn3Ym3LpsTW76P04L/ytpz1kLfCCC4fKqUkHlmRL0QygCAP/X/7wUSN0ECENhtjQMM3uI2pxQ==
   dependencies:
     "@vue/composition-api" "^1.0.0-rc.14"
 
