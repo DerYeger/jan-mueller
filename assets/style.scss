@@ -42,7 +42,8 @@ article {
 
   ul,
   video,
-  .nuxt-content-highlight {
+  .nuxt-content-highlight,
+  .marmoset-viewer-host {
     margin-bottom: 1rem;
   }
 
@@ -83,9 +84,12 @@ article {
 @media (max-width: 960px) {
   article {
     iframe,
-    .nuxt-content-highlight {
+    .nuxt-content-highlight,
+    .model-viewer {
       margin-left: -12px;
       margin-right: -12px;
+      width: calc(100% + 24px);
+      max-width: unset !important;
     }
 
     iframe {

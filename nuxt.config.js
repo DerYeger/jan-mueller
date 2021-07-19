@@ -34,7 +34,10 @@ export default {
   css: ['~/assets/style.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: '~/plugins/vue-masonry-wall' }],
+  plugins: [
+    { src: '~/plugins/vue-masonry-wall' },
+    { src: '~/plugins/marmosetViewer' },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [

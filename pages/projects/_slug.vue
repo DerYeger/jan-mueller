@@ -2,7 +2,10 @@
   <div style="width: 100%">
     <article class="justify-text" lang="en">
       <h1>{{ project.title }}</h1>
-      <repository-link :repository="project.repository"></repository-link>
+      <repository-link
+        v-if="project.repository"
+        :repository="project.repository"
+      ></repository-link>
       <demo-link v-if="project.demo" :href="project.demo"></demo-link>
       <nuxt-content :document="project" />
       <document-switcher v-if="prev || next" :prev="prev" :next="next" />

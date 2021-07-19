@@ -22,34 +22,15 @@
   </v-app>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 import { mapState } from 'vuex'
 
 export default defineComponent({
+  layout: 'empty',
   data() {
     return {
       drawerOpen: false,
-    }
-  },
-  head() {
-    return {
-      htmlAttrs: {
-        lang: this.$i18n.locale,
-      },
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.$t('meta.description'),
-        },
-      ],
-      link: [
-        {
-          rel: 'canonical',
-          href: `https://jan-mueller.at${this.$route.path}/`,
-        },
-      ],
     }
   },
   computed: mapState(['breadcrumbs']),
