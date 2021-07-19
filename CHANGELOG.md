@@ -1,3 +1,16 @@
+# [1.15.0](https://github.com/DerYeger/jan-mueller/compare/v1.14.20...v1.15.0) (2021-07-19)
+
+
+### Bug Fixes
+
+* reduce on hover card elevation ([604bea8](https://github.com/DerYeger/jan-mueller/commit/604bea8cff136083fa04de382d19d50a3916b645))
+
+
+### Features
+
+* add finwa project content ([e42f59a](https://github.com/DerYeger/jan-mueller/commit/e42f59ae82b04c34fec3d4f5b51c3fc6cb083ba5))
+* add fullscreen toggle to asset-image ([291ac61](https://github.com/DerYeger/jan-mueller/commit/291ac612935f05abe3b648f5b0c798dc00a56a04))
+
 ## [1.14.20](https://github.com/DerYeger/jan-mueller/compare/v1.14.19...v1.14.20) (2021-07-18)
 
 
