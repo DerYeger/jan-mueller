@@ -1,3 +1,10 @@
+## [1.16.3](https://github.com/DerYeger/jan-mueller/compare/v1.16.2...v1.16.3) (2021-07-19)
+
+
+### Bug Fixes
+
+* **deps:** pin dependency vue-marmoset-viewer to 1.3.1 ([b0c890d](https://github.com/DerYeger/jan-mueller/commit/b0c890d87d6e7b49e23f952defd320d38219cb10))
+
 ## [1.16.2](https://github.com/DerYeger/jan-mueller/compare/v1.16.1...v1.16.2) (2021-07-19)
 
 
