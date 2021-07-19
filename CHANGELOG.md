@@ -1,3 +1,10 @@
+## [1.16.1](https://github.com/DerYeger/jan-mueller/compare/v1.16.0...v1.16.1) (2021-07-19)
+
+
+### Bug Fixes
+
+* use typescript for all components ([007224c](https://github.com/DerYeger/jan-mueller/commit/007224c66517703053dafc7058661ae4753dd845))
+
 # [1.16.0](https://github.com/DerYeger/jan-mueller/compare/v1.15.0...v1.16.0) (2021-07-19)
 
 
