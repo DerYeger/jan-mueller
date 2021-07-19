@@ -13,8 +13,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
+import { Context } from '@nuxt/types'
 import { localizeDocumentPath } from '~/model/routes'
 import {
   documentBreadcrumb,
@@ -22,36 +23,43 @@ import {
   projectsBreadcrumb,
 } from '~/model/breadcrumbs'
 import { generateSocialTags } from '~/model/meta'
+import { Project } from '~/model/project'
 
 export default defineComponent({
-  async asyncData({ app, $content, params }) {
-    const projectsDir = `${app.i18n.locale}/projects`
-    const project = await $content(projectsDir, params.slug).fetch()
+  async asyncData(ctx: Context) {
+    const slug = ctx.params.slug
+    const locale = ctx.app.i18n.locale
+    const projectsDir = `${locale}/projects`
+    const project: Project = (await ctx
+      .$content(projectsDir, slug)
+      .fetch()) as Project
 
-    const [prev, next] = await $content(projectsDir)
+    const [prev, next] = (await ctx
+      .$content(projectsDir)
       .only(['title', 'path'])
       .sortBy('title', 'asc')
-      .surround(params.slug)
-      .fetch()
+      .surround(slug)
+      .fetch()) as Project[]
 
     return {
       project,
-      prev: localizeDocumentPath(prev, app.i18n.locale),
-      next: localizeDocumentPath(next, app.i18n.locale),
+      prev: localizeDocumentPath(prev, locale),
+      next: localizeDocumentPath(next, locale),
     }
   },
   head() {
-    const title = this.$t(this.project.title)
+    const project = this.project as Project
+    const title = this.$t(project.title) as string
     return {
       title,
-      meta: [...generateSocialTags(title, this.project.description)],
+      meta: [...generateSocialTags(title, project.description)],
     }
   },
   mounted() {
     this.$store.commit('setBreadcrumbs', [
       homeBreadcrumb,
       projectsBreadcrumb,
-      documentBreadcrumb(this.project, this.$i18n.locale),
+      documentBreadcrumb(this.project as Project, this.$i18n.locale),
     ])
   },
 })

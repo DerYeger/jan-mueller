@@ -18,9 +18,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import { hasTags } from '~/model/blog-post'
+import { BlogPost, hasTags } from '~/model/blog-post'
 import { localizeDocumentPath } from '~/model/routes'
 import {
   blogBreadcrumb,
@@ -31,13 +31,13 @@ import { generateSocialTags } from '~/model/meta'
 
 export default defineComponent({
   async asyncData({ app, $content, params }) {
-    const post = await $content('en/blog/', params.slug).fetch()
+    const post = (await $content('en/blog/', params.slug).fetch()) as BlogPost
 
-    const [prev, next] = await $content('en/blog')
+    const [prev, next] = (await $content('en/blog')
       .only(['title', 'path'])
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
-      .fetch()
+      .fetch()) as BlogPost[]
 
     return {
       post,
@@ -46,17 +46,18 @@ export default defineComponent({
     }
   },
   head() {
-    const title = this.$t(this.post.title)
+    const post = this.post as BlogPost
+    const title = this.$t(post.title) as string
     return {
       title,
-      meta: [...generateSocialTags(title, this.post.description)],
+      meta: [...generateSocialTags(title, post.description)],
     }
   },
   mounted() {
     this.$store.commit('setBreadcrumbs', [
       homeBreadcrumb,
       blogBreadcrumb,
-      documentBreadcrumb(this.post, this.$i18n.locale),
+      documentBreadcrumb(this.post as BlogPost, this.$i18n.locale),
     ])
   },
   methods: {
