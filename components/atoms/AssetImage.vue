@@ -1,9 +1,41 @@
 <template>
-  <v-img :src="imgSrc()" :lazy-src="lazyImgSrc()" :alt="alt" />
+  <div style="display: contents">
+    <v-img
+      :src="imgSrc"
+      :lazy-src="lazyImgSrc"
+      :alt="alt"
+      :contain="contain"
+      :class="`elevation-${elevation} ` + (allowFullscreen ? 'main-image' : '')"
+      :max-height="maxHeight"
+      :max-width="maxWidth"
+      @click="overlay = true"
+    >
+      <template #placeholder>
+        <v-row class="fill-height ma-0" align="center" justify="center">
+          <v-progress-circular indeterminate color="primary" />
+        </v-row>
+      </template>
+    </v-img>
+    <v-overlay v-if="allowFullscreen" :value="overlay" opacity="1" z-index="42">
+      <v-img
+        :src="imgSrc"
+        :lazy-src="lazyImgSrc"
+        contain
+        height="100vh"
+        width="100vw"
+        style="margin-bottom: 0"
+      />
+      <v-btn icon class="close-button" @click="overlay = false">
+        <v-icon v-text="'mdi-close'" />
+      </v-btn>
+    </v-overlay>
+  </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api'
+
+export default defineComponent({
   props: {
     src: {
       type: String,
@@ -17,16 +49,38 @@ export default {
       type: String,
       required: true,
     },
+    contain: Boolean,
+    maxHeight: {
+      type: String,
+      default: undefined,
+    },
+    maxWidth: {
+      type: String,
+      default: undefined,
+    },
+    allowFullscreen: {
+      type: Boolean,
+      default: true,
+    },
+    elevation: {
+      type: Number,
+      default: 6,
+    },
   },
-  methods: {
-    imgSrc() {
+  data() {
+    return {
+      overlay: false,
+    }
+  },
+  computed: {
+    imgSrc(): any | null {
       try {
         return require(`~/assets/images/${this.src}`)
       } catch (error) {
         return null
       }
     },
-    lazyImgSrc() {
+    lazyImgSrc(): any | null {
       try {
         return require(`~/assets/images/${this.lazySrc}`)
       } catch (error) {
@@ -34,5 +88,17 @@ export default {
       }
     },
   },
-}
+})
 </script>
+
+<style scoped>
+.close-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+.main-image {
+  cursor: pointer;
+}
+</style>
