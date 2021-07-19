@@ -1,3 +1,11 @@
+# [1.16.0](https://github.com/DerYeger/jan-mueller/compare/v1.15.0...v1.16.0) (2021-07-19)
+
+
+### Features
+
+* add an-26 model content ([810b7d9](https://github.com/DerYeger/jan-mueller/commit/810b7d9b498e1aae1165541ad1c012c8a75c9550))
+* add model viewer page ([9f68c77](https://github.com/DerYeger/jan-mueller/commit/9f68c7700caa9b9ad64235e3c6ada7328a8ee61c))
+
 # [1.15.0](https://github.com/DerYeger/jan-mueller/compare/v1.14.20...v1.15.0) (2021-07-19)
 
 
