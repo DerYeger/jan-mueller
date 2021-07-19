@@ -2,7 +2,7 @@
   <v-hover v-slot="{ hover }">
     <v-card
       :to="blogPost.path"
-      :elevation="hover ? 12 : 2"
+      :elevation="hover ? 6 : 2"
       :class="hover ? 'primary--text' : 'text'"
     >
       <v-img

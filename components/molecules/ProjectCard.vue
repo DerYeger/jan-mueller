@@ -2,7 +2,7 @@
   <v-hover v-slot="{ hover }">
     <v-card
       :to="project.path"
-      :elevation="hover ? 12 : 2"
+      :elevation="hover ? 6 : 2"
       :class="hover ? 'primary--text' : 'text'"
       class="project-card"
     >
