@@ -1,3 +1,11 @@
+## [1.16.2](https://github.com/DerYeger/jan-mueller/compare/v1.16.1...v1.16.2) (2021-07-19)
+
+
+### Bug Fixes
+
+* always sidebar on error page ([1861778](https://github.com/DerYeger/jan-mueller/commit/186177851c36743c37270aba41d49050da3fab08))
+* prevent fullscreen of avatar ([6469d11](https://github.com/DerYeger/jan-mueller/commit/6469d1198646064b18f7e2b4b3eb767cb7cf5b62))
+
 ## [1.16.1](https://github.com/DerYeger/jan-mueller/compare/v1.16.0...v1.16.1) (2021-07-19)
 
 
