@@ -1,3 +1,10 @@
+## [1.16.7](https://github.com/DerYeger/jan-mueller/compare/v1.16.6...v1.16.7) (2021-07-20)
+
+
+### Bug Fixes
+
+* use static sub-directory for models ([82693a6](https://github.com/DerYeger/jan-mueller/commit/82693a63e4ef84b292068930bb15a6bead935df0))
+
 ## [1.16.6](https://github.com/DerYeger/jan-mueller/compare/v1.16.5...v1.16.6) (2021-07-19)
 
 
