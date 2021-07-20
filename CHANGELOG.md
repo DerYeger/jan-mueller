@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/DerYeger/jan-mueller/compare/v1.17.0...v1.18.0) (2021-07-20)
+
+
+### Features
+
+* add apollo project ([d6d3fe1](https://github.com/DerYeger/jan-mueller/commit/d6d3fe13a47357bde81faec8caa378f64a866fa5))
+
 # [1.17.0](https://github.com/DerYeger/jan-mueller/compare/v1.16.7...v1.17.0) (2021-07-20)
 
 
