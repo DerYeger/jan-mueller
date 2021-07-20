@@ -1,5 +1,5 @@
-import de from './de.json'
-import en from './en.json'
+import de from './de'
+import en from './en'
 
 const dateTimeFormats = {
   en: {

@@ -2,13 +2,13 @@
   <v-btn
     rel="noopener"
     plain
-    :aria-label="$t('actions.view-demo')"
+    :aria-label="$t('actions.view')"
     :href="href"
     target="_blank"
     :color="color"
     class="mb-4"
   >
-    {{ $t('actions.view-demo') }}
+    {{ $t('actions.view') }}
     <v-icon class="ml-2" v-text="'mdi-television-play'" />
   </v-btn>
 </template>

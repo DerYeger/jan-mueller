@@ -4,19 +4,19 @@
       <v-btn
         rel="noopener"
         plain
-        :aria-label="$t('actions.view-on') + ' GitHub'"
+        :aria-label="showName ? repository : $t('misc.repository')"
         :href="href"
         target="_blank"
         class="mb-4 text--primary"
         v-bind="attrs"
         v-on="on"
       >
-        {{ $t('actions.view-on') }}
+        {{ showName ? repository : $t('misc.repository') }}
         <v-icon class="ml-2" v-text="'mdi-github'" />
       </v-btn>
     </template>
     <a rel="noopener" :href="href" target="_blank">
-      <img :src="repoCardSrc" alt="Repository card" style="display: block" />
+      <v-img :src="repoCardSrc" :alt="repository" :width="600" />
     </a>
   </v-menu>
 </template>
@@ -30,6 +30,10 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    showName: {
+      type: Boolean,
+      default: false,
+    },
     account: {
       type: String,
       default: 'DerYeger',
@@ -40,10 +44,7 @@ export default defineComponent({
       return `https://github.com/${this.account}/${this.repository}`
     },
     repoCardSrc(): string {
-      return (
-        'https://github-readme-stats.vercel.app/api/pin/?border_radius=4&username=DerYeger&repo=' +
-        this.repository
-      )
+      return `https://opengraph.githubassets.com/1662e3493009d6893fb53c235f5fb37de0ab5d1913f8f9a68f443d7058a6f35a/${this.account}/${this.repository}`
     },
   },
 })

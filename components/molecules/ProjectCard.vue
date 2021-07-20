@@ -23,7 +23,14 @@
         {{ project.title }}
         <v-spacer style="min-width: 1rem" />
         <div>
-          <v-icon v-if="project.repository" small v-text="'mdi-github'" />
+          <v-icon
+            v-if="
+              project.repository ||
+              (project.repositories && project.repositories.length > 0)
+            "
+            small
+            v-text="'mdi-github'"
+          />
           <v-icon v-if="project.demo" small v-text="'mdi-television-play'" />
         </div>
       </v-card-title>
@@ -46,10 +53,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style>
-.project-card .headline {
-  display: flex;
-  flex-wrap: nowrap;
-}
-</style>
