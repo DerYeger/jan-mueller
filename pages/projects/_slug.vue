@@ -12,6 +12,7 @@
           :key="repository"
           :repository="repository"
           :show-name="true"
+          :user="project.repository"
         />
         <demo-link v-if="project.demo" :href="project.demo" />
       </div>
