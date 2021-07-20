@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/DerYeger/jan-mueller/compare/v1.18.0...v1.19.0) (2021-07-20)
+
+
+### Features
+
+* add koffee project ([d89e5d1](https://github.com/DerYeger/jan-mueller/commit/d89e5d1bed37b07ad1d3272091479ee328921530))
+
 # [1.18.0](https://github.com/DerYeger/jan-mueller/compare/v1.17.0...v1.18.0) (2021-07-20)
 
 
