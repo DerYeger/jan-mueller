@@ -14,7 +14,7 @@ export default defineComponent({
   layout: 'base',
   setup() {
     const { params } = useContext()
-    const src = computed(() => `/${params.value.slug}.mview`)
+    const src = computed(() => `/models/${params.value.slug}.mview`)
     return {
       src,
     }
