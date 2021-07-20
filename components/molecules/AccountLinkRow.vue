@@ -28,6 +28,11 @@ export default defineComponent({
           href: 'https://www.xing.com/profile/Jan_Mueller1092/cv',
           icon: 'mdi-xing',
         },
+        {
+          name: 'ArtStation',
+          href: 'https://www.artstation.com/deryeger',
+          icon: 'mdi-artstation',
+        },
       ],
     }
   },
