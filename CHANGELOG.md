@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/DerYeger/jan-mueller/compare/v1.16.7...v1.17.0) (2021-07-20)
+
+
+### Features
+
+* add documents route ([3fb1b74](https://github.com/DerYeger/jan-mueller/commit/3fb1b7446bc50e10c525093fddcd5dbc04038be5))
+
 ## [1.16.7](https://github.com/DerYeger/jan-mueller/compare/v1.16.6...v1.16.7) (2021-07-20)
 
 
