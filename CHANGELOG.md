@@ -1,3 +1,10 @@
+# [1.22.0](https://github.com/DerYeger/jan-mueller/compare/v1.21.0...v1.22.0) (2021-07-20)
+
+
+### Features
+
+* add artstation profile link ([6483da9](https://github.com/DerYeger/jan-mueller/commit/6483da9b3573323de1698b10a84df2a081dc7472))
+
 # [1.21.0](https://github.com/DerYeger/jan-mueller/compare/v1.20.0...v1.21.0) (2021-07-20)
 
 
