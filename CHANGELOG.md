@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/DerYeger/jan-mueller/compare/v1.20.0...v1.21.0) (2021-07-20)
+
+
+### Features
+
+* add page transition ([dc16452](https://github.com/DerYeger/jan-mueller/commit/dc16452d622daef46c50da8d15af744065338dfc))
+
 # [1.20.0](https://github.com/DerYeger/jan-mueller/compare/v1.19.0...v1.20.0) (2021-07-20)
 
 
