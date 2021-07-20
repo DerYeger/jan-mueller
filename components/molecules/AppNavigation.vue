@@ -1,18 +1,10 @@
 <template>
   <v-list-item-group>
-    <v-list-item
+    <app-navigation-entry
       v-for="(route, index) in routes"
       :key="index"
-      :to="localePath(route.to)"
-      exact
-    >
-      <v-list-item-icon>
-        <v-icon v-text="route.icon" />
-      </v-list-item-icon>
-      <v-list-item-content>
-        <v-list-item-title v-text="$t(route.title)" />
-      </v-list-item-content>
-    </v-list-item>
+      :route="route"
+    />
     <source-repository-link />
   </v-list-item-group>
 </template>

@@ -21,6 +21,11 @@ export const projectsBreadcrumb: Breadcrumb = {
   to: routes.projects.to,
 }
 
+export const documentsBreadcrumb: Breadcrumb = {
+  text: routes.documents.title,
+  to: routes.documents.to,
+}
+
 export const aboutBreadcrumb: Breadcrumb = {
   text: routes.about.title,
   to: routes.about.to,

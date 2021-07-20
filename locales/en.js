@@ -4,6 +4,7 @@ export default {
   },
   actions: {
     'close-menu': 'Close menu',
+    download: 'Download',
     'open-menu': 'Open menu',
     search: 'Search',
     'use-dark-theme': 'Switch to dark theme',
@@ -12,6 +13,14 @@ export default {
   },
   blog: {
     title: 'Blog',
+  },
+  documents: {
+    title: 'Documents',
+    files: {
+      'bachelor-thesis': `Bachelor's thesis (German)`,
+      koffee: 'Koffee documentation',
+      'threadsafe-datastructures': 'Threadsafe datastructures in Java (German)',
+    },
   },
   home: {
     title: 'Home',

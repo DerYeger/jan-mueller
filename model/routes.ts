@@ -22,10 +22,15 @@ export const routes: Record<string, Route> = {
     to: '/blog',
     icon: 'mdi-pen',
   },
+  documents: {
+    title: 'documents.title',
+    to: '/documents',
+    icon: 'mdi-file-document',
+  },
   about: {
     title: 'about.title',
     to: '/about',
-    icon: 'mdi-file-document',
+    icon: 'mdi-information-variant',
   },
 }
 

@@ -4,6 +4,7 @@ export default {
   },
   actions: {
     'close-menu': 'Menü schließen',
+    download: 'Herunterladen',
     'open-menu': 'Menü öffnen',
     search: 'Suchen',
     'use-dark-theme': 'Zum dunklen Design wechseln',
@@ -12,6 +13,14 @@ export default {
   },
   blog: {
     title: 'Blog',
+  },
+  documents: {
+    title: 'Dokumente',
+    files: {
+      'bachelor-thesis': 'Bachelorarbeit',
+      koffee: 'Koffee Dokumentation',
+      'threadsafe-datastructures': 'Threadsichere Datenstrukturen in Java',
+    },
   },
   home: {
     title: 'Startseite',
