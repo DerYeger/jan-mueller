@@ -1,3 +1,10 @@
+# [1.20.0](https://github.com/DerYeger/jan-mueller/compare/v1.19.0...v1.20.0) (2021-07-20)
+
+
+### Features
+
+* add documents page ([8faabec](https://github.com/DerYeger/jan-mueller/commit/8faabecb18f7fefae03991e51237822149abb828))
+
 # [1.19.0](https://github.com/DerYeger/jan-mueller/compare/v1.18.0...v1.19.0) (2021-07-20)
 
 
