@@ -1,3 +1,10 @@
+## [1.22.2](https://github.com/DerYeger/jan-mueller/compare/v1.22.1...v1.22.2) (2021-07-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @nuxtjs/composition-api to v0.25.1 ([b7532ab](https://github.com/DerYeger/jan-mueller/commit/b7532ab2968383ab65009b52e43b255c37e020a0))
+
 ## [1.22.1](https://github.com/DerYeger/jan-mueller/compare/v1.22.0...v1.22.1) (2021-07-21)
 
 
