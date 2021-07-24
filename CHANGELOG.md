@@ -1,3 +1,11 @@
+# [1.23.0](https://github.com/DerYeger/jan-mueller/compare/v1.22.2...v1.23.0) (2021-07-24)
+
+
+### Features
+
+* add npm profile link ([c322a3a](https://github.com/DerYeger/jan-mueller/commit/c322a3af7d8cbfd4149b7d0e4250c9adee1ce708))
+* replace bitter with cabin font ([7cac7e9](https://github.com/DerYeger/jan-mueller/commit/7cac7e9745233a7530cc5bc8e594b5cf27606c05))
+
 ## [1.22.2](https://github.com/DerYeger/jan-mueller/compare/v1.22.1...v1.22.2) (2021-07-23)
 
 
