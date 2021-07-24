@@ -24,6 +24,11 @@ export default defineComponent({
           icon: 'mdi-github',
         },
         {
+          name: 'NPM',
+          href: 'https://www.npmjs.com/~yeger',
+          icon: 'mdi-npm',
+        },
+        {
           name: 'XING',
           href: 'https://www.xing.com/profile/Jan_Mueller1092/cv',
           icon: 'mdi-xing',

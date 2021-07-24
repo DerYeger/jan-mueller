@@ -8,7 +8,7 @@
     :color="color"
     :href="href"
   >
-    <v-icon :class="color ? '' : 'text--primary'" v-text="icon" />
+    <v-icon x-large :class="color ? '' : 'text--primary'" v-text="icon" />
   </v-btn>
 </template>
 
