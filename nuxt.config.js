@@ -25,7 +25,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,600&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap',
       },
     ],
   },
