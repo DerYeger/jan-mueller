@@ -30,11 +30,17 @@ export default {
       'Personal website of Jan Müller, a passionate software engineer.',
   },
   misc: {
+    'about-me': 'About me',
+    accounts: 'Accounts',
     'and-more': '... and more!',
     content: 'Content',
+    languages: 'Languages',
     'no-results': 'No results',
     repository: 'Repository',
+    software: 'Software',
+    'software-engineer': 'Software Engineer',
     tags: 'Tags',
+    vienna: 'Vienna',
   },
   projects: {
     title: 'Projects',

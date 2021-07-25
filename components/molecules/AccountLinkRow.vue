@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center">
+  <v-row>
     <account-link
       v-for="(account, index) of accounts"
       :key="index"
@@ -27,16 +27,19 @@ export default defineComponent({
           name: 'NPM',
           href: 'https://www.npmjs.com/~yeger',
           icon: 'mdi-npm',
+          color: '#CB0000',
         },
         {
           name: 'XING',
           href: 'https://www.xing.com/profile/Jan_Mueller1092/cv',
           icon: 'mdi-xing',
+          color: '#006566',
         },
         {
           name: 'ArtStation',
           href: 'https://www.artstation.com/deryeger',
           icon: 'mdi-artstation',
+          color: '#00AFEB',
         },
       ],
     }

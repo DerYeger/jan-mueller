@@ -30,8 +30,12 @@ export default {
       'Persönliche Website von Jan Müller, einem leidenschaftlichen Softwareentwickler.',
   },
   misc: {
+    'about-me': 'Über mich',
     'and-more': '... und mehr!',
+    languages: 'Sprachen',
     'no-results': 'Keine Ergebnisse',
+    'software-engineer': 'Softwareentwickler',
+    vienna: 'Wien',
   },
   projects: {
     title: 'Projekte',
