@@ -1,3 +1,10 @@
+# [1.24.0](https://github.com/DerYeger/jan-mueller/compare/v1.23.0...v1.24.0) (2021-07-25)
+
+
+### Features
+
+* rework home page ([1f2e55c](https://github.com/DerYeger/jan-mueller/commit/1f2e55c5ff0214cb417597f2147148555886b9a4))
+
 # [1.23.0](https://github.com/DerYeger/jan-mueller/compare/v1.22.2...v1.23.0) (2021-07-24)
 
 
