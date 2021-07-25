@@ -1,3 +1,10 @@
+## [1.24.1](https://github.com/DerYeger/jan-mueller/compare/v1.24.0...v1.24.1) (2021-07-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency nuxt-i18n to v6.28.0 ([e33bd2e](https://github.com/DerYeger/jan-mueller/commit/e33bd2eb05581ade65debb318e4cb14dc5f86704))
+
 # [1.24.0](https://github.com/DerYeger/jan-mueller/compare/v1.23.0...v1.24.0) (2021-07-25)
 
 
