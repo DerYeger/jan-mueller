@@ -11,7 +11,7 @@
     :href="href"
     class="ma-0"
   >
-    <v-icon large :class="color ? '' : 'text--primary'" v-text="icon" />
+    <v-icon large :class="{ 'text--primary': !color }" v-text="icon" />
   </v-btn>
 </template>
 
