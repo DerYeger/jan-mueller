@@ -4,11 +4,13 @@ import { Content } from '~/model/content'
 export interface Breadcrumb {
   text: string
   to: string
+  icon?: string
 }
 
 export const homeBreadcrumb: Breadcrumb = {
-  text: 'mdi-home',
+  text: routes.home.title,
   to: routes.home.to,
+  icon: 'mdi-home',
 }
 
 export const blogBreadcrumb: Breadcrumb = {

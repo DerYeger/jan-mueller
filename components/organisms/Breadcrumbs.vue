@@ -8,12 +8,14 @@
         :to="item.to"
         :disabled="item.disabled"
         :exact="true"
+        :aria-label="$t(item.text)"
         class="unselectable"
       >
         <v-icon
-          v-if="item.text.startsWith('mdi-')"
+          v-if="item.icon"
           class="text--primary"
-          v-text="item.text"
+          :aria-label="$t(item.text)"
+          v-text="item.icon"
         />
         <template v-else>
           {{ $t(item.text) }}
@@ -38,6 +40,7 @@ export default defineComponent({
       return rawCrumbs.map((crumb: Breadcrumb, index: number) => ({
         text: crumb.text,
         to: this.localePath(crumb.to, locale),
+        icon: crumb.icon,
         disabled: index >= rawCrumbs.length - 1,
       }))
     },
