@@ -6,7 +6,7 @@
     dense
     :color="$vuetify.theme.dark ? '#121212' : 'white'"
   >
-    <div :class="{ 'ml-n4': $vuetify.breakpoint.mdAndDown }">
+    <div class="ml-n4 ml-lg-0">
       <v-app-bar-nav-icon
         v-show="$vuetify.breakpoint.mdAndDown"
         :aria-label="$t(value ? 'actions.close-menu' : 'actions.open-menu')"
@@ -14,14 +14,7 @@
       />
       <breadcrumbs v-show="$vuetify.breakpoint.lgAndUp" class="pa-0" />
     </div>
-    <div
-      style="display: flex; justify-content: center"
-      :style="
-        $vuetify.breakpoint.mdAndDown
-          ? 'flex-basis: auto'
-          : 'margin-left: -56px'
-      "
-    >
+    <div class="d-flex justify-center ml-lg-n14 flex-fill">
       <content-search />
     </div>
     <div style="margin-right: -16px">
