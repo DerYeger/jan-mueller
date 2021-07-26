@@ -4,6 +4,7 @@
     href="https://github.com/DerYeger/jan-mueller"
     target="_blank"
     class="unselectable source-link-container"
+    role="link"
   >
     <v-list-item-icon>
       <v-icon v-text="'mdi-github'" />

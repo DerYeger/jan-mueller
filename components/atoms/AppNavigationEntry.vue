@@ -1,5 +1,10 @@
 <template>
-  <v-list-item :to="localePath(route.to)" exact>
+  <v-list-item
+    :to="localePath(route.to)"
+    exact
+    role="link"
+    :aria-label="$t(route.title)"
+  >
     <v-list-item-icon>
       <v-icon v-text="route.icon" />
     </v-list-item-icon>
