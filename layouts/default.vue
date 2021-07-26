@@ -27,10 +27,29 @@ import { defineComponent } from '@nuxtjs/composition-api'
 import { mapState } from 'vuex'
 
 export default defineComponent({
-  layout: 'base',
   data() {
     return {
       drawerOpen: this.$vuetify.breakpoint.lgAndUp,
+    }
+  },
+  head() {
+    return {
+      htmlAttrs: {
+        lang: this.$i18n.locale,
+      },
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$t('meta.description') as string,
+        },
+      ],
+      link: [
+        {
+          rel: 'canonical',
+          href: `https://jan-mueller.at${this.$route.path}/`,
+        },
+      ],
     }
   },
   computed: mapState(['breadcrumbs']),

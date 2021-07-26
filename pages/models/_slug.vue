@@ -11,7 +11,7 @@
 import { computed, defineComponent, useContext } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  layout: 'base',
+  layout: 'empty',
   setup() {
     const { params } = useContext()
     const src = computed(() => `/models/${params.value.slug}.mview`)
