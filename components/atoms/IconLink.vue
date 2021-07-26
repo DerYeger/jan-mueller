@@ -5,9 +5,10 @@
     target="_blank"
     class="svg-icon"
     :aria-label="name"
+    style="margin: 6px"
   >
     <abbr :title="name">
-      <img :src="require(`~/assets/images/icons/${icon}.svg`)" alt="logo" />
+      <img :src="require(`~/assets/images/icons/${icon}.svg`)" :alt="name" />
     </abbr>
   </a>
 </template>
