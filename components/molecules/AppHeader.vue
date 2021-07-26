@@ -1,5 +1,11 @@
 <template>
-  <v-app-bar fixed app elevate-on-scroll dense color="background">
+  <v-app-bar
+    fixed
+    app
+    elevate-on-scroll
+    dense
+    :color="$vuetify.theme.dark ? '#121212' : 'white'"
+  >
     <div class="ml-n4 ml-lg-0">
       <v-app-bar-nav-icon
         v-show="$vuetify.breakpoint.mdAndDown"
