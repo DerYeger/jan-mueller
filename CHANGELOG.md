@@ -1,3 +1,15 @@
+## [1.24.2](https://github.com/DerYeger/jan-mueller/compare/v1.24.1...v1.24.2) (2021-07-26)
+
+
+### Bug Fixes
+
+* match account link design to icon links ([15f7f7b](https://github.com/DerYeger/jan-mueller/commit/15f7f7b46e69b3f4e034228f9a858b7606081605))
+* properly align text in software list ([2e4b6ea](https://github.com/DerYeger/jan-mueller/commit/2e4b6eaf0cc8e6c538c6a9c8ac5f24fef6711611))
+* reduce h2 bottom margin on home page ([c2bc193](https://github.com/DerYeger/jan-mueller/commit/c2bc193456c5def220389dd26cc9aa0e9c0b163b))
+* use background color for toolbar ([c177a1f](https://github.com/DerYeger/jan-mueller/commit/c177a1ff4558873362ef016bec587855be0e8366))
+* use classes instead of breakpoint statements ([19f9fd2](https://github.com/DerYeger/jan-mueller/commit/19f9fd2a82a2d6a5eb442af16a1eb13538fde0bd))
+* use correct margin in icon links ([c400ae6](https://github.com/DerYeger/jan-mueller/commit/c400ae6af590dd6450b06bc7e7f696e073ccb15e))
+
 ## [1.24.1](https://github.com/DerYeger/jan-mueller/compare/v1.24.0...v1.24.1) (2021-07-25)
 
 
