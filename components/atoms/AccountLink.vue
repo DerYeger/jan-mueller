@@ -2,13 +2,16 @@
   <v-btn
     rel="noopener"
     icon
-    x-large
+    large
+    height="48"
+    width="48"
     target="_blank"
     :aria-label="name"
     :color="color"
     :href="href"
+    class="ma-0"
   >
-    <v-icon x-large :class="color ? '' : 'text--primary'" v-text="icon" />
+    <v-icon large :class="color ? '' : 'text--primary'" v-text="icon" />
   </v-btn>
 </template>
 

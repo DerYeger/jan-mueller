@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <div class="responsive-list">
     <account-link
       v-for="(account, index) of accounts"
       :key="index"
@@ -8,7 +8,7 @@
       :href="account.href"
       :color="account.color"
     />
-  </v-row>
+  </div>
 </template>
 
 <script lang="ts">
