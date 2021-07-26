@@ -99,7 +99,7 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.25em;
 }
 
 h1,
