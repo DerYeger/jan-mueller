@@ -19,7 +19,7 @@ export default {
     files: {
       'bachelor-thesis': 'Bachelorarbeit',
       koffee: 'Koffee Dokumentation',
-      'threadsafe-datastructures': 'Threadsichere Datenstrukturen in Java',
+      'threadsafe-data-structures': 'Threadsichere Datenstrukturen in Java',
     },
   },
   home: {
@@ -32,6 +32,8 @@ export default {
   misc: {
     'about-me': 'Über mich',
     'and-more': '... und mehr!',
+    english: 'Englisch',
+    german: 'Deutsch',
     languages: 'Sprachen',
     'no-results': 'Keine Ergebnisse',
     'software-engineer': 'Softwareentwickler',

@@ -17,9 +17,9 @@ export default {
   documents: {
     title: 'Documents',
     files: {
-      'bachelor-thesis': `Bachelor's thesis (German)`,
+      'bachelor-thesis': `Bachelor's thesis`,
       koffee: 'Koffee documentation',
-      'threadsafe-datastructures': 'Threadsafe datastructures in Java (German)',
+      'threadsafe-data-structures': 'Threadsafe data structures in Java',
     },
   },
   home: {
@@ -34,6 +34,8 @@ export default {
     accounts: 'Accounts',
     'and-more': '... and more!',
     content: 'Content',
+    english: 'English',
+    german: 'German',
     languages: 'Languages',
     navigation: 'Navigation',
     'no-results': 'No results',
