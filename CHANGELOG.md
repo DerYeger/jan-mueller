@@ -1,3 +1,13 @@
+## [1.24.3](https://github.com/DerYeger/jan-mueller/compare/v1.24.2...v1.24.3) (2021-07-26)
+
+
+### Bug Fixes
+
+* add aria labels to navigation ([05b6837](https://github.com/DerYeger/jan-mueller/commit/05b68378ec01fcf8f852f25f5ecb4a631a6a8e52))
+* add aria-label to navigation ([ad18ec0](https://github.com/DerYeger/jan-mueller/commit/ad18ec02bdc77f66ddd4875354cb5c53a5f05403))
+* do not nest layouts ([c1d8e7b](https://github.com/DerYeger/jan-mueller/commit/c1d8e7beafe39fedf70ee9929b0e6eb2a600cb98))
+* use proper vue class expression ([bb54b0a](https://github.com/DerYeger/jan-mueller/commit/bb54b0a871ab125a5cde80d39f795d7eb8562a6b))
+
 ## [1.24.2](https://github.com/DerYeger/jan-mueller/compare/v1.24.1...v1.24.2) (2021-07-26)
 
 
