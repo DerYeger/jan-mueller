@@ -1,6 +1,6 @@
 {
   "name": "jan-mueller",
-  "version": "1.24.4",
+  "version": "1.25.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",

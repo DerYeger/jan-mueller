@@ -1,3 +1,10 @@
+# [1.25.0](https://github.com/DerYeger/jan-mueller/compare/v1.24.4...v1.25.0) (2021-07-26)
+
+
+### Features
+
+* improve document card design ([55b611d](https://github.com/DerYeger/jan-mueller/commit/55b611d51b4e5bb53e407c34ea9f8fc0ee62e2a2))
+
 ## [1.24.4](https://github.com/DerYeger/jan-mueller/compare/v1.24.3...v1.24.4) (2021-07-26)
 
 
