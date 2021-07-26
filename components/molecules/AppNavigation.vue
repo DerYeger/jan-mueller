@@ -1,5 +1,5 @@
 <template>
-  <v-list-item-group>
+  <v-list-item-group :aria-label="$t('misc.navigation')">
     <app-navigation-entry
       v-for="(route, index) in routes"
       :key="index"

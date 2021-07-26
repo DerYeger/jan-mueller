@@ -35,6 +35,7 @@ export default {
     'and-more': '... and more!',
     content: 'Content',
     languages: 'Languages',
+    navigation: 'Navigation',
     'no-results': 'No results',
     repository: 'Repository',
     software: 'Software',
