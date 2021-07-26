@@ -1,3 +1,10 @@
+## [1.24.4](https://github.com/DerYeger/jan-mueller/compare/v1.24.3...v1.24.4) (2021-07-26)
+
+
+### Bug Fixes
+
+* use proper background color for header ([bf3c413](https://github.com/DerYeger/jan-mueller/commit/bf3c413d3bed0b723930bdfef7b7568e6e4c83bc))
+
 ## [1.24.3](https://github.com/DerYeger/jan-mueller/compare/v1.24.2...v1.24.3) (2021-07-26)
 
 
