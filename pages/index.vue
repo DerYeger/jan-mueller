@@ -15,12 +15,12 @@
             {{ $t('misc.about-me') }}
           </h1>
           <quick-facts />
-          <nuxt-content :document="paragraphs[0]" />
+          <nuxt-content :document="paragraphs[0]" class="mb-n4" />
         </v-col>
       </v-row>
       <v-row class="mt-sm-8 flex-wrap-reverse">
         <v-col align-self="center">
-          <nuxt-content :document="paragraphs[1]" />
+          <nuxt-content :document="paragraphs[1]" class="mb-n4" />
         </v-col>
         <v-col cols="12" sm="5" align-self="center">
           <aside class="my-8 my-sm-0">
@@ -41,12 +41,12 @@
           </aside>
         </v-col>
         <v-col align-self="center">
-          <nuxt-content :document="paragraphs[2]" />
+          <nuxt-content :document="paragraphs[2]" class="mb-n4" />
         </v-col>
       </v-row>
       <v-row class="mt-sm-8 flex-wrap-reverse">
         <v-col align-self="center">
-          <nuxt-content :document="paragraphs[3]" />
+          <nuxt-content :document="paragraphs[3]" class="mb-n4" />
         </v-col>
         <v-col cols="12" sm="6" align-self="center">
           <aside class="my-8 my-sm-0">
@@ -92,7 +92,7 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style scoped>
 h1 {
   font-size: 4rem;
 }
@@ -105,9 +105,5 @@ h2 {
 h1,
 h2 {
   line-height: 1;
-}
-
-p:last-child {
-  margin-bottom: 0;
 }
 </style>
