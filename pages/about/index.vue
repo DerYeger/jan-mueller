@@ -1,5 +1,5 @@
 <template>
-  <article class="justify-text">
+  <article class="justify-text about-article">
     <nuxt-content :document="document" />
   </article>
 </template>
@@ -33,3 +33,12 @@ export default defineComponent({
   },
 })
 </script>
+
+<style lang="scss">
+.about-article {
+  h1,
+  h2 {
+    hyphens: auto;
+  }
+}
+</style>
