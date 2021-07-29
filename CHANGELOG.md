@@ -1,3 +1,10 @@
+## [1.25.3](https://github.com/DerYeger/jan-mueller/compare/v1.25.2...v1.25.3) (2021-07-29)
+
+
+### Bug Fixes
+
+* use scoped style for home page ([fa39be9](https://github.com/DerYeger/jan-mueller/commit/fa39be95e56c6ff9011a576c40d16f9af7aff5b6))
+
 ## [1.25.2](https://github.com/DerYeger/jan-mueller/compare/v1.25.1...v1.25.2) (2021-07-28)
 
 
