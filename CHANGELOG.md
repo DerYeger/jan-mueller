@@ -1,3 +1,10 @@
+## [1.25.4](https://github.com/DerYeger/jan-mueller/compare/v1.25.3...v1.25.4) (2021-07-29)
+
+
+### Bug Fixes
+
+* use auto hyphens in about page ([4a9d168](https://github.com/DerYeger/jan-mueller/commit/4a9d1682241b05f0b3026b431188b243d4f40f06))
+
 ## [1.25.3](https://github.com/DerYeger/jan-mueller/compare/v1.25.2...v1.25.3) (2021-07-29)
 
 
