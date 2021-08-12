@@ -1,3 +1,10 @@
+# [1.26.0](https://github.com/DerYeger/jan-mueller/compare/v1.25.9...v1.26.0) (2021-08-12)
+
+
+### Features
+
+* **i18n:** migrate to @nuxtjs/i18n ([26a3895](https://github.com/DerYeger/jan-mueller/commit/26a3895fa8a07195f4b2125f0569671ea1f0eec7))
+
 ## [1.25.9](https://github.com/DerYeger/jan-mueller/compare/v1.25.8...v1.25.9) (2021-08-12)
 
 
