@@ -2550,7 +2550,7 @@
   optionalDependencies:
     prettier "^1.18.2"
 
-"@vue/composition-api@^1.0.0-rc.14", "@vue/composition-api@^1.0.4":
+"@vue/composition-api@^1.0.4":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.1.0.tgz#484e7e3bbc516ad6a9b0a9967d316325c239539e"
   integrity sha512-9TMJliVFByhfEJjqM+Ymu9ImVrUnrT/Y2S7Fz8EsQ1MbggbE0o8Ohvk9XqK2UIOp8w68f7goVX+6h6O78iRsJQ==
@@ -12730,12 +12730,10 @@ vue-loader@^15.9.7:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-marmoset-viewer@1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-1.3.2.tgz#d80b538175a17fdd2cce9073923352ca417153b4"
-  integrity sha512-dvon1RObFLWNtTn3Ym3LpsTW76P04L/ytpz1kLfCCC4fKqUkHlmRL0QygCAP/X/7wUSN0ECENhtjQMM3uI2pxQ==
-  dependencies:
-    "@vue/composition-api" "^1.0.0-rc.14"
+vue-marmoset-viewer@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-2.0.0.tgz#bbf104e1ae293c36fc6ff28d650fbc1b56359509"
+  integrity sha512-rDB6gtQXlHxFQAwSFHq8ZE5bwIQUYW58rpKIGxGlvdZ54iWvC0zipwknpreAq0GdultHf4o3ULPb5rWrZ00RSw==
 
 vue-masonry-wall@0.3.2:
   version "0.3.2"
