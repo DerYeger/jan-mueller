@@ -1,3 +1,10 @@
+## [1.25.9](https://github.com/DerYeger/jan-mueller/compare/v1.25.8...v1.25.9) (2021-08-12)
+
+
+### Bug Fixes
+
+* **nuxt:** revert to v2.15.7 ([722a580](https://github.com/DerYeger/jan-mueller/commit/722a580ee8534a5514b8ed4ec3b6fdd9b4782003))
+
 ## [1.25.8](https://github.com/DerYeger/jan-mueller/compare/v1.25.7...v1.25.8) (2021-08-08)
 
 
