@@ -6,7 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "nuxt generate --fail-on-error",
     "lint:es": "eslint --ext \".js,.vue,.ts\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css,ts}\" --ignore-path .gitignore",
     "lint": "yarn lint:es && yarn lint:style",
