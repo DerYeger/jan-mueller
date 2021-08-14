@@ -1,3 +1,10 @@
+## [1.26.1](https://github.com/DerYeger/jan-mueller/compare/v1.26.0...v1.26.1) (2021-08-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency reading-time to v1.4.0 ([5c251ef](https://github.com/DerYeger/jan-mueller/commit/5c251ef1c4f949f5d04923abd7561aea884fae0a))
+
 # [1.26.0](https://github.com/DerYeger/jan-mueller/compare/v1.25.9...v1.26.0) (2021-08-12)
 
 
