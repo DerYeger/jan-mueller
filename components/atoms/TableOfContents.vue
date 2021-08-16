@@ -2,9 +2,14 @@
   <div class="mb-4">
     <nav>
       <h2>{{ $t('misc.content') }}</h2>
-      <ul>
-        <li v-for="link of document.toc" :key="link.id">
-          <nuxt-link :to="`#${link.id}`" v-text="link.text" />
+      <ul class="pl-2">
+        <li
+          v-for="entry of document.toc"
+          :key="entry.id"
+          :class="depthToPaddingClass(entry)"
+          style="list-style-position: inside"
+        >
+          <nuxt-link :to="`#${entry.id}`" v-text="entry.text" />
         </li>
       </ul>
     </nav>
@@ -13,13 +18,18 @@
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import { Content } from '~/model/content'
+import { Content, TableOfContentsEntry } from '~/model/content'
 
 export default defineComponent({
   props: {
     document: {
       type: Object as () => Content,
       required: true,
+    },
+  },
+  methods: {
+    depthToPaddingClass(entry: TableOfContentsEntry): string {
+      return `pl-${(entry.depth - 2) * 6}`
     },
   },
 })

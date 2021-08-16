@@ -2,6 +2,7 @@ import { IContentDocument } from '@nuxt/content/types/content'
 
 export interface TableOfContentsEntry {
   id: string
+  depth: number
   text: string
 }
 
