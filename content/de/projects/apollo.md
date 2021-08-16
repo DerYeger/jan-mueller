@@ -1,7 +1,7 @@
 ---
 title: Apollo
 description: Eine Webanwendung zur prädikatenlogischen Modellprüfung von Graphstrukturen.
-repositories: [apollo, apollo-frontend, apollo-backend]
+repositories: [apollo, apollo-frontend, apollo-backend, apollo-admin]
 demo: https://apollo.yeger.eu
 thumbnail: apollo/thumbnail.webp
 ---

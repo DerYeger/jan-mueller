@@ -1,7 +1,7 @@
 ---
 title: Apollo
 description: A web application for first-order model checking in graph structures.
-repositories: [apollo, apollo-frontend, apollo-backend]
+repositories: [apollo, apollo-frontend, apollo-backend, apollo-admin]
 demo: https://apollo.yeger.eu
 thumbnail: apollo/thumbnail.webp
 ---
