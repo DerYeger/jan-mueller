@@ -1,3 +1,10 @@
+# [1.28.0](https://github.com/DerYeger/jan-mueller/compare/v1.27.0...v1.28.0) (2021-08-16)
+
+
+### Features
+
+* **blog:** add vue-masonry-wall post ([27709d6](https://github.com/DerYeger/jan-mueller/commit/27709d6e645aa3d1ae6e4d557489a1791f7009f0))
+
 # [1.27.0](https://github.com/DerYeger/jan-mueller/compare/v1.26.1...v1.27.0) (2021-08-16)
 
 
