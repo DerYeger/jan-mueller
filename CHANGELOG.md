@@ -1,3 +1,15 @@
+# [1.27.0](https://github.com/DerYeger/jan-mueller/compare/v1.26.1...v1.27.0) (2021-08-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency nuxt to v2.15.8 ([90336c0](https://github.com/DerYeger/jan-mueller/commit/90336c0786143a90103eddfa38b9d43f8298185a))
+
+
+### Features
+
+* **content:** add apollo-admin repo to apollo project ([a20cbb6](https://github.com/DerYeger/jan-mueller/commit/a20cbb67d479b36567d328f493cca72140b77d5b))
+
 ## [1.26.1](https://github.com/DerYeger/jan-mueller/compare/v1.26.0...v1.26.1) (2021-08-14)
 
 
