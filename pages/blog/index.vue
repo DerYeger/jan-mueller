@@ -3,7 +3,8 @@
     :items="posts"
     :ssr-columns="1"
     :column-width="400"
-    :padding="12"
+    :padding="24"
+    class="px-3"
   >
     <template #default="{ item }">
       <blog-post-card :blog-post="item" />
