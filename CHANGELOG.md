@@ -1,3 +1,10 @@
+## [1.29.1](https://github.com/DerYeger/jan-mueller/compare/v1.29.0...v1.29.1) (2021-08-16)
+
+
+### Bug Fixes
+
+* restore original masonry padding ([eb0cb06](https://github.com/DerYeger/jan-mueller/commit/eb0cb06de7549fc1936b6dac69197962fee4007c))
+
 # [1.29.0](https://github.com/DerYeger/jan-mueller/compare/v1.28.0...v1.29.0) (2021-08-16)
 
 
