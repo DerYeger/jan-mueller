@@ -9,7 +9,7 @@
         :disabled="item.disabled"
         :exact="true"
         :aria-label="$t(item.text)"
-        class="unselectable"
+        class="unselectable breadcrumb-item"
       >
         <v-icon
           v-if="item.icon"
@@ -50,6 +50,8 @@ export default defineComponent({
 
 <style lang="scss">
 .breadcrumbs {
+  flex-wrap: nowrap;
+
   li .v-icon {
     font-size: 1.5rem;
   }
@@ -60,6 +62,10 @@ export default defineComponent({
 
   a:not(.v-breadcrumbs__item--disabled) {
     color: unset;
+  }
+
+  .breadcrumb-item {
+    white-space: nowrap;
   }
 }
 </style>
