@@ -1,3 +1,10 @@
+# [1.29.0](https://github.com/DerYeger/jan-mueller/compare/v1.28.0...v1.29.0) (2021-08-16)
+
+
+### Features
+
+* **vue:** migrate to @yeger/vue2-masonry-wall ([6edc82e](https://github.com/DerYeger/jan-mueller/commit/6edc82e00a454511bb753c00d840348d93896f08))
+
 # [1.28.0](https://github.com/DerYeger/jan-mueller/compare/v1.27.0...v1.28.0) (2021-08-16)
 
 
