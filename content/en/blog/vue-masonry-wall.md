@@ -1,6 +1,6 @@
 ---
-title: Masonry layout in Vue 3
-description: Responsive masonry layout with SSR support and zero dependencies for Vue 3.
+title: Masonry layout for Vue 2 and Vue 3
+description: Responsive masonry layout with SSR support and zero dependencies for Vue 2 and Vue 3.
 createdAt: 2021-08-16
 tags: [Vue, Masonry, Layout]
 ---
@@ -16,10 +16,35 @@ Since I couldn't find a comparable masonry layout for Vue 3, I chose to create a
 The result is [@yeger/vue-masonry-wall](https://github.com/DerYeger/vue-masonry-wall), a rewrite of the original library in TypeScript and Vue 3.
 It has no dependencies, resulting in a bundle size decrease of up to 54%.
 
+I also created [@yeger/vue2-masonry-wall](https://github.com/DerYeger/vue2-masonry-wall) for use in Vue 2 projects.
+It, too, drops any dependencies, achieving a bundle size decrease of up to 40%
+
 In addition, multiple issues have been fixed.
 Notably, padding is now considered while calculating the column count, and the removal of elements is now supported.
 
 ## Installation
+
+### Vue 2
+
+```bash[bash]
+# yarn
+$ yarn add @yeger/vue2-masonry-wall
+
+# npm
+$ npm install @yeger/vue2-masonry-wall
+```
+
+First, you have to install the component like any other plugin.
+Consult the [Vue 2 documentation](https://vuejs.org/v2/guide/plugins.html#Using-a-Plugin) for detailed information on installing plugins.
+
+```ts[ts]
+import Vue from 'vue'
+import MasonryWall from '@yeger/vue2-masonry-wall'
+
+Vue.use(MasonryWall)
+```
+
+### Vue 3
 
 ```bash[bash]
 # yarn
@@ -28,8 +53,6 @@ $ yarn add @yeger/vue-masonry-wall
 # npm
 $ npm install @yeger/vue-masonry-wall
 ```
-
-## Usage
 
 First, you have to install the component like any other plugin.
 Consult the [Vue 3 documentation](https://v3.vuejs.org/guide/plugins.html#using-a-plugin) for detailed information on installing plugins.
@@ -43,7 +66,10 @@ const app = createApp()
 app.use(MasonryWall)
 ```
 
-Afterward, the component is available as `masonry-wall` or `MasonryWall`.
+
+## Usage
+
+The component is available as `masonry-wall` or `MasonryWall`.
 The only required prop is `items`, an array of type `any`.
 Each element of `items` is passed to the default slot, alongside its index.
 The prop `columnWidth` takes in a `number`, specifying the targeted column width.
@@ -55,11 +81,11 @@ While every prop of the component is reactive, mutations to the `items` array wi
 To force updates, assign a new array to the `items` prop.
 
 The following example demonstrates basic usage of the component.
-For an interactive demonstration, visit [vue-masonry-wall.yeger.eu](https://vue-masonry-wall.yeger.eu/).
+For an interactive demonstrations, visit [vue-masonry-wall.yeger.eu](https://vue-masonry-wall.yeger.eu/) or [vue2-masonry-wall.yeger.eu](https://vue2-masonry-wall.yeger.eu/).
 
 ```vue[vue]
 <template>
-  <masonry-wall :items="items" :ssrColumns="1" :columnWidth="300" :padding="16">
+  <masonry-wall :items="items" :ssr-columns="1" :column-width="300" :padding="16">
     <template #default="{ item, index }">
       <div :style="`height: ${item.height}px`">
         <h1>{{ item.title }}</h1>
