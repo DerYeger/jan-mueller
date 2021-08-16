@@ -1,3 +1,11 @@
+## [1.30.1](https://github.com/DerYeger/jan-mueller/compare/v1.30.0...v1.30.1) (2021-08-16)
+
+
+### Bug Fixes
+
+* **blog:** use correct sorting for document switcher ([57ddb6e](https://github.com/DerYeger/jan-mueller/commit/57ddb6e454bc0526a5b1bfeb1478579e7ac8409c))
+* **breadcrumbs:** prevent wrapping ([89a4c95](https://github.com/DerYeger/jan-mueller/commit/89a4c9595dbb089308d22417ec37c6c248bad9cf))
+
 # [1.30.0](https://github.com/DerYeger/jan-mueller/compare/v1.29.1...v1.30.0) (2021-08-16)
 
 
