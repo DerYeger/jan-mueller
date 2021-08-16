@@ -1,13 +1,14 @@
 <template>
-  <vue-masonry-wall
+  <masonry-wall
     :items="posts"
-    :ssr="{ columns: 1 }"
-    :options="{ width: 400, padding: 12 }"
+    :ssr-columns="1"
+    :column-width="400"
+    :padding="12"
   >
     <template #default="{ item }">
       <blog-post-card :blog-post="item" />
     </template>
-  </vue-masonry-wall>
+  </masonry-wall>
 </template>
 
 <script lang="ts">

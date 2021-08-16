@@ -35,7 +35,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/vue-masonry-wall' },
+    { src: '~/plugins/masonryWall' },
     { src: '~/plugins/marmosetViewer' },
   ],
 
