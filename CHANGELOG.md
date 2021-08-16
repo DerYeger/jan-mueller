@@ -1,3 +1,11 @@
+# [1.30.0](https://github.com/DerYeger/jan-mueller/compare/v1.29.1...v1.30.0) (2021-08-16)
+
+
+### Features
+
+* **blog:** update vue-masonry-wall post ([9636a43](https://github.com/DerYeger/jan-mueller/commit/9636a4360295137da1cbfc5df68a36b5fb2ed0de))
+* **table-of-contents:** implement indentation ([e5d0321](https://github.com/DerYeger/jan-mueller/commit/e5d03212a95d87b22ee9ca9dfc9e7859e1a9fc58))
+
 ## [1.29.1](https://github.com/DerYeger/jan-mueller/compare/v1.29.0...v1.29.1) (2021-08-16)
 
 
