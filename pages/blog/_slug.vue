@@ -35,7 +35,7 @@ export default defineComponent({
 
     const [prev, next] = (await $content('en/blog')
       .only(['title', 'path'])
-      .sortBy('createdAt', 'asc')
+      .sortBy('createdAt', 'desc')
       .surround(params.slug)
       .fetch()) as BlogPost[]
 
