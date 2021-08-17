@@ -12,7 +12,8 @@
     <v-main>
       <breadcrumbs
         v-if="$vuetify.breakpoint.mdAndDown && breadcrumbs.length > 0"
-        class="pa-3"
+        class="pa-3 mobile-breadcrumbs"
+        small
       />
       <v-container class="page-container">
         <nuxt />
@@ -55,3 +56,14 @@ export default defineComponent({
   computed: mapState(['breadcrumbs']),
 })
 </script>
+
+<style lang="scss">
+.mobile-breadcrumbs {
+  flex-wrap: wrap !important;
+  margin-top: -0.5rem;
+
+  li {
+    margin-top: 0.5rem;
+  }
+}
+</style>
