@@ -1,3 +1,11 @@
+## [1.32.1](https://github.com/DerYeger/jan-mueller/compare/v1.32.0...v1.32.1) (2021-08-17)
+
+
+### Bug Fixes
+
+* **avatar:** remove loading indicator ([8b3f072](https://github.com/DerYeger/jan-mueller/commit/8b3f07258d3022aa2d5adae8df5f4406ed4b76c0))
+* **header:** disable background transition ([fca8bcc](https://github.com/DerYeger/jan-mueller/commit/fca8bcc6048ae30f737cc9c8340bc24bc62f9a38))
+
 # [1.32.0](https://github.com/DerYeger/jan-mueller/compare/v1.31.0...v1.32.0) (2021-08-17)
 
 
