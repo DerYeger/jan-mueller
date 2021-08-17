@@ -1,3 +1,15 @@
+# [1.31.0](https://github.com/DerYeger/jan-mueller/compare/v1.30.1...v1.31.0) (2021-08-17)
+
+
+### Bug Fixes
+
+* **breadcrumbs:** prevent overflow on small screens ([b39dbf0](https://github.com/DerYeger/jan-mueller/commit/b39dbf0b3a7b7718710a9f7917167913161a40bd))
+
+
+### Features
+
+* inline icons ([71b581d](https://github.com/DerYeger/jan-mueller/commit/71b581da22e34756143f2d695361ff4142f90d03))
+
 ## [1.30.1](https://github.com/DerYeger/jan-mueller/compare/v1.30.0...v1.30.1) (2021-08-16)
 
 
