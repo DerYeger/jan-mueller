@@ -11,7 +11,12 @@
       @click="overlay = true"
     >
       <template #placeholder>
-        <v-row class="fill-height ma-0" align="center" justify="center">
+        <v-row
+          v-if="placeholder"
+          class="fill-height ma-0"
+          align="center"
+          justify="center"
+        >
           <v-progress-circular indeterminate color="primary" />
         </v-row>
       </template>
@@ -66,6 +71,10 @@ export default defineComponent({
     elevation: {
       type: Number,
       default: 6,
+    },
+    placeholder: {
+      type: Boolean,
+      default: true,
     },
   },
   data() {

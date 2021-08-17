@@ -5,6 +5,7 @@
       lazy-src="avatar-lazy.webp"
       alt="Jan"
       :allow-fullscreen="false"
+      :placeholder="false"
     />
   </v-avatar>
 </template>
