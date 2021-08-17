@@ -16,11 +16,12 @@
       "@/*": ["./*"]
     },
     "types": [
+      "@nuxt/content",
       "@nuxt/types",
       "@nuxtjs/color-mode",
-      "@nuxt/content",
+      "@nuxtjs/i18n",
+      "@nuxtjs/vuetify",
       "@types/node",
-      "@nuxtjs/i18n"
     ]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]

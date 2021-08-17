@@ -43,3 +43,9 @@ export default defineComponent({
   },
 })
 </script>
+
+<style>
+.v-app-bar {
+  transition: background 0s;
+}
+</style>
