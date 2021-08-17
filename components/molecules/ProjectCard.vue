@@ -29,9 +29,12 @@
               (project.repositories && project.repositories.length > 0)
             "
             small
-            v-text="'mdi-github'"
-          />
-          <v-icon v-if="project.demo" small v-text="'mdi-television-play'" />
+          >
+            {{ mdiGithub }}
+          </v-icon>
+          <v-icon v-if="project.demo" small>
+            {{ mdiTelevisionPlay }}
+          </v-icon>
         </div>
       </v-card-title>
       <v-divider class="mx-4" />
@@ -41,6 +44,7 @@
 </template>
 
 <script lang="ts">
+import { mdiGithub, mdiTelevisionPlay } from '@mdi/js'
 import { defineComponent } from '@nuxtjs/composition-api'
 import { Project } from '~/model/project'
 
@@ -50,6 +54,12 @@ export default defineComponent({
       type: Object as () => Project,
       required: true,
     },
+  },
+  data() {
+    return {
+      mdiGithub,
+      mdiTelevisionPlay,
+    }
   },
 })
 </script>

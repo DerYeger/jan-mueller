@@ -11,7 +11,9 @@
         v-show="$vuetify.breakpoint.mdAndDown"
         :aria-label="$t(value ? 'actions.close-menu' : 'actions.open-menu')"
         @click="$emit('input', !value)"
-      />
+      >
+        <v-icon>{{ mdiMenu }}</v-icon>
+      </v-app-bar-nav-icon>
       <breadcrumbs v-show="$vuetify.breakpoint.lgAndUp" class="pa-0" />
     </div>
     <div class="d-flex justify-center ml-lg-n14 flex-fill">
@@ -24,6 +26,7 @@
 </template>
 
 <script lang="ts">
+import { mdiMenu } from '@mdi/js'
 import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
@@ -32,6 +35,11 @@ export default defineComponent({
       type: Boolean,
       required: true,
     },
+  },
+  data() {
+    return {
+      mdiMenu,
+    }
   },
 })
 </script>

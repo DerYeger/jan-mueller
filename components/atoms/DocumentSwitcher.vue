@@ -1,18 +1,19 @@
 <template>
   <div class="document-link-container">
     <NuxtLink v-if="prev" :to="prev.path" class="mr-4">
-      <v-icon v-text="'mdi-chevron-left'" />
+      <v-icon>{{ mdiChevronLeft }}</v-icon>
       <span>{{ prev.title }}</span>
     </NuxtLink>
     <span v-else />
     <NuxtLink v-if="next" :to="next.path" style="text-align: right">
       <span>{{ next.title }}</span>
-      <v-icon v-text="'mdi-chevron-right'" />
+      <v-icon>{{ mdiChevronRight }}</v-icon>
     </NuxtLink>
     <span v-else />
   </div>
 </template>
 <script lang="ts">
+import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { defineComponent } from '@nuxtjs/composition-api'
 import { Content } from '~/model/content'
 
@@ -26,6 +27,12 @@ export default defineComponent({
       type: Object as () => Content | undefined,
       default: undefined,
     },
+  },
+  data() {
+    return {
+      mdiChevronLeft,
+      mdiChevronRight,
+    }
   },
 })
 </script>

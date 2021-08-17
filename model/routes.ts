@@ -1,3 +1,10 @@
+import {
+  mdiCodeTags,
+  mdiFileDocument,
+  mdiHome,
+  mdiInformationVariant,
+  mdiPen,
+} from '@mdi/js'
 import { Content } from '~/model/content'
 
 export interface Route {
@@ -10,27 +17,27 @@ export const routes: Record<string, Route> = {
   home: {
     title: 'home.title',
     to: '/',
-    icon: 'mdi-home',
+    icon: mdiHome,
   },
   projects: {
     title: 'projects.title',
     to: '/projects',
-    icon: 'mdi-code-tags',
+    icon: mdiCodeTags,
   },
   blog: {
     title: 'blog.title',
     to: '/blog',
-    icon: 'mdi-pen',
+    icon: mdiPen,
   },
   documents: {
     title: 'documents.title',
     to: '/documents',
-    icon: 'mdi-file-document',
+    icon: mdiFileDocument,
   },
   about: {
     title: 'about.title',
     to: '/about',
-    icon: 'mdi-information-variant',
+    icon: mdiInformationVariant,
   },
 }
 

@@ -7,15 +7,22 @@
     "
     @click="toggleTheme()"
   >
-    <v-icon v-text="useDarkTheme ? 'mdi-brightness-5' : 'mdi-brightness-2'" />
+    <v-icon>{{ useDarkTheme ? mdiBrightness5 : mdiBrightness2 }}</v-icon>
   </v-btn>
 </template>
 
 <script lang="ts">
+import { mdiBrightness2, mdiBrightness5 } from '@mdi/js'
 import { defineComponent } from '@nuxtjs/composition-api'
 import { mapMutations, mapState } from 'vuex'
 
 export default defineComponent({
+  data() {
+    return {
+      mdiBrightness2,
+      mdiBrightness5,
+    }
+  },
   computed: mapState(['useDarkTheme']),
   watch: {
     useDarkTheme(val) {

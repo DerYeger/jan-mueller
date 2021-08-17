@@ -12,7 +12,7 @@
         v-on="on"
       >
         {{ showName ? repository : $t('misc.repository') }}
-        <v-icon class="ml-2" v-text="'mdi-github'" />
+        <v-icon class="ml-2">{{ mdiGithub }}</v-icon>
       </v-btn>
     </template>
     <a rel="noopener" :href="href" target="_blank">
@@ -22,6 +22,7 @@
 </template>
 
 <script lang="ts">
+import { mdiGithub } from '@mdi/js'
 import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
@@ -38,6 +39,11 @@ export default defineComponent({
       type: String,
       default: 'DerYeger',
     },
+  },
+  data() {
+    return {
+      mdiGithub,
+    }
   },
   computed: {
     href(): string {

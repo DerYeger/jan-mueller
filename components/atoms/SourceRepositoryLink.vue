@@ -7,10 +7,23 @@
     role="link"
   >
     <v-list-item-icon>
-      <v-icon v-text="'mdi-github'" />
+      <v-icon>{{ mdiGithub }}</v-icon>
     </v-list-item-icon>
     <v-list-item-content>
       <v-list-item-title>Website Source Code</v-list-item-title>
     </v-list-item-content>
   </v-list-item>
 </template>
+
+<script lang="ts">
+import { mdiGithub } from '@mdi/js'
+import { defineComponent } from '@nuxtjs/composition-api'
+
+export default defineComponent({
+  data() {
+    return {
+      mdiGithub,
+    }
+  },
+})
+</script>

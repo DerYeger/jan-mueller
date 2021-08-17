@@ -9,11 +9,12 @@
     class="mb-4"
   >
     {{ $t('actions.view') }}
-    <v-icon class="ml-2" v-text="'mdi-television-play'" />
+    <v-icon class="ml-2">{{ mdiTelevisionPlay }}</v-icon>
   </v-btn>
 </template>
 
 <script lang="ts">
+import { mdiTelevisionPlay } from '@mdi/js'
 import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
@@ -26,6 +27,11 @@ export default defineComponent({
       type: String,
       default: 'primary',
     },
+  },
+  data() {
+    return {
+      mdiTelevisionPlay,
+    }
   },
 })
 </script>

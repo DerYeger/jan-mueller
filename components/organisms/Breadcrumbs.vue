@@ -1,7 +1,7 @@
 <template>
   <v-breadcrumbs :items="breadcrumbs" nuxt :large="!small" class="breadcrumbs">
     <template #divider>
-      <v-icon v-text="'mdi-chevron-right'" />
+      <v-icon>{{ mdiChevronRight }}</v-icon>
     </template>
     <template #item="{ item }">
       <v-breadcrumbs-item
@@ -26,6 +26,7 @@
 </template>
 
 <script lang="ts">
+import { mdiChevronRight } from '@mdi/js'
 import { defineComponent } from '@nuxtjs/composition-api'
 import { Breadcrumb } from '~/model/breadcrumbs'
 
@@ -35,6 +36,11 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+  },
+  data() {
+    return {
+      mdiChevronRight,
+    }
   },
   computed: {
     breadcrumbs(): Breadcrumb[] {

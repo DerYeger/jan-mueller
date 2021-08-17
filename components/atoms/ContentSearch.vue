@@ -8,7 +8,7 @@
         filled
         v-bind="attrs"
         hide-details="auto"
-        prepend-inner-icon="mdi-magnify"
+        :prepend-inner-icon="mdiMagnify"
         :placeholder="$t('actions.search')"
         class="search-input unselectable"
         v-on="on"
@@ -32,6 +32,7 @@
 </template>
 
 <script lang="ts">
+import { mdiMagnify } from '@mdi/js'
 import { defineComponent } from '@nuxtjs/composition-api'
 import { localizeDocumentPaths } from '~/model/routes'
 import { Content } from '~/model/content'
@@ -39,6 +40,7 @@ import { Content } from '~/model/content'
 export default defineComponent({
   data() {
     return {
+      mdiMagnify,
       results: [] as Content[],
       query: '',
       showResults: false,

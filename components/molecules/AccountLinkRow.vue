@@ -12,6 +12,7 @@
 </template>
 
 <script lang="ts">
+import { mdiArtstation, mdiGithub, mdiNpm, mdiXing } from '@mdi/js'
 import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
@@ -21,24 +22,24 @@ export default defineComponent({
         {
           name: 'GitHub',
           href: 'https://github.com/DerYeger',
-          icon: 'mdi-github',
+          icon: mdiGithub,
         },
         {
           name: 'NPM',
           href: 'https://www.npmjs.com/~yeger',
-          icon: 'mdi-npm',
+          icon: mdiNpm,
           color: '#CB0000',
         },
         {
           name: 'XING',
           href: 'https://www.xing.com/profile/Jan_Mueller1092/cv',
-          icon: 'mdi-xing',
+          icon: mdiXing,
           color: '#006566',
         },
         {
           name: 'ArtStation',
           href: 'https://www.artstation.com/deryeger',
-          icon: 'mdi-artstation',
+          icon: mdiArtstation,
           color: '#00AFEB',
         },
       ],
