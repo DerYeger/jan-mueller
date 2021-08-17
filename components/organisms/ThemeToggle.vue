@@ -14,7 +14,6 @@
 <script lang="ts">
 import { mdiBrightness2, mdiBrightness5 } from '@mdi/js'
 import { defineComponent } from '@nuxtjs/composition-api'
-import { mapMutations, mapState } from 'vuex'
 
 export default defineComponent({
   data() {
@@ -23,15 +22,23 @@ export default defineComponent({
       mdiBrightness5,
     }
   },
-  computed: mapState(['useDarkTheme']),
-  watch: {
-    useDarkTheme(val) {
-      this.$vuetify.theme.dark = val
+  computed: {
+    useDarkTheme(): boolean {
+      return this.$colorMode.value === 'dark' || this.$colorMode.unknown
     },
   },
-  mounted() {
-    this.$store.commit('loadTheme')
+  watch: {
+    useDarkTheme: {
+      handler(value: boolean) {
+        this.$vuetify.theme.dark = value
+      },
+      immediate: true,
+    },
   },
-  methods: mapMutations(['toggleTheme']),
+  methods: {
+    toggleTheme() {
+      this.$colorMode.preference = this.useDarkTheme ? 'light' : 'dark'
+    },
+  },
 })
 </script>

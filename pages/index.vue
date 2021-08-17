@@ -9,6 +9,7 @@
           align-self="center"
         >
           <avatar />
+          <ColorScheme />
         </v-col>
         <v-col align-self="center">
           <h1 class="text-center text-sm-left">

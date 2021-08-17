@@ -66,7 +66,14 @@ export default {
     '@nuxtjs/markdownit',
     '@nuxtjs/sitemap',
     '@nuxtjs/feed',
+    // https://color-mode.nuxtjs.org/
+    '@nuxtjs/color-mode',
   ],
+
+  colorMode: {
+    preference: 'system',
+    fallback: 'light',
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
@@ -173,7 +180,7 @@ export default {
       options: {
         customProperties: true,
       },
-      dark: false,
+      dark: true,
       themes: {
         dark: themes.dark,
         light: themes.light,
