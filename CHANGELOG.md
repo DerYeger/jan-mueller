@@ -1,3 +1,10 @@
+# [1.32.0](https://github.com/DerYeger/jan-mueller/compare/v1.31.0...v1.32.0) (2021-08-17)
+
+
+### Features
+
+* use nuxt-color-mode ([eed857e](https://github.com/DerYeger/jan-mueller/commit/eed857ed29d0550462e02a46f6ce50965957512a))
+
 # [1.31.0](https://github.com/DerYeger/jan-mueller/compare/v1.30.1...v1.31.0) (2021-08-17)
 
 
