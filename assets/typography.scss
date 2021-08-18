@@ -5,31 +5,56 @@ h4,
 h5,
 h6 {
   font-family: 'Cabin', sans-serif !important;
+  font-weight: 600;
   line-height: 1.2;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 3vw, 3.5rem);
+  font-size: 4rem;
+  font-weight: 800;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: clamp(2rem, 2vw, 2.5rem);
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 h3 {
-  font-size: clamp(1.5rem, 1.5vw, 2rem);
+  font-size: 1.5rem;
   margin-bottom: 0.25rem;
 }
 
 p {
   line-height: 1.6;
+  //font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
-.justify-text {
-  p {
-    hyphens: manual;
-    text-align: justify;
+@media only screen and (max-width: 960px) {
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 1.375rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
   }
 }

@@ -9,10 +9,9 @@
           align-self="center"
         >
           <avatar />
-          <ColorScheme />
         </v-col>
         <v-col align-self="center">
-          <h1 class="text-center text-sm-left">
+          <h1 class="text-center text-sm-left" style="font-weight: 600">
             {{ $t('misc.about-me') }}
           </h1>
           <quick-facts />
@@ -94,17 +93,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-h1 {
-  font-size: 4rem;
-}
-
 h2 {
-  font-size: 2.5rem;
   margin-bottom: 0.25em;
-}
-
-h1,
-h2 {
-  line-height: 1;
 }
 </style>

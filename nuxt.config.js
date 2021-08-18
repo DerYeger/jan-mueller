@@ -23,7 +23,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Cabin:wght@600,800&display=swap',
       },
     ],
   },

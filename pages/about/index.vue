@@ -1,5 +1,5 @@
 <template>
-  <article class="justify-text about-article">
+  <article class="about-article">
     <nuxt-content :document="document" />
   </article>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div style="width: 100%">
-    <article class="justify-text" lang="en">
+    <article lang="en">
       <h1>{{ project.title }}</h1>
       <div>
         <repository-link
