@@ -48,7 +48,7 @@ article {
 
   .nuxt-content-highlight {
     position: relative;
-    border-radius: 3px;
+    border-radius: 4px;
     box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
       0 1px 10px 0 rgb(0 0 0 / 12%);
 
@@ -61,7 +61,7 @@ article {
     }
 
     pre {
-      border-radius: 3px;
+      border-radius: 4px;
     }
 
     .filename {
@@ -84,15 +84,12 @@ article {
   article {
     iframe,
     .nuxt-content-highlight,
-    .model-viewer {
+    .model-viewer,
+    .v-image {
       margin-left: -12px;
       margin-right: -12px;
       width: calc(100% + 24px);
       max-width: unset !important;
-    }
-
-    iframe {
-      width: calc(100% + 24px);
     }
 
     .nuxt-content-highlight pre {
