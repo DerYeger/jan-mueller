@@ -9,7 +9,7 @@
       plain
       color="secondary"
     >
-      {{ tag }}
+      #{{ tag }}
     </v-btn>
   </div>
 </template>
