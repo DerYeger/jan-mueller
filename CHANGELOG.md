@@ -1,3 +1,12 @@
+# [1.34.0](https://github.com/DerYeger/jan-mueller/compare/v1.33.0...v1.34.0) (2021-08-18)
+
+
+### Features
+
+* **blog:** include tag list in blog page ([6ce4d38](https://github.com/DerYeger/jan-mueller/commit/6ce4d382214953712def50eec31cc1f7a7f11a7a))
+* **tag-list:** update design ([987bb29](https://github.com/DerYeger/jan-mueller/commit/987bb29d049c8c41a06efeef00d56e237f793e4e))
+* **theme:** update colors ([fb10ed7](https://github.com/DerYeger/jan-mueller/commit/fb10ed72dd8f930a12e405877fefd92f8472c22d))
+
 # [1.33.0](https://github.com/DerYeger/jan-mueller/compare/v1.32.2...v1.33.0) (2021-08-18)
 
 
