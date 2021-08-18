@@ -9,11 +9,10 @@
         class="mb-6"
       />
       <h1>{{ post.title }}</h1>
-      <p>
-        <i>
-          {{ $d(new Date(post.createdAt), 'long') }} ·
-          {{ post.readingTime }}
-        </i>
+      <tag-list v-if="hasTags(post)" :tags="post.tags" />
+      <p class="text--secondary font-italic">
+        {{ $d(new Date(post.createdAt), 'long') }} ·
+        {{ post.readingTime }}
       </p>
       <p>
         {{ post.description }}
