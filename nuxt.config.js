@@ -73,7 +73,7 @@ export default {
   },
 
   fontLoader: {
-    url: 'https://fonts.googleapis.com/css2?family=Cabin:wght@600;700&display=swap',
+    url: 'https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap',
     prefetch: true,
     preconnect: true,
   },
