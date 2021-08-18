@@ -9,7 +9,7 @@
       <v-img
         v-if="project.thumbnail"
         :src="require('~/assets/images/projects/' + project.thumbnail)"
-        aspect-ratio="2"
+        :aspect-ratio="2"
         contain="contain"
         max-height="16rem"
       >
