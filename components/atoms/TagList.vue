@@ -5,7 +5,7 @@
       :key="index"
       v-ripple="false"
       class="tag-chip"
-      x-small
+      :small="small"
       plain
       color="secondary"
     >
@@ -22,6 +22,10 @@ export default defineComponent({
     tags: {
       type: Array as () => string[],
       required: true,
+    },
+    small: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {

@@ -29,7 +29,12 @@
       <v-divider class="mx-4" />
       <v-card-text>
         {{ blogPost.description }}
-        <tag-list v-if="hasTags(blogPost)" :tags="blogPost.tags" class="mt-2" />
+        <tag-list
+          v-if="hasTags(blogPost)"
+          :tags="blogPost.tags"
+          class="mt-2"
+          small
+        />
       </v-card-text>
     </v-card>
   </v-hover>
