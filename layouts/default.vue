@@ -34,6 +34,7 @@ export default defineComponent({
     }
   },
   head() {
+    const path = this.$route.path.length === 1 ? '' : this.$route.path
     return {
       htmlAttrs: {
         lang: this.$i18n.locale,
@@ -48,7 +49,7 @@ export default defineComponent({
       link: [
         {
           rel: 'canonical',
-          href: `https://jan-mueller.at${this.$route.path}/`,
+          href: `${this.$host}${path}/`,
         },
       ],
     }

@@ -14,7 +14,6 @@ export function generateSocialTags(
   title: string,
   description: string
 ): (OGMetaTag | TwitterMetaTag)[] {
-  const image = 'https://jan-mueller.at/og-logo.png'
   const formattedTitle = `${title} · Jan Müller`
   return [
     {
@@ -33,29 +32,9 @@ export function generateSocialTags(
       content: description,
     },
     {
-      hid: 'twitter:image',
-      name: 'twitter:image',
-      content: image,
-    },
-    {
       hid: 'twitter:image:alt',
       name: 'twitter:image:alt',
       content: formattedTitle,
-    },
-    {
-      hid: 'twitter:card',
-      name: 'twitter:card',
-      content: 'summary_large_image',
-    },
-    {
-      hid: 'twitter:site',
-      name: 'twitter:site',
-      content: '@DerYeger',
-    },
-    {
-      hid: 'twitter:creator',
-      name: 'twitter:creator',
-      content: '@DerYeger',
     },
     {
       hid: 'og:title',
@@ -66,16 +45,6 @@ export function generateSocialTags(
       hid: 'og:description',
       property: 'og:description',
       content: description,
-    },
-    {
-      hid: 'og:image',
-      property: 'og:image',
-      content: image,
-    },
-    {
-      hid: 'og:image:secure_url',
-      property: 'og:image:secure_url',
-      content: image,
     },
     {
       hid: 'og:image:alt',

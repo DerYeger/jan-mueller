@@ -1,5 +1,6 @@
 {
   "name": "jan-mueller",
+  "description": "Personal website of Jan Müller, a passionate software engineer.",
   "version": "1.36.0",
   "private": true,
   "scripts": {
@@ -29,6 +30,7 @@
     "@nuxtjs/feed": "1.1.0",
     "@nuxtjs/i18n": "7.0.2",
     "@nuxtjs/markdownit": "2.0.0",
+    "@nuxtjs/pwa": "3.3.5",
     "@nuxtjs/sitemap": "2.4.0",
     "@yeger/vue2-masonry-wall": "1.0.0",
     "core-js": "3.16.2",

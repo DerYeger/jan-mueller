@@ -11,11 +11,6 @@ export default {
       return titleChunk ? `${titleChunk} · Jan Müller` : 'Jan Müller'
     },
     title: undefined,
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -23,6 +18,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/host' },
     { src: '~/plugins/masonryWall' },
     { src: '~/plugins/marmosetViewer' },
   ],
@@ -53,6 +49,8 @@ export default {
     '@nuxtjs/i18n',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://go.nuxtjs.dev/pwa
+    '@nuxtjs/pwa',
     '@nuxtjs/markdownit',
     '@nuxtjs/sitemap',
     '@nuxtjs/feed',
@@ -147,6 +145,24 @@ export default {
     vueI18n: i18n,
   },
 
+  // PWA module configuration: https://go.nuxtjs.dev/pwa
+  pwa: {
+    manifest: {
+      name: app.name,
+      short_name: app.name,
+    },
+    meta: {
+      name: app.name,
+      ogImage: `${app.host}/og-logo.png`,
+      ogHost: app.host,
+      theme_color: app.theme.primaryColor,
+      twitterCard: 'summary_large_image',
+      twitterCreator: '@DerYeger',
+      twitterSite: '@DerYeger',
+    },
+    icon: {},
+  },
+
   sitemap: {
     gzip: true,
     hostname: app.host,
@@ -200,5 +216,9 @@ export default {
         document.bodyText = md.render(document.text)
       }
     },
+  },
+
+  env: {
+    host: app.host,
   },
 }
