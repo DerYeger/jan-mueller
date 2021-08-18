@@ -1,7 +1,5 @@
 import i18n from './locales/i18n'
-import { primaryColor, themes } from './theme.config'
-
-const host = 'https://jan-mueller.at'
+import app from './app.config'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -92,7 +90,7 @@ export default {
   },
 
   feed() {
-    const blogUrl = `${host}/blog`
+    const blogUrl = `${app.host}/blog`
     const feedFormats = {
       rss: { type: 'rss2', file: 'rss.xml' },
       json: { type: 'json1', file: 'feed.json' },
@@ -133,7 +131,7 @@ export default {
   },
 
   i18n: {
-    baseUrl: host,
+    baseUrl: app.host,
     defaultLocale: 'en',
     noPrefixDefaultLocale: false,
     locales: [
@@ -153,7 +151,7 @@ export default {
 
   sitemap: {
     gzip: true,
-    hostname: host,
+    hostname: app.host,
     i18n: true,
     trailingSlash: true,
     routes: async () => {
@@ -182,8 +180,8 @@ export default {
       },
       dark: true,
       themes: {
-        dark: themes.dark,
-        light: themes.light,
+        dark: app.theme.dark,
+        light: app.theme.light,
       },
     },
   },
@@ -192,7 +190,7 @@ export default {
   build: {},
 
   loading: {
-    color: primaryColor,
+    color: app.theme.primaryColor,
   },
 
   hooks: {
