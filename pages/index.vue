@@ -11,7 +11,7 @@
           <avatar />
         </v-col>
         <v-col align-self="center">
-          <h1 class="text-center text-sm-left" style="font-weight: 600">
+          <h1 class="text-center text-sm-left">
             {{ $t('misc.about-me') }}
           </h1>
           <quick-facts />

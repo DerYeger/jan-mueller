@@ -15,17 +15,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'preconnect',
-        href: 'https://fonts.gstatic.com',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Cabin:wght@600,800&display=swap',
-      },
-    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -53,6 +43,8 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     '@nuxtjs/composition-api/module',
+    // https://github.com/ivodolenc/nuxt-font-loader
+    'nuxt-font-loader',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -80,6 +72,12 @@ export default {
         theme: 'prism-themes/themes/prism-material-oceanic.css',
       },
     },
+  },
+
+  fontLoader: {
+    url: 'https://fonts.googleapis.com/css2?family=Cabin:wght@600;700&display=swap',
+    prefetch: true,
+    preconnect: true,
   },
 
   markdownit: {
