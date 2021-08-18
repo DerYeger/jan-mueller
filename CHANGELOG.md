@@ -1,3 +1,20 @@
+# [1.37.0](https://github.com/DerYeger/jan-mueller/compare/v1.36.0...v1.37.0) (2021-08-18)
+
+
+### Bug Fixes
+
+* **style:** exclusively use 700 font-weight for headings ([009ff55](https://github.com/DerYeger/jan-mueller/commit/009ff554e20e5ec832444c6dbe53840c1b66e37e))
+
+
+### Features
+
+* **nuxt:** use nuxt pwa module ([d7f0cc3](https://github.com/DerYeger/jan-mueller/commit/d7f0cc3e6b5b403dc769117067ca52938dfd357c))
+
+
+### Performance Improvements
+
+* compress image ([47fe3b5](https://github.com/DerYeger/jan-mueller/commit/47fe3b551271f3c64df9e70220251b417bb95625))
+
 # [1.36.0](https://github.com/DerYeger/jan-mueller/compare/v1.35.0...v1.36.0) (2021-08-18)
 
 
