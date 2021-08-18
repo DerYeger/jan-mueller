@@ -3,6 +3,8 @@ title: Masonry layout for Vue 2 and Vue 3
 description: Responsive masonry layout with SSR support and zero dependencies for Vue 2 and Vue 3.
 createdAt: 2021-08-16
 tags: [Vue, Masonry, Layout]
+image: vue-masonry-wall/masonry.webp
+imageAlt: Masonry
 ---
 
 ## Introduction
@@ -81,7 +83,7 @@ While every prop of the component is reactive, mutations to the `items` array wi
 To force updates, assign a new array to the `items` prop.
 
 The following example demonstrates basic usage of the component.
-For an interactive demonstrations, visit [vue-masonry-wall.yeger.eu](https://vue-masonry-wall.yeger.eu/) or [vue2-masonry-wall.yeger.eu](https://vue2-masonry-wall.yeger.eu/).
+For interactive demonstrations, visit [vue-masonry-wall.yeger.eu](https://vue-masonry-wall.yeger.eu/) or [vue2-masonry-wall.yeger.eu](https://vue2-masonry-wall.yeger.eu/).
 
 ```vue[vue]
 <template>
