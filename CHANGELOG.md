@@ -1,3 +1,10 @@
+# [1.35.0](https://github.com/DerYeger/jan-mueller/compare/v1.34.0...v1.35.0) (2021-08-18)
+
+
+### Features
+
+* **style:** update typography ([e85a253](https://github.com/DerYeger/jan-mueller/commit/e85a25373773aa1757b001f9581d8cac473fe82f))
+
 # [1.34.0](https://github.com/DerYeger/jan-mueller/compare/v1.33.0...v1.34.0) (2021-08-18)
 
 
