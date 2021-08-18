@@ -7,9 +7,9 @@
     >
       <v-img
         v-if="blogPost.image"
-        :src="require('~/assets/images/' + blogPost.image)"
-        :aspect-ratio="2"
-        max-height="8rem"
+        :src="require('~/assets/images/blog/' + blogPost.image)"
+        :aspect-ratio="16 / 9"
+        max-height="12rem"
       >
         <template #placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
