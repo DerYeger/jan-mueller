@@ -1,6 +1,13 @@
 <template>
   <div style="width: 100%">
-    <article class="justify-text" lang="en">
+    <article lang="en">
+      <banner
+        v-if="post.image"
+        :src="`blog/${post.image}`"
+        :alt="post.imageAlt"
+        height="14rem"
+        class="mb-6"
+      />
       <h1>{{ post.title }}</h1>
       <p>
         <i>
