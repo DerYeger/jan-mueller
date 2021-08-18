@@ -1,3 +1,10 @@
+# [1.36.0](https://github.com/DerYeger/jan-mueller/compare/v1.35.0...v1.36.0) (2021-08-18)
+
+
+### Features
+
+* use nuxt-font-loader ([057288c](https://github.com/DerYeger/jan-mueller/commit/057288c68e2247a8781bd34bc7ca9dcdbe4f65b8))
+
 # [1.35.0](https://github.com/DerYeger/jan-mueller/compare/v1.34.0...v1.35.0) (2021-08-18)
 
 
