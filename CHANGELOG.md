@@ -1,3 +1,19 @@
+# [1.33.0](https://github.com/DerYeger/jan-mueller/compare/v1.32.2...v1.33.0) (2021-08-18)
+
+
+### Bug Fixes
+
+* **style:** use consistent border-radius ([d51877b](https://github.com/DerYeger/jan-mueller/commit/d51877b9cb956fead71e3aaf407a67bd60e32e20))
+
+
+### Features
+
+* **banner:** create component ([b57ae9d](https://github.com/DerYeger/jan-mueller/commit/b57ae9dcbbd85abf7f6d076c96e8eef83c798d0a))
+* **blog:** add banner to blog page ([c9dc3e7](https://github.com/DerYeger/jan-mueller/commit/c9dc3e702baf3efe22c4b2a17ffee9ec85eeb4a0))
+* **blog:** add image to vue-masonry-wall ([26446cb](https://github.com/DerYeger/jan-mueller/commit/26446cb0326e7446c90ab3dd2f7d55a735704179))
+* **blog-post-card:** update design ([f3d3cc6](https://github.com/DerYeger/jan-mueller/commit/f3d3cc644406aec51b5db2538eccb35161f06409))
+* **tag-list:** add tag symbol ([4c5533c](https://github.com/DerYeger/jan-mueller/commit/4c5533c0af199ab23e0ef59c187fd18a9793632b))
+
 ## [1.32.2](https://github.com/DerYeger/jan-mueller/compare/v1.32.1...v1.32.2) (2021-08-17)
 
 
