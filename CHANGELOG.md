@@ -1,3 +1,10 @@
+## [1.37.7](https://github.com/DerYeger/jan-mueller/compare/v1.37.6...v1.37.7) (2021-09-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency core-js to v3.17.1 ([6349b64](https://github.com/DerYeger/jan-mueller/commit/6349b64e781fbcd7870654a56534a5994881ed57))
+
 ## [1.37.6](https://github.com/DerYeger/jan-mueller/compare/v1.37.5...v1.37.6) (2021-09-01)
 
 
