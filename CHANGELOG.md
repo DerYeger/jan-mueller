@@ -1,3 +1,10 @@
+## [1.37.9](https://github.com/DerYeger/jan-mueller/compare/v1.37.8...v1.37.9) (2021-09-04)
+
+
+### Bug Fixes
+
+* **style:** decrease masonry column width ([3f46c98](https://github.com/DerYeger/jan-mueller/commit/3f46c98f61e6a77930097c78a565f6b99323935c))
+
 ## [1.37.8](https://github.com/DerYeger/jan-mueller/compare/v1.37.7...v1.37.8) (2021-09-03)
 
 
