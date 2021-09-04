@@ -1,14 +1,13 @@
 <template>
   <masonry-wall
+    v-slot="{ item }"
     :items="projects"
     :ssr-columns="1"
-    :column-width="400"
+    :column-width="300"
     :padding="24"
     class="px-3"
   >
-    <template #default="{ item }">
-      <project-card :project="item" />
-    </template>
+    <project-card :project="item" />
   </masonry-wall>
 </template>
 
