@@ -1,3 +1,11 @@
+## [1.38.3](https://github.com/DerYeger/jan-mueller/compare/v1.38.2...v1.38.3) (2021-09-05)
+
+
+### Bug Fixes
+
+* **home:** use correct css selector ([abf4b66](https://github.com/DerYeger/jan-mueller/commit/abf4b6657cd0cb09ccd6c04cd4e00a1d027aa776))
+* change text color of cards while hovering ([0345937](https://github.com/DerYeger/jan-mueller/commit/034593796ec98593d2780905f6a138ec98d31776))
+
 ## [1.38.2](https://github.com/DerYeger/jan-mueller/compare/v1.38.1...v1.38.2) (2021-09-05)
 
 
