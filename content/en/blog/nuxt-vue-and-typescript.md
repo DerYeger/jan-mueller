@@ -1,8 +1,10 @@
 ---
-title: Nuxt, Vue and TypeScript
+title: Creating a blog with Nuxt, Vue and TypeScript
 description: My early experiences and troubles with the creation of a blog using Nuxt Content.
 createdAt: 2021-03-17
 tags: [Nuxt, Vue, TypeScript, Nuxt Content]
+image: code-blurry.webp
+imageAlt: Code
 ---
 
 ## Routing
