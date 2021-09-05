@@ -1,3 +1,10 @@
+## [1.38.1](https://github.com/DerYeger/jan-mueller/compare/v1.38.0...v1.38.1) (2021-09-05)
+
+
+### Bug Fixes
+
+* **blog:** add image ([596ee20](https://github.com/DerYeger/jan-mueller/commit/596ee2085ca38f7984ec664efec6f4f62f7b6bcd))
+
 # [1.38.0](https://github.com/DerYeger/jan-mueller/compare/v1.37.10...v1.38.0) (2021-09-05)
 
 
