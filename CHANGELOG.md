@@ -1,3 +1,10 @@
+## [1.38.2](https://github.com/DerYeger/jan-mueller/compare/v1.38.1...v1.38.2) (2021-09-05)
+
+
+### Bug Fixes
+
+* create `Container` component ([8a44963](https://github.com/DerYeger/jan-mueller/commit/8a449635c266a48262aeda57e3b529061900ce19))
+
 ## [1.38.1](https://github.com/DerYeger/jan-mueller/compare/v1.38.0...v1.38.1) (2021-09-05)
 
 
