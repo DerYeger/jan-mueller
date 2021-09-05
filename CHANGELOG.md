@@ -1,3 +1,10 @@
+# [1.38.0](https://github.com/DerYeger/jan-mueller/compare/v1.37.10...v1.38.0) (2021-09-05)
+
+
+### Features
+
+* **home:** add project and blog links ([369da7a](https://github.com/DerYeger/jan-mueller/commit/369da7a2f5468b19d78b2734dcf482dbfbfee7b7))
+
 ## [1.37.10](https://github.com/DerYeger/jan-mueller/compare/v1.37.9...v1.37.10) (2021-09-05)
 
 
