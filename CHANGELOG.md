@@ -1,3 +1,10 @@
+## [1.38.5](https://github.com/DerYeger/jan-mueller/compare/v1.38.4...v1.38.5) (2021-09-05)
+
+
+### Bug Fixes
+
+* add missing aria-labels ([afaefd8](https://github.com/DerYeger/jan-mueller/commit/afaefd846ffce3ddafac805c2e460f78bcdd07b7))
+
 ## [1.38.4](https://github.com/DerYeger/jan-mueller/compare/v1.38.3...v1.38.4) (2021-09-05)
 
 
