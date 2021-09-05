@@ -206,7 +206,7 @@ h2 {
   }
 
   @media only screen and (max-width: 600px) {
-    > div {
+    > .card-row {
       flex-direction: column;
 
       > * {
