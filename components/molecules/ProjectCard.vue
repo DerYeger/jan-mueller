@@ -11,7 +11,7 @@
         :src="require('~/assets/images/projects/' + project.thumbnail)"
         :aspect-ratio="2"
         contain="contain"
-        max-height="16rem"
+        :max-height="small ? '6rem' : '8rem'"
       >
         <template #placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
@@ -37,8 +37,8 @@
           </v-icon>
         </div>
       </v-card-title>
-      <v-divider class="mx-4" />
-      <v-card-text>{{ project.description }}</v-card-text>
+      <v-divider v-show="!small" class="mx-4" />
+      <v-card-text v-show="!small">{{ project.description }}</v-card-text>
     </v-card>
   </v-hover>
 </template>
@@ -53,6 +53,10 @@ export default defineComponent({
     project: {
       type: Object as () => Project,
       required: true,
+    },
+    small: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {

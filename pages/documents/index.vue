@@ -1,14 +1,16 @@
 <template>
-  <masonry-wall
-    v-slot="{ item }"
-    :items="documents"
-    :ssr-columns="1"
-    :column-width="300"
-    :padding="24"
-    class="px-3"
-  >
-    <document-card :document="item" />
-  </masonry-wall>
+  <v-container class="page-container">
+    <masonry-wall
+      v-slot="{ item }"
+      :items="documents"
+      :ssr-columns="1"
+      :column-width="300"
+      :padding="24"
+      class="px-3"
+    >
+      <document-card :document="item" />
+    </masonry-wall>
+  </v-container>
 </template>
 
 <script lang="ts">

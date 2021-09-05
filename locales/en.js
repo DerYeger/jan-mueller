@@ -44,6 +44,7 @@ export default {
     'software-engineer': 'Software Engineer',
     tags: 'Tags',
     vienna: 'Vienna',
+    'view-n-more': 'View {0} more',
   },
   projects: {
     title: 'Projects',

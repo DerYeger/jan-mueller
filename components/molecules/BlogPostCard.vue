@@ -9,7 +9,7 @@
         v-if="blogPost.image"
         :src="require('~/assets/images/blog/' + blogPost.image)"
         :aspect-ratio="16 / 9"
-        max-height="12rem"
+        :max-height="small ? '6rem' : '8rem'"
       >
         <template #placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
@@ -26,8 +26,8 @@
           {{ blogPost.readingTime }}
         </i>
       </v-card-subtitle>
-      <v-divider class="mx-4" />
-      <v-card-text>
+      <v-divider v-show="!small" class="mx-4" />
+      <v-card-text v-show="!small">
         {{ blogPost.description }}
         <tag-list
           v-if="hasTags(blogPost)"
@@ -49,6 +49,10 @@ export default defineComponent({
     blogPost: {
       type: Object as () => BlogPost,
       required: true,
+    },
+    small: {
+      type: Boolean,
+      default: false,
     },
   },
   methods: {

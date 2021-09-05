@@ -1,25 +1,27 @@
 <template>
-  <div style="width: 100%">
-    <article lang="en">
-      <h1>{{ project.title }}</h1>
-      <div>
-        <repository-link
-          v-if="project.repository"
-          :repository="project.repository"
-        />
-        <repository-link
-          v-for="repository of project.repositories || []"
-          :key="repository"
-          :repository="repository"
-          :show-name="true"
-          :user="project.repository"
-        />
-        <demo-link v-if="project.demo" :href="project.demo" />
-      </div>
-      <nuxt-content :document="project" />
-      <document-switcher v-if="prev || next" :prev="prev" :next="next" />
-    </article>
-  </div>
+  <v-container class="page-container bound-width">
+    <div style="width: 100%">
+      <article lang="en">
+        <h1>{{ project.title }}</h1>
+        <div>
+          <repository-link
+            v-if="project.repository"
+            :repository="project.repository"
+          />
+          <repository-link
+            v-for="repository of project.repositories || []"
+            :key="repository"
+            :repository="repository"
+            :show-name="true"
+            :user="project.repository"
+          />
+          <demo-link v-if="project.demo" :href="project.demo" />
+        </div>
+        <nuxt-content :document="project" />
+        <document-switcher v-if="prev || next" :prev="prev" :next="next" />
+      </article>
+    </div>
+  </v-container>
 </template>
 
 <script lang="ts">

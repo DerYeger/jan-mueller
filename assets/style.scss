@@ -5,12 +5,9 @@ html {
   overflow-x: hidden !important;
 }
 
-.v-application a {
-  text-decoration: none;
-
-  &:hover {
-    color: var(--v-secondary-base);
-  }
+a:focus-visible,
+a:hover {
+  color: var(--v-secondary-base);
 }
 
 .unselectable {

@@ -38,6 +38,7 @@ export default {
     'no-results': 'Keine Ergebnisse',
     'software-engineer': 'Softwareentwickler',
     vienna: 'Wien',
+    'view-n-more': '{0} weitere ansehen',
   },
   projects: {
     title: 'Projekte',

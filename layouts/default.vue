@@ -15,9 +15,7 @@
         class="pa-3 mobile-breadcrumbs"
         small
       />
-      <v-container class="page-container">
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-main>
     <app-footer />
   </v-app>

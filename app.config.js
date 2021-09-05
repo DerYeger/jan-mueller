@@ -12,11 +12,13 @@ export default {
     primaryColor,
     light: {
       primary: primaryColor,
-      secondary: colors.green.darken3,
+      secondary: colors.green.lighten1,
+      accent: colors.blueGrey.base,
     },
     dark: {
       primary: primaryColor,
       secondary: colors.green.lighten1,
+      accent: colors.blueGrey.darken2,
     },
   },
 }

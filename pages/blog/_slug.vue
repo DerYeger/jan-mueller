@@ -1,27 +1,29 @@
 <template>
-  <div style="width: 100%">
-    <article lang="en">
-      <banner
-        v-if="post.image"
-        :src="`blog/${post.image}`"
-        :alt="post.imageAlt"
-        height="14rem"
-        class="mb-6"
-      />
-      <h1>{{ post.title }}</h1>
-      <tag-list v-if="hasTags(post)" :tags="post.tags" />
-      <p class="text--secondary font-italic">
-        {{ $d(new Date(post.createdAt), 'long') }} ·
-        {{ post.readingTime }}
-      </p>
-      <p>
-        {{ post.description }}
-      </p>
-      <table-of-contents v-if="post.toc.length > 0" :document="post" />
-      <nuxt-content :document="post" />
-      <document-switcher v-if="prev || next" :prev="prev" :next="next" />
-    </article>
-  </div>
+  <v-container class="page-container bound-width">
+    <div style="width: 100%">
+      <article lang="en">
+        <banner
+          v-if="post.image"
+          :src="`blog/${post.image}`"
+          :alt="post.imageAlt"
+          height="14rem"
+          class="mb-6"
+        />
+        <h1>{{ post.title }}</h1>
+        <tag-list v-if="hasTags(post)" :tags="post.tags" />
+        <p class="text--secondary font-italic">
+          {{ $d(new Date(post.createdAt), 'long') }} ·
+          {{ post.readingTime }}
+        </p>
+        <p>
+          {{ post.description }}
+        </p>
+        <table-of-contents v-if="post.toc.length > 0" :document="post" />
+        <nuxt-content :document="post" />
+        <document-switcher v-if="prev || next" :prev="prev" :next="next" />
+      </article>
+    </div>
+  </v-container>
 </template>
 
 <script lang="ts">
