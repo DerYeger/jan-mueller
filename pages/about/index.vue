@@ -1,9 +1,9 @@
 <template>
-  <v-container class="page-container bound-width">
+  <container bound-width>
     <article class="about-article">
       <nuxt-content :document="document" />
     </article>
-  </v-container>
+  </container>
 </template>
 
 <script lang="ts">

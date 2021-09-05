@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container class="page-container bound-width">
+    <container bound-width>
       <section>
         <v-row>
           <v-col>
@@ -63,7 +63,7 @@
           </v-col>
         </v-row>
       </section>
-    </v-container>
+    </container>
     <wave
       :offset-top="-64"
       :offset-bottom="320"
@@ -72,7 +72,7 @@
       :speed-multiplier="0.7"
     >
       <wave :color="$vuetify.theme.currentTheme.accent" :speed-multiplier="0.5">
-        <v-container class="bound-width">
+        <container bound-width class="d-block">
           <section id="projects">
             <h1 class="text-center">{{ $t(routes.projects.title) }}</h1>
             <div class="card-row">
@@ -109,16 +109,16 @@
               {{ $t('misc.view-n-more', [remainingBlogPostsCount]) }}
             </v-btn>
           </section>
-        </v-container>
+        </container>
       </wave>
     </wave>
-    <v-container class="page-container bound-width">
+    <container bound-width>
       <section>
         <v-row>
           <v-col> </v-col>
         </v-row>
       </section>
-    </v-container>
+    </container>
   </div>
 </template>
 

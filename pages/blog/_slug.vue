@@ -1,5 +1,5 @@
 <template>
-  <v-container class="page-container bound-width">
+  <container bound-width>
     <div style="width: 100%">
       <article lang="en">
         <banner
@@ -23,7 +23,7 @@
         <document-switcher v-if="prev || next" :prev="prev" :next="next" />
       </article>
     </div>
-  </v-container>
+  </container>
 </template>
 
 <script lang="ts">

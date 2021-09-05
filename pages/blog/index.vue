@@ -1,5 +1,5 @@
 <template>
-  <v-container class="page-container">
+  <container>
     <masonry-wall
       v-slot="{ item }"
       :items="posts"
@@ -10,7 +10,7 @@
     >
       <blog-post-card :blog-post="item" />
     </masonry-wall>
-  </v-container>
+  </container>
 </template>
 
 <script lang="ts">

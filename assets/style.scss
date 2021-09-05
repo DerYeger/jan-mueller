@@ -22,11 +22,6 @@ a:hover {
   @extend .unselectable;
 }
 
-.page-container {
-  display: flex;
-  justify-content: center;
-}
-
 .bound-width {
   max-width: 960px !important;
 }

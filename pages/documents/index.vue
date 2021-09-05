@@ -1,5 +1,5 @@
 <template>
-  <v-container class="page-container">
+  <container>
     <masonry-wall
       v-slot="{ item }"
       :items="documents"
@@ -10,7 +10,7 @@
     >
       <document-card :document="item" />
     </masonry-wall>
-  </v-container>
+  </container>
 </template>
 
 <script lang="ts">
