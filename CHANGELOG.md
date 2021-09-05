@@ -1,3 +1,10 @@
+## [1.37.10](https://github.com/DerYeger/jan-mueller/compare/v1.37.9...v1.37.10) (2021-09-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @nuxtjs/composition-api to v0.28.0 ([57bb601](https://github.com/DerYeger/jan-mueller/commit/57bb6016342873cdf9edccefdd44cbfe4040acd7))
+
 ## [1.37.9](https://github.com/DerYeger/jan-mueller/compare/v1.37.8...v1.37.9) (2021-09-04)
 
 
