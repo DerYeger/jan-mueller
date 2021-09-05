@@ -1,3 +1,10 @@
+## [1.38.4](https://github.com/DerYeger/jan-mueller/compare/v1.38.3...v1.38.4) (2021-09-05)
+
+
+### Bug Fixes
+
+* **blog:** update banner ([a871346](https://github.com/DerYeger/jan-mueller/commit/a8713463ef52ddeff7487190eeeb961a12eb29fc))
+
 ## [1.38.3](https://github.com/DerYeger/jan-mueller/compare/v1.38.2...v1.38.3) (2021-09-05)
 
 
