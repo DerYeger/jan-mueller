@@ -37,6 +37,7 @@ export default {
     english: 'English',
     german: 'German',
     languages: 'Languages',
+    loading: 'Loading',
     navigation: 'Navigation',
     'no-results': 'No results',
     repository: 'Repository',

@@ -13,7 +13,11 @@
       >
         <template #placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
-            <v-progress-circular indeterminate color="primary" />
+            <v-progress-circular
+              indeterminate
+              color="primary"
+              :aria-label="$t('misc.loading')"
+            />
           </v-row>
         </template>
       </v-img>

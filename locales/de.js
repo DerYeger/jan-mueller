@@ -35,6 +35,7 @@ export default {
     english: 'Englisch',
     german: 'Deutsch',
     languages: 'Sprachen',
+    loading: 'Lädt',
     'no-results': 'Keine Ergebnisse',
     'software-engineer': 'Softwareentwickler',
     vienna: 'Wien',
