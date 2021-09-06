@@ -33,7 +33,7 @@
                   <template v-if="item.link">
                     <span class="mx-1">·</span>
                     <a
-                      :href="item.link"
+                      :href="item.link.href"
                       target="_blank"
                       rel="noopener"
                       style="font-size: 0.875rem"
