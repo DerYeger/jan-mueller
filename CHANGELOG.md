@@ -1,3 +1,10 @@
+## [1.40.1](https://github.com/DerYeger/jan-mueller/compare/v1.40.0...v1.40.1) (2021-09-06)
+
+
+### Bug Fixes
+
+* **timeline:** use correct field for links ([763a65a](https://github.com/DerYeger/jan-mueller/commit/763a65acea2c3d6f22e8ee8de1703a7438fb602b))
+
 # [1.40.0](https://github.com/DerYeger/jan-mueller/compare/v1.39.1...v1.40.0) (2021-09-06)
 
 
