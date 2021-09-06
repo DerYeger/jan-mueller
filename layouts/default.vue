@@ -11,8 +11,8 @@
     <app-header v-model="drawerOpen" />
     <v-main>
       <breadcrumbs
-        v-if="$vuetify.breakpoint.mdAndDown && breadcrumbs.length > 0"
-        class="pa-3 mobile-breadcrumbs"
+        v-if="breadcrumbs.length > 0"
+        class="pa-3 mobile-breadcrumbs hidden-lg-and-up"
         small
       />
       <nuxt />

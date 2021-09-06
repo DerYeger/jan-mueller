@@ -8,13 +8,13 @@
   >
     <div class="ml-n4 ml-lg-0">
       <v-app-bar-nav-icon
-        v-show="$vuetify.breakpoint.mdAndDown"
         :aria-label="$t(value ? 'actions.close-menu' : 'actions.open-menu')"
+        class="hidden-lg-and-up"
         @click="$emit('input', !value)"
       >
         <v-icon>{{ mdiMenu }}</v-icon>
       </v-app-bar-nav-icon>
-      <breadcrumbs v-show="$vuetify.breakpoint.lgAndUp" class="pa-0" />
+      <breadcrumbs class="pa-0 hidden-md-and-down" />
     </div>
     <div class="d-flex justify-center ml-lg-n14 flex-fill">
       <content-search />
