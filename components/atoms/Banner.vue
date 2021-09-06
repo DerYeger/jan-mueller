@@ -4,7 +4,6 @@
     :alt="alt"
     :height="height"
     class="elevation-1"
-    :class="{ rounded: $vuetify.breakpoint.mdAndUp }"
   >
     <template #placeholder>
       <v-row class="fill-height ma-0" align="center" justify="center">

@@ -5,26 +5,25 @@
       :src="`blog/${post.image}`"
       :alt="post.imageAlt"
       height="14rem"
-      class="mb-6 blog-banner"
+      class="mb-6"
+      style="filter: blur(max(0px, calc(0.2vw - 2px)))"
     />
-    <container bound-width>
-      <div style="width: 100%">
-        <article lang="en">
-          <h1>{{ post.title }}</h1>
-          <tag-list v-if="hasTags(post)" :tags="post.tags" />
-          <p class="text--secondary font-italic">
-            {{ $d(new Date(post.createdAt), 'long') }} ·
-            {{ post.readingTime }}
-          </p>
-          <p>
-            {{ post.description }}
-          </p>
-          <table-of-contents v-if="post.toc.length > 0" :document="post" />
-          <nuxt-content :document="post" />
-          <document-switcher v-if="prev || next" :prev="prev" :next="next" />
-        </article>
-      </div>
-    </container>
+    <v-container class="bound-width">
+      <article lang="en">
+        <h1>{{ post.title }}</h1>
+        <tag-list v-if="hasTags(post)" :tags="post.tags" />
+        <p class="text--secondary font-italic">
+          {{ $d(new Date(post.createdAt), 'long') }} ·
+          {{ post.readingTime }}
+        </p>
+        <p>
+          {{ post.description }}
+        </p>
+        <table-of-contents v-if="post.toc.length > 0" :document="post" />
+        <nuxt-content :document="post" />
+        <document-switcher v-if="prev || next" :prev="prev" :next="next" />
+      </article>
+    </v-container>
   </div>
 </template>
 
@@ -40,6 +39,7 @@ import {
 import { generateSocialTags } from '~/model/meta'
 
 export default defineComponent({
+  layout: 'uncontained',
   async asyncData({ app, $content, params }) {
     const post = (await $content('en/blog/', params.slug).fetch()) as BlogPost
 
@@ -75,9 +75,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style>
-.blog-banner {
-  filter: blur(max(0px, calc(0.2vw - 2px)));
-}
-</style>

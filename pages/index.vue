@@ -134,6 +134,7 @@ import { BlogPost } from '~/model/blog-post'
 const count = 3
 
 export default defineComponent({
+  layout: 'uncontained',
   async asyncData(context: Context) {
     const locale = context.app.i18n.locale
     const paragraphs = (await context
