@@ -31,6 +31,8 @@ export default {
   },
   misc: {
     'about-me': 'Über mich',
+    'all-posts': 'Alle Einträge',
+    'all-projects': 'Alle Projekte',
     'and-more': '... und mehr!',
     english: 'Englisch',
     german: 'Deutsch',
@@ -39,7 +41,6 @@ export default {
     'no-results': 'Keine Ergebnisse',
     'software-engineer': 'Softwareentwickler',
     vienna: 'Wien',
-    'view-n-more': '{0} weitere ansehen',
   },
   projects: {
     title: 'Projekte',

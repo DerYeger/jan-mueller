@@ -32,6 +32,8 @@ export default {
   misc: {
     'about-me': 'About me',
     accounts: 'Accounts',
+    'all-posts': 'All Posts',
+    'all-projects': 'All Projects',
     'and-more': '... and more!',
     content: 'Content',
     english: 'English',
@@ -45,7 +47,6 @@ export default {
     'software-engineer': 'Software Engineer',
     tags: 'Tags',
     vienna: 'Vienna',
-    'view-n-more': 'View {0} more',
   },
   projects: {
     title: 'Projects',

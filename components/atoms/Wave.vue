@@ -55,7 +55,8 @@ export default defineComponent({
 
 .wave__top,
 .wave__bottom {
-  animation: scroll calc(3600s / var(--wave-speed-multiplier)) linear infinite;
+  animation: scroll calc(3600s / var(--wave-speed-multiplier))
+    cubic-bezier(0.13, 0.28, 0.95, 0.79) infinite;
   height: 65px;
   mask-image: url('~/assets/images/wave.svg');
   mask-position: var(--wave-offset) 0;
@@ -66,7 +67,12 @@ export default defineComponent({
 }
 
 .wave__top {
+  margin-bottom: -1px;
   transform: rotate(180deg);
+}
+
+.wave__bottom {
+  margin-top: -1px;
 }
 
 @keyframes scroll {
