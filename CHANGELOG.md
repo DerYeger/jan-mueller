@@ -1,3 +1,10 @@
+## [1.38.6](https://github.com/DerYeger/jan-mueller/compare/v1.38.5...v1.38.6) (2021-09-06)
+
+
+### Bug Fixes
+
+* use more css classes instead of breakpoint service ([4d700ad](https://github.com/DerYeger/jan-mueller/commit/4d700ad4a062e9c0737ca17584450d310d958b75))
+
 ## [1.38.5](https://github.com/DerYeger/jan-mueller/compare/v1.38.4...v1.38.5) (2021-09-05)
 
 
