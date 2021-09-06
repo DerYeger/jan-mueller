@@ -1,3 +1,10 @@
+# [1.39.0](https://github.com/DerYeger/jan-mueller/compare/v1.38.6...v1.39.0) (2021-09-06)
+
+
+### Features
+
+* create layout `uncontained` for full-width pages ([ba0e551](https://github.com/DerYeger/jan-mueller/commit/ba0e551aa53a8d09413338712e74cf9226e447ad))
+
 ## [1.38.6](https://github.com/DerYeger/jan-mueller/compare/v1.38.5...v1.38.6) (2021-09-06)
 
 
