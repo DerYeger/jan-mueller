@@ -36,6 +36,7 @@ export default {
     'all-projects': 'All Projects',
     'and-more': '... and more!',
     content: 'Content',
+    details: 'Details',
     english: 'English',
     german: 'German',
     languages: 'Languages',
@@ -46,9 +47,34 @@ export default {
     software: 'Software',
     'software-engineer': 'Software Engineer',
     tags: 'Tags',
+    'university-of-kassel': 'University of Kassel',
     vienna: 'Vienna',
   },
   projects: {
     title: 'Projects',
+  },
+  timeline: {
+    abitur: 'University-entrance diploma (Abitur)',
+    award: {
+      algods:
+        '1st place at the programming competition of the event Algorithms and Data Structures',
+      dpg: 'DPG-Abiturpreis',
+      title: 'Award',
+    },
+    intern: 'Intern',
+    title: 'Timeline',
+    tutor: {
+      first: 'Automative EE Systems and Fundamentals of Electrical Engineering',
+      second: 'Theoretical Computer Science / Formal Methods',
+      third: 'Research Group Programming Languages / Methodologies',
+      title: 'Tutor',
+    },
+    university: {
+      begin: 'Start of studies',
+      'bsc-text': 'Computer Science (B.Sc.)',
+      'degree-bsc': 'B.Sc. in Computer Science',
+      'msc-text': 'Software Engineering & Internet Computing (M.Sc.)',
+    },
+    'working-student': 'Working student',
   },
 }

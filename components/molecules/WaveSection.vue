@@ -55,6 +55,8 @@ import { routes } from '~/model/routes'
 import { Project } from '~/model/project'
 import { BlogPost } from '~/model/blog-post'
 
+const count = 3
+
 export default defineComponent({
   props: {
     projects: {
@@ -65,10 +67,6 @@ export default defineComponent({
       type: Array as PropType<BlogPost[]>,
       required: true,
     },
-    count: {
-      type: Number,
-      default: 3,
-    },
   },
   data() {
     return {
@@ -78,10 +76,10 @@ export default defineComponent({
   },
   computed: {
     displayedProjects(): Project[] {
-      return this.projects.slice(0, this.count)
+      return this.projects.slice(0, count)
     },
     displayedBlogPosts(): BlogPost[] {
-      return this.blogPosts.slice(0, this.count)
+      return this.blogPosts.slice(0, count)
     },
   },
 })

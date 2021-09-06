@@ -40,9 +40,34 @@ export default {
     loading: 'Lädt',
     'no-results': 'Keine Ergebnisse',
     'software-engineer': 'Softwareentwickler',
+    'university-of-kassel': 'Universität Kassel',
     vienna: 'Wien',
   },
   projects: {
     title: 'Projekte',
+  },
+  timeline: {
+    abitur: 'Abitur',
+    award: {
+      algods:
+        '1. Platz beim Programmierwettbewerb der Veranstaltung Algorithmen und Datenstrukturen',
+      dpg: 'DPG-Abiturpreis',
+      title: 'Auszeichnung',
+    },
+    intern: 'Praktikant',
+    title: 'Werdegang',
+    tutor: {
+      first: 'Fachgebiet Fahrzeugsysteme und Grundlagen der Elektrotechnik',
+      second: 'Fachgebiet Theoretische Informatik/Formale Methoden',
+      third: 'Fachgebiet Programmiersprachen/-methodik',
+      title: 'Tutor',
+    },
+    university: {
+      begin: 'Studienbeginn',
+      'bsc-text': 'Informatik (B.Sc.)',
+      'degree-bsc': 'B.Sc. in Informatik',
+      'msc-text': 'Software Engineering & Internet Computing (M.Sc.)',
+    },
+    'working-student': 'Werksstudent',
   },
 }
