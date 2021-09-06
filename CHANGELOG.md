@@ -1,3 +1,10 @@
+## [1.39.1](https://github.com/DerYeger/jan-mueller/compare/v1.39.0...v1.39.1) (2021-09-06)
+
+
+### Bug Fixes
+
+* create `WaveSection` component ([99c713d](https://github.com/DerYeger/jan-mueller/commit/99c713d448dc9b791c3e39b9e90484d2f931aada))
+
 # [1.39.0](https://github.com/DerYeger/jan-mueller/compare/v1.38.6...v1.39.0) (2021-09-06)
 
 
