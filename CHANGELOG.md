@@ -1,3 +1,10 @@
+# [1.40.0](https://github.com/DerYeger/jan-mueller/compare/v1.39.1...v1.40.0) (2021-09-06)
+
+
+### Features
+
+* **home:** add timeline ([67fb276](https://github.com/DerYeger/jan-mueller/commit/67fb276db87e616c244c4f94d5a197a5d1b15c62))
+
 ## [1.39.1](https://github.com/DerYeger/jan-mueller/compare/v1.39.0...v1.39.1) (2021-09-06)
 
 
