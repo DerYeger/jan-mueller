@@ -1,3 +1,10 @@
+## [1.40.4](https://github.com/DerYeger/jan-mueller/compare/v1.40.3...v1.40.4) (2021-09-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency reading-time to v1.5.0 ([0b47450](https://github.com/DerYeger/jan-mueller/commit/0b47450ea86401ebed33e213f4a273e52ca81257))
+
 ## [1.40.3](https://github.com/DerYeger/jan-mueller/compare/v1.40.2...v1.40.3) (2021-09-10)
 
 
