@@ -1,3 +1,10 @@
+## [1.40.5](https://github.com/DerYeger/jan-mueller/compare/v1.40.4...v1.40.5) (2021-09-11)
+
+
+### Bug Fixes
+
+* **home:** add template ids ([618a3df](https://github.com/DerYeger/jan-mueller/commit/618a3df801e1fbf79a0df92eab4341714384ac65))
+
 ## [1.40.4](https://github.com/DerYeger/jan-mueller/compare/v1.40.3...v1.40.4) (2021-09-11)
 
 
