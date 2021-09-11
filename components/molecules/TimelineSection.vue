@@ -1,5 +1,5 @@
 <template>
-  <section style="width: 100%">
+  <section id="timeline" style="width: 100%">
     <v-row no-gutters>
       <v-col>
         <h1 class="text-center">

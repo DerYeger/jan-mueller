@@ -12,7 +12,7 @@
             <avatar />
           </v-col>
           <v-col align-self="center">
-            <h1 class="text-center text-sm-left">
+            <h1 id="about-me" class="text-center text-sm-left">
               {{ $t('misc.about-me') }}
             </h1>
             <quick-facts />
@@ -25,7 +25,7 @@
           </v-col>
           <v-col cols="12" sm="5" align-self="center">
             <aside class="my-8 my-sm-0">
-              <h2 class="text-center text-sm-right">
+              <h2 id="accounts" class="text-center text-sm-right">
                 {{ $t('misc.accounts') }}
               </h2>
               <account-link-row class="justify-center justify-sm-end" />
@@ -35,7 +35,7 @@
         <v-row class="mt-sm-8">
           <v-col cols="12" sm="6" align-self="center">
             <aside class="my-8 my-sm-0">
-              <h2 class="text-center text-sm-left">
+              <h2 id="languages" class="text-center text-sm-left">
                 {{ $t('misc.languages') }}
               </h2>
               <language-list class="justify-center justify-sm-start" />
@@ -51,7 +51,7 @@
           </v-col>
           <v-col cols="12" sm="6" align-self="center">
             <aside class="my-8 my-sm-0">
-              <h2 class="text-center text-sm-right">
+              <h2 id="software" class="text-center text-sm-right">
                 {{ $t('misc.software') }}
               </h2>
               <software-list class="justify-center justify-sm-end" />
