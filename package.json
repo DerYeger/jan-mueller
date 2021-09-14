@@ -47,7 +47,7 @@
   "devDependencies": {
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
-    "@mdi/js": "5.9.55",
+    "@mdi/js": "6.1.95",
     "@nuxt/types": "2.15.8",
     "@nuxt/typescript-build": "2.1.0",
     "@nuxtjs/color-mode": "2.1.1",
