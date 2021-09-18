@@ -1,3 +1,10 @@
+## [1.40.6](https://github.com/DerYeger/jan-mueller/compare/v1.40.5...v1.40.6) (2021-09-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prism-themes to v1.9.0 ([2313a0b](https://github.com/DerYeger/jan-mueller/commit/2313a0b55e88a7bfb9e844d39d0d079af88dcecc))
+
 ## [1.40.5](https://github.com/DerYeger/jan-mueller/compare/v1.40.4...v1.40.5) (2021-09-11)
 
 
