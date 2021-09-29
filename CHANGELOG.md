@@ -1,3 +1,10 @@
+## [1.40.12](https://github.com/DerYeger/jan-mueller/compare/v1.40.11...v1.40.12) (2021-09-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency markdown-it-attrs to v4.1.0 ([35aafd6](https://github.com/DerYeger/jan-mueller/commit/35aafd64d7d081853e603d18fb63525ea1840ab1))
+
 ## [1.40.11](https://github.com/DerYeger/jan-mueller/compare/v1.40.10...v1.40.11) (2021-09-28)
 
 
