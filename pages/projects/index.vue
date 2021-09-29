@@ -4,7 +4,7 @@
     :items="projects"
     :ssr-columns="1"
     :column-width="300"
-    :padding="24"
+    :gap="24"
     class="px-3 pb-3"
   >
     <project-card :project="item" />
