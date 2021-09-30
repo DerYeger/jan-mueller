@@ -1,3 +1,10 @@
+# [1.42.0](https://github.com/DerYeger/jan-mueller/compare/v1.41.0...v1.42.0) (2021-09-30)
+
+
+### Features
+
+* **blog:** update `vue-masonry-wall` ([b337d9f](https://github.com/DerYeger/jan-mueller/commit/b337d9f9666845e4dc97358564e47b6b430002d7))
+
 # [1.41.0](https://github.com/DerYeger/jan-mueller/compare/v1.40.13...v1.41.0) (2021-09-30)
 
 
