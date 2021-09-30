@@ -22,7 +22,7 @@ I also created [@yeger/vue2-masonry-wall](https://github.com/DerYeger/vue2-mason
 It, too, drops any dependencies, achieving a bundle size decrease of up to 40%
 
 In addition, multiple issues have been fixed.
-Notably, padding is now considered while calculating the column count, and the removal of elements is now supported.
+Notably, spacing (`gap`) is now considered while calculating the column count, and the removal of elements is now supported.
 
 ## Installation
 
@@ -74,27 +74,28 @@ app.use(MasonryWall)
 The component is available as `masonry-wall` or `MasonryWall`.
 The only required prop is `items`, an array of type `any`.
 Each element of `items` is passed to the default slot, alongside its index.
-The prop `columnWidth` takes in a `number`, specifying the targeted column width.
+The prop `column-width` takes in a `number`, specifying the targeted column width.
 It is used to calculate the column count but does not define the actual width of columns.
-Similarly, `padding` defines the padding between items in pixels and is respected while calculating the column count.
-Lastly, the prop `ssrColumns` can be used to specify the column count in server-side-rendering contexts.
+Similarly, `gap` defines the gaps between items in pixels and is respected while calculating the column count.
+Lastly, the prop `ssr-columns` can be used to specify the column count in server-side-rendering contexts.
 
 While every prop of the component is reactive, mutations to the `items` array will not update the layout.
 To force updates, assign a new array to the `items` prop.
+
+### Example
 
 The following example demonstrates basic usage of the component.
 For interactive demonstrations, visit [vue-masonry-wall.yeger.eu](https://vue-masonry-wall.yeger.eu/) or [vue2-masonry-wall.yeger.eu](https://vue2-masonry-wall.yeger.eu/).
 
 ```vue[vue]
 <template>
-  <masonry-wall :items="items" :ssr-columns="1" :column-width="300" :padding="16">
-    <template #default="{ item, index }">
-      <div :style="`height: ${item.height}px`">
-        <h1>{{ item.title }}</h1>
-        <span>{{ item.description }}</span>
-      </div>
+  <MasonryWall :items="items" :ssr-columns="1" :column-width="300" :gap="16">
+    <template #default="{ item }">
+      <div :style="{ height: `${item.height}px` }">
+        {{ item.content }}
+      </pre>
     </template>
-  </masonry-wall>
+  </MasonryWall>
 </template>
 
 <script>
@@ -102,13 +103,17 @@ export default {
   data() {
     return {
       items: [
-        { title: 'First', description: 'The first item.', height: 150 },
-        { title: 'Second', description: 'The second item.', height: 300 },
-        { title: 'Third', description: 'The second item.', height: 150 },
-        { title: 'Fourth', description: 'The second item.', height: 450 },
+        { content: 'First', height: 150 },
+        { content: 'Second', height: 300 },
+        { content: 'Third', height: 150 },
+        { content: 'Fourth', height: 450 },
       ]
     }
   }
 }
 </script>
 ```
+
+### Result
+
+<MasonryWallDemo class="mb-4"></MasonryWallDemo>
