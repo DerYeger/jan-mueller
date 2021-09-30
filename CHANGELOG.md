@@ -1,3 +1,10 @@
+# [1.43.0](https://github.com/DerYeger/jan-mueller/compare/v1.42.0...v1.43.0) (2021-09-30)
+
+
+### Features
+
+* **home:** update included projects and blog posts ([44ee877](https://github.com/DerYeger/jan-mueller/commit/44ee877d58c59c2413bae2adbf2286060a1d5253))
+
 # [1.42.0](https://github.com/DerYeger/jan-mueller/compare/v1.41.0...v1.42.0) (2021-09-30)
 
 
