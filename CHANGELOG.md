@@ -1,3 +1,10 @@
+# [1.41.0](https://github.com/DerYeger/jan-mueller/compare/v1.40.13...v1.41.0) (2021-09-30)
+
+
+### Features
+
+* **home:** update content ([1fb4540](https://github.com/DerYeger/jan-mueller/commit/1fb4540ccb219ab2d17defc8fced46cd05a46a97))
+
 ## [1.40.13](https://github.com/DerYeger/jan-mueller/compare/v1.40.12...v1.40.13) (2021-09-29)
 
 
