@@ -27,13 +27,14 @@ export default defineComponent({
       .$content(`${locale}/home`)
       .sortBy('part')
       .fetch()) as Paragraph[]
-    const projects = (await context
-      .$content(`${locale}/projects`)
-      .sortBy('title')
-      .fetch()) as Project[]
+    const projects = (await Promise.all(
+      ['apollo', 'finwa', 'refunk-playground'].map((project) =>
+        context.$content(`${locale}/projects/${project}`).fetch()
+      )
+    )) as Project[]
     const blogPosts = (await context
       .$content('/en/blog')
-      .sortBy('date', 'asc')
+      .sortBy('createdAt', 'desc')
       .fetch()) as BlogPost[]
     return {
       paragraphs,
