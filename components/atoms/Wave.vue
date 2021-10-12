@@ -79,6 +79,7 @@ export default defineComponent({
   from {
     mask-position: var(--wave-offset) 0;
   }
+
   to {
     mask-position: -200000px 0;
   }
