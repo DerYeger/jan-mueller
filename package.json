@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@nuxt/content": "1.14.0",
-    "@nuxtjs/composition-api": "0.29.2",
+    "@nuxtjs/composition-api": "0.29.3",
     "@nuxtjs/feed": "1.1.0",
     "@nuxtjs/i18n": "7.0.3",
     "@nuxtjs/markdownit": "2.0.0",
