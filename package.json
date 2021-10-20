@@ -28,7 +28,7 @@
     "@nuxt/content": "1.14.0",
     "@nuxtjs/composition-api": "0.29.3",
     "@nuxtjs/feed": "1.1.0",
-    "@nuxtjs/i18n": "7.0.3",
+    "@nuxtjs/i18n": "7.1.0",
     "@nuxtjs/markdownit": "2.0.0",
     "@nuxtjs/pwa": "3.3.5",
     "@nuxtjs/sitemap": "2.4.0",
