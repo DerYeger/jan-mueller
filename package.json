@@ -45,8 +45,8 @@
     "vuex": "3.6.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "13.2.1",
-    "@commitlint/config-conventional": "13.2.0",
+    "@commitlint/cli": "14.1.0",
+    "@commitlint/config-conventional": "14.1.0",
     "@mdi/js": "5.9.55",
     "@nuxt/types": "2.15.8",
     "@nuxt/typescript-build": "2.1.0",
