@@ -1,3 +1,10 @@
+## [1.43.11](https://github.com/DerYeger/jan-mueller/compare/v1.43.10...v1.43.11) (2021-11-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @nuxtjs/i18n to v7.2.0 ([204aa2f](https://github.com/DerYeger/jan-mueller/commit/204aa2f7ee0c7fe7ec513cc2d3584b76bf21bf5f))
+
 ## [1.43.10](https://github.com/DerYeger/jan-mueller/compare/v1.43.9...v1.43.10) (2021-11-03)
 
 
