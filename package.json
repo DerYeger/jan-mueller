@@ -8,9 +8,10 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate --fail-on-error",
+    "lint": "yarn lint:prettier && yarn lint:es && yarn lint:style",
+    "lint:prettier": "prettier --check \"./**/*.{js,json,html,scss,ts,vue,yml}\"",
     "lint:es": "eslint \"./**/*.{js,ts,vue}\"",
     "lint:style": "stylelint \"./**/*.{css,ts,vue}\" --ignore-path .gitignore",
-    "lint": "yarn lint:es && yarn lint:style",
     "test": "jest",
     "pretty": "prettier --write \"./**/*.{js,json,html,scss,ts,vue,yml}\""
   },
