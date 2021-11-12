@@ -1,5 +1,6 @@
-import { IContentDocument } from '@nuxt/content/types/content'
+// eslint-disable-next-line import/named
+import { FetchReturn } from '@nuxt/content/types/query-builder'
 
-export interface Paragraph extends IContentDocument {
+export interface Paragraph extends FetchReturn {
   part: number
 }
