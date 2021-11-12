@@ -1,3 +1,10 @@
+## [1.43.14](https://github.com/DerYeger/jan-mueller/compare/v1.43.13...v1.43.14) (2021-11-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @nuxt/content to v1.15.0 ([d6f72d0](https://github.com/DerYeger/jan-mueller/commit/d6f72d0c898c2edb339aadc2f0c0f31376ba9a6e))
+
 ## [1.43.13](https://github.com/DerYeger/jan-mueller/compare/v1.43.12...v1.43.13) (2021-11-08)
 
 
