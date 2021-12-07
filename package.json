@@ -34,7 +34,7 @@
     "@nuxtjs/pwa": "3.3.5",
     "@nuxtjs/sitemap": "2.4.0",
     "@yeger/vue2-masonry-wall": "2.0.9",
-    "core-js": "3.19.2",
+    "core-js": "3.19.3",
     "markdown-it": "12.2.0",
     "markdown-it-attrs": "4.1.0",
     "markdown-it-div": "1.1.0",
