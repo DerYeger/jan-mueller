@@ -1,3 +1,10 @@
+## [1.43.23](https://github.com/DerYeger/jan-mueller/compare/v1.43.22...v1.43.23) (2021-12-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency markdown-it to v12.3.0 ([9383a79](https://github.com/DerYeger/jan-mueller/commit/9383a79d865652e2c1ab9fed7941ac9e305ba09f))
+
 ## [1.43.22](https://github.com/DerYeger/jan-mueller/compare/v1.43.21...v1.43.22) (2021-12-07)
 
 
