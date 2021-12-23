@@ -1,3 +1,10 @@
+## [1.43.27](https://github.com/DerYeger/jan-mueller/compare/v1.43.26...v1.43.27) (2021-12-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @yeger/vue2-masonry-wall to v2.0.11 ([952e3f8](https://github.com/DerYeger/jan-mueller/commit/952e3f8f8528a6ecbfe70e54cdf16bc1e5ad4015))
+
 ## [1.43.26](https://github.com/DerYeger/jan-mueller/compare/v1.43.25...v1.43.26) (2021-12-16)
 
 
