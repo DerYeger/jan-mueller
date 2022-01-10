@@ -1,3 +1,15 @@
+# [1.44.0](https://github.com/DerYeger/jan-mueller/compare/v1.43.34...v1.44.0) (2022-01-10)
+
+
+### Bug Fixes
+
+* **vuetify:** use conditional mini-variant ([ed24c9f](https://github.com/DerYeger/jan-mueller/commit/ed24c9f9e0822f61bd996da36cb0af1cac7589fa))
+
+
+### Features
+
+* **languages:** add python ([100aa7d](https://github.com/DerYeger/jan-mueller/commit/100aa7d4c01c47b522ddbd64de2ae75d11ce1557))
+
 ## [1.43.34](https://github.com/DerYeger/jan-mueller/compare/v1.43.33...v1.43.34) (2022-01-09)
 
 
