@@ -5,6 +5,7 @@
       fixed
       app
       :expand-on-hover="$vuetify.breakpoint.lgAndUp"
+      :mini-variant="$vuetify.breakpoint.lgAndUp"
     >
       <app-sidebar />
     </v-navigation-drawer>
