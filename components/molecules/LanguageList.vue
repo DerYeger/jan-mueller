@@ -3,6 +3,7 @@
     <icon-link name="Kotlin" icon="kotlin" href="https://kotlinlang.org/" />
     <icon-link name="Java" icon="java" href="https://java.com/" />
     <icon-link name="Haskell" icon="haskell" href="https://www.haskell.org/" />
+    <icon-link name="Python" icon="python" href="https://www.python.org/" />
     <icon-link
       name="TypeScript"
       icon="typescript"
