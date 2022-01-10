@@ -1,3 +1,10 @@
+## [1.44.1](https://github.com/DerYeger/jan-mueller/compare/v1.44.0...v1.44.1) (2022-01-10)
+
+
+### Bug Fixes
+
+* **style:** prevent overflow ([3b9e995](https://github.com/DerYeger/jan-mueller/commit/3b9e9955e3ef199fc0ee10d6b353ada11191837c))
+
 # [1.44.0](https://github.com/DerYeger/jan-mueller/compare/v1.43.34...v1.44.0) (2022-01-10)
 
 
