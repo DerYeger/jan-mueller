@@ -2,6 +2,21 @@
 title: About
 ---
 
+<style scoped>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ word-break: break-word;
+}
+
+* {
+  text-align: start;
+}
+</style>
+
 # Impressum
 
 Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.

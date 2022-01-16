@@ -96,6 +96,7 @@ export default defineConfig({
         ],
         ['icon-btn', 'btn-base'],
         ['prose', 'max-w-65ch text-center opacity-85'],
+        ['flex-center', 'flex items-center justify-center'],
       ],
     }),
 
