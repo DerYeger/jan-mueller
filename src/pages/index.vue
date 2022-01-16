@@ -7,12 +7,13 @@ const { t } = useI18n()
     <Avatar class="pa-4" />
     <section class="text-sm">
       <!-- eslint-disable vue/no-v-html -->
-      <p class="max-w-65ch text-center" v-html="t('about.intro')" />
+      <p class="prose" v-html="t('about.intro')" />
       <Accounts />
-      <p class="max-w-65ch text-center" v-html="t('about.hobbies')" />
+      <p class="prose" v-html="t('about.hobbies')" />
       <Languages />
-      <p class="max-w-65ch text-center" v-html="t('about.skills')" />
-      <p class="max-w-65ch text-center" v-html="t('about.inspiration')" />
+      <p class="prose" v-html="t('about.skills')" />
+      <Software />
+      <p class="prose" v-html="t('about.inspiration')" />
       <!-- eslint-enable vue/no-v-html -->
     </section>
   </div>
