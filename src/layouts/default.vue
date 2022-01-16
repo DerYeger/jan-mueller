@@ -1,6 +1,8 @@
 <template>
-  <main class="px-4 py-10 text-center text-black-700 dark:text-gray-200">
+  <main
+    class="pa-4 container m-auto text-gray-900 dark:text-gray-200 select-none"
+  >
+    <Navigation />
     <router-view />
-    <Footer />
   </main>
 </template>
