@@ -4,7 +4,9 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <main class="px-4 py-10 text-center text-teal-700 dark:text-gray-200">
+  <main
+    class="pa-4 container m-auto text-center text-teal-700 dark:text-gray-200"
+  >
     <div>
       <p class="text-4xl">
         <carbon-warning class="inline-block" />

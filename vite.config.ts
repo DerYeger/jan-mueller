@@ -84,9 +84,10 @@ export default defineConfig({
         }),
       ],
       shortcuts: [
+        ['trns', 'all:transition-400'],
         [
           'btn',
-          'px-4 py-1 rounded inline-flex justify-center gap-2 leading-30px children:mya !no-underline cursor-pointer text-black dark:text-white disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50',
+          'px-4 py-1 rounded inline-flex justify-center gap-2 leading-30px children:mya !no-underline cursor-pointer text-black dark:text-white trns opacity-50 hover:opacity-80',
         ],
       ],
     }),
