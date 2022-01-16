@@ -1,7 +1,0 @@
-<template>
-  <app-frame>
-    <container>
-      <nuxt />
-    </container>
-  </app-frame>
-</template>

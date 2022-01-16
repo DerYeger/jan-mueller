@@ -7,7 +7,7 @@ jobs:
     name: Prepare
     runs-on: ubuntu-latest
     steps:
-      - name: Yarn setup
+      - name: Setup
         uses: DerYeger/yarn-setup-action@master
         with:
           node-version: 16
@@ -16,18 +16,18 @@ jobs:
     runs-on: ubuntu-latest
     needs: prepare
     steps:
-      - name: Yarn setup
+      - name: Setup
         uses: DerYeger/yarn-setup-action@master
         with:
           node-version: 16
       - name: Build
-        run: yarn generate
+        run: yarn build
   lint:
     name: Lint
     runs-on: ubuntu-latest
     needs: prepare
     steps:
-      - name: Yarn setup
+      - name: Setup
         uses: DerYeger/yarn-setup-action@master
         with:
           node-version: 16
@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: prepare
     steps:
-      - name: Yarn setup
+      - name: Setup
         uses: DerYeger/yarn-setup-action@master
         with:
           node-version: 16
@@ -54,7 +54,7 @@ jobs:
         uses: actions/checkout@master
         with:
           token: ${{ secrets.PAT }}
-      - name: Semantic release
+      - name: Release
         uses: cycjimmy/semantic-release-action@v2.7.0
         with:
           extra_plugins: |

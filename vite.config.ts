@@ -1,0 +1,179 @@
+import path from 'path'
+
+import VueI18n from '@intlify/vite-plugin-vue-i18n'
+import Vue from '@vitejs/plugin-vue'
+import LinkAttributes from 'markdown-it-link-attributes'
+import Prism from 'markdown-it-prism'
+import { presetUno } from 'unocss'
+import Unocss from 'unocss/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import Icons from 'unplugin-icons/vite'
+import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vite'
+import Inspect from 'vite-plugin-inspect'
+import Markdown from 'vite-plugin-md'
+import Pages from 'vite-plugin-pages'
+import { VitePWA } from 'vite-plugin-pwa'
+import Layouts from 'vite-plugin-vue-layouts'
+
+const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
+
+export default defineConfig({
+  resolve: {
+    alias: {
+      '~/': `${path.resolve(__dirname, 'src')}/`,
+    },
+  },
+  plugins: [
+    Vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
+
+    // https://github.com/hannoeru/vite-plugin-pages
+    Pages({
+      extensions: ['vue', 'md'],
+    }),
+
+    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+    Layouts(),
+
+    // https://github.com/antfu/unplugin-auto-import
+    AutoImport({
+      imports: [
+        'vue',
+        'vue-router',
+        'vue-i18n',
+        '@vueuse/head',
+        '@vueuse/core',
+        'vitest',
+      ],
+      dts: 'src/auto-imports.d.ts',
+    }),
+
+    // https://github.com/antfu/unplugin-vue-components
+    Components({
+      // allow auto load markdown components under `./src/components/`
+      extensions: ['vue', 'md'],
+
+      // allow auto import and register components used in markdown
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+
+      // custom resolvers
+      resolvers: [
+        // auto import icons
+        // https://github.com/antfu/unplugin-icons
+        IconsResolver({
+          componentPrefix: '',
+          // enabledCollections: ['carbon']
+        }),
+      ],
+
+      dts: 'src/components.d.ts',
+    }),
+
+    // https://github.com/antfu/unplugin-icons
+    Icons({
+      autoInstall: true,
+    }),
+
+    Unocss({
+      presets: [
+        presetUno({
+          dark: 'class',
+        }),
+      ],
+      shortcuts: [
+        [
+          'btn',
+          'px-4 py-1 rounded inline-flex justify-center gap-2 leading-30px children:mya !no-underline cursor-pointer text-black dark:text-white disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50',
+        ],
+      ],
+    }),
+
+    // https://github.com/antfu/vite-plugin-md
+    Markdown({
+      wrapperClasses: markdownWrapperClasses,
+      headEnabled: true,
+      markdownItSetup(md) {
+        // https://prismjs.com/
+        md.use(Prism)
+        md.use(LinkAttributes, {
+          pattern: /^https?:\/\//,
+          attrs: {
+            target: '_blank',
+            rel: 'noopener',
+          },
+        })
+      },
+    }),
+
+    // https://github.com/antfu/vite-plugin-pwa
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.svg', 'robots.txt', 'safari-pinned-tab.svg'],
+      manifest: {
+        name: 'Jan Müller',
+        short_name: 'Jan Müller',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: '/pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: '/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable',
+          },
+        ],
+      },
+    }),
+
+    // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
+    VueI18n({
+      runtimeOnly: true,
+      compositionOnly: true,
+      include: [path.resolve(__dirname, 'locales/**')],
+    }),
+
+    // https://github.com/antfu/vite-plugin-inspect
+    Inspect({
+      // change this to enable inspect for debugging
+      enabled: false,
+    }),
+  ],
+
+  server: {
+    fs: {
+      strict: true,
+    },
+  },
+
+  // https://github.com/antfu/vite-ssg
+  ssgOptions: {
+    script: 'async',
+    formatting: 'minify',
+  },
+
+  optimizeDeps: {
+    include: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head'],
+    exclude: ['vue-demi'],
+  },
+
+  // https://github.com/vitest-dev/vitest
+  test: {
+    include: ['test/**/*.test.ts'],
+    environment: 'jsdom',
+    deps: {
+      inline: ['@vue', '@vueuse', 'vue-demi'],
+    },
+  },
+})

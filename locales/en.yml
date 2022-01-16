@@ -1,0 +1,10 @@
+button:
+  about: About
+  back: Back
+  go: GO
+  home: Home
+  toggle_dark: Toggle dark mode
+  toggle_langs: Change languages
+intro:
+  first: In 2021, I finished my bachelor's degree in computer science at the University of Kassel. Currently, I am studying <b>Software Engineering & Internet Computing</b> at the TU Wien. In parallel, I am a working student at Senacor Technologies AG.
+not-found: Not found
