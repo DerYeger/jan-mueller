@@ -105,6 +105,9 @@ export default defineConfig({
         }),
       ],
       shortcuts: [
+        ['text-base', 'text-black dark:text-white'],
+        ['text-light', 'opacity-80'],
+        ['text-lighter', 'opacity-60'],
         [
           'btn-base',
           'px-2 py-1 rounded inline-flex justify-center gap-2 leading-30px children:mya !no-underline cursor-pointer text-black dark:text-white opacity-50 hover:opacity-80',
@@ -112,6 +115,10 @@ export default defineConfig({
         ['icon-btn', 'btn-base'],
         ['prose', 'max-w-65ch text-center opacity-85'],
         ['flex-center', 'flex items-center justify-center'],
+        [
+          'card',
+          'pa-4 border-solid border-1-black text-light hover:shadow-xl shadow:transition-400 rounded-xl flex flex-col gap-4 text-base',
+        ],
       ],
     }),
 

@@ -28,3 +28,15 @@ mark {
   font-style: italic;
   font-weight: bold;
 }
+
+:root {
+  --c-link: #968050;
+}
+
+html.dark {
+  --c-link: #FDD888;
+}
+
+a {
+  color: var(--c-link);
+}

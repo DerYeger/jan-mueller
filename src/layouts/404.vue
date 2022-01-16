@@ -3,9 +3,7 @@ const router = useRouter()
 </script>
 
 <template>
-  <main
-    class="flex-center flex-col pa-4 container m-auto text-gray-900 dark:text-gray-200"
-  >
+  <main class="flex-center flex-col pa-4 container m-auto">
     <Navigation />
     <div class="text-sm">
       <p class="text-4xl text-red-500">
