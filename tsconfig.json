@@ -1,28 +1,27 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
-    "esModuleInterop": true,
-    "allowJs": true,
-    "sourceMap": true,
-    "strict": true,
-    "noEmit": true,
-    "experimentalDecorators": true,
     "baseUrl": ".",
-    "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./*"]
-    },
+    "module": "ESNext",
+    "target": "es2016",
+    "lib": ["DOM", "ESNext"],
+    "strict": true,
+    "esModuleInterop": true,
+    "incremental": false,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
     "types": [
-      "@nuxt/content",
-      "@nuxt/types",
-      "@nuxtjs/color-mode",
-      "@nuxtjs/i18n",
-      "@nuxtjs/vuetify",
-      "@types/node"
-    ]
+      "cypress",
+      "vite/client",
+      "vite-plugin-pages/client",
+      "vite-plugin-vue-layouts/client"
+    ],
+    "paths": {
+      "~/*": ["src/*"]
+    }
   },
-  "exclude": ["node_modules", ".nuxt", "dist"]
+  "exclude": ["dist", "node_modules"]
 }
