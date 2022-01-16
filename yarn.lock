@@ -1169,6 +1169,13 @@
   dependencies:
     "@iconify/types" "^1.0.10"
 
+"@iconify-json/logos@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@iconify-json/logos/-/logos-1.0.4.tgz#28cc96c99a1cda48a5530fce6001e1df8de22f96"
+  integrity sha512-jxNfvLj5ZCQUSe8bBN3mUxePKWcS9JbmoNd4t95PI5nDbwjOqAs1B4pgsJAn0T99foeThTn7r/69AQDqPQXCBA==
+  dependencies:
+    "@iconify/types" "^1.0.10"
+
 "@iconify/types@^1.0.10", "@iconify/types@^1.0.12":
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/@iconify/types/-/types-1.0.12.tgz#839f1f784b7030b94482d51996570f4dbd7d6796"
