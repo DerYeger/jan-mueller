@@ -92,9 +92,10 @@ export default defineConfig({
       shortcuts: [
         [
           'btn-base',
-          'px-4 py-1 rounded inline-flex justify-center gap-2 leading-30px children:mya !no-underline cursor-pointer text-black dark:text-white opacity-50 hover:opacity-80',
+          'px-2 py-1 rounded inline-flex justify-center gap-2 leading-30px children:mya !no-underline cursor-pointer text-black dark:text-white opacity-50 hover:opacity-80',
         ],
         ['icon-btn', 'btn-base'],
+        ['prose', 'max-w-65ch text-center opacity-85'],
       ],
     }),
 
