@@ -1,19 +1,11 @@
 @import './markdown.css';
 
-:root {
-  --font-family-base: "Readex Pro", ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont, sans-serif;
-}
-
 html,
 body,
 #app {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-#app {
-  font-family: var(--font-family-base);
 }
 
 html.dark {

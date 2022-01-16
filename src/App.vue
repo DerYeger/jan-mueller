@@ -3,12 +3,12 @@
 // you can use this to manipulate the document head in any components,
 // they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: 'Vitesse',
+  title: 'Jan Müller',
   meta: [
-    { name: 'description', content: 'Opinionated Vite Starter Template' },
     {
-      href: 'https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;400;600&display=swap',
-      rel: 'stylesheet',
+      name: 'description',
+      content:
+        'Personal website of Jan Müller, a passionate software engineer.',
     },
   ],
 })
