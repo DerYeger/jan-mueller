@@ -1,19 +1,21 @@
 <script setup lang="ts">
 const router = useRouter()
-const { t } = useI18n()
 </script>
 
 <template>
-  <main class="pa-4 container m-auto text-gray-900 dark:text-gray-200">
-    <div>
-      <p class="text-4xl">
+  <main
+    class="flex-center flex-col pa-4 container m-auto text-gray-900 dark:text-gray-200"
+  >
+    <Navigation />
+    <div class="text-sm">
+      <p class="text-4xl text-red-500">
         <carbon-warning class="inline-block" />
       </p>
     </div>
     <router-view />
     <div>
-      <button class="btn m-3 text-sm mt-8" @click="router.back()">
-        {{ t('button.back') }}
+      <button class="icon-btn m-3 text-2xl mt-8" @click="router.back()">
+        <carbon-undo class="text-green-900 dark:text-green-300" />
       </button>
     </div>
   </main>
