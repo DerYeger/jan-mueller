@@ -3,18 +3,26 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="flex flex-col justify-center items-center">
-    <Avatar class="pa-4" />
-    <section class="text-sm">
-      <!-- eslint-disable vue/no-v-html -->
+  <section class="flex-center flex-col text-sm">
+    <!-- eslint-disable vue/no-v-html -->
+    <div class="flex-center flex-col sm-flex-row sm-gap-8">
+      <Avatar class="pa-4" />
       <p class="prose" v-html="t('about.intro')" />
+    </div>
+    <div
+      class="flex-center flex-col sm-flex-row-reverse sm-space-between sm-gap-8"
+    >
       <Accounts />
       <p class="prose" v-html="t('about.hobbies')" />
+    </div>
+    <div class="flex-center flex-col sm-flex-row sm-gap-8">
       <Languages />
       <p class="prose" v-html="t('about.skills')" />
+    </div>
+    <div class="flex-center flex-col sm-flex-row-reverse sm-gap-8">
       <Software />
       <p class="prose" v-html="t('about.inspiration')" />
-      <!-- eslint-enable vue/no-v-html -->
-    </section>
-  </div>
+    </div>
+    <!-- eslint-enable vue/no-v-html -->
+  </section>
 </template>
