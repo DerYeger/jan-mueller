@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Facts from '~/components/Facts.vue'
-
 const { t } = useI18n()
 </script>
 

@@ -6,7 +6,7 @@ import Vue from '@vitejs/plugin-vue'
 import matter from 'gray-matter'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Prism from 'markdown-it-prism'
-import { presetIcons, presetUno } from 'unocss'
+import { presetIcons, presetUno, presetWebFonts } from 'unocss'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -95,6 +95,12 @@ export default defineConfig({
           extraProperties: {
             display: 'inline-block',
             'vertical-align': 'middle',
+          },
+        }),
+        presetWebFonts({
+          fonts: {
+            // these will extend the default theme
+            sans: 'Montserrat',
           },
         }),
       ],
