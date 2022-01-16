@@ -25,5 +25,14 @@ html.dark {
 }
 
 button {
-  unset: all !import;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+}
+
+mark {
+  background: none;
+  color: inherit;
+  font-style: italic;
+  font-weight: bold;
 }
