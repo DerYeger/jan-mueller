@@ -12,8 +12,6 @@ declare module 'vue' {
     CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
     CarbonMoon: typeof import('~icons/carbon/moon')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']
-    CarbonUndo: typeof import('~icons/carbon/undo')['default']
-    CarbonWarning: typeof import('~icons/carbon/warning')['default']
     Facts: typeof import('./components/Facts.vue')['default']
     Languages: typeof import('./components/Languages.vue')['default']
     Navigation: typeof import('./components/Navigation.vue')['default']

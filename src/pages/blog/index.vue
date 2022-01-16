@@ -20,20 +20,15 @@ const { d } = useI18n()
 <template>
   <masonry-wall :items="posts" :ssr-columns="1" :column-width="300" :gap="16">
     <template #default="{ item }">
-      <router-link
-        :to="item.path"
-        class="no-underline text-black dark:text-white"
-      >
-        <div
-          class="pa-4 bg-black bg-opacity-10 dark:bg-white dark:bg-opacity-5 rounded flex flex-col gap-4"
-        >
+      <router-link :to="item.path" class="no-underline">
+        <div class="card">
           <span class="text-xl">
             {{ item.meta.frontmatter.title }}
           </span>
-          <span class="text-sm opacity-80">
+          <span class="text-sm text-lighter">
             {{ d(item.meta.frontmatter.date) }}
           </span>
-          <span class="opacity-80">
+          <span class="text-light">
             {{ item.meta.frontmatter.description }}
           </span>
         </div>
