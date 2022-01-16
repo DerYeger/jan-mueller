@@ -1,17 +1,13 @@
 ---
 title: Masonry layout for Vue 2 and Vue 3
 description: Responsive masonry layout with SSR support and zero dependencies for Vue 2 and Vue 3.
-createdAt: 2021-08-16
+date: 2021-08-16
 tags: [Vue, Masonry, Layout]
-image: vue-masonry-wall/masonry.webp
-imageAlt: Masonry
 ---
 
 # {{frontmatter.title}}
 
-> Responsive masonry layout with SSR support and zero dependencies for Vue 2 and Vue 3.
-
-> {{frontmatter.createdAt}}
+> {{ frontmatter.description }}
 
 ## Introduction
 

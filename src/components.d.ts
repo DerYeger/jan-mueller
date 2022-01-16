@@ -6,7 +6,6 @@ declare module 'vue' {
   export interface GlobalComponents {
     Accounts: typeof import('./components/Accounts.vue')['default']
     Avatar: typeof import('./components/Avatar.vue')['default']
-    CarbonBack: typeof import('~icons/carbon/back')['default']
     CarbonBlog: typeof import('~icons/carbon/blog')['default']
     CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default']
     CarbonHome: typeof import('~icons/carbon/home')['default']
