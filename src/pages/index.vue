@@ -4,24 +4,16 @@ const { t } = useI18n()
 
 <template>
   <div class="flex flex-col justify-center items-center">
-    <p class="text-4xl">
-      <Avatar />
-    </p>
-    <p class="max-w-65ch text-center">
-      <!-- eslint-disable-next-line vue/no-v-html -->
-      <em class="text-sm" v-html="t('intro.first')" />
-    </p>
-    <p class="max-w-65ch text-center">
-      <!-- eslint-disable-next-line vue/no-v-html -->
-      <em class="text-sm" v-html="t('intro.first')" />
-    </p>
-    <p class="max-w-65ch text-center">
-      <!-- eslint-disable-next-line vue/no-v-html -->
-      <em class="text-sm" v-html="t('intro.first')" />
-    </p>
-    <p class="max-w-65ch text-center">
-      <!-- eslint-disable-next-line vue/no-v-html -->
-      <em class="text-sm" v-html="t('intro.first')" />
-    </p>
+    <Avatar class="pa-4" />
+    <section class="text-sm">
+      <!-- eslint-disable vue/no-v-html -->
+      <p class="max-w-65ch text-center" v-html="t('about.intro')" />
+      <Accounts />
+      <p class="max-w-65ch text-center" v-html="t('about.hobbies')" />
+      <Languages />
+      <p class="max-w-65ch text-center" v-html="t('about.skills')" />
+      <p class="max-w-65ch text-center" v-html="t('about.inspiration')" />
+      <!-- eslint-enable vue/no-v-html -->
+    </section>
   </div>
 </template>

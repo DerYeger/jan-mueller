@@ -4,7 +4,7 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Vue from '@vitejs/plugin-vue'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Prism from 'markdown-it-prism'
-import { presetUno } from 'unocss'
+import { presetIcons, presetUno } from 'unocss'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -65,7 +65,7 @@ export default defineConfig({
         // https://github.com/antfu/unplugin-icons
         IconsResolver({
           componentPrefix: '',
-          // enabledCollections: ['carbon']
+          enabledCollections: ['carbon'],
         }),
       ],
 
@@ -82,13 +82,19 @@ export default defineConfig({
         presetUno({
           dark: 'class',
         }),
+        presetIcons({
+          extraProperties: {
+            display: 'inline-block',
+            'vertical-align': 'middle',
+          },
+        }),
       ],
       shortcuts: [
-        ['trns', 'all:transition-400'],
         [
-          'btn',
-          'px-4 py-1 rounded inline-flex justify-center gap-2 leading-30px children:mya !no-underline cursor-pointer text-black dark:text-white trns opacity-50 hover:opacity-80',
+          'btn-base',
+          'px-4 py-1 rounded inline-flex justify-center gap-2 leading-30px children:mya !no-underline cursor-pointer text-black dark:text-white opacity-50 hover:opacity-80',
         ],
+        ['icon-btn', 'btn-base'],
       ],
     }),
 
