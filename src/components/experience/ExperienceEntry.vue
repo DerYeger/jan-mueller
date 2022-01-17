@@ -9,7 +9,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col lh-6">
     <a
       v-if="experience.href"
       :href="experience.href"

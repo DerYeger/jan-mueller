@@ -5,7 +5,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <section class="flex-center flex-col text-sm">
+  <section class="flex-center flex-col">
     <!-- eslint-disable vue/no-v-html -->
     <div
       class="flex-center flex-col sm-flex-row sm-gap-8 w-full justify-between"
@@ -36,11 +36,11 @@ const { t } = useI18n()
     </div>
     <!-- eslint-enable vue/no-v-html -->
   </section>
-  <section class="mt-16 text-sm">
+  <section class="mt-16">
     <Projects />
   </section>
   <section
-    class="mt-16 text-sm flex flex-col md-flex-row items-start gap-4 children:flex-1 children:w-full"
+    class="mt-16 flex flex-col md-flex-row items-start gap-4 children:flex-1 children:w-full"
   >
     <Experience />
     <Education />
