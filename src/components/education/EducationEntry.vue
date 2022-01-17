@@ -9,7 +9,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col lh-6">
     <span class="text-light">{{ t(`education.${education.name}`) }}</span>
     <span class="text-light">
       {{ t(`education.institutions.${education.institution}`) }}

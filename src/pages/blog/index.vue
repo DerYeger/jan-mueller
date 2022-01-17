@@ -25,7 +25,7 @@ const { d } = useI18n()
           <span class="text-xl">
             {{ item.meta.frontmatter.title }}
           </span>
-          <span class="text-sm text-lighter">
+          <span class="text-lighter">
             {{ d(item.meta.frontmatter.date) }}
           </span>
           <span class="text-light">
