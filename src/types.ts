@@ -9,6 +9,12 @@ export type RouteWithFrontmatter = RouteRecordNormalized & {
   }
 }
 
+export interface Award {
+  name: string
+  date: string
+  href?: string
+}
+
 export interface Project {
   repo: string
   img: string
