@@ -35,6 +35,18 @@ education:
     uk: University of Kassel
     wg: Wilhelmsgymnasium Kassel
 
+experience:
+  title: Experience
+  mgs: Management Services Helwig Schmitt GmbH
+  senacor: Senacor Technologies AG
+  software-engineer: Software Engineer
+  software-engineer-intern: Software Engineer (Internship)
+  tutor-ee: Tutor - Automative EE Systems and Fundamentals of Electrical Engineering
+  tutor-plm: Tutor - Research Group Programming Languages / Methodologies
+  tutor-tcs: Tutor - Theoretical Computer Science / Formal Methods
+  uk: University of Kassel
+  yatta: Yatta Solutions GmbH
+
 languages: Languages
 
 meta:

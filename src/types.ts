@@ -22,6 +22,14 @@ export interface Education {
   endDate?: string
 }
 
+export interface Experience {
+  name: string
+  description: string
+  startDate: string
+  endDate?: string
+  href?: string
+}
+
 export interface Project {
   repo: string
   img: string

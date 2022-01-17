@@ -1,4 +1,5 @@
 export * from './awards'
 export * from './dark'
 export * from './education'
+export * from './experience'
 export * from './projects'
