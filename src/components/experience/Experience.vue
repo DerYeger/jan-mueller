@@ -9,7 +9,7 @@ const education = useExperience()
 <template>
   <div class="flex-center flex-col">
     <h2 class="subheading">{{ t('experience.title') }}</h2>
-    <ul class="self-start">
+    <ul>
       <li v-for="entry of education" :key="entry.name">
         <ExperienceEntry :experience="entry" />
       </li>

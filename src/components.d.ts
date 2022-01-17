@@ -6,7 +6,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     Accounts: typeof import('./components/Accounts.vue')['default']
     Avatar: typeof import('./components/Avatar.vue')['default']
-    Award: typeof import('./components/award/Award.vue')['default']
+    AwardEntry: typeof import('./components/award/AwardEntry.vue')['default']
     Awards: typeof import('./components/award/Awards.vue')['default']
     CarbonBlog: typeof import('~icons/carbon/blog')['default']
     CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default']
@@ -14,6 +14,8 @@ declare module 'vue' {
     CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
     CarbonMoon: typeof import('~icons/carbon/moon')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']
+    CarbonUndo: typeof import('~icons/carbon/undo')['default']
+    CarbonWarning: typeof import('~icons/carbon/warning')['default']
     Date: typeof import('./components/Date.vue')['default']
     Education: typeof import('./components/education/Education.vue')['default']
     EducationEntry: typeof import('./components/education/EducationEntry.vue')['default']
