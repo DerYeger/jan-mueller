@@ -3,8 +3,8 @@ const router = useRouter()
 </script>
 
 <template>
-  <main class="flex-center flex-col pa-4 container m-auto max-w-75ch">
-    <Navigation />
+  <Header />
+  <Main class="flex-center flex-col">
     <div class="text-sm">
       <p class="text-4xl text-red-500">
         <carbon-warning class="inline-block" />
@@ -16,5 +16,6 @@ const router = useRouter()
         <carbon-undo />
       </button>
     </div>
-  </main>
+  </Main>
+  <Footer />
 </template>
