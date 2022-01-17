@@ -25,11 +25,25 @@ button:
 
 details: Details
 
+education:
+  title: Education
+  abitur: University-entrance diploma (Abitur)
+  ba: Computer Science (B.Sc.)
+  ma: Software Engineering & Internet Computing (M.Sc.)
+  institutions:
+    tu: TU Wien
+    uk: University of Kassel
+    wg: Wilhelmsgymnasium Kassel
+
 languages: Languages
 
 meta:
   description: Personal website of Jan Müller, a passionate software engineer.
 
 not-found: Not found
+
 projects: Projects
+
 software: Software
+
+today: Today
