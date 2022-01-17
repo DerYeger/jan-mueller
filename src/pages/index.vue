@@ -5,7 +5,9 @@ const { t } = useI18n()
 <template>
   <section class="flex-center flex-col text-sm">
     <!-- eslint-disable vue/no-v-html -->
-    <div class="flex-center flex-col sm-flex-row sm-gap-8">
+    <div
+      class="flex-center flex-col sm-flex-row sm-gap-8 w-full justify-between"
+    >
       <Avatar class="pa-4" />
       <div>
         <Facts class="sm-text-right" />
@@ -13,16 +15,20 @@ const { t } = useI18n()
       </div>
     </div>
     <div
-      class="flex-center flex-col sm-flex-row-reverse sm-space-between sm-gap-8"
+      class="flex-center flex-col sm-flex-row-reverse sm-space-between sm-gap-8 w-full justify-between"
     >
       <Accounts class="sm-text-right" />
       <p class="prose sm-text-left" v-html="t('about.hobbies')" />
     </div>
-    <div class="flex-center flex-col sm-flex-row sm-gap-8">
+    <div
+      class="flex-center flex-col sm-flex-row sm-gap-8 w-full justify-between"
+    >
       <Languages class="sm-text-left" />
       <p class="prose sm-text-right" v-html="t('about.skills')" />
     </div>
-    <div class="flex-center flex-col sm-flex-row-reverse sm-gap-8">
+    <div
+      class="flex-center flex-col sm-flex-row-reverse sm-gap-8 w-full justify-between"
+    >
       <Software class="sm-text-right" />
       <p class="prose sm-text-left" v-html="t('about.inspiration')" />
     </div>
