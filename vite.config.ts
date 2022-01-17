@@ -113,7 +113,7 @@ export default defineConfig({
           'px-2 py-1 rounded inline-flex justify-center gap-2 leading-30px children:mya !no-underline cursor-pointer text-black dark:text-white opacity-50 hover:opacity-80',
         ],
         ['icon-btn', 'btn-base'],
-        ['prose', 'max-w-65ch text-center opacity-85 fw400'],
+        ['prose', 'text-center opacity-85 fw400'],
         ['flex-center', 'flex items-center justify-center'],
         [
           'card',
