@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Experience from '~/components/experience/Experience.vue'
+
 const { t } = useI18n()
 </script>
 
@@ -38,9 +40,10 @@ const { t } = useI18n()
     <Projects />
   </section>
   <section
-    class="mt-8 text-sm flex flex-col sm-flex-row items-start gap-4 children:flex-1"
+    class="mt-8 text-sm flex flex-col md-flex-row items-start gap-4 children:flex-1 children:w-full"
   >
-    <Awards />
+    <Experience />
     <Education />
+    <Awards />
   </section>
 </template>
