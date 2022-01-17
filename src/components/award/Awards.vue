@@ -9,9 +9,9 @@ const { t } = useI18n()
 <template>
   <div class="flex-center flex-col">
     <h2 class="subheading">{{ t('awards.title') }}</h2>
-    <ul class="self-start">
+    <ul>
       <li v-for="award of awards" :key="award.name">
-        <Award :award="award" />
+        <AwardEntry :award="award" />
       </li>
     </ul>
   </div>
