@@ -15,6 +15,13 @@ export interface Award {
   href?: string
 }
 
+export interface Education {
+  name: string
+  institution: string
+  startDate: string
+  endDate?: string
+}
+
 export interface Project {
   repo: string
   img: string
