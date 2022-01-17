@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { useEducation } from '~/composables'
+import { useExperience } from '~/composables'
 
 const { t } = useI18n()
 
-const education = useEducation()
+const education = useExperience()
 </script>
 
 <template>
   <div class="flex-center flex-col">
-    <h2 class="subheading">{{ t('education.title') }}</h2>
+    <h2 class="subheading">{{ t('experience.title') }}</h2>
     <ul class="self-start">
       <li v-for="entry of education" :key="entry.name">
-        <EducationEntry :education="entry" />
+        <ExperienceEntry :experience="entry" />
       </li>
     </ul>
   </div>
