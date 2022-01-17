@@ -28,4 +28,7 @@ const { t } = useI18n()
     </div>
     <!-- eslint-enable vue/no-v-html -->
   </section>
+  <section class="mt-8 text-sm">
+    <Projects />
+  </section>
 </template>

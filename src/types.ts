@@ -8,3 +8,9 @@ export type RouteWithFrontmatter = RouteRecordNormalized & {
     frontmatter: Record<string, string>
   }
 }
+
+export interface Project {
+  repo: string
+  img: string
+  title: string
+}
