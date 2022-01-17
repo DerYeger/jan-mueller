@@ -9,11 +9,16 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col lh-6">
     <span class="text-light">{{ t(`awards.${award.name}`) }}</span>
-    <Date :date="award.date" />
-    <a v-if="award.href" :href="award.href" rel="noopener" target="_blank">
-      {{ t('details') }}
-    </a>
+    <span>
+      <Date :date="award.date" />
+      <template v-if="award.href">
+        ·
+        <a :href="award.href" rel="noopener" target="_blank">
+          {{ t('details') }}
+        </a>
+      </template>
+    </span>
   </div>
 </template>

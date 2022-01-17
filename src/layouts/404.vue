@@ -5,7 +5,7 @@ const router = useRouter()
 <template>
   <Header />
   <Main class="flex-center flex-col">
-    <div class="text-sm">
+    <div>
       <p class="text-4xl text-red-500">
         <carbon-warning class="inline-block" />
       </p>

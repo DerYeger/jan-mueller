@@ -7,7 +7,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <p class="prose">
+  <p class="prose text-lighter">
     <samp>{{ t('about.facts', { age }) }}</samp>
   </p>
 </template>
