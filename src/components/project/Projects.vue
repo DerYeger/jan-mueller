@@ -10,7 +10,7 @@ const { t } = useI18n()
   <div class="flex-center flex-col">
     <h2 class="subheading">{{ t('projects') }}</h2>
     <div class="flex-center gap-4">
-      <ProjectLink
+      <Project
         v-for="project of projects"
         :key="project.repo"
         :project="project"
