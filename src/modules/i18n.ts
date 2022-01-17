@@ -18,6 +18,14 @@ export const install: UserModule = ({ app }) => {
     legacy: false,
     locale: 'en',
     messages,
+    datetimeFormats: {
+      en: {
+        month: {
+          year: 'numeric',
+          month: 'short',
+        },
+      },
+    },
   })
 
   app.use(i18n)
