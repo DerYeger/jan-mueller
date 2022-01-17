@@ -36,11 +36,11 @@ const { t } = useI18n()
     </div>
     <!-- eslint-enable vue/no-v-html -->
   </section>
-  <section class="mt-8 text-sm">
+  <section class="mt-16 text-sm">
     <Projects />
   </section>
   <section
-    class="mt-8 text-sm flex flex-col md-flex-row items-start gap-4 children:flex-1 children:w-full"
+    class="mt-16 text-sm flex flex-col md-flex-row items-start gap-4 children:flex-1 children:w-full"
   >
     <Experience />
     <Education />
