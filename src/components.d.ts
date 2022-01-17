@@ -17,6 +17,8 @@ declare module 'vue' {
     Facts: typeof import('./components/Facts.vue')['default']
     Languages: typeof import('./components/Languages.vue')['default']
     Navigation: typeof import('./components/Navigation.vue')['default']
+    ProjectLink: typeof import('./components/ProjectLink.vue')['default']
+    Projects: typeof import('./components/Projects.vue')['default']
     README: typeof import('./components/README.md')['default']
     Software: typeof import('./components/Software.vue')['default']
   }

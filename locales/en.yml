@@ -5,6 +5,7 @@ about:
   skills: I am active in both <mark>backend</mark> and <mark>frontend development</mark>. In the latter field, I am developing websites and Android apps. I am not averse to the theoretical aspects of software development and like to deal with algorithms, data structures, or the big O notation, among others. In internships as a software developer as well as multiple jobs as a grader and tutor at the University of Kassel, I was able to expand my skills and pass them on to other students.
   inspiration: I find my inspiration while listening to <mark>music, walking, and reading</mark>, where I like to lose myself in science fiction worlds like Frank Herbert's Dune. Both melancholic songs by Ben Howard and breathtaking soundtracks of my favorite video games accompany me during hours of programming and inspire me to look for solutions to even the trickiest problems.
 accounts: Accounts
+and-more: And more...
 button:
   about: About
   back: Back
@@ -14,4 +15,5 @@ button:
   toggle_langs: Change languages
 languages: Languages
 not-found: Not found
+projects: Projects
 software: Software

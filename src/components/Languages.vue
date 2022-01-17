@@ -4,7 +4,7 @@ const { t } = useI18n()
 
 <template>
   <aside class="text-center py-4">
-    <span class="text-xl">{{ t('languages') }} </span>
+    <h2 class="subheading">{{ t('languages') }}</h2>
     <div class="text-2xl children:mx-1">
       <div class="i-logos-kotlin" />
       <div class="i-logos-java" />

@@ -40,3 +40,9 @@ html.dark {
 a {
   color: var(--c-link);
 }
+
+img.square::after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}

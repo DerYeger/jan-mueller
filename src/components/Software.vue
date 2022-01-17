@@ -4,7 +4,7 @@ const { t } = useI18n()
 
 <template>
   <aside class="text-center py-4">
-    <span class="text-xl">{{ t('software') }} </span>
+    <h2 class="subheading">{{ t('software') }}</h2>
     <div class="text-2xl children:mx-1">
       <div class="i-logos-android-icon" />
       <div class="i-logos-angular-icon" />

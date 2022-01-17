@@ -100,7 +100,7 @@ export default defineConfig({
         presetWebFonts({
           fonts: {
             // these will extend the default theme
-            sans: 'Montserrat',
+            sans: 'Montserrat:300,500,700',
           },
         }),
       ],
@@ -113,12 +113,13 @@ export default defineConfig({
           'px-2 py-1 rounded inline-flex justify-center gap-2 leading-30px children:mya !no-underline cursor-pointer text-black dark:text-white opacity-50 hover:opacity-80',
         ],
         ['icon-btn', 'btn-base'],
-        ['prose', 'max-w-65ch text-center opacity-85'],
+        ['prose', 'max-w-65ch text-center opacity-85 fw300'],
         ['flex-center', 'flex items-center justify-center'],
         [
           'card',
-          'pa-4 border-solid border-1-black text-light hover:shadow-xl shadow:transition-400 rounded-xl flex flex-col gap-4 text-base',
+          'pa-4 border-solid text-light hover:shadow-xl rounded-xl flex flex-col gap-4 text-base',
         ],
+        ['subheading', 'mt-0 mb-2'],
       ],
     }),
 
