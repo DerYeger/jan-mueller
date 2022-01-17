@@ -31,4 +31,7 @@ const { t } = useI18n()
   <section class="mt-8 text-sm">
     <Projects />
   </section>
+  <section class="mt-8 text-sm">
+    <Awards />
+  </section>
 </template>
