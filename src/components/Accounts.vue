@@ -4,7 +4,7 @@ const { t } = useI18n()
 
 <template>
   <aside class="text-center py-4">
-    <span class="text-xl">{{ t('accounts') }} </span>
+    <h2 class="subheading">{{ t('accounts') }}</h2>
     <div
       class="text-2xl children:mx-1 children:opacity-100 children:hover:opacity-80"
     >
