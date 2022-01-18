@@ -6,8 +6,8 @@
     <logos-python />
     <logos-typescript-icon />
     <logos-javascript />
-    <logos-html-5 />
-    <logos-css-3 />
+    <vscode-icons-file-type-html />
+    <vscode-icons-file-type-css />
     <logos-sass />
   </IconList>
 </template>
