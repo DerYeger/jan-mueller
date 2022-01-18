@@ -105,7 +105,7 @@ export default defineConfig({
         }),
       ],
       shortcuts: [
-        ['text-base', 'text-black dark:text-white'],
+        ['text-primary', 'text-black dark:text-white'],
         ['text-light', 'opacity-100'],
         ['text-lighter', 'opacity-60 fw400'],
         [
@@ -117,7 +117,7 @@ export default defineConfig({
         ['flex-center', 'flex items-center'],
         [
           'card',
-          'pa-4 border-solid text-light hover:shadow-xl rounded-xl flex flex-col gap-4 text-base',
+          'pa-4 border-solid text-light hover:shadow-xl rounded-xl flex flex-col gap-4 text-primary',
         ],
         ['subheading', 'mt-0 mb-2'],
       ],
