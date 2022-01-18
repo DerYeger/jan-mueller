@@ -14,7 +14,7 @@ const { t } = useI18n()
         rel="noopener"
         target="_blank"
       >
-        <div class="i-carbon-logo-github text-base" />
+        <div class="i-carbon-logo-github text-primary" />
       </a>
       <a
         title="NPM"
