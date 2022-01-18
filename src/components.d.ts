@@ -31,14 +31,12 @@ declare module 'vue' {
     Languages: typeof import('./components/icons/Languages.vue')['default']
     LogosAndroidIcon: typeof import('~icons/logos/android-icon')['default']
     LogosAngularIcon: typeof import('~icons/logos/angular-icon')['default']
-    LogosCss3: typeof import('~icons/logos/css3')['default']
     LogosCypress: typeof import('~icons/logos/cypress')['default']
     LogosD3: typeof import('~icons/logos/d3')['default']
     LogosDockerIcon: typeof import('~icons/logos/docker-icon')['default']
     LogosGitIcon: typeof import('~icons/logos/git-icon')['default']
     LogosGradle: typeof import('~icons/logos/gradle')['default']
     LogosHaskellIcon: typeof import('~icons/logos/haskell-icon')['default']
-    LogosHtml5: typeof import('~icons/logos/html5')['default']
     LogosJava: typeof import('~icons/logos/java')['default']
     LogosJavascript: typeof import('~icons/logos/javascript')['default']
     LogosKotlin: typeof import('~icons/logos/kotlin')['default']
@@ -57,8 +55,10 @@ declare module 'vue' {
     Navigation: typeof import('./components/Navigation.vue')['default']
     Project: typeof import('./components/project/Project.vue')['default']
     Projects: typeof import('./components/project/Projects.vue')['default']
-    README: typeof import('./components/README.md')['default']
     ToolsAndDatabases: typeof import('./components/icons/ToolsAndDatabases.vue')['default']
+    VscodeIconsFileTypeCss: typeof import('~icons/vscode-icons/file-type-css')['default']
+    VscodeIconsFileTypeHtml: typeof import('~icons/vscode-icons/file-type-html')['default']
+    VscodeIconsFileTypeMongo: typeof import('~icons/vscode-icons/file-type-mongo')['default']
   }
 }
 
