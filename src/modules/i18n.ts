@@ -20,9 +20,14 @@ export const install: UserModule = ({ app }) => {
     messages,
     datetimeFormats: {
       en: {
-        month: {
-          year: 'numeric',
+        default: {
+          day: 'numeric',
           month: 'short',
+          year: 'numeric',
+        },
+        month: {
+          month: 'short',
+          year: 'numeric',
         },
       },
     },

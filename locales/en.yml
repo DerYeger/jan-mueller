@@ -17,11 +17,23 @@ button:
   about: About
   back: Back
   blog: Blog
+  documents: Documents
   home: Home
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
 
 details: Details
+
+documents:
+  bachelor-thesis:
+    title: Bachelor's thesis
+    description: Eine Webanwendung zur prädikatenlogischen Modellprüfung von Graphstrukturen
+  koffee:
+    title: Koffee documentation
+    description: University project
+  threadsafe-data-structures:
+    title: Threadsafe data structures in Java
+    description: Seminar paper
 
 education:
   title: Education
@@ -32,6 +44,8 @@ education:
     tu: TU Wien
     uk: University of Kassel
     wg: Wilhelmsgymnasium Kassel
+
+english: English
 
 experience:
   title: Experience
@@ -46,6 +60,8 @@ experience:
   yatta: Yatta Solutions GmbH
 
 frameworks-and-libraries: Frameworks & Libraries
+
+german: German
 
 languages: Languages
 
