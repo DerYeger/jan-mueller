@@ -6,11 +6,21 @@ const { t } = useI18n()
 
 <template>
   <nav class="text-xl my-6 text-center">
-    <router-link class="icon-btn mx-2" to="/" :title="t('button.home')">
+    <router-link
+      class="icon-btn mx-2"
+      to="/"
+      :title="t('button.home')"
+      active-class="!text-$primary"
+    >
       <carbon-home />
     </router-link>
 
-    <router-link class="icon-btn mx-2" to="/blog" :title="t('button.blog')">
+    <router-link
+      class="icon-btn mx-2"
+      to="/blog"
+      :title="t('button.blog')"
+      active-class="!text-$primary"
+    >
       <carbon-blog />
     </router-link>
 
@@ -18,8 +28,18 @@ const { t } = useI18n()
       class="icon-btn mx-2"
       to="/documents"
       :title="t('button.documents')"
+      active-class="!text-$primary"
     >
       <carbon-document />
+    </router-link>
+
+    <router-link
+      class="icon-btn mx-2"
+      to="/about"
+      :title="t('button.about')"
+      active-class="!text-$primary"
+    >
+      <carbon-dicom-overlay />
     </router-link>
 
     <button
@@ -30,10 +50,6 @@ const { t } = useI18n()
       <carbon-moon v-if="isDark" />
       <carbon-sun v-else />
     </button>
-
-    <router-link class="icon-btn mx-2" to="/about" :title="t('button.about')">
-      <carbon-dicom-overlay />
-    </router-link>
 
     <a
       class="icon-btn mx-2"
