@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import FrameworksAndLibraries from '~/components/icons/FrameworksAndLibraries.vue'
-import ToolsAndDatabases from '~/components/icons/ToolsAndDatabases.vue'
-
 const { t } = useI18n()
 </script>
 
