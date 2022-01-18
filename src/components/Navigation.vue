@@ -36,5 +36,15 @@ const { t } = useI18n()
     >
       <carbon-logo-github />
     </a>
+
+    <a
+      class="icon-btn mx-2"
+      href="https://www.xing.com/profile/Jan_Mueller1092/cv"
+      rel="noopener"
+      target="_blank"
+      title="XING"
+    >
+      <carbon-logo-xing />
+    </a>
   </nav>
 </template>

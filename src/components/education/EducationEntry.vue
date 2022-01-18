@@ -16,7 +16,7 @@ const { t } = useI18n()
     </span>
     <span class="text-lighter">
       <Date :date="education.startDate" />
-      -
+      –
       <Date v-if="education.endDate" :date="education.endDate" />
       <span v-else>{{ t('today') }}</span>
     </span>
