@@ -39,6 +39,11 @@ html.dark {
 
 a {
   color: var(--c-link);
+  transition: opacity 200ms ease;
+}
+
+a:hover {
+  opacity: 80%;
 }
 
 img.square::after {
