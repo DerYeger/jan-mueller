@@ -8,6 +8,7 @@ declare module 'vue' {
     Avatar: typeof import('./components/Avatar.vue')['default']
     AwardEntry: typeof import('./components/award/AwardEntry.vue')['default']
     Awards: typeof import('./components/award/Awards.vue')['default']
+    CarbonArrowRight: typeof import('~icons/carbon/arrow-right')['default']
     CarbonBlog: typeof import('~icons/carbon/blog')['default']
     CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default']
     CarbonHome: typeof import('~icons/carbon/home')['default']

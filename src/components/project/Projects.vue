@@ -19,8 +19,10 @@ const { t } = useI18n()
         href="https://github.com/DerYeger?tab=repositories"
         rel="noopener"
         target="_blank"
+        class="px-2 py-1 no-underline flex items-center gap-1 rounded-xl"
       >
         {{ t('and-more') }}
+        <carbon-arrow-right />
       </a>
     </div>
   </div>
