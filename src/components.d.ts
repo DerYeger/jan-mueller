@@ -10,6 +10,7 @@ declare module 'vue' {
     CarbonArrowRight: typeof import('~icons/carbon/arrow-right')['default']
     CarbonBlog: typeof import('~icons/carbon/blog')['default']
     CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default']
+    CarbonDocument: typeof import('~icons/carbon/document')['default']
     CarbonHome: typeof import('~icons/carbon/home')['default']
     CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
     CarbonLogoXing: typeof import('~icons/carbon/logo-xing')['default']
