@@ -10,7 +10,7 @@ const { t } = useI18n()
       class="icon-btn mx-2"
       to="/"
       :title="t('button.home')"
-      active-class="!text-$primary"
+      active-class="!text-$primary op90"
     >
       <carbon-home />
     </router-link>
@@ -19,7 +19,7 @@ const { t } = useI18n()
       class="icon-btn mx-2"
       to="/blog"
       :title="t('button.blog')"
-      active-class="!text-$primary"
+      active-class="!text-$primary op90"
     >
       <carbon-blog />
     </router-link>
@@ -28,7 +28,7 @@ const { t } = useI18n()
       class="icon-btn mx-2"
       to="/documents"
       :title="t('button.documents')"
-      active-class="!text-$primary"
+      active-class="!text-$primary op90"
     >
       <carbon-document />
     </router-link>
@@ -37,7 +37,7 @@ const { t } = useI18n()
       class="icon-btn mx-2"
       to="/about"
       :title="t('button.about')"
-      active-class="!text-$primary"
+      active-class="!text-$primary op90"
     >
       <carbon-dicom-overlay />
     </router-link>
