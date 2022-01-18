@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import DateRange from '~/components/date/DateRange.vue'
 import { Experience } from '~/types'
 
 const props = defineProps<{ experience: Experience }>()
