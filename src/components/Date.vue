@@ -11,5 +11,5 @@ const formattedDate = computed(() => d(new Date(date.value), format.value))
 </script>
 
 <template>
-  <span class="text-lighter">{{ formattedDate }}</span>
+  <span>{{ formattedDate }}</span>
 </template>

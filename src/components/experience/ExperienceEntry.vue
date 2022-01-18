@@ -24,11 +24,11 @@ const { t } = useI18n()
     <span class="text-light">
       {{ t(`experience.${experience.description}`) }}
     </span>
-    <span>
+    <span class="text-lighter">
       <Date :date="experience.startDate" />
       -
       <Date v-if="experience.endDate" :date="experience.endDate" />
-      <span v-else class="text-lighter">{{ t('today') }}</span>
+      <span v-else>{{ t('today') }}</span>
     </span>
   </div>
 </template>
