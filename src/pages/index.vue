@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import FrameworksAndLibraries from '~/components/icons/FrameworksAndLibraries.vue'
+import ToolsAndDatabases from '~/components/icons/ToolsAndDatabases.vue'
+
 const { t } = useI18n()
 </script>
 
@@ -17,19 +20,19 @@ const { t } = useI18n()
     <div
       class="flex-center flex-col sm-flex-row-reverse sm-space-between sm-gap-8 w-full justify-between"
     >
-      <Accounts class="sm-text-right" />
+      <Languages class="sm-text-right" />
       <p class="prose text-center sm-text-left" v-html="t('about.hobbies')" />
     </div>
     <div
       class="flex-center flex-col sm-flex-row sm-gap-8 w-full justify-between"
     >
-      <Languages class="sm-text-left" />
+      <FrameworksAndLibraries class="sm-text-left" />
       <p class="prose text-center sm-text-right" v-html="t('about.skills')" />
     </div>
     <div
       class="flex-center flex-col sm-flex-row-reverse sm-gap-8 w-full justify-between"
     >
-      <Software class="sm-text-right" />
+      <ToolsAndDatabases class="sm-text-right" />
       <p
         class="prose text-center sm-text-left"
         v-html="t('about.inspiration')"
