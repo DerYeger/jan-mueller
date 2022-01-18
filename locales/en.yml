@@ -47,6 +47,8 @@ experience:
   uk: University of Kassel
   yatta: Yatta Solutions GmbH
 
+frameworks-and-libraries: Frameworks & Libraries
+
 languages: Languages
 
 meta:
@@ -61,3 +63,5 @@ software: Software
 source: Source
 
 today: Today
+
+tools-and-databases: Tools & Databases

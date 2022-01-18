@@ -6,7 +6,7 @@ import Vue from '@vitejs/plugin-vue'
 import matter from 'gray-matter'
 import LinkAttributes from 'markdown-it-link-attributes'
 import Prism from 'markdown-it-prism'
-import { presetIcons, presetUno, presetWebFonts } from 'unocss'
+import { presetUno, presetWebFonts } from 'unocss'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -74,7 +74,7 @@ export default defineConfig({
         // https://github.com/antfu/unplugin-icons
         IconsResolver({
           componentPrefix: '',
-          enabledCollections: ['carbon'],
+          enabledCollections: ['carbon', 'logos'],
         }),
       ],
 
@@ -84,18 +84,13 @@ export default defineConfig({
     // https://github.com/antfu/unplugin-icons
     Icons({
       autoInstall: true,
+      defaultStyle: 'display: inline-block; vertical-align: middle;',
     }),
 
     Unocss({
       presets: [
         presetUno({
           dark: 'class',
-        }),
-        presetIcons({
-          extraProperties: {
-            display: 'inline-block',
-            'vertical-align': 'middle',
-          },
         }),
         presetWebFonts({
           fonts: {

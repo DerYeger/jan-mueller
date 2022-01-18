@@ -26,7 +26,7 @@ const { t } = useI18n()
     </span>
     <span class="text-lighter">
       <Date :date="experience.startDate" />
-      -
+      –
       <Date v-if="experience.endDate" :date="experience.endDate" />
       <span v-else>{{ t('today') }}</span>
     </span>
