@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import DateRange from '~/components/date/DateRange.vue'
 import { Experience } from '~/types'
 
 const props = defineProps<{ experience: Experience }>()
@@ -24,11 +25,10 @@ const { t } = useI18n()
     <span class="text-light">
       {{ t(`experience.${experience.description}`) }}
     </span>
-    <span class="text-lighter">
-      <Date :date="experience.startDate" />
-      –
-      <Date v-if="experience.endDate" :date="experience.endDate" />
-      <span v-else>{{ t('today') }}</span>
-    </span>
+    <DateRange
+      class="text-lighter"
+      :start-date="experience.startDate"
+      :end-date="experience.endDate"
+    />
   </div>
 </template>

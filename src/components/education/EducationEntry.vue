@@ -14,11 +14,10 @@ const { t } = useI18n()
     <span class="text-light">
       {{ t(`education.institutions.${education.institution}`) }}
     </span>
-    <span class="text-lighter">
-      <Date :date="education.startDate" />
-      –
-      <Date v-if="education.endDate" :date="education.endDate" />
-      <span v-else>{{ t('today') }}</span>
-    </span>
+    <DateRange
+      class="text-lighter"
+      :start-date="education.startDate"
+      :end-date="education.endDate"
+    />
   </div>
 </template>
