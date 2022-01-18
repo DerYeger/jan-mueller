@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const age = Math.abs(
-  new Date(Date.now() - new Date('1998-06-03').getTime()).getFullYear() - 1970
-)
+import { useAge } from '~/composables'
+
+const age = useAge()
 
 const { t } = useI18n()
 </script>

@@ -30,11 +30,12 @@ mark {
 }
 
 :root {
-  --c-link: #007AFE;
+  --primary: #007AFE;
+  --c-link: var(--primary);
 }
 
 html.dark {
-  --c-link: #FDD888;
+  --primary: #FDD888;
 }
 
 a {
