@@ -1,3 +1,4 @@
+export * from './age'
 export * from './awards'
 export * from './dark'
 export * from './education'

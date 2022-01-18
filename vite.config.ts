@@ -112,7 +112,7 @@ export default defineConfig({
         ['flex-center', 'flex items-center'],
         [
           'card',
-          'pa-4 border-solid text-light hover:shadow-xl rounded-xl flex flex-col gap-4 text-primary',
+          'pa-4 border-solid border-2 border-$primary text-light hover:shadow-xl rounded-xl flex flex-col gap-4 text-primary op80 hover:op100',
         ],
         ['subheading', 'mt-0 mb-2'],
       ],
