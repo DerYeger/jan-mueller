@@ -14,6 +14,14 @@ const { t } = useI18n()
       <carbon-blog />
     </router-link>
 
+    <router-link
+      class="icon-btn mx-2"
+      to="/documents"
+      :title="t('button.documents')"
+    >
+      <carbon-document />
+    </router-link>
+
     <button
       class="icon-btn mx-2"
       :title="t('button.toggle_dark')"

@@ -14,25 +14,32 @@ const routes = (router.getRoutes() as unknown as RouteWithFrontmatter[])
 
 const posts = computed(() => routes)
 
-const { d } = useI18n()
+const { t } = useI18n()
 </script>
 
 <template>
-  <masonry-wall :items="posts" :ssr-columns="1" :column-width="300" :gap="16">
-    <template #default="{ item }">
-      <router-link :to="item.path" class="no-underline">
-        <div class="card">
-          <span class="text-xl">
-            {{ item.meta.frontmatter.title }}
-          </span>
-          <span class="text-lighter">
-            {{ d(item.meta.frontmatter.date) }}
-          </span>
-          <span class="text-light">
-            {{ item.meta.frontmatter.description }}
-          </span>
-        </div>
-      </router-link>
-    </template>
+  <masonry-wall
+    v-slot="{ item: post }"
+    :items="posts"
+    :ssr-columns="1"
+    :column-width="300"
+    :gap="16"
+    class="text-sm"
+  >
+    <router-link :to="post.path" class="no-underline">
+      <div class="card">
+        <span class="text-xl">
+          {{ post.meta.frontmatter.title }}
+        </span>
+        <span class="text-lighter">
+          <Date :date="post.meta.frontmatter.date" format="default" />
+          ·
+          <span>{{ t(post.meta.frontmatter.language) }}</span>
+        </span>
+        <span class="text-light">
+          {{ post.meta.frontmatter.description }}
+        </span>
+      </div>
+    </router-link>
   </masonry-wall>
 </template>
