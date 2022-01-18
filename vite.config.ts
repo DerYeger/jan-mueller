@@ -19,7 +19,7 @@ import Pages from 'vite-plugin-pages'
 import { VitePWA } from 'vite-plugin-pwa'
 import Layouts from 'vite-plugin-vue-layouts'
 
-const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
+const markdownWrapperClasses = 'prose children:text-start'
 
 export default defineConfig({
   resolve: {
@@ -113,7 +113,7 @@ export default defineConfig({
           'px-2 py-1 rounded inline-flex justify-center gap-2 leading-30px children:mya !no-underline cursor-pointer text-black dark:text-white opacity-50 hover:opacity-80',
         ],
         ['icon-btn', 'btn-base'],
-        ['prose', 'text-center opacity-85 fw400 lh-7'],
+        ['prose', 'opacity-85 fw400 lh-7'],
         ['flex-center', 'flex items-center'],
         [
           'card',

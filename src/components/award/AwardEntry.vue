@@ -12,7 +12,7 @@ const { t } = useI18n()
   <div class="flex flex-col lh-6">
     <span class="text-light">{{ t(`awards.${award.name}`) }}</span>
     <span>
-      <Date :date="award.date" />
+      <Date class="text-lighter" :date="award.date" />
       <template v-if="award.href">
         ·
         <a :href="award.href" rel="noopener" target="_blank">
