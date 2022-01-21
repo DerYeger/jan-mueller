@@ -26,7 +26,7 @@ const { t } = useI18n()
 
     <router-link
       class="icon-btn mx-2"
-      to="/documents"
+      to="/files"
       :title="t('button.documents')"
       active-class="!text-$primary op90"
     >
