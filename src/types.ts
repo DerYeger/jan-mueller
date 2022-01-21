@@ -15,8 +15,7 @@ export interface Award {
   href?: string
 }
 
-export interface Document {
-  name: string
+export interface Document extends File {
   date: string
   language: string
 }
@@ -35,6 +34,13 @@ export interface Experience {
   endDate?: string
   href?: string
 }
+
+export interface File {
+  name: string
+  path: string
+}
+
+export type Model = File
 
 export interface Project {
   repo: string

@@ -7256,6 +7256,11 @@ vue-i18n@9.1.9:
     "@intlify/vue-devtools" "9.1.9"
     "@vue/devtools-api" "^6.0.0-beta.7"
 
+vue-marmoset-viewer@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-2.1.0.tgz#aaa628da4387f62bdc891eee47a4f4cf6a5478ff"
+  integrity sha512-9QuclLiUBx7BNaNPBVwARjaolBUJiIaJYX44o9+mBLKZeW9u15+iIGTzsswHdC+hQ8pF7b6gLiBOVSY0QOZuFA==
+
 vue-router@4.0.12:
   version "4.0.12"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.12.tgz#8dc792cddf5bb1abcc3908f9064136de7e13c460"
