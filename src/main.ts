@@ -2,7 +2,7 @@ import MasonryWall from '@yeger/vue-masonry-wall'
 import { setupLayouts } from 'virtual:generated-layouts'
 import generatedRoutes from 'virtual:generated-pages'
 import { ViteSSG } from 'vite-ssg'
-import { MarmosetViewer } from 'vue-marmoset-viewer'
+import * as VueMarmosetViewer from 'vue-marmoset-viewer'
 
 import App from './App.vue'
 
@@ -22,6 +22,6 @@ export const createApp = ViteSSG(
       i.install?.(ctx)
     )
     ctx.app.use(MasonryWall)
-    ctx.app.use(MarmosetViewer)
+    ctx.app.use(VueMarmosetViewer.MarmosetViewer)
   }
 )
