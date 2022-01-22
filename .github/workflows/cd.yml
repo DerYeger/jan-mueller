@@ -15,8 +15,6 @@ jobs:
           node-version: 16
       - name: Build
         run: yarn build
-      - name: Create 404.html file
-        run: cp ./dist/200.html ./dist/404.html
       - name: Upload
         uses: actions/upload-artifact@v2
         with:
