@@ -196,7 +196,7 @@ export default defineConfig({
       const dynamicPaths = [...useDocuments(), ...useModels()].map(
         (file) => `/files/${file.type}/${file.name}`
       )
-      return [...staticPaths, ...dynamicPaths]
+      return [...staticPaths, ...dynamicPaths, '/404']
     },
   },
 
