@@ -29,7 +29,9 @@ const { t } = useI18n()
       {{ t(`files.models.${name}.description`) }}
     </p>
     <div class="flex-1">
-      <MarmosetViewer :src="modelPath" responsive />
+      <ClientOnly>
+        <MarmosetViewer :src="modelPath" responsive />
+      </ClientOnly>
     </div>
   </div>
 </template>
