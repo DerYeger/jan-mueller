@@ -21,6 +21,17 @@ export const createApp = ViteSSG(
     Object.values(import.meta.globEager('./modules/*.ts')).map((i) =>
       i.install?.(ctx)
     )
+    if (import.meta.env.SSR) {
+      /* eslint-disable @typescript-eslint/no-empty-function */
+      // eslint-disable-next-line no-global-assign
+      global.ResizeObserver = class DummyResizeObserver {
+        public constructor() {}
+        public disconnect() {}
+        public observe() {}
+        public unobserve() {}
+      }
+      /* eslint-enable @typescript-eslint/no-empty-function */
+    }
     ctx.app.use(MasonryWall)
     ctx.app.use(VueMarmosetViewer.MarmosetViewer)
   }
