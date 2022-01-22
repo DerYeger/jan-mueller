@@ -19,6 +19,9 @@ import Pages from 'vite-plugin-pages'
 import { VitePWA } from 'vite-plugin-pwa'
 import Layouts from 'vite-plugin-vue-layouts'
 
+import { useDocuments } from './src/composables/documents'
+import { useModels } from './src/composables/models'
+
 const markdownWrapperClasses = 'prose children:text-start'
 
 export default defineConfig({
@@ -188,6 +191,13 @@ export default defineConfig({
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
+    includedRoutes(paths) {
+      const staticPaths = paths.filter((path) => !path.includes(':'))
+      const dynamicPaths = [...useDocuments(), ...useModels()].map(
+        (file) => `/files/${file.type}/${file.name}`
+      )
+      return [...staticPaths, ...dynamicPaths]
+    },
   },
 
   optimizeDeps: {
