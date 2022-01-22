@@ -32,7 +32,7 @@
     "vue": "3.2.26",
     "vue-demi": "0.12.1",
     "vue-i18n": "9.1.9",
-    "vue-marmoset-viewer": "2.1.0",
+    "vue-marmoset-viewer": "3.0.0",
     "vue-router": "4.0.12"
   },
   "devDependencies": {
