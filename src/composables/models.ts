@@ -2,8 +2,10 @@ import { Model } from '~/types'
 
 const models: Model[] = [
   {
+    type: 'models',
     name: 'an-26',
-    path: 'an-26.mview',
+    date: '2020-10',
+    dateFormat: 'month',
   },
 ]
 
