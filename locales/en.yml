@@ -17,23 +17,12 @@ button:
   about: About / Impressum
   back: Back
   blog: Blog
-  documents: Documents
+  files: Files
   home: Home
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
 
 details: Details
-
-documents:
-  bachelor-thesis:
-    title: Bachelor's thesis
-    description: Eine Webanwendung zur prädikatenlogischen Modellprüfung von Graphstrukturen
-  koffee:
-    title: Koffee documentation
-    description: University project
-  threadsafe-data-structures:
-    title: Threadsafe data structures in Java
-    description: Seminar paper
 
 education:
   title: Education
@@ -58,6 +47,22 @@ experience:
   tutor-tcs: Tutor · Theoretical Computer Science / Formal Methods
   uk: University of Kassel
   yatta: Yatta Solutions GmbH
+
+files:
+  documents:
+    bachelor-thesis:
+      title: Bachelor's thesis
+      description: Eine Webanwendung zur prädikatenlogischen Modellprüfung von Graphstrukturen
+    koffee:
+      title: Koffee documentation
+      description: University project
+    threadsafe-data-structures:
+      title: Threadsafe data structures in Java
+      description: Seminar paper
+  models:
+    an-26:
+      title: An-26
+      description: 3D model, created with Blender and Substance Painter
 
 frameworks-and-libraries: Frameworks & Libraries
 

@@ -2,22 +2,22 @@ import { Document } from '~/types'
 
 const documents: Document[] = [
   {
+    type: 'documents',
     name: 'bachelor-thesis',
     date: '2021-02-10',
     language: 'german',
-    path: 'bachelor-thesis.pdf',
   },
   {
+    type: 'documents',
     name: 'koffee',
     date: '2020-10-21',
     language: 'german',
-    path: 'koffee.pdf',
   },
   {
+    type: 'documents',
     name: 'threadsafe-data-structures',
     date: '2020-02-12',
     language: 'german',
-    path: 'threadsafe-data-structures.pdf',
   },
 ]
 

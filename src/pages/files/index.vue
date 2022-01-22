@@ -17,18 +17,26 @@ const { t } = useI18n()
     :gap="16"
     class="text-sm"
   >
-    <router-link :to="`/files/${document.path}`" class="no-underline">
+    <router-link
+      :to="`/files/${document.type}/${document.name}`"
+      class="no-underline"
+    >
       <div class="card">
         <span class="text-xl">
-          {{ t(`documents.${document.name}.title`) }}
+          {{ t(`files.${document.type}.${document.name}.title`) }}
         </span>
-        <!--        <span class="text-lighter">-->
-        <!--          <Date :date="document.date" format="default" />-->
-        <!--          ·-->
-        <!--          <span>{{ t(document.language) }}</span>-->
-        <!--        </span>-->
+        <span class="text-lighter">
+          <Date
+            :date="document.date"
+            :format="document.dateFormat ?? 'default'"
+          />
+          <template v-if="document.language">
+            ·
+            <span>{{ t(document.language) }}</span>
+          </template>
+        </span>
         <span class="text-light">
-          {{ t(`documents.${document.name}.description`) }}
+          {{ t(`files.${document.type}.${document.name}.description`) }}
         </span>
       </div>
     </router-link>
