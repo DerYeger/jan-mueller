@@ -6,32 +6,32 @@ const { t } = useI18n()
   <section class="flex-center flex-col">
     <!-- eslint-disable vue/no-v-html -->
     <div
-      class="flex-center flex-col sm-flex-row sm-gap-8 w-full justify-between"
+      class="flex-center flex-col md-flex-row md-gap-8 w-full justify-between"
     >
       <Avatar class="pa-4" />
       <div>
-        <Facts class="text-center sm-text-right" />
-        <p class="prose text-center sm-text-right" v-html="t('about.intro')" />
+        <Facts class="text-center md-text-right" />
+        <p class="prose text-center md-text-right" v-html="t('about.intro')" />
       </div>
     </div>
     <div
-      class="flex-center flex-col sm-flex-row-reverse sm-space-between sm-gap-8 w-full justify-between"
+      class="flex-center flex-col md-flex-row-reverse md-space-between md-gap-8 w-full justify-between"
     >
-      <Languages class="sm-text-right" />
-      <p class="prose text-center sm-text-left" v-html="t('about.hobbies')" />
+      <Languages class="md-text-right" />
+      <p class="prose text-center md-text-left" v-html="t('about.hobbies')" />
     </div>
     <div
-      class="flex-center flex-col sm-flex-row sm-gap-8 w-full justify-between"
+      class="flex-center flex-col md-flex-row md-gap-8 w-full justify-between"
     >
-      <FrameworksAndLibraries class="sm-text-left" />
-      <p class="prose text-center sm-text-right" v-html="t('about.skills')" />
+      <FrameworksAndLibraries class="md-text-left" />
+      <p class="prose text-center md-text-right" v-html="t('about.skills')" />
     </div>
     <div
-      class="flex-center flex-col sm-flex-row-reverse sm-gap-8 w-full justify-between"
+      class="flex-center flex-col md-flex-row-reverse md-gap-8 w-full justify-between"
     >
-      <ToolsAndDatabases class="sm-text-right" />
+      <ToolsAndDatabases class="md-text-right" />
       <p
-        class="prose text-center sm-text-left"
+        class="prose text-center md-text-left"
         v-html="t('about.inspiration')"
       />
     </div>
