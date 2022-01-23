@@ -1,3 +1,54 @@
+# [2.0.0](https://github.com/DerYeger/jan-mueller/compare/v1.44.4...v2.0.0) (2022-01-23)
+
+
+### Bug Fixes
+
+* add dummy `ResizeObserver` for SSR ([7b768b7](https://github.com/DerYeger/jan-mueller/commit/7b768b7c46b143ed5e081e7f091ec03d5e269774))
+* **date:** make `format` prop optional ([ee1e44e](https://github.com/DerYeger/jan-mueller/commit/ee1e44e84ad0145b258fee3bacb1c6bdf085753b))
+* **deps:** update vue-marmoset-viewer to v3.0.0 ([b362121](https://github.com/DerYeger/jan-mueller/commit/b362121317db2d5951146fdf621dcd0cdb482069))
+* move classes from `#app` to `body` ([b110d56](https://github.com/DerYeger/jan-mueller/commit/b110d565e0e825b807e38ac2d35fd7b6ccb07623))
+
+
+### Features
+
+* **404:** improve layout ([0738ff5](https://github.com/DerYeger/jan-mueller/commit/0738ff5d9f499d8e00d273814f14e820a41cb96c))
+* add documents ([b1e2039](https://github.com/DerYeger/jan-mueller/commit/b1e20399aa2182cd1649b608ccd49243d1ccffb7))
+* add footer ([29cce95](https://github.com/DerYeger/jan-mueller/commit/29cce95a02b8dbe4b5cf81cab1ce65d83fccbb56))
+* add logo ([3500ca5](https://github.com/DerYeger/jan-mueller/commit/3500ca531d7a32f6e2b05526f8813e7c69e0ec58))
+* add model viewer ([72cdb2d](https://github.com/DerYeger/jan-mueller/commit/72cdb2d40b0f0c6eace039acf99c4c2cafa56f57))
+* **blog:** improve layout ([132a500](https://github.com/DerYeger/jan-mueller/commit/132a500e9befeeb2d5f654bb2b79bee105b2e753))
+* **files:** add separate pages for documents and models ([3355abd](https://github.com/DerYeger/jan-mueller/commit/3355abd88b11c1a5eda04c8c77e4e1bbe9d66462))
+* **footer:** add link to source ([0f0b866](https://github.com/DerYeger/jan-mueller/commit/0f0b8662c0e1531697068f616079cfce764d798d))
+* generate 404 page ([829be90](https://github.com/DerYeger/jan-mueller/commit/829be90cf5c5f7c344c50bfe9382e78db0a662d4))
+* **home:** add accounts and languages ([7e10fdd](https://github.com/DerYeger/jan-mueller/commit/7e10fdd43ca2adc3112cbc9a789d6405a5d21634))
+* **home:** add avatar ([4eec31c](https://github.com/DerYeger/jan-mueller/commit/4eec31c492de2f5c2a15b690f76a51a81c0869f0))
+* **home:** add awards ([fe01163](https://github.com/DerYeger/jan-mueller/commit/fe01163cbdc88ed07eeaac59df30180b3ac2a2f1))
+* **home:** add education ([fefc257](https://github.com/DerYeger/jan-mueller/commit/fefc25756fc4b0880b5bbe792ceafc5f80d9380d))
+* **home:** add experience ([06cf477](https://github.com/DerYeger/jan-mueller/commit/06cf47755e8c9a6fe3669de9b3ef68a0ee2804b3))
+* **home:** add facts ([9e033ea](https://github.com/DerYeger/jan-mueller/commit/9e033ea434d86adb920b918a2151b042260e7c0f))
+* **home:** add projects ([f0dbaa3](https://github.com/DerYeger/jan-mueller/commit/f0dbaa36b902bff2b501ebab57d6ea4bb8287ee8))
+* **home:** add software ([278647a](https://github.com/DerYeger/jan-mueller/commit/278647affd5b51ac22612aa06e8d4c3e6d384b13))
+* **home:** improve layout ([0ec8e3f](https://github.com/DerYeger/jan-mueller/commit/0ec8e3f0b841b9afb41a5fd3b1e9d3b28de9c26a))
+* **home:** improve layout ([60fbb95](https://github.com/DerYeger/jan-mueller/commit/60fbb950647ca8edcf70b2d1ccaa925f9311620e))
+* **home:** rework icon lists ([c5c10dc](https://github.com/DerYeger/jan-mueller/commit/c5c10dc46e403ae50742db00c7fbfe0061edf09e))
+* **home:** update layout ([bbdb4d5](https://github.com/DerYeger/jan-mueller/commit/bbdb4d5dde294316686fa578bea91d446a21923d))
+* improve font sizes ([111e9ac](https://github.com/DerYeger/jan-mueller/commit/111e9acec985d0d808521e50a5f100174e6e19a6))
+* improve link style ([71c496a](https://github.com/DerYeger/jan-mueller/commit/71c496a9c984a25251ec0b59be8fe946f9589ed0))
+* improve style ([54babdb](https://github.com/DerYeger/jan-mueller/commit/54babdbd90fc08c40adbaee9fd16907c9d19725c))
+* improve style ([5fde0e6](https://github.com/DerYeger/jan-mueller/commit/5fde0e69980fb42e4aeb2c39df8a5e259f3a3dea))
+* improve style ([f350fa2](https://github.com/DerYeger/jan-mueller/commit/f350fa260c6a6e0eb35db4e48d1b4cd4b074d84c))
+* improve style ([787416c](https://github.com/DerYeger/jan-mueller/commit/787416c3980a055cd9d9a7a4ab239100f5cc84d7))
+* **navigation:** highlight active route ([b122701](https://github.com/DerYeger/jan-mueller/commit/b1227015e70317b548b0ce4d0e428b8e99e16f2a))
+* render dynamic pages ([467848a](https://github.com/DerYeger/jan-mueller/commit/467848aff5da4b5b0de9bde199eaeae4bab8d671))
+* **seo:** add meta data ([0105a59](https://github.com/DerYeger/jan-mueller/commit/0105a591761822f50c0afbe0c10f578da017dac9))
+* use `@unocss/preset-web-fonts` ([247f602](https://github.com/DerYeger/jan-mueller/commit/247f602be733584a0142b10bce73da28fc49d9e4))
+* use vite ([5b1f382](https://github.com/DerYeger/jan-mueller/commit/5b1f382af2c866672572016a3310fc01acf2dabd))
+
+
+### BREAKING CHANGES
+
+* Migrate to Vite
+
 ## [1.44.4](https://github.com/DerYeger/jan-mueller/compare/v1.44.3...v1.44.4) (2022-01-22)
 
 
