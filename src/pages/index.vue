@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { useTitleTemplate } from '~/composables'
+
+useTitleTemplate('button.home')
+
 const { t } = useI18n()
 </script>
 

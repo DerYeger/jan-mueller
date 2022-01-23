@@ -6,12 +6,10 @@ const { t } = useI18n()
 const router = useRouter()
 
 const host = 'https://jan-mueller.at'
-const title = 'Jan Müller'
 const description = t('meta.description')
 const ogImage = `${host}/og-logo.png`
 
 useHead({
-  title,
   link: [
     {
       rel: 'canonical',
@@ -24,11 +22,6 @@ useHead({
       content: description,
     },
     {
-      hid: 'twitter:title',
-      name: 'twitter:title',
-      content: title,
-    },
-    {
       hid: 'twitter:description',
       name: 'twitter:description',
       content: description,
@@ -39,16 +32,6 @@ useHead({
       content: ogImage,
     },
     {
-      hid: 'twitter:image:alt',
-      name: 'twitter:image:alt',
-      content: title,
-    },
-    {
-      hid: 'og:title',
-      property: 'og:title',
-      content: title,
-    },
-    {
       hid: 'og:description',
       property: 'og:description',
       content: description,
@@ -57,11 +40,6 @@ useHead({
       hid: 'og:image',
       name: 'og:image',
       content: ogImage,
-    },
-    {
-      hid: 'og:image:alt',
-      property: 'og:image:alt',
-      content: title,
     },
   ],
 })

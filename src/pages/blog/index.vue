@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { useTitleTemplate } from '~/composables'
 import { RouteWithFrontmatter } from '~/types'
+
+useTitleTemplate('button.blog')
 
 const router = useRouter()
 

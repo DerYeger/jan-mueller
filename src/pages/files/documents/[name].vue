@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useDocuments } from '~/composables'
+import { useDocuments, useTitleTemplate } from '~/composables'
 
 const props = defineProps<{ name: string }>()
 
@@ -18,6 +18,8 @@ watch(
   },
   { immediate: true }
 )
+
+useTitleTemplate(`files.documents.${name.value}.title`)
 </script>
 
 <template>

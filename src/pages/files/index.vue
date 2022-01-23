@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Dot from '~/components/Dot.vue'
-import { useDocuments, useModels } from '~/composables'
+import { useDocuments, useModels, useTitleTemplate } from '~/composables'
+
+useTitleTemplate('button.files')
 
 const documents = useDocuments()
 const models = useModels()
