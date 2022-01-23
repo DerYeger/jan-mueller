@@ -1,3 +1,15 @@
+# [2.1.0](https://github.com/DerYeger/jan-mueller/compare/v2.0.2...v2.1.0) (2022-01-23)
+
+
+### Bug Fixes
+
+* disable broken meta tags ([77a6700](https://github.com/DerYeger/jan-mueller/commit/77a6700281bf1d464fed5335781dfa322b9d4b49))
+
+
+### Features
+
+* use title template ([721b8cb](https://github.com/DerYeger/jan-mueller/commit/721b8cb316458448171c2eafbdf5e114ef6470a1))
+
 ## [2.0.2](https://github.com/DerYeger/jan-mueller/compare/v2.0.1...v2.0.2) (2022-01-23)
 
 
