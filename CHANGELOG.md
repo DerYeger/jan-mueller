@@ -1,3 +1,11 @@
+## [2.0.1](https://github.com/DerYeger/jan-mueller/compare/v2.0.0...v2.0.1) (2022-01-23)
+
+
+### Bug Fixes
+
+* move link to `/about` to footer ([9043d1c](https://github.com/DerYeger/jan-mueller/commit/9043d1c7855a4c1b5c3b918fdfc1415ded907c09))
+* use `md` breakpoint ([82b5fac](https://github.com/DerYeger/jan-mueller/commit/82b5facb48b0c9ce7f6228ba4fa982b8d21e8d46))
+
 # [2.0.0](https://github.com/DerYeger/jan-mueller/compare/v1.44.4...v2.0.0) (2022-01-23)
 
 
