@@ -33,7 +33,13 @@ jobs:
     needs: build
     strategy:
       matrix:
-        browser: [chrome, firefox]
+        include:
+          - browser: chrome
+            record: true
+            video: true
+          - browser: firefox
+            record: true
+            video: false
     steps:
       - name: Setup
         uses: DerYeger/yarn-setup-action@master
@@ -50,9 +56,9 @@ jobs:
           install: false
           start: yarn preview
           browser: ${{ matrix.browser }}
-          record: true
+          record: ${{ matrix.record }}
           tag: ${{ matrix.browser }},${{ github.event_name }}
-          config: videoUploadOnPasses=false
+          config: videoUploadOnPasses=false,video=${{ matrix.video }}
         env:
           COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
