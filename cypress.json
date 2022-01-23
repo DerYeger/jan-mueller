@@ -1,4 +1,5 @@
 {
-  "baseUrl": "http://localhost:3333",
+  "projectId": "nhkgy5",
+  "baseUrl": "http://localhost:5000",
   "chromeWebSecurity": false
 }

@@ -18,6 +18,7 @@
     "fix": "yarn pretty && yarn lint:eslint --fix ",
     "test": "vitest run",
     "test:e2e": "cypress open",
+    "test:e2e:run": "cypress run",
     "test:unit": "vitest",
     "typecheck": "vue-tsc --noEmit"
   },
