@@ -1,15 +1,46 @@
-# jan-mueller
+<p align="center">
+  <img src="/public/og-logo.png" alt="Logo" height="192px">
+</p>
 
-> Personal website of [Jan Müller](https://github.com/DerYeger).
+<p align="center">
+  Personal website of <a href="https://github.com/DerYeger">
+    Jan M&uuml;ller
+  </a>
+</p>
 
-[![CI](https://github.com/DerYeger/jan-mueller/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/DerYeger/jan-mueller/actions/workflows/ci.yml)
-[![CD](https://github.com/DerYeger/jan-mueller/actions/workflows/cd.yml/badge.svg)](https://github.com/DerYeger/jan-mueller/actions/workflows/cd.yml)
+<p align="center">
+  <a href="https://github.com/DerYeger/jan-mueller/actions/workflows/ci.yml">
+    <img alt="CI" src="https://img.shields.io/github/workflow/status/DerYeger/jan-mueller/CI?label=ci&logo=github&color=#4DC71F">
+  </a>
+  <a href="https://github.com/DerYeger/jan-mueller/actions/workflows/cd.yml">
+    <img alt="CD" src="https://img.shields.io/github/workflow/status/DerYeger/jan-mueller/CD?label=cd&logo=github&color=#4DC71F">
+  </a>
+  <a href="https://dashboard.cypress.io/projects/nhkgy5/runs">
+    <img alt="Cypress Status" src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/nhkgy5/master&style=flat&logo=cypress">
+  </a>
+  <a href="https://dashboard.cypress.io/projects/nhkgy5/runs">
+    <img alt="Cypress Status" src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/count/nhkgy5/master&style=flat&logo=cypress">
+  </a>
+  <a href="https://lgtm.com/projects/g/DerYeger/jan-mueller">
+    <img alt="LGTM Grade" src="https://img.shields.io/lgtm/grade/javascript/github/DerYeger/jan-mueller?logo=lgtm">
+  </a>
+</p>
 
-Built with the [Jamstack](https://jamstack.org/) architecture, using [@nuxt/content](https://content.nuxtjs.org/).
+<p align="center">
+  <a href="https://jan-mueller.at">
+    jan-mueller.at
+  </a>
+</p>
 
-CI and CD are handled by GitHub Actions.
+## Features
 
-The website is hosted with GitHub Pages at https://jan-mueller.at.
+- Vue 3 with composition API and `<script setup>`
+- SSG using based on [Vitesse](https://github.com/antfu/vitesse)
+- Styled using [UnoCSS](https://github.com/antfu/unocss)
+- E2E testing with [Cypress](https://www.cypress.io/)
+- Unit testing with [Vitest](https://vitest.dev/)
+- Automated CI/CD pipeline using GitHub Actions
+- Hosted by GitHub Pages at https://jan-mueller.at
 
 ## Build Setup
 
@@ -17,15 +48,22 @@ The website is hosted with GitHub Pages at https://jan-mueller.at.
 # install dependencies
 $ yarn install
 
-# serve with hot reload at localhost:3000
+# serve with hot reload at localhost:3333
 $ yarn dev
 
-# build for production and launch server
+# build for production and launch preview server
 $ yarn build
-$ yarn start
+$ yarn preview
 
-# generate static project
-$ yarn generate
+# run unit tests
+$ yarn test
+
+# run e2e tests
+$ yarn test:e2e
+
+# lint
+$ yarn lint
+
+# format
+$ yarn pretty
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
