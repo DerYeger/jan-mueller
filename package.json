@@ -1,8 +1,7 @@
 {
   "name": "jan-mueller",
-  "version": "1.44.3",
+  "version": "1.44.4",
   "description": "Personal website of Jan Müller, a passionate software engineer.",
-  "version": "1.44.3",
   "private": true,
   "scripts": {
     "prepare": "husky install",
