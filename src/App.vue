@@ -6,7 +6,9 @@
 const { t } = useI18n()
 const description = t('meta.description')
 
-const host = 'https://jan-mueller.at'
+const host = import.meta.env.PROD
+  ? 'https://jan-mueller.at'
+  : 'http://localhost:3333'
 const ogImage = `${host}/og-logo.png`
 
 const router = useRouter()
