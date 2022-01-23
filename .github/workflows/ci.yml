@@ -30,14 +30,15 @@ jobs:
   e2e:
     name: E2E
     runs-on: ubuntu-latest
-    container: cypress/browsers:node16.13.0-chrome95-ff94
     needs: build
+    strategy:
+      matrix:
+        browser: [chrome, firefox]
     steps:
       - name: Setup
         uses: DerYeger/yarn-setup-action@master
         with:
           node-version: 16
-      - run: chmod -R 777 /github/home
       - name: Download
         uses: actions/download-artifact@v2
         with:
@@ -46,7 +47,9 @@ jobs:
       - name: Test
         uses: cypress-io/github-action@v2
         with:
+          install: false
           start: yarn preview
+          browser: ${{ matrix.browser }}
           record: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
