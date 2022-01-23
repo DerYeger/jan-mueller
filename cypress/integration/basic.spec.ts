@@ -4,6 +4,6 @@ context('Basic', () => {
   })
 
   it('basic nav', () => {
-    cy.url().should('eq', 'http://localhost:3333/')
+    cy.url().should('eq', 'http://localhost:5000/')
   })
 })
