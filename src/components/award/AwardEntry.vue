@@ -14,7 +14,7 @@ const { t } = useI18n()
     <span>
       <Date class="text-lighter" :date="award.date" />
       <template v-if="award.href">
-        ·
+        <Dot class="text-lighter" />
         <a :href="award.href" rel="noopener" target="_blank">
           {{ t('details') }}
         </a>

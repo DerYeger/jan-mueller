@@ -33,15 +33,6 @@ const { t } = useI18n()
       <carbon-document />
     </router-link>
 
-    <router-link
-      class="icon-btn mx-2"
-      to="/about"
-      :title="t('button.about')"
-      active-class="!text-$primary op90"
-    >
-      <carbon-dicom-overlay />
-    </router-link>
-
     <button
       class="icon-btn mx-2"
       :title="t('button.toggle_dark')"

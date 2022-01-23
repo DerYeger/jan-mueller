@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Dot from '~/components/Dot.vue'
 import { useDocuments, useModels } from '~/composables'
 
 const documents = useDocuments()
@@ -31,7 +32,7 @@ const { t } = useI18n()
             :format="document.dateFormat ?? 'default'"
           />
           <template v-if="document.language">
-            ·
+            <Dot />
             <span>{{ t(document.language) }}</span>
           </template>
         </span>

@@ -4,9 +4,9 @@ const { t } = useI18n()
 
 <template>
   <footer class="pa-4 text-center text-sm">
-    <span class="text-lighter">
-      &copy; 2021 - {{ new Date().getFullYear() }}, Jan Müller ·
-    </span>
+    <!-- prettier-ignore   -->
+    <span class="text-lighter">&copy; 2021 - {{ new Date().getFullYear() }}, Jan Müller</span>
+    <Dot class="text-lighter" />
     <a
       href="https://github.com/DerYeger/jan-mueller"
       rel="noopener"
@@ -14,5 +14,13 @@ const { t } = useI18n()
     >
       {{ t('source') }}
     </a>
+    <Dot class="text-lighter" />
+    <router-link
+      to="/about"
+      :title="t('button.about')"
+      active-class="!text-$primary op90"
+    >
+      {{ t('button.about') }}
+    </router-link>
   </footer>
 </template>

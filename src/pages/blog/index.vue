@@ -33,7 +33,7 @@ const { t } = useI18n()
         </span>
         <span class="text-lighter">
           <Date :date="post.meta.frontmatter.date" format="default" />
-          ·
+          <Dot />
           <span>{{ t(post.meta.frontmatter.language) }}</span>
         </span>
         <span class="text-light">
