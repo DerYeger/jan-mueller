@@ -51,9 +51,10 @@ jobs:
           start: yarn preview
           browser: ${{ matrix.browser }}
           record: true
-          tag: ${{ matrix.browser }}
+          tag: ${{ matrix.browser }},${{ github.event_name }}
           config: videoUploadOnPasses=false
         env:
+          COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Screenshots
