@@ -1,5 +1,5 @@
 {
   "projectId": "nhkgy5",
   "baseUrl": "http://localhost:5000",
-  "chromeWebSecurity": false
+  "fixturesFolder": "cypress/fixtures"
 }
