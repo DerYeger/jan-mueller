@@ -16,7 +16,7 @@
     "pretty": "prettier --write \"./**/*.{js,json,html,md,scss,ts,vue,yml}\"",
     "fix": "yarn pretty && yarn lint:eslint --fix ",
     "test": "vitest run",
-    "test:e2e": "cypress open",
+    "test:e2e": "cypress open --config baseUrl=http://localhost:3333",
     "test:e2e:run": "cypress run",
     "test:unit": "vitest",
     "typecheck": "vue-tsc --noEmit"
