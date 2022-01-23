@@ -7,7 +7,7 @@ const { t } = useI18n()
 const description = t('meta.description')
 
 const host = 'https://jan-mueller.at'
-// const ogImage = `${host}/og-logo.png`
+const ogImage = `${host}/og-logo.png`
 
 const router = useRouter()
 
@@ -23,22 +23,22 @@ useHead({
       name: 'description',
       content: description,
     },
-    // {
-    //   name: 'twitter:description',
-    //   content: description,
-    // },
-    // {
-    //   name: 'twitter:image',
-    //   content: ogImage,
-    // },
-    // {
-    //   property: 'og:description',
-    //   content: description,
-    // },
-    // {
-    //   name: 'og:image',
-    //   content: ogImage,
-    // },
+    {
+      property: 'twitter:description',
+      content: description,
+    },
+    {
+      property: 'twitter:image',
+      content: ogImage,
+    },
+    {
+      property: 'og:description',
+      content: description,
+    },
+    {
+      property: 'og:image',
+      content: ogImage,
+    },
   ],
 })
 </script>

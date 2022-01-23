@@ -24,7 +24,7 @@
   "dependencies": {
     "@unocss/reset": "0.22.2",
     "@vueuse/core": "7.5.3",
-    "@vueuse/head": "0.7.4",
+    "@vueuse/head": "0.7.5",
     "@yeger/vue-masonry-wall": "3.0.16",
     "nprogress": "0.2.0",
     "pinia": "2.0.9",
