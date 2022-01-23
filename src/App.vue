@@ -5,70 +5,66 @@ const { t } = useI18n()
 // they will be rendered correctly in the html results with vite-ssg
 const router = useRouter()
 
-const head = computed(() => {
-  const host = 'https://jan-mueller.at'
-  const title = 'Jan Müller'
-  const description = t('meta.description')
-  const ogImage = `${host}/og-logo.png`
+const host = 'https://jan-mueller.at'
+const title = 'Jan Müller'
+const description = t('meta.description')
+const ogImage = `${host}/og-logo.png`
 
-  return {
-    title,
-    link: [
-      {
-        rel: 'canonical',
-        href: `${host}${router.currentRoute.value.fullPath}`,
-      },
-    ],
-    meta: [
-      {
-        name: 'description',
-        content: description,
-      },
-      {
-        hid: 'twitter:title',
-        name: 'twitter:title',
-        content: title,
-      },
-      {
-        hid: 'twitter:description',
-        name: 'twitter:description',
-        content: description,
-      },
-      {
-        hid: 'twitter:image',
-        name: 'twitter:image',
-        content: ogImage,
-      },
-      {
-        hid: 'twitter:image:alt',
-        name: 'twitter:image:alt',
-        content: title,
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: title,
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: description,
-      },
-      {
-        hid: 'og:image',
-        name: 'og:image',
-        content: ogImage,
-      },
-      {
-        hid: 'og:image:alt',
-        property: 'og:image:alt',
-        content: title,
-      },
-    ],
-  }
+useHead({
+  title,
+  link: [
+    {
+      rel: 'canonical',
+      href: computed(() => `${host}${router.currentRoute.value.fullPath}`),
+    },
+  ],
+  meta: [
+    {
+      name: 'description',
+      content: description,
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: title,
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content: description,
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content: ogImage,
+    },
+    {
+      hid: 'twitter:image:alt',
+      name: 'twitter:image:alt',
+      content: title,
+    },
+    {
+      hid: 'og:title',
+      property: 'og:title',
+      content: title,
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content: description,
+    },
+    {
+      hid: 'og:image',
+      name: 'og:image',
+      content: ogImage,
+    },
+    {
+      hid: 'og:image:alt',
+      property: 'og:image:alt',
+      content: title,
+    },
+  ],
 })
-
-useHead(head)
 </script>
 
 <template>
