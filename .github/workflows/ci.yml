@@ -51,9 +51,23 @@ jobs:
           start: yarn preview
           browser: ${{ matrix.browser }}
           record: true
+          tag: ${{ matrix.browser }}
+          config: videoUploadOnPasses=false
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload Screenshots
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots-${{ matrix.browser }}
+          path: cypress/screenshots
+      - name: Upload Videos
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-videos-${{ matrix.browser }}
+          path: cypress/videos
   lint:
     name: Lint
     runs-on: ubuntu-latest
