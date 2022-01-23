@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/DerYeger/jan-mueller/compare/v2.0.1...v2.0.2) (2022-01-23)
+
+
+### Bug Fixes
+
+* update meta tags ([d32cdd2](https://github.com/DerYeger/jan-mueller/commit/d32cdd25d46345dceaa9287617f1b3cfcd9a5f56))
+
 ## [2.0.1](https://github.com/DerYeger/jan-mueller/compare/v2.0.0...v2.0.1) (2022-01-23)
 
 
