@@ -38,7 +38,7 @@
   "devDependencies": {
     "@commitlint/cli": "16.1.0",
     "@commitlint/config-conventional": "16.0.0",
-    "@iconify-json/carbon": "1.0.13",
+    "@iconify-json/carbon": "1.0.14",
     "@iconify-json/logos": "1.0.4",
     "@iconify-json/vscode-icons": "1.0.3",
     "@intlify/vite-plugin-vue-i18n": "3.2.1",
