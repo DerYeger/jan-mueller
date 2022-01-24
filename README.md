@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/public/og-logo.png" alt="Logo" height="192px">
+  <img src="/public/og-logo.png" alt="Logo" height="192px" width="384px">
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
     <img alt="CD" src="https://img.shields.io/github/workflow/status/DerYeger/jan-mueller/CD?label=cd&logo=github&color=#4DC71F">
   </a>
   <a href="https://dashboard.cypress.io/projects/nhkgy5/runs">
-    <img alt="Cypress Status" src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/nhkgy5/master&style=flat&logo=cypress">
+    <img alt="Cypress Status" src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/nhkgy5/master&style=flat&logo=cypress">
   </a>
   <a href="https://dashboard.cypress.io/projects/nhkgy5/runs">
     <img alt="Cypress Status" src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/count/nhkgy5/master&style=flat&logo=cypress">

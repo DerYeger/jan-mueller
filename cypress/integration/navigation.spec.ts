@@ -34,16 +34,4 @@ describe('Navigation', () => {
         )
     )
   })
-
-  it('has a theme toggle', () => {
-    cy.get('html.dark').should('exist')
-    cy.get('nav').within(() =>
-      cy.get(`[title="Toggle dark mode"]`).should('be.visible').click()
-    )
-    cy.get('html.dark').should('not.exist')
-    cy.get('nav').within(() =>
-      cy.get(`[title="Toggle dark mode"]`).should('be.visible').click()
-    )
-    cy.get('html.dark').should('exist')
-  })
 })
