@@ -1,4 +1,4 @@
-context('Footer', () => {
+describe('Footer', () => {
   beforeEach(() => {
     cy.visit('/')
   })

@@ -1,4 +1,4 @@
-context('Files', () => {
+describe('Files', () => {
   beforeEach(() => {
     cy.viewport('iphone-xr')
     cy.visit('/files')

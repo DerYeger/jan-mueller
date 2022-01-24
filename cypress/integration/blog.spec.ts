@@ -1,4 +1,4 @@
-context('Blog', () => {
+describe('Blog', () => {
   beforeEach(() => {
     cy.viewport('iphone-xr')
     cy.visit('/blog')

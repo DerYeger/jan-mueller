@@ -1,4 +1,4 @@
-context('Navigation', () => {
+describe('Navigation', () => {
   beforeEach(() => {
     cy.visit('/')
   })
@@ -33,5 +33,17 @@ context('Navigation', () => {
           'https://www.xing.com/profile/Jan_Mueller1092/cv'
         )
     )
+  })
+
+  it('has a theme toggle', () => {
+    cy.get('html.dark').should('exist')
+    cy.get('nav').within(() =>
+      cy.get(`[title="Toggle dark mode"]`).should('be.visible').click()
+    )
+    cy.get('html.dark').should('not.exist')
+    cy.get('nav').within(() =>
+      cy.get(`[title="Toggle dark mode"]`).should('be.visible').click()
+    )
+    cy.get('html.dark').should('exist')
   })
 })
