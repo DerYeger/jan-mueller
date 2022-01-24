@@ -5,7 +5,7 @@ const { t } = useI18n()
 <template>
   <footer class="pa-4 text-center text-sm">
     <!-- prettier-ignore   -->
-    <span class="text-lighter">&copy; 2021 - {{ new Date().getFullYear() }}, Jan Müller</span>
+    <span class="text-lighter">2021 - {{ new Date().getFullYear() }} &copy; Jan Müller</span>
     <Dot class="text-lighter" />
     <a
       href="https://github.com/DerYeger/jan-mueller"
