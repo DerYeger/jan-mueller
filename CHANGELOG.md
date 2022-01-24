@@ -1,3 +1,11 @@
+## [2.1.2](https://github.com/DerYeger/jan-mueller/compare/v2.1.1...v2.1.2) (2022-01-24)
+
+
+### Bug Fixes
+
+* improve footer structure ([ff4ac4c](https://github.com/DerYeger/jan-mueller/commit/ff4ac4c4cb8a031905737294860ed952031ee337))
+* use initial height of 0 for `MarmosetViewer` ([7461a38](https://github.com/DerYeger/jan-mueller/commit/7461a387bfa799b95fa197a9645da98f57b29a7e))
+
 ## [2.1.1](https://github.com/DerYeger/jan-mueller/compare/v2.1.0...v2.1.1) (2022-01-23)
 
 
