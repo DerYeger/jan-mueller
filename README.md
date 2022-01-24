@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/public/og-logo.png" alt="Logo" height="192px" width="384px">
+  <img src="/public/og-logo.png" alt="Logo" width="384px">
 </p>
 
 <p align="center">
@@ -35,7 +35,7 @@
 ## Features
 
 - Vue 3 with composition API and `<script setup>`
-- SSG using based on [Vitesse](https://github.com/antfu/vitesse)
+- SSG based on [Vitesse](https://github.com/antfu/vitesse)
 - Styled using [UnoCSS](https://github.com/antfu/unocss)
 - E2E testing with [Cypress](https://www.cypress.io/)
 - Unit testing with [Vitest](https://vitest.dev/)
