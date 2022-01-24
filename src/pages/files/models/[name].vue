@@ -32,7 +32,7 @@ useTitleTemplate(`files.models.${name.value}.title`)
     </p>
     <div class="flex-1">
       <ClientOnly>
-        <MarmosetViewer :src="modelPath" responsive />
+        <MarmosetViewer :src="modelPath" responsive :height="0" />
       </ClientOnly>
     </div>
   </div>
