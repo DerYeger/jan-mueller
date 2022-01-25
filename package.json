@@ -73,7 +73,7 @@
     "unocss": "0.22.5",
     "unplugin-auto-import": "0.5.11",
     "unplugin-icons": "0.13.0",
-    "unplugin-vue-components": "0.17.11",
+    "unplugin-vue-components": "0.17.14",
     "vite": "2.7.12",
     "vite-plugin-inspect": "0.3.13",
     "vite-plugin-md": "0.11.7",
