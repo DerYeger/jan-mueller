@@ -83,7 +83,7 @@
     "vite-ssg": "0.17.6",
     "vitest": "0.1.13",
     "vue-eslint-parser": "8.0.1",
-    "vue-tsc": "0.30.2"
+    "vue-tsc": "0.31.1"
   },
   "lint-staged": {
     "*.{html,js,json,md,scss,ts,vue,yml}": "prettier --write",
