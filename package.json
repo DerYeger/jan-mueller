@@ -29,7 +29,7 @@
     "nprogress": "0.2.0",
     "pinia": "2.0.9",
     "prism-theme-vars": "0.2.2",
-    "vue": "3.2.26",
+    "vue": "3.2.29",
     "vue-demi": "0.12.1",
     "vue-i18n": "9.1.9",
     "vue-marmoset-viewer": "3.0.0",
@@ -48,8 +48,8 @@
     "@typescript-eslint/parser": "5.10.1",
     "@unocss/preset-web-fonts": "0.22.6",
     "@vitejs/plugin-vue": "2.1.0",
-    "@vue/compiler-sfc": "3.2.26",
-    "@vue/server-renderer": "3.2.26",
+    "@vue/compiler-sfc": "3.2.29",
+    "@vue/server-renderer": "3.2.29",
     "@vue/test-utils": "2.0.0-rc.18",
     "critters": "0.0.16",
     "cross-env": "7.0.3",
@@ -82,7 +82,7 @@
     "vite-plugin-vue-layouts": "0.5.0",
     "vite-ssg": "0.17.6",
     "vitest": "0.1.13",
-    "vue-eslint-parser": "8.0.1",
+    "vue-eslint-parser": "8.2.0",
     "vue-tsc": "0.31.1"
   },
   "lint-staged": {
