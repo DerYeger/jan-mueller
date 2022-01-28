@@ -1,3 +1,10 @@
+## [2.1.5](https://github.com/DerYeger/jan-mueller/compare/v2.1.4...v2.1.5) (2022-01-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @vueuse/core to v7.5.5 ([2b1833a](https://github.com/DerYeger/jan-mueller/commit/2b1833a74f0c8bee995612011d9bf29a1502ea08))
+
 ## [2.1.4](https://github.com/DerYeger/jan-mueller/compare/v2.1.3...v2.1.4) (2022-01-28)
 
 
