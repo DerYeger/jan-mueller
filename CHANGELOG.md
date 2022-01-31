@@ -1,3 +1,11 @@
+## [2.1.8](https://github.com/DerYeger/jan-mueller/compare/v2.1.7...v2.1.8) (2022-01-31)
+
+
+### Bug Fixes
+
+* **deps:** update dependency pinia to v2.0.11 ([9951a0c](https://github.com/DerYeger/jan-mueller/commit/9951a0cad7e0ec580dc2b4331631eeab9334dc1f))
+* **deps:** update dependency vue-marmoset-viewer to v3.0.2 ([3efceeb](https://github.com/DerYeger/jan-mueller/commit/3efceebb94c8452703bf7f0cb7f777c2ad4057a7))
+
 ## [2.1.7](https://github.com/DerYeger/jan-mueller/compare/v2.1.6...v2.1.7) (2022-01-30)
 
 
