@@ -1978,10 +1978,10 @@
   dependencies:
     vue-demi "*"
 
-"@yeger/debounce@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.0.tgz#f3bd1255979615530237faea288a96a2ab462106"
-  integrity sha512-AeqbPFF81xGyrgNdEukz78cNcfaYNP6tZuMfyLaBxHpsD5Xo9PWjdpVoSYS7vsCZr1Av49/WNAxRcGUnZFlAAQ==
+"@yeger/debounce@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.1.tgz#ab89f2162bcf18fabfbbad651c8552c2961c8877"
+  integrity sha512-EsvmBuZ2725EF4OA7zjgB26zfY2K6OZjgp++Bh71ih7+FW4u7a4ObXOOJQjcjP3JOGr0nHtyKhefbU81IGSNqA==
 
 "@yeger/vue-masonry-wall@3.0.18":
   version "3.0.18"
@@ -7360,12 +7360,12 @@ vue-i18n@9.1.9:
     "@intlify/vue-devtools" "9.1.9"
     "@vue/devtools-api" "^6.0.0-beta.7"
 
-vue-marmoset-viewer@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-3.0.0.tgz#47fe570cb3b8e2e30d6b8457fe7064c5f8963b66"
-  integrity sha512-uGeRCVjaR3AfClSS7qEJmYjUqz+Njz7kbnvlsgyItn+jmxs2NMcfYooAILmzv/6Fg6t7iSxb2HZgTcoe2j2DRw==
+vue-marmoset-viewer@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-3.0.2.tgz#5b0d7f6a89a8d83756c4c15a3c4ddb09222b8deb"
+  integrity sha512-h2cSs0PGu4v9/3iJjoIXjfFxFi78CIibPmC8ZT40cGdgz/qp+8GdAUK9NlPluGEKvk6BZSigitwUshRcmv2Jew==
   dependencies:
-    "@yeger/debounce" "1.0.0"
+    "@yeger/debounce" "1.0.1"
 
 vue-router@4.0.12:
   version "4.0.12"
