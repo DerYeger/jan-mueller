@@ -1649,6 +1649,11 @@
   resolved "https://registry.yarnpkg.com/@unocss/core/-/core-0.22.6.tgz#230a0a442afa2076b84d303b57c1c3690c488f15"
   integrity sha512-k4qZTP1tSUFevAUT6dYm/SXGp8mixI1W2ASjlMESbI2jQSZHbcsrCZ6nVx/8CvkmZi2IB4VipuODvZ+O4aQYLQ==
 
+"@unocss/core@0.22.7":
+  version "0.22.7"
+  resolved "https://registry.yarnpkg.com/@unocss/core/-/core-0.22.7.tgz#5fb07871f43fcccf2c62005f05635331ea5056f8"
+  integrity sha512-cb51bsrtsYdiGiiY574rDtPw5gBLsOpJXZjgvmIrdKzS0Z8rmVf4VGF2FONloKBn6yJ4Hj2TNIfW/PnNX5ojxw==
+
 "@unocss/inspector@0.22.6":
   version "0.22.6"
   resolved "https://registry.yarnpkg.com/@unocss/inspector/-/inspector-0.22.6.tgz#3e530853fd03345edeccbf5f3e8d23f7da45210f"
@@ -1696,6 +1701,14 @@
   dependencies:
     "@unocss/core" "0.22.6"
     axios "^0.24.0"
+
+"@unocss/preset-web-fonts@0.22.7":
+  version "0.22.7"
+  resolved "https://registry.yarnpkg.com/@unocss/preset-web-fonts/-/preset-web-fonts-0.22.7.tgz#60bd2ce8b2e4baa9e80363c10b0ab529e1624bac"
+  integrity sha512-vorlNNzzCz7sg+T6+BGqKlYU+Lf/EsPibM0N7CYBQF1//D8RqI42RijwjSwaYH6qZaMpHsfzk12vzlNAXxQTAg==
+  dependencies:
+    "@unocss/core" "0.22.7"
+    axios "^0.25.0"
 
 "@unocss/preset-wind@0.22.6":
   version "0.22.6"
@@ -2266,6 +2279,13 @@ axios@^0.24.0:
   integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
   dependencies:
     follow-redirects "^1.14.4"
+
+axios@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.25.0.tgz#349cfbb31331a9b4453190791760a8d35b093e0a"
+  integrity sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==
+  dependencies:
+    follow-redirects "^1.14.7"
 
 babel-plugin-dynamic-import-node@^2.3.3:
   version "2.3.3"
@@ -3932,7 +3952,7 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.4.tgz#28d9969ea90661b5134259f312ab6aa7929ac5e2"
   integrity sha512-8/sOawo8tJ4QOBX8YlQBMxL8+RLZfxMQOif9o0KUKTNTjMYElWPE0r/m5VNFxTRd0NSw8qSy8dajrwX4RYI1Hw==
 
-follow-redirects@^1.14.4:
+follow-redirects@^1.14.4, follow-redirects@^1.14.7:
   version "1.14.7"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.7.tgz#2004c02eb9436eee9a21446a6477debf17e81685"
   integrity sha512-+hbxoLbFMbRKDwohX8GkTataGqO6Jb7jGwpAlwgy2bIz25XtRm7KEzJM76R1WiNT5SwZkX4Y75SwBolkpmE7iQ==
