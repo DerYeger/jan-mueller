@@ -7135,10 +7135,10 @@ vite-plugin-md@0.11.7:
     gray-matter "^4.0.3"
     markdown-it "^12.3.0"
 
-vite-plugin-pages@0.20.1:
-  version "0.20.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-pages/-/vite-plugin-pages-0.20.1.tgz#14b4a730a0bc035192468d4901d7b7a798d70d8c"
-  integrity sha512-VHKE1/39HW4vqUcGLO6blq8MKqzP73kxYW9bykH1ihRfhgp7HLMCgTvmag6zDa66iKafzM3orzjVeIg4dUA+4A==
+vite-plugin-pages@0.20.2:
+  version "0.20.2"
+  resolved "https://registry.yarnpkg.com/vite-plugin-pages/-/vite-plugin-pages-0.20.2.tgz#20c06050bd2ba025fa88f27a0a51bf858123fe90"
+  integrity sha512-A/N6Pez9sMzt7ZEfd1H7P9tmP6LrZwXMexV8xSiRahnUeNw+gz0W2dsPLJDZBvcixDZqoK8ggKdmyxgVBuTAfg==
   dependencies:
     debug "^4.3.3"
     deep-equal "^2.0.5"
