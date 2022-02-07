@@ -15,6 +15,8 @@ declare module 'vue' {
     CarbonLogoXing: typeof import('~icons/carbon/logo-xing')['default']
     CarbonMoon: typeof import('~icons/carbon/moon')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']
+    CarbonUndo: typeof import('~icons/carbon/undo')['default']
+    CarbonWarning: typeof import('~icons/carbon/warning')['default']
     Date: typeof import('./components/date/Date.vue')['default']
     DateRange: typeof import('./components/date/DateRange.vue')['default']
     Dot: typeof import('./components/Dot.vue')['default']
