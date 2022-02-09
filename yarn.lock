@@ -5126,7 +5126,7 @@ markdown-it-prism@2.2.2:
   dependencies:
     prismjs "1.26.0"
 
-markdown-it@^12.3.0:
+markdown-it@^12.3.2:
   version "12.3.2"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-12.3.2.tgz#bf92ac92283fe983fe4de8ff8abfb5ad72cd0c90"
   integrity sha512-TchMembfxfNVpHkbtriWltGWc+m3xszaRD0CZup7GFFhzIgQqxIfn3eGj1yZpfuflzPvfkt611B2Q/Bsk1YnGg==
@@ -7057,16 +7057,16 @@ vite-plugin-inspect@0.3.13:
     sirv "^2.0.0"
     ufo "^0.7.9"
 
-vite-plugin-md@0.11.7:
-  version "0.11.7"
-  resolved "https://registry.yarnpkg.com/vite-plugin-md/-/vite-plugin-md-0.11.7.tgz#4f3fe7163931addc802557b3a18f088f3100753c"
-  integrity sha512-RRdmadGpCxJLeeMXy93SWFz6kzh35NO7QjgHkvggC4BxoDXkVwNJRjSKgMvINWnJVPnkhiAs0o6k1QepazIwxw==
+vite-plugin-md@0.11.8:
+  version "0.11.8"
+  resolved "https://registry.yarnpkg.com/vite-plugin-md/-/vite-plugin-md-0.11.8.tgz#3fc0282895dd0a42e1b18af07cde812e2f5c5253"
+  integrity sha512-eFk4Ox8IKuT+7benAcwLvGcYt/T4We2UDmQmxvCrhABJpQSbh44MitD1Wu6w733VKgSZAO7wd8IuoA20yXkXVQ==
   dependencies:
-    "@antfu/utils" "^0.3.0"
+    "@antfu/utils" "^0.5.0"
     "@rollup/pluginutils" "^4.1.2"
     "@types/markdown-it" "^12.2.3"
     gray-matter "^4.0.3"
-    markdown-it "^12.3.0"
+    markdown-it "^12.3.2"
 
 vite-plugin-pages@0.20.2:
   version "0.20.2"
