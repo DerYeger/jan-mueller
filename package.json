@@ -47,7 +47,7 @@
     "@typescript-eslint/eslint-plugin": "5.10.2",
     "@typescript-eslint/parser": "5.10.2",
     "@unocss/preset-web-fonts": "0.24.3",
-    "@vitejs/plugin-vue": "2.1.0",
+    "@vitejs/plugin-vue": "2.2.0",
     "@vue/compiler-sfc": "3.2.30",
     "@vue/server-renderer": "3.2.30",
     "@vue/test-utils": "2.0.0-rc.18",
