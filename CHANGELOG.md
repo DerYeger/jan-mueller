@@ -1,3 +1,10 @@
+## [2.1.10](https://github.com/DerYeger/jan-mueller/compare/v2.1.9...v2.1.10) (2022-02-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @yeger/vue-masonry-wall to v3.0.19 ([6261ffd](https://github.com/DerYeger/jan-mueller/commit/6261ffda5cd9fa5dd42c3282f8a57528ac4525f7))
+
 ## [2.1.9](https://github.com/DerYeger/jan-mueller/compare/v2.1.8...v2.1.9) (2022-02-05)
 
 
