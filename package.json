@@ -8,7 +8,7 @@
     "prebuild": "yarn typecheck",
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
-    "preview": "vite preview",
+    "preview": "vite preview --port 5000",
     "preview-https": "serve dist",
     "lint": "yarn lint:prettier && yarn lint:eslint",
     "lint:eslint": "eslint \"./**/*.{js,json,md,ts,vue}\"",
