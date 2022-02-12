@@ -1735,11 +1735,6 @@
     "@unocss/core" "0.24.3"
     "@unocss/preset-mini" "0.24.3"
 
-"@unocss/reset@0.22.7":
-  version "0.22.7"
-  resolved "https://registry.yarnpkg.com/@unocss/reset/-/reset-0.22.7.tgz#d04b06f0b8d64cc5c42a0915dcdd69a6eabd9e7f"
-  integrity sha512-tM1niVkPkZwjlQrysj4769yNMruYF0MwUcOi16lj93ZD+DoZ8QLVYh1VEvh/Q588rn0VbKmShhwXZeI0XBXe+A==
-
 "@unocss/reset@0.24.3":
   version "0.24.3"
   resolved "https://registry.yarnpkg.com/@unocss/reset/-/reset-0.24.3.tgz#20529dc5f4399b347d2f4cf7cf752822b05cf436"
