@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/DerYeger/jan-mueller/compare/v2.1.12...v2.2.0) (2022-02-13)
+
+
+### Features
+
+* use `vite-plugin-ssg-utils` ([050437f](https://github.com/DerYeger/jan-mueller/commit/050437f4a83b3c54ee9f1561c93e48291e22dd26))
+
 ## [2.1.12](https://github.com/DerYeger/jan-mueller/compare/v2.1.11...v2.1.12) (2022-02-12)
 
 
