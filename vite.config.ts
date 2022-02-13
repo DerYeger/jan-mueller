@@ -18,6 +18,7 @@ import Inspect from 'vite-plugin-inspect'
 import Markdown from 'vite-plugin-md'
 import Pages from 'vite-plugin-pages'
 import { VitePWA } from 'vite-plugin-pwa'
+import SSGUtils from 'vite-plugin-ssg-utils'
 import Layouts from 'vite-plugin-vue-layouts'
 
 import { useDocuments } from './src/composables/documents'
@@ -35,6 +36,8 @@ export default defineConfig({
     Vue({
       include: [/\.vue$/, /\.md$/],
     }),
+
+    SSGUtils(),
 
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({

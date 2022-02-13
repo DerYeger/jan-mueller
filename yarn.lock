@@ -5007,7 +5007,7 @@ kind-of@^6.0.0, kind-of@^6.0.2, kind-of@^6.0.3:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-kolorist@^1.5.0, kolorist@^1.5.1:
+kolorist@1.5.1, kolorist@^1.5.0, kolorist@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/kolorist/-/kolorist-1.5.1.tgz#c3d66dc4fabde4f6b7faa6efda84c00491f9e52b"
   integrity sha512-lxpCM3HTvquGxKGzHeknB/sUjuVoUElLlfYnXZT73K8geR9jQbroGlSCFBax9/0mpGoD3kzcMLnOlGQPJJNyqQ==
@@ -7191,6 +7191,13 @@ vite-plugin-pwa@0.11.13:
     rollup "^2.60.2"
     workbox-build "^6.4.2"
     workbox-window "^6.4.2"
+
+vite-plugin-ssg-utils@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-ssg-utils/-/vite-plugin-ssg-utils-1.0.1.tgz#198e193e822e002ad80ff4fa0f0dd0ea31fe3589"
+  integrity sha512-qQTWGZcyQ/1r5kq+Ho3FtuyaiQLM3xBJ5N4/S/N6WFMPLMWNfbfbQofYgJFD769NPHUmy5H+FgVPZ8e7kIswrg==
+  dependencies:
+    kolorist "1.5.1"
 
 vite-plugin-vue-layouts@0.6.0:
   version "0.6.0"
