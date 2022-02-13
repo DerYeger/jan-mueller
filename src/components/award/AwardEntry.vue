@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Award } from '~/types'
+import type { Award } from '~/types'
 
 const props = defineProps<{ award: Award }>()
 

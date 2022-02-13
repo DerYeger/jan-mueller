@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Experience } from '~/types'
+import type { Experience } from '~/types'
 
 const props = defineProps<{ experience: Experience }>()
 

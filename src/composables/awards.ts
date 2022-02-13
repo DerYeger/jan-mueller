@@ -1,4 +1,4 @@
-import { Award } from '~/types'
+import type { Award } from '~/types'
 
 const awards: Award[] = [
   {

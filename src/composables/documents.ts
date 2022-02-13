@@ -1,4 +1,4 @@
-import { Document } from '~/types'
+import type { Document } from '~/types'
 
 const documents: Document[] = [
   {

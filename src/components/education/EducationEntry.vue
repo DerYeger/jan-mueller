@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Education } from '~/types'
+import type { Education } from '~/types'
 
 const props = defineProps<{ education: Education }>()
 

@@ -1,7 +1,0 @@
-CHANGELOG.md
-coverage
-dist
-node_modules
-src/auto-import.d.ts
-src/components.d.ts
-static/sw.js

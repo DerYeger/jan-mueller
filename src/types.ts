@@ -1,5 +1,5 @@
 import type { ViteSSGContext } from 'vite-ssg'
-import { RouteMeta, RouteRecordNormalized } from 'vue-router'
+import type { RouteMeta, RouteRecordNormalized } from 'vue-router'
 
 export type UserModule = (ctx: ViteSSGContext) => void
 

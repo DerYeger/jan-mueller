@@ -40,7 +40,7 @@
 - E2E testing with [Cypress](https://www.cypress.io/)
 - Unit testing with [Vitest](https://vitest.dev/)
 - Automated CI/CD pipeline using GitHub Actions
-- Hosted by GitHub Pages at https://jan-mueller.at
+- Hosted by GitHub Pages at [jan-mueller.at](https://jan-mueller.at)
 
 ## Build Setup
 
