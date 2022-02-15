@@ -36,8 +36,8 @@
     "vue-router": "4.0.12"
   },
   "devDependencies": {
-    "@commitlint/cli": "16.1.0",
-    "@commitlint/config-conventional": "16.0.0",
+    "@commitlint/cli": "16.2.1",
+    "@commitlint/config-conventional": "16.2.1",
     "@iconify-json/carbon": "1.0.15",
     "@iconify-json/logos": "1.0.4",
     "@iconify-json/vscode-icons": "1.0.6",
