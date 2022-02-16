@@ -2653,7 +2653,7 @@ ci-info@^3.2.0, ci-info@^3.3.0:
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-3.3.0.tgz#b4ed1fb6818dea4803a55c623041f9165d2066b2"
   integrity sha512-riT/3vI5YpVH6/qomlDnJow6TBee2PBKSEpx3O32EGPYbWGIRsIlGRms3Sm74wYE1JMo8RnO04Hb12+v1J5ICw==
 
-clean-css@^4.1.7, clean-css@^4.2.1:
+clean-css@^4.2.1:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.4.tgz#733bf46eba4e607c6891ea57c24a989356831178"
   integrity sha512-EJUDT7nDVFDvaQgAo2G/PJvxmp1o/c6iXLbswsBbUFXi1Nr+AjA2cKmfbKDMjMvzEe75g3P6JkaDDAKk96A85A==
@@ -4047,15 +4047,6 @@ executable@^4.1.1:
   dependencies:
     pify "^2.2.0"
 
-express-minify@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/express-minify/-/express-minify-1.0.0.tgz#28c90ecb8add5f8da0d5d503739646fb54be5704"
-  integrity sha512-04/iYxB79jGeNZBBkbAW7L7FMG4Wtu78F1SayXIKiJD6MfqYnOI3DD8no7QOntgedYCdYUpj+Skg8QWR/2WnMQ==
-  dependencies:
-    clean-css "^4.1.7"
-    on-headers "^1.0.1"
-    uglify-js "^3.0.28"
-
 express@^4.17.1:
   version "4.17.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.17.2.tgz#c18369f265297319beed4e5558753cc8c1364cb3"
@@ -4680,17 +4671,17 @@ http-signature@~1.3.6:
     jsprim "^2.0.2"
     sshpk "^1.14.1"
 
-https-localhost@4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/https-localhost/-/https-localhost-4.7.0.tgz#b8f23de33f6aa90d9d64f562f699449133966758"
-  integrity sha512-3mC4sg2gcyB0dXGipFlc3gRuEKcEflArX6gLRii9zJJDc/hlqugoTsD/7DCYarB+KbLd3DFxIr3TADEBdyj4qg==
+https-localhost@4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/https-localhost/-/https-localhost-4.7.1.tgz#0fa4d2671a44ac32f10ae8abccc8d0178e7fcf3e"
+  integrity sha512-rl+NFV0l67/0W7fZwk4LB5gS6HdhtSFLpCpf1N+KD5WQAXtPXX1QE8H0cP8VNJii18rtpTkE9eAHdUfJ0goAnQ==
   dependencies:
     appdata-path "^1.0.0"
     compression "^1.7.4"
     cors "^2.8.5"
     express "^4.17.1"
-    express-minify "^1.0.0"
     spdy "^4.0.2"
+    uglify-js "^3.15.1"
 
 https-proxy-agent@^5.0.0:
   version "5.0.0"
@@ -5991,7 +5982,7 @@ on-finished@~2.3.0:
   dependencies:
     ee-first "1.1.1"
 
-on-headers@^1.0.1, on-headers@~1.0.2:
+on-headers@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/on-headers/-/on-headers-1.0.2.tgz#772b0ae6aaa525c399e489adfad90c403eb3c28f"
   integrity sha512-pZAE+FJLoyITytdqK0U5s+FIpjN0JP3OzFi/u8Rx+EV5/W+JTWGXG8xFzevE7AjBfDqHv/8vL8qQsIhHnqRkrA==
@@ -8157,7 +8148,7 @@ ufo@^0.7.9:
   resolved "https://registry.yarnpkg.com/ufo/-/ufo-0.7.10.tgz#278942c326e3da344b6b97637ed7f322e817261e"
   integrity sha512-YTnDRlE1cIofRqOFN8ioAbz9qenDvkgVMSn0cnxvIDjM9sfEOMKB0ybMr+otSlCXMfQ/X35haYRoI7Nua82RrA==
 
-uglify-js@^3.0.28, uglify-js@^3.5.1:
+uglify-js@^3.15.1, uglify-js@^3.5.1:
   version "3.15.1"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.15.1.tgz#9403dc6fa5695a6172a91bc983ea39f0f7c9086d"
   integrity sha512-FAGKF12fWdkpvNJZENacOH0e/83eG6JyVQyanIJaBXCN1J11TUQv1T1/z8S+Z0CG0ZPk1nPcreF/c7lrTd0TEQ==
