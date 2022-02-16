@@ -1246,12 +1246,12 @@
   dependencies:
     "@iconify/types" "^1.0.12"
 
-"@iconify-json/logos@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@iconify-json/logos/-/logos-1.0.4.tgz#28cc96c99a1cda48a5530fce6001e1df8de22f96"
-  integrity sha512-jxNfvLj5ZCQUSe8bBN3mUxePKWcS9JbmoNd4t95PI5nDbwjOqAs1B4pgsJAn0T99foeThTn7r/69AQDqPQXCBA==
+"@iconify-json/logos@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify-json/logos/-/logos-1.1.0.tgz#d597e1f10227e6597d69e859a2f03da09e5e7ac3"
+  integrity sha512-xxaoU/zPQCnMGG51YpNhPTdoVWeGM0VAV1uoHoJTUF7lj6Y3vEdjmZsainZvYmNCBs6ZP0PsmB5z/m16A3KDyQ==
   dependencies:
-    "@iconify/types" "^1.0.10"
+    "@iconify/types" "^1.0.12"
 
 "@iconify-json/vscode-icons@1.0.6":
   version "1.0.6"
