@@ -1253,14 +1253,14 @@
   dependencies:
     "@iconify/types" "^1.0.12"
 
-"@iconify-json/vscode-icons@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@iconify-json/vscode-icons/-/vscode-icons-1.0.6.tgz#1b0dbe98afdb08e221732196be137837763db730"
-  integrity sha512-Tv+97Bski3f5ncR5UaGoJ7YjAs4ObOoCVU38XUAILFuw3qWIcaD4ytia4r69ZvxSKSJusCxOqKWPlvoV16/6KA==
+"@iconify-json/vscode-icons@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@iconify-json/vscode-icons/-/vscode-icons-1.1.1.tgz#1e49ca298bad8a1c73308334fb6037b7d6ae7a8b"
+  integrity sha512-V+Nfh8t2V4e6CmERZYpzgsHVnj+NOxTQejfgh7XtnFzqNyfne+0a4NMDm9+CD3US6zUHLPMihNRg6E0ZHA0ZBQ==
   dependencies:
-    "@iconify/types" "^1.0.10"
+    "@iconify/types" "^1.0.12"
 
-"@iconify/types@^1.0.10", "@iconify/types@^1.0.12":
+"@iconify/types@^1.0.12":
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/@iconify/types/-/types-1.0.12.tgz#839f1f784b7030b94482d51996570f4dbd7d6796"
   integrity sha512-6er6wSGF3hgc1JEZqiGpg21CTCjHBYOUwqLmb2Idzkjiw6ogalGP0ZMLVutCzah+0WB4yP+Zd2oVPN8jvJ+Ftg==
