@@ -1,3 +1,10 @@
+## [2.2.4](https://github.com/DerYeger/jan-mueller/compare/v2.2.3...v2.2.4) (2022-02-18)
+
+
+### Bug Fixes
+
+* compress avatar ([20cd4b9](https://github.com/DerYeger/jan-mueller/commit/20cd4b9713450638f0c23f08b42555936029fe00))
+
 ## [2.2.3](https://github.com/DerYeger/jan-mueller/compare/v2.2.2...v2.2.3) (2022-02-16)
 
 
