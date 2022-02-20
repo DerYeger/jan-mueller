@@ -8325,17 +8325,17 @@ unpipe@1.0.0, unpipe@~1.0.0:
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
   integrity sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw=
 
-unplugin-auto-import@0.5.11:
-  version "0.5.11"
-  resolved "https://registry.yarnpkg.com/unplugin-auto-import/-/unplugin-auto-import-0.5.11.tgz#334768c734456bd802344547b839d7164ed8bd42"
-  integrity sha512-MJ3POLe/IysRHF4yd32FkKDoxqSRoiuIHm89ys67B8FLuz2Pvh9poeqTVe6IhJsNxwv0+GSdFfj5Dpq24lhm4g==
+unplugin-auto-import@0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/unplugin-auto-import/-/unplugin-auto-import-0.6.0.tgz#5527baf053bc109bff74e827dfce1d006f6a0ee3"
+  integrity sha512-joItLHCozByEsKawhFTfterlZOp8EYIAOpuWKx5xq0SdLOQtvbEcfkdhLxWIsMOH9yXNY5vnXYRONW0XxjVDlg==
   dependencies:
-    "@antfu/utils" "^0.4.0"
+    "@antfu/utils" "^0.5.0"
     "@rollup/pluginutils" "^4.1.2"
     local-pkg "^0.4.1"
     magic-string "^0.25.7"
-    resolve "^1.21.0"
-    unplugin "^0.3.0"
+    resolve "^1.22.0"
+    unplugin "^0.3.2"
 
 unplugin-icons@0.13.2:
   version "0.13.2"
