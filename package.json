@@ -22,7 +22,7 @@
     "*.{js,json,md,ts,vue,yaml,yml}": "eslint --fix"
   },
   "dependencies": {
-    "@unocss/reset": "0.24.4",
+    "@unocss/reset": "0.25.0",
     "@vueuse/core": "7.5.5",
     "@vueuse/head": "0.7.5",
     "@yeger/vue-masonry-wall": "3.0.20",
