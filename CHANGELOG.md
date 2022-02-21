@@ -1,3 +1,10 @@
+## [2.2.5](https://github.com/DerYeger/jan-mueller/compare/v2.2.4...v2.2.5) (2022-02-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @unocss/reset to v0.25.0 ([adf5335](https://github.com/DerYeger/jan-mueller/commit/adf53352d0e754bf963f511f98462e3a21317f8e))
+
 ## [2.2.4](https://github.com/DerYeger/jan-mueller/compare/v2.2.3...v2.2.4) (2022-02-18)
 
 
