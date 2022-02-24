@@ -1246,10 +1246,10 @@
   dependencies:
     "@iconify/types" "^1.0.12"
 
-"@iconify-json/logos@1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@iconify-json/logos/-/logos-1.1.1.tgz#cf6e66d88aaff9fe84fb3b40e563267401d6baf4"
-  integrity sha512-JdPpJtgXJPW9wKDraFGfTMRvYW5X/OrqW5y4MsXD85jAHv+UD1jB9+I6FJ6bkPBwF5zH5hsp/WTd+kGhyDcFAw==
+"@iconify-json/logos@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@iconify-json/logos/-/logos-1.1.2.tgz#4d0b7c0b9881d56379c15f9a609e629e0182f5b8"
+  integrity sha512-cZ19VRfAZkSm8wa/5AIbgxJLP77saOOpY6Tz3GqZCr9mFyS/p36W5zk+KzPxmF9aN2X1FKxQrIMW2o+TNkCTww==
   dependencies:
     "@iconify/types" "^1.0.12"
 
