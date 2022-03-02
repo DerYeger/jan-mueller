@@ -29,7 +29,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Download
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: static-site-artifact
           path: ./dist
@@ -51,7 +51,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Download
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: static-site-artifact
           path: ./dist
