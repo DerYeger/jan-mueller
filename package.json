@@ -74,6 +74,6 @@
     "vite-plugin-vue-layouts": "0.6.0",
     "vite-ssg": "0.17.11",
     "vitest": "0.5.9",
-    "vue-tsc": "0.32.0"
+    "vue-tsc": "0.32.1"
   }
 }
