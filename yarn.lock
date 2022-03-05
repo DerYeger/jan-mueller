@@ -8541,16 +8541,17 @@ vite-plugin-md@0.11.8:
     gray-matter "^4.0.3"
     markdown-it "^12.3.2"
 
-vite-plugin-pages@0.20.2:
-  version "0.20.2"
-  resolved "https://registry.yarnpkg.com/vite-plugin-pages/-/vite-plugin-pages-0.20.2.tgz#20c06050bd2ba025fa88f27a0a51bf858123fe90"
-  integrity sha512-A/N6Pez9sMzt7ZEfd1H7P9tmP6LrZwXMexV8xSiRahnUeNw+gz0W2dsPLJDZBvcixDZqoK8ggKdmyxgVBuTAfg==
+vite-plugin-pages@0.21.3:
+  version "0.21.3"
+  resolved "https://registry.yarnpkg.com/vite-plugin-pages/-/vite-plugin-pages-0.21.3.tgz#5ba3aa9490f7bf6ad520f3b2b94a1106049e0959"
+  integrity sha512-sAcLAHuieULV6SVlNPdZehLINpr8E8nIbRM84vQWbp8S2800IGsOk0m4esWLQHZlRJKGkdHytAiRfpvSfvP10Q==
   dependencies:
     debug "^4.3.3"
     deep-equal "^2.0.5"
     fast-glob "^3.2.11"
     json5 "^2.2.0"
     local-pkg "^0.4.1"
+    picocolors "^1.0.0"
     yaml "^2.0.0-10"
 
 vite-plugin-pwa@0.11.13:
