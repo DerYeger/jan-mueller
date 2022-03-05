@@ -1807,11 +1807,6 @@
     "@unocss/core" "0.27.2"
     "@unocss/preset-mini" "0.27.2"
 
-"@unocss/reset@0.26.3":
-  version "0.26.3"
-  resolved "https://registry.yarnpkg.com/@unocss/reset/-/reset-0.26.3.tgz#0ef9767f640ea3c86b20910720f645e8f77e5dc1"
-  integrity sha512-CzrJDzdIGq76teLs4TxNpaOkfM+lmOC22iEyZCMplLJ9ig+S5cl5aPB4X3+Dcd8kAGsiOHHmDXZDcSqw9XE68A==
-
 "@unocss/reset@0.27.2":
   version "0.27.2"
   resolved "https://registry.yarnpkg.com/@unocss/reset/-/reset-0.27.2.tgz#e19c4fb3cf564361db7f6b30766d77859b191b73"
