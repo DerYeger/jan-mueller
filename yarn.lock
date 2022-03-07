@@ -8381,10 +8381,10 @@ unplugin-auto-import@0.6.1:
     resolve "^1.22.0"
     unplugin "^0.3.2"
 
-unplugin-icons@0.13.2:
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/unplugin-icons/-/unplugin-icons-0.13.2.tgz#c85fb6e68c0d041099a1534dca204f99943c8d7d"
-  integrity sha512-Dwfn5DkKrp/BpZV0R/2wgU39j+kjkeuIQ54PmJ9LhXNpNAS+Huf6Fl/PUmUrlWOvMAz0uPo3y/5lQKZUBjBkBQ==
+unplugin-icons@0.13.3:
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/unplugin-icons/-/unplugin-icons-0.13.3.tgz#02e2ce8212d4b55450c0f5ae356c50a0bbf7e5d2"
+  integrity sha512-HkNCexbEYNkvZkCH+ytUUXgxvLsd/cTCzNQCsBjpJrZ9bhNVxosf9sYGxJdc2BbdEhnaKYNNrwaP11EzmiW6gQ==
   dependencies:
     "@antfu/install-pkg" "^0.1.0"
     "@antfu/utils" "^0.5.0"
@@ -8392,7 +8392,7 @@ unplugin-icons@0.13.2:
     debug "^4.3.3"
     kolorist "^1.5.1"
     local-pkg "^0.4.1"
-    unplugin "^0.3.2"
+    unplugin "^0.3.3"
 
 unplugin-vue-components@0.17.21:
   version "0.17.21"
@@ -8414,6 +8414,13 @@ unplugin@^0.3.0, unplugin@^0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-0.3.2.tgz#5113b13b90df14f92e17ddafed9d465bb18d2ca6"
   integrity sha512-5d0DMYNKZU+S9eZUiBfw6Co32eRg8myUgBPoWSqG/wDFCUE/WznfSsJnZWi1P9l69x4uLJqt2qVq1xW/AsXFrw==
+  dependencies:
+    webpack-virtual-modules "^0.4.3"
+
+unplugin@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-0.3.3.tgz#e9b148f84cabef5e6529f232a10e674a7c020930"
+  integrity sha512-WjZWpUqqcYPQ/efR00Zm2m1+J1LitwoZ4uhHV4VdZ+IpW0Nh/qnDYtVf+nLhozXdGxslMPecOshVR7NiWFl4gA==
   dependencies:
     webpack-virtual-modules "^0.4.3"
 
