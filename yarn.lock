@@ -1474,6 +1474,14 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@rollup/pluginutils@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.2.0.tgz#a14bbd058fdbba0a5647143b16ed0d86fb60bd08"
+  integrity sha512-2WUyJNRkyH5p487pGnn4tWAsxhEFKN/pT8CMgHshd5H+IXkOnKvKZwsz5ZWz+YCXkleZRAU5kwbfgF8CPfDRqA==
+  dependencies:
+    estree-walker "^2.0.1"
+    picomatch "^2.2.2"
+
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-2.2.3.tgz#ee34985952ca21558ab0d952f00298ad2190c053"
@@ -8531,13 +8539,13 @@ vite-plugin-inspect@0.4.3:
     sirv "^2.0.2"
     ufo "^0.7.11"
 
-vite-plugin-md@0.11.8:
-  version "0.11.8"
-  resolved "https://registry.yarnpkg.com/vite-plugin-md/-/vite-plugin-md-0.11.8.tgz#3fc0282895dd0a42e1b18af07cde812e2f5c5253"
-  integrity sha512-eFk4Ox8IKuT+7benAcwLvGcYt/T4We2UDmQmxvCrhABJpQSbh44MitD1Wu6w733VKgSZAO7wd8IuoA20yXkXVQ==
+vite-plugin-md@0.11.9:
+  version "0.11.9"
+  resolved "https://registry.yarnpkg.com/vite-plugin-md/-/vite-plugin-md-0.11.9.tgz#c4314caf5c273b2468cc47e51986e40180c6ddec"
+  integrity sha512-0uD2BPIct3FbEA1hAm56hlrBByEn542HTsS/FoWf33lJIgijVBDDV6FE12ud0SHS6sculITKliF2ntog2kiHmQ==
   dependencies:
     "@antfu/utils" "^0.5.0"
-    "@rollup/pluginutils" "^4.1.2"
+    "@rollup/pluginutils" "^4.2.0"
     "@types/markdown-it" "^12.2.3"
     gray-matter "^4.0.3"
     markdown-it "^12.3.2"
