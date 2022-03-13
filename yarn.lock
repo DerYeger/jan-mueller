@@ -1753,6 +1753,11 @@
   resolved "https://registry.yarnpkg.com/@unocss/core/-/core-0.27.2.tgz#cddce07a385e264d722e76695896e101acbe7410"
   integrity sha512-7HgTjxM2paCgL7LaB9dMQYIuhcTmu/2KApHeL1pHSOYM3SC6ktCZKnY9JZ9pAvQKAzxCiB2yMRPXXU3EslpXNg==
 
+"@unocss/core@0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@unocss/core/-/core-0.28.0.tgz#65a43d9a7d2a5b709bc7222c699d37faf42477bb"
+  integrity sha512-/GlMY8mFlJfLJXN5IZo4gN69sOJJX0FjaB7KdQss659/Jr/gX3zVWjK/TiqXu78fBiHJJkhKAPnCZfZy2UYjxg==
+
 "@unocss/inspector@0.27.2":
   version "0.27.2"
   resolved "https://registry.yarnpkg.com/@unocss/inspector/-/inspector-0.27.2.tgz#935eca83b6afa31ca6e7fb0908339d7be28565e4"
@@ -1807,6 +1812,14 @@
   dependencies:
     "@unocss/core" "0.27.2"
     axios "^0.26.0"
+
+"@unocss/preset-web-fonts@0.28.0":
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/@unocss/preset-web-fonts/-/preset-web-fonts-0.28.0.tgz#d4a2bc4e3f91824a2b0fc0239a2a619c54f5a55e"
+  integrity sha512-9M/Ko5RJ26+ddYccjLeLPy22Z6bHbBYrqmyYBYygLZWlaRnW8yCLUYfivpFOa5YDHApxpmbkOK8Np57ertYZfA==
+  dependencies:
+    "@unocss/core" "0.28.0"
+    axios "^0.26.1"
 
 "@unocss/preset-wind@0.27.2":
   version "0.27.2"
@@ -2371,6 +2384,13 @@ axios@^0.26.0:
   version "0.26.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.0.tgz#9a318f1c69ec108f8cd5f3c3d390366635e13928"
   integrity sha512-lKoGLMYtHvFrPVt3r+RBMp9nh34N0M8zEfCWqdWZx6phynIEhQqAdydpyBAAG211zlhX9Rgu08cOamy6XjE5Og==
+  dependencies:
+    follow-redirects "^1.14.8"
+
+axios@^0.26.1:
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.1.tgz#1ede41c51fcf51bbbd6fd43669caaa4f0495aaa9"
+  integrity sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==
   dependencies:
     follow-redirects "^1.14.8"
 
