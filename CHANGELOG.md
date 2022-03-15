@@ -1,3 +1,10 @@
+## [2.2.19](https://github.com/DerYeger/jan-mueller/compare/v2.2.18...v2.2.19) (2022-03-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @vueuse/core to v8 ([3f26205](https://github.com/DerYeger/jan-mueller/commit/3f262054c00ae37ce9dcf901f18db2c2481d3260))
+
 ## [2.2.18](https://github.com/DerYeger/jan-mueller/compare/v2.2.17...v2.2.18) (2022-03-13)
 
 
