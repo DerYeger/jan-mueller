@@ -8802,10 +8802,15 @@ vscode-vue-languageservice@0.32.1:
     vscode-pug-languageservice "0.32.1"
     vscode-typescript-languageservice "0.32.1"
 
-vue-demi@*, vue-demi@0.12.1:
+vue-demi@*:
   version "0.12.1"
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.12.1.tgz#f7e18efbecffd11ab069d1472d7a06e319b4174c"
   integrity sha512-QL3ny+wX8c6Xm1/EZylbgzdoDolye+VpCXRhI2hug9dJTP3OUJ3lmiKN3CsVV3mOJKwFi0nsstbgob0vG7aoIw==
+
+vue-demi@0.12.3:
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.12.3.tgz#d1b368e0a4955593b63678457a9a456ec21884e2"
+  integrity sha512-u1dV2Y7nxUCHJC0+KZG7YgqjOgDgd8GS0rHp2YTiXy6rBPaYvEraoXkndU3UrExMLoN8SOnCWkDB27yu0BxGtg==
 
 vue-eslint-parser@^8.0.1:
   version "8.2.0"
