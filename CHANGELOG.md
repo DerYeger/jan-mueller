@@ -1,3 +1,10 @@
+## [2.2.22](https://github.com/DerYeger/jan-mueller/compare/v2.2.21...v2.2.22) (2022-03-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue-demi to v0.12.4 ([7899782](https://github.com/DerYeger/jan-mueller/commit/7899782ad2823ff4b72434861d55e103106cb2be))
+
 ## [2.2.21](https://github.com/DerYeger/jan-mueller/compare/v2.2.20...v2.2.21) (2022-03-16)
 
 
