@@ -1,3 +1,10 @@
+## [2.2.23](https://github.com/DerYeger/jan-mueller/compare/v2.2.22...v2.2.23) (2022-03-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @yeger/vue-masonry-wall to v3.0.24 ([8b445fa](https://github.com/DerYeger/jan-mueller/commit/8b445fa39579ef827373e81a74db2f321a25c58f))
+
 ## [2.2.22](https://github.com/DerYeger/jan-mueller/compare/v2.2.21...v2.2.22) (2022-03-17)
 
 
