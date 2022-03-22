@@ -8458,7 +8458,7 @@ vite-ssg@0.19.0:
     prettier "^2.6.0"
     yargs "^17.3.1"
 
-vite@2.8.6, vite@^2.7.10:
+vite@2.8.6, vite@^2.8.6:
   version "2.8.6"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.8.6.tgz#32d50e23c99ca31b26b8ccdc78b1d72d4d7323d3"
   integrity sha512-e4H0QpludOVKkmOsRyqQ7LTcMUDF3mcgyNU4lmi0B5JUbe0ZxeBBl8VoZ8Y6Rfn9eFKYtdXNPcYK97ZwH+K2ug==
@@ -8470,10 +8470,10 @@ vite@2.8.6, vite@^2.7.10:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitest@0.7.4:
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.7.4.tgz#5a1c77506a53be83028f033bb0d855ad7a7c60f1"
-  integrity sha512-6kyJ/YZJFVj/zEVVHFyvLvAZlbg05yAyJrk7oP+FOCFanGRYK7bBEz4qsIpNHxX+dlf5vRkbBDjpdXzGL7udeA==
+vitest@0.7.7:
+  version "0.7.7"
+  resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.7.7.tgz#8cdf9a163e01547be380b5a7530331d3126c9463"
+  integrity sha512-xU7BTB7T7GbcjFBdbZAAp/dIQUwn8bygI+cbw6Yq1oXj60oGRJ+nJ7AXvSOJyaHMTmglEoaqazyDGnCHJBXftw==
   dependencies:
     "@types/chai" "^4.3.0"
     "@types/chai-subset" "^1.3.3"
@@ -8481,7 +8481,7 @@ vitest@0.7.4:
     local-pkg "^0.4.1"
     tinypool "^0.1.2"
     tinyspy "^0.3.0"
-    vite "^2.7.10"
+    vite "^2.8.6"
 
 vscode-css-languageservice@^5.1.9:
   version "5.2.0"
