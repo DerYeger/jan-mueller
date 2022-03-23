@@ -1978,7 +1978,7 @@
   dependencies:
     "@vue/shared" "3.2.31"
 
-"@vue/runtime-core@3.2.31":
+"@vue/runtime-core@3.2.31", "@vue/runtime-core@^3.2.31":
   version "3.2.31"
   resolved "https://registry.yarnpkg.com/@vue/runtime-core/-/runtime-core-3.2.31.tgz#9d284c382f5f981b7a7b5971052a1dc4ef39ac7a"
   integrity sha512-Kcog5XmSY7VHFEMuk4+Gap8gUssYMZ2+w+cmGI6OpZWYOEIcbE0TPzzPHi+8XTzAgx1w/ZxDFcXhZeXN5eKWsA==
@@ -4322,6 +4322,11 @@ forwarded@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.2.0.tgz#2269936428aad4c15c7ebe9779a84bf0b2a81811"
   integrity sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==
+
+fp-ts@^2.11.9:
+  version "2.11.9"
+  resolved "https://registry.yarnpkg.com/fp-ts/-/fp-ts-2.11.9.tgz#bbc204e0932954b59c98a282635754a4b624a05e"
+  integrity sha512-GhYlNKkCOfdjp71ocdtyaQGoqCswEoWDJLRr+2jClnBBq2dnSOtd6QxmJdALq8UhfqCyZZ0f0lxadU4OhwY9nw==
 
 fresh@0.5.2:
   version "0.5.2"
@@ -8388,14 +8393,16 @@ vite-plugin-inspect@0.4.3:
     sirv "^2.0.2"
     ufo "^0.7.11"
 
-vite-plugin-md@0.11.9:
-  version "0.11.9"
-  resolved "https://registry.yarnpkg.com/vite-plugin-md/-/vite-plugin-md-0.11.9.tgz#c4314caf5c273b2468cc47e51986e40180c6ddec"
-  integrity sha512-0uD2BPIct3FbEA1hAm56hlrBByEn542HTsS/FoWf33lJIgijVBDDV6FE12ud0SHS6sculITKliF2ntog2kiHmQ==
+vite-plugin-md@0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-md/-/vite-plugin-md-0.12.0.tgz#08e86f21b8a79b6024dca4bc92f473f31067ad96"
+  integrity sha512-4jvqIU7ZU7ymiyBQiORz6KkoCQZfgliEXQw+F4trfztUbPOE3ERGyCz4OjL9GHRuD7I2hLd9q3kPljCMmoBLxg==
   dependencies:
     "@antfu/utils" "^0.5.0"
     "@rollup/pluginutils" "^4.2.0"
     "@types/markdown-it" "^12.2.3"
+    "@vue/runtime-core" "^3.2.31"
+    fp-ts "^2.11.9"
     gray-matter "^4.0.3"
     markdown-it "^12.3.2"
 
