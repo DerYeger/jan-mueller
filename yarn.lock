@@ -4331,11 +4331,6 @@ forwarded@0.2.0:
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.2.0.tgz#2269936428aad4c15c7ebe9779a84bf0b2a81811"
   integrity sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==
 
-fp-ts@^2.11.9:
-  version "2.11.9"
-  resolved "https://registry.yarnpkg.com/fp-ts/-/fp-ts-2.11.9.tgz#bbc204e0932954b59c98a282635754a4b624a05e"
-  integrity sha512-GhYlNKkCOfdjp71ocdtyaQGoqCswEoWDJLRr+2jClnBBq2dnSOtd6QxmJdALq8UhfqCyZZ0f0lxadU4OhwY9nw==
-
 fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
@@ -8401,16 +8396,15 @@ vite-plugin-inspect@0.4.3:
     sirv "^2.0.2"
     ufo "^0.7.11"
 
-vite-plugin-md@0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-md/-/vite-plugin-md-0.12.0.tgz#08e86f21b8a79b6024dca4bc92f473f31067ad96"
-  integrity sha512-4jvqIU7ZU7ymiyBQiORz6KkoCQZfgliEXQw+F4trfztUbPOE3ERGyCz4OjL9GHRuD7I2hLd9q3kPljCMmoBLxg==
+vite-plugin-md@0.12.3:
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/vite-plugin-md/-/vite-plugin-md-0.12.3.tgz#8cd6bfed4f9c4fe8b3c360b3f2308e00857c37db"
+  integrity sha512-Iy8u01E5yQ0hSCT9QcmJvahJ3zLwQX5HLFgFqlbakCHpq9j3+xohkzuup2Bf9vMUuTilcJDEPAcLhzNIhzp1+A==
   dependencies:
     "@antfu/utils" "^0.5.0"
     "@rollup/pluginutils" "^4.2.0"
     "@types/markdown-it" "^12.2.3"
     "@vue/runtime-core" "^3.2.31"
-    fp-ts "^2.11.9"
     gray-matter "^4.0.3"
     markdown-it "^12.3.2"
 
