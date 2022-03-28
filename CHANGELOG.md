@@ -1,3 +1,10 @@
+## [2.2.28](https://github.com/DerYeger/jan-mueller/compare/v2.2.27...v2.2.28) (2022-03-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue-marmoset-viewer to v3.0.14 ([bb227da](https://github.com/DerYeger/jan-mueller/commit/bb227da32f68e2a286130aa82fdd8c4912258634))
+
 ## [2.2.27](https://github.com/DerYeger/jan-mueller/compare/v2.2.26...v2.2.27) (2022-03-27)
 
 
