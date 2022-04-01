@@ -1,3 +1,10 @@
+## [2.2.32](https://github.com/DerYeger/jan-mueller/compare/v2.2.31...v2.2.32) (2022-04-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency pinia to v2.0.13 ([6f10aeb](https://github.com/DerYeger/jan-mueller/commit/6f10aebcae076048c86146cda9bc6d037f437c19))
+
 ## [2.2.31](https://github.com/DerYeger/jan-mueller/compare/v2.2.30...v2.2.31) (2022-04-01)
 
 
