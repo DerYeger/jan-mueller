@@ -90,16 +90,6 @@ The following example demonstrates basic usage of the component.
 For interactive demonstrations, visit [vue-masonry-wall.yeger.eu](https://vue-masonry-wall.yeger.eu/) or [vue2-masonry-wall.yeger.eu](https://vue2-masonry-wall.yeger.eu/).
 
 ```vue
-<template>
-  <MasonryWall :items="items" :ssr-columns="1" :column-width="300" :gap="16">
-    <template #default="{ item }">
-      <div :style="{ height: `${item.height}px` }">
-        {{ item.content }}
-      </div>
-    </template>
-  </MasonryWall>
-</template>
-
 <script>
 export default {
   data() {
@@ -114,4 +104,14 @@ export default {
   },
 }
 </script>
+
+<template>
+  <MasonryWall :items="items" :ssr-columns="1" :column-width="300" :gap="16">
+    <template #default="{ item }">
+      <div :style="{ height: `${item.height}px` }">
+        {{ item.content }}
+      </div>
+    </template>
+  </MasonryWall>
+</template>
 ```
