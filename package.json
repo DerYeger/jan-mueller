@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@unocss/reset": "0.29.5",
-    "@vueuse/core": "8.2.3",
+    "@vueuse/core": "8.2.4",
     "@vueuse/head": "0.7.5",
     "@yeger/vue-masonry-wall": "3.0.26",
     "nprogress": "0.2.0",
