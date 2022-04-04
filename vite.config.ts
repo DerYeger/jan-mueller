@@ -1,4 +1,3 @@
-/// <reference types="vitest" />
 import { readFileSync } from 'fs'
 import { resolve } from 'path'
 
@@ -207,14 +206,5 @@ export default defineConfig({
   optimizeDeps: {
     include: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head'],
     exclude: ['vue-demi'],
-  },
-
-  // https://github.com/vitest-dev/vitest
-  test: {
-    include: ['test/**/*.test.ts'],
-    environment: 'jsdom',
-    deps: {
-      inline: ['@vue', '@vueuse', 'vue-demi'],
-    },
   },
 })
