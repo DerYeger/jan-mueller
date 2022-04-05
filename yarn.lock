@@ -8575,10 +8575,10 @@ vite-plugin-vue-layouts@0.6.0:
     debug "^4.3.2"
     fast-glob "^3.2.7"
 
-vite-ssg@0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/vite-ssg/-/vite-ssg-0.19.0.tgz#731b3461438c0420da5d35bcb7677d7e052babdd"
-  integrity sha512-LpjMTs12BgTpb4YwLKhvGd6ZRMxDf02Hq+B4uxdIe1+565nYsLkaem9U5vsuSMOu7lN9Y3XTXd752fmtuG2xHA==
+vite-ssg@0.19.1:
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/vite-ssg/-/vite-ssg-0.19.1.tgz#c6322a43ee2c78daca3277dde414a7178e328dfe"
+  integrity sha512-TEs39k05JSBkRDEhwVmXcn/OesMu/innEIbP8hKqZTZ/+E9eTyk3KitrnFvp0UCeJ2Gz/JHPxfQ/j/3Mi7/rpA==
   dependencies:
     fs-extra "^10.0.1"
     html-minifier "^4.0.0"
