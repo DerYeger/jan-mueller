@@ -8573,10 +8573,10 @@ vue-i18n@9.1.9:
     "@intlify/vue-devtools" "9.1.9"
     "@vue/devtools-api" "^6.0.0-beta.7"
 
-vue-marmoset-viewer@3.0.16:
-  version "3.0.16"
-  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-3.0.16.tgz#099a5136df40d584db84104aad835b2257aee36e"
-  integrity sha512-5iDy+vsgxe6fcC0KOQf6zPBwbgGH8vhCDzGUYE2IerGCUHkA5dCQmnS7Ewdlqdw4NjIbHNB7iRUsDdVPvjaF7w==
+vue-marmoset-viewer@3.0.17:
+  version "3.0.17"
+  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-3.0.17.tgz#e30d47b0af86a8d3d65f14cee9373b645dc0c50c"
+  integrity sha512-7jUX9nZqZFU7ZSEJfY/WUtgQeilXS3bCJWrOSpSKFGb/9VU9WFkBM1rjEeeHjd/UYgkyDjBDqvsdTLQ2PkHIbw==
   dependencies:
     "@yeger/debounce" "1.0.10"
 
