@@ -1710,10 +1710,10 @@
   resolved "https://registry.yarnpkg.com/@unocss/core/-/core-0.30.12.tgz#0616577985fee9ef7f260510b0723e65702a5088"
   integrity sha512-uxtLVT59ryp/h4I5QgcN4il+5MOEEfzf0M0FxzxYAiizO3cBLNCmCfPKo0Sp5VWCgWDrBFtyEEVP7G6lDOin/w==
 
-"@unocss/core@0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@unocss/core/-/core-0.31.0.tgz#95cfea10aa5e8c92d113b361c3927015f4d1011f"
-  integrity sha512-7FUz3GRP/hczadNCtYN2fw6pLjCKcehZrABye4egPpgYW+6BWITXOav6KUh5xx4NX42KBstgUhhbeS4ZkkM0iQ==
+"@unocss/core@0.31.2":
+  version "0.31.2"
+  resolved "https://registry.yarnpkg.com/@unocss/core/-/core-0.31.2.tgz#9b33dd47586962d43cde2103c8c1459dc5ec978a"
+  integrity sha512-IVwRa8vXdIZmIFmSrMWtbkClZvwpfuvGb70QP2YDRY15NZE2ZlvIAVDC5XiPU+w02qrqoi/n3Zlt4YnNJDg+4g==
 
 "@unocss/inspector@0.30.12":
   version "0.30.12"
@@ -1769,12 +1769,12 @@
     "@unocss/core" "0.30.12"
     axios "^0.26.1"
 
-"@unocss/preset-web-fonts@0.31.0":
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/@unocss/preset-web-fonts/-/preset-web-fonts-0.31.0.tgz#74445b24cca3699c152e8e52703b63d1f95a3ece"
-  integrity sha512-iGVn6uGHWn6wMK+AP+1qh6EVlUwfVW74sJyLbYs4/Tp1AnDZ2/+WBqoz39cSK1tfTYGfz0vUj4dCDFC1SLeRnw==
+"@unocss/preset-web-fonts@0.31.2":
+  version "0.31.2"
+  resolved "https://registry.yarnpkg.com/@unocss/preset-web-fonts/-/preset-web-fonts-0.31.2.tgz#33c3d98954a6a0c46040063ee4200e49120df865"
+  integrity sha512-tNFemeUIXeVlKef3Bkg1XMT+a/46lPQ4rOsYXeeTvd4bmCN0C9qg2CTFdzKP+U8DJfZh6slt0rXZvJvvLp7DyA==
   dependencies:
-    "@unocss/core" "0.31.0"
+    "@unocss/core" "0.31.2"
     axios "^0.26.1"
 
 "@unocss/preset-wind@0.30.12":
