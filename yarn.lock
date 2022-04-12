@@ -8279,29 +8279,21 @@ unplugin-icons@0.14.1:
     local-pkg "^0.4.1"
     unplugin "^0.5.2"
 
-unplugin-vue-components@0.18.5:
-  version "0.18.5"
-  resolved "https://registry.yarnpkg.com/unplugin-vue-components/-/unplugin-vue-components-0.18.5.tgz#96dfad540100ed8ae8895e65c32d9b37886dc5c5"
-  integrity sha512-VPA6z/4pcKRDYtWu1H+FIpV0MADlFKG3q7YMVFzNFC3EhMVZ4WuBJ76490oKyauguNw1T1obLCuxNU9JzJ0oAQ==
+unplugin-vue-components@0.19.2:
+  version "0.19.2"
+  resolved "https://registry.yarnpkg.com/unplugin-vue-components/-/unplugin-vue-components-0.19.2.tgz#960fa9983102b821ab21e873a77ae75795b589c6"
+  integrity sha512-7DhQfTyHLyVIWR6VBQONLU6dDBOXtEYvZQYUpN9C+t11WOb5baIFoxfzDxkeFHTHGMhznyEOw6afHyV9JKWnig==
   dependencies:
     "@antfu/utils" "^0.5.0"
     "@rollup/pluginutils" "^4.2.0"
     chokidar "^3.5.3"
-    debug "^4.3.3"
+    debug "^4.3.4"
     fast-glob "^3.2.11"
     local-pkg "^0.4.1"
     magic-string "^0.26.1"
     minimatch "^5.0.1"
     resolve "^1.22.0"
-    unplugin "^0.4.0"
-
-unplugin@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-0.4.0.tgz#43a923f0267f8834118a926c406131d1d84a1358"
-  integrity sha512-4ScITEmzlz1iZW3tkz+3L1V5k/xMQ6kjgm4lEXKxH0ozd8/OUWfiSA7RMRyrawsvq/t50JIzPpp1UyuSL/AXkA==
-  dependencies:
-    chokidar "^3.5.3"
-    webpack-virtual-modules "^0.4.3"
+    unplugin "^0.6.1"
 
 unplugin@^0.5.2:
   version "0.5.2"
