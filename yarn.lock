@@ -8251,12 +8251,12 @@ unpipe@1.0.0, unpipe@~1.0.0:
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
   integrity sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw=
 
-unplugin-auto-import@0.7.0:
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/unplugin-auto-import/-/unplugin-auto-import-0.7.0.tgz#5be5df1d9a825cb01323b9d06eaadf5253290753"
-  integrity sha512-40oC7bxzSyyvJI4mXmk8gDD7gKjR10gYkeWBu/UigK8TusXwUsJOjwvIr+REgzOMBGH/5pUiVMoBYEZrLejk3w==
+unplugin-auto-import@0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/unplugin-auto-import/-/unplugin-auto-import-0.7.1.tgz#3ad04277254f9fc1bcf18ceb71addb4798bbac7c"
+  integrity sha512-9865OV9eP99PNxHR2mtTDExeN01m4M9boT5U2BtIwsU1wDRsaFIYWLwcCBEjvXzXfTTC2NNMskhHGVAMfL2WgA==
   dependencies:
-    "@antfu/utils" "^0.5.0"
+    "@antfu/utils" "^0.5.1"
     "@rollup/pluginutils" "^4.2.0"
     local-pkg "^0.4.1"
     magic-string "^0.26.1"
