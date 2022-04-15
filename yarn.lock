@@ -1718,11 +1718,6 @@
     "@unocss/core" "0.31.3"
     unconfig "^0.3.3"
 
-"@unocss/core@0.31.2":
-  version "0.31.2"
-  resolved "https://registry.yarnpkg.com/@unocss/core/-/core-0.31.2.tgz#9b33dd47586962d43cde2103c8c1459dc5ec978a"
-  integrity sha512-IVwRa8vXdIZmIFmSrMWtbkClZvwpfuvGb70QP2YDRY15NZE2ZlvIAVDC5XiPU+w02qrqoi/n3Zlt4YnNJDg+4g==
-
 "@unocss/core@0.31.3":
   version "0.31.3"
   resolved "https://registry.yarnpkg.com/@unocss/core/-/core-0.31.3.tgz#4d787f8ce1f71c8e20a6cb863f8154e25d72da02"
@@ -1773,14 +1768,6 @@
     "@unocss/core" "0.31.3"
     "@unocss/preset-mini" "0.31.3"
     "@unocss/preset-wind" "0.31.3"
-
-"@unocss/preset-web-fonts@0.31.2":
-  version "0.31.2"
-  resolved "https://registry.yarnpkg.com/@unocss/preset-web-fonts/-/preset-web-fonts-0.31.2.tgz#33c3d98954a6a0c46040063ee4200e49120df865"
-  integrity sha512-tNFemeUIXeVlKef3Bkg1XMT+a/46lPQ4rOsYXeeTvd4bmCN0C9qg2CTFdzKP+U8DJfZh6slt0rXZvJvvLp7DyA==
-  dependencies:
-    "@unocss/core" "0.31.2"
-    axios "^0.26.1"
 
 "@unocss/preset-web-fonts@0.31.3":
   version "0.31.3"
