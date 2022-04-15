@@ -1,3 +1,10 @@
+## [2.2.42](https://github.com/DerYeger/jan-mueller/compare/v2.2.41...v2.2.42) (2022-04-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @vueuse/head to v0.7.6 ([48b111f](https://github.com/DerYeger/jan-mueller/commit/48b111f4567de51a2012856c304f73c5fc933079))
+
 ## [2.2.41](https://github.com/DerYeger/jan-mueller/compare/v2.2.40...v2.2.41) (2022-04-12)
 
 
