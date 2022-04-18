@@ -1218,10 +1218,10 @@
   dependencies:
     "@iconify/types" "^1.0.12"
 
-"@iconify-json/logos@1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@iconify-json/logos/-/logos-1.1.4.tgz#c1a71a0a50b6fe329b4ea9cadb719200bb27c856"
-  integrity sha512-D639AO9SO7+yDloCh5u1v+cbrzE4FIC/CbOb4++O3IfqF+OgeyrZf2w7AC+aFw/OWTdd/JMSzDNWC2/6HugL9g==
+"@iconify-json/logos@1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@iconify-json/logos/-/logos-1.1.5.tgz#4f280b7478e4a5d420d4b6552c3de1e7c8f7092d"
+  integrity sha512-PVBTp7fZ7zNBDdCCqN9IqJt78jO4f8agtiNVwxWfflmEGi3+Fu95Jre0CYAPDalyy862r46DXg8AiCoNENQ3SQ==
   dependencies:
     "@iconify/types" "^1.0.12"
 
