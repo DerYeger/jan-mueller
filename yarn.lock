@@ -1718,15 +1718,15 @@
     "@unocss/core" "0.31.3"
     unconfig "^0.3.3"
 
+"@unocss/core@0.31.12":
+  version "0.31.12"
+  resolved "https://registry.yarnpkg.com/@unocss/core/-/core-0.31.12.tgz#f3eecbd5d298e1263b2b1036a271065a0867b4d4"
+  integrity sha512-2dOf0yYXXWi+bhS0x+3DppQtImUREVu7CSFkrPULOioImWHryLfiORAdHpPd4MnUqBFLqtC68+7un00HPJVx3g==
+
 "@unocss/core@0.31.3":
   version "0.31.3"
   resolved "https://registry.yarnpkg.com/@unocss/core/-/core-0.31.3.tgz#4d787f8ce1f71c8e20a6cb863f8154e25d72da02"
   integrity sha512-0xnRatssQzXs44qC9vuvJXBL6vDAEhTOuvH2Yp0cQhowsdrf6W6iC1fw/v8DNr6NJraBOwJIMKcD1nxoiXpNJA==
-
-"@unocss/core@0.31.6":
-  version "0.31.6"
-  resolved "https://registry.yarnpkg.com/@unocss/core/-/core-0.31.6.tgz#ea2530fc6178efd215e06e5a5bcf4ec3cf0c421e"
-  integrity sha512-u8V9qiOPw8KALsUwDAWOhIzAtQI40b9fno8EofIEYisDjH/6ty8qrpQ0B0YzrcybMa4fEt6xW/4b53HTB8t02w==
 
 "@unocss/inspector@0.31.3":
   version "0.31.3"
@@ -1774,20 +1774,20 @@
     "@unocss/preset-mini" "0.31.3"
     "@unocss/preset-wind" "0.31.3"
 
+"@unocss/preset-web-fonts@0.31.12":
+  version "0.31.12"
+  resolved "https://registry.yarnpkg.com/@unocss/preset-web-fonts/-/preset-web-fonts-0.31.12.tgz#7761ec32e6ea287390a4d22424a3470d7f385cbe"
+  integrity sha512-uDU0dVBrBSBi13XwZZlSuOHsRnroEnjWW6d6FnyxjcUYjE2zXu9bSc/mLA2XcD4EHO7GOvQPkK51fPWW5+C9FA==
+  dependencies:
+    "@unocss/core" "0.31.12"
+    axios "^0.26.1"
+
 "@unocss/preset-web-fonts@0.31.3":
   version "0.31.3"
   resolved "https://registry.yarnpkg.com/@unocss/preset-web-fonts/-/preset-web-fonts-0.31.3.tgz#55fc807bbc4a899061a192783e765e6846956475"
   integrity sha512-Oq8vGUBGriHJwYV7vSdGLVkfTfF5+v/PBUVvNVePSS+BBJrixgQmbf7k9V88TutgbJkOnJAiRqT4/g3SlJVK4w==
   dependencies:
     "@unocss/core" "0.31.3"
-    axios "^0.26.1"
-
-"@unocss/preset-web-fonts@0.31.6":
-  version "0.31.6"
-  resolved "https://registry.yarnpkg.com/@unocss/preset-web-fonts/-/preset-web-fonts-0.31.6.tgz#39f1c115675d999966458b8804892c5efa23d086"
-  integrity sha512-icmFEWmdvvSDcbGwZrLgcm2N/NHZH32KyoYfFmS3AnnYWuGsbEgc1jN24i1D8acgTz+FcQTo0rJrblttIa24mg==
-  dependencies:
-    "@unocss/core" "0.31.6"
     axios "^0.26.1"
 
 "@unocss/preset-wind@0.31.3":
