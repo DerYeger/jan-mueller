@@ -1,3 +1,11 @@
+## [2.2.47](https://github.com/DerYeger/jan-mueller/compare/v2.2.46...v2.2.47) (2022-04-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @yeger/vue-masonry-wall to v3.0.29 ([b3d00ba](https://github.com/DerYeger/jan-mueller/commit/b3d00babaa1c90eb6016e26a5fd1c9ff52ccd21c))
+* **deps:** update dependency vue-marmoset-viewer to v3.0.21 ([31c509c](https://github.com/DerYeger/jan-mueller/commit/31c509c87b03df681513040d96efa0a0147b0b49))
+
 ## [2.2.46](https://github.com/DerYeger/jan-mueller/compare/v2.2.45...v2.2.46) (2022-04-23)
 
 
