@@ -57,7 +57,7 @@
     "lint-staged": "12.4.1",
     "markdown-it-link-attributes": "4.0.0",
     "markdown-it-prism": "2.2.4",
-    "typescript": "4.6.3",
+    "typescript": "4.6.4",
     "unocss": "0.31.16",
     "unplugin-auto-import": "0.7.1",
     "unplugin-icons": "0.14.1",
