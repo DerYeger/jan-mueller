@@ -70,7 +70,7 @@
     "vite-plugin-ssg-utils": "1.0.1",
     "vite-plugin-vue-layouts": "0.6.0",
     "vite-ssg": "0.19.2",
-    "vitest": "0.9.4",
+    "vitest": "0.10.0",
     "vue-tsc": "0.34.11"
   },
   "lint-staged": {
