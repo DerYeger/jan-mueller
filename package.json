@@ -46,7 +46,7 @@
     "@vue/compiler-sfc": "3.2.33",
     "@vue/server-renderer": "3.2.33",
     "@vue/test-utils": "2.0.0-rc.21",
-    "@yeger/eslint-config": "1.4.20",
+    "@yeger/eslint-config": "1.4.21",
     "critters": "0.0.16",
     "cross-env": "7.0.3",
     "cypress": "9.6.0",
