@@ -1,3 +1,11 @@
+## [2.2.49](https://github.com/DerYeger/jan-mueller/compare/v2.2.48...v2.2.49) (2022-05-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @vueuse/core to v8.3.1 ([8ce56f0](https://github.com/DerYeger/jan-mueller/commit/8ce56f099f377c17233cb74b7a76ee61cfa00b1d))
+* **deps:** update dependency vue-i18n to v9.1.10 ([0e4e0da](https://github.com/DerYeger/jan-mueller/commit/0e4e0da2fc92f55da99513fb24112b7f81ebd756))
+
 ## [2.2.48](https://github.com/DerYeger/jan-mueller/compare/v2.2.47...v2.2.48) (2022-05-01)
 
 
