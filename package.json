@@ -42,7 +42,7 @@
     "@types/markdown-it-link-attributes": "3.0.1",
     "@types/nprogress": "0.2.0",
     "@unocss/preset-web-fonts": "0.32.12",
-    "@vitejs/plugin-vue": "2.3.1",
+    "@vitejs/plugin-vue": "2.3.2",
     "@vue/compiler-sfc": "3.2.33",
     "@vue/server-renderer": "3.2.33",
     "@vue/test-utils": "2.0.0-rc.21",
