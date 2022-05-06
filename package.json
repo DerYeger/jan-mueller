@@ -69,7 +69,7 @@
     "vite-plugin-pwa": "0.12.0",
     "vite-plugin-ssg-utils": "1.0.1",
     "vite-plugin-vue-layouts": "0.6.0",
-    "vite-ssg": "0.19.2",
+    "vite-ssg": "0.20.0",
     "vitest": "0.10.2",
     "vue-tsc": "0.34.11"
   },
