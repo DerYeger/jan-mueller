@@ -1784,11 +1784,6 @@
   resolved "https://registry.yarnpkg.com/@unocss/reset/-/reset-0.32.13.tgz#804b3f0d1a50443516fee983d1fca740a2421d79"
   integrity sha512-jnufRcqKvJapTQ5HIMWrV35ipxdV3KW1Gv1yIIk63nI071c4p9zKbsWktY7UcCYU47hbE2lJuHc0ShbDrwQ6rQ==
 
-"@unocss/reset@0.32.7":
-  version "0.32.7"
-  resolved "https://registry.yarnpkg.com/@unocss/reset/-/reset-0.32.7.tgz#0478a0ae1bf1506acdd10d834008b880ecd9d7dc"
-  integrity sha512-GqbNBx1qH+otwGmHjzvBEG/MOZXc5RhO6hnSiII/98WtMCM+o5njtGgW9CcWJWhhcmUuGTzvVDzNZhuAW8yl9Q==
-
 "@unocss/scope@0.32.13":
   version "0.32.13"
   resolved "https://registry.yarnpkg.com/@unocss/scope/-/scope-0.32.13.tgz#6bbf20aa4ff6a70b1e71c5b73a2d74ec1f45d0b3"
