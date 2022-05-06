@@ -24,7 +24,7 @@
     "@vueuse/head": "0.7.6",
     "@yeger/vue-masonry-wall": "3.0.30",
     "nprogress": "0.2.0",
-    "pinia": "2.0.13",
+    "pinia": "2.0.14",
     "prism-theme-vars": "0.2.2",
     "vue": "3.2.33",
     "vue-demi": "0.12.5",
