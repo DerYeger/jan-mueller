@@ -1,3 +1,11 @@
+## [2.2.53](https://github.com/DerYeger/jan-mueller/compare/v2.2.52...v2.2.53) (2022-05-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @unocss/reset to v0.32.13 ([ae103e1](https://github.com/DerYeger/jan-mueller/commit/ae103e16313547d8105bd7c0707aef6ca755baba))
+* **deps:** update dependency vue-router to v4.0.15 ([99ac925](https://github.com/DerYeger/jan-mueller/commit/99ac925522d9f052a2bb2512ed48c812b4e5d212))
+
 ## [2.2.52](https://github.com/DerYeger/jan-mueller/compare/v2.2.51...v2.2.52) (2022-05-05)
 
 
