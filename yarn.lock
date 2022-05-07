@@ -8386,10 +8386,10 @@ vite-plugin-inspect@0.5.0:
     sirv "^2.0.2"
     ufo "^0.8.3"
 
-vite-plugin-md@0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-md/-/vite-plugin-md-0.13.0.tgz#079e19ccc839ba98a69ca7768212a86529b6248b"
-  integrity sha512-srW6j3otbHxFaTushal6fWxrjrlyA553biB0S1Bpm2DhWL1hP4a/snjpi+5AyDVaQodMmA4Oe2hIW1IjyKa0hQ==
+vite-plugin-md@0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-md/-/vite-plugin-md-0.13.1.tgz#ab0e4d2b2043746cd09917773b1de7fb6607692a"
+  integrity sha512-ZLXRuhQCFVCvxTE79CtSOj71TknT7Hube5SN3aU65k7FpsIQ8ftQhMn3PbdVjHUlQRR462IuPsTYbyXHyrOmOQ==
   dependencies:
     "@antfu/utils" "^0.5.1"
     "@rollup/pluginutils" "^4.2.1"
