@@ -33,7 +33,7 @@
     "vue-router": "4.0.15"
   },
   "devDependencies": {
-    "@commitlint/cli": "16.2.4",
+    "@commitlint/cli": "16.3.0",
     "@commitlint/config-conventional": "16.2.4",
     "@iconify-json/carbon": "1.1.4",
     "@iconify-json/logos": "1.1.5",
