@@ -1,3 +1,11 @@
+## [2.2.59](https://github.com/DerYeger/jan-mueller/compare/v2.2.58...v2.2.59) (2022-05-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @unocss/reset to v0.33.5 ([33859da](https://github.com/DerYeger/jan-mueller/commit/33859daead39064f8b7a1cde66be49faf43e9cbc))
+* **deps:** update dependency @vueuse/core to v8.5.0 ([a22e796](https://github.com/DerYeger/jan-mueller/commit/a22e7966b206fe26283f5ea35d625515eb7fe772))
+
 ## [2.2.58](https://github.com/DerYeger/jan-mueller/compare/v2.2.57...v2.2.58) (2022-05-15)
 
 
