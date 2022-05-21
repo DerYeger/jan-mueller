@@ -1,3 +1,10 @@
+## [2.2.61](https://github.com/DerYeger/jan-mueller/compare/v2.2.60...v2.2.61) (2022-05-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prism-theme-vars to v0.2.3 ([1b214bc](https://github.com/DerYeger/jan-mueller/commit/1b214bcc684339944f3fe0ac231a97768f944896))
+
 ## [2.2.60](https://github.com/DerYeger/jan-mueller/compare/v2.2.59...v2.2.60) (2022-05-20)
 
 
