@@ -19,7 +19,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@unocss/reset": "0.33.5",
+    "@unocss/reset": "0.34.0",
     "@vueuse/core": "8.5.0",
     "@vueuse/head": "0.7.6",
     "@yeger/vue-masonry-wall": "3.0.32",
