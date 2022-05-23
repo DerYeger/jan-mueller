@@ -1218,12 +1218,12 @@
   dependencies:
     "@iconify/types" "^1.0.12"
 
-"@iconify-json/vscode-icons@1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@iconify-json/vscode-icons/-/vscode-icons-1.1.4.tgz#22509bbfb0f3b6e08e46e2590bb7d4759da3617e"
-  integrity sha512-y3wWBnyqZ9/NjF5UbWqEx3iwwsHzHZOXY0xuJBKeVu8BvQy+mPZtiyZ/DWhKpGh1qQ5aE8ixckUxDF40E2Onyg==
+"@iconify-json/vscode-icons@1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@iconify-json/vscode-icons/-/vscode-icons-1.1.5.tgz#e291e301b2bac130395af37b6ecccc35989803c8"
+  integrity sha512-QYetQfOh1ugeOGe3i5Y++hsYhO6Btx/LBS8VEoIM6ycnSGzkqAPYRp8YabMpzpy2IAJUlDIXbQYLpP3n0mM4Bg==
   dependencies:
-    "@iconify/types" "^1.0.12"
+    "@iconify/types" "^1.1.0"
 
 "@iconify/types@^1.0.12", "@iconify/types@^1.1.0":
   version "1.1.0"
