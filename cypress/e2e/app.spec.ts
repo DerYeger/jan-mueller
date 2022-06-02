@@ -6,7 +6,6 @@ describe('App', () => {
           .withArgs('(prefers-color-scheme: dark)')
           .returns({
             matches: false,
-            // eslint-disable-next-line @typescript-eslint/no-empty-function
             addListener: () => {},
           })
       },
@@ -21,7 +20,6 @@ describe('App', () => {
           .withArgs('(prefers-color-scheme: dark)')
           .returns({
             matches: true,
-            // eslint-disable-next-line @typescript-eslint/no-empty-function
             addListener: () => {},
           })
       },
