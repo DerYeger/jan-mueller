@@ -51,7 +51,7 @@ jobs:
           name: dist
           path: dist
       - name: Test
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         with:
           install: false
           start: yarn preview
