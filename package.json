@@ -50,7 +50,7 @@
     "critters": "0.0.16",
     "cross-env": "7.0.3",
     "cypress": "10.0.3",
-    "eslint": "8.16.0",
+    "eslint": "8.17.0",
     "gray-matter": "4.0.3",
     "https-localhost": "4.7.1",
     "husky": "8.0.1",
