@@ -1,3 +1,10 @@
+## [2.2.70](https://github.com/DerYeger/jan-mueller/compare/v2.2.69...v2.2.70) (2022-06-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue-router to v4.0.16 ([12d90d5](https://github.com/DerYeger/jan-mueller/commit/12d90d5d009e8d72dbd4bc9032c69b24b3f4db86))
+
 ## [2.2.69](https://github.com/DerYeger/jan-mueller/compare/v2.2.68...v2.2.69) (2022-06-10)
 
 
