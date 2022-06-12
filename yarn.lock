@@ -2201,10 +2201,10 @@
     happy-dom "^4.0.1"
     native-dash "^1.22.1"
 
-"@yeger/debounce@1.0.18":
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.18.tgz#c2096e0f62194b38afe423f7d084acf61aef426f"
-  integrity sha512-QwW6oR6g+5vo1VNUUdHOJrK5/Yr6j27DEvwzh9KzgIE7GB/vt9izLoPv/52h3a7AaQLYN8CP0pRhzbkr+M8LWw==
+"@yeger/debounce@1.0.19":
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.19.tgz#7df858781b7a0c7382f2854b92da1200c22e9228"
+  integrity sha512-ynzlNQIqKyMnAERNPyp1qez553+U51yYTvDQiOWwpj2Y0HCS9xlShWyEdNmnVcM4fIzhHcHYDxO6AlvcyH/faA==
 
 "@yeger/eslint-config@1.4.27":
   version "1.4.27"
@@ -9113,12 +9113,12 @@ vue-i18n@9.1.10:
     "@intlify/vue-devtools" "9.1.10"
     "@vue/devtools-api" "^6.0.0-beta.7"
 
-vue-marmoset-viewer@3.0.30:
-  version "3.0.30"
-  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-3.0.30.tgz#aead867956f8f80f2d24ef8bb943e2a6f7089cb1"
-  integrity sha512-DObtGy3vlE46LIf3FgcRC4vaMu0o8dLyZjVTTyW/yyguW72oYgSJwEnumL0Ssg4CI1rc1sE1L4DRPamLctLSQA==
+vue-marmoset-viewer@3.0.31:
+  version "3.0.31"
+  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-3.0.31.tgz#13d59b2b3a986a2124c36ad3b45029443c2532b6"
+  integrity sha512-Pqyp/7uA4PryKCinyR0ZpvrRVkqlnpNJ2/nPZugMMln9oIwwxgICUu8RaKzASHpQ1IIlJSuK0YrDdZ6GEim5KA==
   dependencies:
-    "@yeger/debounce" "1.0.18"
+    "@yeger/debounce" "1.0.19"
 
 vue-router@4.0.16, vue-router@^4.0.16:
   version "4.0.16"
