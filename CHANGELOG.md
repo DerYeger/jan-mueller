@@ -1,3 +1,10 @@
+## [2.2.71](https://github.com/DerYeger/jan-mueller/compare/v2.2.70...v2.2.71) (2022-06-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @unocss/reset to v0.38.2 ([3e0f39d](https://github.com/DerYeger/jan-mueller/commit/3e0f39d3dd7769085c908d3c6d5cf4df01e94750))
+
 ## [2.2.70](https://github.com/DerYeger/jan-mueller/compare/v2.2.69...v2.2.70) (2022-06-10)
 
 
