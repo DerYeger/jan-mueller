@@ -2224,10 +2224,10 @@
     prettier "2.6.2"
     yaml-eslint-parser "1.0.1"
 
-"@yeger/vue-masonry-wall@3.0.34":
-  version "3.0.34"
-  resolved "https://registry.yarnpkg.com/@yeger/vue-masonry-wall/-/vue-masonry-wall-3.0.34.tgz#1048e9401b26b3e22bf5545e8e580ec8fe5c5ced"
-  integrity sha512-nKto81b6npCL+4uA3K3J9cSXNfLYWnKpmX4R3u5aCN2lGHahNjL7ZKiXcIHuJN3dT47d7131DC3GQxGJGJaC8A==
+"@yeger/vue-masonry-wall@3.0.35":
+  version "3.0.35"
+  resolved "https://registry.yarnpkg.com/@yeger/vue-masonry-wall/-/vue-masonry-wall-3.0.35.tgz#b79f15fade4a19d12fec7d3b8a7cab2286541985"
+  integrity sha512-wHH+25+TZFtB9Mfi2ATItGr1h6k/bz/ksnF+AdeY7ow57I+4yMG06gkJpIwT87xHVXwl3BLvR6tiuf2Bf2xVKA==
 
 JSONStream@^1.0.4:
   version "1.3.5"
