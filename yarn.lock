@@ -1236,18 +1236,6 @@
   resolved "https://registry.yarnpkg.com/@iconify/types/-/types-1.1.0.tgz#dc15fc988b1b3fd558dd140a24ede7e0aac11280"
   integrity sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==
 
-"@iconify/utils@^1.0.32":
-  version "1.0.32"
-  resolved "https://registry.yarnpkg.com/@iconify/utils/-/utils-1.0.32.tgz#ad6262478a27a4ff59f610a0c930710f3d7d970a"
-  integrity sha512-m+rnw7qKHq/XF7DAi4BcFoEAcXBfqqMgQJh8brGEHeqE/RUvgDMjmxsHgWnVpFsG+VmjGyAiI7nwXdliCwEU0Q==
-  dependencies:
-    "@antfu/install-pkg" "^0.1.0"
-    "@antfu/utils" "^0.5.0"
-    "@iconify/types" "^1.1.0"
-    debug "^4.3.4"
-    kolorist "^1.5.1"
-    local-pkg "^0.4.1"
-
 "@iconify/utils@^1.0.33":
   version "1.0.33"
   resolved "https://registry.yarnpkg.com/@iconify/utils/-/utils-1.0.33.tgz#9952ecae79e3b1685b83c58159c1d48959f6105a"
@@ -8734,14 +8722,14 @@ unplugin-auto-import@0.8.8:
     unimport "^0.2.7"
     unplugin "^0.7.0"
 
-unplugin-icons@0.14.4:
-  version "0.14.4"
-  resolved "https://registry.yarnpkg.com/unplugin-icons/-/unplugin-icons-0.14.4.tgz#7e29037c1722212c2301c8037d002a0d659968ce"
-  integrity sha512-+5+U5MV/d1HU3rW9bHqPLCC+rikt6OCXwjW9gSbryE2qyezzOyJ7ZNnwWLksxf5A+cVj1D6pcAbpmSjojN8zCg==
+unplugin-icons@0.14.5:
+  version "0.14.5"
+  resolved "https://registry.yarnpkg.com/unplugin-icons/-/unplugin-icons-0.14.5.tgz#baaeff3cb0c63ec53c770385e48bf3a77d8d18e8"
+  integrity sha512-fxi/fuBZXtZu64L8iAPj+ecu/rnSvTbfR14RO44xIWdsI/Ohpzs9Gve7+nHIgD6JFrdtCfzGnXWBEVPbMGWX3A==
   dependencies:
     "@antfu/install-pkg" "^0.1.0"
     "@antfu/utils" "^0.5.2"
-    "@iconify/utils" "^1.0.32"
+    "@iconify/utils" "^1.0.33"
     debug "^4.3.4"
     kolorist "^1.5.1"
     local-pkg "^0.4.1"
