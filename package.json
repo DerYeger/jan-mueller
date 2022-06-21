@@ -20,14 +20,14 @@
   },
   "dependencies": {
     "@unocss/reset": "0.39.3",
-    "@vueuse/core": "8.6.0",
+    "@vueuse/core": "8.7.4",
     "@vueuse/head": "0.7.6",
     "@yeger/vue-masonry-wall": "3.0.36",
     "nprogress": "0.2.0",
     "pinia": "2.0.14",
     "prism-theme-vars": "0.2.3",
     "vue": "3.2.37",
-    "vue-demi": "0.12.5",
+    "vue-demi": "0.13.1",
     "vue-i18n": "9.1.10",
     "vue-marmoset-viewer": "3.0.32",
     "vue-router": "4.0.16"
@@ -64,13 +64,13 @@
     "unplugin-vue-components": "0.19.6",
     "vite": "2.9.12",
     "vite-plugin-inspect": "0.5.0",
-    "vite-plugin-md": "0.15.0",
+    "vite-plugin-md": "0.17.2",
     "vite-plugin-pages": "0.24.2",
     "vite-plugin-pwa": "0.12.0",
     "vite-plugin-ssg-utils": "1.0.1",
     "vite-plugin-vue-layouts": "0.6.0",
     "vite-ssg": "0.20.1",
-    "vitest": "0.15.1",
+    "vitest": "0.15.2",
     "vue-tsc": "0.38.1"
   },
   "lint-staged": {
