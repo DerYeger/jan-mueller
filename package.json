@@ -4,7 +4,7 @@
   "private": true,
   "description": "Personal website of Jan Müller, a passionate software engineer.",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "is-ci || husky install",
     "prebuild": "yarn typecheck",
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
@@ -55,6 +55,7 @@
     "happy-dom": "5.3.4",
     "https-localhost": "4.7.1",
     "husky": "8.0.1",
+    "is-ci": "3.0.1",
     "lint-staged": "13.0.3",
     "markdown-it": "13.0.1",
     "markdown-it-link-attributes": "4.0.0",
