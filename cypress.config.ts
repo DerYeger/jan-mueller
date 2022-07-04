@@ -13,4 +13,5 @@ export default defineConfig({
     baseUrl: 'http://localhost:4173',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
   },
+  retries: 2,
 })
