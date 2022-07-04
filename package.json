@@ -52,7 +52,7 @@
     "cypress": "10.3.0",
     "eslint": "8.18.0",
     "gray-matter": "4.0.3",
-    "happy-dom": "5.3.4",
+    "happy-dom": "6.0.0",
     "https-localhost": "4.7.1",
     "husky": "8.0.1",
     "is-ci": "3.0.1",
