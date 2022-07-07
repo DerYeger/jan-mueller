@@ -73,8 +73,8 @@
     "vite-plugin-ssg-utils": "1.0.1",
     "vite-plugin-vue-layouts": "0.6.0",
     "vite-ssg": "0.20.2",
-    "vitest": "0.17.0",
-    "vue-tsc": "0.38.2"
+    "vitest": "0.17.1",
+    "vue-tsc": "0.38.3"
   },
   "lint-staged": {
     "*.{js,json,md,ts,vue,yaml,yml}": "eslint --fix"
