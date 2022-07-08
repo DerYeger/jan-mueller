@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/DerYeger/jan-mueller/compare/v2.2.80...v2.3.0) (2022-07-08)
+
+
+### Features
+
+* update background ([1538fb5](https://github.com/DerYeger/jan-mueller/commit/1538fb5831187599f3f3cba98e3946c8868ba373))
+
 ## [2.2.80](https://github.com/DerYeger/jan-mueller/compare/v2.2.79...v2.2.80) (2022-07-07)
 
 
