@@ -49,3 +49,39 @@ useHead({
   <div id="pattern" />
   <router-view />
 </template>
+
+<style scoped>
+#pattern::after,
+#pattern::before {
+  position: fixed;
+  top: 0;
+  height: 100vhmax;
+  height: 120vh;
+  width: 100vw;
+  content: '';
+}
+
+#pattern::after {
+  background-image: radial-gradient(gray 1px, transparent 0);
+  -webkit-mask: radial-gradient(circle at 50% 50%, transparent, white 200%);
+  mask: radial-gradient(circle at 50% 50%, transparent, white 200%);
+  background-size: 3rem 3rem;
+  z-index: -10;
+}
+
+#pattern::before {
+  background-image: linear-gradient(
+      45deg,
+      rgba(204, 0, 187, 0.25) 0%,
+      rgba(201, 32, 184, 0) 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(0, 70, 209, 0) 50%,
+      rgba(0, 70, 209, 0.25) 100%
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -9;
+}
+</style>
