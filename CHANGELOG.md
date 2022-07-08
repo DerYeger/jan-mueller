@@ -1,3 +1,11 @@
+## [2.3.1](https://github.com/DerYeger/jan-mueller/compare/v2.3.0...v2.3.1) (2022-07-08)
+
+
+### Bug Fixes
+
+* add missing vendor prefix ([374f1f3](https://github.com/DerYeger/jan-mueller/commit/374f1f3da05bc29beb76029e22fa21866911c3cf))
+* use fixed background pattern ([4f97e12](https://github.com/DerYeger/jan-mueller/commit/4f97e1230482732be98c5490c07bd79038eb4dcf))
+
 # [2.3.0](https://github.com/DerYeger/jan-mueller/compare/v2.2.80...v2.3.0) (2022-07-08)
 
 
