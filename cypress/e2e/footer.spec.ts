@@ -12,6 +12,7 @@ describe('Footer', () => {
     cy.get('footer').within(() =>
       cy
         .contains('Source')
+        .scrollIntoView()
         .should('be.visible')
         .should('have.attr', 'href', 'https://github.com/DerYeger/jan-mueller')
     )
@@ -21,6 +22,7 @@ describe('Footer', () => {
     cy.get('footer').within(() =>
       cy
         .contains(`2021 - ${new Date().getFullYear()} © Jan Müller`)
+        .scrollIntoView()
         .should('be.visible')
     )
   })

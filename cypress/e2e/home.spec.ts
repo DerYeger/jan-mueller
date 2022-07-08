@@ -4,23 +4,26 @@ describe('Home', () => {
   })
 
   it('has an avatar', () => {
-    cy.get('.avatar').should('be.visible')
+    cy.get('.avatar').scrollIntoView().should('be.visible')
   })
 
   it('shows badges', () => {
-    cy.contains('Languages').should('be.visible')
-    cy.contains('Frameworks & Libraries').should('be.visible')
-    cy.contains('Tools & Databases').should('be.visible')
+    cy.contains('Languages').scrollIntoView().should('be.visible')
+    cy.contains('Frameworks & Libraries').scrollIntoView().should('be.visible')
+    cy.contains('Tools & Databases').scrollIntoView().should('be.visible')
   })
 
   it('shows projects', () => {
     cy.contains('Projects')
       .parent()
       .within(() => {
-        cy.get('[title="Apollo"]').should('be.visible')
-        cy.get('[title="d3-graph-controller"]').should('be.visible')
-        cy.get('[title="Vecti"]').should('be.visible')
+        cy.get('[title="Apollo"]').scrollIntoView().should('be.visible')
+        cy.get('[title="d3-graph-controller"]')
+          .scrollIntoView()
+          .should('be.visible')
+        cy.get('[title="Vecti"]').scrollIntoView().should('be.visible')
         cy.contains('And more')
+          .scrollIntoView()
           .should('be.visible')
           .should(
             'have.attr',
@@ -35,6 +38,7 @@ describe('Home', () => {
       .parent()
       .within(() => {
         cy.contains('Yatta Solutions GmbH')
+          .scrollIntoView()
           .should('be.visible')
           .parentsUntil('li')
           .within(() => {
@@ -50,6 +54,7 @@ describe('Home', () => {
       .parent()
       .within(() => {
         cy.contains('Computer Science (B.Sc.)')
+          .scrollIntoView()
           .should('be.visible')
           .parentsUntil('li')
           .within(() => {
@@ -65,6 +70,7 @@ describe('Home', () => {
       .parent()
       .within(() => {
         cy.contains('DPG-Abiturpreis')
+          .scrollIntoView()
           .should('be.visible')
           .parentsUntil('li')
           .within(() => {
