@@ -9,11 +9,46 @@ body,
 }
 
 html.dark {
-  background: #121212;
+  background: #111;
 }
 
 #nprogress {
   pointer-events: none;
+}
+
+#app {
+  overflow-y: scroll;
+}
+
+#pattern {
+  position: absolute;
+  pointer-events: none;
+  inset: 0;
+  background-image: radial-gradient(gray 1px, transparent 0);
+  -webkit-mask: radial-gradient(circle at 50% 50%, transparent, white 200%);
+  mask: radial-gradient(circle at 50% 50%, transparent, white 200%);
+  background-size: 3rem 3rem;
+  z-index: -10;
+}
+
+#pattern::before {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background-image: linear-gradient(
+      45deg,
+      rgba(204, 0, 187, 0.25) 0%,
+      rgba(201, 32, 184, 0) 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(0, 70, 209, 0) 50%,
+      rgba(0, 70, 209, 0.25) 100%
+    );
+}
+
+.card {
+  backdrop-filter: blur(10px);
 }
 
 button {
@@ -30,12 +65,12 @@ mark {
 }
 
 :root {
-  --primary: #007AFE;
+  --primary: #007afe;
   --c-link: var(--primary);
 }
 
 html.dark {
-  --primary: #FDD888;
+  --primary: #fdd888;
 }
 
 a {

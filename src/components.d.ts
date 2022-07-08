@@ -3,6 +3,8 @@
 // Read more: https://github.com/vuejs/core/pull/3399
 import '@vue/runtime-core'
 
+export {}
+
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Avatar: typeof import('./components/Avatar.vue')['default']
@@ -64,6 +66,5 @@ declare module '@vue/runtime-core' {
     VscodeIconsFileTypeHtml: typeof import('~icons/vscode-icons/file-type-html')['default']
     VscodeIconsFileTypeMongo: typeof import('~icons/vscode-icons/file-type-mongo')['default']
   }
-}
 
-export {}
+}

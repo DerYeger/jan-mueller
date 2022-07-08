@@ -46,5 +46,6 @@ useHead({
 </script>
 
 <template>
+  <div id="pattern" />
   <router-view />
 </template>
