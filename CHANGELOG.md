@@ -1,3 +1,10 @@
+## [2.3.2](https://github.com/DerYeger/jan-mueller/compare/v2.3.1...v2.3.2) (2022-07-09)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([10a22ef](https://github.com/DerYeger/jan-mueller/commit/10a22ef1388e0ed0b11993e7f4948c660763a4ff))
+
 ## [2.3.1](https://github.com/DerYeger/jan-mueller/compare/v2.3.0...v2.3.1) (2022-07-08)
 
 
