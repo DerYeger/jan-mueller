@@ -2095,10 +2095,10 @@
   dependencies:
     vue-demi "*"
 
-"@yeger/debounce@1.0.22":
-  version "1.0.22"
-  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.22.tgz#cd7a9e867b63d7cd3e123e028180cf0d9db18cd9"
-  integrity sha512-393aUzIQjEVEll1B3l4z/3TUzh8jHUH6rV3c/cVRPgLJsiDjMRXyNRr0mrM6eetZU6b/jbCrJQ7frJUdhy2cBw==
+"@yeger/debounce@1.0.23":
+  version "1.0.23"
+  resolved "https://registry.yarnpkg.com/@yeger/debounce/-/debounce-1.0.23.tgz#81462ee2d56e40051fb18cf29d4081a9ec78edb6"
+  integrity sha512-3dVJtK1iyFonLUKTTE0F+1Z7DUxRLbkCQCjFz0hmRtoLdTIPAkMfRblGcsYTblH6Jp9NG0DK1Hn5z21yMMR+1w==
 
 "@yeger/eslint-config@1.4.32":
   version "1.4.32"
@@ -7543,10 +7543,17 @@ rollup-plugin-terser@^7.0.0:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-rollup@^2.43.1, rollup@^2.59.0, rollup@^2.75.5:
+rollup@^2.43.1, rollup@^2.59.0:
   version "2.75.7"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.75.7.tgz#221ff11887ae271e37dcc649ba32ce1590aaa0b9"
   integrity sha512-VSE1iy0eaAYNCxEXaleThdFXqZJ42qDBatAwrfnPlENEZ8erQ+0LYX4JXOLPceWfZpV1VtZwZ3dFCuOZiSyFtQ==
+  optionalDependencies:
+    fsevents "~2.3.2"
+
+rollup@^2.75.7:
+  version "2.76.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.76.0.tgz#c69fe03db530ac53fcb9523b3caa0d3c0b9491a1"
+  integrity sha512-9jwRIEY1jOzKLj3nsY/yot41r19ITdQrhs+q3ggNWhr9TQgduHqANvPpS32RNpzGklJu3G1AJfvlZLi/6wFgWA==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -8808,15 +8815,15 @@ vite-plugin-pages@0.25.0:
     picocolors "^1.0.0"
     yaml "^2.1.1"
 
-vite-plugin-pwa@0.12.2:
-  version "0.12.2"
-  resolved "https://registry.yarnpkg.com/vite-plugin-pwa/-/vite-plugin-pwa-0.12.2.tgz#d0ec1cd3088260bdc5bf2b10ba753def0b8f3280"
-  integrity sha512-XK2oi1YZkoc1J8fyerNYxyh/yfb+INdrdOW/mOOD5DBLq7jVPxHQuncIhqiREbGOMlY/xMe9CSE7QZ9xIAEf7A==
+vite-plugin-pwa@0.12.3:
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/vite-plugin-pwa/-/vite-plugin-pwa-0.12.3.tgz#acf2913ae85a4d39c13ae4b948307f3dd5506fa8"
+  integrity sha512-gmYdIVXpmBuNjzbJFPZFzxWYrX4lHqwMAlOtjmXBbxApiHjx9QPXKQPJjSpeTeosLKvVbNcKSAAhfxMda0QVNQ==
   dependencies:
     debug "^4.3.4"
     fast-glob "^3.2.11"
     pretty-bytes "^6.0.0"
-    rollup "^2.75.5"
+    rollup "^2.75.7"
     workbox-build "^6.5.3"
     workbox-window "^6.5.3"
 
@@ -8922,12 +8929,12 @@ vue-i18n@9.1.10:
     "@intlify/vue-devtools" "9.1.10"
     "@vue/devtools-api" "^6.0.0-beta.7"
 
-vue-marmoset-viewer@3.0.35:
-  version "3.0.35"
-  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-3.0.35.tgz#db9570836f88c61671e0241a92e4ca6d32b154af"
-  integrity sha512-mcQgEUhaWsYg+ZLWm/poLNMdnElpVs+SclwPXM6e9dj38C8m9eRt/QLJ+Q9vYZ1sx1k6xQX5VbhPM5HWLpbjQg==
+vue-marmoset-viewer@3.0.36:
+  version "3.0.36"
+  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-3.0.36.tgz#c42891eff34b28b2b3549de413116199b6272a2a"
+  integrity sha512-nZJCTKQ6DdOfgOtJ5iEEBqnX+bS2tPGFnCwKNo7BNwaRb2QWNEIdSEglDWAU1wEhQ3uZlrFJw/4jffKFxcNBeg==
   dependencies:
-    "@yeger/debounce" "1.0.22"
+    "@yeger/debounce" "1.0.23"
 
 vue-router@4.1.1:
   version "4.1.1"

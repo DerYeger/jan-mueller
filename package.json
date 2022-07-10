@@ -29,7 +29,7 @@
     "vue": "3.2.37",
     "vue-demi": "0.13.2",
     "vue-i18n": "9.1.10",
-    "vue-marmoset-viewer": "3.0.35",
+    "vue-marmoset-viewer": "3.0.36",
     "vue-router": "4.1.1"
   },
   "devDependencies": {
@@ -69,7 +69,7 @@
     "vite-plugin-inspect": "0.5.1",
     "vite-plugin-md": "0.18.1",
     "vite-plugin-pages": "0.25.0",
-    "vite-plugin-pwa": "0.12.2",
+    "vite-plugin-pwa": "0.12.3",
     "vite-plugin-ssg-utils": "1.0.1",
     "vite-plugin-vue-layouts": "0.6.0",
     "vite-ssg": "0.20.2",
