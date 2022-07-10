@@ -8922,10 +8922,10 @@ vue-i18n@9.1.10:
     "@intlify/vue-devtools" "9.1.10"
     "@vue/devtools-api" "^6.0.0-beta.7"
 
-vue-marmoset-viewer@3.0.34:
-  version "3.0.34"
-  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-3.0.34.tgz#794922a51f682b1e20ee6574682118b733600e06"
-  integrity sha512-ah22EUTVDAnhA59+5VP0C37yTFZajsi35p1SzEJe1jq1O82aAI3M4LQMFb8BYj1XdJe5dtLxF1CIbi0xjYq3eg==
+vue-marmoset-viewer@3.0.35:
+  version "3.0.35"
+  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-3.0.35.tgz#db9570836f88c61671e0241a92e4ca6d32b154af"
+  integrity sha512-mcQgEUhaWsYg+ZLWm/poLNMdnElpVs+SclwPXM6e9dj38C8m9eRt/QLJ+Q9vYZ1sx1k6xQX5VbhPM5HWLpbjQg==
   dependencies:
     "@yeger/debounce" "1.0.22"
 
