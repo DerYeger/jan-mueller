@@ -24,20 +24,20 @@
     "@vueuse/head": "0.7.6",
     "@yeger/vue-masonry-wall": "3.0.40",
     "nprogress": "0.2.0",
-    "pinia": "2.0.14",
+    "pinia": "2.0.15",
     "prism-theme-vars": "0.2.3",
     "vue": "3.2.37",
     "vue-demi": "0.13.2",
     "vue-i18n": "9.1.10",
     "vue-marmoset-viewer": "3.0.36",
-    "vue-router": "4.1.1"
+    "vue-router": "4.1.2"
   },
   "devDependencies": {
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
     "@iconify-json/carbon": "1.1.6",
     "@iconify-json/logos": "1.1.8",
-    "@iconify-json/vscode-icons": "1.1.7",
+    "@iconify-json/vscode-icons": "1.1.8",
     "@intlify/vite-plugin-vue-i18n": "3.4.0",
     "@types/markdown-it-link-attributes": "3.0.1",
     "@types/nprogress": "0.2.0",
@@ -52,7 +52,7 @@
     "cypress": "10.3.0",
     "eslint": "8.19.0",
     "gray-matter": "4.0.3",
-    "happy-dom": "6.0.2",
+    "happy-dom": "6.0.3",
     "https-localhost": "4.7.1",
     "husky": "8.0.1",
     "is-ci": "3.0.1",
@@ -74,7 +74,7 @@
     "vite-plugin-vue-layouts": "0.6.0",
     "vite-ssg": "0.20.2",
     "vitest": "0.18.0",
-    "vue-tsc": "0.38.3"
+    "vue-tsc": "0.38.5"
   },
   "lint-staged": {
     "*.{js,json,md,ts,vue,yaml,yml}": "eslint --fix"
