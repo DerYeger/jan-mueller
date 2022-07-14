@@ -203,8 +203,8 @@ export default defineConfig({
     },
   },
 
-  optimizeDeps: {
-    include: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head'],
-    exclude: ['vue-demi'],
+  ssr: {
+    // TODO: workaround until they support native ESM
+    noExternal: ['workbox-window', /vue-i18n/],
   },
 })
