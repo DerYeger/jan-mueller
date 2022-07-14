@@ -1,3 +1,10 @@
+## [2.3.4](https://github.com/DerYeger/jan-mueller/compare/v2.3.3...v2.3.4) (2022-07-14)
+
+
+### Bug Fixes
+
+* migrate to vite 3 ([49fa699](https://github.com/DerYeger/jan-mueller/commit/49fa699c93cafa5cbdf5037a6b6b8853889ea482))
+
 ## [2.3.3](https://github.com/DerYeger/jan-mueller/compare/v2.3.2...v2.3.3) (2022-07-10)
 
 
