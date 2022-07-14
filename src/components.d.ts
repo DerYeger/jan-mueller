@@ -66,5 +66,4 @@ declare module '@vue/runtime-core' {
     VscodeIconsFileTypeHtml: typeof import('~icons/vscode-icons/file-type-html')['default']
     VscodeIconsFileTypeMongo: typeof import('~icons/vscode-icons/file-type-mongo')['default']
   }
-
 }
