@@ -19,7 +19,7 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@unocss/reset": "0.44.2",
+    "@unocss/reset": "0.44.3",
     "@vueuse/core": "8.9.3",
     "@vueuse/head": "0.7.6",
     "@yeger/vue-masonry-wall": "3.0.41",
@@ -27,7 +27,7 @@
     "pinia": "2.0.16",
     "prism-theme-vars": "0.2.4",
     "vue": "3.2.37",
-    "vue-demi": "0.13.4",
+    "vue-demi": "0.13.5",
     "vue-i18n": "9.1.10",
     "vue-marmoset-viewer": "3.0.36",
     "vue-router": "4.1.2"
@@ -41,7 +41,7 @@
     "@intlify/vite-plugin-vue-i18n": "5.0.0",
     "@types/markdown-it-link-attributes": "3.0.1",
     "@types/nprogress": "0.2.0",
-    "@unocss/preset-web-fonts": "0.44.2",
+    "@unocss/preset-web-fonts": "0.44.3",
     "@vitejs/plugin-vue": "3.0.0",
     "@vue/compiler-sfc": "3.2.37",
     "@vue/server-renderer": "3.2.37",
@@ -50,7 +50,7 @@
     "critters": "0.0.16",
     "cross-env": "7.0.3",
     "cypress": "10.3.0",
-    "eslint": "8.19.0",
+    "eslint": "8.20.0",
     "gray-matter": "4.0.3",
     "happy-dom": "6.0.3",
     "https-localhost": "4.7.1",
@@ -61,7 +61,7 @@
     "markdown-it-link-attributes": "4.0.0",
     "markdown-it-prism": "2.2.4",
     "typescript": "4.7.4",
-    "unocss": "0.44.2",
+    "unocss": "0.44.3",
     "unplugin-auto-import": "0.9.3",
     "unplugin-icons": "0.14.7",
     "unplugin-vue-components": "0.21.1",
@@ -73,8 +73,8 @@
     "vite-plugin-ssg-utils": "1.0.1",
     "vite-plugin-vue-layouts": "0.6.0",
     "vite-ssg": "0.20.2",
-    "vitest": "0.18.0",
-    "vue-tsc": "0.38.5"
+    "vitest": "0.18.1",
+    "vue-tsc": "0.38.7"
   },
   "lint-staged": {
     "*.{js,json,md,ts,vue,yaml,yml}": "eslint --fix"
