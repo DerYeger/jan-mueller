@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@unocss/reset": "0.44.3",
-    "@vueuse/core": "8.9.3",
+    "@vueuse/core": "8.9.4",
     "@vueuse/head": "0.7.6",
     "@yeger/vue-masonry-wall": "3.0.41",
     "nprogress": "0.2.0",
@@ -46,13 +46,13 @@
     "@vue/compiler-sfc": "3.2.37",
     "@vue/server-renderer": "3.2.37",
     "@vue/test-utils": "2.0.2",
-    "@yeger/eslint-config": "1.4.32",
+    "@yeger/eslint-config": "1.4.33",
     "critters": "0.0.16",
     "cross-env": "7.0.3",
     "cypress": "10.3.0",
     "eslint": "8.20.0",
     "gray-matter": "4.0.3",
-    "happy-dom": "6.0.3",
+    "happy-dom": "6.0.4",
     "https-localhost": "4.7.1",
     "husky": "8.0.1",
     "is-ci": "3.0.1",
@@ -74,7 +74,7 @@
     "vite-plugin-vue-layouts": "0.6.0",
     "vite-ssg": "0.20.2",
     "vitest": "0.18.1",
-    "vue-tsc": "0.38.7"
+    "vue-tsc": "0.38.8"
   },
   "lint-staged": {
     "*.{js,json,md,ts,vue,yaml,yml}": "eslint --fix"
