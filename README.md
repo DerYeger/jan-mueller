@@ -21,9 +21,6 @@
   <a href="https://dashboard.cypress.io/projects/nhkgy5/runs">
     <img alt="Cypress Status" src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/count/nhkgy5/master&style=flat&logo=cypress">
   </a>
-  <a href="https://lgtm.com/projects/g/DerYeger/jan-mueller">
-    <img alt="LGTM Grade" src="https://img.shields.io/lgtm/grade/javascript/github/DerYeger/jan-mueller?logo=lgtm">
-  </a>
 </p>
 
 <p align="center">
@@ -63,7 +60,4 @@ $ yarn test:e2e
 
 # lint
 $ yarn lint
-
-# format
-$ yarn pretty
 ```
