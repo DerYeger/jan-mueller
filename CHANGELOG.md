@@ -1,3 +1,19 @@
+# [2.4.0](https://github.com/DerYeger/jan-mueller/compare/v2.3.5...v2.4.0) (2022-07-18)
+
+
+### Bug Fixes
+
+* prevent transparent cards ([88f1fb2](https://github.com/DerYeger/jan-mueller/commit/88f1fb256a0ed5b58154c36053955c30e0965ecd))
+* use better icons ([9e5a90c](https://github.com/DerYeger/jan-mueller/commit/9e5a90c9f02d955afbc9f724162d4826c7c26162))
+* use lvh unit ([c9d1609](https://github.com/DerYeger/jan-mueller/commit/c9d16090d432d8799951779c16eb1d1b1cf3ba94))
+
+
+### Features
+
+* add animation ([203beba](https://github.com/DerYeger/jan-mueller/commit/203bebaa08049309c50aa302c8de099e9594af49))
+* add animations ([4846feb](https://github.com/DerYeger/jan-mueller/commit/4846feb1cfa5c656ce996b466280fb2511f13297))
+* improve spacing ([fbf9689](https://github.com/DerYeger/jan-mueller/commit/fbf9689d8570364350602ed6477cd4602685b0e9))
+
 ## [2.3.5](https://github.com/DerYeger/jan-mueller/compare/v2.3.4...v2.3.5) (2022-07-17)
 
 
