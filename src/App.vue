@@ -55,7 +55,7 @@ useHead({
 #pattern::before {
   position: fixed;
   top: 0;
-  height: 100vhmax;
+  height: 100lvh;
   height: 120vh;
   width: 100vw;
   content: '';
