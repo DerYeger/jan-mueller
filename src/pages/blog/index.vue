@@ -29,7 +29,7 @@ const { t } = useI18n()
     :gap="16"
     class="text-sm"
   >
-    <router-link :to="post.path" class="no-underline">
+    <router-link :to="post.path" class="no-underline hover:op-100">
       <div class="card">
         <span class="text-xl">
           {{ post.meta.frontmatter.title }}

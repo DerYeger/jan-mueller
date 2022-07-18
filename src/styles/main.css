@@ -19,6 +19,7 @@ html.dark {
 .card {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  transition: box-shadow var(--anim-medium) ease;
 }
 
 button {
@@ -37,6 +38,8 @@ mark {
 :root {
   --primary: #007afe;
   --c-link: var(--primary);
+  --anim-slow: 500ms;
+  --anim-medium: 200ms;
 }
 
 html.dark {

@@ -22,7 +22,7 @@ const { t } = useI18n()
   >
     <router-link
       :to="`/files/${document.type}/${document.name}`"
-      class="no-underline"
+      class="no-underline hover:op-100"
     >
       <div class="card">
         <span class="text-xl">
