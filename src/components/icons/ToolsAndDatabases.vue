@@ -1,6 +1,6 @@
 <template>
   <IconList title="tools-and-databases">
-    <logos-cypress />
+    <logos-cypress-icon />
     <logos-docker-icon />
     <logos-git-icon />
     <logos-gradle />

@@ -1,6 +1,6 @@
 <template>
   <IconList title="languages">
-    <logos-kotlin />
+    <logos-kotlin-icon />
     <logos-java />
     <logos-haskell-icon />
     <logos-python />
