@@ -29,7 +29,7 @@
     "vue": "3.2.37",
     "vue-demi": "0.13.5",
     "vue-i18n": "9.1.10",
-    "vue-marmoset-viewer": "3.0.36",
+    "vue-marmoset-viewer": "3.0.37",
     "vue-router": "4.1.2"
   },
   "devDependencies": {
@@ -42,7 +42,7 @@
     "@types/markdown-it-link-attributes": "3.0.1",
     "@types/nprogress": "0.2.0",
     "@unocss/preset-web-fonts": "0.44.3",
-    "@vitejs/plugin-vue": "3.0.0",
+    "@vitejs/plugin-vue": "3.0.1",
     "@vue/compiler-sfc": "3.2.37",
     "@vue/server-renderer": "3.2.37",
     "@vue/test-utils": "2.0.2",
@@ -65,7 +65,7 @@
     "unplugin-auto-import": "0.9.3",
     "unplugin-icons": "0.14.7",
     "unplugin-vue-components": "0.21.1",
-    "vite": "3.0.0",
+    "vite": "3.0.2",
     "vite-plugin-inspect": "0.6.0",
     "vite-plugin-md": "0.18.1",
     "vite-plugin-pages": "0.25.0",

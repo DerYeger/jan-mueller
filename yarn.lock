@@ -1921,10 +1921,10 @@
     "@unocss/transformer-directives" "0.44.3"
     magic-string "^0.26.2"
 
-"@vitejs/plugin-vue@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-3.0.0.tgz#7081e2b3fbe04e291bb85107b9fb57a1fa5e6aeb"
-  integrity sha512-yWP34ArFh/jAeNUDkkLz/kVRLjf5ppJiq4L36f64Cp6dIrMQeYZGDP9xxdemlXfZR9ylN9JgHUl3GzfqOtgYDg==
+"@vitejs/plugin-vue@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-3.0.1.tgz#b6af8f782485374bbb5fe09edf067a845bf4caae"
+  integrity sha512-Ll9JgxG7ONIz/XZv3dssfoMUDu9qAnlJ+km+pBA0teYSXzwPCIzS/e1bmwNYl5dcQGs677D21amgfYAnzMl17A==
 
 "@vitejs/plugin-vue@^2.3.3":
   version "2.3.3"
@@ -8854,7 +8854,19 @@ vite-ssg@0.20.2:
     prettier "^2.7.1"
     yargs "^17.5.1"
 
-vite@3.0.0, "vite@^2.9.12 || ^3.0.0-0":
+vite@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.2.tgz#2a7b4642c53ae066cf724e7e581d6c1fd24e2c32"
+  integrity sha512-TAqydxW/w0U5AoL5AsD9DApTvGb2iNbGs3sN4u2VdT1GFkQVUfgUldt+t08TZgi23uIauh1TUOQJALduo9GXqw==
+  dependencies:
+    esbuild "^0.14.47"
+    postcss "^8.4.14"
+    resolve "^1.22.1"
+    rollup "^2.75.6"
+  optionalDependencies:
+    fsevents "~2.3.2"
+
+"vite@^2.9.12 || ^3.0.0-0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.0.tgz#b4675cb9ab83ec0803b9c952ffa6519bcce033a7"
   integrity sha512-M7phQhY3+fRZa0H+1WzI6N+/onruwPTBTMvaj7TzgZ0v2TE+N2sdLKxJOfOv9CckDWt5C4HmyQP81xB4dwRKzA==
@@ -8909,10 +8921,10 @@ vue-i18n@9.1.10:
     "@intlify/vue-devtools" "9.1.10"
     "@vue/devtools-api" "^6.0.0-beta.7"
 
-vue-marmoset-viewer@3.0.36:
-  version "3.0.36"
-  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-3.0.36.tgz#c42891eff34b28b2b3549de413116199b6272a2a"
-  integrity sha512-nZJCTKQ6DdOfgOtJ5iEEBqnX+bS2tPGFnCwKNo7BNwaRb2QWNEIdSEglDWAU1wEhQ3uZlrFJw/4jffKFxcNBeg==
+vue-marmoset-viewer@3.0.37:
+  version "3.0.37"
+  resolved "https://registry.yarnpkg.com/vue-marmoset-viewer/-/vue-marmoset-viewer-3.0.37.tgz#15a316f555b0b050f3deb83719d71cd62ffde7d8"
+  integrity sha512-MJ38g4w86r+xSK1BIbPLgKrf7r9pa+lc2IwHLJ3PrVFHhFoxJwn/Cios7Wvvbf9+htiwl4aiMhHLjctmSuinRg==
   dependencies:
     "@yeger/debounce" "1.0.23"
 
