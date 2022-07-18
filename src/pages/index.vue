@@ -48,7 +48,7 @@ const { t } = useI18n()
     class="mt-16 flex flex-col md-flex-row items-start gap-4 children:flex-1 children:w-full"
   >
     <Experience />
-    <Education />
-    <Awards />
+    <Education class="!md-transition-delay-0.2s" />
+    <Awards class="!md-transition-delay-0.4s" />
   </section>
 </template>

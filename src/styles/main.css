@@ -60,3 +60,17 @@ img.square::after {
   display: block;
   padding-bottom: 100%;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .slide-in {
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: opacity var(--anim-slow) ease-out,
+      transform var(--anim-slow) ease-out;
+  }
+
+  .slide-in-visible {
+    opacity: initial;
+    transform: unset;
+  }
+}
