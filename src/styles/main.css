@@ -6,6 +6,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 html.dark {
@@ -64,9 +65,20 @@ img.square::after {
 @media (prefers-reduced-motion: no-preference) {
   .slide-in {
     opacity: 0;
-    transform: translateY(5rem);
     transition: opacity var(--anim-slow) ease-out,
       transform var(--anim-slow) ease-out;
+  }
+
+  .slide-in-from-left {
+    transform: translateX(-10rem);
+  }
+
+  .slide-in-from-right {
+    transform: translateX(10rem);
+  }
+
+  .slide-in-from-below {
+    transform: translateY(10rem);
   }
 
   .slide-in-visible {

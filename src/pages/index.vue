@@ -9,7 +9,9 @@ const { t } = useI18n()
 <template>
   <section class="flex-center flex-col gap-16 children:gap-16">
     <!-- eslint-disable vue/no-v-html -->
-    <div class="flex-center flex-col gap-0 md-flex-row w-full justify-between">
+    <div
+      class="flex-center flex-col gap-0 md-gap-16 md-flex-row w-full justify-between"
+    >
       <Avatar class="pa-4" />
       <div>
         <Facts class="text-center md-text-right" />
@@ -26,13 +28,13 @@ const { t } = useI18n()
       <p class="prose text-center md-text-left" v-html="t('about.hobbies')" />
     </div>
     <div class="flex-center flex-col md-flex-row w-full justify-between">
-      <FrameworksAndLibraries class="md-text-left" />
+      <FrameworksAndLibraries class="md-text-left !md-transition-delay-0.2s" />
       <p class="prose text-center md-text-right" v-html="t('about.skills')" />
     </div>
     <div
       class="flex-center flex-col md-flex-row-reverse w-full justify-between"
     >
-      <ToolsAndDatabases class="md-text-right" />
+      <ToolsAndDatabases class="md-text-right !md-transition-delay-0.4s" />
       <p
         class="prose text-center md-text-left"
         v-html="t('about.inspiration')"
