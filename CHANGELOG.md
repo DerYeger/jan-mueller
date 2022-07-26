@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/DerYeger/jan-mueller/compare/v2.4.1...v2.5.0) (2022-07-26)
+
+
+### Features
+
+* use `@yeger/page-views` ([ef6d4f6](https://github.com/DerYeger/jan-mueller/commit/ef6d4f6cc7af3cec9a662ffbe07ce61aaafc88da))
+
 ## [2.4.1](https://github.com/DerYeger/jan-mueller/compare/v2.4.0...v2.4.1) (2022-07-26)
 
 
