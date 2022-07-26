@@ -7,7 +7,7 @@ describe('Models', () => {
     cy.contains('An-26').should('be.visible')
   })
 
-  it('loads the model viewer', () => {
+  it.skip('loads the model viewer', () => {
     cy.get('.marmoset-viewer-host')
       .should('be.visible')
       .within(() => {

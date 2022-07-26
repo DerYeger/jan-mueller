@@ -31,15 +31,6 @@ jobs:
     name: E2E
     runs-on: ubuntu-latest
     needs: build
-    strategy:
-      matrix:
-        include:
-          - browser: chrome
-            record: true
-            video: true
-          - browser: firefox
-            record: true
-            video: false
     steps:
       - name: Setup
         uses: DerYeger/yarn-setup-action@master
@@ -55,25 +46,20 @@ jobs:
         with:
           install: false
           start: yarn preview
-          browser: ${{ matrix.browser }}
-          record: ${{ matrix.record }}
-          tag: ${{ matrix.browser }},${{ github.event_name }}
-          config: videoUploadOnPasses=false,video=${{ matrix.video }}
-        env:
-          COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          browser: chrome
+          record: false
+          config: videoUploadOnPasses=false,video=true
       - name: Upload Screenshots
         uses: actions/upload-artifact@v3
         if: failure()
         with:
-          name: cypress-screenshots-${{ matrix.browser }}
+          name: cypress-screenshots-chrome
           path: cypress/screenshots
       - name: Upload Videos
         uses: actions/upload-artifact@v3
         if: failure()
         with:
-          name: cypress-videos-${{ matrix.browser }}
+          name: cypress-videos-chrome
           path: cypress/videos
   lint:
     name: Lint
