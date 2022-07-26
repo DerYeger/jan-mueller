@@ -1,5 +1,11 @@
 <script setup lang="ts">
+import type { Ref } from 'vue'
+
+import { PageViewsKey } from '~/types'
+
 const { t } = useI18n()
+
+const pageViews = inject<Ref<number>>(PageViewsKey) || 0
 </script>
 
 <template>
@@ -22,5 +28,7 @@ const { t } = useI18n()
     >
       {{ t('button.about') }}
     </router-link>
+    <Dot class="text-lighter" />
+    <span class="text-lighter">{{ pageViews }} views</span>
   </footer>
 </template>

@@ -3,6 +3,10 @@
 // you can use this to manipulate the document head in any components,
 // they will be rendered correctly in the html results with vite-ssg
 
+import PageViews from '@yeger/page-views'
+
+import { PageViewsKey } from '~/types'
+
 const { t } = useI18n()
 const description = t('meta.description')
 
@@ -43,6 +47,22 @@ useHead({
     },
   ],
 })
+
+PageViews.autoSubmitViews()
+const pageViews = ref(0)
+const { path } = toRefs(useRoute())
+watch(
+  path,
+  async (newVal, oldVal) => {
+    if (newVal === oldVal) {
+      return
+    }
+    pageViews.value = await PageViews.getViews()
+  },
+  { immediate: true }
+)
+
+provide(PageViewsKey, pageViews)
 </script>
 
 <template>

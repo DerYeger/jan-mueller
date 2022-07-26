@@ -2128,6 +2128,11 @@
     prettier "2.7.1"
     yaml-eslint-parser "1.0.1"
 
+"@yeger/page-views@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@yeger/page-views/-/page-views-1.4.0.tgz#0d96b172d1a643d8cee55b69802d193297aec80b"
+  integrity sha512-ZltjxqzhPV0xNW9vXe7GZavU1icc1E8w9z1g3Zmjqp4j0R4tU8euux0B6sCnsepoEjxMEyR4iSxUjscQvmBcjw==
+
 "@yeger/vue-masonry-wall@3.0.42":
   version "3.0.42"
   resolved "https://registry.yarnpkg.com/@yeger/vue-masonry-wall/-/vue-masonry-wall-3.0.42.tgz#6378315e3f022dcbec9656983ed436c3542b4b89"

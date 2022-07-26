@@ -48,3 +48,5 @@ export interface Project {
   img: string
   title: string
 }
+
+export const PageViewsKey = Symbol('pageViews')
