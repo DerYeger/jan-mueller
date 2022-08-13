@@ -1,3 +1,11 @@
+# [2.7.0](https://github.com/DerYeger/jan-mueller/compare/v2.6.1...v2.7.0) (2022-08-13)
+
+
+### Features
+
+* improve theme ([75097e7](https://github.com/DerYeger/jan-mueller/commit/75097e711f6ffb7e47c138f695817fd0284d11ba))
+* update footer ([98ab404](https://github.com/DerYeger/jan-mueller/commit/98ab404c10646b22620100b5a60909339748e67a))
+
 ## [2.6.1](https://github.com/DerYeger/jan-mueller/compare/v2.6.0...v2.6.1) (2022-08-13)
 
 
