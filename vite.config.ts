@@ -5,7 +5,7 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Vue from '@vitejs/plugin-vue'
 import matter from 'gray-matter'
 import LinkAttributes from 'markdown-it-link-attributes'
-import Prism from 'markdown-it-prism'
+import Shiki from 'markdown-it-shiki'
 import { presetUno, presetWebFonts } from 'unocss'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -14,11 +14,11 @@ import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import Inspect from 'vite-plugin-inspect'
-import Markdown from 'vite-plugin-md'
 import Pages from 'vite-plugin-pages'
 import { VitePWA } from 'vite-plugin-pwa'
 import SSGUtils from 'vite-plugin-ssg-utils'
 import Layouts from 'vite-plugin-vue-layouts'
+import Markdown from 'vite-plugin-vue-markdown'
 
 import { useDocuments } from './src/composables/documents'
 import { useModels } from './src/composables/models'
@@ -129,8 +129,12 @@ export default defineConfig({
       wrapperClasses: markdownWrapperClasses,
       headEnabled: true,
       markdownItSetup(md) {
-        // https://prismjs.com/
-        md.use(Prism)
+        md.use(Shiki, {
+          theme: {
+            light: 'monokai',
+            dark: 'monokai',
+          },
+        })
         md.use(LinkAttributes, {
           pattern: /^https?:\/\//,
           attrs: {
