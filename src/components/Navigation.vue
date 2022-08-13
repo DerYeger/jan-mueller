@@ -41,25 +41,5 @@ const { t } = useI18n()
       <carbon-moon v-if="isDark" />
       <carbon-sun v-else />
     </button>
-
-    <a
-      class="icon-btn mx-2"
-      href="https://github.com/DerYeger"
-      rel="noopener"
-      target="_blank"
-      title="GitHub"
-    >
-      <carbon-logo-github />
-    </a>
-
-    <a
-      class="icon-btn mx-2"
-      href="https://www.xing.com/profile/Jan_Mueller1092/cv"
-      rel="noopener"
-      target="_blank"
-      title="XING"
-    >
-      <carbon-logo-xing />
-    </a>
   </nav>
 </template>

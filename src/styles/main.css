@@ -9,8 +9,12 @@ body,
   overflow-x: hidden;
 }
 
+html {
+  background: white;
+}
+
 html.dark {
-  background: #111;
+  background: black;
 }
 
 #nprogress {

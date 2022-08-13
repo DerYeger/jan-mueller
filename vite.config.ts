@@ -118,11 +118,11 @@ export default defineConfig({
         ['flex-center', 'flex items-center'],
         [
           'surface',
-          'border-solid border-2 border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-black',
+          'border-neutral-300 dark:border-neutral-800 bg-white dark:bg-black',
         ],
         [
           'card',
-          'pa-4 surface text-light hover:shadow-xl rounded flex flex-col gap-4 text-primary op80 hover:op100',
+          'pa-4 border-1 surface text-light hover:shadow-xl rounded flex flex-col gap-4 text-primary op80 hover:op100',
         ],
         ['subheading', 'mt-0 mb-2'],
       ],
