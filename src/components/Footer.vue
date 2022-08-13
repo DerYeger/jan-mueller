@@ -10,7 +10,7 @@ const pageViews = inject<Ref<number>>(PageViewsKey) || 0
 
 <template>
   <footer
-    class="surface border-t-1 pa-4 flex flex-row text-sm gap-8 items-start content-start flex-wrap justify-center children:flex children:flex-col children:gap-1"
+    class="surface border-t-1 pa-4 pt-8 flex flex-row text-sm gap-8 items-start content-start flex-wrap justify-center children:flex children:flex-col children:gap-1"
   >
     <div>
       <span class="mb-4">About</span>

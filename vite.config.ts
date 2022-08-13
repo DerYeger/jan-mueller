@@ -118,7 +118,7 @@ export default defineConfig({
         ['flex-center', 'flex items-center'],
         [
           'surface',
-          'border-neutral-300 dark:border-neutral-800 bg-white dark:bg-black',
+          'border-neutral-400 dark:border-neutral-700 bg-white dark:bg-black',
         ],
         [
           'card',
