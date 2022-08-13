@@ -7803,10 +7803,10 @@ shebang-regex@^3.0.0:
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
-shiki@0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/shiki/-/shiki-0.11.0.tgz#88c423584ac09f93931303cb9f1dda6e05fb4051"
-  integrity sha512-ZM5xcTzsURBxNcqTcB5Z2EpgyWGiHpcXewrq8FDftca9w5jKw5rS5BMo76h1UpYVQOQ6PYssIPpSYv+zf7wVYg==
+shiki@0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/shiki/-/shiki-0.11.1.tgz#df0f719e7ab592c484d8b73ec10e215a503ab8cc"
+  integrity sha512-EugY9VASFuDqOexOgXR18ZV+TbFrQHeCpEYaXamO+SZlsnT/2LxuLBX25GGtIrwaEVFXUAbUQ601SWE2rMwWHA==
   dependencies:
     jsonc-parser "^3.0.0"
     vscode-oniguruma "^1.6.1"
