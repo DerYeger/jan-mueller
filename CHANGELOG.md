@@ -1,3 +1,10 @@
+## [2.6.1](https://github.com/DerYeger/jan-mueller/compare/v2.6.0...v2.6.1) (2022-08-13)
+
+
+### Bug Fixes
+
+* update theme color ([a098a83](https://github.com/DerYeger/jan-mueller/commit/a098a8351e75971c461792814b07018b84a374a5))
+
 # [2.6.0](https://github.com/DerYeger/jan-mueller/compare/v2.5.2...v2.6.0) (2022-08-13)
 
 
