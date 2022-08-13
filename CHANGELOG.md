@@ -1,3 +1,11 @@
+# [2.6.0](https://github.com/DerYeger/jan-mueller/compare/v2.5.2...v2.6.0) (2022-08-13)
+
+
+### Features
+
+* improve design ([afee35d](https://github.com/DerYeger/jan-mueller/commit/afee35d1879dec69a96e820939476b23b1a80a86))
+* use shiki syntax highlighting ([802c3c7](https://github.com/DerYeger/jan-mueller/commit/802c3c7ac601a46573951b60a00b6822469b7349))
+
 ## [2.5.2](https://github.com/DerYeger/jan-mueller/compare/v2.5.1...v2.5.2) (2022-07-28)
 
 
