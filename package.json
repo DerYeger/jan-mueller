@@ -51,7 +51,7 @@
     "critters": "0.0.16",
     "cross-env": "7.0.3",
     "cypress": "10.4.0",
-    "eslint": "8.21.0",
+    "eslint": "8.22.0",
     "gray-matter": "4.0.3",
     "happy-dom": "6.0.4",
     "https-localhost": "4.7.1",
