@@ -25,23 +25,23 @@
     padding-bottom: 100%;
   }
 
-  .blog h1 {
-    @apply text-4xl mt-16 mb-16;
+  .markdown h1 {
+    @apply text-4xl lg:text-6xl mt-16 mb-16;
   }
 
-  .blog h2 {
-    @apply text-3xl mt-16 mb-8;
+  .markdown h2 {
+    @apply text-3xl lg:text-4xl mt-16 mb-8;
   }
 
-  .blog h3 {
-    @apply text-2xl mt-12 mb-6;
+  .markdown h3 {
+    @apply text-2xl lg:text-3xl mt-12 mb-6;
   }
 
-  .blog blockquote {
+  .markdown blockquote {
     @apply text-xl text-lighter italic;
   }
 
-  .blog .shiki {
+  .markdown .shiki {
     @apply my-4 p-4 rounded surface border overflow-x-auto;
   }
 }
