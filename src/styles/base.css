@@ -34,4 +34,12 @@
     display: block;
     padding-bottom: 100%;
   }
+
+  .prose .shiki {
+    @apply shadow-md;
+  }
+
+  .prose div.language-id {
+    display: none;
+  }
 }
