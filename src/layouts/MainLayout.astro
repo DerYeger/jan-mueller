@@ -15,11 +15,13 @@ const {
 ---
 
 <!DOCTYPE html>
-<html class="bg-white dark:bg-black">
+<html>
   <head>
     <BaseHead title={title} description={description} image={image} />
   </head>
-  <body class="text-black dark:text-white">
+  <body
+    class="bg-white dark:bg-black text-black dark:text-white transition-colors"
+  >
     <Header />
     <Main>
       <slot />

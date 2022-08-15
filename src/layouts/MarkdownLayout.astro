@@ -8,8 +8,8 @@ import MainLayout from './MainLayout.astro'
 
 export interface Props {
   content: {
-    title: string
-    description: string
+    title?: string
+    description?: string
     publishDate?: string
     updatedDate?: string
     heroImage?: string
@@ -38,27 +38,29 @@ const heroImageAsset = assets.find((asset) => {
     {
       heroImageAsset && (
         <Image
-          class="w-full h-[200px] object-cover rounded"
+          class="w-full h-[200px] object-cover rounded surface"
           src={heroImageAsset.default}
           alt=""
         />
       )
     }
-    <h1>{title}</h1>
-    <div class="flex gap-1 mt-8 mb-4">
-      {publishDate && <DateComponent date={publishDate} />}
-      {
-        updatedDate && (
-          <>
-            <Dot />
-            <div>
-              Last updated on <DateComponent date={updatedDate} />
-            </div>
-          </>
-        )
-      }
-    </div>
-    <blockquote>{description}</blockquote>
+    {title && <h1>{title}</h1>}
+    {
+      publishDate && (
+        <div class="flex gap-1 mt-8 mb-4">
+          {publishDate && <DateComponent date={publishDate} />}
+          {updatedDate && (
+            <>
+              <Dot />
+              <div>
+                Last updated on <DateComponent date={updatedDate} />
+              </div>
+            </>
+          )}
+        </div>
+      )
+    }
+    {description && <blockquote>{description}</blockquote>}
     <slot />
   </article>
 </MainLayout>
