@@ -1,8 +1,8 @@
 ---
-import type { Award } from "../../../types";
-import CVList from "../CVList.astro";
+import type { Award } from '../../../types'
+import CVList from '../CVList.astro'
 
-import AwardEntry from "./AwardEntry.astro";
+import AwardEntry from './AwardEntry.astro'
 
 const awards: Award[] = [
   {
@@ -24,7 +24,11 @@ const awards: Award[] = [
 
 <CVList>
   <span slot="title">Awards</span>
-   {awards.map((entry) => <li>
-      <AwardEntry award={entry} />
-    </li>)}
+  {
+    awards.map((entry) => (
+      <li>
+        <AwardEntry award={entry} />
+      </li>
+    ))
+  }
 </CVList>
