@@ -1,17 +1,22 @@
+---
+const year = new Date().getFullYear()
+---
+
 <footer
-  class="surface border-t p-8 flex flex-row text-sm gap-8 items-start content-start flex-wrap justify-center children:flex children:flex-col children:gap-1 [&>*>*:first-child]:font-bold"
+  class="surface border-t p-8 flex flex-row text-sm gap-8 items-start content-start flex-wrap justify-center children:flex children:flex-col children:gap-1 [&>*>*:first-child]:font-bold [&>*>*:first-child]:mb-4 [&>*>*:first-child]:text-md"
 >
   <div>
     <span class="mb-4">About</span>
     <a
-      href="/about"
-      active-class="!text-$primary op90"
+      href="/impressum"
     >
-      About / Impressum
+      Impressum
     </a>
-    <span class="text-lighter">
-      2021 - 2022 &copy; Jan M&uuml;ller
-    </span>
+    <a
+      href="/about"
+    >
+      About
+    </a>
     <a
       href="https://github.com/DerYeger/jan-mueller"
       rel="noopener"
@@ -19,6 +24,9 @@
     >
       Source
     </a>
+    <span class="text-lighter">
+      {year} &copy; Jan M&uuml;ller
+    </span>
     <span class="text-lighter">TODO views</span>
   </div>
   <div>
