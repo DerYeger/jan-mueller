@@ -20,7 +20,10 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
               <div class="p-4 flex flex-col">
                 <span class="text-xl">{post.frontmatter.title}</span>
                 <span class="text-lighter">
-                  <DateComponent date={post.frontmatter.publishDate} />
+                  <DateComponent
+                    date={post.frontmatter.publishDate}
+                    format="MMM DD, YYYY"
+                  />
                 </span>
                 <span class="text-light">{post.frontmatter.description}</span>
               </div>

@@ -4,8 +4,13 @@ describe('Footer', () => {
   })
 
   it('has a link to the about page', () => {
-    cy.get('footer').within(() => cy.contains('About / Impressum').click())
+    cy.get('footer').within(() => cy.contains('About').click())
     cy.location('pathname').should('eq', '/about')
+  })
+
+  it('has a link to the impressum', () => {
+    cy.get('footer').within(() => cy.contains('Impressum').click())
+    cy.location('pathname').should('eq', '/impressum')
   })
 
   it('has a link to the source', () => {
@@ -21,7 +26,7 @@ describe('Footer', () => {
   it('has a copyright notice', () => {
     cy.get('footer').within(() =>
       cy
-        .contains(`2021 - ${new Date().getFullYear()} © Jan Müller`)
+        .contains(`${new Date().getFullYear()} © Jan Müller`)
         .scrollIntoView()
         .should('be.visible')
     )

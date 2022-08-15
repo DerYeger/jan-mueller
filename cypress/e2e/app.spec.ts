@@ -14,6 +14,8 @@ describe('App', () => {
   })
 
   it('has a theme toggle', () => {
+    // eslint-disable-next-line cypress/no-unnecessary-waiting
+    cy.wait(1)
     cy.visit('/', {
       onBeforeLoad(win: Cypress.AUTWindow) {
         cy.stub(win, 'matchMedia')
@@ -25,13 +27,9 @@ describe('App', () => {
       },
     })
     cy.get('html.dark').should('exist')
-    cy.get('nav').within(() =>
-      cy.get(`[title="Toggle dark mode"]`).should('be.visible').click()
-    )
+    cy.get('button').should('be.visible').click()
     cy.get('html.dark').should('not.exist')
-    cy.get('nav').within(() =>
-      cy.get(`[title="Toggle dark mode"]`).should('be.visible').click()
-    )
+    cy.get('button').should('be.visible').click()
     cy.get('html.dark').should('exist')
   })
 })
