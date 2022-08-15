@@ -1,7 +1,16 @@
 ---
+import { Icon } from 'astro-icon'
+
 import Navigation from './Navigation.astro'
+import ThemeToggle from './ThemeToggle'
 ---
 
 <header class="sticky top-0 surface z-10 border-b h-[62px]">
   <Navigation />
+  <div class="fixed right-0 top-0">
+    <ThemeToggle client:load>
+      <Icon name="carbon:sun" slot="light" class="h-[24px] w-[24px]" />
+      <Icon name="carbon:moon" slot="dark" class="h-[24px] w-[24px]" />
+    </ThemeToggle>
+  </div>
 </header>

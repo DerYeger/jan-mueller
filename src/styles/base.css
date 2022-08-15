@@ -8,7 +8,7 @@
   }
 
   .surface {
-    @apply border-neutral-100 dark:border-neutral-800 !bg-white dark:!bg-black text-black dark:text-white;
+    @apply border-neutral-300 dark:border-neutral-800 !bg-white dark:!bg-black text-black dark:text-white shadow transition-colors;
   }
 
   .text-light {
@@ -24,7 +24,8 @@
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  .surface a {
     @apply text-black dark:text-white;
   }
 
@@ -35,7 +36,11 @@
   }
 
   .markdown h1 {
-    @apply text-4xl lg:text-6xl mt-8 mb-8;
+    @apply text-4xl lg:text-6xl mb-12;
+  }
+
+  .markdown * + h1 {
+    @apply mt-16;
   }
 
   .markdown h2 {
@@ -53,5 +58,9 @@
   .markdown .shiki,
   .markdown .example {
     @apply my-4 p-4 rounded surface border overflow-x-auto;
+  }
+
+  .markdown .shiki {
+    @apply !bg-black;
   }
 }
