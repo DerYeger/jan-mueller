@@ -1,4 +1,5 @@
 ---
+import ViewCounter from './ViewCounter'
 const year = new Date().getFullYear()
 ---
 
@@ -19,7 +20,7 @@ const year = new Date().getFullYear()
     <span class="text-lighter">
       {year} &copy; Jan M&uuml;ller
     </span>
-    <span class="text-lighter">TODO views</span>
+    <ViewCounter client:only="react" />
   </div>
   <div>
     <span class="mb-4">Contact</span>

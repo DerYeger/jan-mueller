@@ -10,7 +10,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 )
 ---
 
-<MainLayout>
+<MainLayout title="Blog — Jan Müller">
   <content>
     <ul class="flex flex-wrap">
       {
