@@ -83,32 +83,42 @@ To force updates, assign a new array to the `items` prop.
 
 ### Example
 
-The following example demonstrates basic usage of the component.
+This example demonstrates basic usage of the component.
 For interactive demonstrations, visit [vue-masonry-wall.yeger.eu](https://vue-masonry-wall.yeger.eu/) or [vue2-masonry-wall.yeger.eu](https://vue2-masonry-wall.yeger.eu/).
 
 ```vue
-<script>
-export default {
+<script lang="ts">
+import MasonryWall from '@yeger/vue-masonry-wall'
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  components: {
+    MasonryWall,
+  },
   data() {
     return {
-      items: [
-        { content: 'First', height: 150 },
-        { content: 'Second', height: 300 },
-        { content: 'Third', height: 150 },
-        { content: 'Fourth', height: 450 },
-      ],
+      items: [50, 75, 75, 100, 50, 50, 75, 150, 125, 175, 50, 100, 125],
     }
   },
-}
+})
 </script>
 
 <template>
-  <MasonryWall :items="items" :ssr-columns="1" :column-width="300" :gap="16">
-    <template #default="{ item }">
-      <div :style="{ height: `${item.height}px` }">
-        {{ item.content }}
+  <MasonryWall :items="items" :ssr-columns="1" :column-width="100" :gap="16">
+    <template #default="{ item, index }">
+      <div
+        :style="{ height: `${item}px` }"
+        class="surface border rounded flex items-center justify-center"
+      >
+        {{ index }}
       </div>
     </template>
   </MasonryWall>
 </template>
 ```
+
+The above code results in the following output.
+
+import VueMasonryWall from '../../components/blog/examples/VueMasonryWall.vue'
+
+<VueMasonryWall client:load class="example" />
