@@ -1,6 +1,0 @@
-export * from './age'
-export * from './dark'
-export * from './documents'
-export * from './slide-in'
-export * from './models'
-export * from './title'
