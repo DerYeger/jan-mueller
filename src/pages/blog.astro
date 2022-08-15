@@ -16,7 +16,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
       {
         posts.map((post) => (
           <li class="surface border rounded max-w-sm hover:shadow-xl transition-shadow">
-            <a href={post.url}>
+            <a href={post.url} class="no-underline">
               <div class="p-4 flex flex-col">
                 <span class="text-xl">{post.frontmatter.title}</span>
                 <span class="text-lighter">

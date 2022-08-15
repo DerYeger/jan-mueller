@@ -34,7 +34,7 @@ const heroImageAsset = assets.find((asset) => {
 ---
 
 <MainLayout title={`${title} — Jan Müller`}>
-  <article class="markdown">
+  <article class="prose dark:prose-invert">
     {
       heroImageAsset && (
         <Image
@@ -47,7 +47,7 @@ const heroImageAsset = assets.find((asset) => {
     {title && <h1>{title}</h1>}
     {
       publishDate && (
-        <div class="flex gap-1 mt-8 mb-4">
+        <div class="flex flex-wrap gap-1 mt-8 mb-4">
           {publishDate && <DateComponent date={publishDate} />}
           {updatedDate && (
             <>
