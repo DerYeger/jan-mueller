@@ -1,8 +1,8 @@
 ---
-import type { Education } from "../../../types";
-import CVList from "../CVList.astro";
+import type { Education } from '../../../types'
+import CVList from '../CVList.astro'
 
-import EducationEntry from "./EducationEntry.astro";
+import EducationEntry from './EducationEntry.astro'
 
 const education: Education[] = [
   {
@@ -27,7 +27,11 @@ const education: Education[] = [
 
 <CVList>
   <span slot="title">Education</span>
-  {education.map((entry) => <li>
-      <EducationEntry education={entry} />
-    </li>)}
+  {
+    education.map((entry) => (
+      <li>
+        <EducationEntry education={entry} />
+      </li>
+    ))
+  }
 </CVList>

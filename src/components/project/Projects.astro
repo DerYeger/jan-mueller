@@ -3,7 +3,7 @@ import { Icon } from 'astro-icon'
 
 import type { Project as ProjectType } from '../../types'
 
-import Project from "./Project.astro";
+import Project from './Project.astro'
 
 const projects: ProjectType[] = [
   {
@@ -23,14 +23,16 @@ const projects: ProjectType[] = [
   },
 ]
 ---
+
 <section class="my-16">
   <div class="flex items-center flex-col">
     <h2 class="text-3xl mb-4">Projects</h2>
     <div class="flex items-center flex-wrap gap-4 justify-center">
-      {projects.map((project) => <Project
-        v-for="project of projects"
-        project={project}
-      />)}
+      {
+        projects.map((project) => (
+          <Project v-for="project of projects" project={project} />
+        ))
+      }
       <a
         href="https://github.com/DerYeger?tab=repositories"
         rel="noreferrer"

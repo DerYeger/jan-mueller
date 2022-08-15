@@ -9,7 +9,7 @@
     "build": "astro build",
     "dev": "astro dev",
     "preview": "astro preview",
-    "lint": "eslint \"./**/*.{astro,js,json,md,mdx,ts,vue,yaml,yml}\"",
+    "lint": "eslint \"./**/*.{astro,js,json,md,ts,vue,yaml,yml}\"",
     "fix": "yarn lint --fix ",
     "test:e2e": "cypress open --config baseUrl=http://localhost:3333",
     "test:e2e:run": "cypress run"
@@ -39,11 +39,12 @@
     "lint-staged": "13.0.3",
     "moment": "2.29.4",
     "preact": "^10.6.5",
+    "prettier-plugin-astro": "0.5.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "vue": "^3.2.30"
   },
   "lint-staged": {
-    "*.{js,json,md,mdx,ts,vue,yaml,yml}": "eslint --fix"
+    "*.{astro,js,json,md,ts,vue,yaml,yml}": "eslint --fix"
   }
 }

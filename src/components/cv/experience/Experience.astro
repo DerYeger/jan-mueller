@@ -1,8 +1,8 @@
 ---
-import type { Experience } from "../../../types";
-import CVList from "../CVList.astro";
+import type { Experience } from '../../../types'
+import CVList from '../CVList.astro'
 
-import ExperienceEntry from "./ExperienceEntry.astro";
+import ExperienceEntry from './ExperienceEntry.astro'
 
 const universityOfKassel = 'University of Kassel'
 
@@ -34,7 +34,8 @@ const experience: Experience[] = [
   },
   {
     name: universityOfKassel,
-    description: 'Automative EE Systems and Fundamentals of Electrical Engineering',
+    description:
+      'Automative EE Systems and Fundamentals of Electrical Engineering',
     startDate: '2017-11-01',
     endDate: '2018-03-03',
   },
@@ -50,5 +51,11 @@ const experience: Experience[] = [
 
 <CVList>
   <span slot="title">Experience</span>
-  {experience.map((entry) => <li><ExperienceEntry experience={entry} /></li>)}
+  {
+    experience.map((entry) => (
+      <li>
+        <ExperienceEntry experience={entry} />
+      </li>
+    ))
+  }
 </CVList>
