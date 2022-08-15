@@ -1,5 +1,6 @@
 ---
-import type { Award } from "../../types";
+import type { Award } from "../../../types";
+import CVList from "../CVList.astro";
 import AwardEntry from "./AwardEntry.astro";
 
 const awards: Award[] = [
@@ -20,11 +21,9 @@ const awards: Award[] = [
 ].sort((a, b) => b.date.localeCompare(a.date))
 ---
 
-<div class="flex items-center flex-col">
-  <h2 class="text-2xl">Awards</h2>
-  <ul class="children:my-2">
-    {awards.map((entry) => <li>
+<CVList>
+  <span slot="title">Awards</span>
+   {awards.map((entry) => <li>
       <AwardEntry award={entry} />
     </li>)}
-  </ul>
-</div>
+</CVList>

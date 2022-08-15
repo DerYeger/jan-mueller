@@ -1,5 +1,6 @@
 ---
-import type { Education } from "../../types";
+import type { Education } from "../../../types";
+import CVList from "../CVList.astro";
 import EducationEntry from "./EducationEntry.astro";
 
 const education: Education[] = [
@@ -23,11 +24,9 @@ const education: Education[] = [
 ].sort((a, b) => b.startDate.localeCompare(a.startDate))
 ---
 
-<div  class="flex items-center flex-col">
-  <h2 class="text-2xl">Education</h2>
-  <ul class="children:my-2">
-    {education.map((entry) => <li>
+<CVList>
+  <span slot="title">Education</span>
+  {education.map((entry) => <li>
       <EducationEntry education={entry} />
     </li>)}
-  </ul>
-</div>
+</CVList>
