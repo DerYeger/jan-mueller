@@ -6,6 +6,6 @@ const { href, ...props } = Astro.props as Props;
 const isActive = href === Astro.url.pathname;
 ---
 
-<a href={href} class:list={['inline-block py-1 text-black dark:text-white', {'border-b-[2px] border-black dark:border-white': isActive }]} {...props}>
+<a href={href} class:list={['inline-block py-4 text-black dark:text-white', {'border-b-[2px] border-black dark:border-white': isActive }]} {...props}>
 	<slot />
 </a>

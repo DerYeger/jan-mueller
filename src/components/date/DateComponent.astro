@@ -11,4 +11,4 @@ const { date, format } = Astro.props as Props
 const formattedDate = moment(date).format(format ?? 'MMM YYYY')
 ---
 
-<span>{ formattedDate }</span>
+<time>{ formattedDate }</time>

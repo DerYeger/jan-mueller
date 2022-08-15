@@ -16,4 +16,9 @@ export default defineConfig({
     tailwind({ config: { applyBaseStyles: false } }),
     vue(),
   ],
+  markdown: {
+    shikiConfig: {
+      theme: 'monokai',
+    },
+  },
 })
