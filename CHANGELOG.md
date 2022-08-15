@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/DerYeger/jan-mueller/compare/v2.8.0...v3.0.0) (2022-08-15)
+
+
+### Features
+
+* add canonical url ([1bb5fc8](https://github.com/DerYeger/jan-mueller/commit/1bb5fc8cdafbd57ddeffac57a610ce876ee46234))
+
+
+### BREAKING CHANGES
+
+* Trigger major version bump
+
 # [2.8.0](https://github.com/DerYeger/jan-mueller/compare/v2.7.0...v2.8.0) (2022-08-15)
 
 
