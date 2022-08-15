@@ -1,0 +1,54 @@
+---
+import type { Experience } from "../../types";
+import ExperienceEntry from "./ExperienceEntry.astro";
+
+const universityOfKassel = 'University of Kassel'
+
+const experience: Experience[] = [
+  {
+    name: 'Senacor Technologies AG',
+    href: 'https://senacor.com/',
+    description: 'Software Engineer',
+    startDate: '2021-10-01',
+  },
+  {
+    name: 'Yatta Solutions GmbH',
+    href: 'https://website.yatta.de/en/start/',
+    description: 'Software Engineer (Internship)',
+    startDate: '2020-11-01',
+    endDate: '2020-12-31',
+  },
+  {
+    name: universityOfKassel,
+    description: 'Research Group Programming Languages / Methodologies',
+    startDate: '2019-05-01',
+    endDate: '2019-07-31',
+  },
+  {
+    name: universityOfKassel,
+    description: 'Theoretical Computer Science / Formal Methods',
+    startDate: '2019-04-01',
+    endDate: '2019-07-31',
+  },
+  {
+    name: universityOfKassel,
+    description: 'Automative EE Systems and Fundamentals of Electrical Engineering',
+    startDate: '2017-11-01',
+    endDate: '2018-03-03',
+  },
+  {
+    name: 'Management Services Helwig Schmitt GmbH',
+    href: 'https://www.manserv.com/',
+    description: 'Software Engineer (Internship)',
+    startDate: '2015-07-13',
+    endDate: '2015-07-31',
+  },
+].sort((a, b) => b.startDate.localeCompare(a.startDate))
+---
+
+<div class="flex items-center flex-col">
+  <h2 class="text-2xl">Experience</h2>
+  <ul class="children:my-2">
+    {experience.map((entry) => <li><ExperienceEntry experience={entry} /></li>)}
+  </ul>
+</div>

@@ -1,0 +1,18 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro'
+import Main from '../components/Main.astro';
+
+import '../styles/base.css'
+---
+
+<!DOCTYPE html>
+<html class="bg-white dark:bg-black">
+  <body class="text-black dark:text-white">
+    <Header />
+    <Main>
+       <slot />
+    </Main>
+    <Footer />
+  </body>
+</html>

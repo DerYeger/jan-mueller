@@ -1,0 +1,30 @@
+---
+import type { Award } from "../../types";
+import AwardEntry from "./AwardEntry.astro";
+
+const awards: Award[] = [
+  {
+    name: 'Sponsorship award for outstanding academic achievement',
+    date: '2021-11',
+    href: 'https://www.vde-kassel.de/de/veranstaltungen/berichte-zu-vergangene-veranstaltungen/foerderpreise-fuer-herausragende-studienleistungen',
+  },
+  {
+    name: 'Algorithms & data structures programming competition, 1st place',
+    date: '2018-07',
+  },
+  {
+    name: 'DPG-Abiturpreis',
+    date: '2016-07',
+    href: 'https://www.dpg-physik.de/auszeichnungen/dpg-preise/abiturpreis',
+  },
+].sort((a, b) => b.date.localeCompare(a.date))
+---
+
+<div class="flex items-center flex-col">
+  <h2 class="text-2xl">Awards</h2>
+  <ul class="children:my-2">
+    {awards.map((entry) => <li>
+      <AwardEntry award={entry} />
+    </li>)}
+  </ul>
+</div>

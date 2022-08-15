@@ -1,0 +1,33 @@
+---
+import type { Education } from "../../types";
+import EducationEntry from "./EducationEntry.astro";
+
+const education: Education[] = [
+  {
+    name: 'Software Engineering and Internet Computing (M.Sc.)',
+    institution: 'TU Wien',
+    startDate: '2021-10',
+  },
+  {
+    name: 'Computer Science (B.Sc.)',
+    institution: 'University of Kassel',
+    startDate: '2016-10',
+    endDate: '2021-03',
+  },
+  {
+    name: 'University-entrance diploma (Abitur)',
+    institution: 'Wilhelmsgymnasium Kassel',
+    startDate: '2009-09',
+    endDate: '2016-07',
+  },
+].sort((a, b) => b.startDate.localeCompare(a.startDate))
+---
+
+<div  class="flex items-center flex-col">
+  <h2 class="text-2xl">Education</h2>
+  <ul class="children:my-2">
+    {education.map((entry) => <li>
+      <EducationEntry education={entry} />
+    </li>)}
+  </ul>
+</div>
