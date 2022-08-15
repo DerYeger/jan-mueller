@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/DerYeger/jan-mueller/compare/v3.0.1...v3.1.0) (2022-08-15)
+
+
+### Features
+
+* improve design ([3219903](https://github.com/DerYeger/jan-mueller/commit/3219903f62f4a524020e2a5153f9bb056008966b))
+
 ## [3.0.1](https://github.com/DerYeger/jan-mueller/compare/v3.0.0...v3.0.1) (2022-08-15)
 
 
