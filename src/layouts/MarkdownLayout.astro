@@ -48,12 +48,15 @@ const heroImageAsset = assets.find((asset) => {
     {
       publishDate && (
         <div class="flex flex-wrap gap-1 mt-8 mb-4">
-          {publishDate && <DateComponent date={publishDate} />}
+          {publishDate && (
+            <DateComponent date={publishDate} format="MMM DD, YYYY" />
+          )}
           {updatedDate && (
             <>
               <Dot />
               <div>
-                Last updated on <DateComponent date={updatedDate} />
+                Last updated on{' '}
+                <DateComponent date={updatedDate} format="MMM DD, YYYY" />
               </div>
             </>
           )}
