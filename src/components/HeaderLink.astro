@@ -9,7 +9,7 @@ const isActive = href === Astro.url.pathname
 <a
   href={href}
   class:list={[
-    'inline-block py-4 text-black dark:text-white',
+    'inline-block py-4 text-black dark:text-white no-underline',
     { 'border-b-[2px] border-black dark:border-white': isActive },
   ]}
   {...props}

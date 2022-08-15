@@ -4,7 +4,7 @@
 
 @layer components {
   a {
-    @apply text-blue-500 dark:text-amber-300 hover:text-blue-600 hover:dark:text-amber-200 transition-colors;
+    @apply text-black dark:text-white hover:text-blue-600 hover:dark:text-amber-200 transition-colors underline;
   }
 
   .surface {
@@ -33,34 +33,5 @@
     content: '';
     display: block;
     padding-bottom: 100%;
-  }
-
-  .markdown h1 {
-    @apply text-4xl lg:text-6xl mb-12;
-  }
-
-  .markdown * + h1 {
-    @apply mt-16;
-  }
-
-  .markdown h2 {
-    @apply text-3xl lg:text-4xl mt-16 mb-8;
-  }
-
-  .markdown h3 {
-    @apply text-2xl lg:text-3xl mt-12 mb-6;
-  }
-
-  .markdown blockquote {
-    @apply text-xl text-lighter italic my-6;
-  }
-
-  .markdown .shiki,
-  .markdown .example {
-    @apply my-4 p-4 rounded surface border overflow-x-auto;
-  }
-
-  .markdown .shiki {
-    @apply !bg-black;
   }
 }

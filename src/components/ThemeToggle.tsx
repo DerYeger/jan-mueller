@@ -6,11 +6,11 @@ const getInitialTheme = () => {
   }
   if (
     typeof window !== 'undefined' &&
-    window.matchMedia('(prefers-color-scheme: light)').matches
+    window.matchMedia('(prefers-color-scheme: dark)').matches
   ) {
-    return 'light'
+    return 'dark'
   }
-  return 'dark'
+  return 'light'
 }
 
 export default function ThemeToggle({
