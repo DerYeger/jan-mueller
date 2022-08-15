@@ -4,12 +4,19 @@ const year = new Date().getFullYear()
 ---
 
 <footer
-  class="surface border-t p-8 flex flex-row text-sm gap-8 items-start content-start flex-wrap justify-center children:flex children:flex-col children:gap-1 [&>*>*:first-child]:font-bold [&>*>*:first-child]:mb-4 [&>*>*:first-child]:text-md"
+  class="surface border-t px-4 py-8 flex flex-row text-sm gap-8 items-start content-start flex-wrap justify-center children:flex children:flex-col children:gap-3 [&>*>*:first-child]:mb-4"
 >
   <div>
-    <span class="mb-4">About</span>
+    <span class="mb-4">Legal</span>
     <a href="/impressum"> Impressum</a>
     <a href="/about"> About</a>
+
+    <span class="text-lighter">
+      {year} &copy; Jan M&uuml;ller
+    </span>
+  </div>
+  <div>
+    <span>Resources</span>
     <a
       href="https://github.com/DerYeger/jan-mueller"
       rel="noreferrer"
@@ -17,9 +24,6 @@ const year = new Date().getFullYear()
     >
       Source
     </a>
-    <span class="text-lighter">
-      {year} &copy; Jan M&uuml;ller
-    </span>
     <ViewCounter client:only="react" />
   </div>
   <div>

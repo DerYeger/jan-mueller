@@ -8,7 +8,7 @@
   }
 
   .surface {
-    @apply border-neutral-100 dark:border-neutral-700 !bg-white dark:!bg-black text-black dark:text-white;
+    @apply border-neutral-100 dark:border-neutral-800 !bg-white dark:!bg-black text-black dark:text-white;
   }
 
   .text-light {
