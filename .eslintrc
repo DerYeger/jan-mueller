@@ -14,7 +14,10 @@
       },
       "rules": {
         // override/add rules settings here, such as:
+        "import/default": "off",
         "import/namespace": "off",
+        "import/no-named-as-default": "off",
+        "import/no-named-as-default-member": "off",
         "no-undef": "off",
         "react/jsx-key": "off",
         "react/no-unescaped-entities": "off",
