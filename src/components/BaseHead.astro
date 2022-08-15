@@ -10,6 +10,8 @@ export interface Props {
 }
 
 const { title, description, image = '/og-logo.png' } = Astro.props
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 ---
 
 <!-- Global Metadata -->
@@ -23,6 +25,7 @@ const { title, description, image = '/og-logo.png' } = Astro.props
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
