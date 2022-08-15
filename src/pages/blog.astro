@@ -1,0 +1,34 @@
+---
+import DateComponent from '../components/date/DateComponent.astro';
+import MainLayout from '../layouts/MainLayout.astro'
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
+	(a, b) =>
+		new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+)
+---
+
+<MainLayout>
+  <content>
+				<ul class="flex flex-wrap">
+					{posts.map((post) => (
+						<li class="surface border rounded max-w-sm hover:shadow-xl transition-shadow">
+							<a href={post.url}>
+                 <div class="p-4 flex flex-col">
+                  <span class="text-xl">
+                    { post.frontmatter.title }
+                  </span>
+                  <span class="text-lighter">
+                    <DateComponent date={post.frontmatter.publishDate} />
+                  </span>
+                  <span class="text-light">
+                    { post.frontmatter.description }
+                  </span>
+                </div>
+              </a>
+						</li>
+					))}
+				</ul>
+			</content>
+</MainLayout>
