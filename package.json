@@ -27,6 +27,7 @@
     "@astrojs/vue": "^1.0.0",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
+    "@types/react": "18.0.17",
     "@yeger/eslint-config": "1.4.36",
     "astro": "^1.0.5",
     "astro-icon": "0.7.3",

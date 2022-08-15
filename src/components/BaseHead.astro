@@ -6,7 +6,7 @@ import '../styles/base.css'
 export interface Props {
   title: string
   description: string
-  image?: string
+  image?: string | undefined
 }
 
 const { title, description, image = '/og-logo.png' } = Astro.props
