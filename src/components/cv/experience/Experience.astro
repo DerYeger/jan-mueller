@@ -1,5 +1,6 @@
 ---
-import type { Experience } from "../../types";
+import type { Experience } from "../../../types";
+import CVList from "../CVList.astro";
 import ExperienceEntry from "./ExperienceEntry.astro";
 
 const universityOfKassel = 'University of Kassel'
@@ -46,9 +47,7 @@ const experience: Experience[] = [
 ].sort((a, b) => b.startDate.localeCompare(a.startDate))
 ---
 
-<div class="flex items-center flex-col">
-  <h2 class="text-2xl">Experience</h2>
-  <ul class="children:my-2">
-    {experience.map((entry) => <li><ExperienceEntry experience={entry} /></li>)}
-  </ul>
-</div>
+<CVList>
+  <span slot="title">Experience</span>
+  {experience.map((entry) => <li><ExperienceEntry experience={entry} /></li>)}
+</CVList>

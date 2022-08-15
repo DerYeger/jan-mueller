@@ -1,6 +1,6 @@
 ---
-import type { Experience as ExperienceType } from '../../types'
-import DateRange from '../date/DateRange.astro';
+import type { Experience as ExperienceType } from '../../../types'
+import DateRange from '../../date/DateRange.astro';
 
 export interface Props {
   experience: ExperienceType
@@ -14,6 +14,7 @@ const { experience } = Astro.props as Props
     href={experience.href}
     rel="noopener"
     target="_blank"
+    class="w-fit"
   >
     {experience.name}
   </a>}

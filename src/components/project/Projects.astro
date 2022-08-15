@@ -21,22 +21,23 @@ const projects: ProjectType[] = [
   },
 ]
 ---
-
-<div class="flex items-center flex-col">
-  <h2 class="text-2xl">Projects</h2>
-  <div class="flex items-center flex-wrap gap-4 justify-center">
-    {projects.map((project) => <Project
-      v-for="project of projects"
-      project={project}
-    />)}
-    <a
-      href="https://github.com/DerYeger?tab=repositories"
-      rel="noopener"
-      target="_blank"
-      class="px-2 py-1 flex items-center gap-1 w-xs"
-    >
-      And more
-      <Icon name="carbon:arrow-right" />
-    </a>
+<section class="my-16">
+  <div class="flex items-center flex-col">
+    <h2 class="text-3xl mb-4">Projects</h2>
+    <div class="flex items-center flex-wrap gap-4 justify-center">
+      {projects.map((project) => <Project
+        v-for="project of projects"
+        project={project}
+      />)}
+      <a
+        href="https://github.com/DerYeger?tab=repositories"
+        rel="noopener"
+        target="_blank"
+        class="px-2 py-1 flex items-center gap-1 w-xs"
+      >
+        And more
+        <Icon name="carbon:arrow-right" />
+      </a>
+    </div>
   </div>
-</div>
+</section>
