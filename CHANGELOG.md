@@ -1,3 +1,21 @@
+# [2.8.0](https://github.com/DerYeger/jan-mueller/compare/v2.7.0...v2.8.0) (2022-08-15)
+
+
+### Features
+
+* add 404 page ([62266ad](https://github.com/DerYeger/jan-mueller/commit/62266add1cca1e32b00ea6315fc21bace4c5cbcb))
+* add head ([d4b6b64](https://github.com/DerYeger/jan-mueller/commit/d4b6b64080781be8f70d0ad74796f305e7454bb4))
+* add masonry wall example ([a060d66](https://github.com/DerYeger/jan-mueller/commit/a060d66842beae2bc2dc01aead7176249972a53e))
+* add separate impressum ([92a1b05](https://github.com/DerYeger/jan-mueller/commit/92a1b051ae6c989f9eea6c2287dd81dc3dd6531b))
+* add theme toggle ([e7b0594](https://github.com/DerYeger/jan-mueller/commit/e7b0594e7d8590c526bc3777fdfb545fb4048bf1))
+* create robots.txt ([3fd476a](https://github.com/DerYeger/jan-mueller/commit/3fd476a918959b77129ad0ddac5cdc261e154ae1))
+* implement blog ([22e9b7b](https://github.com/DerYeger/jan-mueller/commit/22e9b7bd9b4b920b0d8e4d4d8c7c295d040f6671))
+* improve design ([78e779c](https://github.com/DerYeger/jan-mueller/commit/78e779c36d0fdb817cb7bea7faaa60ef9b605a9f))
+* improve footer ([205c90c](https://github.com/DerYeger/jan-mueller/commit/205c90ce7159fe945a3f015f3548ca28ed7d9533))
+* improve layout ([512ab92](https://github.com/DerYeger/jan-mueller/commit/512ab921d10107f3bd4232e6713ec744dc8f205b))
+* migrate to astro ([66c4e09](https://github.com/DerYeger/jan-mueller/commit/66c4e09503cdc18379167d1e2ffd8f15f88cc3b0))
+* use tailwind typography ([f617994](https://github.com/DerYeger/jan-mueller/commit/f617994111d9d866d0d42d6166940387b0eb738f))
+
 # [2.7.0](https://github.com/DerYeger/jan-mueller/compare/v2.6.1...v2.7.0) (2022-08-13)
 
 
