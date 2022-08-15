@@ -10,6 +10,9 @@ import { defineConfig } from 'astro/config'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://jan-mueller.at',
+  server: {
+    host: true,
+  },
   integrations: [
     image(),
     mdx(),
