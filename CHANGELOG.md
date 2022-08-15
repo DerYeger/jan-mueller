@@ -1,3 +1,11 @@
+## [3.0.1](https://github.com/DerYeger/jan-mueller/compare/v3.0.0...v3.0.1) (2022-08-15)
+
+
+### Bug Fixes
+
+* prevent flicker ([de03e3a](https://github.com/DerYeger/jan-mueller/commit/de03e3a0d6fd45f3a2b035a2b2089aceb8590d86))
+* update colors ([464ec62](https://github.com/DerYeger/jan-mueller/commit/464ec626d1357c04d50caff75f79a2017b609afd))
+
 # [3.0.0](https://github.com/DerYeger/jan-mueller/compare/v2.8.0...v3.0.0) (2022-08-15)
 
 
