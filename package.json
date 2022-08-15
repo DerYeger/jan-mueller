@@ -9,7 +9,7 @@
     "build": "astro build",
     "dev": "astro dev",
     "preview": "astro preview",
-    "lint": "eslint \"./**/*.{js,json,md,ts,vue,yaml,yml}\"",
+    "lint": "eslint \"./**/*.{astro,js,json,md,mdx,ts,vue,yaml,yml}\"",
     "fix": "yarn lint --fix ",
     "test:e2e": "cypress open --config baseUrl=http://localhost:3333",
     "test:e2e:run": "cypress run"
@@ -32,6 +32,8 @@
     "astro-icon": "0.7.3",
     "cypress": "10.4.0",
     "eslint": "8.22.0",
+    "eslint-plugin-astro": "0.17.1",
+    "eslint-plugin-jsx-a11y": "6.6.1",
     "husky": "8.0.1",
     "is-ci": "3.0.1",
     "lint-staged": "13.0.3",
@@ -42,6 +44,6 @@
     "vue": "^3.2.30"
   },
   "lint-staged": {
-    "*.{js,json,md,ts,vue,yaml,yml}": "eslint --fix"
+    "*.{js,json,md,mdx,ts,vue,yaml,yml}": "eslint --fix"
   }
 }

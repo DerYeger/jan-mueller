@@ -1,6 +1,8 @@
 ---
 import { Icon } from 'astro-icon'
+
 import type { Project as ProjectType } from '../../types'
+
 import Project from "./Project.astro";
 
 const projects: ProjectType[] = [
@@ -31,7 +33,7 @@ const projects: ProjectType[] = [
       />)}
       <a
         href="https://github.com/DerYeger?tab=repositories"
-        rel="noopener"
+        rel="noreferrer"
         target="_blank"
         class="px-2 py-1 flex items-center gap-1 w-xs"
       >
