@@ -1,0 +1,26 @@
+---
+import type { Award } from "../../types";
+import DateComponent from "../date/DateComponent.astro";
+import Dot from "../Dot.astro";
+
+export interface Props {
+  award: Award
+}
+
+const { award } = Astro.props as Props
+---
+
+<div class="flex flex-col lh-6">
+  <span class="text-light">{award.name}</span>
+  <span>
+    <span class="text-lighter">
+      <DateComponent date={award.date} />
+    </span>
+    {award.href &&
+     <span class="text-lighter"><Dot /></span>
+      <a href={award.href} rel="noopener" target="_blank">
+        Details
+      </a>
+    }
+  </span>
+</div>

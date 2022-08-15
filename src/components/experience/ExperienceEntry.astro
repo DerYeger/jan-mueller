@@ -1,0 +1,32 @@
+---
+import type { Experience as ExperienceType } from '../../types'
+import DateRange from '../date/DateRange.astro';
+
+export interface Props {
+  experience: ExperienceType
+}
+
+const { experience } = Astro.props as Props
+---
+
+<div class="flex flex-col lh-6">
+  {experience.href && <a
+    href={experience.href}
+    rel="noopener"
+    target="_blank"
+  >
+    {experience.name}
+  </a>}
+  {!experience.href && <span class="text-light">
+    {experience.name}
+  </span>}
+  <span class="text-light">
+    {experience.description}
+  </span>
+  <div class="text-lighter">
+    <DateRange
+      startDate={experience.startDate}
+      endDate={experience.endDate}
+    />
+  </div>
+</div>

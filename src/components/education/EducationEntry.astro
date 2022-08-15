@@ -1,0 +1,23 @@
+---
+import type { Education } from "../../types";
+import DateRange from "../date/DateRange.astro";
+
+export interface Props {
+  education: Education
+}
+
+const { education } = Astro.props as Props
+---
+
+<div class="flex flex-col lh-6">
+  <span class="text-light">{education.name}</span>
+  <span class="text-light">
+    {education.institution}
+  </span>
+  <div class="text-lighter">
+    <DateRange
+      startDate={education.startDate}
+      endDate={education.endDate}
+    />
+  </div>
+</div>

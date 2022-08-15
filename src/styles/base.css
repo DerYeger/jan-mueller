@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  a {
+    @apply text-blue-500 dark:text-amber-300 hover:text-blue-600 hover:dark:text-amber-200 transition-colors;
+  }
+
+  .surface {
+    @apply border-neutral-100 dark:border-neutral-700 bg-white dark:bg-black text-black dark:text-white;
+  }
+
+  .text-light {
+    @apply text-neutral-700 dark:text-neutral-300;
+  }
+
+  .text-lighter {
+    @apply text-neutral-500 dark:text-neutral-500;
+  }
+
+  img.square::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+}

@@ -1,0 +1,61 @@
+---
+import Avatar from '../components/Avatar.astro';
+import Awards from '../components/award/Awards.astro';
+import Education from '../components/education/Education.astro';
+import Experience from '../components/experience/Experience.astro';
+import Facts from '../components/Facts.vue';
+import FrameworksAndLibraries from '../components/icons/FrameworksAndLibraries.astro';
+import Languages from '../components/icons/Languages.astro';
+import ToolsAndDatabases from '../components/icons/ToolsAndDatabases.astro';
+import Projects from '../components/project/Projects.astro';
+import LandingLayout from '../layouts/LandingLayout.astro'
+---
+
+<LandingLayout>
+  <section class="flex items-center flex-col gap-16 children:gap-16">
+    <div
+      class="flex items-center flex-col gap-0 md:gap-16 md:flex-row w-full justify-between"
+    >
+      <Avatar class="p-4" />
+      <div>
+        <Facts class="text-center md:text-right" />
+        <p class="prose text-center md:text-right mt-16">
+          In 2021, I finished my bachelor's degree in computer science at the University of Kassel. Currently, I am studying Software Engineering & Internet Computing at the TU Wien. In parallel, I am a working student at Senacor Technologies AG.
+        </p>
+      </div>
+    </div>
+    <div
+      class="flex items-center flex-col md:flex-row-reverse md:space-between w-full justify-between"
+    >
+      <Languages class="md:text-right" />
+      <p class="prose text-center md:text-left">
+        Programming is one of my hobbies in particular. I work on various open source and hobby projects, which I use as a platform for learning. In the process, I strive for iterative improvements of my source code to constantly develop my style, architecture, and programming-related knowledge.
+      </p>
+    </div>
+    <div class="flex items-center flex-col md:flex-row w-full justify-between">
+      <FrameworksAndLibraries class="md:text-left !md:transition-delay-0.2s" />
+      <p class="prose text-center md:text-right">
+        I am active in both backend and frontend development. In the latter field, I am developing websites and Android apps. I am not averse to the theoretical aspects of software development and like to deal with algorithms, data structures, or the big O notation, among others. In internships as a software developer as well as multiple jobs as a grader and tutor at the University of Kassel, I was able to expand my skills and pass them on to other students.
+      </p>
+    </div>
+    <div
+      class="flex items-center flex-col md:flex-row-reverse w-full justify-between"
+    >
+      <ToolsAndDatabases class="md:text-right !md:transition-delay-0.4s" />
+      <p
+        class="prose text items-center md:text-left">
+        I find my inspiration while listening to music, walking, and reading, where I like to lose myself in science fiction worlds like Frank Herbert's Dune. Both melancholic songs by Ben Howard and breathtaking soundtracks of my favorite video games accompany me during hours of programming and inspire me to look for solutions to even the trickiest problems.
+      </p>
+    </div>
+  </section>
+  <section class="mt-16">
+    <Projects />
+  </section>
+  <section
+    class="mt-16 flex flex-col gap-16 md:flex-row items-start md:gap-4 children:flex-1 children:w-full"
+  >
+    <Experience />
+    <Education class="!md:transition-delay-0.2s" />
+    <Awards class="!md:transition-delay-0.4s" />
+  </section>
+</LandingLayout>

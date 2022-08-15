@@ -1,0 +1,42 @@
+---
+import { Icon } from 'astro-icon'
+import type { Project as ProjectType } from '../../types'
+import Project from "./Project.astro";
+
+const projects: ProjectType[] = [
+  {
+    repo: 'apollo',
+    img: 'https://raw.githubusercontent.com/DerYeger/apollo-frontend/master/src/assets/icons/android-chrome-512x512.png',
+    title: 'Apollo',
+  },
+  {
+    repo: 'd3-graph-controller',
+    img: 'https://graph-controller.yeger.eu/logo.svg',
+    title: 'd3-graph-controller',
+  },
+  {
+    repo: 'vecti',
+    img: 'https://vecti.yeger.eu/logo.svg',
+    title: 'Vecti',
+  },
+]
+---
+
+<div class="flex items-center flex-col">
+  <h2 class="text-2xl">Projects</h2>
+  <div class="flex items-center flex-wrap gap-4 justify-center">
+    {projects.map((project) => <Project
+      v-for="project of projects"
+      project={project}
+    />)}
+    <a
+      href="https://github.com/DerYeger?tab=repositories"
+      rel="noopener"
+      target="_blank"
+      class="px-2 py-1 flex items-center gap-1 w-xs"
+    >
+      And more
+      <Icon name="carbon:arrow-right" />
+    </a>
+  </div>
+</div>

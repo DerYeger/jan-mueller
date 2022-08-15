@@ -1,0 +1,14 @@
+---
+import moment from 'moment'
+export interface Props {
+  date: string
+  format?: string | undefined
+}
+
+
+const { date, format } = Astro.props as Props
+
+const formattedDate = moment(date).format(format ?? 'MMM YYYY')
+---
+
+<span>{ formattedDate }</span>

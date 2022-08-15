@@ -1,0 +1,18 @@
+---
+import DateComponent from './DateComponent.astro'
+
+export interface Props {
+  startDate: string
+  endDate?: string
+  format?: string
+}
+
+const { startDate, endDate, format } = Astro.props as Props
+---
+
+<span>
+  <DateComponent date={startDate} format={format} />
+  &#8212;
+  {endDate && <DateComponent date={endDate} format={format} />}
+  {!endDate && <span>Today</span>}
+</span>
