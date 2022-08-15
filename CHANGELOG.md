@@ -1,3 +1,11 @@
+# [3.2.0](https://github.com/DerYeger/jan-mueller/compare/v3.1.0...v3.2.0) (2022-08-15)
+
+
+### Features
+
+* improve layout ([9df932c](https://github.com/DerYeger/jan-mueller/commit/9df932c558e0f284e23e59b173fb6b8eb3d41660))
+* improve prose design ([5974672](https://github.com/DerYeger/jan-mueller/commit/59746721349dc2a39d9161eaec1c68901f92004a))
+
 # [3.1.0](https://github.com/DerYeger/jan-mueller/compare/v3.0.1...v3.1.0) (2022-08-15)
 
 
