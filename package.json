@@ -11,7 +11,7 @@
     "preview": "astro preview",
     "lint": "eslint \"./**/*.{astro,js,json,md,ts,vue,yaml,yml}\"",
     "fix": "yarn lint --fix ",
-    "test:e2e": "cypress open --config baseUrl=http://localhost:3333",
+    "test:e2e": "cypress open",
     "test:e2e:run": "cypress run"
   },
   "dependencies": {
