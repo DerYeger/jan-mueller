@@ -55,6 +55,10 @@
   }
 
   mark {
-    @apply bg-transparent italic font-semibold;
+    @apply bg-transparent italic font-semibold text-black dark:text-white;
+  }
+
+  .avatar {
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 50, 0.35));
   }
 }

@@ -7,30 +7,8 @@ describe('Home', () => {
     cy.get('.avatar').scrollIntoView().should('be.visible')
   })
 
-  it('shows badges', () => {
-    cy.contains('Languages').scrollIntoView().should('be.visible')
-    cy.contains('Frameworks & Libraries').scrollIntoView().should('be.visible')
-    cy.contains('Tools & Databases').scrollIntoView().should('be.visible')
-  })
-
   it('shows projects', () => {
-    cy.contains('Projects')
-      .parent()
-      .within(() => {
-        cy.get('[title="Apollo"]').scrollIntoView().should('be.visible')
-        cy.get('[title="d3-graph-controller"]')
-          .scrollIntoView()
-          .should('be.visible')
-        cy.get('[title="Vecti"]').scrollIntoView().should('be.visible')
-        cy.contains('And more')
-          .scrollIntoView()
-          .should('be.visible')
-          .should(
-            'have.attr',
-            'href',
-            'https://github.com/DerYeger?tab=repositories'
-          )
-      })
+    cy.contains('Projects').should('be.visible')
   })
 
   it('shows experience', () => {

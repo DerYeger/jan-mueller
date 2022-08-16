@@ -1,5 +1,6 @@
 ---
 import AboutMe from '../components/AboutMe.astro'
+import Avatar from '../components/Avatar.astro'
 import CV from '../components/cv/CV.astro'
 import Projects from '../components/project/Projects.astro'
 import MainLayout from '../layouts/MainLayout.astro'
@@ -8,10 +9,15 @@ import MainLayout from '../layouts/MainLayout.astro'
 <MainLayout>
   <content>
     <section class="prose dark:prose-invert prose-2xl mt-8 mb-32">
-      <h1 class="relative text-center children:block">
+      <h1 class="relative text-center children:block mb-0">
         <span class="mb-4">Jan Müller</span>
-        <span class="text-3xl text-light"> Software Engineer</span>
+        <span
+          class="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600"
+        >
+          Software Engineer
+        </span>
       </h1>
+      <Avatar />
     </section>
     <Projects />
     <CV />
