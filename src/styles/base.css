@@ -53,4 +53,8 @@
   .prose div.language-id {
     display: none;
   }
+
+  mark {
+    @apply bg-transparent italic font-semibold;
+  }
 }
