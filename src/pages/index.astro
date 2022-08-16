@@ -1,17 +1,19 @@
 ---
+import CV from '../components/cv/CV.astro'
 import Projects from '../components/project/Projects.astro'
 import MainLayout from '../layouts/MainLayout.astro'
 ---
 
 <MainLayout>
-  <content class="prose dark:prose-invert prose-2xl">
-    <section>
+  <content>
+    <section class="prose dark:prose-invert prose-2xl mt-8 mb-16">
       <h1 class="relative text-center children:block">
         <span class="mb-4">Jan Müller</span>
         <span class="text-3xl text-light"> Software Engineer</span>
       </h1>
     </section>
     <Projects />
+    <CV />
 
     <!-- <section class="flex items-center flex-col gap-16 children:gap-16">
     <div
