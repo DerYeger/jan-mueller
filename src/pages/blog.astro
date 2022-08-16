@@ -18,17 +18,13 @@ const assets = await Astro.glob('../assets/**/*')
 <MainLayout title="Blog — Jan Müller">
   <content>
     <div class="prose dark:prose-invert mb-8">
-      <h1>Blog</h1>
+      <h1>Jan's Blog</h1>
     </div>
-    <ul class="flex flex-wrap -m-2">
+    <ul class="grid gap-4 grid-cols-1 sm:grid-cols-2">
       {
         posts.map((post) => (
-          <li class="p-2 w-1/1 md:w-1/2">
-            <a
-              href={post.url}
-              rel="prefetch"
-              class="block card card-hover no-underline overflow-hidden"
-            >
+          <li class="card card-hover">
+            <a href={post.url} rel="prefetch" class="block no-underline">
               {post.frontmatter.heroImage && (
                 <Image
                   class="w-full"
