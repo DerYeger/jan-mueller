@@ -1,7 +1,8 @@
 ---
+import { accounts } from '../lib'
+
 import OpenInNew from './icons/OpenInNew.astro'
 import ViewCounter from './ViewCounter'
-
 const year = new Date().getFullYear()
 ---
 
@@ -30,33 +31,14 @@ const year = new Date().getFullYear()
   </div>
   <div>
     <span>Contact</span>
-    <a
-      href="https://github.com/DerYeger"
-      rel="noreferrer"
-      target="_blank"
-      title="GitHub"
-    >
-      GitHub
-      <OpenInNew />
-    </a>
-    <a
-      href="https://twitter.com/DerYeger"
-      rel="noreferrer"
-      target="_blank"
-      title="GitHub"
-    >
-      Twitter
-      <OpenInNew />
-    </a>
-    <a
-      href="https://www.xing.com/profile/Jan_Mueller1092/cv"
-      rel="noreferrer"
-      target="_blank"
-      title="XING"
-    >
-      XING
-      <OpenInNew />
-    </a>
+    {
+      accounts.map((account) => (
+        <a href={account.href} rel="noreferrer" target="_blank">
+          {account.name}
+          <OpenInNew />
+        </a>
+      ))
+    }
     <a href="mailto:mail@jan-mueller.at" title="Mail">Mail</a>
   </div>
 </footer>
