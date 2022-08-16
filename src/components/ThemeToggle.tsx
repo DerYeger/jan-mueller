@@ -46,7 +46,7 @@ export default function ThemeToggle({
   return (
     <button
       onClick={onClick}
-      className="h-[62px] w-[62px] flex items-center justify-center"
+      className="h-[48px] w-[48px] flex items-center justify-center"
       title="Toggle dark mode"
     >
       <>

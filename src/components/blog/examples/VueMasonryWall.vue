@@ -19,7 +19,7 @@ export default defineComponent({
     <template #default="{ item, index }">
       <div
         :style="{ height: `${item}px` }"
-        class="surface border rounded flex items-center justify-center"
+        class="card flex items-center justify-center"
       >
         {{ index }}
       </div>

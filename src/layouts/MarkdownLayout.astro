@@ -38,8 +38,9 @@ const heroImageAsset = assets.find((asset) => {
     {
       heroImageAsset && (
         <Image
-          class="w-full h-[200px] object-cover rounded surface shadow-md"
+          class="w-full h-[200px] object-cover card"
           src={heroImageAsset.default}
+          format="webp"
           alt=""
         />
       )

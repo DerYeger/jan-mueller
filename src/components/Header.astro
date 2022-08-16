@@ -5,9 +5,11 @@ import Navigation from './Navigation.astro'
 import ThemeToggle from './ThemeToggle'
 ---
 
-<header class="sticky top-0 surface z-10 border-b h-[62px]">
+<header
+  class="flex items-center justify-between p-4 pr-0 sticky top-0 surface z-10 border-b h-[48px]"
+>
   <Navigation />
-  <div class="fixed right-0 top-0">
+  <div>
     <ThemeToggle client:load>
       <Icon name="carbon:sun" slot="light" class="h-[24px] w-[24px]" />
       <Icon name="carbon:moon" slot="dark" class="h-[24px] w-[24px]" />

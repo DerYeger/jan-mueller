@@ -4,11 +4,19 @@
 
 @layer components {
   a {
-    @apply text-black dark:text-white hover:text-blue-600 hover:dark:text-amber-200 transition-colors underline;
+    @apply text-black dark:text-white hover:text-neutral-600 hover:dark:text-neutral-300 transition-colors underline;
   }
 
   .surface {
-    @apply border-neutral-300 dark:border-neutral-800 !bg-white dark:!bg-black text-black dark:text-white shadow transition-colors;
+    @apply border-neutral-300 dark:border-neutral-800 !bg-white dark:!bg-black text-black dark:text-white transition-colors;
+  }
+
+  .card {
+    @apply surface border rounded shadow-md;
+  }
+
+  .card-hover {
+    @apply hover:shadow-xl transition-shadow;
   }
 
   .text-light {
@@ -24,8 +32,7 @@
   h3,
   h4,
   h5,
-  h6,
-  .surface a {
+  h6 {
     @apply text-black dark:text-white;
   }
 

@@ -1,10 +1,11 @@
 ---
+import OpenInNew from './icons/OpenInNew.astro'
 import ViewCounter from './ViewCounter'
 const year = new Date().getFullYear()
 ---
 
 <footer
-  class="surface text-xs border-t shadow-none px-2 py-8 flex flex-row gap-4 items-start content-start flex-wrap justify-center children:flex children:flex-col children:gap-3 [&>*>*:first-child]:mb-4"
+  class="surface text-xs border-t shadow-none px-2 py-8 children:px-2 flex flex-row gap-0 items-start justify-center children:flex children:flex-col children:gap-3 [&>*>*:first-child]:mb-4 children:w-1/3 children:max-w-[10rem]"
 >
   <div>
     <span class="mb-4">Legal</span>
@@ -23,6 +24,7 @@ const year = new Date().getFullYear()
       target="_blank"
     >
       Source
+      <OpenInNew />
     </a>
     <ViewCounter client:only="react" />
   </div>
@@ -35,6 +37,7 @@ const year = new Date().getFullYear()
       title="GitHub"
     >
       GitHub
+      <OpenInNew />
     </a>
 
     <a
@@ -44,6 +47,7 @@ const year = new Date().getFullYear()
       title="XING"
     >
       XING
+      <OpenInNew />
     </a>
 
     <a href="mailto:mail@jan-mueller.at" title="XING"> Mail</a>
