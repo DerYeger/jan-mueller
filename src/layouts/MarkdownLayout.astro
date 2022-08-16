@@ -3,6 +3,7 @@ import { Image } from '@astrojs/image/components'
 
 import DateComponent from '../components/date/DateComponent.astro'
 import Dot from '../components/Dot.astro'
+import { getImageAsset } from '../lib'
 
 import MainLayout from './MainLayout.astro'
 
@@ -21,16 +22,7 @@ const {
 } = Astro.props as Props
 
 const assets = await Astro.glob('../assets/**/*')
-const heroImageAsset = assets.find((asset) => {
-  if (!heroImage) {
-    return false
-  }
-  if (!asset.default?.src) {
-    return false
-  }
-  const index = asset.default.src.indexOf('/assets/')
-  return asset.default.src.slice(index) === heroImage
-})
+const heroImageAsset = heroImage ? getImageAsset(assets, heroImage) : undefined
 ---
 
 <MainLayout title={`${title} — Jan Müller`}>

@@ -1,6 +1,9 @@
 ---
+import { Image } from '@astrojs/image/components'
+
 import DateComponent from '../components/date/DateComponent.astro'
 import MainLayout from '../layouts/MainLayout.astro'
+import { getImageAsset } from '../lib'
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
@@ -8,17 +11,36 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
     new Date(b.frontmatter.publishDate).valueOf() -
     new Date(a.frontmatter.publishDate).valueOf()
 )
+
+const assets = await Astro.glob('../assets/**/*')
 ---
 
 <MainLayout title="Blog — Jan Müller">
   <content>
+    <div class="prose dark:prose-invert mb-8">
+      <h1>Blog</h1>
+    </div>
     <ul class="flex flex-wrap -m-2">
       {
         posts.map((post) => (
-          <li class=" p-2 w-1/1 md:w-1/2">
-            <a href={post.url} class="block card card-hover no-underline">
-              <div class="p-4 flex flex-col gap-2">
-                <span class="text-xl">{post.frontmatter.title}</span>
+          <li class="p-2 w-1/1 md:w-1/2">
+            <a
+              href={post.url}
+              class="block card card-hover no-underline overflow-hidden"
+            >
+              {post.frontmatter.heroImage && (
+                <Image
+                  class="w-full"
+                  src={
+                    getImageAsset(assets, post.frontmatter.heroImage)?.default
+                  }
+                  height={100}
+                  width={326}
+                  format="webp"
+                />
+              )}
+              <div class="prose prose-sm dark:prose-invert p-4 flex flex-col gap-2">
+                <h2 class="mt-0">{post.frontmatter.title}</h2>
                 <span class="text-lighter">
                   <DateComponent
                     date={post.frontmatter.publishDate}

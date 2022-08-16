@@ -24,9 +24,9 @@ const projects: ProjectType[] = [
 ]
 ---
 
-<section class="my-16">
+<section class="my-16 prose dark:prose-invert">
   <div class="flex items-center flex-col">
-    <h2 class="text-3xl mb-4">Projects</h2>
+    <h2>Projects</h2>
     <div class="flex items-center flex-wrap gap-4 justify-center">
       {
         projects.map((project) => (
@@ -37,9 +37,9 @@ const projects: ProjectType[] = [
         href="https://github.com/DerYeger?tab=repositories"
         rel="noreferrer"
         target="_blank"
-        class="px-2 py-1 flex items-center gap-1 w-xs"
+        class="px-2 py-1 flex items-center gap-1"
       >
-        And more
+        More
         <Icon name="carbon:arrow-right" />
       </a>
     </div>

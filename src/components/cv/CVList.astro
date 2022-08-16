@@ -1,6 +1,8 @@
-<div class="flex flex-col">
-  <h2 class="text-2xl mb-4 text-center md:text-start"><slot name="title" /></h2>
-  <ul class="children:my-2 list-disc">
+<div class="flex flex-col prose dark:prose-invert">
+  <h2 class="text-center">
+    <slot name="title" />
+  </h2>
+  <ul>
     <slot />
   </ul>
 </div>
