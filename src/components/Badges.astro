@@ -7,15 +7,6 @@ import { accounts } from '../lib'
 <section
   class="screen-wide bg-zinc-200 dark:bg-zinc-900 border-zinc-300 dark:border-zinc-800 border-y prose dark:prose-invert prose-2xl max-w-none p-8 my-32"
 >
-  <div class="flex justify-center mb-8">
-    <a
-      href="/blog"
-      class="no-underline px-4 py-2 rounded-3xl bg-blue-500 hover:bg-blue-600 text-white hover:text-white transition-colors !text-base flex gap-2 items-center"
-    >
-      Blog
-      <Icon name="akar-icons:arrow-right" class="h-[20px]" />
-    </a>
-  </div>
   <div class="flex gap-8 justify-center children:w-6">
     {
       accounts.map((account) => (
@@ -29,5 +20,14 @@ import { accounts } from '../lib'
         </a>
       ))
     }
+  </div>
+  <div class="flex justify-center mt-8">
+    <a
+      href="/blog"
+      class="no-underline px-4 py-2 rounded-3xl bg-blue-500 hover:bg-blue-600 text-white hover:text-white transition-colors !text-base flex gap-2 items-center"
+    >
+      Blog
+      <Icon name="akar-icons:arrow-right" class="h-[20px]" />
+    </a>
   </div>
 </section>
