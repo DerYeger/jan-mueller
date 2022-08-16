@@ -1,5 +1,5 @@
 ---
-import { Picture } from '@astrojs/image/components'
+import { Image } from '@astrojs/image/components'
 
 import { getImageAsset } from '../../lib'
 import type { Project } from '../../types'
@@ -29,12 +29,11 @@ const image = getImageAsset(assets, project.img).default
       <h3 class="m-4">{project.title}</h3>
       <span class="mx-4 mb-2 text-light">{project.details}</span>
     </div>
-    <Picture
-      class="rounded-b border-t surface children:my-0"
+    <Image
+      class="rounded-b border-t surface my-0"
       src={image}
       aspectRatio={2 / 1}
-      widths={[430]}
-      sizes="430px"
+      width={800}
       format="webp"
       alt={project.title}
       loading="lazy"

@@ -26,6 +26,7 @@ const assets = await Astro.glob('../assets/**/*')
           <li class="p-2 w-1/1 md:w-1/2">
             <a
               href={post.url}
+              rel="prefetch"
               class="block card card-hover no-underline overflow-hidden"
             >
               {post.frontmatter.heroImage && (
@@ -34,8 +35,9 @@ const assets = await Astro.glob('../assets/**/*')
                   src={
                     getImageAsset(assets, post.frontmatter.heroImage)?.default
                   }
-                  height={100}
-                  width={326}
+                  height={200}
+                  width={600}
+                  quality={100}
                   format="webp"
                 />
               )}
