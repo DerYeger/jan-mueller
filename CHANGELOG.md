@@ -1,3 +1,17 @@
+# [3.4.0](https://github.com/DerYeger/jan-mueller/compare/v3.3.0...v3.4.0) (2022-08-16)
+
+
+### Features
+
+* add badges ([d5118b5](https://github.com/DerYeger/jan-mueller/commit/d5118b5867d78d4768a65acefd51c5d4932a3338))
+* improve apollo project image ([4f5341f](https://github.com/DerYeger/jan-mueller/commit/4f5341fe0bc28c61addcd06be79a0c55e54dbdcc))
+* improve design ([c0a6106](https://github.com/DerYeger/jan-mueller/commit/c0a6106acf1796859f693a2a82ca97510b4eb482))
+* improve design ([4ee4dc9](https://github.com/DerYeger/jan-mueller/commit/4ee4dc99f0c2da2246274ef1887cb10bfb141651))
+* improve layout ([500c923](https://github.com/DerYeger/jan-mueller/commit/500c92312963dced11b1cd2de3d2d047bcd725a7))
+* improve layout ([4f0c6d1](https://github.com/DerYeger/jan-mueller/commit/4f0c6d17b2ff93e285b1cf15f835baebad896f8d))
+* improve layout ([0f478d4](https://github.com/DerYeger/jan-mueller/commit/0f478d43e1b29f1603a2471f29be9a0bde7c3492))
+* prefetch ([2c59ac0](https://github.com/DerYeger/jan-mueller/commit/2c59ac09397c32f8920500bdd205768d212ab714))
+
 # [3.3.0](https://github.com/DerYeger/jan-mueller/compare/v3.2.0...v3.3.0) (2022-08-16)
 
 
