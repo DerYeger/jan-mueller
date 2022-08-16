@@ -1,16 +1,19 @@
 ---
-import Avatar from '../components/Avatar.astro'
-import CV from '../components/cv/CV.astro'
-import Facts from '../components/Facts.vue'
-import FrameworksAndLibraries from '../components/icons/FrameworksAndLibraries.astro'
-import Languages from '../components/icons/Languages.astro'
-import ToolsAndDatabases from '../components/icons/ToolsAndDatabases.astro'
 import Projects from '../components/project/Projects.astro'
 import MainLayout from '../layouts/MainLayout.astro'
 ---
 
 <MainLayout>
-  <section class="flex items-center flex-col gap-16 children:gap-16">
+  <content class="prose dark:prose-invert prose-2xl">
+    <section>
+      <h1 class="relative text-center children:block">
+        <span class="mb-4">Jan Müller</span>
+        <span class="text-3xl text-light"> Software Engineer</span>
+      </h1>
+    </section>
+    <Projects />
+
+    <!-- <section class="flex items-center flex-col gap-16 children:gap-16">
     <div
       class="flex items-center flex-col gap-0 md:gap-16 md:flex-row w-full justify-between"
     >
@@ -65,6 +68,6 @@ import MainLayout from '../layouts/MainLayout.astro'
       </p>
     </div>
   </section>
-  <Projects />
-  <CV />
+  <CV /> -->
+  </content>
 </MainLayout>

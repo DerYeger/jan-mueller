@@ -36,6 +36,7 @@ export interface Project {
   repo: string
   img: string
   title: string
+  details: string
 }
 
 export const PageViewsKey = Symbol('pageViews')

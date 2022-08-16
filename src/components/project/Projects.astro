@@ -1,6 +1,4 @@
 ---
-import { Icon } from 'astro-icon'
-
 import type { Project as ProjectType } from '../../types'
 
 import Project from './Project.astro'
@@ -8,40 +6,38 @@ import Project from './Project.astro'
 const projects: ProjectType[] = [
   {
     repo: 'apollo',
-    img: 'https://raw.githubusercontent.com/DerYeger/apollo-frontend/master/src/assets/icons/android-chrome-512x512.png',
+    img: '/assets/projects/apollo.png',
     title: 'Apollo',
+    details: 'First-order graph model-checking',
   },
   {
-    repo: 'd3-graph-controller',
-    img: 'https://graph-controller.yeger.eu/logo.svg',
-    title: 'd3-graph-controller',
+    repo: 'vue-masonry-wall',
+    img: '/assets/projects/masonry-wall.png',
+    title: 'vue-masonry-wall',
+    details: 'Vue layout component',
   },
   {
-    repo: 'vecti',
-    img: 'https://vecti.yeger.eu/logo.svg',
-    title: 'Vecti',
+    repo: 'wiener-time',
+    img: '/assets/projects/wiener-time.png',
+    title: 'WienerTime',
+    details: 'Real-time traffic monitoring',
   },
 ]
 ---
 
-<section class="my-16 prose dark:prose-invert">
-  <div class="flex items-center flex-col">
-    <h2>Projects</h2>
-    <div class="flex items-center flex-wrap gap-4 justify-center">
+<section
+  class="screen-wide surface border-y prose-xl p-4 pt-0 mb-6 !bg-zinc-200 dark:!bg-zinc-700"
+>
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-center my-8">Projects</h2>
+    <div class="flex flex-wrap justify-center -mb-12">
       {
         projects.map((project) => (
-          <Project v-for="project of projects" project={project} />
+          <div class="p-2 w-full md:w-1/2 lg:w-1/3 max-w-md">
+            <Project project={project} />
+          </div>
         ))
       }
-      <a
-        href="https://github.com/DerYeger?tab=repositories"
-        rel="noreferrer"
-        target="_blank"
-        class="px-2 py-1 flex items-center gap-1"
-      >
-        More
-        <Icon name="carbon:arrow-right" />
-      </a>
     </div>
   </div>
 </section>

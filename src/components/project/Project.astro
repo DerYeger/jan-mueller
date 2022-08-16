@@ -1,4 +1,7 @@
 ---
+import { Picture } from '@astrojs/image/components'
+
+import { getImageAsset } from '../../lib'
 import type { Project } from '../../types'
 
 export interface Props {
@@ -8,13 +11,33 @@ export interface Props {
 const { project } = Astro.props as Props
 
 const href = `https://github.com/DerYeger/${project.repo}`
+
+const assets = await Astro.glob('../../assets/**/*')
+const image = getImageAsset(assets, project.img).default
 ---
 
-<a href={href} rel="noreferrer" target="_blank">
-  <img
-    class="square max-w-[4rem]"
-    src={project.img}
-    alt={project.title}
-    title={project.title}
-  />
+<a
+  href={href}
+  class="block no-underline h-full"
+  rel="noreferrer"
+  target="_blank"
+>
+  <div
+    class="card card-hover h-full flex flex-col justify-between overflow-hidden gap-4"
+  >
+    <div class="prose dark:prose-invert prose-sm">
+      <h3 class="m-4">{project.title}</h3>
+      <span class="mx-4 mb-2 text-light">{project.details}</span>
+    </div>
+    <Picture
+      class="rounded-b border-t surface children:my-0"
+      src={image}
+      aspectRatio={2 / 1}
+      widths={[430]}
+      sizes="430px"
+      format="webp"
+      alt={project.title}
+      loading="lazy"
+    />
+  </div>
 </a>
