@@ -1,3 +1,16 @@
+# [3.3.0](https://github.com/DerYeger/jan-mueller/compare/v3.2.0...v3.3.0) (2022-08-16)
+
+
+### Features
+
+* add about me ([1689e9d](https://github.com/DerYeger/jan-mueller/commit/1689e9da09b44cdd7ae8cf8eabd99077a951f568))
+* improve avatar ([c345882](https://github.com/DerYeger/jan-mueller/commit/c345882fae7b515bbdfa6a920ea977844647c322))
+* improve cv ([74884bf](https://github.com/DerYeger/jan-mueller/commit/74884bfbac235d1e1e5c9dafcbcb834c10960659))
+* improve design ([b3f27a0](https://github.com/DerYeger/jan-mueller/commit/b3f27a00c8e26a71ccc1ec6a9c6408ec6033b29a))
+* improve footer ([e8483c6](https://github.com/DerYeger/jan-mueller/commit/e8483c6a4bf77347b2c711c809557869f3771e99))
+* improve layout ([f22892b](https://github.com/DerYeger/jan-mueller/commit/f22892bbd3ba8a6e8112b2cfa9b5068a6c061462))
+* update projects ([1401aed](https://github.com/DerYeger/jan-mueller/commit/1401aedb3e1ecb0075a28c205df74e7a31091eb6))
+
 # [3.2.0](https://github.com/DerYeger/jan-mueller/compare/v3.1.0...v3.2.0) (2022-08-15)
 
 
