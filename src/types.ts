@@ -4,10 +4,6 @@ export interface Award {
   href?: string
 }
 
-export interface Document extends File<'documents'> {
-  language: string
-}
-
 export interface Education {
   name: string
   institution: string
@@ -23,20 +19,8 @@ export interface Experience {
   href?: string
 }
 
-export interface File<Type extends 'documents' | 'models'> {
-  name: string
-  date: string
-  dateFormat?: 'default' | 'month'
-  type: Type
-}
-
-export type Model = File<'models'>
-
 export interface Project {
-  repo: string
-  img: string
+  id: string
   title: string
   details: string
 }
-
-export const PageViewsKey = Symbol('pageViews')

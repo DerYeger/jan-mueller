@@ -9,7 +9,9 @@ export interface Props {
 
 const { project } = Astro.props as Props
 
-const href = `https://github.com/DerYeger/${project.repo}`
+const href = `https://github.com/DerYeger/${project.id}`
+
+const src = await import(`../../assets/projects/${project.id}.png`)
 ---
 
 <a
@@ -27,7 +29,7 @@ const href = `https://github.com/DerYeger/${project.repo}`
     </div>
     <Image
       class="rounded-b border-t surface my-0"
-      src={import(project.img)}
+      src={src.default}
       aspectRatio={2}
       width={800}
       format="webp"
