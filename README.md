@@ -25,7 +25,7 @@
 
 ## Features
 
-- Astro, Vue and React
+- Astro, Vue and Preact
 - Tailwind
 - MDX
 - E2E testing with [Cypress](https://www.cypress.io/)

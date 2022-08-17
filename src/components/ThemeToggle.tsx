@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react'
+/* eslint-disable react/prop-types */
+import type { FunctionalComponent } from 'preact'
+import { useEffect, useState } from 'preact/hooks'
 
 const getInitialTheme = () => {
   if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -13,13 +15,10 @@ const getInitialTheme = () => {
   return 'light'
 }
 
-export default function ThemeToggle({
-  light,
-  dark,
-}: {
+const ThemeToggle: FunctionalComponent<{
   dark?: unknown
   light?: unknown
-}) {
+}> = ({ dark, light }) => {
   const [theme, setTheme] = useState(getInitialTheme())
 
   useEffect(() => {
@@ -56,3 +55,5 @@ export default function ThemeToggle({
     </button>
   )
 }
+
+export default ThemeToggle

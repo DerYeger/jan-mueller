@@ -21,6 +21,7 @@
   "devDependencies": {
     "@astrojs/image": "^0.3.3",
     "@astrojs/mdx": "^0.9.0",
+    "@astrojs/preact": "^1.0.2",
     "@astrojs/prefetch": "^0.0.7",
     "@astrojs/react": "^1.0.0",
     "@astrojs/sitemap": "^1.0.0",
@@ -28,8 +29,8 @@
     "@astrojs/vue": "^1.0.0",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
+    "@preact/preset-vite": "2.3.0",
     "@tailwindcss/typography": "0.5.4",
-    "@types/react": "18.0.17",
     "@yeger/eslint-config": "1.4.36",
     "astro": "^1.0.5",
     "astro-icon": "0.7.3",
@@ -42,10 +43,8 @@
     "is-ci": "3.0.1",
     "lint-staged": "13.0.3",
     "moment": "2.29.4",
-    "preact": "^10.6.5",
+    "preact": "10.6.5",
     "prettier-plugin-astro": "0.5.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
     "vue": "^3.2.30"
   },
   "lint-staged": {

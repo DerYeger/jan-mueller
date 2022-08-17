@@ -1,10 +1,11 @@
 import image from '@astrojs/image'
 import mdx from '@astrojs/mdx'
+import preact from '@astrojs/preact'
 import prefetch from '@astrojs/prefetch'
-import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import vue from '@astrojs/vue'
+import vitePreact from '@preact/preset-vite'
 import robotsTxt from 'astro-robots-txt'
 import { defineConfig } from 'astro/config'
 
@@ -18,7 +19,6 @@ export default defineConfig({
     image(),
     mdx(),
     sitemap(),
-    react(),
     tailwind({
       config: {
         applyBaseStyles: false,
@@ -27,7 +27,11 @@ export default defineConfig({
     vue(),
     robotsTxt(),
     prefetch(),
+    preact(),
   ],
+  vite: {
+    plugins: [vitePreact()],
+  },
   markdown: {
     shikiConfig: {
       theme: 'monokai',

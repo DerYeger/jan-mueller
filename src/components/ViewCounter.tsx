@@ -1,7 +1,8 @@
 import PageViews from '@yeger/page-views'
-import { useEffect, useState } from 'react'
+import type { FunctionalComponent } from 'preact'
+import { useEffect, useState } from 'preact/hooks'
 
-const ViewCounter = () => {
+const ViewCounter: FunctionalComponent = () => {
   const [pageViews, setPageViews] = useState<number>(0)
 
   useEffect(() => {
