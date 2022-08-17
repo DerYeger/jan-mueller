@@ -1,3 +1,18 @@
+# [3.5.0](https://github.com/DerYeger/jan-mueller/compare/v3.4.0...v3.5.0) (2022-08-17)
+
+
+### Bug Fixes
+
+* ensure badges work in safari ([45bef74](https://github.com/DerYeger/jan-mueller/commit/45bef74203e1d86f69501b4db4863390a76291a9))
+* improve layout ([0695753](https://github.com/DerYeger/jan-mueller/commit/0695753b4c1f8b582cc40deb1f1ef91cbb686b77))
+* prevent overflow ([79ca235](https://github.com/DerYeger/jan-mueller/commit/79ca2355dcba0a1cdce966a37c4d9cec7f5f0442))
+
+
+### Features
+
+* improve header ([9cf8ca6](https://github.com/DerYeger/jan-mueller/commit/9cf8ca648b3f5f9978bfbdef8a43fee1017cefe5))
+* improve layering ([eba0436](https://github.com/DerYeger/jan-mueller/commit/eba0436adbe2368ca7fafd7b2499f647173a522a))
+
 # [3.4.0](https://github.com/DerYeger/jan-mueller/compare/v3.3.0...v3.4.0) (2022-08-16)
 
 
