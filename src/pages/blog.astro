@@ -23,7 +23,7 @@ const assets = await Astro.glob('../assets/**/*')
     <ul class="grid gap-4 grid-cols-1 sm:grid-cols-2">
       {
         posts.map((post) => (
-          <li class="card card-hover">
+          <li class="card card-hover overflow-hidden">
             <a href={post.url} rel="prefetch" class="block no-underline">
               {post.frontmatter.heroImage && (
                 <Image
