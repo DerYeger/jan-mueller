@@ -6,6 +6,7 @@
   "description": "Personal website of Jan Müller, a passionate software engineer.",
   "scripts": {
     "prepare": "is-ci || husky install",
+    "check": "astro check",
     "build": "astro build",
     "dev": "astro dev",
     "preview": "astro preview",

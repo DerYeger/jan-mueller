@@ -20,6 +20,8 @@ jobs:
         uses: DerYeger/yarn-setup-action@master
         with:
           node-version: 16
+      - name: Check
+        run: yarn check
       - name: Build
         run: yarn build
       - name: Upload
