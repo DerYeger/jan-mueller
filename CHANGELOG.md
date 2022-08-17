@@ -1,3 +1,10 @@
+## [3.6.1](https://github.com/DerYeger/jan-mueller/compare/v3.6.0...v3.6.1) (2022-08-17)
+
+
+### Bug Fixes
+
+* adjust color ([f507415](https://github.com/DerYeger/jan-mueller/commit/f50741533cd7ac191a9b97bf763d574060b678ce))
+
 # [3.6.0](https://github.com/DerYeger/jan-mueller/compare/v3.5.0...v3.6.0) (2022-08-17)
 
 
