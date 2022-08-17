@@ -28,7 +28,7 @@
   }
 
   .screen-wide {
-    @apply w-screen ml-[50%] translate-x-[-50%];
+    @apply w-screen max-w-full ml-[50%] translate-x-[-50%];
   }
 
   h1,
