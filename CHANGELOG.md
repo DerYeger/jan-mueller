@@ -1,3 +1,12 @@
+# [3.6.0](https://github.com/DerYeger/jan-mueller/compare/v3.5.0...v3.6.0) (2022-08-17)
+
+
+### Features
+
+* improve image loading ([76220b7](https://github.com/DerYeger/jan-mueller/commit/76220b767ab89acf0e059130a0e896dcbada777c))
+* update typography ([8ccfc3d](https://github.com/DerYeger/jan-mueller/commit/8ccfc3d3bbd9fc2ecd569722c2fded334a33753f))
+* use preact ([2c61872](https://github.com/DerYeger/jan-mueller/commit/2c61872f0613c33f1b9966490b2b5011b03f76b0))
+
 # [3.5.0](https://github.com/DerYeger/jan-mueller/compare/v3.4.0...v3.5.0) (2022-08-17)
 
 
