@@ -7,16 +7,16 @@ import { accounts } from '../lib'
 <section
   class="screen-wide bg-zinc-200 dark:bg-zinc-800 border-zinc-300 dark:border-zinc-700 border-y prose dark:prose-invert prose-2xl max-w-none py-8 my-32"
 >
-  <div class="flex gap-8 justify-center children:w-6">
+  <div class="flex gap-8 justify-center children:w-6 children:h-6">
     {
       accounts.map((account) => (
         <a
           href={account.href}
           rel="noreferrer"
           target="_blank"
-          class="flex items-center text-light hover:text-black hover:dark:text-white transition-colors"
+          class="text-light hover:text-black hover:dark:text-white transition-colors"
         >
-          <Icon name={account.icon} class="dark:filter-invert" />
+          <Icon name={account.icon} />
         </a>
       ))
     }
