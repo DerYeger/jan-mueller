@@ -1,3 +1,10 @@
+## [3.6.2](https://github.com/DerYeger/jan-mueller/compare/v3.6.1...v3.6.2) (2022-08-17)
+
+
+### Bug Fixes
+
+* optimize blog images ([0e73223](https://github.com/DerYeger/jan-mueller/commit/0e73223aa925c741fe13e0fc1b5484bb8895fafb))
+
 ## [3.6.1](https://github.com/DerYeger/jan-mueller/compare/v3.6.0...v3.6.1) (2022-08-17)
 
 
