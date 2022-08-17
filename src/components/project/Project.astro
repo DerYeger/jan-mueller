@@ -1,7 +1,6 @@
 ---
 import { Image } from '@astrojs/image/components'
 
-import { getImageAsset } from '../../lib'
 import type { Project } from '../../types'
 
 export interface Props {
@@ -11,9 +10,6 @@ export interface Props {
 const { project } = Astro.props as Props
 
 const href = `https://github.com/DerYeger/${project.repo}`
-
-const assets = await Astro.glob('../../assets/**/*')
-const image = getImageAsset(assets, project.img).default
 ---
 
 <a
@@ -31,8 +27,8 @@ const image = getImageAsset(assets, project.img).default
     </div>
     <Image
       class="rounded-b border-t surface my-0"
-      src={image}
-      aspectRatio={2 / 1}
+      src={import(project.img)}
+      aspectRatio={2}
       width={800}
       format="webp"
       alt={project.title}

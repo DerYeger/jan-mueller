@@ -13,6 +13,11 @@ const { startDate, endDate, format } = Astro.props as Props
 <span>
   <DateComponent date={startDate} format={format} />
   {'—'}
-  {endDate && <DateComponent date={endDate} format={format} />}
-  {!endDate && <span>Today</span>}
+  {
+    endDate ? (
+      <DateComponent date={endDate} format={format} />
+    ) : (
+      <span>Today</span>
+    )
+  }
 </span>

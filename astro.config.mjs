@@ -27,7 +27,7 @@ export default defineConfig({
     vue(),
     robotsTxt(),
     prefetch(),
-    preact(),
+    preact({ compat: true }),
   ],
   vite: {
     plugins: [vitePreact()],
