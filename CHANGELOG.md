@@ -1,3 +1,18 @@
+# [3.7.0](https://github.com/DerYeger/jan-mueller/compare/v3.6.3...v3.7.0) (2022-08-18)
+
+
+### Bug Fixes
+
+* add html lang attribute ([83448c5](https://github.com/DerYeger/jan-mueller/commit/83448c57f2ed9d84096e4ed4ca32b2cc820d1806))
+* improve accessibility ([7b67374](https://github.com/DerYeger/jan-mueller/commit/7b67374a1257189d3af40f090735e98294c5e211))
+* improve contrast ([cf26d54](https://github.com/DerYeger/jan-mueller/commit/cf26d5421fd0f5962df91b79465656330ba5ada7))
+
+
+### Features
+
+* add linkedin ([734428b](https://github.com/DerYeger/jan-mueller/commit/734428bdcc2136bf1b3a1ced1745143cb8dc8d35))
+* hydrate components when idle ([16cedf7](https://github.com/DerYeger/jan-mueller/commit/16cedf7fd524ef750e67617f97a90d9e43f208a4))
+
 ## [3.6.3](https://github.com/DerYeger/jan-mueller/compare/v3.6.2...v3.6.3) (2022-08-18)
 
 
