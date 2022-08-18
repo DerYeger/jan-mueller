@@ -14,6 +14,11 @@ export const accounts = [
     href: 'https://github.com/DerYeger',
   },
   {
+    name: 'LinkedIn',
+    icon: 'carbon:logo-linkedin',
+    href: 'https://www.linkedin.com/in/jan-müller-644144249/',
+  },
+  {
     name: 'XING',
     icon: 'carbon:logo-xing',
     href: 'https://www.xing.com/profile/Jan_Mueller1092/cv',
