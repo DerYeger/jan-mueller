@@ -16,12 +16,12 @@
     "test:e2e:run": "cypress run"
   },
   "dependencies": {
-    "@yeger/page-views": "1.4.2",
-    "@yeger/vue-masonry-wall": "3.0.45"
+    "@yeger/page-views": "1.4.3",
+    "@yeger/vue-masonry-wall": "3.0.46"
   },
   "devDependencies": {
-    "@astrojs/image": "0.3.3",
-    "@astrojs/mdx": "0.9.0",
+    "@astrojs/image": "0.3.4",
+    "@astrojs/mdx": "0.10.0",
     "@astrojs/preact": "1.0.2",
     "@astrojs/prefetch": "0.0.7",
     "@astrojs/sitemap": "1.0.0",
@@ -32,10 +32,10 @@
     "@preact/preset-vite": "2.3.0",
     "@tailwindcss/typography": "0.5.4",
     "@yeger/eslint-config": "1.4.36",
-    "astro": "1.0.5",
+    "astro": "1.0.6",
     "astro-icon": "0.7.3",
     "astro-robots-txt": "0.3.7",
-    "cypress": "10.4.0",
+    "cypress": "10.6.0",
     "eslint": "8.22.0",
     "eslint-plugin-astro": "0.17.1",
     "eslint-plugin-jsx-a11y": "6.6.1",
@@ -43,7 +43,7 @@
     "is-ci": "3.0.1",
     "lint-staged": "13.0.3",
     "moment": "2.29.4",
-    "preact": "10.6.5",
+    "preact": "10.10.3",
     "prettier-plugin-astro": "0.5.0",
     "vue": "3.2.30"
   },
