@@ -24,7 +24,7 @@
   }
 
   .text-lighter {
-    @apply text-neutral-500 dark:text-neutral-500;
+    @apply text-neutral-600 dark:text-neutral-400;
   }
 
   .screen-wide {
