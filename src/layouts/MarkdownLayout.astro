@@ -25,7 +25,7 @@ const assets = await Astro.glob('../assets/**/*')
 const heroImageAsset = heroImage ? getImageAsset(assets, heroImage) : undefined
 ---
 
-<MainLayout title={`${title} — Jan Müller`}>
+<MainLayout title={title ? `${title} — Jan Müller` : 'Jan Müller'}>
   <article class="prose dark:prose-invert mx-auto">
     {
       heroImageAsset && (
@@ -36,7 +36,8 @@ const heroImageAsset = heroImage ? getImageAsset(assets, heroImage) : undefined
           height={400}
           quality={100}
           format="webp"
-          alt=""
+          loading="eager"
+          alt={title}
         />
       )
     }

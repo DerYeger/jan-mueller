@@ -35,6 +35,7 @@ const assets = await Astro.glob('../assets/**/*')
                   height={400}
                   quality={100}
                   format="webp"
+                  alt={post.frontmatter.title}
                 />
               )}
               <div class="prose prose-sm dark:prose-invert p-4 flex flex-col gap-2">
