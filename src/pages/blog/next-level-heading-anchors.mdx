@@ -1,0 +1,234 @@
+---
+title: Next-level Heading Anchors with Astro and rehype
+description: "A guide on next-level heading anchors with Astro's Markdown pages and rehype."
+heroImage: '/assets/blog/space-horizon.jpg'
+pubDate: 2022-08-19
+layout: '../../layouts/MarkdownLayout.astro'
+---
+
+## Introduction
+
+[Astro](https://astro.build) enables powerful customization of Markdown pages by using [rehype](https://github.com/rehypejs/rehype) plugins.
+In this guide, I'll teach you how to automatically create next-level anchor links for headings with Astro and [Tailwind CSS](https://tailwindcss.com).
+In the following sections, I'll assume basic knowledge about the used technologies.
+
+If you have already worked with heading anchors on a site that has a sticky header (like this one), you will know that navigating to an anchor by its slug (e.g., `#introduction`) will result in the heading being obstructed by the header.
+By following the guide below, you will end up with anchor links that avoid this issue.
+
+## Configuring rehype
+
+To get started, add the `@astrojs/mdx` and `@astrojs/tailwind` integrations to your project.
+We will also need the following packages:
+
+```bash
+yarn add -D rehype-autolink-headings hastscript hast-util-to-string
+```
+
+Then, we will update Astro's config `astro.config.mjs` to automatically generate the links.
+I have taken quite a bit of this configuration from the [official Astro doc's config](https://github.com/withastro/docs/blob/main/astro.config.ts), including `AnchorLinkIcon` and `createSROnlyLabel`.
+However, I couldn't get the rehype plugins working unless I configured them in the config of the `@astrojs/mdx` integration.
+
+```js
+import mdx from '@astrojs/mdx'
+import { defineConfig } from 'astro/config'
+import { toString } from 'hast-util-to-string'
+import { h } from 'hastscript'
+import autolinkHeadings from 'rehype-autolink-headings'
+import { codeImport } from 'remark-code-import'
+
+// The following configuration for rehype-autolink-headings was taken from https://github.com/withastro/docs/blob/main/astro.config.ts
+const AnchorLinkIcon = h(
+  'svg',
+  {
+    width: 16,
+    height: 16,
+    version: 1.1,
+    viewBox: '0 0 16 16',
+    xlmns: 'http://www.w3.org/2000/svg',
+  },
+  h('path', {
+    fillRule: 'evenodd',
+    fill: 'currentcolor',
+    d: 'M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z',
+  })
+)
+
+const createSROnlyLabel = (text) => {
+  const node = h('span.sr-only', `Section titled ${escape(text)}`)
+  node.properties['is:raw'] = true
+  return node
+}
+
+export default defineConfig({
+  integrations: [
+    mdx({
+      remarkPlugins: [codeImport],
+      rehypePlugins: [
+        [
+          autolinkHeadings,
+          {
+            behavior: 'append',
+            group: ({ tagName }) =>
+              h(`div.heading-wrapper.level-${tagName}`, {
+                tabIndex: -1,
+              }),
+            content: (heading) => [
+              h(
+                `span.anchor-icon`,
+                {
+                  ariaHidden: 'true',
+                },
+                AnchorLinkIcon
+              ),
+              createSROnlyLabel(toString(heading)),
+            ],
+          },
+        ],
+      ],
+    }),
+    tailwind(),
+    // ...remaining integrations
+  ],
+  // ...remaining config
+})
+```
+
+Now all of your headings in `.mdx` files should have anchors and IDs!
+Unfortunately, icons will not be inlined with their headings and the labels for screen readers are still visible.
+We will fix that in the next section.
+
+## Issues and Workarounds
+
+Here's what we need to achieve:
+
+1. Hide the screen reader label on regular displays
+2. Align the anchor icon with the heading's text
+3. Prevent a sticky header from obstructing headings when navigating by slugs
+
+### Screen Readers
+
+We will tackle the lesser issue first.
+While the screen reader label works as-is on screen readers, it shouldn't be visible on regular displays.
+
+The technique described [here](https://webaim.org/techniques/css/invisiblecontent/) hides the `.sr-only` label with the following styles:
+
+```css
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+```
+
+> The CSS above and all the following styles should be in a stylesheet that is imported in every page of your website.
+> See [Conclusion](#conclusion) for an overview of the entire stylesheet.
+
+### Anchor Icon Alignment
+
+Fixing the alignment of anchor icons is a bit more difficult.
+An intuitive solution for the problem would be:
+
+```css
+@layer components {
+  *:is(h1, h2, h3, h4, h5, h6) {
+    @apply flex items-center gap-2;
+  }
+}
+```
+
+Unfortunately, this approach won't work with the solution for the third issue, as it requires headings to scale with their content (and Flexbox prevents this).
+Thus, we use absolute positioning to align icons with their headings:
+
+```css
+@layer components {
+  *:is(h1, h2, h3, h4, h5, h6) {
+    @apply w-fit relative;
+  }
+
+  .anchor-icon {
+    @apply flex items-center ml-2 absolute -right-6 bottom-2 only:text-neutral-600 hover:text-neutral-700 transition-colors;
+  }
+}
+```
+
+### Heading Offset
+
+Next, we will prevent a sticky header from overlaying headings by using the `::before` pseudo-element.
+
+The `height` and negative `margin-top` of the pseudo-element will be the offset of the heading to the top of the window.
+In addition to the height of the header, you may also consider adding any `padding` of the Markdown's container element.
+In the case of my blog, this is `48px` (height of the header) + `32px` (padding of `main`) = `80px`.
+
+```css
+[id]::before {
+  position: relative;
+  z-index: -1;
+  content: '';
+  display: block;
+  height: 80px;
+  width: 1px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+```
+
+### Finishing Touches
+
+You may have noticed that elements above headings are not interactive.
+This is caused by the workaround for the second issue because the offset headings will overlay other elements.
+Fortunately, this can be avoided by disabling pointer-events for the header and explicitly enabling them for the anchor icon.
+
+```css
+@layer components {
+  *:is(h1, h2, h3, h4, h5, h6) {
+    @apply pointer-events-none;
+  }
+
+  .anchor-icon {
+    @apply pointer-events-auto;
+  }
+}
+```
+
+## Conclusion
+
+While setting up automatic anchor generation is not that difficult, styling them to work with sticky headers is quite tricky.
+
+We ended up with the following CSS to create accessible anchors and headings that won't be obstructed by headers.
+
+```css
+@layer components {
+  *:is(h1, h2, h3, h4, h5, h6) {
+    @apply pointer-events-none w-fit relative;
+  }
+
+  .anchor-icon {
+    @apply pointer-events-auto flex items-center ml-2 absolute -right-6 bottom-2 only:text-neutral-600 hover:text-neutral-700 transition-colors;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+[id]::before {
+  position: relative;
+  z-index: -1;
+  content: '';
+  display: block;
+  height: 80px;
+  width: 1px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+```
+
+> You may need to increase specificity of the selectors depending on your markup, e.g., `article *:is(h1, h2, h3, h4, h5, h6)`.
