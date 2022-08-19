@@ -54,6 +54,14 @@
     display: none;
   }
 
+  .prose *:is(h1, h2, h3, h4, h5, h6) {
+    @apply flex items-center gap-2;
+  }
+
+  .prose .anchor-icon {
+    @apply text-lighter hover:text-light transition-colors;
+  }
+
   mark {
     @apply bg-transparent italic font-semibold text-black dark:text-white;
   }
@@ -61,4 +69,13 @@
   .avatar {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 50, 0.35));
   }
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
