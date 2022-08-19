@@ -1,3 +1,10 @@
+## [3.11.2](https://github.com/DerYeger/jan-mueller/compare/v3.11.1...v3.11.2) (2022-08-19)
+
+
+### Bug Fixes
+
+* remove unrelated code ([193f977](https://github.com/DerYeger/jan-mueller/commit/193f9776c2eaefdbb17d4e51522d2a781c3426ae))
+
 ## [3.11.1](https://github.com/DerYeger/jan-mueller/compare/v3.11.0...v3.11.1) (2022-08-19)
 
 
