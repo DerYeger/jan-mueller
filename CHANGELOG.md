@@ -1,3 +1,20 @@
+# [3.9.0](https://github.com/DerYeger/jan-mueller/compare/v3.8.0...v3.9.0) (2022-08-19)
+
+
+### Bug Fixes
+
+* disable critters ([502381d](https://github.com/DerYeger/jan-mueller/commit/502381d4b2e85428f8709492222a067dc6ef0be3))
+* improve header links ([339ae37](https://github.com/DerYeger/jan-mueller/commit/339ae37c03f7ddb4c0ad58741059fad7b5a61285))
+* prevent unclickable links in blog ([c888950](https://github.com/DerYeger/jan-mueller/commit/c888950327bc225983769c56aaed30f1e01a9808))
+
+
+### Features
+
+* add toc ([503cfd6](https://github.com/DerYeger/jan-mueller/commit/503cfd6e05fc82d98e7dd8b15b692960b9452f09))
+* configure rehype-autolink-headings ([09ae7a5](https://github.com/DerYeger/jan-mueller/commit/09ae7a5b9591fd66690fcec2beccbb07f2faa46a))
+* configure rss ([c60f674](https://github.com/DerYeger/jan-mueller/commit/c60f674c20589fafda1aa9e0bdd3a7d8b1bac956))
+* use remark-code-import ([476cc64](https://github.com/DerYeger/jan-mueller/commit/476cc64309034f37cd1298024352dcef00a2559a))
+
 # [3.8.0](https://github.com/DerYeger/jan-mueller/compare/v3.7.2...v3.8.0) (2022-08-19)
 
 
