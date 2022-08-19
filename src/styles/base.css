@@ -46,8 +46,8 @@
     padding-bottom: 100%;
   }
 
-  .prose .shiki {
-    @apply shadow-md;
+  .prose .astro-code {
+    @apply shadow-md transition-all;
   }
 
   .prose div.language-id {
