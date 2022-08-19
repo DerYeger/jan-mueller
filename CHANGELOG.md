@@ -1,3 +1,10 @@
+## [3.7.2](https://github.com/DerYeger/jan-mueller/compare/v3.7.1...v3.7.2) (2022-08-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue to v3.2.37 ([0afc341](https://github.com/DerYeger/jan-mueller/commit/0afc34101d766499c4fb27de750d751602c688d3))
+
 ## [3.7.1](https://github.com/DerYeger/jan-mueller/compare/v3.7.0...v3.7.1) (2022-08-19)
 
 
