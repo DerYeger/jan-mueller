@@ -1,3 +1,11 @@
+# [3.8.0](https://github.com/DerYeger/jan-mueller/compare/v3.7.2...v3.8.0) (2022-08-19)
+
+
+### Features
+
+* add shadow to code ([630fcef](https://github.com/DerYeger/jan-mueller/commit/630fcefb17c75e6003715c19041f5a3fd0b3c778))
+* use critters ([1a15073](https://github.com/DerYeger/jan-mueller/commit/1a1507375a8bff900a270920cd160f930ba52afc))
+
 ## [3.7.2](https://github.com/DerYeger/jan-mueller/compare/v3.7.1...v3.7.2) (2022-08-19)
 
 
