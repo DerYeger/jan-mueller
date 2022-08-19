@@ -1,3 +1,10 @@
+# [3.11.0](https://github.com/DerYeger/jan-mueller/compare/v3.10.0...v3.11.0) (2022-08-19)
+
+
+### Features
+
+* add blog entry ([192cf42](https://github.com/DerYeger/jan-mueller/commit/192cf426717c3a95fa36433ffac9f3ea32da1bbc))
+
 # [3.10.0](https://github.com/DerYeger/jan-mueller/compare/v3.9.0...v3.10.0) (2022-08-19)
 
 
