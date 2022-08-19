@@ -1,3 +1,10 @@
+## [3.11.1](https://github.com/DerYeger/jan-mueller/compare/v3.11.0...v3.11.1) (2022-08-19)
+
+
+### Bug Fixes
+
+* update helper width ([58044a1](https://github.com/DerYeger/jan-mueller/commit/58044a18c19bc65220deb1cbaf85d96130b4ecba))
+
 # [3.11.0](https://github.com/DerYeger/jan-mueller/compare/v3.10.0...v3.11.0) (2022-08-19)
 
 
