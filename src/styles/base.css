@@ -86,7 +86,7 @@
   content: '';
   display: block;
   height: 80px;
-  width: 1px;
+  width: 0px;
   margin-top: -80px;
   visibility: hidden;
 }
