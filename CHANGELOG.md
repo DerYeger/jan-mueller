@@ -1,3 +1,10 @@
+# [3.10.0](https://github.com/DerYeger/jan-mueller/compare/v3.9.0...v3.10.0) (2022-08-19)
+
+
+### Features
+
+* ignore drafts ([55f38aa](https://github.com/DerYeger/jan-mueller/commit/55f38aadf70a064307c99a8ed91c933120967a46))
+
 # [3.9.0](https://github.com/DerYeger/jan-mueller/compare/v3.8.0...v3.9.0) (2022-08-19)
 
 
