@@ -55,11 +55,11 @@
   }
 
   .prose *:is(h1, h2, h3, h4, h5, h6) {
-    @apply w-fit relative;
+    @apply w-fit relative pointer-events-none;
   }
 
   .prose .anchor-icon {
-    @apply flex items-center ml-2 absolute -right-6 bottom-2 only:text-lighter hover:text-light transition-colors;
+    @apply pointer-events-auto flex items-center ml-2 absolute -right-6 bottom-2 only:text-lighter hover:text-light transition-colors;
   }
 
   mark {
