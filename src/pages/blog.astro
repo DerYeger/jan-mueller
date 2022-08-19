@@ -6,11 +6,13 @@ import MainLayout from '../layouts/MainLayout.astro'
 import { getImageAsset } from '../lib'
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
-  (a, b) =>
-    new Date(b.frontmatter.pubDate).valueOf() -
-    new Date(a.frontmatter.pubDate).valueOf()
-)
+const posts = (await Astro.glob('./blog/*.{md,mdx}'))
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  )
+  .filter((post) => !post.frontmatter.draft)
 
 const assets = await Astro.glob('../assets/**/*')
 ---

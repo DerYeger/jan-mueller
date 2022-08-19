@@ -54,11 +54,11 @@
     display: none;
   }
 
-  .prose *:is(h1, h2, h3, h4, h5, h6) {
+  article.prose *:is(h1, h2, h3, h4, h5, h6) {
     @apply w-fit relative pointer-events-none;
   }
 
-  .prose .anchor-icon {
+  article.prose .anchor-icon {
     @apply pointer-events-auto flex items-center ml-2 absolute -right-6 bottom-2 only:text-lighter hover:text-light transition-colors;
   }
 
