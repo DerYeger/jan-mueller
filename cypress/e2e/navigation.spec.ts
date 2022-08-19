@@ -1,6 +1,6 @@
 describe('Navigation', () => {
   beforeEach(() => {
-    cy.visit('/about')
+    cy.visit('/legal-notice')
   })
 
   it('has a link to the home page', () => {
