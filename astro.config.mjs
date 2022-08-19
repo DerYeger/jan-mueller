@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import vue from '@astrojs/vue'
 import vitePreact from '@preact/preset-vite'
-import critters from 'astro-critters'
+// import critters from 'astro-critters'
 import robotsTxt from 'astro-robots-txt'
 import { defineConfig } from 'astro/config'
 
@@ -31,7 +31,7 @@ export default defineConfig({
     prefetch(),
     sitemap(),
     robotsTxt(),
-    critters({ logLevel: 'error' }),
+    // critters({ logLevel: 'error' }),
   ],
   vite: {
     plugins: [vitePreact()],
