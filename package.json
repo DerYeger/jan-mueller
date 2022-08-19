@@ -45,7 +45,7 @@
     "moment": "2.29.4",
     "preact": "10.10.4",
     "prettier-plugin-astro": "0.5.0",
-    "vue": "3.2.30"
+    "vue": "3.2.37"
   },
   "lint-staged": {
     "*.{astro,js,json,md,ts,vue,yaml,yml}": "eslint --fix"
