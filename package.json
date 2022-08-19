@@ -33,6 +33,7 @@
     "@tailwindcss/typography": "0.5.4",
     "@yeger/eslint-config": "1.4.36",
     "astro": "1.0.6",
+    "astro-critters": "1.0.1",
     "astro-icon": "0.7.3",
     "astro-robots-txt": "0.3.7",
     "cypress": "10.6.0",
