@@ -86,35 +86,8 @@ To force updates, assign a new array to the `items` prop.
 This example demonstrates basic usage of the component.
 For interactive demonstrations, visit [vue-masonry-wall.yeger.eu](https://vue-masonry-wall.yeger.eu/) or [vue2-masonry-wall.yeger.eu](https://vue2-masonry-wall.yeger.eu/).
 
-```vue
-<script lang="ts">
-import MasonryWall from '@yeger/vue-masonry-wall'
-import { defineComponent } from 'vue'
+```vue file=../../components/blog/examples/VueMasonryWall.vue
 
-export default defineComponent({
-  components: {
-    MasonryWall,
-  },
-  data() {
-    return {
-      items: [50, 75, 75, 100, 50, 50, 75, 150, 125, 175, 50, 100, 125],
-    }
-  },
-})
-</script>
-
-<template>
-  <MasonryWall :items="items" :ssr-columns="1" :column-width="100" :gap="16">
-    <template #default="{ item, index }">
-      <div
-        :style="{ height: `${item}px` }"
-        class="surface border rounded flex items-center justify-center"
-      >
-        {{ index }}
-      </div>
-    </template>
-  </MasonryWall>
-</template>
 ```
 
 The above code results in the following output.

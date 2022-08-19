@@ -50,6 +50,7 @@
     "preact": "10.10.4",
     "prettier-plugin-astro": "0.5.0",
     "rehype-autolink-headings": "6.1.1",
+    "remark-code-import": "1.1.1",
     "remark-toc": "8.0.1",
     "vue": "3.2.37"
   },

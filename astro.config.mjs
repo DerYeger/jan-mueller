@@ -12,6 +12,7 @@ import { defineConfig } from 'astro/config'
 import { toString } from 'hast-util-to-string'
 import { h } from 'hastscript'
 import autolinkHeadings from 'rehype-autolink-headings'
+import { codeImport } from 'remark-code-import'
 
 // The following configuration for rehype-autolink-headings was taken from https://github.com/withastro/docs/blob/main/astro.config.ts
 const AnchorLinkIcon = h(
@@ -45,6 +46,7 @@ export default defineConfig({
   integrations: [
     image(),
     mdx({
+      remarkPlugins: [codeImport],
       rehypePlugins: [
         [
           autolinkHeadings,
