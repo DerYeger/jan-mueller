@@ -46,6 +46,7 @@
     "moment": "2.29.4",
     "preact": "10.10.4",
     "prettier-plugin-astro": "0.5.0",
+    "remark-toc": "8.0.1",
     "vue": "3.2.37"
   },
   "lint-staged": {

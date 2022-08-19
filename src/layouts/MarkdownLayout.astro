@@ -14,11 +14,19 @@ export interface Props {
     publishDate?: string
     updatedDate?: string
     heroImage?: string
+    file?: string
+    noToc?: boolean
   }
+  headings: {
+    depth: number
+    slug: string
+    text: string
+  }[]
 }
 
 const {
-  content: { title, description, publishDate, updatedDate, heroImage },
+  content: { title, description, publishDate, updatedDate, heroImage, noToc },
+  headings,
 } = Astro.props as Props
 
 const assets = await Astro.glob('../assets/**/*')
@@ -61,6 +69,20 @@ const heroImageAsset = heroImage ? getImageAsset(assets, heroImage) : undefined
       )
     }
     {description && <blockquote>{description}</blockquote>}
+    {
+      !noToc && (
+        <aside>
+          <h2>Contents</h2>
+          <ul>
+            {headings.map(({ depth, slug, text }) => (
+              <li style={{ marginLeft: `${2 * (depth - 2)}rem` }}>
+                <a href={`#${slug}`}>{text}</a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )
+    }
     <slot />
   </article>
 </MainLayout>

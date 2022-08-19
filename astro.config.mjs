@@ -40,5 +40,6 @@ export default defineConfig({
     shikiConfig: {
       theme: 'monokai',
     },
+    remarkPlugins: ['remark-gfm', 'remark-smartypants', 'remark-toc'],
   },
 })
