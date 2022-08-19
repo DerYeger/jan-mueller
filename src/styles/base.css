@@ -55,11 +55,11 @@
   }
 
   .prose *:is(h1, h2, h3, h4, h5, h6) {
-    @apply flex items-center gap-2;
+    @apply w-fit relative;
   }
 
   .prose .anchor-icon {
-    @apply text-lighter hover:text-light transition-colors;
+    @apply flex items-center ml-2 absolute -right-6 bottom-2 only:text-lighter hover:text-light transition-colors;
   }
 
   mark {
@@ -78,4 +78,15 @@
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+[id]::before {
+  position: relative;
+  z-index: -1;
+  content: '';
+  display: block;
+  height: 80px;
+  width: 1px;
+  margin-top: -80px;
+  visibility: hidden;
 }
