@@ -8,8 +8,8 @@ import { getImageAsset } from '../lib'
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
   (a, b) =>
-    new Date(b.frontmatter.publishDate).valueOf() -
-    new Date(a.frontmatter.publishDate).valueOf()
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
 )
 
 const assets = await Astro.glob('../assets/**/*')
@@ -42,7 +42,7 @@ const assets = await Astro.glob('../assets/**/*')
                 <h2 class="mt-0">{post.frontmatter.title}</h2>
                 <span class="text-lighter">
                   <DateComponent
-                    date={post.frontmatter.publishDate}
+                    date={post.frontmatter.pubDate}
                     format="MMM DD, YYYY"
                   />
                 </span>

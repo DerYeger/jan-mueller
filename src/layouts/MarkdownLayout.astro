@@ -11,7 +11,7 @@ export interface Props {
   content: {
     title?: string
     description?: string
-    publishDate?: string
+    pubDate?: string
     updatedDate?: string
     heroImage?: string
     file?: string
@@ -25,7 +25,7 @@ export interface Props {
 }
 
 const {
-  content: { title, description, publishDate, updatedDate, heroImage, noToc },
+  content: { title, description, pubDate, updatedDate, heroImage, noToc },
   headings,
 } = Astro.props as Props
 
@@ -51,11 +51,9 @@ const heroImageAsset = heroImage ? getImageAsset(assets, heroImage) : undefined
     }
     {title && <h1>{title}</h1>}
     {
-      publishDate && (
+      pubDate && (
         <div class="flex flex-wrap gap-1 mt-8 mb-4">
-          {publishDate && (
-            <DateComponent date={publishDate} format="MMM DD, YYYY" />
-          )}
+          {pubDate && <DateComponent date={pubDate} format="MMM DD, YYYY" />}
           {updatedDate && (
             <>
               <Dot />
