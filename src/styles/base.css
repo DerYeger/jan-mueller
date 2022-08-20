@@ -27,10 +27,6 @@
     @apply text-neutral-600 dark:text-neutral-400;
   }
 
-  .screen-wide {
-    @apply w-screen max-w-full ml-[50%] translate-x-[-50%];
-  }
-
   h1,
   h2,
   h3,
