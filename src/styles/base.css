@@ -55,11 +55,11 @@
   }
 
   article.prose *:is(h1, h2, h3, h4, h5, h6) {
-    @apply w-fit relative pointer-events-none;
+    @apply flex items-center gap-2 scroll-mt-20;
   }
 
   article.prose .anchor-icon {
-    @apply pointer-events-auto flex items-center ml-2 absolute -right-6 bottom-2 only:text-lighter hover:text-light transition-colors;
+    @apply text-lighter hover:text-light transition-colors;
   }
 
   mark {
@@ -69,24 +69,4 @@
   .avatar {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 50, 0.35));
   }
-}
-
-.sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-[id]::before {
-  position: relative;
-  z-index: -1;
-  content: '';
-  display: block;
-  height: 80px;
-  width: 0px;
-  margin-top: -80px;
-  visibility: hidden;
 }
