@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="/public/og-image.svg">
-    <img alt="Logo" src="/public/og-image-light.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="/public/og-image-light.svg" width="256" height="256">
+    <img alt="Logo" src="/public/og-image.svg" width="256" height="256">
   </picture>
 </p>
 
