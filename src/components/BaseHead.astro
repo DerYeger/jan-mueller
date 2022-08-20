@@ -9,9 +9,12 @@ export interface Props {
   image?: string | undefined
 }
 
-const { title, description, image = '/og-logo.png' } = Astro.props
+const { title, description } = Astro.props
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+const openGraphImage = new URL(
+  `https://og-image-jan-mueller-at.vercel.app/${title}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fjan-mueller.at%2Fog-image.svg&widths=512&heights=512`
+)
 ---
 
 <!-- Global Metadata -->
@@ -33,7 +36,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={openGraphImage} />
 
 <!-- Twitter -->
 <meta property="twitter:creator" content="@DerYeger" />
@@ -41,7 +44,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<meta property="twitter:image" content={openGraphImage} />
 
 <script is:inline>
   const theme = (() => {
