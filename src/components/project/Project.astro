@@ -9,13 +9,11 @@ export interface Props {
 
 const { project } = Astro.props as Props
 
-const href = `https://github.com/DerYeger/${project.id}`
-
 const src = await import(`../../assets/projects/${project.id}.png`)
 ---
 
 <a
-  href={href}
+  href={project.url}
   class="block no-underline h-full"
   rel="noreferrer"
   target="_blank"
