@@ -1,3 +1,10 @@
+## [3.17.1](https://github.com/DerYeger/jan-mueller/compare/v3.17.0...v3.17.1) (2022-08-20)
+
+
+### Bug Fixes
+
+* prevent cut-off heading ([1a79452](https://github.com/DerYeger/jan-mueller/commit/1a794520f9bae5dce13daad7720abdb11e4fef2a))
+
 # [3.17.0](https://github.com/DerYeger/jan-mueller/compare/v3.16.0...v3.17.0) (2022-08-20)
 
 
