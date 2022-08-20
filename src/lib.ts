@@ -10,12 +10,12 @@ export const getImageAsset = (assets: Record<string, any>, image: string) =>
 export const accounts = [
   {
     name: 'GitHub',
-    icon: 'fa-brands:github',
+    icon: 'akar-icons:github-fill',
     href: 'https://github.com/DerYeger',
   },
   {
     name: 'LinkedIn',
-    icon: 'carbon:logo-linkedin',
+    icon: 'akar-icons:linkedin-fill',
     href: 'https://www.linkedin.com/in/jan-müller-644144249/',
   },
   {

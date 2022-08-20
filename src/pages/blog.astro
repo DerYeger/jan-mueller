@@ -22,26 +22,26 @@ const assets = await Astro.glob('../assets/**/*')
     <div class="prose dark:prose-invert mb-8">
       <h1>Jan's Blog</h1>
     </div>
-    <ul class="grid gap-4 grid-cols-1 sm:grid-cols-2">
+    <ul class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {
         posts.map((post) => (
           <li class="card card-hover overflow-hidden">
             <a href={post.url} rel="prefetch" class="block no-underline">
               {post.frontmatter.heroImage && (
                 <Image
-                  class="w-full"
+                  class="w-full h-[100px] object-cover"
                   src={
                     getImageAsset(assets, post.frontmatter.heroImage)?.default
                   }
-                  width={1400}
-                  height={400}
+                  width={1200}
+                  height={200}
                   quality={100}
                   format="webp"
                   alt={post.frontmatter.title}
                 />
               )}
-              <div class="prose prose-sm dark:prose-invert p-4 flex flex-col gap-2">
-                <h2 class="mt-0">{post.frontmatter.title}</h2>
+              <div class="prose prose-sm dark:prose-invert p-4 flex flex-col gap-4">
+                <h2 class="my-0">{post.frontmatter.title}</h2>
                 <span class="text-lighter">
                   <DateComponent
                     date={post.frontmatter.pubDate}
