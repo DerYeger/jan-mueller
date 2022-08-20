@@ -9,11 +9,12 @@ export interface Props {
   image?: string | undefined
 }
 
-const { title, description } = Astro.props
+const { title, description, image } = Astro.props
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 const openGraphImage = new URL(
-  `https://og-image-jan-mueller-at.vercel.app/${title}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fjan-mueller.at%2Fog-image.svg&widths=512&heights=512`
+  image ??
+    'https://og-image-deryeger.vercel.app/**Jan%20M%C3%BCller**.png?theme=dark&md=1&fontSize=225px&images=https%3A%2F%2Fjan-mueller.at%2Fog-image-light.svg'
 )
 ---
 

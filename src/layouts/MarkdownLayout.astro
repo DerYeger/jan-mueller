@@ -16,6 +16,7 @@ export interface Props {
     heroImage?: string
     file?: string
     noToc?: boolean
+    openGraphImage?: string
   }
   headings: {
     depth: number
@@ -25,7 +26,15 @@ export interface Props {
 }
 
 const {
-  content: { title, description, pubDate, updatedDate, heroImage, noToc },
+  content: {
+    title,
+    description,
+    pubDate,
+    updatedDate,
+    heroImage,
+    noToc,
+    openGraphImage,
+  },
   headings,
 } = Astro.props as Props
 
@@ -33,7 +42,10 @@ const assets = await Astro.glob('../assets/**/*')
 const heroImageAsset = heroImage ? getImageAsset(assets, heroImage) : undefined
 ---
 
-<MainLayout title={title ? `${title} — Jan Müller` : 'Jan Müller'}>
+<MainLayout
+  title={title ? `${title} — Jan Müller` : 'Jan Müller'}
+  image={openGraphImage}
+>
   <article class="container mx-auto px-4 py-8 prose dark:prose-invert">
     {
       heroImageAsset && (
