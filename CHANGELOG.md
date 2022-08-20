@@ -1,3 +1,10 @@
+# [3.12.0](https://github.com/DerYeger/jan-mueller/compare/v3.11.3...v3.12.0) (2022-08-20)
+
+
+### Features
+
+* simplify heading anchors ([fc527c6](https://github.com/DerYeger/jan-mueller/commit/fc527c66da4bf55266d3fbea5c30bdf24cceea65))
+
 ## [3.11.3](https://github.com/DerYeger/jan-mueller/compare/v3.11.2...v3.11.3) (2022-08-20)
 
 
