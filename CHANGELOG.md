@@ -1,3 +1,14 @@
+# [3.14.0](https://github.com/DerYeger/jan-mueller/compare/v3.13.0...v3.14.0) (2022-08-20)
+
+
+### Features
+
+* add new logo ([3dab30a](https://github.com/DerYeger/jan-mueller/commit/3dab30ae0fbf02414b5913f3e743c8df084050e2))
+* improve blog images ([cd061ce](https://github.com/DerYeger/jan-mueller/commit/cd061ce523193d41219298bb13f68347c5cf0fa6))
+* improve design ([e7f7d04](https://github.com/DerYeger/jan-mueller/commit/e7f7d04a9e8b4f792f05712d77145bb38613de58))
+* improve layout ([ba5ddeb](https://github.com/DerYeger/jan-mueller/commit/ba5ddeb0ea594cf2921203b6f3f08533ea58217a))
+* link to project deployments instead of repos ([97d834e](https://github.com/DerYeger/jan-mueller/commit/97d834eb78ddf3a4cbce9216fee54b89908f0589))
+
 # [3.13.0](https://github.com/DerYeger/jan-mueller/compare/v3.12.0...v3.13.0) (2022-08-20)
 
 
