@@ -1,3 +1,10 @@
+# [3.16.0](https://github.com/DerYeger/jan-mueller/compare/v3.15.0...v3.16.0) (2022-08-20)
+
+
+### Features
+
+* crop open graph image ([1b0c047](https://github.com/DerYeger/jan-mueller/commit/1b0c0474fe683435743ac8ee899fc9ca182d0338))
+
 # [3.15.0](https://github.com/DerYeger/jan-mueller/compare/v3.14.0...v3.15.0) (2022-08-20)
 
 
