@@ -1,3 +1,11 @@
+# [3.15.0](https://github.com/DerYeger/jan-mueller/compare/v3.14.0...v3.15.0) (2022-08-20)
+
+
+### Features
+
+* add RSS description ([5ae5fb4](https://github.com/DerYeger/jan-mueller/commit/5ae5fb4dc26637634d43dd586dbd41cde960e03b))
+* use open graph image service ([02e7105](https://github.com/DerYeger/jan-mueller/commit/02e7105c1c90433b18377ead8f46b76c4320c65e))
+
 # [3.14.0](https://github.com/DerYeger/jan-mueller/compare/v3.13.0...v3.14.0) (2022-08-20)
 
 
