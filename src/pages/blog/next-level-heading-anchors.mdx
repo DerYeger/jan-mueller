@@ -63,29 +63,30 @@ const createSROnlyLabel = (text) => {
 export default defineConfig({
   integrations: [
     mdx({
-      rehypePlugins: [
-        [
-          autolinkHeadings,
-          {
-            behavior: 'append',
-            group: ({ tagName }) =>
-              h(`div.heading-wrapper.level-${tagName}`, {
-                tabIndex: -1,
-              }),
-            content: (heading) => [
-              h(
-                `span.anchor-icon`,
-                {
-                  // should be ignored by screen readers
-                  ariaHidden: 'true',
-                },
-                AnchorLinkIcon
-              ),
-              createSROnlyLabel(toString(heading)),
-            ],
-          },
+      rehypePlugins: {
+        extends: [
+          [
+            autolinkHeadings,
+            {
+              behavior: 'append',
+              group: ({ tagName }) =>
+                h(`div.heading-wrapper.level-${tagName}`, {
+                  tabIndex: -1,
+                }),
+              content: (heading) => [
+                h(
+                  `span.anchor-icon`,
+                  {
+                    ariaHidden: 'true',
+                  },
+                  AnchorLinkIcon
+                ),
+                createSROnlyLabel(toString(heading)),
+              ],
+            },
+          ],
         ],
-      ],
+      },
     }),
     tailwind(),
     // ...remaining integrations

@@ -46,29 +46,31 @@ export default defineConfig({
   integrations: [
     image(),
     mdx({
-      remarkPlugins: [codeImport],
-      rehypePlugins: [
-        [
-          autolinkHeadings,
-          {
-            behavior: 'append',
-            group: ({ tagName }) =>
-              h(`div.heading-wrapper.level-${tagName}`, {
-                tabIndex: -1,
-              }),
-            content: (heading) => [
-              h(
-                `span.anchor-icon`,
-                {
-                  ariaHidden: 'true',
-                },
-                AnchorLinkIcon
-              ),
-              createSROnlyLabel(toString(heading)),
-            ],
-          },
+      remarkPlugins: { extends: [codeImport] },
+      rehypePlugins: {
+        extends: [
+          [
+            autolinkHeadings,
+            {
+              behavior: 'append',
+              group: ({ tagName }) =>
+                h(`div.heading-wrapper.level-${tagName}`, {
+                  tabIndex: -1,
+                }),
+              content: (heading) => [
+                h(
+                  `span.anchor-icon`,
+                  {
+                    ariaHidden: 'true',
+                  },
+                  AnchorLinkIcon
+                ),
+                createSROnlyLabel(toString(heading)),
+              ],
+            },
+          ],
         ],
-      ],
+      },
     }),
     tailwind({
       config: {
@@ -91,6 +93,5 @@ export default defineConfig({
     shikiConfig: {
       theme: 'monokai',
     },
-    remarkPlugins: ['remark-gfm', 'remark-smartypants', 'remark-toc'],
   },
 })
