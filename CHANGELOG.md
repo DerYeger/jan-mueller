@@ -1,3 +1,10 @@
+# [3.17.0](https://github.com/DerYeger/jan-mueller/compare/v3.16.0...v3.17.0) (2022-08-20)
+
+
+### Features
+
+* update open graph images ([f6d5218](https://github.com/DerYeger/jan-mueller/commit/f6d5218d3f85594f1dd4499afbe1cc5e58e493f3))
+
 # [3.16.0](https://github.com/DerYeger/jan-mueller/compare/v3.15.0...v3.16.0) (2022-08-20)
 
 
