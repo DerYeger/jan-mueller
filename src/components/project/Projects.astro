@@ -1,5 +1,6 @@
 ---
 import type { Project as ProjectType } from '../../types'
+import OpenInNew from '../icons/OpenInNew.astro'
 
 import Project from './Project.astro'
 
@@ -26,7 +27,21 @@ const projects: ProjectType[] = [
   class="screen-wide bg-zinc-200 dark:bg-zinc-800 border-zinc-300 dark:border-zinc-700 border-y prose dark:prose-invert prose-2xl max-w-none pb-4 pt-0 mt-32 mb-[12.5rem]"
 >
   <div class="container mx-auto">
-    <h2 class="text-center">Projects</h2>
+    <h2 class="text-center flex flex-col w-fit mx-auto">
+      <span class="font-extralight text-3xl self-start">Featured</span>
+      <span class="font-extrabold">Projects</span>
+    </h2>
+    <p class="text-center block text-base">
+      <a
+        href="https://github.com/DerYeger?tab=repositories&q=&type=&language=&sort=stargazers"
+        rel="noreferrer"
+        target="_blank"
+        class="text-light"
+      >
+        All Projects
+        <OpenInNew />
+      </a>
+    </p>
     <div class="px-2 flex flex-wrap justify-center -mb-24">
       {
         projects.map((project) => (
