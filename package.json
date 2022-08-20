@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@yeger/page-views": "1.4.3",
-    "@yeger/vue-masonry-wall": "3.0.47"
+    "@yeger/vue-masonry-wall": "3.0.48"
   },
   "devDependencies": {
     "@astrojs/image": "0.3.4",
@@ -47,7 +47,7 @@
     "is-ci": "3.0.1",
     "lint-staged": "13.0.3",
     "moment": "2.29.4",
-    "preact": "10.10.4",
+    "preact": "10.10.6",
     "prettier-plugin-astro": "0.5.0",
     "rehype-autolink-headings": "6.1.1",
     "remark-code-import": "1.1.1",
