@@ -4,7 +4,7 @@ export const get = () =>
   rss({
     title: `Jan's Blog`,
     // `<description>` field in output xml
-    description: `Jan's Blog`,
+    description: `Jan's personal blog is all about Software Engineering.`,
     // base URL for RSS <item> links
     // SITE will use "site" from your project's astro.config.
     site: import.meta.env.SITE,
