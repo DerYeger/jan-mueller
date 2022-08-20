@@ -1,3 +1,10 @@
+# [3.13.0](https://github.com/DerYeger/jan-mueller/compare/v3.12.0...v3.13.0) (2022-08-20)
+
+
+### Features
+
+* extend markdown plugins ([c84be4c](https://github.com/DerYeger/jan-mueller/commit/c84be4c9507bd637b045ee19afd601679900ee24))
+
 # [3.12.0](https://github.com/DerYeger/jan-mueller/compare/v3.11.3...v3.12.0) (2022-08-20)
 
 
