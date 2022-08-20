@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="/public/og-logo.png" alt="Logo" width="384px">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="/public/og-image.svg">
+    <img alt="Logo" src="/public/og-image-light.svg">
+  </picture>
 </p>
 
 <p align="center">
