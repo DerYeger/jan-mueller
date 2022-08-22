@@ -13,7 +13,10 @@
     "lint": "eslint \"./**/*.{astro,js,json,md,ts,vue,yaml,yml}\"",
     "fix": "yarn lint --fix ",
     "test:e2e": "cypress open",
-    "test:e2e:run": "cypress run"
+    "test:e2e:run": "cypress run",
+    "check:astro": "yarn astro check",
+    "check:tsc": "yarn tsc --noEmit",
+    "check:vue": "yarn vue-tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
     "@yeger/page-views": "1.4.3",
@@ -51,7 +54,8 @@
     "prettier-plugin-astro": "0.5.0",
     "rehype-autolink-headings": "6.1.1",
     "remark-code-import": "1.1.1",
-    "vue": "3.2.37"
+    "vue": "3.2.37",
+    "vue-tsc": "0.40.1"
   },
   "lint-staged": {
     "*.{astro,js,json,md,ts,vue,yaml,yml}": "eslint --fix"
