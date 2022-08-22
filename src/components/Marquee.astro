@@ -1,0 +1,52 @@
+<div
+  class="bg-inherit marquee overflow-hidden h-[1.25em] my-[-0.25em] inline-block"
+>
+  <div
+    class="bg-inherit children:gradient-text whitespace-nowrap flex gap-4 py-2 flex-col text-end"
+  >
+    <span class="from-blue-500 to-blue-600 dark:from-blue-400 dark:to-blue-500"
+      >Software
+    </span>
+    <span class="from-rose-500 to-rose-600 dark:from-rose-400 dark:to-rose-500">
+      Web
+    </span>
+    <span class="from-teal-500 to-teal-600 dark:from-teal-400 dark:to-teal-500">
+      Mobile
+    </span>
+    <span
+      class="from-blue-500 to-blue-600 dark:from-blue-400 dark:to-blue-500"
+      aria-hidden="true"
+    >
+      Software
+    </span>
+  </div>
+</div>
+
+<style scoped>
+  .marquee > div {
+    animation: vertical-marquee 8s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    --offset: -5.5px;
+  }
+
+  @keyframes vertical-marquee {
+    0%,
+    11.11% {
+      transform: translateY(calc((0% / 4) + var(--offset)));
+    }
+
+    22.22%,
+    44.44% {
+      transform: translateY(calc((-100% / 4) + var(--offset)));
+    }
+
+    55.55%,
+    77.77% {
+      transform: translateY(calc((-200% / 4) + var(--offset)));
+    }
+
+    89.89%,
+    100% {
+      transform: translateY(calc((-300% / 4) + var(--offset)));
+    }
+  }
+</style>
