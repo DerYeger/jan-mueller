@@ -7,11 +7,7 @@ import Main from '../components/Main.astro'
 
 export interface Props extends Partial<BaseHeadProps> {}
 
-const {
-  title = 'Jan Müller',
-  description = 'Personal website of Jan Müller, a passionate software engineer.',
-  image,
-} = Astro.props as Props
+const { title, description, image } = Astro.props as Props
 ---
 
 <!DOCTYPE html>

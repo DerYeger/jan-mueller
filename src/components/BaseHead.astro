@@ -4,18 +4,22 @@
 import '../styles/base.css'
 
 export interface Props {
-  title: string
-  description: string
+  title?: string | undefined
+  description?: string | undefined
   image?: string | undefined
 }
 
-const { title, description, image } = Astro.props
+const { title, description, image } = Astro.props as Props
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site)
-const openGraphImage = new URL(
+const finalTitle = title ? `${title} – Jan Müller` : 'Jan Müller'
+const finalDescription =
+  description ??
+  'Personal website of Jan Müller, a passionate software engineer.'
+const finalImage = new URL(
   image ??
     'https://og-image-deryeger.vercel.app/**Jan%20M%C3%BCller**.png?theme=dark&md=1&fontSize=225px&images=https%3A%2F%2Fjan-mueller.at%2Fog-image-light.svg'
 )
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 ---
 
 <!-- Global Metadata -->
@@ -27,25 +31,25 @@ const openGraphImage = new URL(
 <meta name="generator" content={Astro.generator} />
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
+<title>{finalTitle}</title>
+<meta name="title" content={finalTitle} />
+<meta name="description" content={finalDescription} />
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={openGraphImage} />
+<meta property="og:title" content={finalTitle} />
+<meta property="og:description" content={finalDescription} />
+<meta property="og:image" content={finalImage} />
 
 <!-- Twitter -->
 <meta property="twitter:creator" content="@DerYeger" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={openGraphImage} />
+<meta property="twitter:title" content={finalTitle} />
+<meta property="twitter:description" content={finalDescription} />
+<meta property="twitter:image" content={finalImage} />
 
 <script is:inline>
   const theme = (() => {
