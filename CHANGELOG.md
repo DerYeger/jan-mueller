@@ -1,3 +1,19 @@
+# [3.20.0](https://github.com/DerYeger/jan-mueller/compare/v3.19.0...v3.20.0) (2022-08-22)
+
+
+### Bug Fixes
+
+* improver footer usability ([2887efc](https://github.com/DerYeger/jan-mueller/commit/2887efc5381cd6893b27057cfffed07a86115ef6))
+
+
+### Features
+
+* implement marquee slider ([703750e](https://github.com/DerYeger/jan-mueller/commit/703750e1a99b282f8caa910c13ba1b95e8e1f9d0))
+* improve about me layout ([0a9b06f](https://github.com/DerYeger/jan-mueller/commit/0a9b06fa362799e7ae9b65b2f5b09f2c76f762ba))
+* improve about me section ([05d2e5f](https://github.com/DerYeger/jan-mueller/commit/05d2e5fbaf0fd82d85fbaffa0ee0038ed9755521))
+* improve layout ([0d10a9f](https://github.com/DerYeger/jan-mueller/commit/0d10a9fd537265904a859c4e2c12ba936a6835d9))
+* swap about me and cv sections ([1433685](https://github.com/DerYeger/jan-mueller/commit/14336850d462f12f6e0b1a044216711059c37ded))
+
 # [3.19.0](https://github.com/DerYeger/jan-mueller/compare/v3.18.0...v3.19.0) (2022-08-22)
 
 
