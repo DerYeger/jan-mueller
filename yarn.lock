@@ -84,10 +84,10 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.19.0.tgz#ea25fea3ba59ce7734c2bcc65a5fd1e372329943"
   integrity sha512-8nvyxZTfCXLyRmYfTttpJT6EPhfBRg0/q4J/Jj3/pNPLzp+vs05ZdktsY6QxAREaOMAnNEtSqcrB4S5DsXOfRg==
 
-"@astrojs/image@0.3.4":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@astrojs/image/-/image-0.3.4.tgz#74ce8817a9955a0dad5180512ca0cbabc13cdb91"
-  integrity sha512-eggNQTRqWE2cxhJeVFYkRKKN5SMyMuHxcq/JaT6KfMEJY2ULGKiYa3ulKr3/kAIXGcU3hrOpv0U7GirMVKlhZg==
+"@astrojs/image@0.3.6":
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/@astrojs/image/-/image-0.3.6.tgz#a77a2c83217d79c49a12ccfb46285362d51cc51a"
+  integrity sha512-uqFns1fKEmxZSu8IboBckZaLbDiqu6+xMT/Kpr7qgvoN2I6jKQLy39ku0aLC+DhaeV44NxHh+tGAk1qNSfgErw==
   dependencies:
     etag "^1.8.1"
     image-size "^1.0.1"
@@ -1639,10 +1639,10 @@ astring@^1.8.0:
   resolved "https://registry.yarnpkg.com/astring/-/astring-1.8.3.tgz#1a0ae738c7cc558f8e5ddc8e3120636f5cebcb85"
   integrity sha512-sRpyiNrx2dEYIMmUXprS8nlpRg2Drs8m9ElX9vVEXaCB4XEAJhKfs7IcX0IwShjuOAjLR6wzIrgoptz1n19i1A==
 
-astro-critters@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/astro-critters/-/astro-critters-1.0.1.tgz#9a105951e5454bc34b640c30e412191956e43688"
-  integrity sha512-6fePL1wgoceRwdbAl6cgDg56TfTCHFYb3JS0frFoiv0MaviOpvyfKHYLkvbDNGMrRxYCuOcRR3YcSilsb3ITLA==
+astro-critters@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/astro-critters/-/astro-critters-1.0.2.tgz#1ea897f68a107578e230bdb41631b05dd46ef863"
+  integrity sha512-MlNvAGrKz7CbGKnuGZ/l0V8SnwjHMvuCRc9s7wd9nr0ngIUM/tVJbLlhTsyPgE2XTu/f1/KgHoFB1uZBPz44rA==
   dependencies:
     critters "0.0.16"
     deepmerge-ts "4.2.1"
@@ -1678,10 +1678,10 @@ astro-robots-txt@0.3.7:
     valid-filename "^4.0.0"
     zod "^3.17.9"
 
-astro@1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.6.tgz#9978c31d7d8359f951a7800e737dddfdfdba2641"
-  integrity sha512-QAkdkzP3PbauiO4YnOgVTWY6z26heKruoXW9TnN8Bbmwtf7DUFIchi6CFSAVYSONX8XtRnj+p6fCkk06OWfJ4w==
+astro@1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-1.0.7.tgz#267abca8fc3b25074c7fe0e825eebc7a88155b0b"
+  integrity sha512-QKG+/RbqZ3NNlLO3JuqJjYtdYUDM05H5UljURl1a9gM6WyuGobMkubW5Bhu1l6HmySZ6x7AZSnqsfcmHxdCxCQ==
   dependencies:
     "@astrojs/compiler" "^0.23.3"
     "@astrojs/language-server" "^0.20.0"
@@ -1735,7 +1735,7 @@ astro@1.0.6:
     tsconfig-resolver "^3.0.1"
     unist-util-visit "^4.1.0"
     vfile "^5.3.2"
-    vite "3.0.5"
+    vite "3.0.9"
     yargs-parser "^21.0.1"
     zod "^3.17.3"
 
@@ -6503,10 +6503,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier-plugin-astro@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-astro/-/prettier-plugin-astro-0.5.0.tgz#d1971c1b7fa02722bf0aaf5ae3621491f4429e0e"
-  integrity sha512-wBDZs0hlPWQDc7P7VmGe8pImci6F434Wd/otfLJwvCSXRb9J7AhmAigXhm5WPgCJuBA509Ovo/Ed+LAgZy4KWg==
+prettier-plugin-astro@0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-astro/-/prettier-plugin-astro-0.5.1.tgz#bab28d0cfb09cceb63c8400dd20ce628621549c1"
+  integrity sha512-u6Ueb5dJFLzSkWwBFdx1rf/bSsdWt9arLWgvcxbDO9hS6kZs9QZHvYdZyJmywaYlH606eHA4578ncjY0bdDSQw==
   dependencies:
     "@astrojs/compiler" "^0.19.0"
     prettier "^2.7.1"
@@ -8781,19 +8781,7 @@ vfile@^5.0.0, vfile@^5.3.2:
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
 
-vite@3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.5.tgz#56b8d52e00bbbd5f21d02f0868dc613b3246ecc6"
-  integrity sha512-bRvrt9Tw8EGW4jj64aYFTnVg134E8hgDxyl/eEHnxiGqYk7/pTPss6CWlurqPOUzqvEoZkZ58Ws+Iu8MB87iMA==
-  dependencies:
-    esbuild "^0.14.47"
-    postcss "^8.4.16"
-    resolve "^1.22.1"
-    rollup "^2.75.6"
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-vite@^3.0.0:
+vite@3.0.9, vite@^3.0.0:
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.9.tgz#45fac22c2a5290a970f23d66c1aef56a04be8a30"
   integrity sha512-waYABTM+G6DBTCpYAxvevpG50UOlZuynR0ckTK5PawNVt7ebX6X7wNXHaGIO6wYYFXSM7/WcuFuO2QzhBB6aMw==
