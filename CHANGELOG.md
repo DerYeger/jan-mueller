@@ -1,3 +1,16 @@
+# [3.19.0](https://github.com/DerYeger/jan-mueller/compare/v3.18.0...v3.19.0) (2022-08-22)
+
+
+### Bug Fixes
+
+* improve 404 page ([f18ce1a](https://github.com/DerYeger/jan-mueller/commit/f18ce1a014a1bca536dc60d69d8780fd06d84073))
+* use halbgeviertstrich ([b9fce91](https://github.com/DerYeger/jan-mueller/commit/b9fce913e165e865ce3bb7d047c632c1ea923fe9))
+
+
+### Features
+
+* use blog article description as meta description ([ae432f9](https://github.com/DerYeger/jan-mueller/commit/ae432f9745284b2cce8d98137564508e84556eb6))
+
 # [3.18.0](https://github.com/DerYeger/jan-mueller/compare/v3.17.1...v3.18.0) (2022-08-21)
 
 
