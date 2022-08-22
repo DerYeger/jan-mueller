@@ -8,13 +8,18 @@ const year = new Date().getFullYear()
 ---
 
 <footer
-  class="surface text-xs border-t shadow-none px-2 py-8 children:px-2 flex flex-row gap-0 items-start justify-center children:flex children:flex-col children:gap-3 [&>*>*:first-child]:mb-4 children:w-1/3 children:max-w-[10rem]"
+  class="surface text-sm border-t shadow-none px-2 py-8 children:px-2 flex flex-row gap-0 items-start justify-center children:flex children:flex-col [&>*>*:first-child]:mb-4 [&>*>*:not(:first-child)]:py-2 [&>*>*:not(:first-child)]:w-fit children:w-1/3 children:max-w-[10rem]"
 >
   <div>
     <span>Legal</span>
-    <a href="/impressum" rel="prefetch">Impressum</a>
-    <a href="/datenschutzerklaerung" rel="prefetch">
-      Datenschutz<wbr />erklärung
+    <a href="/impressum" rel="prefetch" lang="de">Impressum</a>
+    <a
+      href="/datenschutzerklaerung"
+      rel="prefetch"
+      style="hyphens: auto;"
+      lang="de"
+    >
+      Datenschutzerklärung
     </a>
     <a href="/legal-notice" rel="prefetch">Legal Notice</a>
     <span class="text-lighter">
