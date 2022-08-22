@@ -21,6 +21,7 @@ Cypress.on('uncaught:exception', (err) => {
   if (err.message.includes('ResizeObserver')) {
     return false
   }
+  return err
 })
 
 // Alternatively you can use CommonJS syntax:

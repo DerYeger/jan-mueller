@@ -66,3 +66,5 @@ describe('Home', () => {
       })
   })
 })
+
+export {}

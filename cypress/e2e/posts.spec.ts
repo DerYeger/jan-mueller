@@ -7,3 +7,5 @@ describe('Posts', () => {
     cy.contains('Masonry layout').should('be.visible')
   })
 })
+
+export {}

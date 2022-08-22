@@ -33,3 +33,5 @@ describe('App', () => {
     cy.get('html.dark').should('not.exist')
   })
 })
+
+export {}

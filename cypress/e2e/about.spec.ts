@@ -15,3 +15,5 @@ describe('About', () => {
     cy.contains('Privacy Policy').scrollIntoView().should('be.visible')
   })
 })
+
+export {}

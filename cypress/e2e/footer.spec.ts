@@ -42,3 +42,5 @@ describe('Footer', () => {
     )
   })
 })
+
+export {}

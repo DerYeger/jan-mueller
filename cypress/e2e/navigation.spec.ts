@@ -13,3 +13,5 @@ describe('Navigation', () => {
     cy.location('pathname').should('eq', '/blog')
   })
 })
+
+export {}
