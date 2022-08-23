@@ -1,3 +1,10 @@
+## [3.20.2](https://github.com/DerYeger/jan-mueller/compare/v3.20.1...v3.20.2) (2022-08-23)
+
+
+### Bug Fixes
+
+* update npm link ([362cebc](https://github.com/DerYeger/jan-mueller/commit/362cebc9e2bf9fd53caf5d986e5591453092c0e2))
+
 ## [3.20.1](https://github.com/DerYeger/jan-mueller/compare/v3.20.0...v3.20.1) (2022-08-23)
 
 
