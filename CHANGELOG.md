@@ -1,3 +1,10 @@
+## [3.20.1](https://github.com/DerYeger/jan-mueller/compare/v3.20.0...v3.20.1) (2022-08-23)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([3f27432](https://github.com/DerYeger/jan-mueller/commit/3f27432769a4849a0dd7062f66e060810d7e0662))
+
 # [3.20.0](https://github.com/DerYeger/jan-mueller/compare/v3.19.0...v3.20.0) (2022-08-22)
 
 
