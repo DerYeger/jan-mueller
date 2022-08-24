@@ -1,5 +1,8 @@
 {
   "extends": ["@yeger", "plugin:astro/recommended"],
+  "rules": {
+    "react/prop-types": "off"
+  },
   "overrides": [
     {
       // Define the configuration for `.astro` file.
