@@ -7,6 +7,7 @@ import type { ComponentChildren, FunctionalComponent } from 'preact'
 // eslint-disable-next-line unused-imports/no-unused-imports
 import { h } from 'preact'
 import { MapContainer, TileLayer } from 'react-leaflet'
+
 import 'leaflet/dist/leaflet.css'
 
 Marker.prototype.options.icon = icon({
@@ -51,10 +52,10 @@ const LeafletMap: FunctionalComponent<
 > = ({ children, ...options }) => {
   return (
     <MapContainer
-      className="h-[200px] w-full"
-      minZoom={11}
-      maxZoom={20}
+      className="h-[200px] sm:h-[300px] md:h-[400px] transition-all w-full card"
+      scrollWheelZoom={false}
       {...options}
+      maxZoom={20}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'

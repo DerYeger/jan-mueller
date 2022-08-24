@@ -1,28 +1,104 @@
 ---
 title: React Leaflet
 description: 'TODO'
-heroImage: '/assets/blog/space-horizon.jpg'
+heroImage: '/assets/blog/maps.jpg'
 pubDate: 2022-08-24
 layout: '../../layouts/MarkdownLayout.astro'
 openGraphImage: 'https://og-image-deryeger.vercel.app/**Next-level%20Heading%20Anchors%20with%20Astro%20and%20rehype**.png?theme=dark&md=1&fontSize=100px&images=https%3A%2F%2Fjan-mueller.at%2Fog-image-light.svg&images=https%3A%2F%2Fastro.build%2Fassets%2Fpress%2Ffull-logo-dark.svg&images=https%3A%2F%2Ftailwindcss.com%2F_next%2Fstatic%2Fmedia%2Ftailwindcss-mark.79614a5f61617ba49a0891494521226b.svg'
 ---
 
-## Introduction
-
-https://leaflet-extras.github.io/leaflet-providers/preview/
-
-## Implementation
-
 import {
   LeafletMap,
-  ClusteredLeafletMap,
+  LeafletMapWithClusters,
+  LeafletMapWithMarkers,
 } from '../../components/blog/examples/LeafletMap.lazy.tsx'
+
+## Introduction
+
+[OpenStreetMap](https://www.openstreetmap.org) is a great free alternative to Google Maps and Apple Maps.
+In this blog post, I demonstrate how to use [Leaflet](https://leafletjs.com) to add interactive maps to React websites, implement performant markers, and finally add support for SSR environments such as Astro and Next.js.
+
+Please note that I'll actually be using [Preact](https://preactjs.com) instead of React, since it decreases the size of my blog's client-side JavaScript bundles.
+Preact has a React-compatability mode, so only imports differ from a React implementation.
+In the following code snippets, I'll add notes about differences to React as comments.
+
+## Creating a Reusable Component
 
 <LeafletMap client:only="preact" />
 
-### Icons
+To get started, install the dependencies `leaflet`, `@types/leaflet`, and `react-leaflet`:
+
+```bash
+yarn install leaflet react-leaflet
+yarn install -D @types/leaflet
+```
+
+Below is the code for a basic reusable map component.
+I'll explain the important points in detail.
+
+1. The `children` prop is used to make the component reusable.
+   It enables us to include various elements, such as [markers](#adding-markers).
+2. By also using `MapOptions` as the props type, it's possible to pass any of [Leaflet's options](https://leafletjs.com/reference.html#map-option) directly to the map.
+3. It's important to give the `MapContainer` an actual height.
+   In this example, I used Tailwind's utility `h-[200px]`.
+4. `TileLayer` handles the visualisation and design of our map.
+   Leaflet allows us to specify a [provider](https://github.com/leaflet-extras/leaflet-providers) for tile layers.
+   Previews and instructions for various providers can be found [here](https://leaflet-extras.github.io/leaflet-providers/preview/).
+   Keep in mind that not all of them are free, so always check their individual terms and conditions.
+   (And don't forget to add the correct attribution!)
+   In this blog, I am using the great [Basemaps styles from CARTO](https://github.com/CartoDB/basemap-styles).
+5. Styling!
+   Leaflet's styles have to be imported manually, as described next in [Styling](#styling).
+
+```tsx
+import type { MapOptions } from 'leaflet'
+// React: import type { FC, ReactNode } from 'react'
+import type { ComponentChildren, FunctionalComponent } from 'preact'
+import { MapContainer, TileLayer } from 'react-leaflet'
+
+const LeafletMap: FunctionalComponent<
+  {
+    center: [number, number]
+    children: ComponentChildren
+    zoom: number
+  } & MapOptions
+> = ({ children, ...options }) => {
+  return (
+    <MapContainer className="h-[200px] w-full" {...options} maxZoom={20}>
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+      />
+      {children}
+    </MapContainer>
+  )
+}
+
+export default LeafletMap
+```
+
+Our new `LeafletMap` component can be used as seen below.
+For now, we will not make use of the `children` prop and pass an empty fragment instead.
+
+```tsx
+<LeafletMap center={center} zoom={13}>
+  <></>
+</LeafletMap>
+```
 
 ### Styling
+
+Setting up Leaflet's is straight forward.
+Just add the following import to your project, preferably in the file of your component:
+
+```ts
+import 'leaflet/dist/leaflet.css'
+```
+
+> Note: With Next.js, you may need to import the styles in your project's `global.css`.
+
+If you have any modals, sticky elements or similar content on your website, you may notice that the map is rendered above these elements.
+A simple fix for this issue is settings the `z-index` of the offending elements back to 0.
 
 ```css
 .leaflet-bottom,
@@ -33,12 +109,217 @@ import {
 }
 ```
 
-## Improving performance
+## Adding Markers
 
-<ClusteredLeafletMap client:only="preact" />
+<LeafletMapWithMarkers client:only="preact" />
+
+The default marker icons of Leaflet will not work with Next.js out-of-the-box, since they are imported using `require` statements.
+In this section, I will create a custom marker icon for my maps.
+
+In this example, I copied the required files to the `public/static/leaflet` directory of my Astro project (same as with Next.js) and specified them in the code below.
+
+> I used Leaflet's file for marker shadows by copying it from `node_modules/leaflet/dist/images/marker-shadow.png` to the directory mentioned above.
+
+While the `iconSize` and `shadowSize` should obviously match the dimensions of the provided images, `iconAnchor` and `shadowAnchor` are not immediately clear.
+The former should be `[iconWidth / 2, iconHeight / 2]`, if your marker has a centered tip as the one used in this example.
+I had to expirement with Leaflet's marker shadow to find the right anchor, but in the end `shadowAnchor: [12, 41]` resulted in perfect alignment.
+
+```ts
+import { Marker, icon } from 'leaflet'
+
+Marker.prototype.options.icon = icon({
+  iconUrl: '/static/leaflet/map-marker.svg',
+  iconRetinaUrl: '/static/leaflet/map-marker.svg',
+  iconSize: [24, 24],
+  iconAnchor: [12, 24],
+  shadowUrl: '/static/leaflet/marker-shadow.png',
+  shadowRetinaUrl: '/static/leaflet/marker-shadow.png',
+  shadowSize: [41, 41],
+  shadowAnchor: [12, 41],
+})
+```
+
+Now markers can be added to maps as seen in the snippet below:
+
+```tsx
+import { Marker } from 'react-leaflet'
+
+const center: [number, number] = [48.2082, 16.3738]
+const markers: [number, number][] = [center, [48.2, 16.37], [48.1987, 16.3685]]
+
+<LeafletMap center={center} zoom={13}>
+  {markers.map((position, index) => (
+    <Marker key={index} position={position} />
+  ))}
+</LeafletMap>
+```
+
+### Improving Performance
+
+<LeafletMapWithClusters client:only="preact" />
+
+While the code above works for few markers, it has various downside:
+
+- Adding _many_ markers will cripple performance.
+- Zooming out will result in a _sea of markers_ that will most definitely not be able to show locations at a glance.
+
+Fortunately, [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) fixes this issue by grouping markers that are too close together in clusters!
+By using marker clusters, we prevent too many markers being rendered at once as well as markers being to close together.
+
+There are a few React-specific wrappers for Leaflet.markercluster, but most of them will not work with React 18.
+After scouring GitHub issues for some, I found [@changey/react-leaflet-markercluster](https://github.com/changey/react-leaflet-markercluster).
+While it doesn't provide type definitions (how unfortunate!), it works with React 18.
+It can be installed as follows:
+
+```bash
+yarn install @changey/react-leaflet-markercluster
+```
+
+And there are more good news; using this library is not difficult either.
+Analogoulsy to our map, we'll create a reusable component `MarkerCluster` component.
+The library comes with a styled cluster icon out-of-the-box.
+The custom icon below is for demonstration, as it allows me to align the style of my marker and cluster icons.
+
+```tsx
+// @ts-expect-error Missing type definitions
+import BaseMarkerCluster from '@changey/react-leaflet-markercluster'
+import { divIcon, point } from 'leaflet'
+// React: import type { FC, ReactNode } from 'react'
+import type { ComponentChildren, FunctionalComponent } from 'preact'
+
+const createClusterCustomIcon = (cluster: any) => {
+  return divIcon({
+    html: `<span>${cluster.getChildCount()}</span>`,
+    className:
+      'bg-[#e74c3c] bg-opacity-100 text-white font-bold !flex items-center justify-center rounded-3xl border-white border-4 border-opacity-50',
+    iconSize: point(40, 40, true),
+  })
+}
+
+export const MarkerCluster: FunctionalComponent<{
+  children: ComponentChildren
+}> = ({ children }) => {
+  return (
+    <BaseMarkerCluster
+      iconCreateFunction={createClusterCustomIcon}
+      showCoverageOnHover={false}
+    >
+      {children}
+    </BaseMarkerCluster>
+  )
+}
+```
+
+To use marker clusters, wrap your `Marker` elements in a `MarkerCluster`:
+
+```tsx
+<LeafletMap center={center} zoom={13}>
+  <MarkerCluster>
+    {markers.map((position, index) => (
+      <Marker key={index} position={position} />
+    ))}
+  </MarkerCluster>
+</LeafletMap>
+```
 
 ## Supporting SSR
 
-### Next.js
+If you tried to use react-leaflet in an SSR context, you'll have encountered the dreaded issue: `window is not defined`.
+I won't make any false promises, the maps won't actually be rendered on the server.
+Instead, we will skip Leaflet in SSR environments and hydrate our maps client-side.
+
+A separate file is required for _lazily importing_ our existing components, e.g., `LeafletMap.lazy.tsx`.
+
+```tsx
+import { Suspense, lazy } from 'preact/compat'
+
+const LazyLeafletMap = lazy(() => import('./LeafletMap'))
+const LazyMarker = lazy(async () => (await import('react-leaflet')).Marker)
+const LazyMarkerCluster = lazy(
+  async () => (await import('./LeafletMap')).MarkerCluster
+)
+```
+
+In the same file, declare a new component as follows:
+
+```tsx
+import type { MapOptions } from 'leaflet'
+import type { FunctionalComponent } from 'preact'
+import { Suspense, lazy } from 'preact/compat'
+
+export const LeafletMapWithClusters: FunctionalComponent<
+  {
+    center: [number, number]
+    markers: [number, number][]
+  } & MapOptions
+> = ({ center, markers, ...options }) => {
+  return (
+    <Suspense fallback={<div className="h-[200px]" />}>
+      <LazyLeafletMap center={center} zoom={13} {...options}>
+        <Suspense fallback={<></>}>
+          <LazyMarkerCluster>
+            {markers.map((position, index) => (
+              <LazyMarker key={index} position={position} />
+            ))}
+          </LazyMarkerCluster>
+        </Suspense>
+      </LazyLeafletMap>
+    </Suspense>
+  )
+}
+```
+
+Update all usages of our initial map component to use the newly created component and you're good to go!
+... unless you're using Next.js or Astro.
+If that's the case, I still got you covered.
+Just keep reading!
 
 ### Astro
+
+With Astro, you also need to update the usage of your lazy components, to include `client:only="preact"` (or `client:only="react"` depending on your setup).
+For example, an import of the first example map in this `.mdx` blog looks like this:
+
+```mdx
+import { LeafletMap } from '../../components/blog/examples/LeafletMap.lazy.tsx'
+
+<LeafletMap client:only="preact" />
+```
+
+> Note: At the time of writing, Astro may throw an error when importing your Preact component this way, see [withastro/astro#3833](https://github.com/withastro/astro/issues/3833).
+> As described [here](https://github.com/withastro/astro/issues/3833#issuecomment-1175827464), a workaround is importing `preact` in the offending file.
+
+### Next.js
+
+Making Leaflet work with Next.js is not much different.
+Instead of using (P)React's `lazy`, we can make use of Next's `dynamic` with `ssr: false` to skip rendering Leaflet components on the server:
+
+```tsx
+import dynamic from 'next/dynamic'
+
+export const LazyMap = dynamic(() => import('./LeafletMap'), { ssr: false })
+
+export const LazyMarker = dynamic(
+  async () => (await import('react-leaflet')).Marker,
+  {
+    ssr: false,
+  }
+)
+
+export const LazyMarkerCluster = dynamic(
+  async () => (await import('./LeafletMap')).MarkerCluster,
+  {
+    ssr: false,
+  }
+)
+```
+
+Now, all of the `Lazy*` components can be used even without `Suspense` in any other component or page.
+
+## Conclusion
+
+Leaflet and react-leaflet are powerful libraries for working with OpenStreetMap.
+With some tweaking regarding icon configurations, lazy loading, and custom providers, they enable great looking and interactive maps on any React environment.
+
+Markers in combination with marker clusters make it possible to render large amounts of locations performantly and with customizability in mind.
+
+For an implementation in a real project, see [WienerTime's map of public transit stations](https://wiener-time.vercel.app/map).

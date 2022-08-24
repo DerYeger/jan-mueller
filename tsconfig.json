@@ -29,6 +29,7 @@
     "noUncheckedIndexedAccess": true,
     // Report an error when the value `undefined` is given to an optional property that doesn't specify `undefined` as a valid value.
     "exactOptionalPropertyTypes": true,
+    "skipLibCheck": true,
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
     "types": ["preact/jsx-runtime"]
