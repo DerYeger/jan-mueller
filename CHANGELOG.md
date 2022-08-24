@@ -1,3 +1,11 @@
+## [3.20.4](https://github.com/DerYeger/jan-mueller/compare/v3.20.3...v3.20.4) (2022-08-24)
+
+
+### Bug Fixes
+
+* add missing bottom margin to cv ([e0610f1](https://github.com/DerYeger/jan-mueller/commit/e0610f1e2361dc55afa1313cc81f2f96f7826483))
+* prevent footer overflow on safari ([08a98db](https://github.com/DerYeger/jan-mueller/commit/08a98dbba5607ee386c82328813a27fa85bfa523))
+
 ## [3.20.3](https://github.com/DerYeger/jan-mueller/compare/v3.20.2...v3.20.3) (2022-08-24)
 
 
