@@ -6,7 +6,6 @@
   "description": "Personal website of Jan Müller, a passionate software engineer.",
   "scripts": {
     "prepare": "is-ci || husky install",
-    "check": "astro check",
     "build": "astro build",
     "dev": "astro dev",
     "preview": "astro preview",
@@ -16,7 +15,7 @@
     "test:e2e:run": "cypress run",
     "check:astro": "yarn astro check",
     "check:tsc": "yarn tsc --noEmit",
-    "check:vue": "yarn vue-tsc --noEmit --skipLibCheck"
+    "check:vue": "yarn vue-tsc --noEmit"
   },
   "dependencies": {
     "@changey/react-leaflet-markercluster": "4.0.0-rc1",
