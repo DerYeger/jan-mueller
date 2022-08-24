@@ -20,11 +20,11 @@
   },
   "dependencies": {
     "@yeger/page-views": "1.4.3",
-    "@yeger/vue-masonry-wall": "3.0.48"
+    "@yeger/vue-masonry-wall": "3.0.49"
   },
   "devDependencies": {
     "@astrojs/image": "0.3.6",
-    "@astrojs/mdx": "0.10.0",
+    "@astrojs/mdx": "0.10.1",
     "@astrojs/preact": "1.0.2",
     "@astrojs/prefetch": "0.0.7",
     "@astrojs/rss": "1.0.0",
@@ -36,10 +36,10 @@
     "@preact/preset-vite": "2.3.0",
     "@tailwindcss/typography": "0.5.4",
     "@yeger/eslint-config": "1.4.36",
-    "astro": "1.0.7",
+    "astro": "1.0.8",
     "astro-critters": "1.0.2",
     "astro-icon": "0.7.3",
-    "astro-robots-txt": "0.3.7",
+    "astro-robots-txt": "0.3.8",
     "cypress": "10.6.0",
     "eslint": "8.22.0",
     "eslint-plugin-astro": "0.17.1",
@@ -51,7 +51,7 @@
     "lint-staged": "13.0.3",
     "moment": "2.29.4",
     "preact": "10.10.6",
-    "prettier-plugin-astro": "0.5.1",
+    "prettier-plugin-astro": "0.5.3",
     "rehype-autolink-headings": "6.1.1",
     "remark-code-import": "1.1.1",
     "vue": "3.2.37",
