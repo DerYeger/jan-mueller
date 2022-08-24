@@ -70,3 +70,10 @@
     @apply text-transparent bg-clip-text bg-gradient-to-r;
   }
 }
+
+.leaflet-bottom,
+.leaflet-control,
+.leaflet-pane,
+.leaflet-top {
+  z-index: 0 !important;
+}
