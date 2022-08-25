@@ -19,7 +19,7 @@
     "check:vue": "yarn vue-tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
-    "@yeger/page-views": "1.4.3",
+    "@yeger/page-views": "1.4.4",
     "@yeger/vue-masonry-wall": "3.0.49"
   },
   "devDependencies": {
@@ -36,7 +36,7 @@
     "@preact/preset-vite": "2.3.0",
     "@tailwindcss/typography": "0.5.4",
     "@yeger/eslint-config": "1.4.36",
-    "astro": "1.0.8",
+    "astro": "1.0.9",
     "astro-critters": "1.0.2",
     "astro-icon": "0.7.3",
     "astro-robots-txt": "0.3.8",
