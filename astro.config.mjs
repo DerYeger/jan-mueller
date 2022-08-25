@@ -12,6 +12,7 @@ import { defineConfig } from 'astro/config'
 import { toString } from 'hast-util-to-string'
 import { h } from 'hastscript'
 import autolinkHeadings from 'rehype-autolink-headings'
+import rehypeExternalLinks from 'rehype-external-links'
 import { codeImport } from 'remark-code-import'
 
 import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs'
@@ -69,6 +70,13 @@ export default defineConfig({
                 ),
                 createSROnlyLabel(toString(heading)),
               ],
+            },
+          ],
+          [
+            rehypeExternalLinks,
+            {
+              target: '_blank',
+              rel: 'noreferrer',
             },
           ],
         ],
