@@ -7,6 +7,8 @@ layout: '../../layouts/MarkdownLayout.astro'
 openGraphImage: 'https://og-image-deryeger.vercel.app/**Next-level%20Heading%20Anchors%20with%20Astro%20and%20rehype**.png?theme=dark&md=1&fontSize=100px&images=https%3A%2F%2Fjan-mueller.at%2Fog-image-light.svg&images=https%3A%2F%2Fastro.build%2Fassets%2Fpress%2Ffull-logo-dark.svg&images=https%3A%2F%2Ftailwindcss.com%2F_next%2Fstatic%2Fmedia%2Ftailwindcss-mark.79614a5f61617ba49a0891494521226b.svg'
 ---
 
+import 'leaflet/dist/leaflet.css'
+
 import {
   LeafletMap,
   LeafletMapWithClusters,
@@ -89,7 +91,7 @@ For now, we will not make use of the `children` prop and pass an empty fragment 
 ### Styling
 
 Setting up Leaflet's is straight forward.
-Just add the following import to your project, preferably in the file of your component:
+Just add the following import to your project:
 
 ```ts
 import 'leaflet/dist/leaflet.css'
