@@ -8,8 +8,6 @@ import type { ComponentChildren, FunctionalComponent } from 'preact'
 import { h } from 'preact'
 import { MapContainer, TileLayer } from 'react-leaflet'
 
-import 'leaflet/dist/leaflet.css'
-
 Marker.prototype.options.icon = icon({
   iconUrl: '/static/leaflet/map-marker.svg',
   iconRetinaUrl: '/static/leaflet/map-marker.svg',
