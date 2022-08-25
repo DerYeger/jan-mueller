@@ -14,6 +14,8 @@ import { h } from 'hastscript'
 import autolinkHeadings from 'rehype-autolink-headings'
 import { codeImport } from 'remark-code-import'
 
+import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs'
+
 // The following configuration for rehype-autolink-headings was taken from https://github.com/withastro/docs/blob/main/astro.config.ts
 const AnchorLinkIcon = h(
   'svg',
@@ -46,7 +48,7 @@ export default defineConfig({
   integrations: [
     image(),
     mdx({
-      remarkPlugins: { extends: [codeImport] },
+      remarkPlugins: { extends: [codeImport, remarkReadingTime] },
       rehypePlugins: {
         extends: [
           [
