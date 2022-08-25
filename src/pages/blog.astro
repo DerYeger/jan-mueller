@@ -2,6 +2,7 @@
 import { Image } from '@astrojs/image/components'
 
 import DateComponent from '../components/date/DateComponent.astro'
+import Dot from '../components/Dot.astro'
 import MainLayout from '../layouts/MainLayout.astro'
 import { getImageAsset } from '../lib'
 
@@ -50,6 +51,8 @@ const assets = await Astro.glob('../assets/**/*')
                     date={post.frontmatter.pubDate}
                     format="MMM DD, YYYY"
                   />
+                  <Dot />
+                  <span>{post.frontmatter.readingTime}</span>
                 </span>
                 <span class="text-light">{post.frontmatter.description}</span>
               </div>

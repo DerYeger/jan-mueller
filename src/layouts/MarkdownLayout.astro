@@ -17,6 +17,7 @@ export interface Props {
     file?: string
     noToc?: boolean
     openGraphImage?: string
+    readingTime: string
   }
   headings: {
     depth: number
@@ -34,6 +35,7 @@ const {
     heroImage,
     noToc,
     openGraphImage,
+    readingTime,
   },
   headings,
 } = Astro.props as Props
@@ -72,6 +74,8 @@ const heroImageAsset = heroImage ? getImageAsset(assets, heroImage) : undefined
               </div>
             </>
           )}
+          <Dot />
+          {readingTime}
         </div>
       )
     }
