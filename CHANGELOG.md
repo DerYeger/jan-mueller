@@ -1,3 +1,10 @@
+## [3.21.1](https://github.com/DerYeger/jan-mueller/compare/v3.21.0...v3.21.1) (2022-08-26)
+
+
+### Bug Fixes
+
+* fix typo ([86f941b](https://github.com/DerYeger/jan-mueller/commit/86f941bb63eb1a6e4b9eb7c942cb4184b721b0d6))
+
 # [3.21.0](https://github.com/DerYeger/jan-mueller/compare/v3.20.5...v3.21.0) (2022-08-26)
 
 
