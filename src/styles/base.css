@@ -77,3 +77,23 @@
 .leaflet-top {
   z-index: 0 !important;
 }
+
+.astro-code {
+  counter-reset: step;
+  counter-increment: step 0;
+}
+
+.astro-code .line::before {
+  border-right: rgba(255, 255, 255, 0.1) solid 1px;
+  color: rgba(255, 255, 255, 0.3);
+  content: counter(step);
+  counter-increment: step;
+  display: inline-block;
+  font-size: 1em;
+  margin-right: 1em;
+  padding-right: 1em;
+  text-align: right;
+  transition: all 0.25s ease;
+  transform: translateX(0%);
+  width: 2em;
+}
