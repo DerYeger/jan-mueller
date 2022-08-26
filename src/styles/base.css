@@ -91,11 +91,11 @@
   border: 0.25rem solid transparent;
   border-radius: 0.5rem;
   background-clip: padding-box;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .astro-code::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .astro-code .line::before {
