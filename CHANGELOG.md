@@ -1,3 +1,23 @@
+# [3.21.0](https://github.com/DerYeger/jan-mueller/compare/v3.20.5...v3.21.0) (2022-08-26)
+
+
+### Bug Fixes
+
+* correct styling issues ([a63a2b4](https://github.com/DerYeger/jan-mueller/commit/a63a2b4ec7347417186817f156e8b6e9d59dee3e))
+* prevent duplicate leaflet style ([46d4758](https://github.com/DerYeger/jan-mueller/commit/46d4758b1aa654f2dfbc1a0b604529cfbc1e3fd0))
+
+
+### Features
+
+* add line numbers ([261a200](https://github.com/DerYeger/jan-mueller/commit/261a200629a1377de42e39a12bd91ad258436464))
+* add reading time ([95ca3f8](https://github.com/DerYeger/jan-mueller/commit/95ca3f8ffe2a79a8bbd18326b87b855114ef94ba))
+* configure rehype plugin ([9179878](https://github.com/DerYeger/jan-mueller/commit/9179878464893797f338a2a86fe3e8fcb4e3dc7e))
+* create components ([122bf39](https://github.com/DerYeger/jan-mueller/commit/122bf394c46e5b38f14de9cd17d84f3975719886))
+* finalize blog post ([f22f3f7](https://github.com/DerYeger/jan-mueller/commit/f22f3f71e457e90976fbd3a157ce03b7404a466e))
+* reverse project order ([88c9e61](https://github.com/DerYeger/jan-mueller/commit/88c9e618fd1507572f0ce3223d9efabcfb849baa))
+* style code scrollbar ([de18e90](https://github.com/DerYeger/jan-mueller/commit/de18e90feeab21b9600fb623d3c6d3f8940c7e82))
+* write blog post ([0fddac7](https://github.com/DerYeger/jan-mueller/commit/0fddac72716c099b71b38471f7e7e76ea43469fc))
+
 ## [3.20.5](https://github.com/DerYeger/jan-mueller/compare/v3.20.4...v3.20.5) (2022-08-26)
 
 
