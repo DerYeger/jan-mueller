@@ -43,7 +43,7 @@
   }
 
   .prose .astro-code {
-    @apply shadow-md transition-all;
+    @apply shadow-md transition-all text-xs leading-5;
   }
 
   .prose div.language-id {
