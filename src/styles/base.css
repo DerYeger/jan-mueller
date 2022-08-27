@@ -7,8 +7,12 @@
     @apply text-black dark:text-white hover:text-neutral-600 hover:dark:text-neutral-300 transition-colors underline;
   }
 
+  .surface-border {
+    @apply border-neutral-300 dark:border-neutral-800 transition-colors;
+  }
+
   .surface {
-    @apply border-neutral-300 dark:border-neutral-800 !bg-white dark:!bg-black text-black dark:text-white transition-colors;
+    @apply surface-border !bg-white dark:!bg-black text-black dark:text-white transition-colors;
   }
 
   .card {
@@ -111,4 +115,25 @@
   transition: all 0.25s ease;
   transform: translateX(0%);
   width: 2em;
+}
+
+@supports (backdrop-filter: none) {
+  .glass {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  html.dark .glass {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@suports not (backdrop-filter: none) {
+  .glass {
+    background-color: white;
+  }
+
+  html.dark .glass {
+    background-color: black;
+  }
 }
