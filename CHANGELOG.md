@@ -1,3 +1,10 @@
+# [3.22.0](https://github.com/DerYeger/jan-mueller/compare/v3.21.2...v3.22.0) (2022-08-27)
+
+
+### Features
+
+* add glass effect ([4e7491b](https://github.com/DerYeger/jan-mueller/commit/4e7491b54f64fb5b051bad25d12a8b34385343b9))
+
 ## [3.21.2](https://github.com/DerYeger/jan-mueller/compare/v3.21.1...v3.21.2) (2022-08-27)
 
 
