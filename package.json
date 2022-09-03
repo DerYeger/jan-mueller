@@ -62,7 +62,7 @@
     "rehype-autolink-headings": "6.1.1",
     "rehype-external-links": "2.0.1",
     "remark-code-import": "1.1.1",
-    "vue": "3.2.37",
+    "vue": "3.2.38",
     "vue-tsc": "0.40.1"
   },
   "lint-staged": {
