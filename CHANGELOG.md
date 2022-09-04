@@ -1,3 +1,10 @@
+# [3.23.0](https://github.com/DerYeger/jan-mueller/compare/v3.22.1...v3.23.0) (2022-09-04)
+
+
+### Features
+
+* improve spacing ([3e070b4](https://github.com/DerYeger/jan-mueller/commit/3e070b4a1c319fce69fffaec436c36644d878b2c))
+
 ## [3.22.1](https://github.com/DerYeger/jan-mueller/compare/v3.22.0...v3.22.1) (2022-09-03)
 
 
