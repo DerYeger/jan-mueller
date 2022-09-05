@@ -120,8 +120,8 @@
 #marmosetUI > img {
   height: 100%;
   object-fit: cover;
-  position: static;
-  transform: none;
+  position: static !important;
+  transform: none !important;
   width: 100%;
 }
 
