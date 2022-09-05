@@ -20,7 +20,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="shadow-md rounded overflow-hidden relative">
+  <div class="shadow-md rounded overflow-hidden relative isolate">
     <MarmosetViewer :src="src" responsive :height="height" />
   </div>
 </template>
