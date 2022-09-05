@@ -1,3 +1,10 @@
+## [3.24.2](https://github.com/DerYeger/jan-mueller/compare/v3.24.1...v3.24.2) (2022-09-05)
+
+
+### Bug Fixes
+
+* prevent image offset ([398d883](https://github.com/DerYeger/jan-mueller/commit/398d8831edc5d3b284c866c66195d2574e28e794))
+
 ## [3.24.1](https://github.com/DerYeger/jan-mueller/compare/v3.24.0...v3.24.1) (2022-09-05)
 
 
