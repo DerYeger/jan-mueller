@@ -1,3 +1,10 @@
+# [3.24.0](https://github.com/DerYeger/jan-mueller/compare/v3.23.0...v3.24.0) (2022-09-05)
+
+
+### Features
+
+* add blog post ([ef46a29](https://github.com/DerYeger/jan-mueller/commit/ef46a2934e984891b5d2c27ec33b6ae2fcf79b07))
+
 # [3.23.0](https://github.com/DerYeger/jan-mueller/compare/v3.22.1...v3.23.0) (2022-09-04)
 
 
