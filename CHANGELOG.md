@@ -1,3 +1,10 @@
+## [3.24.3](https://github.com/DerYeger/jan-mueller/compare/v3.24.2...v3.24.3) (2022-09-05)
+
+
+### Bug Fixes
+
+* override marmoset styles ([8b9dde0](https://github.com/DerYeger/jan-mueller/commit/8b9dde0cde16ecbf67f26e094e36dae82ad8470b))
+
 ## [3.24.2](https://github.com/DerYeger/jan-mueller/compare/v3.24.1...v3.24.2) (2022-09-05)
 
 
