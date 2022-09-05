@@ -1,0 +1,88 @@
+---
+title: Displaying 3D models with Vue
+description: A Vue component for displaying 3D models using Marmoset Viewer.
+heroImage: '/assets/blog/blue-wave-pattern.jpg'
+pubDate: 2022-09-05
+layout: '../../layouts/MarkdownLayout.astro'
+openGraphImage: 'https://og-image-deryeger.vercel.app/**Displaying%203D%20models%20with%20Vue**.png?theme=dark&md=1&fontSize=100px&images=https%3A%2F%2Fjan-mueller.at%2Fog-image-light.svg&images=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F95%2FVue.js_Logo_2.svg&images=https%3A%2F%2Fviewer.marmoset.co%2Fmain%2Fdata%2Flogo4x.png'
+---
+
+import VueMarmosetViewer from '../../components/blog/examples/VueMarmosetViewer.vue'
+
+## Introduction
+
+As part of a university course, I created a 3D model of an An-26 airplane.
+Of course, I was looking for a way to show my work, but the large file size was making things trickier than expected.
+
+I eventually discovered [Marmoset Toolbag](https://marmoset.co/toolbag/) and its JavaScript library Marmoset Viewer for embedding models in websites.
+The free trial would allow me to export my model to the proprietary format, but I quickly discovered that the JavaScript library was not available on NPM.
+
+At the time, my website was built using Vue.
+So, after requesting consent from Marmoset, I created the NPM package [vue-marmoset-viewer](https://github.com/DerYeger/vue-marmoset-viewer).
+It dynamically (and lazily) loads the Marmoset Viewer script, handles the lifecycle of viewer instances and provides reactive properties.
+Should manual access to the Marmoset Viewer script be required, it also provides a helper function for accessing the loaded instance.
+
+Below is an example usage of the Vue component, showing my model.
+
+<VueMarmosetViewer client:only="vue" src="/static/files/models/an-26.mview" />
+
+## Installation
+
+First, install the dependency using your preferred package manager.
+
+```bash
+# yarn
+$ yarn add vue-marmoset-viewer
+
+# npm
+$ npm install vue-marmoset-viewer
+```
+
+> Note: Use v1 for Vue 2. v2 and onward only support Vue 3.
+
+## Usage
+
+To use the component, it needs to be either imported globally, or locally in a specific Vue component.
+In the following examples, I'll only be covering the Vue 3 usage (though it should be almost the same for Vue 2).
+
+```ts
+import { createApp } from 'vue'
+import * as MarmosetViewer from 'vue-marmoset-viewer'
+
+const app = createApp()
+
+app.use(MarmosetViewer.MarmosetViewer)
+```
+
+Using the component is straightforward, thanks to its reactive props.
+For example, the example used in this post looks as follows:
+
+```vue
+<template>
+  <MarmosetViewer
+    src="/static/files/models/an-26.mview"
+    responsive
+    :height="300"
+  />
+</template>
+```
+
+By setting `responsive`, the component resizes to fit its parent automatically.
+The optional `height` and `width` props can be used to fix the respective dimensions size.
+Further, the component can be configured to start the viewer as soon as it's loaded, by passing the `auto-start` prop.
+
+## Conclusion
+
+The Marmoset Viewer is a great tool for embedding high-quality 3D models in websites.
+Unfortunately, its JavaScript library can be cumbersome to use, as it's not available on NPM.
+
+By using this component, using the Marmoset Viewer with Vue websites (or Astro, like this blog!) is much simplified.
+
+Below is a high-res version of my plane model.
+Load it at your own discretion, it comes in at almost 36 MB!
+
+<VueMarmosetViewer
+  client:only="vue"
+  src="/static/files/models/an-26-high-res.mview"
+  height={500}
+/>
