@@ -1,3 +1,10 @@
+## [3.24.1](https://github.com/DerYeger/jan-mueller/compare/v3.24.0...v3.24.1) (2022-09-05)
+
+
+### Bug Fixes
+
+* isolate viewer ([4cbbf60](https://github.com/DerYeger/jan-mueller/commit/4cbbf6011986270a5c53862d51498fc9a536192a))
+
 # [3.24.0](https://github.com/DerYeger/jan-mueller/compare/v3.23.0...v3.24.0) (2022-09-05)
 
 
