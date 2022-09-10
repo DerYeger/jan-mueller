@@ -1,3 +1,10 @@
+## [3.24.5](https://github.com/DerYeger/jan-mueller/compare/v3.24.4...v3.24.5) (2022-09-10)
+
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo ([7eafe8b](https://github.com/DerYeger/jan-mueller/commit/7eafe8b3f7ea4019a868a7e84d0bf30cd297654d))
+
 ## [3.24.4](https://github.com/DerYeger/jan-mueller/compare/v3.24.3...v3.24.4) (2022-09-10)
 
 
