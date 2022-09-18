@@ -210,15 +210,14 @@
     sitemap "^7.1.1"
     zod "^3.17.3"
 
-"@astrojs/tailwind@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@astrojs/tailwind/-/tailwind-1.0.0.tgz#05f75c46611d70963c5978126d0924ff781b77e1"
-  integrity sha512-hEpvKBJKCStaxRZt3ENDacQlzUTOvW1D7dfIUyTf7jMUK4O+y8Q7gdTjERf1HBEi/YXrYNX1zhAElwp6lvW5oQ==
+"@astrojs/tailwind@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/tailwind/-/tailwind-2.0.1.tgz#f7c7d1ca28b5cd831934c1410c142ac16f10efda"
+  integrity sha512-fvruoVEvx0zQsVY2AVRrhvH25zp6xTF8Wb1Lu43KXLoxU7fHIB1fcTTRP+Qhd4f5EvuTmuPKaKwHmbrv8mTV9A==
   dependencies:
     "@proload/core" "^0.3.2"
     autoprefixer "^10.4.7"
     postcss "^8.4.14"
-    tailwindcss "^3.0.24"
 
 "@astrojs/telemetry@^1.0.0":
   version "1.0.0"
@@ -8422,7 +8421,7 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tailwindcss@^3.0.24:
+tailwindcss@3.1.8:
   version "3.1.8"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.1.8.tgz#4f8520550d67a835d32f2f4021580f9fddb7b741"
   integrity sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==

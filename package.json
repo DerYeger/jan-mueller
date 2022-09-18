@@ -23,6 +23,7 @@
     "@yeger/vue-masonry-wall": "3.0.51",
     "leaflet": "1.8.0",
     "react-leaflet": "4.0.2",
+    "tailwindcss": "3.1.8",
     "vue-marmoset-viewer": "3.0.57"
   },
   "devDependencies": {
@@ -32,7 +33,7 @@
     "@astrojs/prefetch": "0.0.7",
     "@astrojs/rss": "1.0.0",
     "@astrojs/sitemap": "1.0.0",
-    "@astrojs/tailwind": "1.0.0",
+    "@astrojs/tailwind": "2.0.1",
     "@astrojs/vue": "1.0.0",
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
