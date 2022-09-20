@@ -1,3 +1,10 @@
+## [3.24.6](https://github.com/DerYeger/jan-mueller/compare/v3.24.5...v3.24.6) (2022-09-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @astrojs/tailwind to v2 ([c0f6f2b](https://github.com/DerYeger/jan-mueller/commit/c0f6f2b8c0ba12c1e6e07634ba843beecc605dcb))
+
 ## [3.24.5](https://github.com/DerYeger/jan-mueller/compare/v3.24.4...v3.24.5) (2022-09-10)
 
 
