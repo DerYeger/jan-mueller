@@ -1,3 +1,10 @@
+## [3.24.7](https://github.com/DerYeger/jan-mueller/compare/v3.24.6...v3.24.7) (2022-09-24)
+
+
+### Bug Fixes
+
+* **deps:** update actions/stale action to v6 ([a41926e](https://github.com/DerYeger/jan-mueller/commit/a41926e4bcea9f3c32407cfe34a98fb18d3eca79))
+
 ## [3.24.6](https://github.com/DerYeger/jan-mueller/compare/v3.24.5...v3.24.6) (2022-09-20)
 
 
