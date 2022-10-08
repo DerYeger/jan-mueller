@@ -1,3 +1,10 @@
+## [3.24.9](https://github.com/DerYeger/jan-mueller/compare/v3.24.8...v3.24.9) (2022-10-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue-tsc to v1 ([413adaa](https://github.com/DerYeger/jan-mueller/commit/413adaa26155bf8775ad8f48135b505e8a0d03d3))
+
 ## [3.24.8](https://github.com/DerYeger/jan-mueller/compare/v3.24.7...v3.24.8) (2022-10-01)
 
 
