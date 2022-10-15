@@ -1,3 +1,10 @@
+## [3.24.10](https://github.com/DerYeger/jan-mueller/compare/v3.24.9...v3.24.10) (2022-10-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue to v3.2.41 ([c3d8d40](https://github.com/DerYeger/jan-mueller/commit/c3d8d408342df73e565129a8354b3f84437a2692))
+
 ## [3.24.9](https://github.com/DerYeger/jan-mueller/compare/v3.24.8...v3.24.9) (2022-10-08)
 
 
