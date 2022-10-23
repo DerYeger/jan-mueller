@@ -49,38 +49,37 @@ export default defineConfig({
   integrations: [
     image(),
     mdx({
-      remarkPlugins: { extends: [codeImport, remarkReadingTime] },
-      rehypePlugins: {
-        extends: [
-          [
-            autolinkHeadings,
-            {
-              behavior: 'append',
-              group: ({ tagName }) =>
-                h(`div.heading-wrapper.level-${tagName}`, {
-                  tabIndex: -1,
-                }),
-              content: (heading) => [
-                h(
-                  `span.anchor-icon`,
-                  {
-                    ariaHidden: 'true',
-                  },
-                  AnchorLinkIcon
-                ),
-                createSROnlyLabel(toString(heading)),
-              ],
-            },
-          ],
-          [
-            rehypeExternalLinks,
-            {
-              target: '_blank',
-              rel: 'noreferrer',
-            },
-          ],
+      extendPlugins: 'astroDefaults',
+      remarkPlugins: [codeImport, remarkReadingTime],
+      rehypePlugins: [
+        [
+          autolinkHeadings,
+          {
+            behavior: 'append',
+            group: ({ tagName }) =>
+              h(`div.heading-wrapper.level-${tagName}`, {
+                tabIndex: -1,
+              }),
+            content: (heading) => [
+              h(
+                `span.anchor-icon`,
+                {
+                  ariaHidden: 'true',
+                },
+                AnchorLinkIcon
+              ),
+              createSROnlyLabel(toString(heading)),
+            ],
+          },
         ],
-      },
+        [
+          rehypeExternalLinks,
+          {
+            target: '_blank',
+            rel: 'noreferrer',
+          },
+        ],
+      ],
     }),
     tailwind({
       config: {
