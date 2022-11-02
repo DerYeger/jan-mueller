@@ -1,3 +1,11 @@
+# [3.25.0](https://github.com/DerYeger/jan-mueller/compare/v3.24.10...v3.25.0) (2022-11-02)
+
+
+### Features
+
+* migrate to pnpm ([9e37e80](https://github.com/DerYeger/jan-mueller/commit/9e37e80e7a5a4226c5e74f48fd54020e0d1f22ae))
+* use turborepo ([3b24a02](https://github.com/DerYeger/jan-mueller/commit/3b24a02201f4e22a41fc57be6b599ed91d14f678))
+
 ## [3.24.10](https://github.com/DerYeger/jan-mueller/compare/v3.24.9...v3.24.10) (2022-10-15)
 
 
