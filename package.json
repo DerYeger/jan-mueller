@@ -10,12 +10,12 @@
     "dev": "astro dev",
     "preview": "astro preview",
     "lint": "eslint \"./**/*.{astro,js,json,md,ts,vue,yaml,yml}\"",
-    "fix": "yarn lint --fix ",
+    "fix": "pnpm lint --fix ",
     "test:e2e": "cypress open",
     "test:e2e:run": "cypress run",
-    "check:astro": "yarn astro check",
-    "check:tsc": "yarn tsc --noEmit",
-    "check:vue": "yarn vue-tsc --noEmit"
+    "check:astro": "astro check",
+    "check:tsc": "tsc --noEmit",
+    "check:vue": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@changey/react-leaflet-markercluster": "4.0.0-rc1",

@@ -39,18 +39,18 @@
 
 ```bash
 # install dependencies
-$ yarn install
+$ pnpm install
 
 # serve with hot reload at localhost:3333
-$ yarn dev
+$ pnpm dev
 
 # build for production and launch preview server
-$ yarn build
-$ yarn preview
+$ pnpm build
+$ pnpm preview
 
 # run e2e tests
-$ yarn test:e2e
+$ pnpm test:e2e
 
 # lint
-$ yarn lint
+$ pnpm lint
 ```
