@@ -45,7 +45,7 @@ jobs:
         uses: cypress-io/github-action@v4
         with:
           install: false
-          start: pnpm turbo preview
+          start: pnpm preview
           browser: chrome
           record: false
           config: videoUploadOnPasses=false,video=true
@@ -71,11 +71,11 @@ jobs:
         with:
           node-version: 16
       - name: Check Astro
-        run: pnpm turbo check:astro
+        run: pnpm check:astro
       - name: Check TypeScript
-        run: pnpm turbo check:tsc
+        run: pnpm check:tsc
       - name: Check Vue
-        run: pnpm turbo check:vue
+        run: pnpm check:vue
   lint:
     name: Lint
     runs-on: ubuntu-latest
