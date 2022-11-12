@@ -55,7 +55,7 @@ const heroImageAsset = heroImage ? getImageAsset(heroImage) : undefined
           quality={100}
           format="webp"
           loading="eager"
-          alt={title}
+          alt={title ?? ''}
         />
       )
     }
