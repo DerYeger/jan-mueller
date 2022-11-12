@@ -24,7 +24,7 @@ specifiers:
   astro-critters: 1.1.0
   astro-icon: 0.8.0
   astro-robots-txt: 0.3.10
-  cypress: 10.11.0
+  cypress: 11.0.1
   eslint: 8.26.0
   eslint-plugin-astro: 0.21.0
   eslint-plugin-jsx-a11y: 6.6.1
@@ -85,7 +85,7 @@ devDependencies:
   astro-critters: 1.1.0
   astro-icon: 0.8.0
   astro-robots-txt: 0.3.10
-  cypress: 10.11.0
+  cypress: 11.0.1
   eslint: 8.26.0
   eslint-plugin-astro: 0.21.0_eslint@8.26.0
   eslint-plugin-jsx-a11y: 6.6.1_eslint@8.26.0
@@ -2843,8 +2843,8 @@ packages:
   /csstype/2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
 
-  /cypress/10.11.0:
-    resolution: {integrity: sha512-lsaE7dprw5DoXM00skni6W5ElVVLGAdRUUdZjX2dYsGjbY/QnpzWZ95Zom1mkGg0hAaO/QVTZoFVS7Jgr/GUPA==}
+  /cypress/11.0.1:
+    resolution: {integrity: sha512-NuEfd0Vim492RJ3m/+bbTZ3OZrqXgfAfuLaZfIQ9D5lKocS3EDr2tyAarZdAhKwLyoh7OJ33jwMeMFIDbzYqog==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true

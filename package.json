@@ -48,7 +48,7 @@
     "astro-critters": "1.1.0",
     "astro-icon": "0.8.0",
     "astro-robots-txt": "0.3.10",
-    "cypress": "10.11.0",
+    "cypress": "11.0.1",
     "eslint": "8.26.0",
     "eslint-plugin-astro": "0.21.0",
     "eslint-plugin-jsx-a11y": "6.6.1",
