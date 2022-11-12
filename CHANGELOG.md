@@ -1,3 +1,12 @@
+## [3.25.3](https://github.com/DerYeger/jan-mueller/compare/v3.25.2...v3.25.3) (2022-11-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vue to v3.2.45 ([80d0487](https://github.com/DerYeger/jan-mueller/commit/80d04870148e66287fae96cdefc2ea54c1865824))
+* fix astro error ([a096df9](https://github.com/DerYeger/jan-mueller/commit/a096df9ca1376a0957a707b3634a69cf23dd9505))
+* update image imports ([c6c28e8](https://github.com/DerYeger/jan-mueller/commit/c6c28e897c033971b692577af14bb7319c33def6))
+
 ## [3.25.2](https://github.com/DerYeger/jan-mueller/compare/v3.25.1...v3.25.2) (2022-11-12)
 
 
