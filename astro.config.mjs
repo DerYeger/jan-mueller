@@ -47,7 +47,9 @@ export default defineConfig({
     host: true,
   },
   integrations: [
-    image(),
+    image({
+      serviceEntryPoint: '@astrojs/image/sharp',
+    }),
     mdx({
       extendPlugins: 'astroDefaults',
       remarkPlugins: [codeImport, remarkReadingTime],

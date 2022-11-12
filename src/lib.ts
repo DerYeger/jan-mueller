@@ -1,11 +1,13 @@
-export const getImageAsset = (assets: Record<string, any>, image: string) =>
-  assets.find((asset: any) => {
-    if (!asset.default?.src) {
-      return false
-    }
-    const index = asset.default.src.indexOf('/assets/')
-    return asset.default.src.slice(index) === image
-  })
+export const getImageAsset = async (imagePath: string): Promise<any> => {
+  const assets = await import.meta.glob('./assets/**/*')
+  const asset = Object.entries(assets).find(([fileName]) =>
+    fileName.endsWith(imagePath)
+  )
+  if (!asset) {
+    return undefined
+  }
+  return await asset[1]()
+}
 
 export const accounts = [
   {

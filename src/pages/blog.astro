@@ -14,8 +14,6 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
       new Date(a.frontmatter.pubDate).valueOf()
   )
   .filter((post) => !post.frontmatter.draft)
-
-const assets = await Astro.glob('../assets/**/*')
 ---
 
 <MainLayout
@@ -34,9 +32,7 @@ const assets = await Astro.glob('../assets/**/*')
               {post.frontmatter.heroImage && (
                 <Image
                   class="w-full h-[100px] object-cover"
-                  src={
-                    getImageAsset(assets, post.frontmatter.heroImage)?.default
-                  }
+                  src={getImageAsset(post.frontmatter.heroImage)}
                   width={1200}
                   height={200}
                   quality={100}
