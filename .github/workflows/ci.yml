@@ -36,6 +36,8 @@ jobs:
         uses: DerYeger/pnpm-setup-action@master
         with:
           node-version: 16
+      - name: Install cypress
+        run: pnpm dlx cypress install
       - name: Download
         uses: actions/download-artifact@v3
         with:
