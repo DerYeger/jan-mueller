@@ -1,3 +1,11 @@
+## [3.25.2](https://github.com/DerYeger/jan-mueller/compare/v3.25.1...v3.25.2) (2022-11-12)
+
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo to v17.2.0 ([8eb7c22](https://github.com/DerYeger/jan-mueller/commit/8eb7c225613e373f5cb647117bf2a6ace6a929d8))
+* **deps:** update dependency cypress to v11 ([683fd9a](https://github.com/DerYeger/jan-mueller/commit/683fd9a3d512ae385630c2c23c333ff5a8fbc987))
+
 ## [3.25.1](https://github.com/DerYeger/jan-mueller/compare/v3.25.0...v3.25.1) (2022-11-05)
 
 
