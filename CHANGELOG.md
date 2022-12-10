@@ -1,3 +1,10 @@
+## [3.25.7](https://github.com/DerYeger/jan-mueller/compare/v3.25.6...v3.25.7) (2022-12-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cypress to v12 ([#154](https://github.com/DerYeger/jan-mueller/issues/154)) ([eaa2e68](https://github.com/DerYeger/jan-mueller/commit/eaa2e687929cabd499dd38cd5f8dea763c295154))
+
 ## [3.25.6](https://github.com/DerYeger/jan-mueller/compare/v3.25.5...v3.25.6) (2022-12-10)
 
 
