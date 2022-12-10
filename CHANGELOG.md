@@ -1,3 +1,10 @@
+## [3.25.5](https://github.com/DerYeger/jan-mueller/compare/v3.25.4...v3.25.5) (2022-12-10)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([9ab500b](https://github.com/DerYeger/jan-mueller/commit/9ab500b881b59338a8a552bf6ebe9595672b15d4))
+
 ## [3.25.4](https://github.com/DerYeger/jan-mueller/compare/v3.25.3...v3.25.4) (2022-11-26)
 
 
