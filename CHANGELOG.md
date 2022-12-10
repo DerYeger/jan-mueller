@@ -1,3 +1,10 @@
+## [3.25.6](https://github.com/DerYeger/jan-mueller/compare/v3.25.5...v3.25.6) (2022-12-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vite to v4 ([#155](https://github.com/DerYeger/jan-mueller/issues/155)) ([cd72a7d](https://github.com/DerYeger/jan-mueller/commit/cd72a7d682ff06d0e561f5dfa32816bb13c25d35))
+
 ## [3.25.5](https://github.com/DerYeger/jan-mueller/compare/v3.25.4...v3.25.5) (2022-12-10)
 
 
