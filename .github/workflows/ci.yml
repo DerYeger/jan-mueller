@@ -93,7 +93,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     needs: [build, check, e2e, lint]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
         uses: actions/checkout@master

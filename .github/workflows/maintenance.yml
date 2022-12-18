@@ -6,16 +6,6 @@ on:
     - cron: '0 3 * * *'
 
 jobs:
-  cleanup:
-    name: Cleanup
-    runs-on: ubuntu-latest
-    steps:
-      - name: Delete assets of old releases
-        uses: dev-drprasad/delete-older-releases@v0.2.1
-        with:
-          keep_latest: 3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   stale:
     name: Stale
     runs-on: ubuntu-latest
@@ -30,3 +20,29 @@ jobs:
           exempt-assignees: DerYeger
           exempt-issue-labels: bug, dependencies, enhancement, renovate
           exempt-pr-labels: bug, dependencies, enhancement, renovate
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [javascript]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: ${{ matrix.language }}
+          config-file: ./.github/codeql.yml
+          queries: +security-and-quality
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v2
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: '/language:${{ matrix.language }}'
