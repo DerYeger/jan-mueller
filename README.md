@@ -13,10 +13,7 @@
 
 <p align="center">
   <a href="https://github.com/DerYeger/jan-mueller/actions/workflows/ci.yml">
-    <img alt="CI" src="https://img.shields.io/github/workflow/status/DerYeger/jan-mueller/CI?label=ci&logo=github&color=#4DC71F">
-  </a>
-  <a href="https://github.com/DerYeger/jan-mueller/actions/workflows/cd.yml">
-    <img alt="CD" src="https://img.shields.io/github/workflow/status/DerYeger/jan-mueller/CD?label=cd&logo=github&color=#4DC71F">
+    <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/DerYeger/jan-mueller/ci.yml?branch=main&label=ci&logo=github&color=#4DC71F">
   </a>
 </p>
 
