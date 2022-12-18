@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import type { FunctionalComponent } from 'preact'
 import { useEffect, useState } from 'preact/hooks'
 
