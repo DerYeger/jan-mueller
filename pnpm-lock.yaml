@@ -20,7 +20,7 @@ specifiers:
   '@yeger/eslint-config': 1.8.1
   '@yeger/page-views': 1.4.5
   '@yeger/vue-masonry-wall': 3.4.2
-  astro: 1.7.1
+  astro: 1.6.15
   astro-critters: 1.1.23
   astro-icon: 0.8.0
   astro-robots-txt: 0.3.10
@@ -80,7 +80,7 @@ devDependencies:
   '@types/leaflet': 1.9.0
   '@types/node': 18.11.17
   '@yeger/eslint-config': 1.8.1_lzzuuodtsqwxnvqeq4g4likcqa
-  astro: 1.7.1_xgdmd3tdlagpkcvgycprrn3igm
+  astro: 1.6.15_xgdmd3tdlagpkcvgycprrn3igm
   astro-critters: 1.1.23
   astro-icon: 0.8.0
   astro-robots-txt: 0.3.10
@@ -2347,8 +2347,8 @@ packages:
       zod: 3.19.1
     dev: true
 
-  /astro/1.7.1_xgdmd3tdlagpkcvgycprrn3igm:
-    resolution: {integrity: sha512-ENfHAm8/zYPgO5G1KJtCzt+hnTJaYdfjYqFWBB9PcBdxlHOOQvOd1zWCVX+uOvwKe8+ASUHXyyyULh3qlB5UUQ==}
+  /astro/1.6.15_xgdmd3tdlagpkcvgycprrn3igm:
+    resolution: {integrity: sha512-FT60PalffV0bCNxqEHadRzb+Rd3g3lYxV3fR9+bZ2CRlbSfC3UdoaLDh5wC6gJiz91caH1R0XiYaV0WT2Zg91g==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -2374,9 +2374,8 @@ packages:
       cookie: 0.5.0
       debug: 4.3.4
       deepmerge-ts: 4.2.2
-      devalue: 4.2.0
       diff: 5.1.0
-      es-module-lexer: 1.1.0
+      es-module-lexer: 0.10.5
       execa: 6.1.0
       fast-glob: 3.2.12
       github-slugger: 1.5.0
@@ -3379,10 +3378,6 @@ packages:
       defined: 1.0.1
       minimist: 1.2.7
 
-  /devalue/4.2.0:
-    resolution: {integrity: sha512-mbjoAaCL2qogBKgeFxFPOXAUsZchircF+B/79LD4sHH0+NHfYm8gZpQrskKDn5gENGt35+5OI1GUF7hLVnkPDw==}
-    dev: true
-
   /didyoumean/1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
 
@@ -3591,10 +3586,6 @@ packages:
 
   /es-module-lexer/0.10.5:
     resolution: {integrity: sha512-+7IwY/kiGAacQfY+YBhKMvEmyAJnw5grTUgjG85Pe7vcUI/6b7pZjZG8nQ7+48YhzEAEqrEgD2dCz/JIK+AYvw==}
-    dev: true
-
-  /es-module-lexer/1.1.0:
-    resolution: {integrity: sha512-fJg+1tiyEeS8figV+fPcPpm8WqJEflG3yPU0NOm5xMvrNkuiy7HzX/Ljng4Y0hAoiw4/3hQTCFYw+ub8+a2pRA==}
     dev: true
 
   /es-shim-unscopables/1.0.0:
