@@ -5,7 +5,7 @@ specifiers:
   '@astrojs/mdx': 0.14.0
   '@astrojs/preact': 1.2.0
   '@astrojs/prefetch': 0.1.1
-  '@astrojs/rss': 1.2.1
+  '@astrojs/rss': 2.0.0
   '@astrojs/sitemap': 1.0.0
   '@astrojs/tailwind': 2.1.3
   '@astrojs/vue': 1.2.2
@@ -68,7 +68,7 @@ devDependencies:
   '@astrojs/mdx': 0.14.0_rollup@3.9.0
   '@astrojs/preact': 1.2.0_preact@10.11.3
   '@astrojs/prefetch': 0.1.1
-  '@astrojs/rss': 1.2.1
+  '@astrojs/rss': 2.0.0
   '@astrojs/sitemap': 1.0.0
   '@astrojs/tailwind': 2.1.3_tailwindcss@3.2.4
   '@astrojs/vue': 1.2.2_j52ewrsb722armv7myeub4qzuu
@@ -358,8 +358,8 @@ packages:
       prismjs: 1.29.0
     dev: true
 
-  /@astrojs/rss/1.2.1:
-    resolution: {integrity: sha512-ZgCunS6ECuPpxBznBYE+ONf23rcp+OWZ5IyDKFAcVZCWEq8Bh0rVYa9p8u6cU9WOTK56JRQTuwcVZYndmExNtw==}
+  /@astrojs/rss/2.0.0:
+    resolution: {integrity: sha512-qXsmyq2HhnKRA85US6GLelT47VLhdtS0bNq88umqfB2uneB9vWHSLnOJjhN9rv0mUSQjsFYytF4IEznfmNnpkQ==}
     dependencies:
       fast-xml-parser: 4.0.12
     dev: true
