@@ -3,7 +3,7 @@ title: React, Leaflet, and SSR
 description: 'A guide on using Leaflet for adding OpenStreetMap to a React application, with a hint of SSR and Preact thrown in the mix.'
 heroImage: '/assets/blog/maps.jpg'
 pubDate: 2022-08-24
-layout: '../../layouts/MarkdownLayout.astro'
+layout: '~/layouts/MarkdownLayout.astro'
 openGraphImage: 'https://og-image-deryeger.vercel.app/React%2C%20Leaflet%2C%20and%20SSR.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fjan-mueller.at%2Fog-image-light.svg&images=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fa%2Fa7%2FReact-icon.svg&images=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F1%2F13%2FLeaflet_logo.svg%2F800px-Leaflet_logo.svg.png'
 ---
 
@@ -13,7 +13,7 @@ import {
   LeafletMap,
   LeafletMapWithClusters,
   LeafletMapWithMarkers,
-} from '../../components/blog/examples/LeafletMap.lazy.tsx'
+} from '~/components/blog/examples/LeafletMap.lazy.tsx'
 
 ## Introduction
 
@@ -295,7 +295,7 @@ With Astro, you also need to update the usage of your lazy components, to includ
 For example, an import of the first example map in this `.mdx` blog looks like this:
 
 ```mdx
-import { LeafletMap } from '../../components/blog/examples/LeafletMap.lazy.tsx'
+import { LeafletMap } from '~/components/blog/examples/LeafletMap.lazy.tsx'
 
 <LeafletMap client:only="preact" />
 ```

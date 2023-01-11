@@ -3,7 +3,6 @@ import BaseMarkerCluster from '@changey/react-leaflet-markercluster'
 import type { MapOptions } from 'leaflet'
 import { Marker, divIcon, icon, point } from 'leaflet'
 import type { ComponentChildren, FunctionalComponent } from 'preact'
-// @ts-expect-error Should be imported
 // eslint-disable-next-line unused-imports/no-unused-imports
 import { h } from 'preact'
 import { MapContainer, TileLayer } from 'react-leaflet'

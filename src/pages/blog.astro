@@ -1,13 +1,13 @@
 ---
 import { Image } from '@astrojs/image/components'
 
-import DateComponent from '../components/date/DateComponent.astro'
-import Dot from '../components/Dot.astro'
-import MainLayout from '../layouts/MainLayout.astro'
-import { getImageAsset } from '../lib'
+import DateComponent from '~/components/date/DateComponent.astro'
+import Dot from '~/components/Dot.astro'
+import MainLayout from '~/layouts/MainLayout.astro'
+import { getImageAsset } from '~/lib'
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob('./blog/*.{md,mdx}'))
+const posts = (await Astro.glob('~/pages/blog/*.{md,mdx}'))
   .sort(
     (a, b) =>
       new Date(b.frontmatter.pubDate).valueOf() -

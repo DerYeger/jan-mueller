@@ -1,11 +1,10 @@
 ---
 import { Image } from '@astrojs/image/components'
 
-import DateComponent from '../components/date/DateComponent.astro'
-import Dot from '../components/Dot.astro'
-import { getImageAsset } from '../lib'
-
-import MainLayout from './MainLayout.astro'
+import DateComponent from '~/components/date/DateComponent.astro'
+import Dot from '~/components/Dot.astro'
+import MainLayout from '~/layouts/MainLayout.astro'
+import { getImageAsset } from '~/lib'
 
 export interface Props {
   content: {

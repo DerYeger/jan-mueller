@@ -14,6 +14,7 @@ import { h } from 'hastscript'
 import autolinkHeadings from 'rehype-autolink-headings'
 import rehypeExternalLinks from 'rehype-external-links'
 import { codeImport } from 'remark-code-import'
+import { tsconfigPaths } from 'vite-plugin-lib'
 
 import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs'
 
@@ -98,7 +99,7 @@ export default defineConfig({
     // critters({ logLevel: 'error' }),
   ],
   vite: {
-    plugins: [vitePreact()],
+    plugins: [vitePreact(), tsconfigPaths({ verbose: true })],
   },
   markdown: {
     shikiConfig: {
