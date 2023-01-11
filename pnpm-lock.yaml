@@ -24,6 +24,7 @@ specifiers:
   astro-critters: 1.1.24
   astro-icon: 0.8.0
   astro-robots-txt: 0.3.10
+  astro-seo-schema: 1.2.2
   cypress: 12.3.0
   eslint: 8.31.0
   hast-util-to-string: 2.0.0
@@ -85,6 +86,7 @@ devDependencies:
   astro-critters: 1.1.24
   astro-icon: 0.8.0
   astro-robots-txt: 0.3.10
+  astro-seo-schema: 1.2.2_bsmj4rtqqxmxqxxcig4d6ttxdu
   cypress: 12.3.0
   eslint: 8.31.0
   hast-util-to-string: 2.0.0
@@ -2410,6 +2412,17 @@ packages:
       deepmerge: 4.2.2
       valid-filename: 4.0.0
       zod: 3.20.2
+    dev: true
+
+  /astro-seo-schema/1.2.2_bsmj4rtqqxmxqxxcig4d6ttxdu:
+    resolution: {integrity: sha512-voXRew7vIMsIQy86R5+3SBZl9pcRh1VnFbtWnyXXBwFv4mGck2G7UARClNxLM8P/bszGDrZDS673VlQNB1fNXA==}
+    peerDependencies:
+      astro: ^1.0.0
+    dependencies:
+      astro: 1.9.1_zfha7dvnw4nti6zkbsmhmn6xo4
+      schema-dts: 1.1.0_typescript@4.9.4
+    transitivePeerDependencies:
+      - typescript
     dev: true
 
   /astro/1.9.1_zfha7dvnw4nti6zkbsmhmn6xo4:
@@ -8723,6 +8736,14 @@ packages:
 
   /sax/1.2.4:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
+    dev: true
+
+  /schema-dts/1.1.0_typescript@4.9.4:
+    resolution: {integrity: sha512-vdmbs/5ycj4zyKpZIDqTcy+IZi4s7c38RVAYuDmRi7zgxUT8wRWPMLzg0jr7FjdVunYu9yZ00F3+XcZTTFcTOQ==}
+    peerDependencies:
+      typescript: '>=4.1.0'
+    dependencies:
+      typescript: 4.9.4
     dev: true
 
   /section-matter/1.0.0:

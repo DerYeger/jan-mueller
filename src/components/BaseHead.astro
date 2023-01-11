@@ -3,6 +3,10 @@
 // all pages through the use of the <BaseHead /> component.
 import '~/styles/base.css'
 
+import { Schema } from 'astro-seo-schema'
+
+import { LinkedData } from '~/linkedData'
+
 export interface Props {
   title?: string | undefined
   description?: string | undefined
@@ -68,3 +72,5 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
   }
   window.localStorage.setItem('theme', theme)
 </script>
+
+<Schema item={LinkedData} />
