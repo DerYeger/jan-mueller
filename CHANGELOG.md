@@ -1,3 +1,10 @@
+# [3.31.0](https://github.com/DerYeger/jan-mueller/compare/v3.30.0...v3.31.0) (2023-01-13)
+
+
+### Features
+
+* use vanilla js for theme toggle ([cc48914](https://github.com/DerYeger/jan-mueller/commit/cc48914c8b3cd13e4fd46b0c49d41adedbd429c2))
+
 # [3.30.0](https://github.com/DerYeger/jan-mueller/compare/v3.29.0...v3.30.0) (2023-01-13)
 
 
