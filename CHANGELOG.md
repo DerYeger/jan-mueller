@@ -1,3 +1,15 @@
+# [3.28.0](https://github.com/DerYeger/jan-mueller/compare/v3.27.0...v3.28.0) (2023-01-13)
+
+
+### Bug Fixes
+
+* restore header links ([69ef847](https://github.com/DerYeger/jan-mueller/commit/69ef847defc710796206f3be8449f09b67c59419))
+
+
+### Features
+
+* remove blockquote quotes ([f32f1fa](https://github.com/DerYeger/jan-mueller/commit/f32f1fada294727149ecb0d07645e0cc7141ec0f))
+
 # [3.27.0](https://github.com/DerYeger/jan-mueller/compare/v3.26.0...v3.27.0) (2023-01-13)
 
 
