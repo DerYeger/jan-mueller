@@ -1,3 +1,24 @@
+# [3.26.0](https://github.com/DerYeger/jan-mueller/compare/v3.25.8...v3.26.0) (2023-01-13)
+
+
+### Bug Fixes
+
+* add missing trailing slash ([767dff9](https://github.com/DerYeger/jan-mueller/commit/767dff942e9dc118e9de6f64da49c48a9f9a71ea))
+* **deps:** update actions/stale action to v7 ([#159](https://github.com/DerYeger/jan-mueller/issues/159)) ([e045800](https://github.com/DerYeger/jan-mueller/commit/e0458003ebe5525dd1b0720ebf4a2b55dad7a89a))
+* **deps:** update all non-major dependencies ([54b92ab](https://github.com/DerYeger/jan-mueller/commit/54b92ab8d992ae11ed56cbbff96e7ab1c080f22d))
+* **deps:** update all non-major dependencies ([e1162aa](https://github.com/DerYeger/jan-mueller/commit/e1162aa41eab0209accf2a57783d7266488da94d))
+* **deps:** update all non-major dependencies ([c26c4e4](https://github.com/DerYeger/jan-mueller/commit/c26c4e4e8133b4207137bc3dd52fced073897c9a))
+* **deps:** update dependency @astrojs/rss to v2 ([#160](https://github.com/DerYeger/jan-mueller/issues/160)) ([2ff9ee9](https://github.com/DerYeger/jan-mueller/commit/2ff9ee94bc99b27da6e55d54317a509efbba1c99))
+* restore masonry wall example ([05d7945](https://github.com/DerYeger/jan-mueller/commit/05d7945b42bd9549d36f574ae4338d37129ecf5f))
+* use trailing slash ([4d31d77](https://github.com/DerYeger/jan-mueller/commit/4d31d777ccef0324c8173518836c927e988dae17))
+
+
+### Features
+
+* add `schema.org` linked data ([62780cf](https://github.com/DerYeger/jan-mueller/commit/62780cfa0179a4f6a02d35b41f2ad11c65aae7b5))
+* update to astro v2 ([eb23fa0](https://github.com/DerYeger/jan-mueller/commit/eb23fa0759296e6e0c149bfafe760a8950023fcb))
+* use absolute imports ([ff9cbdd](https://github.com/DerYeger/jan-mueller/commit/ff9cbddf8e8a8196c724c62fa9e57acec0102fa6))
+
 ## [3.25.8](https://github.com/DerYeger/jan-mueller/compare/v3.25.7...v3.25.8) (2022-12-17)
 
 
