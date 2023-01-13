@@ -6,7 +6,7 @@ describe('Blog', () => {
 
   it('can navigate to a post', () => {
     cy.contains('Masonry layout').click({ force: true })
-    cy.location('pathname').should('eq', '/blog/vue-masonry-wall')
+    cy.location('pathname').should('eq', '/blog/vue-masonry-wall/')
   })
 
   it('shows the details of a blog post', () => {

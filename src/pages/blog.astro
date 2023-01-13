@@ -28,7 +28,11 @@ const posts = (await getCollection('blog')).sort(
           const { remarkPluginFrontmatter } = await post.render()
           return (
             <li class="card card-hover overflow-hidden">
-              <a href={post.slug} rel="prefetch" class="block no-underline">
+              <a
+                href={`/blog/${post.slug}/`}
+                rel="prefetch"
+                class="block no-underline"
+              >
                 {post.data.heroImage && (
                   <Image
                     class="w-full h-[100px] object-cover"
