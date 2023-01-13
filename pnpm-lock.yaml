@@ -19,7 +19,6 @@ specifiers:
   '@types/leaflet': 1.9.0
   '@types/node': 18.11.18
   '@yeger/eslint-config': 1.8.1
-  '@yeger/page-views': 1.4.5
   '@yeger/vue-masonry-wall': 3.4.2
   astro: 2.0.0-beta.2
   astro-critters: 1.1.24
@@ -62,7 +61,6 @@ specifiers:
 
 dependencies:
   '@changey/react-leaflet-markercluster': 4.0.0-rc1_55zqbwdg2244kcjuhs6lcsbkfq
-  '@yeger/page-views': 1.4.5
   '@yeger/vue-masonry-wall': 3.4.2_vue@3.2.45
   leaflet: 1.9.3
   react-leaflet: 4.2.0_62odpeyiud56khcgusq6yrntjq
@@ -2084,10 +2082,6 @@ packages:
       - supports-color
       - typescript
     dev: true
-
-  /@yeger/page-views/1.4.5:
-    resolution: {integrity: sha512-5NIQpVXaCC/6/pgy7frlpx5wVilbkK0z5heNG98HW/1c5Thz0wJ2WwvP2o56BS7TrizMx1+FnYCLNqNhPcFr5g==}
-    dev: false
 
   /@yeger/vue-masonry-wall/3.4.2_vue@3.2.45:
     resolution: {integrity: sha512-VurykJbKKB7+3xdz0g0KrtknI8gUQOAzS2zQ0+BxKknu7gPSKaZJ2mJKJge+9NxkMNSZByPiDlrhij2eUYE29Q==}

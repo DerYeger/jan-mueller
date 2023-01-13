@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "@changey/react-leaflet-markercluster": "4.0.0-rc1",
-    "@yeger/page-views": "1.4.5",
     "@yeger/vue-masonry-wall": "3.4.2",
     "leaflet": "1.9.3",
     "react-leaflet": "4.2.0",

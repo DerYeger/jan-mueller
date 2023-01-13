@@ -1,6 +1,5 @@
 ---
 import OpenInNew from '~/components/icons/OpenInNew.astro'
-import ViewCounter from '~/components/ViewCounter'
 import { accounts } from '~/lib'
 
 const year = new Date().getFullYear()
@@ -36,7 +35,6 @@ const year = new Date().getFullYear()
       Source
       <OpenInNew />
     </a>
-    <ViewCounter client:idle />
   </div>
   <div>
     <span>Contact</span>
