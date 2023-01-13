@@ -1,3 +1,10 @@
+# [3.29.0](https://github.com/DerYeger/jan-mueller/compare/v3.28.0...v3.29.0) (2023-01-13)
+
+
+### Features
+
+* enable smooth scrolling ([128732f](https://github.com/DerYeger/jan-mueller/commit/128732f7e57ecb15b47279c72c24ca26d4962e87))
+
 # [3.28.0](https://github.com/DerYeger/jan-mueller/compare/v3.27.0...v3.28.0) (2023-01-13)
 
 
