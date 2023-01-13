@@ -1,0 +1,33 @@
+---
+import { Icon } from 'astro-icon'
+---
+
+<button
+  id="theme-toggle"
+  class="h-[48px] w-[48px] flex items-center justify-center"
+  title="Toggle dark mode"
+>
+  <Icon name="carbon:sun" class="h-[24px] w-[24px]" />
+  <Icon name="carbon:moon" class="h-[24px] w-[24px] hidden" />
+</button>
+
+<script is:inline>
+  let dark = localStorage.getItem('dark-theme') === 'true'
+  const button = document.getElementById('theme-toggle')
+  const [darkIcon, lightIcon] = button?.querySelectorAll('svg')
+
+  button?.addEventListener('click', toggleTheme)
+  updateVisibility()
+
+  function updateVisibility() {
+    lightIcon.classList[dark ? 'remove' : 'add']('hidden')
+    darkIcon.classList[dark ? 'add' : 'remove']('hidden')
+  }
+
+  function toggleTheme() {
+    dark = !dark
+    localStorage.setItem('dark-theme', dark)
+    updateVisibility()
+    document.documentElement.classList[dark ? 'add' : 'remove']('dark')
+  }
+</script>
