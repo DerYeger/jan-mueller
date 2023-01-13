@@ -40,6 +40,11 @@ const {
 } = Astro.props as Props
 
 const heroImageAsset = heroImage ? getImageAsset(heroImage) : undefined
+
+function removeSRLabel(text: string) {
+  const labelStart = text.indexOf('Section titled')
+  return text.substring(0, labelStart)
+}
 ---
 
 <MainLayout title={title} description={description} image={openGraphImage}>
@@ -85,7 +90,7 @@ const heroImageAsset = heroImage ? getImageAsset(heroImage) : undefined
           <ul>
             {headings.map(({ depth, slug, text }) => (
               <li style={{ marginLeft: `${2 * (depth - 2)}rem` }}>
-                <a href={`#${slug}`}>{text}</a>
+                <a href={`#${slug}`}>{removeSRLabel(text)}</a>
               </li>
             ))}
           </ul>

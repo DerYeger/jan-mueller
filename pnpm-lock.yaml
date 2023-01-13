@@ -15,6 +15,7 @@ specifiers:
   '@commitlint/config-conventional': 17.3.0
   '@preact/preset-vite': 2.5.0
   '@tailwindcss/typography': 0.5.8
+  '@types/html-escaper': 3.0.0
   '@types/leaflet': 1.9.0
   '@types/node': 18.11.18
   '@yeger/eslint-config': 1.8.1
@@ -30,6 +31,7 @@ specifiers:
   eslint: 8.31.0
   hast-util-to-string: 2.0.0
   hastscript: 7.2.0
+  html-escaper: 3.0.3
   husky: 8.0.3
   is-ci: 3.0.1
   leaflet: 1.9.3
@@ -44,6 +46,7 @@ specifiers:
   reading-time: 1.5.0
   rehype-autolink-headings: 6.1.1
   rehype-external-links: 2.0.1
+  rehype-slug: 5.1.0
   remark-code-import: 1.1.1
   rollup: 3.9.1
   sharp: 0.31.3
@@ -80,6 +83,7 @@ devDependencies:
   '@commitlint/config-conventional': 17.3.0
   '@preact/preset-vite': 2.5.0_25sf7uab2oyz6i4hy2v7ycl3kq
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
+  '@types/html-escaper': 3.0.0
   '@types/leaflet': 1.9.0
   '@types/node': 18.11.18
   '@yeger/eslint-config': 1.8.1_iukboom6ndih5an6iafl45j2fe
@@ -93,6 +97,7 @@ devDependencies:
   eslint: 8.31.0
   hast-util-to-string: 2.0.0
   hastscript: 7.2.0
+  html-escaper: 3.0.3
   husky: 8.0.3
   is-ci: 3.0.1
   lint-staged: 13.1.0
@@ -105,6 +110,7 @@ devDependencies:
   reading-time: 1.5.0
   rehype-autolink-headings: 6.1.1
   rehype-external-links: 2.0.1
+  rehype-slug: 5.1.0
   remark-code-import: 1.1.1
   rollup: 3.9.1
   sharp: 0.31.3
@@ -1631,6 +1637,10 @@ packages:
     resolution: {integrity: sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==}
     dependencies:
       '@types/unist': 2.0.6
+    dev: true
+
+  /@types/html-escaper/3.0.0:
+    resolution: {integrity: sha512-OcJcvP3Yk8mjYwf/IdXZtTE1tb/u0WF0qa29ER07ZHCYUBZXSN29Z1mBS+/96+kNMGTFUAbSz9X+pHmHpZrTCw==}
     dev: true
 
   /@types/json-schema/7.0.11:
@@ -7587,6 +7597,18 @@ packages:
       '@types/hast': 2.3.4
       hast-util-raw: 7.2.3
       unified: 10.1.2
+    dev: true
+
+  /rehype-slug/5.1.0:
+    resolution: {integrity: sha512-Gf91dJoXneiorNEnn+Phx97CO7oRMrpi+6r155tTxzGuLtm+QrI4cTwCa9e1rtePdL4i9tSO58PeSS6HWfgsiw==}
+    dependencies:
+      '@types/hast': 2.3.4
+      github-slugger: 2.0.0
+      hast-util-has-property: 2.0.1
+      hast-util-heading-rank: 2.1.0
+      hast-util-to-string: 2.0.0
+      unified: 10.1.2
+      unist-util-visit: 4.1.1
     dev: true
 
   /rehype-stringify/9.0.3:
