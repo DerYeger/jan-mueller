@@ -1,10 +1,22 @@
 {
+  "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
       "outputs": ["dist/**"]
     },
     "check": {
       "dependsOn": ["check:astro", "check:tsc", "check:vue"],
+      "outputs": []
+    },
+    "check:astro": {
+      "inputs": ["src/**/*.astro"],
+      "outputs": []
+    },
+    "check:tsc": {
+      "outputs": []
+    },
+    "check:vue": {
+      "inputs": ["src/**/*.vue"],
       "outputs": []
     },
     "lint": {
