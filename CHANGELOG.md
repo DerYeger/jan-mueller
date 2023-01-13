@@ -1,3 +1,10 @@
+# [3.27.0](https://github.com/DerYeger/jan-mueller/compare/v3.26.0...v3.27.0) (2023-01-13)
+
+
+### Features
+
+* extend react leaflet post with hook example ([0344c90](https://github.com/DerYeger/jan-mueller/commit/0344c90ea41a18eefe94301cbc6bd185c0311778))
+
 # [3.26.0](https://github.com/DerYeger/jan-mueller/compare/v3.25.8...v3.26.0) (2023-01-13)
 
 
