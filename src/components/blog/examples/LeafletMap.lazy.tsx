@@ -6,6 +6,9 @@ const LazyLeafletMap = lazy(
   () => import('~/components/blog/examples/LeafletMap')
 )
 const LazyMarker = lazy(async () => (await import('react-leaflet')).Marker)
+const LazyMapCenter = lazy(
+  async () => (await import('~/components/blog/examples/LeafletMap')).MapCenter
+)
 const LazyMarkerCluster = lazy(
   async () =>
     (await import('~/components/blog/examples/LeafletMap')).MarkerCluster
@@ -58,6 +61,25 @@ export const LeafletMapWithClusters: FunctionalComponent<
     <Suspense fallback={<div className="h-[200px]" />}>
       <LazyLeafletMap center={center} zoom={13} {...props}>
         <Suspense fallback={<></>}>
+          <LazyMarkerCluster>
+            {markers.map((position, index) => (
+              <LazyMarker key={index} position={position} interactive={false} />
+            ))}
+          </LazyMarkerCluster>
+        </Suspense>
+      </LazyLeafletMap>
+    </Suspense>
+  )
+}
+
+export const LeafletMapWithCenterText: FunctionalComponent<
+  Omit<MapOptions, 'center' | 'zoom'>
+> = (props) => {
+  return (
+    <Suspense fallback={<div className="h-[200px]" />}>
+      <LazyLeafletMap center={center} zoom={13} {...props}>
+        <Suspense fallback={<></>}>
+          <LazyMapCenter />
           <LazyMarkerCluster>
             {markers.map((position, index) => (
               <LazyMarker key={index} position={position} interactive={false} />

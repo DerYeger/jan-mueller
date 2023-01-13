@@ -3,9 +3,8 @@ import BaseMarkerCluster from '@changey/react-leaflet-markercluster'
 import type { MapOptions } from 'leaflet'
 import { Marker, divIcon, icon, point } from 'leaflet'
 import type { ComponentChildren, FunctionalComponent } from 'preact'
-// eslint-disable-next-line unused-imports/no-unused-imports
-import { h } from 'preact'
-import { MapContainer, TileLayer } from 'react-leaflet'
+import { useState } from 'preact/hooks'
+import { MapContainer, TileLayer, useMap, useMapEvents } from 'react-leaflet'
 
 Marker.prototype.options.icon = icon({
   iconUrl: '/static/leaflet/map-marker.svg',
@@ -40,6 +39,29 @@ export const MarkerCluster: FunctionalComponent<{
   )
 }
 
+export const MapCenter: FunctionalComponent = () => {
+  const map = useMap()
+  const [location, setLocation] = useState(map.getCenter())
+  const { lat, lng } = location
+  const text = `${lat.toFixed(4)}, ${lng.toFixed(4)}`
+  useMapEvents({
+    move(event) {
+      setLocation(event.target.getCenter())
+    },
+    zoom(event) {
+      setLocation(event.target.getCenter())
+    },
+  })
+  return (
+    <span
+      class="button absolute top-2 right-2 z-101 bg-white text-black rounded px-2 py-1 border-2 border-neutral-400"
+      onClick={() => map.setZoom(13)}
+    >
+      {text}
+    </span>
+  )
+}
+
 const LeafletMap: FunctionalComponent<
   {
     center: [number, number]
@@ -49,7 +71,7 @@ const LeafletMap: FunctionalComponent<
 > = ({ children, ...options }) => {
   return (
     <MapContainer
-      className="h-[200px] sm:h-[300px] md:h-[400px] transition-all w-full card isolate"
+      className="h-[200px] sm:h-[300px] md:h-[400px] transition-all w-full card isolate relative"
       scrollWheelZoom={false}
       maxZoo={18}
       {...options}

@@ -13,6 +13,7 @@ import {
   LeafletMap,
   LeafletMapWithClusters,
   LeafletMapWithMarkers,
+  LeafletMapWithCenterText,
 } from '~/components/blog/examples/LeafletMap.lazy.tsx'
 
 ## Introduction
@@ -73,7 +74,11 @@ const LeafletMap: FunctionalComponent<
   } & MapOptions
 > = ({ children, ...options }) => {
   return (
-    <MapContainer className="h-[200px] w-full" maxZoom={18} {...options}>
+    <MapContainer
+      className="h-[200px] w-full relative"
+      maxZoom={18}
+      {...options}
+    >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
@@ -295,13 +300,15 @@ With Astro, you also need to update the usage of your lazy components, to includ
 For example, an import of the first example map in this `.mdx` blog looks like this:
 
 ```mdx
-import { LeafletMap } from '~/components/blog/examples/LeafletMap.lazy.tsx'
+import { LeafletMap } from './LeafletMap.lazy.tsx'
 
 <LeafletMap client:only="preact" />
 ```
 
 > Note: At the time of writing, Astro may throw an error when importing your Preact component this way, see [withastro/astro#3833](https://github.com/withastro/astro/issues/3833).
 > As described [here](https://github.com/withastro/astro/issues/3833#issuecomment-1175827464), a workaround is importing `preact` in the offending file.
+
+> 13th January 2023: This issue has been fixed.
 
 ### Next.js
 
@@ -329,6 +336,78 @@ export const LazyMarkerCluster = dynamic(
 ```
 
 Now, all the `<Lazy...>` components can be used even without `<Suspense>` in any other component or page.
+
+## React Leaflet Hooks
+
+> 13th January 2023: This section has been added to showcase the usage of `react-leaflet` hooks in an SSR environment.
+
+A reader asked me how to use the `react-leaflet` hooks (e.g., `useMap`, `useMapEvents`) in an SSR environment.
+Because the hook imports also use `window`, they will throw an error in SSR environments if used directly.
+I added the following example to showcase this scenario, using the same lazy-loading approach as above.
+
+I chose a simple example, where the current center of the map is displayed in the top right corner of the map.
+Again, it's not rendered on the server, but it will be hydrated client-side.
+
+The following Preact component uses the `useMap` hook to get the initial center of the map, which is then displayed as formatted text.
+The listeners registered with `useMapEvents` will update the center whenever the map is moved (i.e, panned) or zoomed.
+As a bonus, the text is clickable and will reset the zoom level to 13 (i.e., the default I chose for the map).
+
+```tsx
+import { useMap, useMapEvents } from 'react-leaflet'
+
+export const MapCenter: FunctionalComponent = () => {
+  const map = useMap()
+  const [location, setLocation] = useState(map.getCenter())
+  const { lat, lng } = location
+  const text = `${lat.toFixed(4)}, ${lng.toFixed(4)}`
+  useMapEvents({
+    move(event) {
+      setLocation(event.target.getCenter())
+    },
+    zoom(event) {
+      setLocation(event.target.getCenter())
+    },
+  })
+  return (
+    <span
+      class="button absolute top-2 right-2 z-101 bg-white text-black rounded px-2 py-1 border-2 border-neutral-400"
+      onClick={() => map.setZoom(13)}
+    >
+      {text}
+    </span>
+  )
+}
+```
+
+Just as before, the component has to be imported lazily, and wrapped in a `<Suspense>` boundary.
+Reference the [Next.js guide](#nextjs) on how this import should look like for Next.js.
+
+```tsx
+const LazyMapCenter = lazy(async () => (await import('./LeafletMap')).MapCenter)
+
+export const LeafletMapWithCenterText: FunctionalComponent<
+  Omit<MapOptions, 'center' | 'zoom'>
+> = (props) => {
+  return (
+    <Suspense fallback={<div className="h-[200px]" />}>
+      <LazyLeafletMap center={center} zoom={13} {...props}>
+        <Suspense fallback={<></>}>
+          <LazyMapCenter />
+          <LazyMarkerCluster>
+            {markers.map((position, index) => (
+              <LazyMarker key={index} position={position} interactive={false} />
+            ))}
+          </LazyMarkerCluster>
+        </Suspense>
+      </LazyLeafletMap>
+    </Suspense>
+  )
+}
+```
+
+Try it out in the map below, by moving, zooming, or clicking the text in the top right corner (after changing the zoom level).
+
+<LeafletMapWithCenterText client:only="preact" />
 
 ## Conclusion
 
