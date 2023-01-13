@@ -5,17 +5,17 @@ describe('Footer', () => {
 
   it('has a link to the about page', () => {
     cy.get('footer').within(() => cy.contains('Legal Notice').click())
-    cy.location('pathname').should('eq', '/legal-notice')
+    cy.location('pathname').should('eq', '/legal-notice/')
   })
 
   it('has a link to the Impressum', () => {
     cy.get('footer').within(() => cy.contains('Impressum').click())
-    cy.location('pathname').should('eq', '/impressum')
+    cy.location('pathname').should('eq', '/impressum/')
   })
 
   it('has a link to the RSS feed', () => {
     cy.get('footer').within(() => cy.contains('Datenschutzerklärung').click())
-    cy.location('pathname').should('eq', '/datenschutzerklaerung')
+    cy.location('pathname').should('eq', '/datenschutzerklaerung/')
   })
 
   it('has a link to the Datenschutzerklärung', () => {

@@ -10,7 +10,7 @@ describe('Navigation', () => {
 
   it('has a link to the blog page', () => {
     cy.get('nav').within(() => cy.contains('Blog').click())
-    cy.location('pathname').should('eq', '/blog')
+    cy.location('pathname').should('eq', '/blog/')
   })
 })
 
