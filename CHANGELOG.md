@@ -1,3 +1,15 @@
+# [3.30.0](https://github.com/DerYeger/jan-mueller/compare/v3.29.0...v3.30.0) (2023-01-13)
+
+
+### Bug Fixes
+
+* use absolute paths ([b8ed7bc](https://github.com/DerYeger/jan-mueller/commit/b8ed7bc40314ed1e977eb77a77cc8ddab1434266))
+
+
+### Features
+
+* use content collections ([b01ae12](https://github.com/DerYeger/jan-mueller/commit/b01ae127bc362ba1c1c0735c60b9d8cad620b796))
+
 # [3.29.0](https://github.com/DerYeger/jan-mueller/compare/v3.28.0...v3.29.0) (2023-01-13)
 
 
