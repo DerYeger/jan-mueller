@@ -9,6 +9,7 @@ import vitePreact from '@preact/preset-vite'
 // import critters from 'astro-critters'
 import robotsTxt from 'astro-robots-txt'
 import { defineConfig } from 'astro/config'
+import autoprefixer from 'autoprefixer'
 import { toString } from 'hast-util-to-string'
 import { h } from 'hastscript'
 import autolinkHeadings from 'rehype-autolink-headings'
@@ -52,37 +53,7 @@ export default defineConfig({
       serviceEntryPoint: '@astrojs/image/sharp',
     }),
     mdx({
-      extendPlugins: 'astroDefaults',
-      remarkPlugins: [codeImport, remarkReadingTime],
-      rehypePlugins: [
-        [
-          autolinkHeadings,
-          {
-            behavior: 'append',
-            group: ({ tagName }) =>
-              h(`div.heading-wrapper.level-${tagName}`, {
-                tabIndex: -1,
-              }),
-            content: (heading) => [
-              h(
-                `span.anchor-icon`,
-                {
-                  ariaHidden: 'true',
-                },
-                AnchorLinkIcon
-              ),
-              createSROnlyLabel(toString(heading)),
-            ],
-          },
-        ],
-        [
-          rehypeExternalLinks,
-          {
-            target: '_blank',
-            rel: 'noreferrer',
-          },
-        ],
-      ],
+      extendMarkdownConfig: true,
     }),
     tailwind({
       config: {
@@ -100,8 +71,44 @@ export default defineConfig({
   ],
   vite: {
     plugins: [vitePreact(), tsconfigPaths({ verbose: true })],
+    css: {
+      postcss: {
+        plugins: [autoprefixer()],
+      },
+    },
   },
   markdown: {
+    gfm: true,
+    remarkPlugins: [codeImport, remarkReadingTime],
+    rehypePlugins: [
+      [
+        autolinkHeadings,
+        {
+          behavior: 'append',
+          group: ({ tagName }) =>
+            h(`div.heading-wrapper.level-${tagName}`, {
+              tabIndex: -1,
+            }),
+          content: (heading) => [
+            h(
+              `span.anchor-icon`,
+              {
+                ariaHidden: 'true',
+              },
+              AnchorLinkIcon
+            ),
+            createSROnlyLabel(toString(heading)),
+          ],
+        },
+      ],
+      [
+        rehypeExternalLinks,
+        {
+          target: '_blank',
+          rel: 'noreferrer',
+        },
+      ],
+    ],
     shikiConfig: {
       theme: 'monokai',
     },

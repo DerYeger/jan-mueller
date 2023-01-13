@@ -3,12 +3,17 @@
     "build": {
       "outputs": ["dist/**"]
     },
+    "check": {
+      "dependsOn": ["check:astro", "check:tsc", "check:vue"],
+      "outputs": []
+    },
     "lint": {
       "outputs": []
     },
     "preview": {
       "dependsOn": ["build"],
-      "cache": false
+      "cache": false,
+      "persistent": true
     }
   }
 }

@@ -12,22 +12,6 @@ jobs:
         with:
           node-version: 16
   build:
-    name: Build
-    runs-on: ubuntu-latest
-    needs: prepare
-    steps:
-      - name: Setup
-        uses: DerYeger/pnpm-setup-action@master
-        with:
-          node-version: 16
-      - name: Build
-        run: pnpm turbo build
-      - name: Upload
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist
-          path: dist
-  e2e:
     name: E2E
     runs-on: ubuntu-latest
     needs: build
@@ -36,13 +20,10 @@ jobs:
         uses: DerYeger/pnpm-setup-action@master
         with:
           node-version: 16
+      - name: Build, check, and lint
+        run: pnpm ci
       - name: Install cypress
         run: pnpm dlx cypress install
-      - name: Download
-        uses: actions/download-artifact@v3
-        with:
-          name: dist
-          path: dist
       - name: Test
         uses: cypress-io/github-action@v4
         with:
@@ -63,36 +44,10 @@ jobs:
         with:
           name: cypress-videos-chrome
           path: cypress/videos
-  check:
-    name: Check
-    runs-on: ubuntu-latest
-    needs: prepare
-    steps:
-      - name: Setup
-        uses: DerYeger/pnpm-setup-action@master
-        with:
-          node-version: 16
-      - name: Check Astro
-        run: pnpm check:astro
-      - name: Check TypeScript
-        run: pnpm check:tsc
-      - name: Check Vue
-        run: pnpm check:vue
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    needs: prepare
-    steps:
-      - name: Setup
-        uses: DerYeger/pnpm-setup-action@master
-        with:
-          node-version: 16
-      - name: Lint
-        run: pnpm turbo lint
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs: [build, check, e2e, lint]
+    needs: [build]
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
