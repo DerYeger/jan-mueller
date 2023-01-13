@@ -15,13 +15,16 @@
       "outputs": []
     },
     "check:tsc": {
+      "dependsOn": ["sync"],
       "outputs": []
     },
     "check:vue": {
+      "dependsOn": ["sync"],
       "inputs": ["src/**/*.vue"],
       "outputs": []
     },
     "lint": {
+      "dependsOn": ["sync"],
       "outputs": []
     },
     "preview": {
