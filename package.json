@@ -15,6 +15,7 @@
     "lint": "yeger-lint",
     "prepare": "is-ci || husky install",
     "preview": "astro preview",
+    "sync": "astro sync",
     "test:e2e": "cypress open",
     "test:e2e:run": "cypress run",
     "turbo": "FORCE_COLOR=1 turbo"

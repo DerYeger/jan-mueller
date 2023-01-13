@@ -4,5 +4,6 @@ cypress/screenshots
 cypress/videos
 dist
 node_modules
+.astro
 .idea/
 *.log

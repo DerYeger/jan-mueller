@@ -1,19 +1,17 @@
 ---
 import { Image } from '@astrojs/image/components'
+// eslint-disable-next-line import/no-unresolved
+import { getCollection } from 'astro:content'
+import moment from 'moment'
 
 import DateComponent from '~/components/date/DateComponent.astro'
 import Dot from '~/components/Dot.astro'
 import MainLayout from '~/layouts/MainLayout.astro'
 import { getImageAsset } from '~/lib'
 
-// Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob('~/pages/blog/*.{md,mdx}'))
-  .sort(
-    (a, b) =>
-      new Date(b.frontmatter.pubDate).valueOf() -
-      new Date(a.frontmatter.pubDate).valueOf()
-  )
-  .filter((post) => !post.frontmatter.draft)
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+)
 ---
 
 <MainLayout
@@ -26,35 +24,42 @@ const posts = (await Astro.glob('~/pages/blog/*.{md,mdx}'))
     </div>
     <ul class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {
-        posts.map((post) => (
-          <li class="card card-hover overflow-hidden">
-            <a href={post.url} rel="prefetch" class="block no-underline">
-              {post.frontmatter.heroImage && (
-                <Image
-                  class="w-full h-[100px] object-cover"
-                  src={getImageAsset(post.frontmatter.heroImage)}
-                  width={1200}
-                  height={200}
-                  quality={100}
-                  format="webp"
-                  alt={post.frontmatter.title}
-                />
-              )}
-              <div class="prose prose-sm dark:prose-invert p-4 flex flex-col gap-4">
-                <h2 class="my-0">{post.frontmatter.title}</h2>
-                <span class="text-lighter">
-                  <DateComponent
-                    date={post.frontmatter.pubDate}
-                    format="MMM DD, YYYY"
+        posts.map(async (post) => {
+          const { remarkPluginFrontmatter } = await post.render()
+          return (
+            <li class="card card-hover overflow-hidden">
+              <a href={post.slug} rel="prefetch" class="block no-underline">
+                {post.data.heroImage && (
+                  <Image
+                    class="w-full h-[100px] object-cover"
+                    src={getImageAsset(post.data.heroImage)}
+                    width={1200}
+                    height={200}
+                    quality={100}
+                    format="webp"
+                    alt={post.data.title}
                   />
-                  <Dot />
-                  <span>{post.frontmatter.readingTime}</span>
-                </span>
-                <span class="text-light">{post.frontmatter.description}</span>
-              </div>
-            </a>
-          </li>
-        ))
+                )}
+                <div class="prose prose-sm dark:prose-invert p-4 flex flex-col gap-4">
+                  <h2 class="my-0">{post.data.title}</h2>
+                  <span class="text-lighter">
+                    <DateComponent
+                      date={moment(post.data.pubDate).toISOString()}
+                      format="MMM DD, YYYY"
+                    />
+                    {remarkPluginFrontmatter && (
+                      <>
+                        <Dot />
+                        <span>{remarkPluginFrontmatter.readingTime}</span>
+                      </>
+                    )}
+                  </span>
+                  <span class="text-light">{post.data.description}</span>
+                </div>
+              </a>
+            </li>
+          )
+        })
       }
     </ul>
   </div>

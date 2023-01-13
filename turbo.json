@@ -2,6 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
+      "dependsOn": ["sync"],
       "outputs": ["dist/**"]
     },
     "check": {
@@ -9,6 +10,7 @@
       "outputs": []
     },
     "check:astro": {
+      "dependsOn": ["sync"],
       "inputs": ["src/**/*.astro"],
       "outputs": []
     },
@@ -26,6 +28,9 @@
       "dependsOn": ["build"],
       "cache": false,
       "persistent": true
+    },
+    "sync": {
+      "outputs": [".astro/**"]
     }
   }
 }

@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content'
+// eslint-disable-next-line import/no-unresolved
+import { getCollection } from 'astro:content'
+
+export async function getStaticPaths() {
+  const docs = await getCollection('blog')
+  return docs.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+
+interface Props {
+  entry: CollectionEntry<'blog'>
+}
+
+const { entry } = Astro.props as Props
+const { Content } = await entry.render()
+---
+
+<Content />
