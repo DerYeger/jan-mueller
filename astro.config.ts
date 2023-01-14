@@ -6,6 +6,7 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import vue from '@astrojs/vue'
 import vitePreact from '@preact/preset-vite'
+import critters from 'astro-critters'
 import robotsTxt from 'astro-robots-txt'
 import { defineConfig } from 'astro/config'
 import autoprefixer from 'autoprefixer'
@@ -42,6 +43,7 @@ export default defineConfig({
     prefetch(),
     sitemap(),
     robotsTxt(),
+    critters({ logger: 0, critters: { pruneSource: true } }),
   ],
   vite: {
     plugins: [vitePreact(), tsconfigPaths({ verbose: true })],
