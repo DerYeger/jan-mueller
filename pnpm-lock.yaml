@@ -21,7 +21,6 @@ specifiers:
   '@yeger/eslint-config': 1.8.1
   '@yeger/vue-masonry-wall': 3.4.3
   astro: 2.0.0-beta.2
-  astro-critters: 1.1.25
   astro-icon: 0.8.0
   astro-robots-txt: 0.3.11
   astro-seo-schema: 1.2.2
@@ -86,7 +85,6 @@ devDependencies:
   '@types/node': 18.11.18
   '@yeger/eslint-config': 1.8.1_iukboom6ndih5an6iafl45j2fe
   astro: 2.0.0-beta.2_@types+node@18.11.18
-  astro-critters: 1.1.25
   astro-icon: 0.8.0
   astro-robots-txt: 0.3.11
   astro-seo-schema: 1.2.2_mznh75dj5fgc3izup7m7myy4zy
@@ -2322,13 +2320,6 @@ packages:
     hasBin: true
     dev: true
 
-  /astro-critters/1.1.25:
-    resolution: {integrity: sha512-jh730RIphX6PChbstzgc0N5v8qHidwYdv+WfywHILkbL1if1lBadA3s70AMSbEItAPcBnwS5fkhN+FMoLA8NGA==}
-    dependencies:
-      critters: 0.0.16
-      files-pipeline: 0.0.2
-    dev: true
-
   /astro-eslint-parser/0.9.3:
     resolution: {integrity: sha512-w0Z8ydKT58l4950AikxDkuWmtBACen2nJWY8GjwhMcJGtGgKw+Kbbr5/RJsXu0BnCxo9Ks+5o4JZjQpzRUMYCg==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -3066,17 +3057,6 @@ packages:
 
   /create-require/1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
-
-  /critters/0.0.16:
-    resolution: {integrity: sha512-JwjgmO6i3y6RWtLYmXwO5jMd+maZt8Tnfu7VVISmEWyQqfLpB8soBswf8/2bu6SBXxtKA68Al3c+qIG1ApT68A==}
-    dependencies:
-      chalk: 4.1.2
-      css-select: 4.3.0
-      parse5: 6.0.1
-      parse5-htmlparser2-tree-adapter: 6.0.1
-      postcss: 8.4.21
-      pretty-bytes: 5.6.0
-    dev: true
 
   /cross-spawn/6.0.5:
     resolution: {integrity: sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ==}
@@ -4515,13 +4495,6 @@ packages:
   /filename-reserved-regex/3.0.0:
     resolution: {integrity: sha512-hn4cQfU6GOT/7cFHXBqeBg2TbrMBgdD0kcjLhvSQYYwm3s4B6cjvBfb7nBALJLAXqmU5xajSa7X2NnUud/VCdw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dev: true
-
-  /files-pipeline/0.0.2:
-    resolution: {integrity: sha512-e5BHeSXczwD+6PEy+CLhoYd9NSZkn6gK+QyGwgzdufO4qq0KWKMbVE53lwyw/gKYSbKMe2AgUvVp5N4VrA3OTw==}
-    dependencies:
-      deepmerge-ts: 4.2.2
-      fast-glob: 3.2.12
     dev: true
 
   /fill-range/7.0.1:
@@ -7092,12 +7065,6 @@ packages:
       nlcst-to-string: 3.1.0
       unist-util-modify-children: 3.1.0
       unist-util-visit-children: 2.0.1
-    dev: true
-
-  /parse5-htmlparser2-tree-adapter/6.0.1:
-    resolution: {integrity: sha512-qPuWvbLgvDGilKc5BoicRovlT4MtYT6JfJyBOMDsKoiT+GiuP5qyrPCnR9HcPECIJJmZh5jRndyNThnhhb/vlA==}
-    dependencies:
-      parse5: 6.0.1
     dev: true
 
   /parse5/6.0.1:
