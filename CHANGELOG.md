@@ -1,3 +1,10 @@
+# [3.37.0](https://github.com/DerYeger/jan-mueller/compare/v3.36.0...v3.37.0) (2023-01-14)
+
+
+### Features
+
+* prevent FOUC ([84c3e85](https://github.com/DerYeger/jan-mueller/commit/84c3e85224a41233ec2446b54107e11f484fbf34))
+
 # [3.36.0](https://github.com/DerYeger/jan-mueller/compare/v3.35.0...v3.36.0) (2023-01-14)
 
 
