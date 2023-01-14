@@ -4,7 +4,7 @@
 
 @layer components {
   a {
-    @apply text-black dark:text-white hover:text-neutral-600 hover:dark:text-neutral-300 transition-colors underline;
+    @apply hover:text-neutral-600 hover:dark:text-neutral-300 transition-colors underline;
   }
 
   .surface-border {
@@ -31,15 +31,6 @@
     @apply text-neutral-600 dark:text-neutral-400;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-black dark:text-white;
-  }
-
   img.square::after {
     content: '';
     display: block;
@@ -63,7 +54,7 @@
   }
 
   mark {
-    @apply bg-transparent italic font-semibold text-black dark:text-white;
+    @apply bg-transparent italic font-semibold;
   }
 
   .avatar {
