@@ -26,6 +26,35 @@ const finalImage = new URL(
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 ---
 
+<style is:inline>
+  html {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  a,
+  mark,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: black;
+  }
+
+  .dark a,
+  .dark mark,
+  .dark h1,
+  .dark h2,
+  .dark h3,
+  .dark h4,
+  .dark h5,
+  .dark h6 {
+    color: white;
+  }
+</style>
+
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -56,27 +85,3 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 <meta property="twitter:image" content={finalImage} />
 
 <Schema item={LinkedData} />
-
-<style>
-  a,
-  mark,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: black;
-  }
-
-  .dark a,
-  .dark mark,
-  .dark h1,
-  .dark h2,
-  .dark h3,
-  .dark h4,
-  .dark h5,
-  .dark h6 {
-    color: white;
-  }
-</style>
