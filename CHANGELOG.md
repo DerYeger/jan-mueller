@@ -1,3 +1,10 @@
+# [3.34.0](https://github.com/DerYeger/jan-mueller/compare/v3.33.0...v3.34.0) (2023-01-14)
+
+
+### Features
+
+* use critters ([1989a81](https://github.com/DerYeger/jan-mueller/commit/1989a816d193a9fb7a2c09b7747e4a5e74c8193d))
+
 # [3.33.0](https://github.com/DerYeger/jan-mueller/compare/v3.32.0...v3.33.0) (2023-01-14)
 
 
