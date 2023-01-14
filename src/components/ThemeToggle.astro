@@ -11,23 +11,35 @@ import { Icon } from 'astro-icon'
   <Icon name="carbon:moon" class="h-[24px] w-[24px] hidden" />
 </button>
 
-<script is:inline>
-  let dark = localStorage.getItem('dark-theme') === 'true'
+<script>
+  const key = 'dark-theme'
+  let dark = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem(key)) {
+      return localStorage.getItem(key) === 'true'
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return true
+    }
+    return false
+  })()
+
+  window.localStorage.setItem(key, dark.toString())
+
   const button = document.getElementById('theme-toggle')
-  const [darkIcon, lightIcon] = button?.querySelectorAll('svg')
+  const [darkIcon, lightIcon] = button.querySelectorAll('svg')
 
-  button?.addEventListener('click', toggleTheme)
-  updateVisibility()
+  button.addEventListener('click', toggleTheme)
+  updateClasses()
 
-  function updateVisibility() {
+  function updateClasses() {
     lightIcon.classList[dark ? 'remove' : 'add']('hidden')
     darkIcon.classList[dark ? 'add' : 'remove']('hidden')
+    document.documentElement.classList[dark ? 'add' : 'remove']('dark')
   }
 
   function toggleTheme() {
     dark = !dark
-    localStorage.setItem('dark-theme', dark)
-    updateVisibility()
-    document.documentElement.classList[dark ? 'add' : 'remove']('dark')
+    localStorage.setItem(key, dark.toString())
+    updateClasses()
   }
 </script>

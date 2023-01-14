@@ -55,18 +55,4 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 <meta property="twitter:description" content={finalDescription} />
 <meta property="twitter:image" content={finalImage} />
 
-<script is:inline>
-  const initialDark = (() => {
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return localStorage.getItem('dark-theme') === 'true'
-    }
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return true
-    }
-    return false
-  })()
-  document.documentElement.classList[initialDark ? 'add' : 'remove']('dark')
-  window.localStorage.setItem('dark-theme', initialDark)
-</script>
-
 <Schema item={LinkedData} />
