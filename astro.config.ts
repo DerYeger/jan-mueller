@@ -44,7 +44,7 @@ export default defineConfig({
     sitemap(),
     robotsTxt(),
     // Critters is disabled because it doesn't support some selectors used by Tailwind
-    critters({ critters: false && { pruneSource: true } }),
+    critters({ critters: { pruneSource: true } }),
   ],
   vite: {
     plugins: [vitePreact(), tsconfigPaths({ verbose: true })],

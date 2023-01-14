@@ -81,6 +81,11 @@
     "vue": "3.2.45",
     "vue-tsc": "1.0.24"
   },
+  "pnpm": {
+    "overrides": {
+      "css-select": "4.2.1"
+    }
+  },
   "lint-staged": {
     "*.{astro,js,json,md,ts,vue,yaml,yml}": "eslint --fix"
   }
