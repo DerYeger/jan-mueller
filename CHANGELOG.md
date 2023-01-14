@@ -1,3 +1,10 @@
+# [3.33.0](https://github.com/DerYeger/jan-mueller/compare/v3.32.0...v3.33.0) (2023-01-14)
+
+
+### Features
+
+* optimize images ([7711a7e](https://github.com/DerYeger/jan-mueller/commit/7711a7e17eaf5d54142619f10ec0198876fcf3a0))
+
 # [3.32.0](https://github.com/DerYeger/jan-mueller/compare/v3.31.1...v3.32.0) (2023-01-14)
 
 
