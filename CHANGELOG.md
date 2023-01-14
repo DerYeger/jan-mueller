@@ -1,3 +1,10 @@
+# [3.36.0](https://github.com/DerYeger/jan-mueller/compare/v3.35.0...v3.36.0) (2023-01-14)
+
+
+### Features
+
+* reduce cls ([ab5f406](https://github.com/DerYeger/jan-mueller/commit/ab5f4062009d3204f0fc5be334d66071b249d634))
+
 # [3.35.0](https://github.com/DerYeger/jan-mueller/compare/v3.34.0...v3.35.0) (2023-01-14)
 
 
