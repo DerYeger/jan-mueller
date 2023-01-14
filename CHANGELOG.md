@@ -1,3 +1,11 @@
+# [3.32.0](https://github.com/DerYeger/jan-mueller/compare/v3.31.1...v3.32.0) (2023-01-14)
+
+
+### Features
+
+* optimize css usage ([accbd6e](https://github.com/DerYeger/jan-mueller/commit/accbd6e216826535e971a1a2ba6d8a96c4644233))
+* optimize theme toggle script ([eccaecb](https://github.com/DerYeger/jan-mueller/commit/eccaecb6bb8db03f57a54f4279679850c0a95d03))
+
 ## [3.31.1](https://github.com/DerYeger/jan-mueller/compare/v3.31.0...v3.31.1) (2023-01-14)
 
 
