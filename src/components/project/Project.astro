@@ -1,5 +1,5 @@
 ---
-import { Image } from '@astrojs/image/components'
+import { Picture } from '@astrojs/image/components'
 
 import type { Project } from '~/types'
 
@@ -25,12 +25,14 @@ const src = await import(`../../assets/projects/${project.id}.png`)
       <h3 class="m-4">{project.title}</h3>
       <span class="mx-4 mb-2 text-light">{project.details}</span>
     </div>
-    <Image
-      class="rounded-b border-t surface my-0"
+    <Picture
+      class="rounded-b border-t surface my-0 w-full h-fit"
       src={src.default}
       aspectRatio={2}
-      width={800}
-      format="webp"
+      widths={[800]}
+      quality={85}
+      sizes="800px"
+      format="avif,webp"
       alt={project.title}
       loading="lazy"
     />

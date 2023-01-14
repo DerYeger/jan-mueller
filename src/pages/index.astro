@@ -22,7 +22,11 @@ import MainLayout from '~/layouts/MainLayout.astro'
           <span class="text-neutral-600 dark:text-neutral-400"> Engineer</span>
         </span>
       </h1>
-      <Avatar />
+      <div
+        class="avatar max-w-[400px] mx-auto md:max-w-full select-none mt-0 -mb-32 md:mb-0 md:col-span-2"
+      >
+        <Avatar />
+      </div>
     </section>
     <Badges />
     <AboutMe />

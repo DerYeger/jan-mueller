@@ -1,15 +1,16 @@
 ---
-import { Image } from '@astrojs/image/components'
+import { Picture } from '@astrojs/image/components'
 
 import avatar from '~/assets/avatar.webp'
 ---
 
-<Image
-  class="avatar max-w-full select-none mt-0 -mb-32 md:mb-0 md:col-span-2"
+<Picture
   src={avatar}
+  class="m-0 w-full h-full"
   alt="Jan"
-  width={1000}
-  quality={100}
-  format="webp"
+  widths={[1000]}
+  quality={85}
+  format="avif,webp"
+  sizes="1000px"
   loading="eager"
 />
