@@ -1,3 +1,10 @@
+## [3.38.1](https://github.com/DerYeger/jan-mueller/compare/v3.38.0...v3.38.1) (2023-01-15)
+
+
+### Bug Fixes
+
+* use cross-browser solution ([10b5713](https://github.com/DerYeger/jan-mueller/commit/10b5713c99caa110e4bc9e035b3dd1d978a1ddcd))
+
 # [3.38.0](https://github.com/DerYeger/jan-mueller/compare/v3.37.0...v3.38.0) (2023-01-15)
 
 
