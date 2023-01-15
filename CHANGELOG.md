@@ -1,3 +1,10 @@
+# [3.38.0](https://github.com/DerYeger/jan-mueller/compare/v3.37.0...v3.38.0) (2023-01-15)
+
+
+### Features
+
+* reduce transition flash ([9150eab](https://github.com/DerYeger/jan-mueller/commit/9150eab9b8be3cad3ed830309150d68cef06ce01))
+
 # [3.37.0](https://github.com/DerYeger/jan-mueller/compare/v3.36.0...v3.37.0) (2023-01-14)
 
 
