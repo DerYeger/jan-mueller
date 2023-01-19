@@ -1,0 +1,13 @@
+---
+interface Props {
+  class?: string
+  color: string
+}
+
+const { class: extraClasses = '', color } = Astro.props
+---
+
+<div
+  class={`brick w-[10%] h-0 pb-[calc(5%-2px)] p-1 rounded opacity-75 ${extraClasses} ${color}`}
+>
+</div>
