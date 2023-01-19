@@ -1,0 +1,75 @@
+---
+import Brick from '~/components/project/Brick.astro'
+import ProjectDescription from '~/components/project/ProjectDescription.astro'
+import ProjectTitle from '~/components/project/ProjectTitle.astro'
+
+const bricks = Array.from({ length: 9 }, (_, index) => index % 2).sort(
+  () => Math.random() - 0.5
+)
+---
+
+<a class="no-underline" href="https://wiener-time.vercel.app">
+  <div class="relative card card-hover w-full h-full overflow-hidden p-6">
+    <div
+      class="bricks absolute -inset-1 top-0 flex flex-wrap-reverse content-start items-end justify-between"
+    >
+      {
+        bricks.map((hidden, index) => {
+          const color = ['bg-red-800', 'bg-orange-300', 'bg-stone-600'][
+            index % 3
+          ]
+          return hidden ? (
+            <Brick
+              class={`translate-y-[-2000%] brick-hidden transition-transform duration-1000`}
+              color={color}
+            />
+          ) : (
+            <Brick color={color} />
+          )
+        })
+      }
+    </div>
+    <div class="prose dark:prose-invert relative">
+      <ProjectTitle>Masonry Wall</ProjectTitle>
+      <ProjectDescription>
+        Vue component for dynamic masonry layouts.
+      </ProjectDescription>
+    </div>
+  </div>
+</a>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return
+        }
+        setTimeout(() => {
+          const brickContainers = [...document.getElementsByClassName('bricks')]
+          brickContainers.forEach((brickContainer) => {
+            const bricks = [
+              ...brickContainer.getElementsByClassName('brick-hidden'),
+            ]
+            makeBrickVisible(bricks)
+          })
+        }, 500)
+        observer.unobserve(entry.target)
+      })
+    },
+    { threshold: 0.9 }
+  )
+
+  const containers = [...document.getElementsByClassName('bricks')]
+  containers.forEach((brickContainer) => {
+    observer.observe(brickContainer)
+  })
+
+  function makeBrickVisible(bricks: Element[]) {
+    const [brick, ...rest] = bricks
+    brick.classList.remove('translate-y-[-2000%]', 'brick-hidden')
+    if (rest.length > 0) {
+      setTimeout(() => makeBrickVisible(rest), Math.random() * 25 + 75)
+    }
+  }
+</script>

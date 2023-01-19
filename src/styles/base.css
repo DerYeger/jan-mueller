@@ -16,11 +16,11 @@
   }
 
   .card {
-    @apply surface border rounded shadow-md;
+    @apply surface border rounded-3xl shadow-xl;
   }
 
   .card-hover {
-    @apply hover:shadow-xl transition-shadow;
+    @apply hover:shadow-2xl transition-shadow;
   }
 
   .text-light {

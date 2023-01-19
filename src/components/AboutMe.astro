@@ -1,63 +1,41 @@
-<section
-  class="prose dark:prose-invert mx-auto my-32 grid max-w-4xl grid-cols-1 gap-24 px-4 text-justify sm:grid-cols-2 sm:gap-16 lg:grid-cols-3 [&>*>*:first-child]:mt-0 [&>*>*:last-child]:mb-0"
->
-  <div class="prose-2xl col-span-full">
-    <h2 class="mx-auto my-0 flex w-fit flex-col">
-      <span class="center">About</span>
-      <span class="self-end text-center font-extralight">Me</span>
-    </h2>
-  </div>
-  <div class="col-span-full sm:col-span-1">
-    <h3 class="text-start text-xs font-black uppercase">Web & Mobile</h3>
-    <p>
-      I develop <mark
-        >websites, apps, APIs, <a
-          href="https://www.npmjs.com/~yeger"
-          rel="noreferrer"
-          target="_blank"
-          class="inline-block"
-          >libraries
-        </a>, and CLIs
-      </mark> using various programming languages, including <mark
-        >Kotlin, TypeScript, Go, and Python,
-      </mark> as well as frameworks like <mark
-        >React, Vue, Angular, and Astro.
-      </mark>
-    </p>
-    <p>
-      In addition to development, I work on tasks related to <mark
-        >DevOps,
-      </mark> such as designing efficient <mark>CI pipelines</mark> and handling
-      <mark>deployment of microservices</mark>.
-    </p>
-  </div>
-  <div class="col-span-full sm:col-span-1">
-    <h3 class="text-start text-xs font-black uppercase">Programming</h3>
-    <p>
-      I enjoy working on <mark>open-source and hobby projects,</mark> which I use
-      as a platform for learning new technologies and giving back to the
-      <abbr title="Open-source Software">OSS</abbr> community.
-    </p>
-    <p>
-      I am also not averse to the theoretical aspects of software development
-      and like to deal with
-      <mark>algorithms, data structures, or the big O notation,</mark> among others.
-    </p>
-  </div>
-  <div class="col-span-full lg:col-span-1">
-    <h3 class="text-start text-xs font-black uppercase">
-      Hobbies & Inspiration
-    </h3>
-    <p>
-      I find my inspiration while <mark
-        >listening to music, walking, and reading,
-      </mark> where I like to lose myself in science fiction worlds like Frank Herbert's
-      Dune.
-    </p>
-    <p>
-      Both melancholic songs by Ben Howard and breathtaking soundtracks of my
-      favorite video games accompany me during hours of programming and inspire
-      me to look for solutions to even the trickiest problems.
-    </p>
+---
+import About from '~/components/project/About.astro'
+import CYKVisualizer from '~/components/project/CYKVisualizer.astro'
+import Formi from '~/components/project/Formi.astro'
+import Masonry from '~/components/project/Masonry.astro'
+import Noted from '~/components/project/Noted.astro'
+import Photo from '~/components/project/Photo.astro'
+import Refunk from '~/components/project/Refunk.astro'
+import WienerTime from '~/components/project/WienerTime.astro'
+---
+
+<section class="px-4">
+  <div
+    class="max-w-3xl 2xl:max-w-none mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-5 grid-flow-row gap-4"
+  >
+    <div class="row-span-2">
+      <Formi />
+    </div>
+    <div>
+      <About />
+    </div>
+    <div class="sm:col-span-2">
+      <WienerTime />
+    </div>
+    <div class="md:col-span-2 h-48">
+      <Masonry />
+    </div>
+    <div class="md:col-span-2">
+      <Noted />
+    </div>
+    <div>
+      <Photo />
+    </div>
+    <div>
+      <Refunk />
+    </div>
+    <div>
+      <CYKVisualizer />
+    </div>
   </div>
 </section>
