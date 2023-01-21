@@ -6,10 +6,10 @@ const { default: innerHTML } = await import(`~/assets/projects/Refunk.svg?raw`)
 ---
 
 <div
-  class="refunk card card-hover group w-full h-full overflow-hidden relative p-6 z-10"
+  class="refunk card card-hover group relative z-10 h-full w-full overflow-hidden p-6"
 >
   <div
-    class="refunk-logo absolute inset-0 transition-all scale-[2000%] duration-700 dark:brightness-50 dark:!opacity-100"
+    class="refunk-logo absolute inset-0 scale-[2000%] transition-all duration-700 dark:!opacity-100 dark:brightness-50"
   >
     <Fragment set:html={innerHTML} />
   </div>

@@ -2,6 +2,3 @@ CHANGELOG.md
 dist
 node_modules
 public
-src/auto-import.d.ts
-src/components.d.ts
-src/shims.d.ts

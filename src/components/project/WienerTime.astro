@@ -9,7 +9,7 @@ const { default: innerHTML } = await import(
 
 <a class="no-underline" href="https://wiener-time.vercel.app">
   <div
-    class="card card-hover w-full h-full p-6 flex flex-col md:flex-row gap-2"
+    class="card card-hover flex h-full w-full flex-col gap-2 p-6 md:flex-row"
   >
     <div class="prose dark:prose-invert">
       <ProjectTitle>WienerTime</ProjectTitle>
@@ -17,7 +17,7 @@ const { default: innerHTML } = await import(
         Real-time traffic data of Wiener Linien public transportation monitors.
       </ProjectDescription>
     </div>
-    <div class="h-32 md:h-auto md:w-64 -my-6 opacity-75 dark:!opacity-100">
+    <div class="-my-6 h-32 opacity-75 dark:!opacity-100 md:h-auto md:w-64">
       <Fragment set:html={innerHTML} />
     </div>
   </div>

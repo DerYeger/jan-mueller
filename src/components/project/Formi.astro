@@ -9,7 +9,7 @@ const second = await import('~/assets/projects/formi-second.webp')
 ---
 
 <div
-  class="formi card card-hover group w-full h-full overflow-hidden relative p-6 flex flex-col justify-between gap-4"
+  class="formi card card-hover group relative flex h-full w-full flex-col justify-between gap-4 overflow-hidden p-6"
 >
   <div class="prose dark:prose-invert">
     <ProjectTitle>Formi</ProjectTitle>
@@ -18,7 +18,7 @@ const second = await import('~/assets/projects/formi-second.webp')
       real-time validation, and textual input.
     </ProjectDescription>
   </div>
-  <div class="relative h-36 self-center w-36">
+  <div class="relative h-36 w-36 self-center">
     <Picture
       src={first.default.src}
       alt="Formi Logo"
@@ -28,7 +28,7 @@ const second = await import('~/assets/projects/formi-second.webp')
       sizes="192px"
       loading="lazy"
       formats={['avif', 'webp']}
-      class="absolute inset-0 -mt-4 -ml-4 transition-transform translate-x-[1000%] duration-500"
+      class="absolute inset-0 -mt-4 -ml-4 translate-x-[1000%] transition-transform duration-500"
     />
     <Picture
       src={second.default.src}
@@ -39,7 +39,7 @@ const second = await import('~/assets/projects/formi-second.webp')
       sizes="192px"
       loading="lazy"
       formats={['avif', 'webp']}
-      class="absolute inset-0 mt-4 ml-4 transition-transform translate-x-[1000%] duration-700"
+      class="absolute inset-0 mt-4 ml-4 translate-x-[1000%] transition-transform duration-700"
     />
   </div>
 </div>

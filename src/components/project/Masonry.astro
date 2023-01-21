@@ -9,7 +9,7 @@ const bricks = Array.from({ length: 9 }, (_, index) => index % 2).sort(
 ---
 
 <a class="no-underline" href="https://wiener-time.vercel.app">
-  <div class="relative card card-hover w-full h-full overflow-hidden p-6">
+  <div class="card card-hover relative h-full w-full overflow-hidden p-6">
     <div
       class="bricks absolute -inset-1 top-0 flex flex-wrap-reverse content-start items-end justify-between"
     >
@@ -20,7 +20,7 @@ const bricks = Array.from({ length: 9 }, (_, index) => index % 2).sort(
           ]
           return hidden ? (
             <Brick
-              class={`translate-y-[-2000%] brick-hidden transition-transform duration-1000`}
+              class={`brick-hidden translate-y-[-2000%] transition-transform duration-1000`}
               color={color}
             />
           ) : (

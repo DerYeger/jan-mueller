@@ -11,7 +11,7 @@ import WienerTime from '~/components/project/WienerTime.astro'
 
 <section class="px-4">
   <div
-    class="max-w-3xl 2xl:max-w-none mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-5 grid-flow-row gap-4"
+    class="mx-auto grid max-w-3xl grid-flow-row grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 2xl:max-w-none 2xl:grid-cols-5"
   >
     <div class="row-span-2">
       <Formi />
@@ -22,7 +22,7 @@ import WienerTime from '~/components/project/WienerTime.astro'
     <div class="sm:col-span-2">
       <WienerTime />
     </div>
-    <div class="md:col-span-2 h-48">
+    <div class="h-48 md:col-span-2">
       <Masonry />
     </div>
     <div class="md:col-span-2">
