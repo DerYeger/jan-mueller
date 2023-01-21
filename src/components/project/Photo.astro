@@ -4,7 +4,7 @@ import { Picture } from '@astrojs/image/components'
 const image = await import('~/assets/rauris.png')
 ---
 
-<div class="card w-full h-fit !bg-neutral-900 overflow-hidden">
+<div class="card h-fit w-full overflow-hidden !bg-neutral-900">
   <Picture
     src={image.default.src}
     alt="Picture of a forest in Rauris, Austria."
@@ -14,6 +14,6 @@ const image = await import('~/assets/rauris.png')
     quality={85}
     format={['avif', 'webp']}
     loading="lazy"
-    class="object-cover m-0 w-full h-full"
+    class="m-0 h-full w-full object-cover"
   />
 </div>

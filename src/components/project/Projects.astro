@@ -10,15 +10,15 @@ import WienerTime from '~/components/project/WienerTime.astro'
 ---
 
 <section
-  class="px-4 bg-zinc-200 dark:bg-zinc-800 border-zinc-300 dark:border-zinc-700 border-y max-w-none pb-8 pt-0 my-32"
+  class="my-32 max-w-none border-y border-zinc-300 bg-zinc-200 px-4 pb-8 pt-0 dark:border-zinc-700 dark:bg-zinc-800"
 >
   <div class="container mx-auto">
     <div class="prose dark:prose-invert prose-2xl my-12 mx-auto">
-      <h2 class="text-center flex flex-col w-fit mx-auto">
-        <span class="font-extralight text-3xl self-start">Featured</span>
+      <h2 class="mx-auto flex w-fit flex-col text-center">
+        <span class="self-start text-3xl font-extralight">Featured</span>
         <span class="font-extrabold">Projects</span>
       </h2>
-      <p class="text-center block text-base">
+      <p class="block text-center text-base">
         <a
           href="https://github.com/DerYeger?tab=repositories&q=&type=&language=&sort=stargazers"
           rel="noreferrer"
@@ -31,15 +31,15 @@ import WienerTime from '~/components/project/WienerTime.astro'
       </p>
     </div>
     <div
-      class="max-w-3xl 2xl:max-w-none mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-5 grid-flow-row gap-4"
+      class="mx-auto grid max-w-3xl grid-flow-row grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 2xl:max-w-none 2xl:grid-cols-5"
     >
       <div class="row-span-2 sm:col-span-2 md:col-span-1">
         <Formi />
       </div>
-      <div class="sm:col-span-2 h-48">
+      <div class="h-48 sm:col-span-2">
         <WienerTime />
       </div>
-      <div class="md:col-span-2 h-48">
+      <div class="h-48 md:col-span-2">
         <Masonry />
       </div>
       <div class="md:col-span-2">
