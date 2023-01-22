@@ -3,9 +3,10 @@ import { Icon } from 'astro-icon'
 
 interface Props {
   href: string
+  label: string
 }
 
-const { href } = Astro.props
+const { href, label } = Astro.props
 ---
 
 <div class="flex w-full justify-end">
@@ -13,6 +14,7 @@ const { href } = Astro.props
     href={href}
     target="_blank"
     rel="noopener noreferrer"
+    aria-label={label}
     class="z-20 block h-[2em] w-[2em] rounded-full border-2 border-neutral-400 p-1 text-neutral-400 transition-all hover:bg-neutral-100 hover:text-black"
   >
     <Icon name="radix-icons:arrow-top-right" />

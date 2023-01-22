@@ -3,15 +3,17 @@ import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
 
+const name = 'WienerTime'
+
 const { default: innerHTML } = await import(
   `~/assets/projects/WienerLinien.svg?raw`
 )
 ---
 
-<Showcase link="https://wiener-time.vercel.app">
+<Showcase name={name} link="https://wiener-time.vercel.app">
   <div class="flex flex-col gap-2 md:flex-row">
     <div class="prose dark:prose-invert">
-      <ShowcaseTitle>WienerTime</ShowcaseTitle>
+      <ShowcaseTitle>{name}</ShowcaseTitle>
       <ShowcaseDescription>
         Real-time traffic data of Wiener Linien public transportation monitors.
       </ShowcaseDescription>

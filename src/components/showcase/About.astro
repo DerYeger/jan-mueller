@@ -2,11 +2,13 @@
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
+
+const name = 'About Me'
 ---
 
-<Showcase>
+<Showcase name={name}>
   <div class="prose dark:prose-invert">
-    <ShowcaseTitle>About Me</ShowcaseTitle>
+    <ShowcaseTitle>{name}</ShowcaseTitle>
     <ShowcaseDescription>TODO</ShowcaseDescription>
   </div>
 </Showcase>

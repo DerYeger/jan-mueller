@@ -2,15 +2,17 @@
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
+
+const name = 'Noted'
 ---
 
-<Showcase link="https://noted.yeger.eu">
+<Showcase name={name} link="https://noted.yeger.eu">
   <div
     class="absolute -right-32 -top-32 h-12 w-12 rounded-full bg-red-500 transition-transform duration-500 group-hover:scale-[5000%]"
   >
   </div>
   <div class="prose dark:prose-invert relative">
-    <ShowcaseTitle>Noted</ShowcaseTitle>
+    <ShowcaseTitle>{name}</ShowcaseTitle>
     <ShowcaseDescription>Markdown note-taking</ShowcaseDescription>
   </div>
 </Showcase>
