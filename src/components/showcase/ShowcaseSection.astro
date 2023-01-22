@@ -1,0 +1,37 @@
+---
+import About from '~/components/showcase/About.astro'
+import Formi from '~/components/showcase/Formi.astro'
+import Masonry from '~/components/showcase/Masonry.astro'
+import Noted from '~/components/showcase/Noted.astro'
+import Photo from '~/components/showcase/Photo.astro'
+import Refunk from '~/components/showcase/Refunk.astro'
+import WienerTime from '~/components/showcase/WienerTime.astro'
+---
+
+<section class="px-4">
+  <div
+    class="mx-auto grid max-w-3xl grid-flow-row grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 2xl:max-w-none 2xl:grid-cols-5"
+  >
+    <div class="row-span-2 md:first-line:col-span-2">
+      <About />
+    </div>
+    <div class="row-span-2">
+      <Formi />
+    </div>
+    <div>
+      <Photo />
+    </div>
+    <div class="sm:col-span-2">
+      <WienerTime />
+    </div>
+    <div class="md:col-span-2">
+      <Masonry />
+    </div>
+    <div>
+      <Refunk />
+    </div>
+    <div class="md:col-span-2">
+      <Noted />
+    </div>
+  </div>
+</section>

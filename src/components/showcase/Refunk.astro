@@ -1,26 +1,25 @@
 ---
-import ProjectDescription from '~/components/project/ProjectDescription.astro'
-import ProjectTitle from '~/components/project/ProjectTitle.astro'
+import Showcase from '~/components/showcase/Showcase.astro'
+import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
+import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
 
 const { default: innerHTML } = await import(`~/assets/projects/Refunk.svg?raw`)
 ---
 
-<div
-  class="refunk card card-hover group relative z-10 h-full w-full overflow-hidden p-6"
->
+<Showcase class="refunk" link="https://refunk.yeger.eu">
   <div
     class="refunk-logo absolute inset-0 scale-[2000%] transition-all duration-700 dark:!opacity-100 dark:brightness-50"
   >
     <Fragment set:html={innerHTML} />
   </div>
   <div class="prose dark:prose-invert relative">
-    <ProjectTitle>Refunk</ProjectTitle>
-    <ProjectDescription>
+    <ShowcaseTitle>Refunk</ShowcaseTitle>
+    <ShowcaseDescription>
       A Kotlin library for studying primitive recursive functions using a
       mathematical DSL.
-    </ProjectDescription>
+    </ShowcaseDescription>
   </div>
-</div>
+</Showcase>
 
 <script>
   const observer = new IntersectionObserver(
