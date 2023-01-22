@@ -76,6 +76,11 @@ html {
   }
 }
 
+/* Fix for animating elements in Safari  */
+.overflow-hidden {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
 .leaflet-bottom,
 .leaflet-control,
 .leaflet-pane,
