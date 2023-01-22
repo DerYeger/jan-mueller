@@ -1,0 +1,33 @@
+---
+import Photo from '~/components/showcase/Photo.astro'
+import Showcase from '~/components/showcase/Showcase.astro'
+---
+
+<Showcase class="photos h-0 border-0 !bg-neutral-900 !p-0 !pb-[100%]">
+  <Photo
+    src={import('~/assets/rauris.png')}
+    alt="Picture of a forest in Rauris, Austria."
+    initial
+  />
+  <Photo src={import('~/assets/binz.png')} alt="Picture of a beach of Binz." />
+</Showcase>
+
+<script>
+  ;[...document.getElementsByClassName('photos')].forEach((container) => {
+    const images = container.getElementsByClassName('photo')
+    const length = images.length
+    let current = 0
+
+    queueNextImage()
+
+    function queueNextImage() {
+      setTimeout(() => {
+        const next = (current + 1) % length
+        images[current].classList.toggle('opacity-0')
+        images[next].classList.toggle('opacity-0')
+        current = next
+        queueNextImage()
+      }, 5000)
+    }
+  })
+</script>
