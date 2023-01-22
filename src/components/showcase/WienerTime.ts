@@ -51,6 +51,11 @@ function calculateDashoffset(grid: Element): number {
 
 function setDashoffset(line: SVGPathElement, percentage: number) {
   const length = line.getTotalLength()
+  if (percentage === 0) {
+    line.style.opacity = '0'
+  } else {
+    line.style.opacity = Math.min(1, 1.5 * percentage).toFixed(2)
+  }
   line.style.strokeDashoffset = `${length - length * percentage}px`
 }
 
