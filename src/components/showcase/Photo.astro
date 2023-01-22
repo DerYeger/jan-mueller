@@ -1,10 +1,12 @@
 ---
 import { Picture } from '@astrojs/image/components'
 
+import Showcase from '~/components/showcase/Showcase.astro'
+
 const image = await import('~/assets/rauris.png')
 ---
 
-<div class="card h-fit w-full overflow-hidden !bg-neutral-900">
+<Showcase class="border-0 !bg-neutral-900 !p-0">
   <Picture
     src={image.default.src}
     alt="Picture of a forest in Rauris, Austria."
@@ -16,4 +18,4 @@ const image = await import('~/assets/rauris.png')
     loading="lazy"
     class="m-0 h-full w-full object-cover"
   />
-</div>
+</Showcase>

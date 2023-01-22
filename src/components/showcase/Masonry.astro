@@ -1,42 +1,39 @@
 ---
-import Brick from '~/components/project/Brick.astro'
-import ProjectDescription from '~/components/project/ProjectDescription.astro'
-import ProjectTitle from '~/components/project/ProjectTitle.astro'
+import Brick from '~/components/showcase/Brick.astro'
+import Showcase from '~/components/showcase/Showcase.astro'
+import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
+import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
 
 const bricks = Array.from({ length: 9 }, (_, index) => index % 2).sort(
   () => Math.random() - 0.5
 )
 ---
 
-<a class="no-underline" href="https://wiener-time.vercel.app">
-  <div class="card card-hover relative h-full w-full overflow-hidden p-6">
-    <div
-      class="bricks absolute -inset-1 top-0 flex flex-wrap-reverse content-start items-end justify-between"
-    >
-      {
-        bricks.map((hidden, index) => {
-          const color = ['bg-red-800', 'bg-orange-300', 'bg-stone-600'][
-            index % 3
-          ]
-          return hidden ? (
-            <Brick
-              class={`brick-hidden translate-y-[-2000%] transition-transform duration-1000`}
-              color={color}
-            />
-          ) : (
-            <Brick color={color} />
-          )
-        })
-      }
-    </div>
-    <div class="prose dark:prose-invert relative">
-      <ProjectTitle>Masonry Wall</ProjectTitle>
-      <ProjectDescription>
-        Vue component for dynamic masonry layouts.
-      </ProjectDescription>
-    </div>
+<Showcase link="https://vue-masonry-wall.yeger.eu">
+  <div
+    class="bricks absolute -inset-1 top-0 flex flex-wrap-reverse content-start items-end justify-between"
+  >
+    {
+      bricks.map((hidden, index) => {
+        const color = ['bg-red-800', 'bg-orange-300', 'bg-stone-600'][index % 3]
+        return hidden ? (
+          <Brick
+            class={`brick-hidden translate-y-[-2000%] transition-transform duration-1000`}
+            color={color}
+          />
+        ) : (
+          <Brick color={color} />
+        )
+      })
+    }
   </div>
-</a>
+  <div class="prose dark:prose-invert relative">
+    <ShowcaseTitle>Masonry Wall</ShowcaseTitle>
+    <ShowcaseDescription>
+      Vue component for dynamic masonry layouts.
+    </ShowcaseDescription>
+  </div>
+</Showcase>
 
 <script>
   const observer = new IntersectionObserver(
