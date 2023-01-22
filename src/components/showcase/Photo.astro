@@ -1,21 +1,29 @@
 ---
 import { Picture } from '@astrojs/image/components'
 
-import Showcase from '~/components/showcase/Showcase.astro'
+interface Props {
+  src: Promise<typeof import('*.png')> | Promise<typeof import('*.webp')>
+  alt: string
+  initial?: boolean
+}
 
-const image = await import('~/assets/rauris.png')
+const { src, alt, initial = false } = Astro.props
 ---
 
-<Showcase class="border-0 !bg-neutral-900 !p-0">
+<div
+  class={`photo absolute inset-0 block transition-opacity duration-1000 ${
+    initial ? '' : 'opacity-0'
+  }`}
+>
   <Picture
-    src={image.default.src}
-    alt="Picture of a forest in Rauris, Austria."
-    widths={[512]}
-    sizes="512px"
+    src={src}
+    alt={alt}
+    widths={[768]}
+    sizes="768px"
     aspectRatio={1}
     quality={85}
     format={['avif', 'webp']}
     loading="lazy"
     class="m-0 h-full w-full object-cover"
   />
-</Showcase>
+</div>
