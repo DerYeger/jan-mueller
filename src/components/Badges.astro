@@ -5,7 +5,7 @@ import { accounts } from '~/lib'
 ---
 
 <section
-  class="prose dark:prose-invert prose-2xl relative my-32 w-full max-w-none border-y border-zinc-300 bg-zinc-200 px-4 py-8 dark:border-zinc-700 dark:bg-zinc-800"
+  class="prose dark:prose-invert prose-2xl relative my-32 w-full max-w-none border-y border-zinc-300 bg-zinc-200 px-4 py-8 shadow-lg dark:border-zinc-700 dark:bg-zinc-800"
 >
   <div class="children:w-6 children:h-6 flex justify-center gap-8">
     {
@@ -15,7 +15,7 @@ import { accounts } from '~/lib'
           rel="noreferrer"
           target="_blank"
           title={account.name}
-          class="text-light transition-colors hover:text-black hover:dark:text-white"
+          class="text-light hover:box-shadow-2xl transition-all hover:text-black hover:dark:text-white"
         >
           <Icon name={account.icon} />
         </a>
@@ -26,7 +26,7 @@ import { accounts } from '~/lib'
     <a
       href="/blog"
       rel="prefetch"
-      class="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 !text-base text-white no-underline transition-transform hover:scale-105 hover:text-white dark:from-blue-500 dark:to-blue-600 hover:dark:text-white"
+      class="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 !text-base text-white no-underline shadow-lg transition-transform hover:scale-105 hover:text-white hover:shadow-xl dark:from-blue-500 dark:to-blue-600 hover:dark:text-white"
       style="border-radius: 1.5rem; padding: 0.5rem 1rem;"
     >
       Blog

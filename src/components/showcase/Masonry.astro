@@ -1,5 +1,6 @@
 ---
 import Brick from '~/components/showcase/Brick.astro'
+import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
@@ -36,7 +37,9 @@ const bricks = Array.from({ length: 9 }, (_, index) => index % 2).sort(
   <div class="prose dark:prose-invert relative">
     <ShowcaseTitle>{name}</ShowcaseTitle>
     <ShowcaseDescription>
-      Vue component for dynamic masonry layouts.
+      My popular <Mark>Vue component</Mark> for dynamic <Mark>
+        masonry layouts
+      </Mark>.
     </ShowcaseDescription>
   </div>
 </Showcase>
