@@ -15,7 +15,11 @@ const bricks = Array.from({ length: 9 }, (_, index) => index % 2).sort(
   >
     {
       bricks.map((hidden, index) => {
-        const color = ['bg-red-800', 'bg-orange-300', 'bg-stone-600'][index % 3]
+        const color = [
+          'from-red-900 to-red-500',
+          'from-orange-400 to-orange-200',
+          'from-stone-700 to-stone-400',
+        ][index % 3]
         return hidden ? (
           <Brick
             class={`brick-hidden translate-y-[-2000%] transition-transform duration-1000`}
