@@ -24,7 +24,9 @@ import Showcase from '~/components/showcase/Showcase.astro'
       setTimeout(() => {
         const next = (current + 1) % length
         images[current].classList.toggle('opacity-0')
+        images[current].classList.toggle('z-10')
         images[next].classList.toggle('opacity-0')
+        images[next].classList.toggle('z-10')
         current = next
         queueNextImage()
       }, 5000)
