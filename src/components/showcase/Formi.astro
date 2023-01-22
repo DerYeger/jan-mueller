@@ -7,14 +7,17 @@ import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
 
 const first = await import('~/assets/projects/formi-first.webp')
 const second = await import('~/assets/projects/formi-second.webp')
+
+const name = 'Formi'
 ---
 
 <Showcase
+  name={name}
   class="formi flex flex-col justify-between gap-4"
   link="https://formi.yeger.eu"
 >
   <div class="prose dark:prose-invert">
-    <ShowcaseTitle>Formi</ShowcaseTitle>
+    <ShowcaseTitle>{name}</ShowcaseTitle>
     <ShowcaseDescription>
       First-order-logic model checking with interactive graph visualization,
       real-time validation, and textual input.
