@@ -1,6 +1,7 @@
 ---
 import { Picture } from '@astrojs/image/components'
 
+import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
@@ -19,7 +20,7 @@ const name = 'Formi'
   <div class="prose dark:prose-invert">
     <ShowcaseTitle>{name}</ShowcaseTitle>
     <ShowcaseDescription>
-      First-order-logic model checking with interactive graph visualization,
+      <Mark>First-order-logic model checking</Mark> with interactive graph visualization,
       real-time validation, and textual input.
     </ShowcaseDescription>
   </div>
@@ -33,7 +34,7 @@ const name = 'Formi'
       sizes="192px"
       loading="lazy"
       formats={['avif', 'webp']}
-      class="absolute inset-0 -mt-4 -ml-4 translate-x-[1000%] transition-transform duration-500"
+      class="absolute inset-0 -mt-4 -ml-4 translate-x-[1000%] drop-shadow-xl transition-transform duration-500"
     />
     <Picture
       src={second.default.src}
@@ -44,7 +45,7 @@ const name = 'Formi'
       sizes="192px"
       loading="lazy"
       formats={['avif', 'webp']}
-      class="absolute inset-0 mt-4 ml-4 translate-x-[1000%] transition-transform duration-700"
+      class="absolute inset-0 mt-4 ml-4 translate-x-[1000%] drop-shadow-xl transition-transform duration-700"
     />
   </div>
 </Showcase>

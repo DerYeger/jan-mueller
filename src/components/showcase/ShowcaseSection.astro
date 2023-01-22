@@ -1,5 +1,6 @@
 ---
 import About from '~/components/showcase/About.astro'
+import Apollo from '~/components/showcase/Apollo.astro'
 import Formi from '~/components/showcase/Formi.astro'
 import Masonry from '~/components/showcase/Masonry.astro'
 import Noted from '~/components/showcase/Noted.astro'
@@ -21,17 +22,20 @@ import WienerTime from '~/components/showcase/WienerTime.astro'
     <div>
       <PhotoShowcase />
     </div>
-    <div class="sm:col-span-2">
-      <WienerTime />
-    </div>
     <div class="md:col-span-2">
       <Masonry />
+    </div>
+    <div class="md:col-span-2">
+      <WienerTime />
     </div>
     <div>
       <Refunk />
     </div>
-    <div class="md:col-span-2">
+    <div>
       <Noted />
+    </div>
+    <div class="md:col-span-2">
+      <Apollo />
     </div>
   </div>
 </section>

@@ -1,4 +1,5 @@
 ---
+import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
@@ -9,6 +10,12 @@ const name = 'About Me'
 <Showcase name={name}>
   <div class="prose dark:prose-invert">
     <ShowcaseTitle>{name}</ShowcaseTitle>
-    <ShowcaseDescription>TODO</ShowcaseDescription>
+    <ShowcaseDescription>
+      I develop <Mark>websites, apps, APIs, libraries, and CLIs</Mark>.
+    </ShowcaseDescription>
+    <ShowcaseDescription>
+      In addition to development, I work on tasks related to DevOps, such as
+      designing efficient CI pipelines and handling deployment of microservices.
+    </ShowcaseDescription>
   </div>
 </Showcase>

@@ -1,0 +1,14 @@
+---
+import Showcase from '~/components/showcase/Showcase.astro'
+import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
+import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
+
+const name = 'Apollo'
+---
+
+<Showcase name={name} link="https://apollo.yeger.eu">
+  <div class="prose dark:prose-invert">
+    <ShowcaseTitle>{name}</ShowcaseTitle>
+    <ShowcaseDescription>TODO</ShowcaseDescription>
+  </div>
+</Showcase>

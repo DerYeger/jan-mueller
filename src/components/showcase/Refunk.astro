@@ -1,4 +1,5 @@
 ---
+import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
@@ -9,16 +10,21 @@ const { default: innerHTML } = await import(`~/assets/projects/Refunk.svg?raw`)
 ---
 
 <Showcase name={name} class="refunk" link="https://refunk.yeger.eu">
-  <div
-    class="refunk-logo absolute inset-0 scale-[2000%] transition-all duration-700 dark:!opacity-100 dark:brightness-50"
-  >
-    <Fragment set:html={innerHTML} />
-  </div>
   <div class="prose dark:prose-invert relative">
-    <ShowcaseTitle>{name}</ShowcaseTitle>
+    <ShowcaseTitle>
+      {name}
+
+    </ShowcaseTitle>
+      </div>
+     <div
+        class="refunk-logo -my-4 scale-[2500%] opacity-0 transition-all duration-700"
+      >
+        <Fragment set:html={innerHTML} />
+      </div>
+       <div class="prose dark:prose-invert relative">
     <ShowcaseDescription>
-      A Kotlin library for studying primitive recursive functions using a
-      mathematical DSL.
+      A Kotlin library for studying <Mark>primitive recursive functions</Mark> using a
+      mathematical <Mark>DSL</Mark>.
     </ShowcaseDescription>
   </div>
 </Showcase>
@@ -31,9 +37,9 @@ const { default: innerHTML } = await import(`~/assets/projects/Refunk.svg?raw`)
           return
         }
         const element = entry.target.getElementsByClassName('refunk-logo')[0]!
-        element.classList.toggle('scale-[2000%]')
+        element.classList.toggle('scale-[2500%]')
         element.classList.toggle('scale-75')
-        element.classList.toggle('opacity-25')
+        element.classList.toggle('opacity-0')
         observer.unobserve(entry.target)
       })
     },

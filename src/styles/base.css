@@ -16,7 +16,7 @@
   }
 
   .card {
-    @apply surface border rounded-3xl shadow-xl;
+    @apply surface rounded-3xl shadow-xl;
   }
 
   .card-hover {

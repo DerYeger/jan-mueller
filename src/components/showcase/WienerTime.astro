@@ -1,4 +1,5 @@
 ---
+import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
@@ -11,16 +12,15 @@ const { default: innerHTML } = await import(
 ---
 
 <Showcase name={name} link="https://wiener-time.vercel.app">
-  <div class="flex flex-col gap-2 md:flex-row">
-    <div class="prose dark:prose-invert">
-      <ShowcaseTitle>{name}</ShowcaseTitle>
-      <ShowcaseDescription>
-        Real-time traffic data of Wiener Linien public transportation monitors.
-      </ShowcaseDescription>
-    </div>
-    <div class="h-32 opacity-75 dark:!opacity-100 md:w-64">
-      <Fragment set:html={innerHTML} />
-    </div>
+  <div class="prose dark:prose-invert">
+    <ShowcaseTitle>{name}</ShowcaseTitle>
+    <ShowcaseDescription>
+      Website for <Mark>real-time traffic data</Mark> of Wiener Linien's public transportation
+      monitors.
+    </ShowcaseDescription>
+  </div>
+  <div class="max-h-64 grow p-6 opacity-75 dark:!opacity-100 sm:max-md:p-0">
+    <Fragment set:html={innerHTML} />
   </div>
 </Showcase>
 
