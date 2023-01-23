@@ -57,13 +57,13 @@
     @apply bg-transparent italic font-semibold;
   }
 
-  .avatar {
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 50, 0.35));
-  }
-
   .gradient-text {
     @apply text-transparent bg-clip-text bg-gradient-to-r;
   }
+}
+
+.avatar {
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 50, 0.35));
 }
 
 html {

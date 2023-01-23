@@ -1,18 +1,22 @@
 ---
+import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
 
 const name = 'Noted'
+
+const { default: logo } = await import(`~/assets/projects/Noted.svg?raw`)
 ---
 
 <Showcase name={name} link="https://noted.yeger.eu">
-  <div
-    class="absolute -right-32 -top-32 h-12 w-12 rounded-full bg-red-500 transition-transform duration-500 group-hover:scale-[5000%]"
-  >
-  </div>
   <div class="prose dark:prose-invert relative">
-    <ShowcaseTitle>{name}</ShowcaseTitle>
-    <ShowcaseDescription>Markdown note-taking</ShowcaseDescription>
+    <ShowcaseTitle>{name} ✏️</ShowcaseTitle>
+    <ShowcaseDescription>
+      A PWA for <Mark>Markdown-based note-taking</Mark>, built with Nuxt.js.
+    </ShowcaseDescription>
+  </div>
+  <div class="mx-auto h-32 w-32">
+    <Fragment set:html={logo} />
   </div>
 </Showcase>
