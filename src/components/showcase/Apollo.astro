@@ -20,6 +20,8 @@ const stars: Star[] = [
 ]
 
 const { default: moon } = await import(`~/assets/projects/Moon.svg?raw`)
+
+const { default: earth } = await import(`~/assets/projects/Earth.svg?raw`)
 ---
 
 <Showcase
@@ -36,12 +38,17 @@ const { default: moon } = await import(`~/assets/projects/Moon.svg?raw`)
     ))
   }
   <div
-    class="absolute -left-6 -bottom-6 h-24 w-24 transition-transform duration-500 group-hover:-translate-y-4 group-hover:translate-x-5 group-hover:scale-50"
+    class="absolute -left-6 -bottom-6 h-24 w-24 transition-transform duration-500 group-hover:-translate-y-4 group-hover:translate-x-28 group-hover:scale-50"
   >
     <Fragment set:html={moon} />
   </div>
+  <div
+    class="absolute -left-24 -bottom-12 h-24 w-24 brightness-125 transition-transform duration-500 group-hover:-translate-y-6 group-hover:translate-x-24"
+  >
+    <Fragment set:html={earth} />
+  </div>
   <div class="prose dark:prose-invert">
-    <ShowcaseTitle>{name}</ShowcaseTitle>
+    <ShowcaseTitle>{name} 🚀</ShowcaseTitle>
     <ShowcaseDescription>
       A <Mark>graph-based first-order-logic model checker</Mark> and the result of
       my bachelor thesis.
