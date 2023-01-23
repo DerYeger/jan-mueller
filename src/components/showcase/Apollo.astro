@@ -1,14 +1,56 @@
 ---
+import { Icon } from 'astro-icon'
+
+import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
 
 const name = 'Apollo'
+
+type Star =
+  `top-${number} right-${number} w-${number} !animation-delay-[${number}ms]`
+const stars: Star[] = [
+  'top-4 right-7 w-4 !animation-delay-[0ms]',
+  'top-10 right-12 w-3 !animation-delay-[200ms]',
+  'top-6 right-16 w-2 !animation-delay-[400ms]',
+  'top-12 right-20 w-4 !animation-delay-[600ms]',
+  'top-9 right-36 w-2 !animation-delay-[800ms]',
+  'top-16 right-48 w-3 !animation-delay-[1000ms]',
+]
+
+const { default: moon } = await import(`~/assets/projects/Moon.svg?raw`)
 ---
 
-<Showcase name={name} link="https://apollo.yeger.eu">
+<Showcase
+  name={name}
+  link="https://apollo.yeger.eu"
+  class="apollo children:!bg-transparent dark !bg-gradient-to-tr from-slate-900 to-violet-900 transition-all"
+>
+  {
+    stars.map((star) => (
+      <Icon
+        class={`absolute text-yellow-500 ${star} transition-transform duration-500 group-hover:translate-y-1 group-hover:-translate-x-2 group-hover:scale-75 motion-safe:animate-[pulse_2000ms_ease-in-out_infinite]`}
+        name="mdi:star"
+      />
+    ))
+  }
+  <div
+    class="absolute -left-6 -bottom-6 h-24 w-24 transition-transform duration-500 group-hover:-translate-y-4 group-hover:translate-x-5 group-hover:scale-75"
+  >
+    <Fragment set:html={moon} />
+  </div>
   <div class="prose dark:prose-invert">
     <ShowcaseTitle>{name}</ShowcaseTitle>
-    <ShowcaseDescription>TODO</ShowcaseDescription>
+    <ShowcaseDescription>
+      A <Mark>graph-based first-order-logic model checker</Mark> and the result of
+      my bachelor thesis.
+    </ShowcaseDescription>
   </div>
 </Showcase>
+
+<style is:global>
+  .apollo a {
+    background-color: transparent !important;
+  }
+</style>
