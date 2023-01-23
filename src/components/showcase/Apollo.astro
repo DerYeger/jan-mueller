@@ -30,13 +30,13 @@ const { default: moon } = await import(`~/assets/projects/Moon.svg?raw`)
   {
     stars.map((star) => (
       <Icon
-        class={`absolute text-yellow-500 ${star} transition-transform duration-500 group-hover:translate-y-1 group-hover:-translate-x-2 group-hover:scale-75 motion-safe:animate-[pulse_2000ms_ease-in-out_infinite]`}
+        class={`absolute text-yellow-500 ${star} transition-transform duration-500 group-hover:translate-y-1 group-hover:-translate-x-2 group-hover:scale-50 motion-safe:animate-[pulse_2000ms_ease-in-out_infinite]`}
         name="mdi:star"
       />
     ))
   }
   <div
-    class="absolute -left-6 -bottom-6 h-24 w-24 transition-transform duration-500 group-hover:-translate-y-4 group-hover:translate-x-5 group-hover:scale-75"
+    class="absolute -left-6 -bottom-6 h-24 w-24 transition-transform duration-500 group-hover:-translate-y-4 group-hover:translate-x-5 group-hover:scale-50"
   >
     <Fragment set:html={moon} />
   </div>
