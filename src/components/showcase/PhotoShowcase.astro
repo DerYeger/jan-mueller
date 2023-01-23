@@ -1,18 +1,41 @@
 ---
 import Photo from '~/components/showcase/Photo.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
+
+interface PhotoType {
+  src: Promise<typeof import('~/assets/photos/*.png')>
+  alt: string
+}
+
+const photos: PhotoType[] = [
+  {
+    src: import('~/assets/photos/rauris.png'),
+    alt: 'Picture of a forest in Rauris, Austria.',
+  },
+  {
+    src: import('~/assets/photos/binz.png'),
+    alt: 'Picture of a beach of Binz, Germany.',
+  },
+  {
+    src: import('~/assets/photos/semmering.png'),
+    alt: 'Picture of the landscape near Semmering, Austria.',
+  },
+  {
+    src: import('~/assets/photos/doernberg.png'),
+    alt: 'Picture of the landscape near Dörnberg, Germany.',
+  },
+]
 ---
 
 <Showcase
   name="Photos"
   class="photos h-0 border-0 !bg-transparent !p-0 !pb-[100%]"
 >
-  <Photo
-    src={import('~/assets/rauris.png')}
-    alt="Picture of a forest in Rauris, Austria."
-    initial
-  />
-  <Photo src={import('~/assets/binz.png')} alt="Picture of a beach of Binz." />
+  {
+    photos.map(({ src, alt }, index) => (
+      <Photo src={src} alt={alt} initial={index === 0} />
+    ))
+  }
 </Showcase>
 
 <script>
