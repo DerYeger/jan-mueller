@@ -7,8 +7,22 @@ describe('Home', () => {
     cy.get('.avatar').scrollIntoView().should('be.visible')
   })
 
+  it('shows about me section', () => {
+    cy.contains('About Me').should('be.visible')
+  })
+
   it('shows projects', () => {
-    cy.contains('Projects').should('be.visible')
+    const projects = [
+      'Formi',
+      'Masonry Wall',
+      'Refunk',
+      'WienerTime',
+      'Noted',
+      'Apollo',
+    ]
+    projects.forEach((project) =>
+      cy.contains(project).scrollIntoView().should('be.visible')
+    )
   })
 
   it('shows experience', () => {
