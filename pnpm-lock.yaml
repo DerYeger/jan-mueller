@@ -24,7 +24,7 @@ specifiers:
   astro-critters: 1.1.26
   astro-icon: 0.8.0
   astro-robots-txt: 0.3.11
-  astro-seo-schema: 1.2.2
+  astro-seo-schema: 2.0.0
   autoprefixer: 10.4.13
   cypress: 12.3.0
   eslint: 8.32.0
@@ -89,7 +89,7 @@ devDependencies:
   astro-critters: 1.1.26
   astro-icon: 0.8.0
   astro-robots-txt: 0.3.11
-  astro-seo-schema: 1.2.2_ebngdx6z4m2uvnp3lkifbuajxe
+  astro-seo-schema: 2.0.0_ebngdx6z4m2uvnp3lkifbuajxe
   autoprefixer: 10.4.13
   cypress: 12.3.0
   eslint: 8.32.0
@@ -2363,10 +2363,10 @@ packages:
       zod: 3.20.2
     dev: true
 
-  /astro-seo-schema/1.2.2_ebngdx6z4m2uvnp3lkifbuajxe:
-    resolution: {integrity: sha512-voXRew7vIMsIQy86R5+3SBZl9pcRh1VnFbtWnyXXBwFv4mGck2G7UARClNxLM8P/bszGDrZDS673VlQNB1fNXA==}
+  /astro-seo-schema/2.0.0_ebngdx6z4m2uvnp3lkifbuajxe:
+    resolution: {integrity: sha512-VMsoQr/v4VN3wLiVm4czfabQlQOKOVim45rwcYWVTuLZuksnE848F1GqejqSaUrCqVrUd8n31p6gLgS2yghw3A==}
     peerDependencies:
-      astro: ^1.0.0
+      astro: ^2.0.0
     dependencies:
       astro: 2.0.0-beta.3_@types+node@18.11.18
       schema-dts: 1.1.0_typescript@4.9.4
