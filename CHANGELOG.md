@@ -1,3 +1,10 @@
+## [3.38.3](https://github.com/DerYeger/jan-mueller/compare/v3.38.2...v3.38.3) (2023-01-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency astro-seo-schema to v2 ([#161](https://github.com/DerYeger/jan-mueller/issues/161)) ([18d6202](https://github.com/DerYeger/jan-mueller/commit/18d62029caecb6e03d1e90274b54222731203e08))
+
 ## [3.38.2](https://github.com/DerYeger/jan-mueller/compare/v3.38.1...v3.38.2) (2023-01-21)
 
 
