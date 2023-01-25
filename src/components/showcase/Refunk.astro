@@ -13,18 +13,17 @@ const { default: innerHTML } = await import(`~/assets/projects/Refunk.svg?raw`)
   <div class="prose dark:prose-invert relative">
     <ShowcaseTitle>
       {name}
-
     </ShowcaseTitle>
-      </div>
-     <div
-        class="refunk-logo -my-4 scale-[2500%] opacity-0 transition-all duration-700"
-      >
-        <Fragment set:html={innerHTML} />
-      </div>
-       <div class="prose dark:prose-invert relative">
+  </div>
+  <div
+    class="refunk-logo -my-4 scale-[2500%] opacity-0 transition-all duration-700"
+  >
+    <Fragment set:html={innerHTML} />
+  </div>
+  <div class="prose dark:prose-invert relative">
     <ShowcaseDescription>
-      A Kotlin library for studying <Mark>primitive recursive functions</Mark> using a
-      mathematical <Mark>DSL</Mark>.
+      A Kotlin library for studying <Mark>primitive recursive functions</Mark> using
+      a mathematical <Mark>DSL</Mark>.
     </ShowcaseDescription>
   </div>
 </Showcase>
