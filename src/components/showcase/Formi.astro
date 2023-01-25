@@ -24,14 +24,14 @@ const name = 'Formi'
       real-time validation, and textual input.
     </ShowcaseDescription>
   </div>
-  <div class="relative h-36 w-36 self-center">
+  <div class="relative h-36 w-36 self-center 2xl:scale-[2]">
     <Picture
       src={first.default.src}
       alt="Formi Logo"
       quality={85}
-      widths={[192]}
+      widths={[192, 384]}
       aspectRatio={1}
-      sizes="192px"
+      sizes="(max-width: 1535px) 192px, 384px"
       loading="lazy"
       formats={['avif', 'webp']}
       class="absolute inset-0 -mt-4 -ml-4 translate-x-[1000%] drop-shadow-xl transition-transform duration-500"
@@ -40,9 +40,9 @@ const name = 'Formi'
       src={second.default.src}
       alt="Formi Logo"
       quality={85}
-      widths={[192]}
+      widths={[192, 384]}
       aspectRatio={1}
-      sizes="192px"
+      sizes="(max-width: 1535px) 192px, 384px"
       loading="lazy"
       formats={['avif', 'webp']}
       class="absolute inset-0 mt-4 ml-4 translate-x-[1000%] drop-shadow-xl transition-transform duration-700"

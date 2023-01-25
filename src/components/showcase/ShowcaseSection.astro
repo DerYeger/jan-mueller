@@ -13,28 +13,32 @@ import WienerTime from '~/components/showcase/WienerTime.astro'
   <div
     class="mx-auto grid max-w-3xl grid-flow-row grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 2xl:max-w-7xl 2xl:grid-cols-4"
   >
-    <div class="row-span-2 md:col-span-2 2xl:row-span-3">
+    <div class="md:col-span-2">
       <About />
     </div>
     <div class="row-span-2 2xl:col-span-2">
       <Formi />
     </div>
-    <div class="">
+    <div>
       <PhotoShowcase />
     </div>
-    <div class="md:col-span-2 2xl:col-span-1">
+    <div class="md:col-span-2 md:row-start-2 2xl:col-span-1 2xl:row-start-auto">
       <Masonry />
     </div>
-    <div class="md:col-span-2 2xl:col-start-3">
+    <div
+      class="md:col-span-2 md:row-span-2 2xl:col-start-1 2xl:row-span-1 2xl:row-start-3"
+    >
       <WienerTime />
     </div>
-    <div class="2xl:row-start-4">
+    <div class="md:max-2xl:row-start-4 2xl:row-start-3">
       <Refunk />
     </div>
-    <div class="2xl:row-start-4">
+    <div class="2xl:row-start-3">
       <Noted />
     </div>
-    <div class="md:col-span-2 2xl:col-span-full">
+    <div
+      class="sm:col-span-2 md:max-2xl:col-start-1 md:max-2xl:row-start-5 2xl:col-span-full"
+    >
       <Apollo />
     </div>
   </div>
