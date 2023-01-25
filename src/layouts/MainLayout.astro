@@ -15,9 +15,7 @@ const { title, description, image } = Astro.props as Props
   <head class="max-w-full overflow-x-hidden">
     <BaseHead title={title} description={description} image={image} />
   </head>
-  <body
-    class="max-w-full overflow-x-hidden bg-white text-black dark:bg-black dark:text-white"
-  >
+  <body class="max-w-full overflow-x-hidden bg-white text-black">
     <Header />
     <Main>
       <slot />

@@ -11,9 +11,9 @@ const isActive = href === Astro.url.pathname
   href={href}
   rel="prefetch"
   class:list={[
-    'inline-block transition-none no-underline px-3 py-1 rounded text-sm border-transparent border hover:text-black hover:dark:text-white hover:border-neutral-400 hover:dark:border-neutral-600',
+    'inline-block transition-none no-underline px-3 py-1 rounded text-sm border-transparent border hover:text-black hover:border-neutral-400',
     {
-      'border-neutral-200 dark:border-neutral-800': isActive,
+      'border-neutral-200': isActive,
     },
   ]}
   {...props}

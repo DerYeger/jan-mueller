@@ -12,14 +12,14 @@ const { default: innerHTML } = await import(
 ---
 
 <Showcase name={name} link="https://wiener-time.vercel.app">
-  <div class="prose dark:prose-invert">
+  <div class="prose">
     <ShowcaseTitle>{name}</ShowcaseTitle>
     <ShowcaseDescription>
       A Next.js web app for <Mark>real-time traffic data</Mark> of Wiener Linien's
       public transportation monitors.
     </ShowcaseDescription>
   </div>
-  <div class="max-h-64 grow p-6 opacity-75 dark:!opacity-100 sm:max-md:p-0">
+  <div class="max-h-64 grow p-6 opacity-75 sm:max-md:p-0">
     <Fragment set:html={innerHTML} />
   </div>
 </Showcase>
