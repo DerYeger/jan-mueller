@@ -1,2 +1,3 @@
 src/components/ThemeToggle.astro
+src/components/showcase/About.astro
 src/components/showcase/Refunk.astro
