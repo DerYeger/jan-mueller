@@ -17,11 +17,7 @@ const { experience } = Astro.props as Props
       </a>
     )
   }
-  {
-    !experience.href && (
-      <span class="text-black dark:text-white">{experience.name}</span>
-    )
-  }
+  {!experience.href && <span class="text-black">{experience.name}</span>}
   <span>
     {experience.description}
   </span>

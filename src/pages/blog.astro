@@ -19,7 +19,7 @@ const posts = (await getCollection('blog')).sort(
   image="https://og-image-deryeger.vercel.app/**Jan's%20Blog**.png?theme=dark&md=1&fontSize=225px&images=https%3A%2F%2Fjan-mueller.at%2Fog-image-light.svg"
 >
   <div class="container mx-auto px-4 py-8">
-    <div class="prose dark:prose-invert mb-8">
+    <div class="prose mb-8">
       <h1>Jan's Blog</h1>
     </div>
     <ul class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -44,7 +44,7 @@ const posts = (await getCollection('blog')).sort(
                     alt={post.data.title}
                   />
                 )}
-                <div class="prose prose-sm dark:prose-invert flex flex-col gap-4 p-4">
+                <div class="prose prose-sm flex flex-col gap-4 p-4">
                   <h2 class="my-0">{post.data.title}</h2>
                   <span class="text-lighter">
                     <DateComponent

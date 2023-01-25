@@ -10,7 +10,7 @@ const { default: innerHTML } = await import(`~/assets/projects/Refunk.svg?raw`)
 ---
 
 <Showcase name={name} class="refunk" link="https://refunk.yeger.eu">
-  <div class="prose dark:prose-invert relative">
+  <div class="prose">
     <ShowcaseTitle>
       {name}
     </ShowcaseTitle>
@@ -20,7 +20,7 @@ const { default: innerHTML } = await import(`~/assets/projects/Refunk.svg?raw`)
   >
     <Fragment set:html={innerHTML} />
   </div>
-  <div class="prose dark:prose-invert relative">
+  <div class="prose">
     <ShowcaseDescription>
       A Kotlin library for studying <Mark>primitive recursive functions</Mark> using
       a mathematical <Mark>DSL</Mark>.
