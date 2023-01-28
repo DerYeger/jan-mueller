@@ -52,8 +52,6 @@ if (bricks.length !== 9) {
         if (!entry.isIntersecting) {
           bricks.forEach((brick) => {
              brick.classList.add(
-              'transition-transform',
-              'duration-1000',
               ...animationClasses
             )
           })
@@ -71,6 +69,7 @@ if (bricks.length !== 9) {
 
   function makeBrickVisible(bricks: Element[]) {
     const [brick, ...rest] = bricks
+    brick.classList.add('transition-transform', 'duration-1000')
     brick.classList.remove(className, ...animationClasses)
     if (rest.length > 0) {
       setTimeout(() => makeBrickVisible(rest), Math.random() * 25 + 75)
