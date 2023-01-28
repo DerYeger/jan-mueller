@@ -1,10 +1,9 @@
 ---
+import type { PhotoData } from '~/components/showcase/Photo.astro';
 import Photo from '~/components/showcase/Photo.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 
-type PhotoTypeTest = Parameters<typeof Photo>[0]
-
-const photos: PhotoTypeTest[] = [
+const photos: PhotoData[] = [
   {
     src: import('~/assets/photos/rauris.png'),
     alt: (location) => `Picture of a forest in ${location}.`,
@@ -33,8 +32,8 @@ const photos: PhotoTypeTest[] = [
   class="photos h-0 border-0 !bg-transparent !p-0 !pb-[100%]"
 >
   {
-    photos.map(({ src, alt, location }, index) => (
-      <Photo src={src} alt={alt} initial={index === 0} location={location} />
+    photos.map((photo, index) => (
+      <Photo photo={photo} initial={index === 0} index={index} total={photos.length} />
     ))
   }
 </Showcase>
