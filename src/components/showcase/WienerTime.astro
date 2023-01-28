@@ -6,7 +6,7 @@ import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
 
 const name = 'WienerTime'
 
-const { default: innerHTML } = await import(
+const { default: wienerLinien } = await import(
   `~/assets/projects/WienerLinien.svg?raw`
 )
 ---
@@ -20,7 +20,7 @@ const { default: innerHTML } = await import(
     </ShowcaseDescription>
   </div>
   <div class="max-h-64 grow p-6 opacity-75 sm:max-md:p-0">
-    <Fragment set:html={innerHTML} />
+    <Fragment set:html={wienerLinien} />
   </div>
 </Showcase>
 

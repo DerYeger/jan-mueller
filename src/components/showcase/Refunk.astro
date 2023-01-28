@@ -6,7 +6,7 @@ import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
 
 const name = 'Refunk'
 
-const { default: innerHTML } = await import(`~/assets/projects/Refunk.svg?raw`)
+const { default: refunkLogo } = await import(`~/assets/projects/Refunk.svg?raw`)
 ---
 
 <Showcase name={name} class="refunk" link="https://refunk.yeger.eu">
@@ -18,7 +18,7 @@ const { default: innerHTML } = await import(`~/assets/projects/Refunk.svg?raw`)
   <div
     class="refunk-logo mx-auto h-32 w-32"
   >
-    <Fragment set:html={innerHTML} />
+    <Fragment set:html={refunkLogo} />
   </div>
   <div class="prose">
     <ShowcaseDescription>
@@ -29,25 +29,22 @@ const { default: innerHTML } = await import(`~/assets/projects/Refunk.svg?raw`)
 </Showcase>
 
 <script>
-  const className = 'refunk-logo'
   const animationClasses = ['scale-[2500%]', 'opacity-0']
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
+        const element = entry.target.getElementsByClassName('refunk-logo')[0]!
         if (!entry.isIntersecting) {
+          element.classList.add('transition-all', 'duration-700', ...animationClasses)
           return
         }
-        const element = entry.target.getElementsByClassName(className)[0]!
-        element.classList.remove(...animationClasses)
         observer.unobserve(entry.target)
+        element.classList.remove(...animationClasses)
       })
     },
-    { threshold: 0.9 }
+    { threshold: 0.5 }
   )
 
   const logos = [...document.getElementsByClassName('refunk')]
-  logos.forEach((logo) => {
-    logo.getElementsByClassName(className)[0]!.classList.add('transition-all', 'duration-700', ...animationClasses)
-    observer.observe(logo)
-  })
+  logos.forEach((logo) => observer.observe(logo))
 </script>

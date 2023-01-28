@@ -7,9 +7,10 @@ import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
 
 const name = 'Masonry Wall'
 
-const bricks = Array.from({ length: 9 }, (_, index) => index % 2).sort(
-  () => Math.random() - 0.5
-)
+const bricks = [false, true, false, false, true, false, true, false, true]
+if (bricks.length !== 9) {
+  throw new Error('Must be 9 bricks')
+}
 ---
 
 <Showcase name={name} link="https://vue-masonry-wall.yeger.eu">
@@ -47,33 +48,26 @@ const bricks = Array.from({ length: 9 }, (_, index) => index % 2).sort(
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
+        const bricks = [...entry.target.getElementsByClassName(className)]
         if (!entry.isIntersecting) {
+          bricks.forEach((brick) => {
+             brick.classList.add(
+              'transition-transform',
+              'duration-1000',
+              ...animationClasses
+            )
+          })
           return
         }
-        setTimeout(() => {
-          const brickContainers = [...document.getElementsByClassName('bricks')]
-          brickContainers.forEach((brickContainer) => {
-            const bricks = [...brickContainer.getElementsByClassName(className)]
-            makeBrickVisible(bricks)
-          })
-        }, 300)
         observer.unobserve(entry.target)
+        makeBrickVisible(bricks)
       })
     },
     { threshold: 0.9 }
   )
 
   const containers = [...document.getElementsByClassName('bricks')]
-  containers.forEach((brickContainer) => {
-    ;[...brickContainer.getElementsByClassName(className)].forEach((brick) => {
-      brick.classList.add(
-        'transition-transform',
-        'duration-1000',
-        ...animationClasses
-      )
-    })
-    observer.observe(brickContainer)
-  })
+  containers.forEach((brickContainer) => observer.observe(brickContainer))
 
   function makeBrickVisible(bricks: Element[]) {
     const [brick, ...rest] = bricks
