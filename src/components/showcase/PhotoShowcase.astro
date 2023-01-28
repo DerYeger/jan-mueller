@@ -42,16 +42,31 @@ const photos: PhotoData[] = [
   ;[...document.getElementsByClassName('photos')].forEach((container) => {
     const images = container.getElementsByClassName('photo')
     const length = images.length
-    queueNextImage(0)
+    let timeout: number | undefined
+    let current = 0
 
-    function queueNextImage(current: number) {
-      setTimeout(() => {
+    container.addEventListener('pointerenter', () => {
+      if (timeout) {
+        window.clearTimeout(timeout)
+        timeout = undefined
+      }
+    })
+
+    container.addEventListener('pointerleave', () => {
+      queueNextImage()
+    })
+
+    queueNextImage()
+
+    function queueNextImage() {
+      timeout = window.setTimeout(() => {
         const next = (current + 1) % length
         images[current].classList.toggle('opacity-0')
         images[current].classList.toggle('z-10')
         images[next].classList.toggle('opacity-0')
         images[next].classList.toggle('z-10')
-        queueNextImage(next)
+        current = next
+        queueNextImage()
       }, 5000)
     }
   })
