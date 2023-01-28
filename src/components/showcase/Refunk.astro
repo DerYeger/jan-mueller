@@ -16,7 +16,7 @@ const { default: innerHTML } = await import(`~/assets/projects/Refunk.svg?raw`)
     </ShowcaseTitle>
   </div>
   <div
-    class="refunk-logo mx-auto -my-4 h-48 w-48 scale-[2500%] opacity-0 transition-all duration-700"
+    class="refunk-logo mx-auto h-32 w-32"
   >
     <Fragment set:html={innerHTML} />
   </div>
@@ -29,16 +29,16 @@ const { default: innerHTML } = await import(`~/assets/projects/Refunk.svg?raw`)
 </Showcase>
 
 <script>
+  const className = 'refunk-logo'
+  const animationClasses = ['scale-[2500%]', 'opacity-0']
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) {
           return
         }
-        const element = entry.target.getElementsByClassName('refunk-logo')[0]!
-        element.classList.toggle('scale-[2500%]')
-        element.classList.toggle('scale-75')
-        element.classList.toggle('opacity-0')
+        const element = entry.target.getElementsByClassName(className)[0]!
+        element.classList.remove(...animationClasses)
         observer.unobserve(entry.target)
       })
     },
@@ -46,5 +46,8 @@ const { default: innerHTML } = await import(`~/assets/projects/Refunk.svg?raw`)
   )
 
   const logos = [...document.getElementsByClassName('refunk')]
-  logos.forEach((logo) => observer.observe(logo))
+  logos.forEach((logo) => {
+    logo.getElementsByClassName(className)[0]!.classList.add('transition-all', 'duration-700', ...animationClasses)
+    observer.observe(logo)
+  })
 </script>

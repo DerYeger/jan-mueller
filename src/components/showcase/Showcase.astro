@@ -11,8 +11,40 @@ const { name, class: extraClasses = '', link } = Astro.props
 ---
 
 <div
-  class={`card group relative flex h-full w-full flex-col justify-between gap-6 overflow-hidden p-6 ${extraClasses}`}
+  class={`showcase card group relative flex h-full w-full flex-col justify-between gap-6 overflow-hidden p-6 ${extraClasses}`}
 >
   <slot />
   {link ? <ShowcaseLink href={link} label={name} /> : null}
 </div>
+
+<script>
+  const className = 'showcase-animate'
+  const animationClasses = [
+    'motion-safe:opacity-0',
+    'motion-safe:-translate-y-4',
+  ]
+  const showcases = [...document.getElementsByClassName('showcase')]
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          observer.unobserve(entry.target)
+          ;[...entry.target.getElementsByClassName(className)].forEach(
+            (element, index) => {
+              setTimeout(() => {
+                element.classList.remove(...animationClasses)
+              }, index * 100)
+            }
+          )
+        }
+      })
+    },
+    { threshold: 0.5 }
+  )
+  showcases.forEach((showcase) => {
+    ;[...showcase.getElementsByClassName(className)].forEach((child) => {
+      child.classList.add('transition-all', 'duration-500', ...animationClasses)
+    })
+    observer.observe(showcase)
+  })
+</script>
