@@ -5,9 +5,9 @@ import { accounts } from '~/lib'
 ---
 
 <section
-  class="w-full px-4 relative bg-zinc-200 dark:bg-zinc-800 border-zinc-300 dark:border-zinc-700 border-y prose dark:prose-invert prose-2xl max-w-none py-8 my-32"
+  class="prose dark:prose-invert prose-2xl relative my-32 w-full max-w-none border-y border-zinc-300 bg-zinc-200 px-4 py-8 dark:border-zinc-700 dark:bg-zinc-800"
 >
-  <div class="flex gap-8 justify-center children:w-6 children:h-6">
+  <div class="children:w-6 children:h-6 flex justify-center gap-8">
     {
       accounts.map((account) => (
         <a
@@ -15,18 +15,18 @@ import { accounts } from '~/lib'
           rel="noreferrer"
           target="_blank"
           title={account.name}
-          class="text-light hover:text-black hover:dark:text-white transition-colors"
+          class="text-light transition-colors hover:text-black hover:dark:text-white"
         >
           <Icon name={account.icon} />
         </a>
       ))
     }
   </div>
-  <div class="flex justify-center mt-8">
+  <div class="mt-8 flex justify-center">
     <a
       href="/blog"
       rel="prefetch"
-      class="no-underline text-white hover:text-white hover:dark:text-white !text-base flex gap-2 items-center hover:scale-105 bg-gradient-to-r from-blue-500 to-blue-600 dark:from-blue-500 dark:to-blue-600 transition-transform"
+      class="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 !text-base text-white no-underline transition-transform hover:scale-105 hover:text-white dark:from-blue-500 dark:to-blue-600 hover:dark:text-white"
       style="border-radius: 1.5rem; padding: 0.5rem 1rem;"
     >
       Blog

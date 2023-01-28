@@ -1,18 +1,21 @@
 import rss from '@astrojs/rss'
+// eslint-disable-next-line import/no-unresolved
+import { getCollection } from 'astro:content'
 
-export const get = () =>
-  rss({
+export async function get(context) {
+  const blog = await getCollection('blog')
+  return rss({
     title: `Jan's Blog`,
-    // `<description>` field in output xml
     description: `Jan's personal blog is all about Software Engineering.`,
-    // base URL for RSS <item> links
-    // SITE will use "site" from your project's astro.config.
-    site: import.meta.env.SITE,
-    // list of `<item>`s in output xml
-    // simple example: generate items for every md file in /src/pages
-    // see "Generating items" section for required frontmatter and advanced use cases
-    items: import.meta.glob('~/pages/blog/**/*.mdx'),
-    // (optional) inject custom xml
+    site: context.site,
+    items: blog.map((post) => ({
+      title: post.data.title,
+      pubDate: post.data.pubDate,
+      description: post.data.description,
+      customData: post.data.customData,
+      link: `/blog/${post.slug}/`,
+    })),
     customData: `<language>en-us</language>`,
     stylesheet: '/rss/pretty-feed-v3.xsl',
   })
+}

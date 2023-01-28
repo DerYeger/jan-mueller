@@ -22,7 +22,7 @@ const posts = (await getCollection('blog')).sort(
     <div class="prose dark:prose-invert mb-8">
       <h1>Jan's Blog</h1>
     </div>
-    <ul class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <ul class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {
         posts.map(async (post) => {
           const { remarkPluginFrontmatter } = await post.render()
@@ -35,7 +35,7 @@ const posts = (await getCollection('blog')).sort(
               >
                 {post.data.heroImage && (
                   <Image
-                    class="w-full h-[100px] object-cover"
+                    class="h-[100px] w-full object-cover"
                     src={getImageAsset(post.data.heroImage)}
                     width={1200}
                     height={200}
@@ -44,7 +44,7 @@ const posts = (await getCollection('blog')).sort(
                     alt={post.data.title}
                   />
                 )}
-                <div class="prose prose-sm dark:prose-invert p-4 flex flex-col gap-4">
+                <div class="prose prose-sm dark:prose-invert flex flex-col gap-4 p-4">
                   <h2 class="my-0">{post.data.title}</h2>
                   <span class="text-lighter">
                     <DateComponent

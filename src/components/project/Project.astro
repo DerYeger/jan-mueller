@@ -14,19 +14,19 @@ const src = await import(`../../assets/projects/${project.id}.png`)
 
 <a
   href={project.url}
-  class="block no-underline h-full"
+  class="block h-full no-underline"
   rel="noreferrer"
   target="_blank"
 >
   <div
-    class="card card-hover dark:border-neutral-700 h-full flex flex-col justify-between overflow-hidden gap-4"
+    class="card card-hover flex h-full flex-col justify-between gap-4 overflow-hidden dark:border-neutral-700"
   >
     <div class="prose dark:prose-invert prose-sm">
       <h3 class="m-4">{project.title}</h3>
-      <span class="mx-4 mb-2 text-light">{project.details}</span>
+      <span class="text-light mx-4 mb-2">{project.details}</span>
     </div>
     <Picture
-      class="rounded-b border-t surface my-0 w-full h-auto"
+      class="surface my-0 h-auto w-full rounded-b border-t"
       src={src.default}
       aspectRatio={2}
       widths={[800]}

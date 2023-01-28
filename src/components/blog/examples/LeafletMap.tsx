@@ -54,7 +54,7 @@ export const MapCenter: FunctionalComponent = () => {
   })
   return (
     <span
-      class="button absolute top-2 right-2 z-101 bg-white text-black rounded px-2 py-1 border-2 border-neutral-400"
+      class="button z-101 absolute top-2 right-2 rounded border-2 border-neutral-400 bg-white px-2 py-1 text-black"
       onClick={() => map.setZoom(13)}
     >
       {text}
@@ -71,7 +71,7 @@ const LeafletMap: FunctionalComponent<
 > = ({ children, ...options }) => {
   return (
     <MapContainer
-      className="h-[200px] sm:h-[300px] md:h-[400px] transition-all w-full card isolate relative"
+      className="card relative isolate h-[200px] w-full transition-all sm:h-[300px] md:h-[400px]"
       scrollWheelZoom={false}
       maxZoo={18}
       {...options}

@@ -11,19 +11,19 @@ import MainLayout from '~/layouts/MainLayout.astro'
 <MainLayout>
   <div class="py-8">
     <section
-      class="prose dark:prose-invert prose-2xl px-4 mt-8 mb-32 md:-mb-32 mx-auto max-w-xl grid grid-cols-1 md:grid-cols-3 md:items-center"
+      class="prose dark:prose-invert prose-2xl mx-auto mt-8 mb-32 grid max-w-xl grid-cols-1 px-4 md:-mb-32 md:grid-cols-3 md:items-center"
     >
       <h1
-        class="relative flex flex-col items-center children:block mb-0 md:items-end text-center md:text-end"
+        class="children:block relative mb-0 flex flex-col items-center text-center md:items-end md:text-end"
       >
         <span class="mb-4 font-black">Jan Müller</span>
-        <span class="w-fit text-4xl font-medium pb-2 -mb-2 inline-block">
+        <span class="-mb-2 inline-block w-fit pb-2 text-4xl font-medium">
           <Marquee />
           <span class="text-neutral-600 dark:text-neutral-400"> Engineer</span>
         </span>
       </h1>
       <div
-        class="avatar max-w-[400px] mx-auto md:max-w-full select-none mt-0 -mb-32 md:mb-0 md:col-span-2"
+        class="avatar mx-auto mt-0 -mb-32 max-w-[400px] select-none md:col-span-2 md:mb-0 md:max-w-full"
       >
         <Avatar />
       </div>
