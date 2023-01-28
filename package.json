@@ -71,7 +71,7 @@
     "rehype-external-links": "2.0.1",
     "rehype-slug": "5.1.0",
     "remark-code-import": "1.1.1",
-    "rollup": "3.11.0",
+    "rollup": "3.12.0",
     "sharp": "0.31.3",
     "ts-node": "10.9.1",
     "turbo": "1.7.0",
