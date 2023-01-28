@@ -34,7 +34,7 @@ const name = 'Formi'
       sizes="(max-width: 1535px) 192px, 384px"
       loading="lazy"
       formats={['avif', 'webp']}
-      class="absolute inset-0 -mt-4 -ml-4 drop-shadow-xl duration-500"
+      class="absolute inset-0 -mt-4 -ml-4 drop-shadow-xl"
     />
     <Picture
       src={second.default.src}
@@ -45,12 +45,13 @@ const name = 'Formi'
       sizes="(max-width: 1535px) 192px, 384px"
       loading="lazy"
       formats={['avif', 'webp']}
-      class="absolute inset-0 mt-4 ml-4 drop-shadow-xl duration-700"
+      class="absolute inset-0 mt-4 ml-4 drop-shadow-xl"
     />
   </div>
 </Showcase>
 
 <script>
+  const durations = ['duration-500', 'duration-700']
   const animationClasses = ['translate-x-[1000%]']
   const observer = new IntersectionObserver(
     (entries) => {
@@ -61,8 +62,8 @@ const name = 'Formi'
           return
         }
         observer.unobserve(entry.target)
-        images.forEach((image) => {
-          image.classList.add('transition-transform')
+        images.forEach((image, index) => {
+          image.classList.add('transition-transform', durations[index % 2])
           image.classList.remove(...animationClasses)
         })
       })
