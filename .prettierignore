@@ -1,3 +1,7 @@
 src/components/ThemeToggle.astro
 src/components/showcase/About.astro
+src/components/showcase/Formi.astro
+src/components/showcase/Masonry.astro
+src/components/showcase/PhotoShowcase.astro
 src/components/showcase/Refunk.astro
+src/components/showcase/Showcase.astro

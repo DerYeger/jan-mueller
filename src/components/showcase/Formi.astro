@@ -34,7 +34,7 @@ const name = 'Formi'
       sizes="(max-width: 1535px) 192px, 384px"
       loading="lazy"
       formats={['avif', 'webp']}
-      class="absolute inset-0 -mt-4 -ml-4 translate-x-[1000%] drop-shadow-xl transition-transform duration-500"
+      class="absolute inset-0 -mt-4 -ml-4 drop-shadow-xl duration-500"
     />
     <Picture
       src={second.default.src}
@@ -45,12 +45,13 @@ const name = 'Formi'
       sizes="(max-width: 1535px) 192px, 384px"
       loading="lazy"
       formats={['avif', 'webp']}
-      class="absolute inset-0 mt-4 ml-4 translate-x-[1000%] drop-shadow-xl transition-transform duration-700"
+      class="absolute inset-0 mt-4 ml-4 drop-shadow-xl duration-700"
     />
   </div>
 </Showcase>
 
 <script>
+  const animationClasses = ['translate-x-[1000%]']
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -58,7 +59,7 @@ const name = 'Formi'
           return
         }
         const images = [...entry.target.getElementsByTagName('img')]
-        images.forEach((image) => image.classList.remove('translate-x-[1000%]'))
+        images.forEach((image) => image.classList.remove(...animationClasses))
         observer.unobserve(entry.target)
       })
     },
@@ -66,5 +67,10 @@ const name = 'Formi'
   )
 
   const formiContainers = [...document.getElementsByClassName('formi')]
-  formiContainers.forEach((logo) => observer.observe(logo))
+  formiContainers.forEach((logo) => {
+    ;[...logo.getElementsByTagName('img')].forEach((image) => {
+      image.classList.add('transition-transform', ...animationClasses)
+    })
+    observer.observe(logo)
+  })
 </script>
