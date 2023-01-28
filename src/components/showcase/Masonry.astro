@@ -20,12 +20,12 @@ const bricks = Array.from({ length: 9 }, (_, index) => index % 2).sort(
       bricks.map((hidden, index) => {
         const color = [
           'from-red-900 to-red-500',
-          'from-orange-400 to-orange-200',
+          'from-orange-400 to-orange-300',
           'from-stone-700 to-stone-400',
         ][index % 3]
         return hidden ? (
           <Brick
-            class={`brick-hidden translate-y-[-2000%] transition-transform duration-1000`}
+            class={`brick-hidden translate-y-[-3000%] transition-transform duration-1000`}
             color={color}
           />
         ) : (
@@ -73,7 +73,7 @@ const bricks = Array.from({ length: 9 }, (_, index) => index % 2).sort(
 
   function makeBrickVisible(bricks: Element[]) {
     const [brick, ...rest] = bricks
-    brick.classList.remove('translate-y-[-2000%]', 'brick-hidden')
+    brick.classList.remove('translate-y-[-3000%]', 'brick-hidden')
     if (rest.length > 0) {
       setTimeout(() => makeBrickVisible(rest), Math.random() * 25 + 75)
     }
