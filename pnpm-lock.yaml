@@ -11,8 +11,8 @@ specifiers:
   '@astrojs/vue': 2.0.0-beta.1
   '@babel/core': '7'
   '@changey/react-leaflet-markercluster': 4.0.0-rc1
-  '@commitlint/cli': 17.3.0
-  '@commitlint/config-conventional': 17.3.0
+  '@commitlint/cli': 17.4.2
+  '@commitlint/config-conventional': 17.4.2
   '@preact/preset-vite': 2.5.0
   '@tailwindcss/typography': 0.5.9
   '@types/html-escaper': 3.0.0
@@ -77,8 +77,8 @@ devDependencies:
   '@astrojs/tailwind': 3.0.0-beta.1_pi6wdapflhi2nljskdeh7g4h24
   '@astrojs/vue': 2.0.0-beta.1_cvqm6tmcj4pinhykifra5y6zu4
   '@babel/core': 7.20.12
-  '@commitlint/cli': 17.3.0
-  '@commitlint/config-conventional': 17.3.0
+  '@commitlint/cli': 17.4.2
+  '@commitlint/config-conventional': 17.4.2
   '@preact/preset-vite': 2.5.0_25sf7uab2oyz6i4hy2v7ycl3kq
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
   '@types/html-escaper': 3.0.0
@@ -771,8 +771,8 @@ packages:
     dev: true
     optional: true
 
-  /@commitlint/cli/17.3.0:
-    resolution: {integrity: sha512-/H0md7TsKflKzVPz226VfXzVafJFO1f9+r2KcFvmBu08V0T56lZU1s8WL7/xlxqLMqBTVaBf7Ixtc4bskdEEZg==}
+  /@commitlint/cli/17.4.2:
+    resolution: {integrity: sha512-0rPGJ2O1owhpxMIXL9YJ2CgPkdrFLKZElIZHXDN8L8+qWK1DGH7Q7IelBT1pchXTYTuDlqkOTdh//aTvT3bSUA==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
@@ -791,8 +791,8 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /@commitlint/config-conventional/17.3.0:
-    resolution: {integrity: sha512-hgI+fN5xF8nhS9uG/V06xyT0nlcyvHHMkq0kwRSr96vl5BFlRGaL2C0/YY4kQagfU087tmj01bJkG9Ek98Wllw==}
+  /@commitlint/config-conventional/17.4.2:
+    resolution: {integrity: sha512-JVo1moSj5eDMoql159q8zKCU8lkOhQ+b23Vl3LVVrS6PXDLQIELnJ34ChQmFVbBdSSRNAbbXnRDhosFU+wnuHw==}
     engines: {node: '>=v14'}
     dependencies:
       conventional-changelog-conventionalcommits: 5.0.0
