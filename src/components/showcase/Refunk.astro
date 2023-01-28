@@ -35,10 +35,11 @@ const { default: refunkLogo } = await import(`~/assets/projects/Refunk.svg?raw`)
       entries.forEach((entry) => {
         const element = entry.target.getElementsByClassName('refunk-logo')[0]!
         if (!entry.isIntersecting) {
-          element.classList.add('transition-all', 'duration-700', ...animationClasses)
+          element.classList.add(...animationClasses)
           return
         }
         observer.unobserve(entry.target)
+        element.classList.add('transition-all', 'duration-700')
         element.classList.remove(...animationClasses)
       })
     },

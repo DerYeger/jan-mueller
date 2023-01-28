@@ -28,7 +28,7 @@ const { name, class: extraClasses = '', link } = Astro.props
         const children = [...entry.target.getElementsByClassName('showcase-animate')]
         if (!entry.isIntersecting) {
           children.forEach((element) => {
-            element.classList.add('transition-all', 'duration-500', ...animationClasses)
+            element.classList.add(...animationClasses)
           })
           return
         }
@@ -36,6 +36,7 @@ const { name, class: extraClasses = '', link } = Astro.props
         children.forEach(
           (element, index) => {
             setTimeout(() => {
+              element.classList.add('transition-all', 'duration-500')
               element.classList.remove(...animationClasses)
             }, index * 100)
           }

@@ -57,11 +57,14 @@ const name = 'Formi'
       entries.forEach((entry) => {
         const images = [...entry.target.getElementsByTagName('img')]
         if (!entry.isIntersecting) {
-          images.forEach((image) => image.classList.add('transition-transform', ...animationClasses))
+          images.forEach((image) => image.classList.add(...animationClasses))
           return
         }
         observer.unobserve(entry.target)
-        images.forEach((image) => image.classList.remove(...animationClasses))
+        images.forEach((image) => {
+          image.classList.add('transition-transform')
+          image.classList.remove(...animationClasses)
+        })
       })
     },
     { threshold: 0.5 }
