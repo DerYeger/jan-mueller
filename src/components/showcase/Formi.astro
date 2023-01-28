@@ -55,22 +55,18 @@ const name = 'Formi'
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
+        const images = [...entry.target.getElementsByTagName('img')]
         if (!entry.isIntersecting) {
+          images.forEach((image) => image.classList.add('transition-transform', ...animationClasses))
           return
         }
-        const images = [...entry.target.getElementsByTagName('img')]
-        images.forEach((image) => image.classList.remove(...animationClasses))
         observer.unobserve(entry.target)
+        images.forEach((image) => image.classList.remove(...animationClasses))
       })
     },
-    { threshold: 0.75 }
+    { threshold: 0.5 }
   )
 
   const formiContainers = [...document.getElementsByClassName('formi')]
-  formiContainers.forEach((logo) => {
-    ;[...logo.getElementsByTagName('img')].forEach((image) => {
-      image.classList.add('transition-transform', ...animationClasses)
-    })
-    observer.observe(logo)
-  })
+  formiContainers.forEach((logo) => observer.observe(logo))
 </script>
