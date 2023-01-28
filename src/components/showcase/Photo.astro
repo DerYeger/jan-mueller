@@ -1,23 +1,26 @@
 ---
 import { Picture } from '@astrojs/image/components'
 
+export type Location = `${string}, ${string}`
+
 interface Props {
   src: Promise<typeof import('*.png')> | Promise<typeof import('*.webp')>
-  alt: string
+  alt: (location: Location) => string
+  location: Location
   initial?: boolean
 }
 
-const { src, alt, initial = false } = Astro.props
+const { src, alt, location, initial = false } = Astro.props
 ---
 
 <div
-  class={`photo absolute inset-0 transition-opacity duration-1000 ${
+  class={`photo group absolute inset-0 transition-opacity duration-1000 ${
     initial ? 'z-10' : 'opacity-0'
   }`}
 >
   <Picture
     src={src}
-    alt={alt}
+    alt={alt(location)}
     widths={[768]}
     sizes="768px"
     aspectRatio={1}
@@ -26,4 +29,9 @@ const { src, alt, initial = false } = Astro.props
     loading="lazy"
     class="m-0 h-full w-full object-cover"
   />
+  <div
+    class="glass absolute inset-x-3 bottom-2 rounded-3xl px-2 py-1 text-center text-xs opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+  >
+    {location}
+  </div>
 </div>
