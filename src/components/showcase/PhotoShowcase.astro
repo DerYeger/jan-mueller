@@ -59,6 +59,34 @@ const photos: PhotoData[] = [
     container.addEventListener('pointerenter', clearQueuedImage)
     container.addEventListener('pointerleave', queueNextImage)
 
+    container.addEventListener('touchstart', startTouchSwipe)
+    container.addEventListener('touchend', endTouchSwipe)
+
+    let touchStart: Touch | undefined
+
+    function startTouchSwipe(event: Event) {
+      event.preventDefault()
+      touchStart = (event as TouchEvent).changedTouches[0]
+    }
+
+    function endTouchSwipe(event: Event) {
+      if (!touchStart) {
+        return
+      }
+      const touchEnd = (event as TouchEvent).changedTouches[0]
+      const xDiff = touchEnd.screenX - touchStart.screenX
+      const yDiff = touchEnd.screenY - touchStart.screenY
+      touchStart = undefined
+      // Must be a pronounced horizontal swipe.
+      if (5 * Math.abs(yDiff) > Math.abs(xDiff)) {
+        return
+      }
+      event.preventDefault()
+      const direction = xDiff > 0 ? -1 : 1
+      showImage(coerceInRange(current + direction))
+      queueNextImage()
+    }
+
     queueNextImage()
 
     function clearQueuedImage() {
@@ -72,7 +100,7 @@ const photos: PhotoData[] = [
     function queueNextImage() {
       clearQueuedImage()
       timeout = window.setTimeout(() => {
-        showImage((current + 1) % length)
+        showImage(coerceInRange(current + 1))
         queueNextImage()
       }, 5000)
     }
@@ -89,6 +117,11 @@ const photos: PhotoData[] = [
     function toggleImage(index: number) {
       images[index].classList.toggle('opacity-0')
       images[index].classList.toggle('z-10')
+    }
+
+    // Replace the modulo operator with a function that works with negative numbers.
+    function coerceInRange(index: number) {
+      return ((index % length) + length) % length;
     }
   })
 </script>
