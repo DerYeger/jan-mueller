@@ -1,3 +1,11 @@
-<main class="text-light bg-neutral-100">
+---
+interface Props {
+  class?: string
+}
+
+const { class: extraClasses = '' } = Astro.props
+---
+
+<main class:list={['text-light bg-neutral-100', extraClasses]}>
   <slot />
 </main>

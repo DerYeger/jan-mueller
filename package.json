@@ -23,9 +23,11 @@
   "dependencies": {
     "@changey/react-leaflet-markercluster": "4.0.0-rc1",
     "@yeger/vue-masonry-wall": "3.4.3",
+    "baklavajs": "v2.0.2-beta.3",
     "leaflet": "1.9.3",
     "react-leaflet": "4.2.0",
     "tailwindcss": "3.2.4",
+    "vecti": "2.1.39",
     "vue-marmoset-viewer": "3.1.1"
   },
   "devDependencies": {

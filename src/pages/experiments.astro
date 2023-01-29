@@ -1,0 +1,57 @@
+---
+import { Image } from '@astrojs/image/components'
+
+import MainLayout from '~/layouts/MainLayout.astro'
+
+interface Experiment {
+  title: string
+  slug: string
+  description: string
+  image?: Promise<typeof import('*.png')>
+}
+
+const experiments: Experiment[] = [
+  {
+    title: 'Vector Nodes',
+    slug: 'vector-nodes',
+    description: 'Note-based editor for 2D vector calculations.',
+  },
+]
+---
+
+<MainLayout title="Experiments">
+  <div class="container mx-auto px-4 py-8">
+    <div class="prose mb-8">
+      <h1>Jan's Experiments</h1>
+    </div>
+    <ul class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {
+        experiments.map((experiment) => (
+          <li class="card card-hover overflow-hidden">
+            <a
+              href={`/experiments/${experiment.slug}/`}
+              rel="prefetch"
+              class="block no-underline"
+            >
+              {experiment.image && (
+                <Image
+                  class="h-[100px] w-full object-cover"
+                  src={experiment.image}
+                  width={1200}
+                  height={200}
+                  quality={85}
+                  format="webp"
+                  alt={experiment.title}
+                />
+              )}
+              <div class="prose prose-sm flex flex-col gap-4 p-4">
+                <h2 class="my-0">{experiment.title}</h2>
+                <span class="text-light">{experiment.description}</span>
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</MainLayout>

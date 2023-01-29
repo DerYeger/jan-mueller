@@ -26,6 +26,7 @@ specifiers:
   astro-robots-txt: 0.3.11
   astro-seo-schema: 2.0.0
   autoprefixer: 10.4.13
+  baklavajs: v2.0.2-beta.3
   cypress: 12.4.1
   eslint: 8.32.0
   hast-util-to-string: 2.0.0
@@ -53,6 +54,7 @@ specifiers:
   ts-node: 10.9.1
   turbo: 1.7.0
   typescript: 4.9.4
+  vecti: 2.1.39
   vite: 4.0.4
   vite-plugin-lib: 1.2.0
   vue: 3.2.45
@@ -62,9 +64,11 @@ specifiers:
 dependencies:
   '@changey/react-leaflet-markercluster': 4.0.0-rc1_55zqbwdg2244kcjuhs6lcsbkfq
   '@yeger/vue-masonry-wall': 3.4.3_vue@3.2.45
+  baklavajs: 2.0.2-beta.3
   leaflet: 1.9.3
   react-leaflet: 4.2.0_62odpeyiud56khcgusq6yrntjq
   tailwindcss: 3.2.4_ts-node@10.9.1
+  vecti: 2.1.39
   vue-marmoset-viewer: 3.1.1_vue@3.2.45
 
 devDependencies:
@@ -744,6 +748,43 @@ packages:
       '@babel/helper-string-parser': 7.19.4
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
+
+  /@baklavajs/core/2.0.2-beta.3:
+    resolution: {integrity: sha512-BJoSDuKm9Oi3HsYVyd30xWxpNGIUWyZzBS+THqQGyBivHoIeF266xgHM1dknlYtDLV8zvvzHD0wZSHPhh2ZYLA==}
+    dependencies:
+      '@baklavajs/events': 2.0.2-beta.3
+      uuid: 9.0.0
+    dev: false
+
+  /@baklavajs/engine/2.0.2-beta.3:
+    resolution: {integrity: sha512-+7cwZhPOsSjxvW4zBOw32z5QuQ70jmTbJxEgtopZjEjCdUGe2XaCbnE953rVdUC2L8GarFlJlOV0ofW7nmajgw==}
+    dependencies:
+      '@baklavajs/core': 2.0.2-beta.3
+      '@baklavajs/events': 2.0.2-beta.3
+    dev: false
+
+  /@baklavajs/events/2.0.2-beta.3:
+    resolution: {integrity: sha512-CNKIBYt56uNwpD3sm4atQ1oD9oaprEguPL2gtizs1/+JTxdHnneym0cTvWsECrxHBBY4uO+naJMbjTm7C7CCxg==}
+    dev: false
+
+  /@baklavajs/interface-types/2.0.2-beta.3:
+    resolution: {integrity: sha512-4my5nK2AknJ8TQqE6K3uc0aIfsR7t+HY1oHz6U9Apmf7RZFpg91+v2pqIPHorzax4Ptf9wjAizC9wGQcEHQMfg==}
+    dependencies:
+      '@baklavajs/core': 2.0.2-beta.3
+      '@baklavajs/engine': 2.0.2-beta.3
+      '@baklavajs/renderer-vue': 2.0.2-beta.3
+    dev: false
+
+  /@baklavajs/renderer-vue/2.0.2-beta.3:
+    resolution: {integrity: sha512-VTYABD9yacm5a++Wz7bDkKVkpPSYyf1OHP9Y5kycxQqpm9KtLl2vl8ZqiNn8cAlypCdxsRhZp0zgZ3omY01t+A==}
+    dependencies:
+      '@baklavajs/core': 2.0.2-beta.3
+      '@baklavajs/events': 2.0.2-beta.3
+    dev: false
+
+  /@baklavajs/themes/2.0.2-beta.3:
+    resolution: {integrity: sha512-4AKR96nLDYW/tCpKvizv6DfrUpTHMIuNUaE6KQ7V+5TfZFMeJMgvDtx5Hu5YclKGv1Hw721mM7iP+LcjlGzkow==}
+    dev: false
 
   /@changey/react-leaflet-markercluster/4.0.0-rc1_55zqbwdg2244kcjuhs6lcsbkfq:
     resolution: {integrity: sha512-gS1lEQiQwyeI6Y6Wuxuqqffwywm7giQw4tbcqtJP8zyT5bc3AzW2/EVJGwWORYo/PLDdDnvOrpI+lUJy2UA5MQ==}
@@ -2554,6 +2595,16 @@ packages:
   /bail/2.0.2:
     resolution: {integrity: sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw==}
     dev: true
+
+  /baklavajs/2.0.2-beta.3:
+    resolution: {integrity: sha512-0YtRuoZOyvi4MqmoGlGeP5/hPfupKtIPnOix9Ar8H8MGqdUSNn+sTssSfcWhdQvxt1n+aNswD6FJcv1sDZoIQg==}
+    dependencies:
+      '@baklavajs/core': 2.0.2-beta.3
+      '@baklavajs/engine': 2.0.2-beta.3
+      '@baklavajs/interface-types': 2.0.2-beta.3
+      '@baklavajs/renderer-vue': 2.0.2-beta.3
+      '@baklavajs/themes': 2.0.2-beta.3
+    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -9644,6 +9695,11 @@ packages:
     hasBin: true
     dev: true
 
+  /uuid/9.0.0:
+    resolution: {integrity: sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==}
+    hasBin: true
+    dev: false
+
   /uvu/0.5.6:
     resolution: {integrity: sha512-+g8ENReyr8YsOc6fv/NVJs2vFdHBnBNdfE49rshrTzDWOlUx4Gq7KOS2GD8eqhy2j+Ejq29+SbKH8yjkAqXqoA==}
     engines: {node: '>=8'}
@@ -9680,6 +9736,10 @@ packages:
     resolution: {integrity: sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==}
     engines: {node: '>= 0.10'}
     dev: true
+
+  /vecti/2.1.39:
+    resolution: {integrity: sha512-PDTS9+UMCDdTsFphTO8mKrIu0SmmcP5PyukflYlqFnIO3mz+xVZuLRCYhU25wHVFaAhem+bfhk8CwSH0jDRqLA==}
+    dev: false
 
   /verror/1.10.0:
     resolution: {integrity: sha512-ZZKSmDAEFOijERBLkmYfJ+vmk3w+7hOLYDNkRCuRuMJGEmqYNCNLyBBFwWKVMhfwaEF3WOd0Zlw86U/WC/+nYw==}
