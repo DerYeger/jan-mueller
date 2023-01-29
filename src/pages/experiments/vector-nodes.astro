@@ -1,0 +1,36 @@
+---
+import BaseHead from '~/components/BaseHead.astro'
+import VectorNodes from '~/components/experiments/VectorNodes.vue'
+import Header from '~/components/Header.astro'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead />
+    <style>
+      html,
+      body {
+        height: 100vh;
+        height: 100dvh;
+      }
+
+      body {
+        background-color: var(--baklava-editor-background-pattern-default);
+      }
+
+      main {
+        top: var(--header-height);
+        height: calc(100% - var(--header-height));
+      }
+    </style>
+  </head>
+  <body class="dark relative max-w-full overflow-x-hidden text-white">
+    <Header
+      class="border-b-0 !bg-[var(--baklava-toolbar-background)] !backdrop-filter-none"
+    />
+    <main class="absolute inset-x-0 bottom-0 bg-neutral-100">
+      <VectorNodes client:only />
+    </main>
+  </body>
+</html>

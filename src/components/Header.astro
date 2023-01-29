@@ -1,9 +1,28 @@
 ---
 import Navigation from '~/components/Navigation.astro'
+
+interface Props {
+  class?: string
+}
+
+const { class: extraClasses = '' } = Astro.props
 ---
 
 <header
-  class="surface-border glass sticky top-0 z-50 flex h-[48px] items-center justify-between border-b p-4 pr-0"
+  class:list={[
+    'surface-border glass sticky top-0 z-50 flex items-center justify-between border-b p-4 pr-0',
+    extraClasses,
+  ]}
 >
   <Navigation />
 </header>
+
+<style is:global>
+  :root {
+    --header-height: 48px;
+  }
+
+  header {
+    height: var(--header-height);
+  }
+</style>
