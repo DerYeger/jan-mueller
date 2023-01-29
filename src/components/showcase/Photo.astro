@@ -18,6 +18,12 @@ interface Props {
 
 const { photo, initial = false, index, total } = Astro.props
 const { src, alt, location } = photo
+
+function getNumberWithOrdinal(n: number) {
+  const s = ['th', 'st', 'nd', 'rd']
+  const v = n % 100
+  return n + (s[(v - 20) % 10] || s[v] || s[0])
+}
 ---
 
 <div
@@ -26,16 +32,21 @@ const { src, alt, location } = photo
   }`}
 >
   <div
-    class="absolute inset-x-0 top-3 flex justify-center gap-2 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+    class="absolute inset-x-0 top-2 flex justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100"
   >
     {
       Array.from({ length: total }, (_, i) => (
-        <div
-          class={`dot h-2 w-2 cursor-pointer rounded-full ${
-            i === index ? 'bg-white' : 'glass opacity-75'
-          }`}
+        <button
+          class="dot cursor-pointer p-1"
           data-index={i}
-        />
+          aria-label={`Show ${getNumberWithOrdinal(i + 1)} image.`}
+        >
+          <div
+            class={`h-2 w-2 rounded-full ${
+              i === index ? 'bg-white' : 'glass opacity-75'
+            }`}
+          />
+        </button>
       ))
     }
   </div>
