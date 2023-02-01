@@ -456,3 +456,45 @@ export function registerAllNodeTypes(baklava: IBaklavaViewModel) {
     nodes.forEach((node) => editor.registerNodeType(node, { category }))
   )
 }
+
+export function createExample(baklava: IBaklavaViewModel) {
+  const vector = new VectorNode()
+  vector.inputs.y.value = 1
+  // @ts-expect-error Missing typedef
+  vector.position = { x: 270, y: 80 }
+  baklava.editor.graph.addNode(vector)
+
+  const time = new TimeNode()
+  // @ts-expect-error Missing typedef
+  time.position = { x: 270, y: 500 }
+  baklava.editor.graph.addNode(time)
+
+  const modulo = new ModuloNode()
+  modulo.inputs.b.value = 60
+  // @ts-expect-error Missing typedef
+  modulo.position = { x: 550, y: 500 }
+  baklava.editor.graph.addNode(modulo)
+
+  const multiply = new MultiplyScalarsNode()
+  multiply.inputs.b.value = -6
+  // @ts-expect-error Missing typedef
+  multiply.position = { x: 830, y: 500 }
+  baklava.editor.graph.addNode(multiply)
+
+  const rotate = new RotateNode()
+  // @ts-expect-error Missing typedef
+  rotate.position = { x: 1100, y: 80 }
+  baklava.editor.graph.addNode(rotate)
+
+  baklava.editor.graph.addConnection(
+    vector.outputs.output,
+    rotate.inputs.vector
+  )
+
+  baklava.editor.graph.addConnection(time.outputs.output, modulo.inputs.a)
+  baklava.editor.graph.addConnection(modulo.outputs.output, multiply.inputs.a)
+  baklava.editor.graph.addConnection(
+    multiply.outputs.output,
+    rotate.inputs.angle
+  )
+}

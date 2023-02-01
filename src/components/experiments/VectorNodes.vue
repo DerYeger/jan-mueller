@@ -8,10 +8,14 @@ import {
 } from 'baklavajs'
 import { onBeforeUnmount } from 'vue'
 
-import { registerAllNodeTypes } from '~/components/experiments/nodes'
+import {
+  createExample,
+  registerAllNodeTypes,
+} from '~/components/experiments/nodes'
 
 const baklava = useBaklava()
 registerAllNodeTypes(baklava)
+createExample(baklava)
 
 const engine = new DependencyEngine(baklava.editor)
 const token = Symbol('engine')
@@ -25,7 +29,7 @@ engine.start()
 
 const interval = setInterval(() => {
   engine.start()
-}, 100)
+}, 1000)
 
 onBeforeUnmount(() => {
   clearInterval(interval)
