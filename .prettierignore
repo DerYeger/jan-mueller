@@ -1,4 +1,5 @@
 src/components/ThemeToggle.astro
+src/components/experiments/Experiment.astro
 src/components/showcase/About.astro
 src/components/showcase/Formi.astro
 src/components/showcase/Masonry.astro

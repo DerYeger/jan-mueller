@@ -2,29 +2,13 @@
 import type { Vector } from 'vecti'
 import { computed, toRefs } from 'vue'
 
-import type { VisualizerInterface } from '~/components/experiments/nodes'
-
 const props = defineProps<{
-  intf: VisualizerInterface
+  modelValue: Vector[]
 }>()
 
-const { intf } = toRefs(props)
+const { modelValue } = toRefs(props)
 
 const paddingMultiplier = 1.1
-
-function getMin(value: number) {
-  if (value > 0) {
-    return 0
-  }
-  return value * paddingMultiplier
-}
-
-function getMax(value: number) {
-  if (value < 0) {
-    return 0
-  }
-  return value * paddingMultiplier
-}
 
 function mapToX(value: number, limit: number) {
   return (value / limit) * 50 + 50
@@ -32,17 +16,6 @@ function mapToX(value: number, limit: number) {
 
 function mapToY(value: number, limit: number) {
   return 50 - (value / limit) * 50
-}
-
-function getLimit(vector: Vector) {
-  const minX = getMin(vector.x)
-  const minY = getMin(vector.y)
-  const min = Math.min(minX, minY)
-
-  const maxX = getMax(vector.x)
-  const maxY = getMax(vector.y)
-  const max = Math.max(maxX, maxY)
-  return Math.max(Math.abs(min), max)
 }
 
 function getCoordinates(vector: Vector, limit: number) {
@@ -60,9 +33,9 @@ function getCoordinates(vector: Vector, limit: number) {
 }
 
 const data = computed(() => {
-  const vectors = intf.value.value
+  const vectors = modelValue.value
   const limit = vectors.reduce((acc, vector) => {
-    const limit = getLimit(vector)
+    const limit = paddingMultiplier * vector.length()
     return Math.max(acc, limit)
   }, 0)
 
@@ -72,8 +45,7 @@ const data = computed(() => {
     .filter((vector) => vector.x !== 0 || vector.y !== 0)
     .map((vector) => getCoordinates(vector, actualLimit))
 
-  // use the limit value to calculate an array of points where indicators should be placed on the axis
-  const indicatorPoints = Array.from({ length: 10 }, (_, i) => {
+  const gridLines = Array.from({ length: 10 }, (_, i) => {
     const value = (i * actualLimit) / 10
     return mapToX(value, actualLimit)
   })
@@ -81,14 +53,17 @@ const data = computed(() => {
   return {
     vectors: mappedVectors,
     limit: actualLimit,
-    indicatorPoints,
+    gridLines,
   }
 })
 </script>
 
 <template>
-  <div class="h-full w-[calc(100%+0.5em)] p-2">
-    <svg class="h-full w-full overflow-visible" viewBox="0 0 100 100">
+  <div class="visualizer-interface h-full p-2">
+    <svg
+      class="h-full w-full select-none overflow-visible"
+      viewBox="0 0 100 100"
+    >
       <defs>
         <marker
           id="arrow-axis"
@@ -114,10 +89,10 @@ const data = computed(() => {
         </marker>
       </defs>
       <g
-        class="children:stroke-neutral-700 children:opacity-75 children:stroke-[0.25px]"
+        class="grid-lines children:stroke-neutral-700 children:opacity-75 children:stroke-[0.25px]"
       >
         <line
-          v-for="point of data.indicatorPoints"
+          v-for="point of data.gridLines"
           :key="point"
           :x1="0"
           :y1="point + 5"
@@ -125,7 +100,7 @@ const data = computed(() => {
           :y2="point + 5"
         />
         <line
-          v-for="point of data.indicatorPoints"
+          v-for="point of data.gridLines"
           :key="point"
           :x1="0"
           :y1="point - 50"
@@ -133,7 +108,7 @@ const data = computed(() => {
           :y2="point - 50"
         />
         <line
-          v-for="point of data.indicatorPoints"
+          v-for="point of data.gridLines"
           :key="point"
           :x1="point + 5"
           :y1="0"
@@ -141,7 +116,7 @@ const data = computed(() => {
           :y2="100"
         />
         <line
-          v-for="point of data.indicatorPoints"
+          v-for="point of data.gridLines"
           :key="point"
           :x1="point - 50"
           :y1="0"
@@ -196,3 +171,9 @@ const data = computed(() => {
     </svg>
   </div>
 </template>
+
+<style>
+.baklava-node .visualizer-interface {
+  width: calc(100% + 0.5em);
+}
+</style>

@@ -1,0 +1,35 @@
+---
+import { Vector } from 'vecti'
+
+import Experiment from '~/components/experiments/Experiment.astro'
+import ExperimentDescription from '~/components/experiments/ExperimentDescription.astro'
+import ExperimentTitle from '~/components/experiments/ExperimentTitle.astro'
+import VisualizerInterface from '~/components/experiments/VisualizerInterface.vue'
+
+const name = 'Vector Nodes'
+
+const vectors: Vector[] = (() => {
+  const a = new Vector(20, 5)
+  const b = new Vector(5, 20)
+  return [a, b, a.add(b)]
+})()
+---
+
+<Experiment
+  name={name}
+  href="/experiments/vector-nodes"
+  class="dark bg-gradient-to-tr from-[#0e1016] to-[#2b344e]"
+>
+  <div class="prose prose-invert">
+    <ExperimentTitle>{name}</ExperimentTitle>
+    <ExperimentDescription>
+      Node-based editor for 2D vector calculations, built with <a
+        class="no-underline"
+        href="https://github.com/newcat/baklavajs">BaklavaJS</a
+      >.
+    </ExperimentDescription>
+  </div>
+  <div class="mx-auto w-48 max-w-full sm:w-64">
+    <VisualizerInterface modelValue={vectors} />
+  </div>
+</Experiment>

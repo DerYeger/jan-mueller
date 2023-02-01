@@ -97,7 +97,8 @@ const RandomVectorNode = defineNode({
 })
 
 const AddNode = defineNode({
-  type: 'Add',
+  type: 'AddVectors',
+  title: 'Add',
   inputs: {
     a: () => new VectorInterface('A'),
     b: () => new VectorInterface('B'),
@@ -113,7 +114,8 @@ const AddNode = defineNode({
 })
 
 const SubtractNode = defineNode({
-  type: 'Subtract',
+  type: 'SubtractVectors',
+  title: 'Subtract',
   inputs: {
     a: () => new VectorInterface('A'),
     b: () => new VectorInterface('B'),
@@ -129,7 +131,8 @@ const SubtractNode = defineNode({
 })
 
 const MultiplyNode = defineNode({
-  type: 'Multiply',
+  type: 'MultiplyVectors',
+  title: 'Multiply',
   inputs: {
     vector: () => new VectorInterface('Vector'),
     scalar: () => new ScalarInterface('Scalar', 1),
@@ -145,7 +148,8 @@ const MultiplyNode = defineNode({
 })
 
 const DivideNode = defineNode({
-  type: 'Divide',
+  type: 'DivideVectors',
+  title: 'Divide',
   inputs: {
     vector: () => new VectorInterface('Vector'),
     scalar: () => new ScalarInterface('Scalar', 1),
@@ -288,9 +292,138 @@ const DebugNode = defineNode({
   },
 })
 
+const TimeNode = defineNode({
+  type: 'Time',
+  outputs: {
+    output: () => new ScalarInterface('Output'),
+    textualOutput,
+  },
+  calculate() {
+    const value = Date.now() / 1000
+    return { output: value, textualOutput: value.toFixed(2) }
+  },
+})
+
+const AddScalarsNode = defineNode({
+  type: 'AddScalars',
+  title: 'Add',
+  inputs: {
+    a: () => new ScalarInterface('A'),
+    b: () => new ScalarInterface('B'),
+  },
+  outputs: {
+    output: () => new ScalarInterface('Output'),
+    textualOutput,
+  },
+  calculate({ a, b }) {
+    const result = a + b
+    return { output: result, textualOutput: result.toFixed(2) }
+  },
+})
+
+const SubtractScalarsNode = defineNode({
+  type: 'SubtractScalars',
+  title: 'Subtract',
+  inputs: {
+    a: () => new ScalarInterface('A'),
+    b: () => new ScalarInterface('B'),
+  },
+  outputs: {
+    output: () => new ScalarInterface('Output'),
+    textualOutput,
+  },
+  calculate({ a, b }) {
+    const result = a - b
+    return { output: result, textualOutput: result.toFixed(2) }
+  },
+})
+
+const MultiplyScalarsNode = defineNode({
+  type: 'MultiplyScalars',
+  title: 'Multiply',
+  inputs: {
+    a: () => new ScalarInterface('A'),
+    b: () => new ScalarInterface('B', 1),
+  },
+  outputs: {
+    output: () => new ScalarInterface('Output'),
+    textualOutput,
+  },
+  calculate({ a, b }) {
+    const result = a * b
+    return { output: result, textualOutput: result.toFixed(2) }
+  },
+})
+
+const DivideScalarsNode = defineNode({
+  type: 'DivideScalars',
+  title: 'Divide',
+  inputs: {
+    a: () => new ScalarInterface('A'),
+    b: () => new ScalarInterface('B', 1),
+  },
+  outputs: {
+    output: () => new ScalarInterface('Output'),
+    textualOutput,
+  },
+  calculate({ a, b }) {
+    const result = b !== 0 ? a / b : 0
+    return { output: result, textualOutput: result.toFixed(2) }
+  },
+})
+
+const ModuloNode = defineNode({
+  type: 'Modulo',
+  inputs: {
+    a: () => new ScalarInterface('A'),
+    b: () => new ScalarInterface('B', 1),
+  },
+  outputs: {
+    output: () => new ScalarInterface('Output'),
+    textualOutput,
+  },
+  calculate({ a, b }) {
+    const result = b !== 0 ? ((a % b) + b) % b : 0
+    return { output: result, textualOutput: result.toFixed(2) }
+  },
+})
+
+const PiNode = defineNode({
+  type: 'Pi',
+  outputs: {
+    output: () => new ScalarInterface('Output', Math.PI),
+  },
+  calculate() {
+    return { output: Math.PI }
+  },
+})
+
+const waveTypes = ['sin', 'cos', 'tan'] as const
+
+const WaveNode = defineNode({
+  type: 'Wave',
+  inputs: {
+    scalar: () => new ScalarInterface('A'),
+    type: () =>
+      new SelectInterface(
+        'Type',
+        waveTypes[0],
+        waveTypes as unknown as string[]
+      ).setPort(false),
+  },
+  outputs: {
+    output: () => new ScalarInterface('Output'),
+    textualOutput,
+  },
+  calculate({ scalar, type }) {
+    const result = Math[type](scalar)
+    return { output: result, textualOutput: result.toFixed(2) }
+  },
+})
+
 const nodeCategories = {
-  Basic: [VectorNode, RandomVectorNode, VisualizeNode, DebugNode],
-  Operations: [
+  Basic: [VectorNode, RandomVectorNode, TimeNode, VisualizeNode, DebugNode],
+  Vectors: [
     AddNode,
     SubtractNode,
     MultiplyNode,
@@ -301,6 +434,15 @@ const nodeCategories = {
     DotProductNode,
     CrossProductNode,
     HadamardProductNode,
+  ],
+  Scalars: [
+    AddScalarsNode,
+    SubtractScalarsNode,
+    MultiplyScalarsNode,
+    DivideScalarsNode,
+    ModuloNode,
+    PiNode,
+    WaveNode,
   ],
 }
 
