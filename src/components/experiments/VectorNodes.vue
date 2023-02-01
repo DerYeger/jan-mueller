@@ -1,16 +1,14 @@
 <script setup lang="ts">
+import '@baklavajs/themes/dist/syrup-dark.css'
 import {
-  Components,
   DependencyEngine,
   EditorComponent,
   applyResult,
   useBaklava,
 } from 'baklavajs'
+import { onBeforeUnmount } from 'vue'
 
-import '@baklavajs/themes/dist/syrup-dark.css'
 import { registerAllNodeTypes } from '~/components/experiments/nodes'
-
-const BaklavaNode = Components.Node
 
 const baklava = useBaklava()
 registerAllNodeTypes(baklava)
@@ -22,24 +20,28 @@ engine.events.afterRun.subscribe(token, (result) => {
   applyResult(result, baklava.editor)
   engine.resume()
 })
+
 engine.start()
+
+const interval = setInterval(() => {
+  engine.start()
+}, 100)
+
+onBeforeUnmount(() => {
+  clearInterval(interval)
+  engine.events.afterRun.unsubscribe(token)
+})
 </script>
 
 <template>
-  <EditorComponent :view-model="baklava">
-    <template #node="nodeProps">
-      <BaklavaNode
-        v-if="nodeProps.node.type === 'Visualize'"
-        :key="`${nodeProps.node.id}-visualize`"
-        v-bind="nodeProps"
-        style="width: 20rem"
-      />
-      <BaklavaNode v-else :key="nodeProps.node.id" v-bind="nodeProps" />
-    </template>
-  </EditorComponent>
+  <EditorComponent :view-model="baklava" />
 </template>
 
 <style>
+.node-container .baklava-node[data-node-type='Visualize'] {
+  width: 20rem !important;
+}
+
 .baklava-node-interface[data-interface-type='scalar'] .__port {
   background-color: red;
 }

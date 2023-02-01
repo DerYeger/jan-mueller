@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const colors = require('tailwindcss/colors')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
@@ -7,7 +10,16 @@ module.exports = {
     'astro.config.mjs',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        light: {
+          DEFAULT: colors.neutral['700'],
+        },
+        lighter: {
+          DEFAULT: colors.neutral['600'],
+        },
+      },
+    },
   },
   plugins: [
     function ({ addVariant }) {
