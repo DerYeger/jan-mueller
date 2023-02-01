@@ -19,16 +19,11 @@ function mapToY(value: number, limit: number) {
 }
 
 function getCoordinates(vector: Vector, limit: number) {
-  const x1 = mapToX(0, limit)
-  const x2 = mapToX(vector.x, limit)
-  const y1 = mapToY(0, limit)
-  const y2 = mapToY(vector.y, limit)
-
   return {
-    x1,
-    x2,
-    y1,
-    y2,
+    x1: mapToX(0, limit),
+    x2: mapToX(vector.x, limit),
+    y1: mapToY(0, limit),
+    y2: mapToY(vector.y, limit),
   }
 }
 
