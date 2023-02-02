@@ -1,3 +1,57 @@
+# [3.39.0](https://github.com/DerYeger/jan-mueller/compare/v3.38.6...v3.39.0) (2023-02-02)
+
+
+### Bug Fixes
+
+* add duration lazily ([84592eb](https://github.com/DerYeger/jan-mueller/commit/84592eb94ab9408c23eb6e5c28dc2b42b1f6b60f))
+* add missing `aria-label`s ([e3a8e79](https://github.com/DerYeger/jan-mueller/commit/e3a8e79511c9fea98c87c0e4381730fec060cf7f))
+* add transition class lazily ([b1698dc](https://github.com/DerYeger/jan-mueller/commit/b1698dc8daf3457ecd60cf4c850ad717289e2d1e))
+* adjust section padding ([9d60fce](https://github.com/DerYeger/jan-mueller/commit/9d60fce92d65edd136ffdec5eb6f5e07c1a6a886))
+* color and transform adjustments ([e5f7799](https://github.com/DerYeger/jan-mueller/commit/e5f7799aca600f1e096d491f49b087953f9254e1))
+* improve image rotation ([2696417](https://github.com/DerYeger/jan-mueller/commit/26964170288c002395acfc493aab8af520ac2342))
+* improve wiener lines animation ([d3ef33b](https://github.com/DerYeger/jan-mueller/commit/d3ef33b9ce7a00d52777819ed0ac366502dbc0fe))
+* lower formi animation threshold ([33c4a61](https://github.com/DerYeger/jan-mueller/commit/33c4a61d7075411e21613a7828fcd12b5260a68d))
+* prevent dangling space in description ([5c4f6e5](https://github.com/DerYeger/jan-mueller/commit/5c4f6e524766f338d174822e212476e91beeab36))
+* prevent dangling strokes in safari ([de3dd11](https://github.com/DerYeger/jan-mueller/commit/de3dd11ab73f3313eb34295ee50715e1ba3b95aa))
+* prevent layout shifts from avatar on mobile ([e674ec7](https://github.com/DerYeger/jan-mueller/commit/e674ec7562205bc8ef59365d2da1c7e6fd863ac8))
+* prevent safari issues ([669f3fe](https://github.com/DerYeger/jan-mueller/commit/669f3fe55f2f1a42f2c188abbb1f0aaaf2c94814))
+* reduce showcase animation threshold ([685c47b](https://github.com/DerYeger/jan-mueller/commit/685c47bf9524f6616f458f7ffa597fb3472f5706))
+* remove max width of showcase descriptions ([5815cbf](https://github.com/DerYeger/jan-mueller/commit/5815cbf2820c018a22f42cf178cf7be7126ee1e2))
+* use `rem` for logo filter ([f1266fe](https://github.com/DerYeger/jan-mueller/commit/f1266feda5c42e7d2694736f37ffa404be10f7dc))
+
+
+### Features
+
+* add about me text ([381911e](https://github.com/DerYeger/jan-mueller/commit/381911e95b86bd6e5ecb27b50dd2f0673e9f69ac))
+* add experiment ([730046f](https://github.com/DerYeger/jan-mueller/commit/730046f099795b3011649ef5b2cf8d61bd3f6ba4))
+* add image location text ([4aa6fdd](https://github.com/DerYeger/jan-mueller/commit/4aa6fdd1807f6a09adf60082e41a87711470d226))
+* add photo indicators ([25b27bb](https://github.com/DerYeger/jan-mueller/commit/25b27bb4de29eadd53c2f425040101e25a9de066))
+* add photos ([a0715d4](https://github.com/DerYeger/jan-mueller/commit/a0715d44e13feb8fad62e27b5e2384cda8adf1f1))
+* add rotating photo showcase ([dc2c154](https://github.com/DerYeger/jan-mueller/commit/dc2c154a2a7d2b22bae8e06314270ee90d1101d2))
+* add vector nodes example ([23aebb6](https://github.com/DerYeger/jan-mueller/commit/23aebb6d22d981759a7f7345da7773221e5ecd86))
+* create showcase section ([a491a09](https://github.com/DerYeger/jan-mueller/commit/a491a0983c8c4418668f630744835ebf8a587d69))
+* enhance vector nodes ([932f486](https://github.com/DerYeger/jan-mueller/commit/932f486d28fbdb53934b54bf5b7fc40c73bf240a))
+* improve alt texts ([4df9f9c](https://github.com/DerYeger/jan-mueller/commit/4df9f9c28bb5da55047df77e618e8164bc814705))
+* improve animations ([68bbfd2](https://github.com/DerYeger/jan-mueller/commit/68bbfd21717bf0b78ac3b8436f8b723aa95714c7))
+* improve apollo showcase ([49980e0](https://github.com/DerYeger/jan-mueller/commit/49980e0952ebee2894804fc7c16cd3ce4ba37dea))
+* improve apollo showcase ([1047a43](https://github.com/DerYeger/jan-mueller/commit/1047a4396454cc15e262a04fe17f1000a3cbc2e4))
+* improve blog button ([a940ed4](https://github.com/DerYeger/jan-mueller/commit/a940ed4803a9d235928ef3e89dc8a87461390cdd))
+* improve clickable area of photo showcase ([df52dcd](https://github.com/DerYeger/jan-mueller/commit/df52dcd49582578c702a78a1aca0a10c3ef5a10b))
+* improve layout ([ea73f66](https://github.com/DerYeger/jan-mueller/commit/ea73f669e3775ada0d9f1c5d3e16de9c9b42b350))
+* improve masonry visuals ([cb77d31](https://github.com/DerYeger/jan-mueller/commit/cb77d3151edab2f370105df22361f208678081c1))
+* improve noted showcase ([e545e8a](https://github.com/DerYeger/jan-mueller/commit/e545e8a5684da13037b95efd10d493d4bd8e3a3a))
+* improve photo showcase animation ([6d70f0f](https://github.com/DerYeger/jan-mueller/commit/6d70f0fe5043c0126a6260c80c09509f0fbc4c89))
+* improve project display ([dac1421](https://github.com/DerYeger/jan-mueller/commit/dac14219e032655d0123797015fad52e211b4742))
+* improve showcase ([87e91e9](https://github.com/DerYeger/jan-mueller/commit/87e91e92bdc80e0f13d7e2c6fa397203173158a8))
+* make photo selectable ([7af7cc4](https://github.com/DerYeger/jan-mueller/commit/7af7cc4967056e8abe28c06269c425cb4d435ae1))
+* make photo showcase swipeable ([2b45823](https://github.com/DerYeger/jan-mueller/commit/2b4582304786a8e65aaece3f0cb5c83625fdf53b))
+* only animate if not initially visible ([2d1f426](https://github.com/DerYeger/jan-mueller/commit/2d1f42687c9b2aba38ae47b20b1e9c2f948c19d2))
+* only animate showcase if js is enabled ([f7a2d0c](https://github.com/DerYeger/jan-mueller/commit/f7a2d0c03d1ef90b39c25cb1f0946c5f20695a4f))
+* pause photo rotation on hover ([a23810e](https://github.com/DerYeger/jan-mueller/commit/a23810e8e1a53febd22724ea32c4597485c532a4))
+* remove dark mode ([a887122](https://github.com/DerYeger/jan-mueller/commit/a887122a0bb3f7579d2d3fad19453a9011457305))
+* update `@yeger/eslint-config` for tailwind class rules ([9afb9e8](https://github.com/DerYeger/jan-mueller/commit/9afb9e8178da6e8690cfa436875cc4c7c147c080))
+* use same max-w for cv and showcase ([a66d162](https://github.com/DerYeger/jan-mueller/commit/a66d1623a8ce0aa42fd450f0b8f8adc10ecb1d83))
+
 ## [3.38.6](https://github.com/DerYeger/jan-mueller/compare/v3.38.5...v3.38.6) (2023-01-28)
 
 
