@@ -8,7 +8,7 @@ describe('Home', () => {
   })
 
   it('shows about me section', () => {
-    cy.contains('About Me').should('be.visible')
+    cy.contains('About Me').scrollIntoView().should('be.visible')
   })
 
   it('shows projects', () => {
