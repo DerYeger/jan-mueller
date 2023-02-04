@@ -1,4 +1,6 @@
 ---
+import AntExperiment from '~/components/experiments/AntExperiment.astro'
+import NeonBarExperiment from '~/components/experiments/NeonBarExperiment.astro'
 import VectorNodesExperiment from '~/components/experiments/VectorNodesExperiment.astro'
 import MainLayout from '~/layouts/MainLayout.astro'
 ---
@@ -8,18 +10,24 @@ import MainLayout from '~/layouts/MainLayout.astro'
     <div class="prose mb-8 max-w-none">
       <h1 class="mb-4">Jan's Experiments</h1>
       <span class="mt-0 text-2xl font-bold text-neutral-500">
-        A space for ideas that don't fit the scope of a dedicated project.
+        A space for ideas and doodles that don't fit the scope of a dedicated
+        project.
       </span>
     </div>
     <div
       class="grid grid-flow-row grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4"
     >
-      <style is:global>
-        .grid-lines {
-          opacity: 0;
-        }
-      </style>
-      <VectorNodesExperiment />
+      <div class="row-span-2 sm:max-md:col-span-2">
+        <VectorNodesExperiment />
+      </div>
+      <div class="relative w-full pb-[100%]">
+        <div class="absolute inset-0">
+          <NeonBarExperiment />
+        </div>
+      </div>
+      <div class="h-64 max-h-full max-w-full sm:col-span-2">
+        <AntExperiment />
+      </div>
     </div>
   </div>
 </MainLayout>

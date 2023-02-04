@@ -1,0 +1,48 @@
+---
+import Experiment from '~/components/experiments/Experiment.astro'
+---
+
+<Experiment class="p-0">
+  <div class="neon-bar relative flex h-full w-full overflow-hidden">
+    <div class="gradient-left h-full w-[50%]"></div>
+    <div class="gradient-right h-full w-[calc(50%)]"></div>
+    <div
+      class="glow-animation absolute inset-x-0 bottom-0 h-[100%] w-full backdrop-contrast-125"
+    >
+    </div>
+    <style>
+      .neon-bar {
+        --from: red;
+        --to: black;
+        --angle: 90deg;
+      }
+
+      .gradient-left {
+        background: conic-gradient(from var(--angle), var(--from), var(--to));
+      }
+
+      .gradient-right {
+        background: conic-gradient(
+          from calc(360deg - var(--angle)),
+          var(--to),
+          var(--from)
+        );
+      }
+
+      .glow-animation {
+        animation: glow 2s infinite alternate ease-in;
+      }
+
+      @keyframes glow {
+        0% {
+          backdrop-filter: contrast(100%);
+        }
+        100% {
+          backdrop-filter: contrast(150%);
+        }
+      }
+    </style>
+  </div>
+</Experiment>
+
+<script src="~/components/experiments/neonBar.ts"></script>

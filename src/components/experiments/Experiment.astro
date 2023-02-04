@@ -2,9 +2,9 @@
 import { Icon } from 'astro-icon'
 
 interface Props {
-  name: string
+  name?: string
   class?: string
-  href: string
+  href?: string
 }
 
 const { name, class: extraClasses = '', href } = Astro.props
@@ -15,7 +15,7 @@ const { name, class: extraClasses = '', href } = Astro.props
   aria-label={name}
 >
   <slot />
-  <div class="flex w-full justify-end">
+  {href ? <div class="flex w-full justify-end">
     <a
       href={href}
       rel="prefetch"
@@ -24,7 +24,7 @@ const { name, class: extraClasses = '', href } = Astro.props
     >
       <Icon name="radix-icons:arrow-top-right" />
     </a>
-  </div>
+  </div> : null}
 </div>
 
 <script>

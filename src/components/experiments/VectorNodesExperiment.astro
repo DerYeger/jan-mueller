@@ -30,6 +30,11 @@ const vectors: Vector[] = (() => {
     </ExperimentDescription>
   </div>
   <div class="mx-auto w-48 max-w-full sm:w-64">
+    <style is:inline>
+      .grid-lines {
+        opacity: 0;
+      }
+    </style>
     <VisualizerInterface modelValue={vectors} />
   </div>
 </Experiment>
