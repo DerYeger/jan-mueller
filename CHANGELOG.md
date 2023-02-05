@@ -1,3 +1,12 @@
+# [3.40.0](https://github.com/DerYeger/jan-mueller/compare/v3.39.1...v3.40.0) (2023-02-05)
+
+
+### Features
+
+* add experiments ([6e5f12e](https://github.com/DerYeger/jan-mueller/commit/6e5f12eff082967f8945828f75efce4a5d65e519))
+* improve experiment layout ([1c8a26c](https://github.com/DerYeger/jan-mueller/commit/1c8a26c2de1f4ab799bdeede4efdef5f7f941528))
+* improve experiments ([0818a66](https://github.com/DerYeger/jan-mueller/commit/0818a66ef6bc7f8a0ff7178b56a3efeb4303147f))
+
 ## [3.39.1](https://github.com/DerYeger/jan-mueller/compare/v3.39.0...v3.39.1) (2023-02-04)
 
 
