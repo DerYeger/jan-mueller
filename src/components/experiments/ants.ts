@@ -45,7 +45,7 @@ function letThemLoose(container: HTMLElement) {
     ctx.beginPath()
     ctx.moveTo(ant.x, ant.y)
     ctx.lineTo(ant.x + xDirection, ant.y + yDirection)
-    ctx.strokeStyle = '#a08679'
+    ctx.strokeStyle = '#29211d'
     ctx.lineWidth = 2
     ctx.stroke()
 
