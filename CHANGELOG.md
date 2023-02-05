@@ -1,3 +1,10 @@
+# [3.41.0](https://github.com/DerYeger/jan-mueller/compare/v3.40.0...v3.41.0) (2023-02-05)
+
+
+### Features
+
+* remove glow animation ([6c317bb](https://github.com/DerYeger/jan-mueller/commit/6c317bb301136a376e51d9e6fcd2a7a552a8610f))
+
 # [3.40.0](https://github.com/DerYeger/jan-mueller/compare/v3.39.1...v3.40.0) (2023-02-05)
 
 
