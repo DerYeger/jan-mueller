@@ -1,6 +1,7 @@
 ---
 import AntExperiment from '~/components/experiments/AntExperiment.astro'
 import NeonBarExperiment from '~/components/experiments/NeonBarExperiment.astro'
+import NeumorphismExperiment from '~/components/experiments/NeumorphismExperiment.astro'
 import VectorNodesExperiment from '~/components/experiments/VectorNodesExperiment.astro'
 import MainLayout from '~/layouts/MainLayout.astro'
 ---
@@ -15,9 +16,9 @@ import MainLayout from '~/layouts/MainLayout.astro'
       </span>
     </div>
     <div
-      class="grid grid-flow-row grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4"
+      class="grid grid-flow-row grid-cols-2 gap-4 md:grid-cols-3 2xl:grid-cols-4"
     >
-      <div class="row-span-2 sm:max-md:col-span-2">
+      <div class="row-span-2 max-md:col-span-2">
         <VectorNodesExperiment />
       </div>
       <div class="relative w-full pb-[100%]">
@@ -25,7 +26,12 @@ import MainLayout from '~/layouts/MainLayout.astro'
           <NeonBarExperiment />
         </div>
       </div>
-      <div class="h-64 max-h-full max-w-full sm:col-span-2">
+      <div class="relative w-full pb-[100%]">
+        <div class="absolute inset-0">
+          <NeumorphismExperiment />
+        </div>
+      </div>
+      <div class="col-span-2 h-64 max-h-full max-w-full">
         <AntExperiment />
       </div>
     </div>
