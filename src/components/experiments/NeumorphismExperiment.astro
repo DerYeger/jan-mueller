@@ -22,4 +22,27 @@ import Experiment from '~/components/experiments/Experiment.astro'
       </div>
     </button>
   </div>
+  <div
+    class="relative my-auto h-12 rounded-full bg-gradient-to-b from-neutral-300 via-neutral-200 to-neutral-100 p-2 outline outline-1 outline-neutral-300"
+  >
+    <input
+      type="checkbox"
+      id="neon-bar-toggle"
+      value=""
+      class="peer hidden"
+      required=""
+    />
+    <label
+      for="neon-bar-toggle"
+      class="relative block h-8 cursor-pointer rounded-full bg-gradient-to-br from-red-500 to-neutral-500 shadow-inner outline outline-1 outline-neutral-300 transition-all peer-checked:bg-gradient-to-bl peer-checked:from-green-500"
+    >
+    </label>
+    <div
+      class="pointer-events-none absolute inset-y-2 right-2 h-8 w-8 rounded-full bg-neutral-600 bg-gradient-to-b from-neutral-100 to-neutral-300 p-1 shadow-xl transition-all peer-checked:mr-[calc(100%-12*0.25rem)]"
+    >
+      <div class="h-full rounded-full bg-neutral-200"></div>
+    </div>
+  </div>
 </Experiment>
+
+<script src="~/components/experiments/neumorphism.ts"></script>
