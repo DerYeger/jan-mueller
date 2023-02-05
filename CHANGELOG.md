@@ -1,3 +1,11 @@
+# [3.43.0](https://github.com/DerYeger/jan-mueller/compare/v3.42.0...v3.43.0) (2023-02-05)
+
+
+### Features
+
+* **experiments:** add noise ([4651844](https://github.com/DerYeger/jan-mueller/commit/4651844b68b04c54249f2498613a484386c9e749))
+* **experiments:** improve visuals ([cf34d87](https://github.com/DerYeger/jan-mueller/commit/cf34d873b6b7b14269ca4dc19fd81cc3044e0fae))
+
 # [3.42.0](https://github.com/DerYeger/jan-mueller/compare/v3.41.0...v3.42.0) (2023-02-05)
 
 
