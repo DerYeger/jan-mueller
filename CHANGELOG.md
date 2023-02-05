@@ -1,3 +1,10 @@
+# [3.42.0](https://github.com/DerYeger/jan-mueller/compare/v3.41.0...v3.42.0) (2023-02-05)
+
+
+### Features
+
+* **experiments:** add toggle ([f184ae4](https://github.com/DerYeger/jan-mueller/commit/f184ae499cf83004772017e253feeb341c943574))
+
 # [3.41.0](https://github.com/DerYeger/jan-mueller/compare/v3.40.0...v3.41.0) (2023-02-05)
 
 
