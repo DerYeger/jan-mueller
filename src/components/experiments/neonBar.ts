@@ -1,11 +1,13 @@
 import { Vector } from 'vecti'
 
+export {}
+
 const neonBars = document.querySelectorAll<HTMLElement>('.neon-bar')
 neonBars.forEach((neonBar) => {
   let percentage = 0
-  neonBar.addEventListener('pointermove', (e) => {
+  neonBar.addEventListener('mousemove', (e) => {
     stopRotate()
-    const event = e as PointerEvent
+    const event = e as MouseEvent
     const { width, height } = neonBar.getBoundingClientRect()
     const center = new Vector(width / 2, height / 2)
     const vector = new Vector(event.offsetX, event.offsetY)
@@ -13,10 +15,10 @@ neonBars.forEach((neonBar) => {
     updateAngle()
   })
   let timeout: number | undefined
-  neonBar.addEventListener('pointerleave', () => {
+  neonBar.addEventListener('mouseleave', () => {
     startRotate()
   })
-  neonBar.addEventListener('pointerover', () => {
+  neonBar.addEventListener('mouseover', () => {
     stopRotate()
   })
   startRotate()
