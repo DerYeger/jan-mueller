@@ -9,7 +9,6 @@ import vitePreact from '@preact/preset-vite'
 import { defineConfig } from 'astro/config'
 import critters from 'astro-critters'
 import robotsTxt from 'astro-robots-txt'
-import autoprefixer from 'autoprefixer'
 import autolinkHeadings from 'rehype-autolink-headings'
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypeSlug from 'rehype-slug'
@@ -48,11 +47,6 @@ export default defineConfig({
   ],
   vite: {
     plugins: [vitePreact(), tsconfigPaths({ verbose: true })],
-    css: {
-      postcss: {
-        plugins: [autoprefixer()],
-      },
-    },
   },
   markdown: {
     gfm: true,
