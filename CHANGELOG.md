@@ -1,3 +1,10 @@
+## [3.43.4](https://github.com/DerYeger/jan-mueller/compare/v3.43.3...v3.43.4) (2023-02-26)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#163](https://github.com/DerYeger/jan-mueller/issues/163)) ([b4ddeff](https://github.com/DerYeger/jan-mueller/commit/b4ddeff385cc4d145b3d2d99d1898348dc00ea5e))
+
 ## [3.43.3](https://github.com/DerYeger/jan-mueller/compare/v3.43.2...v3.43.3) (2023-02-26)
 
 
