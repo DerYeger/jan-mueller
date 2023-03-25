@@ -1,3 +1,11 @@
+## [3.43.8](https://github.com/DerYeger/jan-mueller/compare/v3.43.7...v3.43.8) (2023-03-25)
+
+
+### Bug Fixes
+
+* **deps:** update actions/stale action to v8 ([#165](https://github.com/DerYeger/jan-mueller/issues/165)) ([6c7bae5](https://github.com/DerYeger/jan-mueller/commit/6c7bae59a77fc68cc48b301a272b0bf4f640e9d9))
+* **deps:** update dependency typescript to v5 ([#166](https://github.com/DerYeger/jan-mueller/issues/166)) ([0c3cb15](https://github.com/DerYeger/jan-mueller/commit/0c3cb156db45ad863e2d5a4c2caf101145ecbb60))
+
 ## [3.43.7](https://github.com/DerYeger/jan-mueller/compare/v3.43.6...v3.43.7) (2023-03-25)
 
 
