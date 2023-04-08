@@ -1,3 +1,10 @@
+## [3.43.10](https://github.com/DerYeger/jan-mueller/compare/v3.43.9...v3.43.10) (2023-04-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @commitlint/cli to v17.5.1 ([b74f9f8](https://github.com/DerYeger/jan-mueller/commit/b74f9f8487dcd915faf699464b7846dc74dbdf1e))
+
 ## [3.43.9](https://github.com/DerYeger/jan-mueller/compare/v3.43.8...v3.43.9) (2023-04-01)
 
 
