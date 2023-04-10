@@ -9,9 +9,6 @@ const DateSchema = z.preprocess((arg) => {
 }, z.date())
 
 const blog = defineCollection({
-  slug: ({ id }) => {
-    return id.replace('.mdx', '')
-  },
   schema: z.object({
     title: z.string(),
     description: z.string(),
