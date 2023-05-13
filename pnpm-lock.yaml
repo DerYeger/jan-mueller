@@ -55,11 +55,11 @@ devDependencies:
     specifier: '7'
     version: 7.0.0
   '@commitlint/cli':
-    specifier: 17.5.1
-    version: 17.5.1
+    specifier: 17.6.3
+    version: 17.6.3
   '@commitlint/config-conventional':
-    specifier: 17.4.4
-    version: 17.4.4
+    specifier: 17.6.3
+    version: 17.6.3
   '@preact/preset-vite':
     specifier: 2.5.0
     version: 2.5.0(@babel/core@7.0.0)(preact@10.13.2)(vite@4.3.5)
@@ -913,8 +913,8 @@ packages:
     dev: true
     optional: true
 
-  /@commitlint/cli@17.5.1:
-    resolution: {integrity: sha512-pRRgGSzdHQHehxZbGA3qF6wVPyl+EEQgTe/t321rtMLFbuJ7nRj2waS17s/v5oEbyZtiY5S8PGB6XtEIm0I+Sg==}
+  /@commitlint/cli@17.6.3:
+    resolution: {integrity: sha512-ItSz2fd4F+CujgIbQOfNNerDF1eFlsBGEfp9QcCb1kxTYMuKTYZzA6Nu1YRRrIaaWwe2E7awUGpIMrPoZkOG3A==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
@@ -933,8 +933,8 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /@commitlint/config-conventional@17.4.4:
-    resolution: {integrity: sha512-u6ztvxqzi6NuhrcEDR7a+z0yrh11elY66nRrQIpqsqW6sZmpxYkDLtpRH8jRML+mmxYQ8s4qqF06Q/IQx5aJeQ==}
+  /@commitlint/config-conventional@17.6.3:
+    resolution: {integrity: sha512-bLyHEjjRWqlLQWIgYFHmUPbEFMOOLXeF3QbUinDIJev/u9e769tkoTH9YPknEywiuIrAgZaVo+OfzAIsJP0fsw==}
     engines: {node: '>=v14'}
     dependencies:
       conventional-changelog-conventionalcommits: 5.0.0
