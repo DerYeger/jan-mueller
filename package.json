@@ -78,7 +78,7 @@
     "typescript": "5.0.4",
     "vite": "4.3.5",
     "vite-plugin-lib": "1.2.2",
-    "vue": "3.2.47",
+    "vue": "3.3.4",
     "vue-tsc": "1.6.4"
   },
   "lint-staged": {
