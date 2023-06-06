@@ -23,6 +23,9 @@ export default defineConfig({
   server: {
     host: true,
   },
+  build: {
+    inlineStylesheets: 'auto',
+  },
   integrations: [
     image({
       serviceEntryPoint: '@astrojs/image/sharp',
