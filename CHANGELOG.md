@@ -1,3 +1,10 @@
+## [3.43.24](https://github.com/DerYeger/jan-mueller/compare/v3.43.23...v3.43.24) (2023-06-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency rollup to v3.24.0 ([df028a2](https://github.com/DerYeger/jan-mueller/commit/df028a28056e721e6972aac0776e6a818b8749ef))
+
 ## [3.43.23](https://github.com/DerYeger/jan-mueller/compare/v3.43.22...v3.43.23) (2023-06-07)
 
 
