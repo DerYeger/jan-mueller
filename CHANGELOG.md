@@ -1,3 +1,10 @@
+## [3.43.25](https://github.com/DerYeger/jan-mueller/compare/v3.43.24...v3.43.25) (2023-06-10)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([f4fe185](https://github.com/DerYeger/jan-mueller/commit/f4fe185bd5c91559b69ab003472b255c4e9c87bc))
+
 ## [3.43.24](https://github.com/DerYeger/jan-mueller/compare/v3.43.23...v3.43.24) (2023-06-07)
 
 
