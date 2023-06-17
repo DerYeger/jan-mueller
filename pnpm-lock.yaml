@@ -9,8 +9,8 @@ dependencies:
     specifier: 4.0.0-rc1
     version: 4.0.0-rc1(@preact/compat@17.1.2)(@preact/compat@17.1.2)(leaflet.markercluster@1.5.3)(leaflet@1.9.4)(react-leaflet@4.2.1)
   '@yeger/vue-masonry-wall':
-    specifier: 3.7.0
-    version: 3.7.0(vue@3.3.4)
+    specifier: 4.0.3
+    version: 4.0.3(vue@3.3.4)
   baklavajs:
     specifier: 2.0.2-beta.4
     version: 2.0.2-beta.4
@@ -2273,11 +2273,22 @@ packages:
       - typescript
     dev: true
 
-  /@yeger/vue-masonry-wall@3.7.0(vue@3.3.4):
-    resolution: {integrity: sha512-V7oJogqvYHv4ieOxYBBhgij/B3V+z+4ykz9ASYY/j9uAjvKglhbHjvucDMNng8oSbo+2zqEU4XCm+GJf2JGxNQ==}
+  /@yeger/vue-lib-adapter@1.0.1:
+    resolution: {integrity: sha512-ur9PDkTElFQ8EK/WMS1wxTNz9NwiNcdZWuEbQFAx3FCrftJjFu8AbfQkvKbzZwHsB/lrX/w0FwBlGHYG7fdaSQ==}
+    dev: false
+
+  /@yeger/vue-masonry-wall-core@4.0.3:
+    resolution: {integrity: sha512-jVcZ74BiF4S/3BJ//JV9471KjR3YE+N62AyAwtkjdYdmugpRfYhKku7nWNbx9Mn+5v3Ac0N9qkpNiBb4XuAoeA==}
+    dependencies:
+      '@yeger/vue-lib-adapter': 1.0.1
+    dev: false
+
+  /@yeger/vue-masonry-wall@4.0.3(vue@3.3.4):
+    resolution: {integrity: sha512-ijS7PBnP/2qUzZ3R0vWP1GpJHBTly4pJf/rg2IDq0yieQ9dUM8yYv9fXHf0MrZBqUbcef0Q/e0OtyfgJxcNa5g==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
+      '@yeger/vue-masonry-wall-core': 4.0.3
       vue: 3.3.4
     dev: false
 
