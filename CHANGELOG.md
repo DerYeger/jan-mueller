@@ -1,3 +1,10 @@
+## [3.43.29](https://github.com/DerYeger/jan-mueller/compare/v3.43.28...v3.43.29) (2023-06-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @astrojs/tailwind to v4 ([bbab15a](https://github.com/DerYeger/jan-mueller/commit/bbab15a3803937ae4f40c12a1447bfd997ef214d))
+
 ## [3.43.28](https://github.com/DerYeger/jan-mueller/compare/v3.43.27...v3.43.28) (2023-06-17)
 
 
