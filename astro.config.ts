@@ -34,9 +34,7 @@ export default defineConfig({
       extendMarkdownConfig: true,
     }),
     tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
+      applyBaseStyles: false,
     }),
     vue(),
     preact({
