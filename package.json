@@ -1,7 +1,7 @@
 {
   "name": "jan-mueller",
   "type": "module",
-  "version": "3.43.30",
+  "version": "3.43.31",
   "private": true,
   "description": "Personal website of Jan Müller, a passionate software engineer.",
   "scripts": {
