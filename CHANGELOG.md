@@ -1,3 +1,10 @@
+## [3.43.33](https://github.com/DerYeger/jan-mueller/compare/v3.43.32...v3.43.33) (2023-07-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency mdast-util-to-string to v4 ([#175](https://github.com/DerYeger/jan-mueller/issues/175)) ([50636e5](https://github.com/DerYeger/jan-mueller/commit/50636e5a2a9fd3e5178f43aa8259abd5326a9dbc))
+
 ## [3.43.32](https://github.com/DerYeger/jan-mueller/compare/v3.43.31...v3.43.32) (2023-07-15)
 
 
