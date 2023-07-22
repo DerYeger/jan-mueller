@@ -1,3 +1,10 @@
+## [3.43.35](https://github.com/DerYeger/jan-mueller/compare/v3.43.34...v3.43.35) (2023-07-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @astrojs/sitemap to v2 ([#176](https://github.com/DerYeger/jan-mueller/issues/176)) ([910acdb](https://github.com/DerYeger/jan-mueller/commit/910acdbdc28c3f5f2f42062cdc034581869b763d))
+
 ## [3.43.34](https://github.com/DerYeger/jan-mueller/compare/v3.43.33...v3.43.34) (2023-07-22)
 
 
