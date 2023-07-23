@@ -1,3 +1,11 @@
+# [3.44.0](https://github.com/DerYeger/jan-mueller/compare/v3.43.35...v3.44.0) (2023-07-23)
+
+
+### Features
+
+* add photography page ([13e18d0](https://github.com/DerYeger/jan-mueller/commit/13e18d0ebdc71f1f163f8e992f86d2d455afe09e))
+* move experiments link to showcases ([26ad2fd](https://github.com/DerYeger/jan-mueller/commit/26ad2fd6ba19cf6390e10fc24de5920cee1e3c3a))
+
 ## [3.43.35](https://github.com/DerYeger/jan-mueller/compare/v3.43.34...v3.43.35) (2023-07-22)
 
 
