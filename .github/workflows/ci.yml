@@ -13,7 +13,7 @@ jobs:
       - name: Setup
         uses: DerYeger/pnpm-setup-action@master
         with:
-          node-version: 18
+          node-version-file: .node-version
       - name: Build, check, and lint
         run: pnpm run ci
       - name: Install cypress
