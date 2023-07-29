@@ -1,3 +1,11 @@
+## [3.44.1](https://github.com/DerYeger/jan-mueller/compare/v3.44.0...v3.44.1) (2023-07-29)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([851fef7](https://github.com/DerYeger/jan-mueller/commit/851fef7c833552102dae8058fb5dbf9962514fb7))
+* **deps:** update dependency turbo to v1.10.12 ([fa71647](https://github.com/DerYeger/jan-mueller/commit/fa71647e18f3ae5ba4a00c1b1ff98114b8a976ee))
+
 # [3.44.0](https://github.com/DerYeger/jan-mueller/compare/v3.43.35...v3.44.0) (2023-07-23)
 
 
