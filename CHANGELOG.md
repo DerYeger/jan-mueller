@@ -1,3 +1,10 @@
+## [3.44.2](https://github.com/DerYeger/jan-mueller/compare/v3.44.1...v3.44.2) (2023-07-31)
+
+
+### Bug Fixes
+
+* **deps:** update pnpm to v8.6.11 ([5a28503](https://github.com/DerYeger/jan-mueller/commit/5a28503df44c1650c7024ca200b861cc52ae94be))
+
 ## [3.44.1](https://github.com/DerYeger/jan-mueller/compare/v3.44.0...v3.44.1) (2023-07-29)
 
 
