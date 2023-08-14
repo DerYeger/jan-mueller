@@ -86,8 +86,8 @@ devDependencies:
     specifier: 2.10.1
     version: 2.10.1(@types/node@18.17.2)(sharp@0.32.4)
   astro-critters:
-    specifier: 1.1.40
-    version: 1.1.40
+    specifier: 2.0.7
+    version: 2.0.7
   astro-icon:
     specifier: 0.8.1
     version: 0.8.1
@@ -2036,6 +2036,10 @@ packages:
   /@types/node@18.17.2:
     resolution: {integrity: sha512-wBo3KqP/PBqje5TI9UTiuL3yWfP6sdPtjtygSOqcYZWT232dfDeDOnkDps5wqZBP9NgGgYrNejinl0faAuE+HQ==}
 
+  /@types/node@20.5.0:
+    resolution: {integrity: sha512-Mgq7eCtoTjT89FqNoTzzXg2XvCi5VMhRV6+I2aYanc6kQCBImeNaAYRs/DyoVqk1YEUJK5gN9VO7HRIdz4Wo3Q==}
+    dev: true
+
   /@types/normalize-package-data@2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
@@ -2776,11 +2780,11 @@ packages:
     hasBin: true
     dev: true
 
-  /astro-critters@1.1.40:
-    resolution: {integrity: sha512-82fDfSvL+z1Zv+Tl+576HO2AQknhfAnDM0nxQU1KULtwnDMBunteK1FKC2jSwVCUDyAGwLySLS8vz3V2VTv98Q==}
+  /astro-critters@2.0.7:
+    resolution: {integrity: sha512-mTCmTkWefN3ReMjNEzDiIFfCfR0EvETjzoABYzsq8M11mQfbQtI72Us6SGWfA5F/t2E/W6sJLdPEPnNBb8apnA==}
     dependencies:
-      critters: 0.0.19
-      files-pipe: 0.0.8
+      critters: 0.0.20
+      files-pipe: 2.0.12
     dev: true
 
   /astro-eslint-parser@0.11.0:
@@ -3558,8 +3562,8 @@ packages:
   /create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
 
-  /critters@0.0.19:
-    resolution: {integrity: sha512-Fm4ZAXsG0VzWy1U30rP4qxbaWGSsqXDgSupJW1OUJGDAs0KWC+j37v7p5a2kZ9BPJvhRzWm3be+Hc9WvQOBUOw==}
+  /critters@0.0.20:
+    resolution: {integrity: sha512-CImNRorKOl5d8TWcnAz5n5izQ6HFsvz29k327/ELy6UFcmbiZNOsinaKvzv16WZR0P6etfSWYzE47C4/56B3Uw==}
     dependencies:
       chalk: 4.1.2
       css-select: 5.1.0
@@ -5051,9 +5055,10 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: true
 
-  /files-pipe@0.0.8:
-    resolution: {integrity: sha512-c/hf3Kuhrlpn92sbe7HifJ4DOHrOPw7b7nR+4VIzqcuSXgkICwBicw6qDKoEjzEXCi6sjcL0CxBpYyikwf7KvQ==}
+  /files-pipe@2.0.12:
+    resolution: {integrity: sha512-j71KGMZZeJad8kFVhiHVZdWVVn4MC7oC+h6Uoi8SYU3QHKv52QsCmKRgAK1fj3th3Acs8O3nqQpVocKXJVS27A==}
     dependencies:
+      '@types/node': 20.5.0
       deepmerge-ts: 5.1.0
       fast-glob: 3.3.1
     dev: true
