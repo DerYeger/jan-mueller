@@ -1,3 +1,10 @@
+## [3.44.4](https://github.com/DerYeger/jan-mueller/compare/v3.44.3...v3.44.4) (2023-08-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency astro-critters to v2 ([#183](https://github.com/DerYeger/jan-mueller/issues/183)) ([d640f2d](https://github.com/DerYeger/jan-mueller/commit/d640f2d08d5d5c8a8cc6f551dbbe0023118132cb))
+
 ## [3.44.3](https://github.com/DerYeger/jan-mueller/compare/v3.44.2...v3.44.3) (2023-08-05)
 
 
