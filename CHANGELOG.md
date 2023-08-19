@@ -1,3 +1,10 @@
+## [3.44.8](https://github.com/DerYeger/jan-mueller/compare/v3.44.7...v3.44.8) (2023-08-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency lint-staged to v14 ([#184](https://github.com/DerYeger/jan-mueller/issues/184)) ([198d48f](https://github.com/DerYeger/jan-mueller/commit/198d48fb0b354e1b0adfc3418ed3d333f0fb44e7))
+
 ## [3.44.7](https://github.com/DerYeger/jan-mueller/compare/v3.44.6...v3.44.7) (2023-08-19)
 
 
