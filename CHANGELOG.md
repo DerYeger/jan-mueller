@@ -1,3 +1,10 @@
+## [3.44.10](https://github.com/DerYeger/jan-mueller/compare/v3.44.9...v3.44.10) (2023-08-26)
+
+
+### Bug Fixes
+
+* **deps:** update dependency turbo to v1.10.13 ([740c1f3](https://github.com/DerYeger/jan-mueller/commit/740c1f3fb698a3c0849ee132d6d1f6642aa03ab8))
+
 ## [3.44.9](https://github.com/DerYeger/jan-mueller/compare/v3.44.8...v3.44.9) (2023-08-26)
 
 
