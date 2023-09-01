@@ -9,8 +9,8 @@ dependencies:
     specifier: 4.0.0-rc1
     version: 4.0.0-rc1(@preact/compat@17.1.2)(@preact/compat@17.1.2)(leaflet.markercluster@1.5.3)(leaflet@1.9.4)(react-leaflet@4.2.1)
   '@yeger/vue-masonry-wall':
-    specifier: 4.2.1
-    version: 4.2.1(vue@3.3.4)
+    specifier: 5.0.2
+    version: 5.0.2(vue@3.3.4)
   baklavajs:
     specifier: 2.0.2-beta.5
     version: 2.0.2-beta.5
@@ -2461,22 +2461,22 @@ packages:
       - typescript
     dev: true
 
-  /@yeger/vue-lib-adapter@1.1.1:
-    resolution: {integrity: sha512-Yk/vYI0UtcWV4IW1lCI/j+dZng33Q+N1N9+Fo9JQsUWgTlRATdwhQi91PAHeys0VtLIYkFw9I2FWEB+N/O+c3Q==}
+  /@yeger/vue-lib-adapter@2.0.1:
+    resolution: {integrity: sha512-s2t/4tLB/qd6GgvsUNZR+K2CqEufs0PB0RdOx4Fql/EryIQddRYV9WWOMR9fAyLMdlV8x28oNet0Nddn8II6Rw==}
     dev: false
 
-  /@yeger/vue-masonry-wall-core@4.2.1:
-    resolution: {integrity: sha512-lamOIZjPaZyCKpb6fbwLgvxqNS41DnJcdHhD0QvZZC2twjXWKpdiHF69slhGWguSxsZo15Zv+8O3xZM3ikFIWw==}
+  /@yeger/vue-masonry-wall-core@5.0.1:
+    resolution: {integrity: sha512-BNnv4cwdM07rBh46NvWXDhwbNDn/IDexui/oMIKjc+VMJGAyF5ieuvmAp1YhjvmqqcIzBROiYFqVqWbiuuyLeg==}
     dependencies:
-      '@yeger/vue-lib-adapter': 1.1.1
+      '@yeger/vue-lib-adapter': 2.0.1
     dev: false
 
-  /@yeger/vue-masonry-wall@4.2.1(vue@3.3.4):
-    resolution: {integrity: sha512-KD82rut/4uUqCwbp1fB4TxvAlqbZ+kE7axMqLduMuaq0VMaK+81H/G1JemnBlGRc9xHH638GPisDnQ/rB2g8MQ==}
+  /@yeger/vue-masonry-wall@5.0.2(vue@3.3.4):
+    resolution: {integrity: sha512-rcOvMOW7zqU+HitFfu+IlX5pk9ObtyL4s6v71J3zWtDA/KQuQelEAh2VOYHpfkM4Ag8pZSKm1iWoXUHyv4QE5A==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
-      '@yeger/vue-masonry-wall-core': 4.2.1
+      '@yeger/vue-masonry-wall-core': 5.0.1
       vue: 3.3.4
     dev: false
 
