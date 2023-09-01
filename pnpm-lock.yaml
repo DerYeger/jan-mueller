@@ -27,8 +27,8 @@ dependencies:
     specifier: 2.2.1
     version: 2.2.1
   vue-marmoset-viewer:
-    specifier: 3.2.2
-    version: 3.2.2(vue@3.3.4)
+    specifier: 4.0.2
+    version: 4.0.2(vue@3.3.4)
 
 devDependencies:
   '@astrojs/image':
@@ -2408,8 +2408,8 @@ packages:
       - typescript
     dev: true
 
-  /@yeger/debounce@1.2.0:
-    resolution: {integrity: sha512-CvTia7YqvTVqek/FmJdOtjnCuep3qGPnCQqnPm98YFRePkGmCI3vFT+GZ3UzCPuBOKCc5e6Txba+YT0jYR8MKg==}
+  /@yeger/debounce@2.0.1:
+    resolution: {integrity: sha512-/SeYp8/wtBCI3NZlHcNj2SiNN3/xSWr8v5zIpqNGYH/C+G5g3IXtX3VrXZJModuqpKuyMSKwRN77WlVJrRwOUw==}
     dev: false
 
   /@yeger/eslint-config@1.9.1(@typescript-eslint/parser@5.62.0)(eslint@8.48.0)(tailwindcss@3.3.3)(typescript@5.2.2):
@@ -10469,13 +10469,13 @@ packages:
       - supports-color
     dev: true
 
-  /vue-marmoset-viewer@3.2.2(vue@3.3.4):
-    resolution: {integrity: sha512-NZXgWp6hzaf1zADi6kxG+YDeqbXbPR/MHdgjc9IVFvvNfxweYWkHJFjNQ+BDHNOAgFUwE8eu5SHJEHHqc3LmGQ==}
+  /vue-marmoset-viewer@4.0.2(vue@3.3.4):
+    resolution: {integrity: sha512-lOgiHqkif00UwAb4I3ULGh3DprvVYISL6eD7YxGMrimPH9GeQCzhEQ/FnRaGWHswe9sDbY+qxtl/2sRmUG+K8A==}
     engines: {node: '>=12'}
     peerDependencies:
       vue: ^3.0.5
     dependencies:
-      '@yeger/debounce': 1.2.0
+      '@yeger/debounce': 2.0.1
       vue: 3.3.4
     dev: false
 
