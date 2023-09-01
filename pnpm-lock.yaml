@@ -47,8 +47,8 @@ devDependencies:
     specifier: 2.4.4
     version: 2.4.4
   '@astrojs/sitemap':
-    specifier: 2.0.2
-    version: 2.0.2
+    specifier: 3.0.0
+    version: 3.0.0
   '@astrojs/tailwind':
     specifier: 4.0.0
     version: 4.0.0(astro@2.10.15)(tailwindcss@3.3.3)(ts-node@10.9.1)
@@ -428,11 +428,11 @@ packages:
       kleur: 4.1.5
     dev: true
 
-  /@astrojs/sitemap@2.0.2:
-    resolution: {integrity: sha512-dFWtdFwN8kxDiqIxF8T8ODqsUr6hG+EQlFEqm+3oQkhAkucF9QkYLM5Q72mEbYytkL4jvKyHbW1u10T5sWBZew==}
+  /@astrojs/sitemap@3.0.0:
+    resolution: {integrity: sha512-qm7npHuUW4q3OOmulqhJ1g69jEQu0Sdc6P8NbOzqIoosj/L+3v4i8dtKBnp6n1UQ4Sx8H8Vdi3Z/On7i9/ZJhw==}
     dependencies:
       sitemap: 7.1.1
-      zod: 3.22.2
+      zod: 3.21.1
     dev: true
 
   /@astrojs/tailwind@4.0.0(astro@2.10.15)(tailwindcss@3.3.3)(ts-node@10.9.1):
@@ -10662,6 +10662,10 @@ packages:
       validator: 13.11.0
     optionalDependencies:
       commander: 9.5.0
+    dev: true
+
+  /zod@3.21.1:
+    resolution: {integrity: sha512-+dTu2m6gmCbO9Ahm4ZBDapx2O6ZY9QSPXst2WXjcznPMwf2YNpn3RevLx4KkZp1OPW/ouFcoBtBzFz/LeY69oA==}
     dev: true
 
   /zod@3.22.2:

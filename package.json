@@ -37,7 +37,7 @@
     "@astrojs/preact": "2.2.2",
     "@astrojs/prefetch": "0.4.0",
     "@astrojs/rss": "2.4.4",
-    "@astrojs/sitemap": "2.0.2",
+    "@astrojs/sitemap": "3.0.0",
     "@astrojs/tailwind": "4.0.0",
     "@astrojs/vue": "2.2.1",
     "@babel/core": "7",
