@@ -95,8 +95,8 @@ devDependencies:
     specifier: 0.5.0
     version: 0.5.0
   astro-seo-schema:
-    specifier: 2.2.0
-    version: 2.2.0(astro@2.10.15)(typescript@5.2.2)
+    specifier: 3.0.0
+    version: 3.0.0(astro@2.10.15)(typescript@5.2.2)
   cypress:
     specifier: 13.1.0
     version: 13.1.0
@@ -2780,10 +2780,10 @@ packages:
       zod: 3.22.2
     dev: true
 
-  /astro-seo-schema@2.2.0(astro@2.10.15)(typescript@5.2.2):
-    resolution: {integrity: sha512-8421r2gyDjHmTpRTzhSika3gQ3Q9JU+Bdzq+4w07sVtgmJVEKmrxqStaUG4rOMiXMJQmu7d17l6+4ZtCUYkAiA==}
+  /astro-seo-schema@3.0.0(astro@2.10.15)(typescript@5.2.2):
+    resolution: {integrity: sha512-oBIWnHpkhBYdMJE9ew/7pzQJjUE74BywefGJoBYTBUukF2Dpo2gA0UiOYUFzSwLJRPA0dH9eK0jBbG6jrcb2Cg==}
     peerDependencies:
-      astro: ^2.0.0
+      astro: ^3.0.0
     dependencies:
       astro: 2.10.15(@types/node@18.17.13)(sharp@0.32.5)
       schema-dts: 1.1.2(typescript@5.2.2)
