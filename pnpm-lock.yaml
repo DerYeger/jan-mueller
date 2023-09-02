@@ -24,8 +24,8 @@ dependencies:
     specifier: 3.3.3
     version: 3.3.3(ts-node@10.9.1)
   vecti:
-    specifier: 2.2.1
-    version: 2.2.1
+    specifier: 3.0.1
+    version: 3.0.1
   vue-marmoset-viewer:
     specifier: 4.0.2
     version: 4.0.2(vue@3.3.4)
@@ -10248,8 +10248,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /vecti@2.2.1:
-    resolution: {integrity: sha512-UmfIn93o1JlG5ZDjWscV/mXGcwnNQK68Mub3SuqydMPMfEPx86DLMzNshCo9ASYKvHuv8dPjPlB5Ni+TyUDjIg==}
+  /vecti@3.0.1:
+    resolution: {integrity: sha512-XRZQAscHt3LytameX+30LkL67zln+0/C7YwU15pU1+v4sewuyWximfcdjeHMBtXwSzGsugG3Sggga5ovHErbeg==}
     dev: false
 
   /verror@1.10.0:
