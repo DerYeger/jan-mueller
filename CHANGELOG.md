@@ -1,3 +1,12 @@
+## [3.44.13](https://github.com/DerYeger/jan-mueller/compare/v3.44.12...v3.44.13) (2023-09-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @yeger/vue-masonry-wall to v5 ([#192](https://github.com/DerYeger/jan-mueller/issues/192)) ([7ad1767](https://github.com/DerYeger/jan-mueller/commit/7ad17672045d006ad4cd6b63ae06f17caa95cc08))
+* **deps:** update dependency vite-plugin-lib to v2 ([#199](https://github.com/DerYeger/jan-mueller/issues/199)) ([f7002aa](https://github.com/DerYeger/jan-mueller/commit/f7002aaaacb9ca2a91581e6e370104c5015b7a5b))
+* **deps:** update dependency vue-marmoset-viewer to v4 ([#200](https://github.com/DerYeger/jan-mueller/issues/200)) ([97cef1c](https://github.com/DerYeger/jan-mueller/commit/97cef1ceaf649d0f2d81764c7f2a6ffa97c6f74c))
+
 ## [3.44.12](https://github.com/DerYeger/jan-mueller/compare/v3.44.11...v3.44.12) (2023-09-02)
 
 
