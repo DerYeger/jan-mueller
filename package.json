@@ -28,7 +28,7 @@
     "leaflet": "1.9.4",
     "react-leaflet": "4.2.1",
     "tailwindcss": "3.3.3",
-    "vecti": "2.2.1",
+    "vecti": "3.0.1",
     "vue-marmoset-viewer": "4.0.2"
   },
   "devDependencies": {
