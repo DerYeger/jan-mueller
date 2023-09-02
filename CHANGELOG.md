@@ -1,3 +1,12 @@
+## [3.44.14](https://github.com/DerYeger/jan-mueller/compare/v3.44.13...v3.44.14) (2023-09-02)
+
+
+### Bug Fixes
+
+* **deps:** update cycjimmy/semantic-release-action action to v4 ([#185](https://github.com/DerYeger/jan-mueller/issues/185)) ([e233156](https://github.com/DerYeger/jan-mueller/commit/e23315624b50f5564ac87578c1c1995ae1be8b71))
+* **deps:** update dependency cypress to v13 ([#195](https://github.com/DerYeger/jan-mueller/issues/195)) ([fa1a47a](https://github.com/DerYeger/jan-mueller/commit/fa1a47aadcdf2259bb78b456646259226a7ded1d))
+* **deps:** update dependency vecti to v3 ([#198](https://github.com/DerYeger/jan-mueller/issues/198)) ([55f97c3](https://github.com/DerYeger/jan-mueller/commit/55f97c31fdef37d445e8a4c9a7c52185d4e35c1c))
+
 ## [3.44.13](https://github.com/DerYeger/jan-mueller/compare/v3.44.12...v3.44.13) (2023-09-02)
 
 
