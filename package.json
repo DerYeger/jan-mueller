@@ -38,7 +38,7 @@
     "@astrojs/prefetch": "0.4.0",
     "@astrojs/rss": "2.4.4",
     "@astrojs/sitemap": "2.0.2",
-    "@astrojs/tailwind": "4.0.0",
+    "@astrojs/tailwind": "5.0.0",
     "@astrojs/vue": "2.2.1",
     "@babel/core": "7",
     "@commitlint/cli": "17.7.1",
