@@ -29,7 +29,7 @@
     "react-leaflet": "4.2.1",
     "tailwindcss": "3.3.3",
     "vecti": "2.2.1",
-    "vue-marmoset-viewer": "3.2.2"
+    "vue-marmoset-viewer": "4.0.2"
   },
   "devDependencies": {
     "@astrojs/image": "0.18.0",
