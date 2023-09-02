@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@astrojs/image": "0.18.0",
-    "@astrojs/mdx": "0.19.7",
+    "@astrojs/mdx": "1.0.0",
     "@astrojs/preact": "2.2.2",
     "@astrojs/prefetch": "0.4.0",
     "@astrojs/rss": "2.4.4",
