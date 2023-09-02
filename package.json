@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@changey/react-leaflet-markercluster": "4.0.0-rc1",
-    "@yeger/vue-masonry-wall": "4.2.1",
+    "@yeger/vue-masonry-wall": "5.0.2",
     "baklavajs": "2.0.2-beta.5",
     "leaflet": "1.9.4",
     "react-leaflet": "4.2.1",
