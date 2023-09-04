@@ -34,7 +34,7 @@
   "devDependencies": {
     "@astrojs/image": "0.18.0",
     "@astrojs/mdx": "1.0.0",
-    "@astrojs/preact": "2.2.2",
+    "@astrojs/preact": "3.0.0",
     "@astrojs/prefetch": "0.4.0",
     "@astrojs/rss": "3.0.0",
     "@astrojs/sitemap": "3.0.0",
