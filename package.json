@@ -39,7 +39,7 @@
     "@astrojs/rss": "2.4.4",
     "@astrojs/sitemap": "2.0.2",
     "@astrojs/tailwind": "4.0.0",
-    "@astrojs/vue": "2.2.1",
+    "@astrojs/vue": "3.0.0",
     "@babel/core": "7",
     "@commitlint/cli": "17.7.1",
     "@commitlint/config-conventional": "17.7.0",
