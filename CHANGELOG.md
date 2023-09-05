@@ -1,3 +1,22 @@
+# [3.45.0](https://github.com/DerYeger/jan-mueller/compare/v3.44.15...v3.45.0) (2023-09-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @astrojs/mdx to v1 ([1bad0f6](https://github.com/DerYeger/jan-mueller/commit/1bad0f6ced1476486afb225ff96d44e2fa4a7c98))
+* **deps:** update dependency @astrojs/preact to v3 ([dc92749](https://github.com/DerYeger/jan-mueller/commit/dc92749de30bcaab60dfde429fea44fa7790defe))
+* **deps:** update dependency @astrojs/rss to v3 ([de26cb4](https://github.com/DerYeger/jan-mueller/commit/de26cb47554606d0e341d2e093f5694c8c3b2729))
+* **deps:** update dependency @astrojs/sitemap to v3 ([77bb10a](https://github.com/DerYeger/jan-mueller/commit/77bb10ab76e49772ec98098ee413808998cb7a02))
+* **deps:** update dependency @astrojs/tailwind to v5 ([5009483](https://github.com/DerYeger/jan-mueller/commit/50094834de49202d371f519ce64673db93fbdba3))
+* **deps:** update dependency @astrojs/vue to v3 ([aef592d](https://github.com/DerYeger/jan-mueller/commit/aef592d58d41c1f18a45c34a8efe66ab97aa21d3))
+* **deps:** update dependency astro to v3 ([37bfbbe](https://github.com/DerYeger/jan-mueller/commit/37bfbbe6617fef7c77091dd1089d9f70c538607c))
+* **deps:** update dependency astro-seo-schema to v3 ([7ebf89a](https://github.com/DerYeger/jan-mueller/commit/7ebf89a79c52240faf4437098ae526530ff82a23))
+
+
+### Features
+
+* migrate to astro:assets ([d2742ee](https://github.com/DerYeger/jan-mueller/commit/d2742ee96aaf839139003127a4952f76afb3a9d2))
+
 ## [3.44.15](https://github.com/DerYeger/jan-mueller/compare/v3.44.14...v3.44.15) (2023-09-04)
 
 
