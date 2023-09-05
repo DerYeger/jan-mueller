@@ -1,3 +1,10 @@
+# [3.46.0](https://github.com/DerYeger/jan-mueller/compare/v3.45.0...v3.46.0) (2023-09-05)
+
+
+### Features
+
+* use explicit image sizes ([7d20cfe](https://github.com/DerYeger/jan-mueller/commit/7d20cfeed1c265b8b920ccb3ad113a57715b24c1))
+
 # [3.45.0](https://github.com/DerYeger/jan-mueller/compare/v3.44.15...v3.45.0) (2023-09-05)
 
 
