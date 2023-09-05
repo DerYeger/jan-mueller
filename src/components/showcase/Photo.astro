@@ -1,5 +1,6 @@
 ---
-import { Picture } from '@astrojs/image/components'
+// eslint-disable-next-line import/no-unresolved
+import { Image } from 'astro:assets'
 
 export type Location = `${string}, ${string}`
 
@@ -50,12 +51,10 @@ function getNumberWithOrdinal(n: number) {
       ))
     }
   </div>
-  <Picture
+  <Image
     src={src}
     alt={alt(location)}
-    widths={[768]}
     sizes="768px"
-    aspectRatio={1}
     quality={85}
     loading="lazy"
     class="m-0 h-full w-full object-cover"

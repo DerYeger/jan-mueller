@@ -2,7 +2,7 @@ import rss from '@astrojs/rss'
 // eslint-disable-next-line import/no-unresolved
 import { getCollection } from 'astro:content'
 
-export async function get(context) {
+export async function GET(context) {
   const blog = await getCollection('blog')
   return rss({
     title: `Jan's Blog`,

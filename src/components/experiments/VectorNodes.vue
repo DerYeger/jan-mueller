@@ -1,4 +1,6 @@
 <script setup lang="ts">
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck baklavajs types are incomplete
 import '@baklavajs/themes/dist/syrup-dark.css'
 import {
   DependencyEngine,

@@ -1,5 +1,6 @@
 ---
-import { Picture } from '@astrojs/image/components'
+// eslint-disable-next-line import/no-unresolved
+import { Image } from 'astro:assets'
 
 import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
@@ -25,26 +26,20 @@ const name = 'Formi'
     </ShowcaseDescription>
   </div>
   <div class="relative h-36 w-36 self-center 2xl:scale-[2]">
-    <Picture
-      src={first.default.src}
+    <Image
+      src={first.default}
       alt="Formi Logo"
       quality={85}
-      widths={[192, 384]}
-      aspectRatio={1}
       sizes="(max-width: 1535px) 192px, 384px"
       loading="lazy"
-      formats={['avif', 'webp']}
       class="absolute inset-0 -ml-4 -mt-4 drop-shadow-xl"
     />
-    <Picture
-      src={second.default.src}
+    <Image
+      src={second.default}
       alt="Formi Logo"
       quality={85}
-      widths={[192, 384]}
-      aspectRatio={1}
       sizes="(max-width: 1535px) 192px, 384px"
       loading="lazy"
-      formats={['avif', 'webp']}
       class="absolute inset-0 ml-4 mt-4 drop-shadow-xl"
     />
   </div>

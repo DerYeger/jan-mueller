@@ -1,14 +1,14 @@
 ---
-import { Picture } from '@astrojs/image/components'
+// eslint-disable-next-line import/no-unresolved
+import { Image } from 'astro:assets'
 
 import avatar from '~/assets/avatar.webp'
 ---
 
-<Picture
+<Image
   src={avatar}
   class="avatar drop-shadow-sharp m-0"
   alt="Jan"
-  widths={[1000]}
   quality={85}
   sizes="1000px"
   loading="eager"

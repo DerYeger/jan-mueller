@@ -1,6 +1,6 @@
 ---
 import BaseHead from '~/components/BaseHead.astro'
-import VectorNodes from '~/components/experiments/VectorNodes.vue'
+import VectorNodesComponent from '~/components/experiments/VectorNodes.vue'
 import Header from '~/components/Header.astro'
 ---
 
@@ -30,7 +30,7 @@ import Header from '~/components/Header.astro'
       class="border-b-0 !bg-[var(--baklava-toolbar-background)] !backdrop-filter-none"
     />
     <main class="absolute inset-x-0 bottom-0 bg-neutral-100">
-      <VectorNodes client:only />
+      <VectorNodesComponent client:only />
     </main>
   </body>
 </html>

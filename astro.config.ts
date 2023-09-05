@@ -1,4 +1,3 @@
-import image from '@astrojs/image'
 import mdx from '@astrojs/mdx'
 import preact from '@astrojs/preact'
 import prefetch from '@astrojs/prefetch'
@@ -27,9 +26,6 @@ export default defineConfig({
     inlineStylesheets: 'auto',
   },
   integrations: [
-    image({
-      serviceEntryPoint: '@astrojs/image/sharp',
-    }),
     mdx({
       extendMarkdownConfig: true,
     }),

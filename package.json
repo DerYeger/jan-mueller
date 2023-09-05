@@ -32,7 +32,7 @@
     "vue-marmoset-viewer": "4.0.2"
   },
   "devDependencies": {
-    "@astrojs/image": "0.18.0",
+    "@astrojs/check": "0.2.0",
     "@astrojs/mdx": "1.0.0",
     "@astrojs/preact": "3.0.0",
     "@astrojs/prefetch": "0.4.0",
