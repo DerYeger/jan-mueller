@@ -1,3 +1,11 @@
+## [3.46.1](https://github.com/DerYeger/jan-mueller/compare/v3.46.0...v3.46.1) (2023-09-09)
+
+
+### Bug Fixes
+
+* **deps:** update actions/checkout action to v4 ([#201](https://github.com/DerYeger/jan-mueller/issues/201)) ([2d1b573](https://github.com/DerYeger/jan-mueller/commit/2d1b573419abae25a9ab12322b482c1436f4c863))
+* **deps:** update dependency astro-robots-txt to v1 ([#202](https://github.com/DerYeger/jan-mueller/issues/202)) ([2914eec](https://github.com/DerYeger/jan-mueller/commit/2914eecf694f4e1ea2af65919d4e5cc4fd73c276))
+
 # [3.46.0](https://github.com/DerYeger/jan-mueller/compare/v3.45.0...v3.46.0) (2023-09-05)
 
 
