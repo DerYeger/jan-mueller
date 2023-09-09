@@ -92,8 +92,8 @@ devDependencies:
     specifier: 0.8.1
     version: 0.8.1
   astro-robots-txt:
-    specifier: 0.5.0
-    version: 0.5.0
+    specifier: 1.0.0
+    version: 1.0.0
   astro-seo-schema:
     specifier: 3.0.0
     version: 3.0.0(astro@3.0.7)(typescript@5.2.2)
@@ -2975,11 +2975,11 @@ packages:
       svgo: 2.8.0
     dev: true
 
-  /astro-robots-txt@0.5.0:
-    resolution: {integrity: sha512-MJDcxBDjEKSp7Uvw32cnmkPHlmjQ/pW5JwzMhKEegFRoGaiSh2i1kkh1QEhk1UpGnAsSondWCoIt2xpG8qjSgA==}
+  /astro-robots-txt@1.0.0:
+    resolution: {integrity: sha512-6JQSLid4gMhoWjOm85UHLkgrw0+hHIjnJVIUqxjU2D6feKlVyYukMNYjH44ZDZBK1P8hNxd33PgWlHzCASvedA==}
     dependencies:
       valid-filename: 4.0.0
-      zod: 3.21.4
+      zod: 3.22.2
     dev: true
 
   /astro-seo-schema@3.0.0(astro@3.0.7)(typescript@5.2.2):
@@ -11037,8 +11037,8 @@ packages:
     resolution: {integrity: sha512-+dTu2m6gmCbO9Ahm4ZBDapx2O6ZY9QSPXst2WXjcznPMwf2YNpn3RevLx4KkZp1OPW/ouFcoBtBzFz/LeY69oA==}
     dev: true
 
-  /zod@3.21.4:
-    resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
+  /zod@3.22.2:
+    resolution: {integrity: sha512-wvWkphh5WQsJbVk1tbx1l1Ly4yg+XecD+Mq280uBGt9wa5BKSWf4Mhp6GmrkPixhMxmabYY7RbzlwVP32pbGCg==}
     dev: true
 
   /zwitch@2.0.4:
