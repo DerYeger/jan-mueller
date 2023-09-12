@@ -37,7 +37,7 @@ const images: Image[] = [
       :ssr-columns="1"
       :column-width="384"
       :gap="16"
-      :key-mapper="(image) => image.src"
+      :key-mapper="(image: Image) => image.src"
     >
       <div
         class="h-0 shadow-sm"
