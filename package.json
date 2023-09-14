@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.2.0",
-    "@astrojs/mdx": "1.0.3",
+    "@astrojs/mdx": "1.1.0",
     "@astrojs/preact": "3.0.0",
     "@astrojs/prefetch": "0.4.0",
     "@astrojs/rss": "3.0.0",
@@ -49,11 +49,11 @@
     "@types/leaflet": "1.9.4",
     "@types/node": "18.17.15",
     "@yeger/eslint-config": "1.9.1",
-    "astro": "3.0.13",
+    "astro": "3.1.0",
     "astro-critters": "2.0.11",
     "astro-icon": "0.8.1",
     "astro-robots-txt": "1.0.0",
-    "astro-seo-schema": "3.0.0",
+    "astro-seo-schema": "3.1.1",
     "cypress": "13.2.0",
     "eslint": "8.49.0",
     "hast-util-to-string": "2.0.0",
@@ -79,7 +79,7 @@
     "vite": "4.4.9",
     "vite-plugin-lib": "2.0.2",
     "vue": "3.3.4",
-    "vue-tsc": "1.8.10"
+    "vue-tsc": "1.8.11"
   },
   "lint-staged": {
     "*.{astro,js,json,md,ts,vue,yaml,yml}": "eslint --fix"
