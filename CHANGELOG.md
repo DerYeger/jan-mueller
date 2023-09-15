@@ -1,3 +1,10 @@
+## [3.46.5](https://github.com/DerYeger/jan-mueller/compare/v3.46.4...v3.46.5) (2023-09-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v18.17.16 ([6791801](https://github.com/DerYeger/jan-mueller/commit/67918016205e9c55a5c2c7a43c84fc2eddf757b6))
+
 ## [3.46.4](https://github.com/DerYeger/jan-mueller/compare/v3.46.3...v3.46.4) (2023-09-15)
 
 
