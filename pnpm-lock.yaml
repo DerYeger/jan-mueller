@@ -149,8 +149,8 @@ devDependencies:
     specifier: 5.1.0
     version: 5.1.0
   rollup:
-    specifier: 3.29.1
-    version: 3.29.1
+    specifier: 3.29.2
+    version: 3.29.2
   sharp:
     specifier: 0.32.5
     version: 0.32.5
@@ -168,7 +168,7 @@ devDependencies:
     version: 4.4.9(@types/node@18.17.16)
   vite-plugin-lib:
     specifier: 2.0.2
-    version: 2.0.2(@types/node@18.17.16)(rollup@3.29.1)(typescript@5.2.2)(vite@4.4.9)
+    version: 2.0.2(@types/node@18.17.16)(rollup@3.29.2)(typescript@5.2.2)(vite@4.4.9)
   vue:
     specifier: 3.3.4
     version: 3.3.4
@@ -1777,7 +1777,7 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@rollup/pluginutils@5.0.4(rollup@3.29.1):
+  /@rollup/pluginutils@5.0.4(rollup@3.29.2):
     resolution: {integrity: sha512-0KJnIoRI8A+a1dqOYLxH8vBf8bphDmty5QvIm2hqm7oFCFYKCAZWWd2hXgMibaPsNDhI0AtpYfQZJG47pt/k4g==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -1789,7 +1789,7 @@ packages:
       '@types/estree': 1.0.1
       estree-walker: 2.0.2
       picomatch: 2.3.1
-      rollup: 3.29.1
+      rollup: 3.29.2
     dev: true
 
   /@rushstack/node-core-library@3.59.7(@types/node@18.17.16):
@@ -8837,8 +8837,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup@3.29.1:
-    resolution: {integrity: sha512-c+ebvQz0VIH4KhhCpDsI+Bik0eT8ZFEVZEYw0cGMVqIP8zc+gnwl7iXCamTw7vzv2MeuZFZfdx5JJIq+ehzDlg==}
+  /rollup@3.29.2:
+    resolution: {integrity: sha512-CJouHoZ27v6siztc21eEQGo0kIcE5D1gVPA571ez0mMYb25LGYGKnVNXpEj5MGlepmDWGXNjDB5q7uNiPHC11A==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -10251,7 +10251,7 @@ packages:
       vfile-message: 3.1.4
     dev: true
 
-  /vite-plugin-dts@3.5.2(@types/node@18.17.16)(rollup@3.29.1)(typescript@5.2.2)(vite@4.4.9):
+  /vite-plugin-dts@3.5.2(@types/node@18.17.16)(rollup@3.29.2)(typescript@5.2.2)(vite@4.4.9):
     resolution: {integrity: sha512-iKc851+jdHEoN1ifbOEsoMs+/Zg26PE1EyO2Jc+4apOWRoaeK2zRJnaStgUuJaVaEcAjTqWzpNgCAMq7iO6DWA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -10262,7 +10262,7 @@ packages:
         optional: true
     dependencies:
       '@microsoft/api-extractor': 7.36.4(@types/node@18.17.16)
-      '@rollup/pluginutils': 5.0.4(rollup@3.29.1)
+      '@rollup/pluginutils': 5.0.4(rollup@3.29.2)
       '@vue/language-core': 1.8.10(typescript@5.2.2)
       debug: 4.3.4(supports-color@8.1.1)
       kolorist: 1.8.0
@@ -10275,7 +10275,7 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-lib@2.0.2(@types/node@18.17.16)(rollup@3.29.1)(typescript@5.2.2)(vite@4.4.9):
+  /vite-plugin-lib@2.0.2(@types/node@18.17.16)(rollup@3.29.2)(typescript@5.2.2)(vite@4.4.9):
     resolution: {integrity: sha512-xnwQw63gJvUsIDc21gSXevY3RPcB9pZZfyFcENpyUeC1iHMaNX7raAxFFeXfPcM7up9HVJAL5BULCi7btJ9DLw==}
     peerDependencies:
       typescript: '*'
@@ -10284,7 +10284,7 @@ packages:
       picocolors: 1.0.0
       typescript: 5.2.2
       vite: 4.4.9(@types/node@18.17.16)
-      vite-plugin-dts: 3.5.2(@types/node@18.17.16)(rollup@3.29.1)(typescript@5.2.2)(vite@4.4.9)
+      vite-plugin-dts: 3.5.2(@types/node@18.17.16)(rollup@3.29.2)(typescript@5.2.2)(vite@4.4.9)
     transitivePeerDependencies:
       - '@types/node'
       - rollup
@@ -10322,7 +10322,7 @@ packages:
       '@types/node': 18.17.16
       esbuild: 0.18.20
       postcss: 8.4.29
-      rollup: 3.29.1
+      rollup: 3.29.2
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
