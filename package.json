@@ -47,7 +47,7 @@
     "@tailwindcss/typography": "0.5.10",
     "@types/html-escaper": "3.0.0",
     "@types/leaflet": "1.9.4",
-    "@types/node": "18.17.15",
+    "@types/node": "18.17.16",
     "@yeger/eslint-config": "1.9.1",
     "astro": "3.1.0",
     "astro-critters": "2.0.11",
