@@ -1,3 +1,10 @@
+## [3.46.14](https://github.com/DerYeger/jan-mueller/compare/v3.46.13...v3.46.14) (2023-10-07)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([bedceaf](https://github.com/DerYeger/jan-mueller/commit/bedceafd7e0f4ab68a1ce8c2956072556c2b8536))
+
 ## [3.46.13](https://github.com/DerYeger/jan-mueller/compare/v3.46.12...v3.46.13) (2023-10-07)
 
 
