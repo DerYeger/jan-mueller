@@ -1,3 +1,10 @@
+## [3.46.15](https://github.com/DerYeger/jan-mueller/compare/v3.46.14...v3.46.15) (2023-10-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency rollup to v4 ([#207](https://github.com/DerYeger/jan-mueller/issues/207)) ([181c657](https://github.com/DerYeger/jan-mueller/commit/181c6578c95c3bc55e02a8b1262b10a90b609700))
+
 ## [3.46.14](https://github.com/DerYeger/jan-mueller/compare/v3.46.13...v3.46.14) (2023-10-07)
 
 
