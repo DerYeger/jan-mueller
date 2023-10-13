@@ -3,7 +3,7 @@
   "type": "module",
   "version": "3.46.15",
   "private": true,
-  "packageManager": "pnpm@8.8.0",
+  "packageManager": "pnpm@8.9.0",
   "description": "Personal website of Jan Müller, a passionate software engineer.",
   "scripts": {
     "build": "astro build",
@@ -32,13 +32,13 @@
     "vue-marmoset-viewer": "4.0.2"
   },
   "devDependencies": {
-    "@astrojs/check": "0.2.0",
-    "@astrojs/mdx": "1.1.1",
+    "@astrojs/check": "0.2.1",
+    "@astrojs/mdx": "1.1.2",
     "@astrojs/preact": "3.0.1",
     "@astrojs/prefetch": "0.4.1",
     "@astrojs/rss": "3.0.0",
     "@astrojs/sitemap": "3.0.1",
-    "@astrojs/tailwind": "5.0.1",
+    "@astrojs/tailwind": "5.0.2",
     "@astrojs/vue": "3.0.1",
     "@babel/core": "7",
     "@commitlint/cli": "17.7.2",
@@ -47,14 +47,14 @@
     "@tailwindcss/typography": "0.5.10",
     "@types/html-escaper": "3.0.0",
     "@types/leaflet": "1.9.6",
-    "@types/node": "18.18.4",
+    "@types/node": "18.18.5",
     "@yeger/eslint-config": "1.9.1",
-    "astro": "3.2.3",
+    "astro": "3.3.0",
     "astro-critters": "2.0.11",
     "astro-icon": "0.8.1",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "3.2.1",
-    "cypress": "13.3.0",
+    "cypress": "13.3.1",
     "eslint": "8.51.0",
     "hast-util-to-string": "2.0.0",
     "hastscript": "7.2.0",
@@ -79,7 +79,7 @@
     "vite": "4.4.11",
     "vite-plugin-lib": "2.0.2",
     "vue": "3.3.4",
-    "vue-tsc": "1.8.16"
+    "vue-tsc": "1.8.19"
   },
   "lint-staged": {
     "*.{astro,js,json,md,ts,vue,yaml,yml}": "eslint --fix"
