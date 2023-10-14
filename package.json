@@ -1,7 +1,7 @@
 {
   "name": "jan-mueller",
   "type": "module",
-  "version": "3.46.15",
+  "version": "3.46.16",
   "private": true,
   "packageManager": "pnpm@8.9.0",
   "description": "Personal website of Jan Müller, a passionate software engineer.",
