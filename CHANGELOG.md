@@ -1,3 +1,11 @@
+## [3.46.18](https://github.com/DerYeger/jan-mueller/compare/v3.46.17...v3.46.18) (2023-10-21)
+
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo to v18 ([#208](https://github.com/DerYeger/jan-mueller/issues/208)) ([cbbbceb](https://github.com/DerYeger/jan-mueller/commit/cbbbceb42882876acef2d0c911b9bb57dfcb0ade))
+* **deps:** update dependency lint-staged to v15 ([#209](https://github.com/DerYeger/jan-mueller/issues/209)) ([304ae14](https://github.com/DerYeger/jan-mueller/commit/304ae14b291b9248b3f053244159dbe666b0bd3b))
+
 ## [3.46.17](https://github.com/DerYeger/jan-mueller/compare/v3.46.16...v3.46.17) (2023-10-16)
 
 
