@@ -1,3 +1,10 @@
+## [3.46.19](https://github.com/DerYeger/jan-mueller/compare/v3.46.18...v3.46.19) (2023-10-21)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([dad6b26](https://github.com/DerYeger/jan-mueller/commit/dad6b260b7f8f8796de13223378f71df0088ed9b))
+
 ## [3.46.18](https://github.com/DerYeger/jan-mueller/compare/v3.46.17...v3.46.18) (2023-10-21)
 
 
