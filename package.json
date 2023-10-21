@@ -57,7 +57,7 @@
     "cypress": "13.3.2",
     "eslint": "8.52.0",
     "hast-util-to-string": "2.0.0",
-    "hastscript": "7.2.0",
+    "hastscript": "8.0.0",
     "html-escaper": "3.0.3",
     "husky": "8.0.3",
     "is-ci": "3.0.1",
