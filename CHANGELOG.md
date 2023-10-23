@@ -1,3 +1,10 @@
+## [3.46.20](https://github.com/DerYeger/jan-mueller/compare/v3.46.19...v3.46.20) (2023-10-23)
+
+
+### Bug Fixes
+
+* **deps:** lock file maintenance ([5c5e2e0](https://github.com/DerYeger/jan-mueller/commit/5c5e2e0e4cc16f71d43a4824fc3602a8bb64fab5))
+
 ## [3.46.19](https://github.com/DerYeger/jan-mueller/compare/v3.46.18...v3.46.19) (2023-10-21)
 
 
