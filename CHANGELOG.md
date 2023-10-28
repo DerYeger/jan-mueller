@@ -1,3 +1,10 @@
+## [3.46.25](https://github.com/DerYeger/jan-mueller/compare/v3.46.24...v3.46.25) (2023-10-28)
+
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo ([c4ffe78](https://github.com/DerYeger/jan-mueller/commit/c4ffe78173d3ea9f04c657f8618edd0d4d7d7101))
+
 ## [3.46.24](https://github.com/DerYeger/jan-mueller/compare/v3.46.23...v3.46.24) (2023-10-28)
 
 
