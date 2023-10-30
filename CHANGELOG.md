@@ -1,3 +1,10 @@
+## [3.46.27](https://github.com/DerYeger/jan-mueller/compare/v3.46.26...v3.46.27) (2023-10-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency node to v20 ([#212](https://github.com/DerYeger/jan-mueller/issues/212)) ([04ce83d](https://github.com/DerYeger/jan-mueller/commit/04ce83daab879592057b693424e30aad98c71171))
+
 ## [3.46.26](https://github.com/DerYeger/jan-mueller/compare/v3.46.25...v3.46.26) (2023-10-30)
 
 
