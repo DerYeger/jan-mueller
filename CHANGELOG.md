@@ -1,3 +1,10 @@
+## [3.46.37](https://github.com/DerYeger/jan-mueller/compare/v3.46.36...v3.46.37) (2023-11-25)
+
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo to v18.4.3 ([7cc3603](https://github.com/DerYeger/jan-mueller/commit/7cc3603611cfeaca979009fcc01023ca21bef9f4))
+
 ## [3.46.36](https://github.com/DerYeger/jan-mueller/compare/v3.46.35...v3.46.36) (2023-11-20)
 
 
