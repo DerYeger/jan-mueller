@@ -1,3 +1,10 @@
+## [3.46.41](https://github.com/DerYeger/jan-mueller/compare/v3.46.40...v3.46.41) (2023-12-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vite to v4.5.1 [security] ([c37c864](https://github.com/DerYeger/jan-mueller/commit/c37c864dd12eb8657e18588cf26fae6653de37ec))
+
 ## [3.46.40](https://github.com/DerYeger/jan-mueller/compare/v3.46.39...v3.46.40) (2023-12-04)
 
 
