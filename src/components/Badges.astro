@@ -7,7 +7,7 @@ import { accounts } from '~/lib'
 <section
   class="prose prose-2xl relative my-32 w-full max-w-none border-y border-zinc-300 bg-zinc-200 px-4 py-8 shadow-lg"
 >
-  <div class="children:w-6 children:h-6 flex justify-center gap-8">
+  <div class="flex justify-center gap-8 children:h-6 children:w-6">
     {
       accounts.map((account) => (
         <a
@@ -15,7 +15,7 @@ import { accounts } from '~/lib'
           rel="noreferrer"
           target="_blank"
           title={account.name}
-          class="text-light hover:box-shadow-2xl transition-all hover:text-black"
+          class="hover:box-shadow-2xl text-light transition-all hover:text-black"
         >
           <Icon name={account.icon} />
         </a>

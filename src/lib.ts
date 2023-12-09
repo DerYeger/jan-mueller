@@ -1,7 +1,7 @@
-export const getImageAsset = async (imagePath: string): Promise<any> => {
+export async function getImageAsset(imagePath: string): Promise<any> {
   const assets = import.meta.glob('~/assets/**/*')
   const asset = Object.entries(assets).find(([fileName]) =>
-    fileName.endsWith(imagePath)
+    fileName.endsWith(imagePath),
   )
   if (!asset) {
     return undefined

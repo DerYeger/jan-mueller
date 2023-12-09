@@ -16,7 +16,7 @@ Marker.prototype.options.icon = icon({
   shadowAnchor: [12, 41],
 })
 
-const createClusterCustomIcon = (cluster: any) => {
+function createClusterCustomIcon(cluster: any) {
   return divIcon({
     html: `<span>${cluster.getChildCount()}</span>`,
     className:

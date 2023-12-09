@@ -15,7 +15,7 @@ describe('Blog', () => {
       cy.wrap($card).within(() => {
         cy.contains('Aug 16, 2021').should('be.visible')
         cy.contains('SSR support').should('be.visible')
-      })
+      }),
     )
   })
 })

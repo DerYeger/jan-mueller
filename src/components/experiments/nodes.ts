@@ -54,7 +54,7 @@ export class ScalarInterface extends NumberInterface {
 
 const output = () => new VectorInterface('Output')
 
-const textualOutput = () => {
+function textualOutput() {
   const intf = new TextInterface('Output', '')
   intf.setPort(false)
   return intf
@@ -251,7 +251,7 @@ const RotateNode = defineNode({
     angle: () => new ScalarInterface('Angle'),
     unit: () =>
       new SelectInterface('Unit', 'Degrees', ['Degrees', 'Radians']).setPort(
-        false
+        false,
       ),
   },
   outputs: {
@@ -410,7 +410,7 @@ const WaveNode = defineNode({
       new SelectInterface(
         'Type',
         waveTypes[0],
-        waveTypes as unknown as string[]
+        waveTypes as unknown as string[],
       ).setPort(false),
   },
   outputs: {
@@ -455,7 +455,7 @@ export function registerAllNodeTypes(baklava: IBaklavaViewModel) {
   })
   nodeInterfaceTypes.addTypes(vectorType, scalarType)
   Object.entries(nodeCategories).forEach(([category, nodes]) =>
-    nodes.forEach((node) => editor.registerNodeType(node, { category }))
+    nodes.forEach((node) => editor.registerNodeType(node, { category })),
   )
 }
 
@@ -490,13 +490,13 @@ export function createExample(baklava: IBaklavaViewModel) {
 
   baklava.editor.graph.addConnection(
     vector.outputs.output,
-    rotate.inputs.vector
+    rotate.inputs.vector,
   )
 
   baklava.editor.graph.addConnection(time.outputs.output, modulo.inputs.a)
   baklava.editor.graph.addConnection(modulo.outputs.output, multiply.inputs.a)
   baklava.editor.graph.addConnection(
     multiply.outputs.output,
-    rotate.inputs.angle
+    rotate.inputs.angle,
   )
 }

@@ -4,11 +4,13 @@ describe('Home', () => {
   })
 
   it('has an avatar', () => {
-    cy.get('.avatar').scrollIntoView().should('be.visible')
+    cy.get('.avatar').scrollIntoView()
+    cy.get('.avatar').should('be.visible')
   })
 
   it('shows about me section', () => {
-    cy.contains('About Me').scrollIntoView().should('be.visible')
+    cy.contains('About Me').scrollIntoView()
+    cy.contains('About Me').should('be.visible')
   })
 
   it('shows projects', () => {
@@ -20,9 +22,10 @@ describe('Home', () => {
       'Noted',
       'Apollo',
     ]
-    projects.forEach((project) =>
-      cy.contains(project).scrollIntoView().should('be.visible')
-    )
+    projects.forEach((project) => {
+      cy.contains(project).scrollIntoView()
+      cy.contains(project).should('be.visible')
+    })
   })
 
   it('shows experience', () => {
@@ -30,8 +33,8 @@ describe('Home', () => {
       .parent()
       .parent()
       .within(() => {
+        cy.contains('Yatta Solutions GmbH').scrollIntoView()
         cy.contains('Yatta Solutions GmbH')
-          .scrollIntoView()
           .should('be.visible')
           .parentsUntil('li')
           .within(() => {
@@ -48,8 +51,8 @@ describe('Home', () => {
       .parent()
       .parent()
       .within(() => {
+        cy.contains('Computer Science (B.Sc.)').scrollIntoView()
         cy.contains('Computer Science (B.Sc.)')
-          .scrollIntoView()
           .should('be.visible')
           .parentsUntil('li')
           .within(() => {
@@ -66,8 +69,8 @@ describe('Home', () => {
       .parent()
       .parent()
       .within(() => {
+        cy.contains('DPG-Abiturpreis').scrollIntoView()
         cy.contains('DPG-Abiturpreis')
-          .scrollIntoView()
           .should('be.visible')
           .parentsUntil('li')
           .within(() => {

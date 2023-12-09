@@ -1,6 +1,8 @@
 ---
+/* eslint-disable import/order */
 // eslint-disable-next-line import/no-unresolved
 import { Image } from 'astro:assets'
+
 // eslint-disable-next-line import/no-unresolved
 import { getCollection } from 'astro:content'
 import moment from 'moment'
@@ -11,7 +13,7 @@ import MainLayout from '~/layouts/MainLayout.astro'
 import { getImageAsset } from '~/lib'
 
 const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 )
 ---
 

@@ -20,7 +20,7 @@ function setUpListeners() {
         //   window.removeEventListener('scroll', onScroll)
         // }
       },
-      { passive: true }
+      { passive: true },
     )
   })
 }

@@ -1,7 +1,7 @@
 module.exports = {
   semi: false,
   singleQuote: true,
-  plugins: [require('prettier-plugin-astro')],
+  plugins: [import('prettier-plugin-astro')],
   overrides: [
     {
       files: '*.astro',

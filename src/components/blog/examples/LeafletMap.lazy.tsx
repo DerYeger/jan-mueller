@@ -3,15 +3,15 @@ import type { FunctionalComponent } from 'preact'
 import { Suspense, lazy } from 'preact/compat'
 
 const LazyLeafletMap = lazy(
-  () => import('~/components/blog/examples/LeafletMap')
+  () => import('~/components/blog/examples/LeafletMap'),
 )
 const LazyMarker = lazy(async () => (await import('react-leaflet')).Marker)
 const LazyMapCenter = lazy(
-  async () => (await import('~/components/blog/examples/LeafletMap')).MapCenter
+  async () => (await import('~/components/blog/examples/LeafletMap')).MapCenter,
 )
 const LazyMarkerCluster = lazy(
   async () =>
-    (await import('~/components/blog/examples/LeafletMap')).MarkerCluster
+    (await import('~/components/blog/examples/LeafletMap')).MarkerCluster,
 )
 
 const center: [number, number] = [48.2082, 16.3738]

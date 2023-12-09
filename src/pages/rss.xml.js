@@ -1,4 +1,6 @@
+/* eslint-disable import/order */
 import rss from '@astrojs/rss'
+
 // eslint-disable-next-line import/no-unresolved
 import { getCollection } from 'astro:content'
 

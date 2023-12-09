@@ -84,7 +84,7 @@ const data = computed(() => {
         </marker>
       </defs>
       <g
-        class="grid-lines children:stroke-neutral-700 children:opacity-75 children:stroke-[0.25px]"
+        class="grid-lines children:stroke-neutral-700 children:stroke-[0.25px] children:opacity-75"
       >
         <line
           v-for="point of data.gridLines"
