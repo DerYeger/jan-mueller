@@ -1,13 +1,11 @@
 export const getImageAsset = async (imagePath: string): Promise<any> => {
-  // @ts-expect-error Hacky way to get all assets
-  const assets = await import.meta.glob('~/assets/**/*')
+  const assets = import.meta.glob('~/assets/**/*')
   const asset = Object.entries(assets).find(([fileName]) =>
     fileName.endsWith(imagePath)
   )
   if (!asset) {
     return undefined
   }
-  // @ts-expect-error Hacky way to get image asset
   return await asset[1]()
 }
 

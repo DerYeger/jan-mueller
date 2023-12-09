@@ -1,4 +1,3 @@
-// @ts-expect-error Missing typedef
 import BaseMarkerCluster from '@changey/react-leaflet-markercluster'
 import type { MapOptions } from 'leaflet'
 import { Marker, divIcon, icon, point } from 'leaflet'

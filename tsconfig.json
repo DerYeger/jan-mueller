@@ -5,7 +5,7 @@
     "skipLibCheck": true,
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
-    "types": ["preact/jsx-runtime"],
+    "types": ["preact/jsx-runtime", "vite/client"],
     "paths": {
       "~/*": ["src/*"]
     }

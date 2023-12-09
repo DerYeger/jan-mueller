@@ -7,3 +7,4 @@ node_modules
 .astro
 .idea/
 *.log
+.turbo/cookies
