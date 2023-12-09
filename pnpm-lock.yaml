@@ -53,8 +53,8 @@ devDependencies:
     specifier: 5.0.2
     version: 5.0.2(astro@3.5.5)(tailwindcss@3.3.5)(ts-node@10.9.1)
   '@astrojs/vue':
-    specifier: 3.0.4
-    version: 3.0.4(@babel/core@7.23.5)(astro@3.5.5)(vite@5.0.7)(vue@3.3.9)
+    specifier: 4.0.2
+    version: 4.0.2(@babel/core@7.23.5)(astro@3.5.5)(vite@5.0.7)(vue@3.3.9)
   '@babel/core':
     specifier: '7'
     version: 7.23.5
@@ -506,11 +506,11 @@ packages:
       - supports-color
     dev: true
 
-  /@astrojs/vue@3.0.4(@babel/core@7.23.5)(astro@3.5.5)(vite@5.0.7)(vue@3.3.9):
-    resolution: {integrity: sha512-+kuONslRcfXbwlZOwdl+9XYJ0HKfPQ8SHnmk4Uf3ZNscJfjptob3z0mrIaCRqIgNNWJHsY2xLZovishGQ+lAow==}
+  /@astrojs/vue@4.0.2(@babel/core@7.23.5)(astro@3.5.5)(vite@5.0.7)(vue@3.3.9):
+    resolution: {integrity: sha512-h//xjXSBRZCLZjf0eyA4RMA6NE4DXyj2WGKwajtazDFWWi9phqD3B+jzosADDJx3XtltCRddZ/znObqZDE2caA==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
-      astro: ^3.0.0
+      astro: ^4.0.0-beta.0
       vue: ^3.2.30
     dependencies:
       '@vitejs/plugin-vue': 4.5.1(vite@5.0.7)(vue@3.3.9)
