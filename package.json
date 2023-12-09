@@ -36,7 +36,7 @@
     "@astrojs/mdx": "2.0.0",
     "@astrojs/preact": "3.0.1",
     "@astrojs/prefetch": "0.4.1",
-    "@astrojs/rss": "3.0.0",
+    "@astrojs/rss": "4.0.1",
     "@astrojs/sitemap": "3.0.3",
     "@astrojs/tailwind": "5.0.2",
     "@astrojs/vue": "3.0.4",
