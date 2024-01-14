@@ -7,6 +7,7 @@ import vue from '@astrojs/vue'
 import vitePreact from '@preact/preset-vite'
 import { defineConfig } from 'astro/config'
 import critters from 'astro-critters'
+import icon from 'astro-icon'
 import robotsTxt from 'astro-robots-txt'
 import autolinkHeadings from 'rehype-autolink-headings'
 import rehypeExternalLinks from 'rehype-external-links'
@@ -26,6 +27,7 @@ export default defineConfig({
     inlineStylesheets: 'auto',
   },
   integrations: [
+    icon(),
     mdx({
       extendMarkdownConfig: true,
     }),
