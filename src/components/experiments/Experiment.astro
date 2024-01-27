@@ -11,7 +11,7 @@ const { name, class: extraClasses = '', href } = Astro.props
 ---
 
 <div
-  class={`experiment card group relative flex h-full w-full flex-col justify-between gap-6 overflow-hidden p-6 no-underline ${extraClasses}`}
+  class={`experiment card group relative flex size-full flex-col justify-between gap-6 overflow-hidden p-6 no-underline ${extraClasses}`}
   aria-label={name}
 >
   <slot />
@@ -20,9 +20,9 @@ const { name, class: extraClasses = '', href } = Astro.props
       href={href}
       rel="prefetch"
       aria-label={name}
-      class="z-20 block h-[2em] w-[2em] rounded-full border-2 border-current bg-white p-1 text-neutral-400 transition-all duration-500 hover:text-black hover:shadow-xl dark:bg-transparent dark:text-neutral-400 hover:dark:text-white"
+      class="z-20 block size-[2em] rounded-full border-2 border-current bg-white p-1 text-neutral-400 transition-all duration-500 hover:text-black hover:shadow-xl dark:bg-transparent dark:text-neutral-400 hover:dark:text-white"
     >
-      <Icon name="radix-icons:arrow-top-right" />
+      <Icon name="radix-icons:arrow-top-right" class="size-full" />
     </a>
   </div> : null}
 </div>

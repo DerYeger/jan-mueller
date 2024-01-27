@@ -7,7 +7,7 @@
     "jsxImportSource": "preact",
     "types": ["preact/jsx-runtime", "vite/client"],
     "paths": {
-      "~/*": ["src/*"]
-    }
-  }
+      "~/*": ["src/*"],
+    },
+  },
 }

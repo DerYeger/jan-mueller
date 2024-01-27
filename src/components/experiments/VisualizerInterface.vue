@@ -55,10 +55,7 @@ const data = computed(() => {
 
 <template>
   <div class="visualizer-interface h-full p-2">
-    <svg
-      class="h-full w-full select-none overflow-visible"
-      viewBox="0 0 100 100"
-    >
+    <svg class="size-full select-none overflow-visible" viewBox="0 0 100 100">
       <defs>
         <marker
           id="arrow-axis"

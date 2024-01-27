@@ -7,7 +7,7 @@ import { accounts } from '~/lib'
 <section
   class="prose prose-2xl relative my-32 w-full max-w-none border-y border-zinc-300 bg-zinc-200 px-4 py-8 shadow-lg"
 >
-  <div class="flex justify-center gap-8 children:h-6 children:w-6">
+  <div class="flex justify-center gap-8">
     {
       accounts.map((account) => (
         <a
@@ -15,9 +15,9 @@ import { accounts } from '~/lib'
           rel="noreferrer"
           target="_blank"
           title={account.name}
-          class="hover:box-shadow-2xl text-light transition-all hover:text-black"
+          class="hover:box-shadow-2xl size-6 text-light transition-all hover:text-black"
         >
-          <Icon name={account.icon} />
+          <Icon name={account.icon} class="size-6" />
         </a>
       ))
     }
@@ -30,7 +30,7 @@ import { accounts } from '~/lib'
       style="border-radius: 1.5rem; padding: 0.5rem 1rem;"
     >
       Blog
-      <Icon name="akar-icons:arrow-right" class="h-[20px] w-[20px]" />
+      <Icon name="akar-icons:arrow-right" class="size-[20px]" />
     </a>
   </div>
 </section>

@@ -38,12 +38,12 @@ const { default: earth } = await import(`~/assets/projects/Earth.svg?raw`)
     ))
   }
   <div
-    class="absolute -bottom-6 -left-6 h-24 w-24 transition-transform duration-500 group-hover:-translate-y-4 group-hover:translate-x-28 group-hover:scale-50"
+    class="absolute -bottom-6 -left-6 size-24 transition-transform duration-500 group-hover:-translate-y-4 group-hover:translate-x-28 group-hover:scale-50"
   >
     <Fragment set:html={moon} />
   </div>
   <div
-    class="absolute -bottom-12 -left-24 h-24 w-24 brightness-125 transition-transform duration-500 group-hover:-translate-y-6 group-hover:translate-x-24"
+    class="absolute -bottom-12 -left-24 size-24 brightness-125 transition-transform duration-500 group-hover:-translate-y-6 group-hover:translate-x-24"
   >
     <Fragment set:html={earth} />
   </div>
