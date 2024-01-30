@@ -1,3 +1,10 @@
+# [3.47.0](https://github.com/DerYeger/jan-mueller/compare/v3.46.41...v3.47.0) (2024-01-30)
+
+
+### Features
+
+* load photography image dynamically ([b5b20b2](https://github.com/DerYeger/jan-mueller/commit/b5b20b2585dd50101061922f896e640baa08d9d8))
+
 ## [3.46.41](https://github.com/DerYeger/jan-mueller/compare/v3.46.40...v3.46.41) (2023-12-06)
 
 
