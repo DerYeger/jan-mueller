@@ -1,3 +1,10 @@
+## [3.47.2](https://github.com/DerYeger/jan-mueller/compare/v3.47.1...v3.47.2) (2024-01-30)
+
+
+### Bug Fixes
+
+* remove duplicate images ([b720a35](https://github.com/DerYeger/jan-mueller/commit/b720a35cfeda3a8621b7e129ece0360fef697574))
+
 ## [3.47.1](https://github.com/DerYeger/jan-mueller/compare/v3.47.0...v3.47.1) (2024-01-30)
 
 
