@@ -1,8 +1,37 @@
 ---
-import Gallery from '~/components/Gallery.vue'
+import { type ImageMetadata } from 'astro'
+import { getImage } from 'astro:assets'
+
+import Gallery, { type GalleryImage } from '~/components/Gallery.vue'
 import MainLayout from '~/layouts/MainLayout.astro'
+
+const rawImages = await Astro.glob('/src/assets/photos/gallery/*').then(
+  (files) => files.map((file) => file.default as ImageMetadata).reverse(),
+)
+
+function getAltFromFilename(filename: string): string {
+  const startMarker = '__'
+  const start = filename.lastIndexOf(startMarker) + startMarker.length
+  const end = filename.indexOf('.', start)
+  return filename.substring(start, end).replace(/-/g, ' ')
+}
+
+const processedImages = rawImages.map(async (rawImage) => {
+  const alt = getAltFromFilename(rawImage.src)
+  const {
+    src,
+    attributes: { width, height },
+  } = await getImage({ src: rawImage })
+  return {
+    src,
+    alt,
+    aspectRatio: width / height,
+  }
+})
+
+const images: GalleryImage[] = await Promise.all(processedImages)
 ---
 
 <MainLayout title="Photography">
-  <Gallery client:load />
+  <Gallery client:load images={images} />
 </MainLayout>
