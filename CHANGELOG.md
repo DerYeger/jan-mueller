@@ -1,3 +1,10 @@
+## [3.47.1](https://github.com/DerYeger/jan-mueller/compare/v3.47.0...v3.47.1) (2024-01-30)
+
+
+### Bug Fixes
+
+* change image order ([f8ec975](https://github.com/DerYeger/jan-mueller/commit/f8ec975a46a82514769c92aa1a2c1be68b6cb0e3))
+
 # [3.47.0](https://github.com/DerYeger/jan-mueller/compare/v3.46.41...v3.47.0) (2024-01-30)
 
 
