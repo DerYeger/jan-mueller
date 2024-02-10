@@ -1,4 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// eslint-disable-next-line ts/ban-ts-comment
 // @ts-nocheck baklavsjs types are not up to date
 import type { IBaklavaViewModel } from 'baklavajs'
 import {

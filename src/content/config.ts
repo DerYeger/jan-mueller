@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import { defineCollection, z } from 'astro:content'
 import moment from 'moment'
 

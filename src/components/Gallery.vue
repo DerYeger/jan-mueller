@@ -31,7 +31,7 @@ export interface GalleryImage {
           decoding="async"
           oncontextmenu="return false"
           class="w-full shadow-2xl"
-        />
+        >
       </div>
     </MasonryWall>
   </div>

@@ -1,5 +1,5 @@
 ---
-import type { PhotoData } from '~/components/showcase/Photo.astro';
+import type { PhotoData } from '~/components/showcase/Photo.astro'
 import Photo from '~/components/showcase/Photo.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 
@@ -52,7 +52,7 @@ const photos: PhotoData[] = [
         if (!index) {
           return
         }
-       showImage(parseInt(index, 10))
+        showImage(parseInt(index, 10))
       })
     })
 
@@ -121,7 +121,7 @@ const photos: PhotoData[] = [
 
     // Replace the modulo operator with a function that works with negative numbers.
     function coerceInRange(index: number) {
-      return ((index % length) + length) % length;
+      return ((index % length) + length) % length
     }
   })
 </script>

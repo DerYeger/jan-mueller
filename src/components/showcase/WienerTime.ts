@@ -11,7 +11,7 @@ function setUpListeners() {
     })
     window.addEventListener(
       'scroll',
-      function onScroll() {
+      () => {
         const percentage = calculateDashoffset(grid)
         lines.forEach((line) => {
           setDashoffset(line, percentage)

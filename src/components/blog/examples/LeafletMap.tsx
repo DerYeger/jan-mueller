@@ -53,7 +53,7 @@ export const MapCenter: FunctionalComponent = () => {
   })
   return (
     <span
-      class="button z-101 absolute right-2 top-2 rounded border-2 border-neutral-400 bg-white px-2 py-1 text-black"
+      className="button z-101 absolute right-2 top-2 rounded border-2 border-neutral-400 bg-white px-2 py-1 text-black"
       onClick={() => map.setZoom(13)}
     >
       {text}

@@ -47,26 +47,26 @@ const name = 'Formi'
 </Showcase>
 
 <script>
-  const durations = ['duration-500', 'duration-700']
-  const animationClasses = ['translate-x-[1000%]']
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const images = [...entry.target.getElementsByTagName('img')]
-        if (!entry.isIntersecting) {
-          images.forEach((image) => image.classList.add(...animationClasses))
-          return
-        }
-        observer.unobserve(entry.target)
-        images.forEach((image, index) => {
-          image.classList.add('transition-transform', durations[index % 2])
-          image.classList.remove(...animationClasses)
-        })
+const durations = ['duration-500', 'duration-700']
+const animationClasses = ['translate-x-[1000%]']
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const images = [...entry.target.getElementsByTagName('img')]
+      if (!entry.isIntersecting) {
+        images.forEach((image) => image.classList.add(...animationClasses))
+        return
+      }
+      observer.unobserve(entry.target)
+      images.forEach((image, index) => {
+        image.classList.add('transition-transform', durations[index % 2])
+        image.classList.remove(...animationClasses)
       })
-    },
-    { threshold: 0.5 }
-  )
+    })
+  },
+  { threshold: 0.5 },
+)
 
-  const formiContainers = [...document.getElementsByClassName('formi')]
-  formiContainers.forEach((logo) => observer.observe(logo))
+const formiContainers = [...document.getElementsByClassName('formi')]
+formiContainers.forEach((logo) => observer.observe(logo))
 </script>
