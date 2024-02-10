@@ -54,7 +54,7 @@
     "@types/html-escaper": "3.0.2",
     "@types/leaflet": "1.9.8",
     "@types/node": "20.11.16",
-    "@yeger/eslint-config": "1.9.6",
+    "@yeger/eslint-config": "2.1.0",
     "astro": "4.3.2",
     "astro-critters": "2.0.11",
     "astro-icon": "1.1.0",
