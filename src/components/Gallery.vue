@@ -11,14 +11,16 @@ export interface GalleryImage {
 </script>
 
 <template>
-  <div class="bg-white p-4">
+  <div class="flex justify-center bg-white p-2">
     <MasonryWall
       v-slot="{ item: image }"
       :items="props.images"
       :ssr-columns="1"
       :column-width="384"
-      :gap="16"
+      :gap="8"
+      :max-columns="3"
       :key-mapper="(image: GalleryImage) => image.src"
+      class="max-w-[1600px]"
     >
       <div
         class="h-0 shadow-sm"
