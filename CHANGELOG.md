@@ -1,3 +1,10 @@
+## [3.49.1](https://github.com/DerYeger/jan-mueller/compare/v3.49.0...v3.49.1) (2024-03-08)
+
+
+### Bug Fixes
+
+* **gallery:** update image ([f8a43bf](https://github.com/DerYeger/jan-mueller/commit/f8a43bfb93dfabfa1441d17e46d936343a6fc66d))
+
 # [3.49.0](https://github.com/DerYeger/jan-mueller/compare/v3.48.0...v3.49.0) (2024-03-07)
 
 
