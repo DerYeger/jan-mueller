@@ -32,6 +32,8 @@ export interface GalleryImage {
           loading="lazy"
           decoding="async"
           oncontextmenu="return false"
+          ondragstart="return false"
+          on-touchstart="return false"
           class="w-full shadow-2xl"
         >
       </div>

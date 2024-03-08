@@ -42,7 +42,7 @@ function getNumberWithOrdinal(n: number) {
           aria-label={`Show ${getNumberWithOrdinal(i + 1)} image.`}
         >
           <div
-            class={`size-2 rounded-full${
+            class={`size-2 rounded-full ${
               i === index ? 'bg-white' : 'glass opacity-75'
             }`}
           />
@@ -58,6 +58,8 @@ function getNumberWithOrdinal(n: number) {
     quality={85}
     loading="lazy"
     class="m-0 size-full object-cover"
+    oncontextmenu="return false"
+    ondragstart="return false"
   />
   <div
     class="glass absolute inset-x-3 bottom-2 rounded-3xl px-2 py-1 text-center text-xs opacity-0 transition-opacity duration-500 group-hover:opacity-100"
