@@ -1,3 +1,10 @@
+## [3.49.2](https://github.com/DerYeger/jan-mueller/compare/v3.49.1...v3.49.2) (2024-03-08)
+
+
+### Bug Fixes
+
+* show dots on photo showcase ([3cd91fb](https://github.com/DerYeger/jan-mueller/commit/3cd91fb01c36e85f0331fddc65d2c884a29cb369))
+
 ## [3.49.1](https://github.com/DerYeger/jan-mueller/compare/v3.49.0...v3.49.1) (2024-03-08)
 
 
