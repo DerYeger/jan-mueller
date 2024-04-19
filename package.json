@@ -3,7 +3,7 @@
   "type": "module",
   "version": "3.49.2",
   "private": true,
-  "packageManager": "pnpm@8.15.3",
+  "packageManager": "pnpm@9.0.4",
   "description": "Personal website of Jan Müller, a passionate software engineer.",
   "scripts": {
     "build": "astro build",
