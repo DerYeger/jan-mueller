@@ -80,7 +80,7 @@
     "rollup": "4.16.4",
     "sharp": "0.33.3",
     "ts-node": "10.9.2",
-    "turbo": "1.13.3",
+    "turbo": "2.0.3",
     "typescript": "5.4.5",
     "vite": "5.2.10",
     "vite-plugin-lib": "2.0.9",

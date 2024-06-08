@@ -1,39 +1,63 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
+  "tasks": {
     "build": {
-      "dependsOn": ["sync"],
-      "outputs": ["dist/**"]
+      "dependsOn": [
+        "sync"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
     },
     "check": {
-      "dependsOn": ["check:astro", "check:tsc", "check:vue"],
+      "dependsOn": [
+        "check:astro",
+        "check:tsc",
+        "check:vue"
+      ],
       "outputs": []
     },
     "check:astro": {
-      "dependsOn": ["sync"],
-      "inputs": ["src/**/*.astro"],
+      "dependsOn": [
+        "sync"
+      ],
+      "inputs": [
+        "src/**/*.astro"
+      ],
       "outputs": []
     },
     "check:tsc": {
-      "dependsOn": ["sync"],
+      "dependsOn": [
+        "sync"
+      ],
       "outputs": []
     },
     "check:vue": {
-      "dependsOn": ["sync"],
-      "inputs": ["src/**/*.vue"],
+      "dependsOn": [
+        "sync"
+      ],
+      "inputs": [
+        "src/**/*.vue"
+      ],
       "outputs": []
     },
     "lint": {
-      "dependsOn": ["sync"],
+      "dependsOn": [
+        "sync"
+      ],
       "outputs": []
     },
     "preview": {
-      "dependsOn": ["build"],
+      "dependsOn": [
+        "build"
+      ],
       "cache": false,
       "persistent": true
     },
     "sync": {
-      "outputs": [".astro/**"]
+      "outputs": [
+        ".astro/**"
+      ]
     }
   }
 }
