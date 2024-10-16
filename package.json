@@ -55,7 +55,7 @@
     "@types/leaflet": "1.9.12",
     "@types/node": "20.16.11",
     "@yeger/eslint-config": "2.5.0",
-    "astro": "4.15.8",
+    "astro": "4.16.1",
     "astro-critters": "2.2.0",
     "astro-icon": "1.1.1",
     "astro-robots-txt": "1.0.0",
