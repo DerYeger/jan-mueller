@@ -1,3 +1,10 @@
+# [3.50.0](https://github.com/DerYeger/jan-mueller/compare/v3.49.2...v3.50.0) (2024-11-14)
+
+
+### Features
+
+* add cm2ml link ([40da845](https://github.com/DerYeger/jan-mueller/commit/40da845c1910edd9489da36b4fc1408e0f77acd4))
+
 ## [3.49.2](https://github.com/DerYeger/jan-mueller/compare/v3.49.1...v3.49.2) (2024-03-08)
 
 
