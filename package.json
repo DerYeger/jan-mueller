@@ -59,7 +59,7 @@
     "astro-critters": "2.2.0",
     "astro-icon": "1.1.2",
     "astro-robots-txt": "1.0.0",
-    "astro-seo-schema": "4.0.3",
+    "astro-seo-schema": "5.0.0",
     "cypress": "13.15.2",
     "eslint": "9.15.0",
     "hast-util-to-string": "3.0.1",
