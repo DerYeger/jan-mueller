@@ -32,7 +32,7 @@
     "@yeger/vue-masonry-wall": "5.0.16",
     "baklavajs": "2.6.0",
     "leaflet": "1.9.4",
-    "react-leaflet": "4.2.1",
+    "react-leaflet": "5.0.0",
     "tailwindcss": "3.4.17",
     "vecti": "3.0.11",
     "vue-marmoset-viewer": "4.0.12"

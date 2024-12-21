@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@changey/react-leaflet-markercluster':
         specifier: 4.0.0-rc1
-        version: 4.0.0-rc1(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet.markercluster@1.5.3(leaflet@1.9.4))(leaflet@1.9.4)(react-leaflet@4.2.1(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4))
+        version: 4.0.0-rc1(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet.markercluster@1.5.3(leaflet@1.9.4))(leaflet@1.9.4)(react-leaflet@5.0.0(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4))
       '@iconify-json/akar-icons':
         specifier: 1.2.2
         version: 1.2.2
@@ -39,8 +39,8 @@ importers:
         specifier: 1.9.4
         version: 1.9.4
       react-leaflet:
-        specifier: 4.2.1
-        version: 4.2.1(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4)
+        specifier: 5.0.0
+        version: 5.0.0(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4)
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17(ts-node@10.9.2(@types/node@22.10.2)(typescript@5.7.2))
@@ -1371,6 +1371,13 @@ packages:
       leaflet: ^1.9.0
       react: ^18.0.0
       react-dom: ^18.0.0
+
+  '@react-leaflet/core@3.0.0':
+    resolution: {integrity: sha512-3EWmekh4Nz+pGcr+xjf0KNyYfC3U2JjnkWsh0zcqaexYqmmB5ZhH37kz41JXGmKzpaMZCnPofBBm64i+YrEvGQ==}
+    peerDependencies:
+      leaflet: ^1.9.0
+      react: ^19.0.0
+      react-dom: ^19.0.0
 
   '@rollup/pluginutils@4.2.1':
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
@@ -5091,12 +5098,12 @@ packages:
   radix3@1.1.2:
     resolution: {integrity: sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA==}
 
-  react-leaflet@4.2.1:
-    resolution: {integrity: sha512-p9chkvhcKrWn/H/1FFeVSqLdReGwn2qmiobOQGO3BifX+/vV/39qhY8dGqbdcPh1e6jxh/QHriLXr7a4eLFK4Q==}
+  react-leaflet@5.0.0:
+    resolution: {integrity: sha512-CWbTpr5vcHw5bt9i4zSlPEVQdTVcML390TjeDG0cK59z1ylexpqC6M1PJFjV8jD7CF+ACBFsLIDs6DRMoLEofw==}
     peerDependencies:
       leaflet: ^1.9.0
-      react: ^18.0.0
-      react-dom: ^18.0.0
+      react: ^19.0.0
+      react-dom: ^19.0.0
 
   read-cache@1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
@@ -7165,12 +7172,12 @@ snapshots:
 
   '@baklavajs/themes@2.5.0': {}
 
-  '@changey/react-leaflet-markercluster@4.0.0-rc1(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet.markercluster@1.5.3(leaflet@1.9.4))(leaflet@1.9.4)(react-leaflet@4.2.1(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4))':
+  '@changey/react-leaflet-markercluster@4.0.0-rc1(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet.markercluster@1.5.3(leaflet@1.9.4))(leaflet@1.9.4)(react-leaflet@5.0.0(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4))':
     dependencies:
       '@react-leaflet/core': 2.1.0(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4)
       leaflet: 1.9.4
       leaflet.markercluster: 1.5.3(leaflet@1.9.4)
-      react-leaflet: 4.2.1(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4)
+      react-leaflet: 5.0.0(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4)
     transitivePeerDependencies:
       - react
       - react-dom
@@ -8108,6 +8115,12 @@ snapshots:
       - supports-color
 
   '@react-leaflet/core@2.1.0(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4)':
+    dependencies:
+      leaflet: 1.9.4
+      react: '@preact/compat@18.3.1(preact@10.25.3)'
+      react-dom: '@preact/compat@18.3.1(preact@10.25.3)'
+
+  '@react-leaflet/core@3.0.0(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4)':
     dependencies:
       leaflet: 1.9.4
       react: '@preact/compat@18.3.1(preact@10.25.3)'
@@ -12796,9 +12809,9 @@ snapshots:
 
   radix3@1.1.2: {}
 
-  react-leaflet@4.2.1(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4):
+  react-leaflet@5.0.0(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4):
     dependencies:
-      '@react-leaflet/core': 2.1.0(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4)
+      '@react-leaflet/core': 3.0.0(@preact/compat@18.3.1(preact@10.25.3))(@preact/compat@18.3.1(preact@10.25.3))(leaflet@1.9.4)
       leaflet: 1.9.4
       react: '@preact/compat@18.3.1(preact@10.25.3)'
       react-dom: '@preact/compat@18.3.1(preact@10.25.3)'
