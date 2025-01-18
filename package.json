@@ -60,7 +60,7 @@
     "astro-icon": "1.1.5",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "5.0.0",
-    "cypress": "13.17.0",
+    "cypress": "14.0.0",
     "eslint": "9.18.0",
     "hast-util-to-string": "3.0.1",
     "hastscript": "9.0.0",
