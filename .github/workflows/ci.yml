@@ -27,13 +27,13 @@ jobs:
           record: false
           config: video=true
       - name: Upload Screenshots
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: cypress-screenshots-chrome
           path: cypress/screenshots
       - name: Upload Videos
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: cypress-videos-chrome
