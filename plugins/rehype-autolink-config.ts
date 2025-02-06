@@ -1,6 +1,5 @@
 import { toString } from 'hast-util-to-string'
 import { h } from 'hastscript'
-// @ts-expect-error No types available
 import { escape } from 'html-escaper'
 import type { Options } from 'rehype-autolink-headings'
 

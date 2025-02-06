@@ -1,4 +1,3 @@
-/* eslint-disable react/no-useless-fragment */
 /* eslint-disable react/no-array-index-key */
 import type { MapOptions } from 'leaflet'
 import type { FunctionalComponent } from 'preact'
