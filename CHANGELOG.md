@@ -1,3 +1,10 @@
+# [3.51.0](https://github.com/DerYeger/jan-mueller/compare/v3.50.3...v3.51.0) (2025-02-07)
+
+
+### Features
+
+* update education ([8c7a221](https://github.com/DerYeger/jan-mueller/commit/8c7a221d6cc7cc5e4e935da9420d7e0c0372d830))
+
 ## [3.50.3](https://github.com/DerYeger/jan-mueller/compare/v3.50.2...v3.50.3) (2025-02-06)
 
 
