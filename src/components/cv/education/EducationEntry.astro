@@ -12,7 +12,7 @@ const { education } = Astro.props as Props
 <div class="lh-6 flex flex-col">
   <span class="text-black">{education.name}</span>
   <span>
-    {education.institution}
+    {education.institution}, {education.grade}
   </span>
   <div class="text-lighter">
     <DateRange startDate={education.startDate} endDate={education.endDate} />
