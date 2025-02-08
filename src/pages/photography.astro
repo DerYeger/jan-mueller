@@ -1,8 +1,9 @@
 ---
-import { type ImageMetadata } from 'astro'
+import type { ImageMetadata } from 'astro'
 import { getImage } from 'astro:assets'
 
-import Gallery, { type GalleryImage } from '~/components/Gallery.vue'
+import Gallery from '~/components/Gallery.vue'
+import type { GalleryImage } from '~/components/Gallery.vue'
 import MainLayout from '~/layouts/MainLayout.astro'
 
 const rawImages = await Astro.glob('/src/assets/photos/gallery/*').then(
