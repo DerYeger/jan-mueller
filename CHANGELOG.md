@@ -1,3 +1,20 @@
+# [3.55.0](https://github.com/DerYeger/jan-mueller/compare/v3.54.0...v3.55.0) (2025-02-09)
+
+
+### Bug Fixes
+
+* **gallery:** remove gap ([dc255e4](https://github.com/DerYeger/jan-mueller/commit/dc255e466293ba084312c7a6c9edaf0a0bf5022c))
+* **legal:** update district ([c183617](https://github.com/DerYeger/jan-mueller/commit/c183617dc3895eef0f02de37ddf4ebaaaf10f45e))
+
+
+### Features
+
+* improve design ([68b25f9](https://github.com/DerYeger/jan-mueller/commit/68b25f9b9f9d4c61d2acbb99bdde25974d73e113))
+* **nav:** improve navigation ([2ecdb98](https://github.com/DerYeger/jan-mueller/commit/2ecdb98d7282723110ca05a5d994f6646be5f2e7))
+* **showcase:** add cm2ml ([a54eb01](https://github.com/DerYeger/jan-mueller/commit/a54eb011b70d20882a39ac436f74c838f7e2f021))
+* **showcase:** update photos ([116acc8](https://github.com/DerYeger/jan-mueller/commit/116acc8c9183c50d66fdf4f59bca2dbdbe13145a))
+* update avatar ([a3164af](https://github.com/DerYeger/jan-mueller/commit/a3164af28441ba80786879a35ca4526513f09b8a))
+
 # [3.54.0](https://github.com/DerYeger/jan-mueller/compare/v3.53.0...v3.54.0) (2025-02-09)
 
 
