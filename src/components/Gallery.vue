@@ -16,11 +16,11 @@ export interface GalleryImage {
       v-slot="{ item: image }"
       :items="props.images"
       :ssr-columns="1"
-      :column-width="384"
+      :column-width="420"
       :gap="8"
-      :max-columns="3"
+      :max-columns="undefined"
       :key-mapper="(image: GalleryImage) => image.src"
-      class="max-w-[1600px]"
+      class="w-full"
     >
       <div
         class="h-0 shadow-sm"
