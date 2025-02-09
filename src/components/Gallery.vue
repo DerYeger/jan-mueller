@@ -7,6 +7,7 @@ export interface GalleryImage {
   src: string
   alt: string
   aspectRatio: number
+  lazy: boolean
 }
 </script>
 
@@ -29,12 +30,12 @@ export interface GalleryImage {
         <img
           :src="image.src"
           :alt="image.alt"
-          loading="lazy"
+          :loading="image.lazy ? 'lazy' : 'eager'"
           decoding="async"
           oncontextmenu="return false"
           ondragstart="return false"
           on-touchstart="return false"
-          class="w-full shadow-2xl"
+          class="w-full select-none shadow-2xl"
         >
       </div>
     </MasonryWall>

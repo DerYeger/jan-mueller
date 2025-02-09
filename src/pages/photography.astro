@@ -17,7 +17,7 @@ function getAltFromFilename(filename: string): string {
   return filename.substring(start, end).replace(/-/g, ' ')
 }
 
-const processedImages = rawImages.map(async (rawImage) => {
+const processedImages = rawImages.map(async (rawImage, index) => {
   const alt = getAltFromFilename(rawImage.src)
   const {
     src,
@@ -27,6 +27,7 @@ const processedImages = rawImages.map(async (rawImage) => {
     src,
     alt,
     aspectRatio: width / height,
+    lazy: index >= 10,
   }
 })
 
