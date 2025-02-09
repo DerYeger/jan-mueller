@@ -7,16 +7,19 @@ const { href, ...props } = Astro.props as Props
 const isActive = href === Astro.url.pathname
 ---
 
-<a
-  href={href}
-  rel="prefetch"
-  class:list={[
-    'inline-block transition-none no-underline px-3 py-1 rounded text-sm border-transparent border hover:text-black hover:dark:text-white hover:border-neutral-400',
-    {
-      'border-neutral-200': isActive,
-    },
-  ]}
-  {...props}
->
-  <slot />
-</a>
+<div class="flex flex-1 justify-center md:grow-0">
+  <a
+    href={href}
+    rel="prefetch"
+    class:list={[
+      'inline-block transition-border no-underline px-3 py-1 rounded text-sm  border hover:text-black hover:dark:text-white hover:border-neutral-400',
+      {
+        'border-transparent ': !isActive,
+        'border-neutral-200': isActive,
+      },
+    ]}
+    {...props}
+  >
+    <slot />
+  </a>
+</div>
