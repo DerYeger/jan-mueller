@@ -1,3 +1,10 @@
+# [3.56.0](https://github.com/DerYeger/jan-mueller/compare/v3.55.2...v3.56.0) (2025-02-09)
+
+
+### Features
+
+* improve shadows ([548f828](https://github.com/DerYeger/jan-mueller/commit/548f8280cb3efa43ff7cc8c2f9219de1075c04be))
+
 ## [3.55.2](https://github.com/DerYeger/jan-mueller/compare/v3.55.1...v3.55.2) (2025-02-09)
 
 
