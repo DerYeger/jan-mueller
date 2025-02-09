@@ -6,9 +6,13 @@ import Gallery from '~/components/Gallery.vue'
 import type { GalleryImage } from '~/components/Gallery.vue'
 import MainLayout from '~/layouts/MainLayout.astro'
 
-const rawImages = await Astro.glob('/src/assets/photos/*').then(
-  (files) => files.map((file) => file.default as ImageMetadata).reverse(),
-)
+const rawImages = await Promise.all(Object.entries(import.meta.glob('/src/assets/photos/*')).map(async ([name, importAsset]) => {
+  const module = await importAsset()
+  if (typeof module !== 'object' || module === null || !('default' in module)) {
+    throw new Error(`Invalid photo: ${name}`)
+  }
+  return module.default as ImageMetadata
+})).then((images) => images.reverse())
 
 function getAltFromFilename(filename: string): string {
   const startMarker = '__'
