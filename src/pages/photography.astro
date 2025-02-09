@@ -6,7 +6,7 @@ import Gallery from '~/components/Gallery.vue'
 import type { GalleryImage } from '~/components/Gallery.vue'
 import MainLayout from '~/layouts/MainLayout.astro'
 
-const rawImages = await Astro.glob('/src/assets/photos/gallery/*').then(
+const rawImages = await Astro.glob('/src/assets/photos/*').then(
   (files) => files.map((file) => file.default as ImageMetadata).reverse(),
 )
 
