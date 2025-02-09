@@ -12,13 +12,13 @@ export interface GalleryImage {
 </script>
 
 <template>
-  <div class="flex justify-center bg-white p-2">
+  <div class="flex justify-center bg-white p-0">
     <MasonryWall
       v-slot="{ item: image }"
       :items="props.images"
       :ssr-columns="1"
       :column-width="420"
-      :gap="8"
+      :gap="0"
       :max-columns="undefined"
       :key-mapper="(image: GalleryImage) => image.src"
       class="w-full"
@@ -32,10 +32,8 @@ export interface GalleryImage {
           :alt="image.alt"
           :loading="image.lazy ? 'lazy' : 'eager'"
           decoding="async"
-          oncontextmenu="return false"
-          ondragstart="return false"
-          on-touchstart="return false"
           class="w-full select-none shadow-2xl"
+          style="pointer-events: none !important;"
         >
       </div>
     </MasonryWall>
