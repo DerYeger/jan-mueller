@@ -1,3 +1,10 @@
+# [3.52.0](https://github.com/DerYeger/jan-mueller/compare/v3.51.0...v3.52.0) (2025-02-09)
+
+
+### Features
+
+* **gallery:** update images ([780ad78](https://github.com/DerYeger/jan-mueller/commit/780ad78ba438be7fd5aa78344024d3a694571bb8))
+
 # [3.51.0](https://github.com/DerYeger/jan-mueller/compare/v3.50.3...v3.51.0) (2025-02-07)
 
 
