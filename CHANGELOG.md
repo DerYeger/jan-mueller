@@ -1,3 +1,10 @@
+## [3.55.1](https://github.com/DerYeger/jan-mueller/compare/v3.55.0...v3.55.1) (2025-02-09)
+
+
+### Bug Fixes
+
+* prevent flicker ([ac0a467](https://github.com/DerYeger/jan-mueller/commit/ac0a4678212e463c5ac7fa4ff5ad0f3a547a686b))
+
 # [3.55.0](https://github.com/DerYeger/jan-mueller/compare/v3.54.0...v3.55.0) (2025-02-09)
 
 
