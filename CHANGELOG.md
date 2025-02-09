@@ -1,3 +1,10 @@
+# [3.54.0](https://github.com/DerYeger/jan-mueller/compare/v3.53.0...v3.54.0) (2025-02-09)
+
+
+### Features
+
+* **gallery:** eager load first 10 images ([a416c5a](https://github.com/DerYeger/jan-mueller/commit/a416c5a09eb897a0f6ec9f8da3bc8a67874aa7c0))
+
 # [3.53.0](https://github.com/DerYeger/jan-mueller/compare/v3.52.0...v3.53.0) (2025-02-09)
 
 
