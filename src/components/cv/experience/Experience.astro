@@ -48,8 +48,8 @@ const experience: Experience[] = [
 ].sort((a, b) => b.startDate.localeCompare(a.startDate))
 ---
 
-<CVList>
-  <span slot="title" id="experience">Experience</span>
+<CVList id="experience">
+  <span slot="title">Experience</span>
   {
     experience.map((entry) => (
       <li>

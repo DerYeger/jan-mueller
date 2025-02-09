@@ -1,5 +1,13 @@
+---
+interface Props {
+  id: string
+}
+
+const { id } = Astro.props
+---
+
 <div class="prose prose-xl flex flex-col">
-  <h2 class="text-center">
+  <h2 class="scroll-mt-20 text-center" id={id}>
     <slot name="title" />
   </h2>
   <ul class="prose">

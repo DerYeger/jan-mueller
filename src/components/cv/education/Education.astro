@@ -28,8 +28,8 @@ const education: Education[] = [
 ].sort((a, b) => b.startDate.localeCompare(a.startDate))
 ---
 
-<CVList>
-  <span slot="title" id="education">Education</span>
+<CVList id="education">
+  <span slot="title">Education</span>
   {
     education.map((entry) => (
       <li>

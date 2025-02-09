@@ -21,8 +21,8 @@ const awards: Award[] = [
 ].sort((a, b) => b.date.localeCompare(a.date))
 ---
 
-<CVList>
-  <span slot="title" id="awards">Awards</span>
+<CVList id="awards">
+  <span slot="title">Awards</span>
   {
     awards.map((entry) => (
       <li>

@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 
-import avatar from '~/assets/avatar.webp'
+import avatar from '~/assets/avatar.png'
 ---
 
 <Image
@@ -12,7 +12,5 @@ import avatar from '~/assets/avatar.webp'
   width={1000}
   sizes="1000px"
   loading="eager"
-  oncontextmenu="return false"
-  ondragstart="return false"
-  on-touchstart="return false"
+  style="pointer-events: none !important;"
 />
