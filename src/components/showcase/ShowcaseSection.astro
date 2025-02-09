@@ -1,20 +1,20 @@
 ---
 import About from '~/components/showcase/About.astro'
 import Apollo from '~/components/showcase/Apollo.astro'
+import CM2ML from '~/components/showcase/CM2ML.astro'
+import ExperimentsShowcase from '~/components/showcase/ExperimentsShowcase.astro'
 import Formi from '~/components/showcase/Formi.astro'
 import Masonry from '~/components/showcase/Masonry.astro'
+import Monorepo from '~/components/showcase/Monorepo.astro'
 import Noted from '~/components/showcase/Noted.astro'
 import PhotoShowcase from '~/components/showcase/PhotoShowcase.astro'
 import Refunk from '~/components/showcase/Refunk.astro'
-import Showcase from '~/components/showcase/Showcase.astro'
-import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
-import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
 import WienerTime from '~/components/showcase/WienerTime.astro'
 ---
 
 <section class="my-32 px-4">
   <div
-    class="mx-auto grid max-w-3xl grid-flow-row grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 2xl:max-w-7xl 2xl:grid-cols-4"
+    class="mx-auto grid max-w-3xl grid-flow-row grid-cols-1 gap-4 sm:grid-cols-2 md:max-w-5xl md:grid-cols-3 2xl:max-w-7xl 2xl:grid-cols-4"
   >
     <div class="md:col-span-2">
       <About />
@@ -25,8 +25,11 @@ import WienerTime from '~/components/showcase/WienerTime.astro'
     <div>
       <PhotoShowcase />
     </div>
-    <div class="md:col-span-2 md:row-start-2 2xl:col-span-1 2xl:row-start-auto">
+    <div class="md:col-span-2 md:col-start-2 2xl:col-span-1 2xl:col-start-2 2xl:row-start-2">
       <Masonry />
+    </div>
+    <div class="md:col-span-2 md:row-start-2 2xl:col-span-1 2xl:row-start-auto">
+      <CM2ML />
     </div>
     <div
       class="md:col-span-2 md:row-span-2 2xl:col-start-1 2xl:row-span-1 2xl:row-start-3"
@@ -40,20 +43,15 @@ import WienerTime from '~/components/showcase/WienerTime.astro'
       <Noted />
     </div>
     <div
-      class="sm:col-span-2 md:max-2xl:col-start-1 md:max-2xl:row-start-5 2xl:col-span-full"
+      class="md:col-span-2"
     >
       <Apollo />
     </div>
-    <div class="col-span-full">
-      <Showcase name="Experiments" link="/experiments/">
-        <div class="prose dark:prose-invert">
-          <ShowcaseTitle>Experiments 🛠️</ShowcaseTitle>
-          <ShowcaseDescription>
-            A space for ideas and doodles that don't fit the scope of a
-            dedicated project.
-          </ShowcaseDescription>
-        </div>
-      </Showcase>
+    <div>
+      <Monorepo />
+    </div>
+    <div class="md:col-span-3 2xl:col-span-4">
+      <ExperimentsShowcase />
     </div>
   </div>
 </section>

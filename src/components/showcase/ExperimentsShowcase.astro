@@ -1,0 +1,17 @@
+---
+import Showcase from '~/components/showcase/Showcase.astro'
+import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
+import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
+
+const name = 'Experiments'
+---
+
+<Showcase name={name} link="/experiments/">
+  <div class="prose dark:prose-invert">
+    <ShowcaseTitle>{name} 🛠️</ShowcaseTitle>
+    <ShowcaseDescription>
+      A space for ideas and doodles that don't fit the scope of a
+      dedicated project.
+    </ShowcaseDescription>
+  </div>
+</Showcase>

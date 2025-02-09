@@ -1,0 +1,24 @@
+---
+import Mark from '~/components/showcase/Mark.astro'
+import Showcase from '~/components/showcase/Showcase.astro'
+import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
+import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
+
+const name = 'CM2ML'
+
+const { default: logo } = await import(`~/assets/projects/CM2ML.svg?raw`)
+---
+
+<Showcase name={name} link="/external/cm2ml">
+  <div class="flex justify-between">
+    <ShowcaseTitle>{name}</ShowcaseTitle>
+    <div class="size-8">
+      <Fragment set:html={logo} />
+    </div>
+  </div>
+
+  <ShowcaseDescription>
+    A generic, portable, and extensible <Mark>framework for encoding the structure of conceptual models</Mark> and the result of
+    my <Mark>master thesis</Mark>.
+  </ShowcaseDescription>
+</Showcase>
