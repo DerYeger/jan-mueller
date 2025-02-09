@@ -1,0 +1,11 @@
+---
+interface Props {
+  to: string
+}
+
+const { to } = Astro.props
+---
+
+<a href={to} class="inline-block font-bold text-blue-500 no-underline">
+  <slot />
+</a>

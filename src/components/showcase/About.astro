@@ -1,4 +1,5 @@
 ---
+import InlineAnchor from '~/components/showcase/InlineAnchor.astro'
 import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
@@ -11,12 +12,15 @@ const name = 'About Me'
   <div class="prose">
     <ShowcaseTitle>{name}</ShowcaseTitle>
     <ShowcaseDescription>
-      Hey, I'm a software engineer working on <Mark>websites, APIs, libraries, mobile apps, and CLIs</Mark>.
-      Beyond development, I occasionally work on tasks related to <Mark>DevOps and SEO</Mark>.
+      Hey and moin!
+      I'm <Mark>Jan, a German fullstack developer living in Vienna.</Mark>
+      My professional experience is centered around <Mark>fullstack web development in the sectors of banking and financial technology.</Mark>
+      Below, you'll find details about my <InlineAnchor to="#experience">experience</InlineAnchor>, <InlineAnchor to="#education">education</InlineAnchor>, and <InlineAnchor to="#awards">awards.</InlineAnchor>
     </ShowcaseDescription>
     <ShowcaseDescription>
-      As an <Mark>Open Source enthusiast</Mark>, I maintain a variety of
-      projects, mostly focused on web development.
+      As an <Mark>Open Source enthusiast,</Mark> I maintain a variety of projects with a focus on web development.
+      My work includes <Mark>websites, APIs, libraries, mobile apps, and CLIs.</Mark>
+      Beyond development, I occasionally work on tasks related to <Mark>DevOps and SEO.</Mark>
     </ShowcaseDescription>
   </div>
 </Showcase>

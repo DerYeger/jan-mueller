@@ -58,10 +58,6 @@ html {
   }
 }
 
-.raised {
-  box-shadow: 4px 4px 8px #969696, -4px -4px 8px #ffffff;
-}
-
 /* Fix for animating elements in Safari  */
 .overflow-hidden {
   -webkit-transform: translate3d(0, 0, 0);

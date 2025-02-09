@@ -21,6 +21,9 @@ describe('Home', () => {
       'WienerTime',
       'Noted',
       'Apollo',
+      'CM2ML',
+      'Experiments',
+      'yeger monorepo',
     ]
     projects.forEach((project) => {
       cy.contains(project).scrollIntoView()

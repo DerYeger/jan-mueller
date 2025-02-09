@@ -1,0 +1,16 @@
+---
+interface Props {
+  to: string
+}
+
+const { to } = Astro.props
+---
+
+<a
+  href={to}
+  rel="prefetch"
+  class="flex items-center gap-2 bg-gradient-to-br from-blue-700 to-blue-500 !text-base text-white no-underline shadow-lg transition-all hover:text-white hover:brightness-125 hover:drop-shadow-lg"
+  style="border-radius: 1.5rem; padding: 0.5rem 1rem;"
+>
+  <slot />
+</a>

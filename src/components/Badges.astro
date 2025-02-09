@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components'
 
+import BadgeButton from '~/components/BadgeButton.astro'
 import { accounts } from '~/lib'
 ---
 
@@ -22,15 +23,14 @@ import { accounts } from '~/lib'
       ))
     }
   </div>
-  <div class="mt-8 flex justify-center">
-    <a
-      href="/blog"
-      rel="prefetch"
-      class="raised flex items-center gap-2 bg-gradient-to-br from-blue-700 to-blue-500 !text-base text-white no-underline shadow-lg transition-all hover:text-white hover:brightness-125"
-      style="border-radius: 1.5rem; padding: 0.5rem 1rem;"
-    >
+  <div class="mt-8 flex justify-center gap-4">
+    <BadgeButton to="/blog">
       Blog
       <Icon name="akar-icons:arrow-right" class="size-[20px]" />
-    </a>
+    </BadgeButton>
+    <BadgeButton to="/photography">
+      Photography
+      <Icon name="akar-icons:arrow-right" class="size-[20px]" />
+    </BadgeButton>
   </div>
 </section>
