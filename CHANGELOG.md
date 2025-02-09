@@ -1,3 +1,10 @@
+## [3.55.2](https://github.com/DerYeger/jan-mueller/compare/v3.55.1...v3.55.2) (2025-02-09)
+
+
+### Bug Fixes
+
+* **photography:** prevent image dragging ([7ae1bc5](https://github.com/DerYeger/jan-mueller/commit/7ae1bc5f2f3003ae301ccc77552d97af01d2c520))
+
 ## [3.55.1](https://github.com/DerYeger/jan-mueller/compare/v3.55.0...v3.55.1) (2025-02-09)
 
 
