@@ -12,19 +12,19 @@ export interface GalleryImage {
 </script>
 
 <template>
-  <div class="flex justify-center bg-white p-0">
+  <div class="flex justify-center bg-white md:p-2">
     <MasonryWall
       v-slot="{ item: image }"
       :items="props.images"
       :ssr-columns="1"
       :column-width="420"
-      :gap="0"
+      :gap="8"
       :max-columns="undefined"
       :key-mapper="(image: GalleryImage) => image.src"
       class="w-full"
     >
       <div
-        class="h-0 shadow-sm"
+        class="h-0"
         :style="{ paddingBottom: `${100 * (1 / image.aspectRatio)}%` }"
       >
         <img
