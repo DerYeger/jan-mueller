@@ -40,7 +40,7 @@ const posts = (await getCollection('blog')).sort(
                     src={getImageAsset(post.data.heroImage)}
                     width={1200}
                     height={200}
-                    quality={85}
+                    quality="high"
                     format="webp"
                     alt={post.data.title}
                   />

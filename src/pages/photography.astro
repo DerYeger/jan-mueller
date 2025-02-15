@@ -26,7 +26,7 @@ const processedImages = rawImages.map(async (rawImage, index) => {
   const {
     src,
     attributes: { width, height },
-  } = await getImage({ src: rawImage })
+  } = await getImage({ src: rawImage, format: 'webp', quality: 'max' })
   return {
     src,
     alt,

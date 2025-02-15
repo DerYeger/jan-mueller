@@ -17,7 +17,7 @@ export interface GalleryImage {
       v-slot="{ item: image }"
       :items="props.images"
       :ssr-columns="1"
-      :column-width="420"
+      :column-width="512"
       :gap="8"
       :max-columns="undefined"
       :key-mapper="(image: GalleryImage) => image.src"
