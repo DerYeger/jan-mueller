@@ -33,7 +33,7 @@
     "baklavajs": "2.6.0",
     "leaflet": "1.9.4",
     "react-leaflet": "4.2.1",
-    "tailwindcss": "3.4.17",
+    "tailwindcss": "4.0.9",
     "vecti": "3.0.13",
     "vue-marmoset-viewer": "4.0.14"
   },
