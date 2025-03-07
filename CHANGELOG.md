@@ -1,3 +1,21 @@
+# [3.57.0](https://github.com/DerYeger/jan-mueller/compare/v3.56.0...v3.57.0) (2025-03-07)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#265](https://github.com/DerYeger/jan-mueller/issues/265)) ([8f75b2e](https://github.com/DerYeger/jan-mueller/commit/8f75b2ef52a2963b472f4faea5084973f2882e80))
+
+
+### Features
+
+* add external link ([a56b09e](https://github.com/DerYeger/jan-mueller/commit/a56b09e125869aeef23b565daddf8ff1081b8079))
+* **gallery:** re-add spacing ([aab24f0](https://github.com/DerYeger/jan-mueller/commit/aab24f0c727b2bbd87e4c59c886bb0f883701505))
+* **photography:** add images ([94317b1](https://github.com/DerYeger/jan-mueller/commit/94317b1e1dc7215550ce15c53616ab33a992a0ad))
+* **photography:** add photo ([c94f57e](https://github.com/DerYeger/jan-mueller/commit/c94f57e31887994ff2d114aa835809384508d7ac))
+* **photography:** add photos ([4350f79](https://github.com/DerYeger/jan-mueller/commit/4350f79c7bb301f14a4b518a5693548f98574cca))
+* **photography:** add photos ([6ff1f4e](https://github.com/DerYeger/jan-mueller/commit/6ff1f4e5d050a8929b1f70fe4882a8064ba785fe))
+* **photography:** use better res for vertical photos ([fbafa71](https://github.com/DerYeger/jan-mueller/commit/fbafa7188a72c4b9b57516d9eebcc92b6ede963f))
+
 # [3.56.0](https://github.com/DerYeger/jan-mueller/compare/v3.55.2...v3.56.0) (2025-02-09)
 
 
