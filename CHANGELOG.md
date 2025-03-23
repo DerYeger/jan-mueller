@@ -1,3 +1,10 @@
+# [3.58.0](https://github.com/DerYeger/jan-mueller/compare/v3.57.0...v3.58.0) (2025-03-23)
+
+
+### Features
+
+* add images ([219915e](https://github.com/DerYeger/jan-mueller/commit/219915ed755257fce2644008ab5b608bbe130b78))
+
 # [3.57.0](https://github.com/DerYeger/jan-mueller/compare/v3.56.0...v3.57.0) (2025-03-07)
 
 
