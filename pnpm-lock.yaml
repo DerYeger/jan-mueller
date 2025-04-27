@@ -187,8 +187,8 @@ importers:
         specifier: 6.3.3
         version: 6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.0)
       vite-plugin-lib:
-        specifier: 2.2.1
-        version: 2.2.1(@types/node@22.15.2)(rollup@4.40.0)(typescript@5.8.3)(vite@6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.0))
+        specifier: 3.0.0
+        version: 3.0.0(@types/node@22.15.2)(rollup@4.40.0)(typescript@5.8.3)(vite@6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.0))
       vue:
         specifier: 3.5.13
         version: 3.5.13(typescript@5.8.3)
@@ -6287,8 +6287,8 @@ packages:
       '@nuxt/kit':
         optional: true
 
-  vite-plugin-lib@2.2.1:
-    resolution: {integrity: sha512-vBXGrrajNlVAb0iie5Hu3vp11+MqGVc9qcaCjcGINQyN9c8rJ5UniQzMYk/waB0V8b9lZHDaLo1cFt1LtuwSjw==}
+  vite-plugin-lib@3.0.0:
+    resolution: {integrity: sha512-bvA1S3Zwgc4cRdur1gzhzXsinawnFCCYiZ3crFBnUIg7cMcIbJyIBn9r/NwDNDcmqLBwvHcN63L+iJJNIsQ8rw==}
     peerDependencies:
       typescript: '*'
       vite: ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
@@ -14459,7 +14459,7 @@ snapshots:
       - rollup
       - supports-color
 
-  vite-plugin-lib@2.2.1(@types/node@22.15.2)(rollup@4.40.0)(typescript@5.8.3)(vite@6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.0)):
+  vite-plugin-lib@3.0.0(@types/node@22.15.2)(rollup@4.40.0)(typescript@5.8.3)(vite@6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.0)):
     dependencies:
       picocolors: 1.1.1
       typescript: 5.8.3
