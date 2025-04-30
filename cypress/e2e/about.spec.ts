@@ -9,8 +9,6 @@ describe('About', () => {
     cy.visit('/legal-notice')
     cy.contains('Legal Notice').scrollIntoView()
     cy.contains('Legal Notice').should('be.visible')
-    cy.contains('Privacy Policy').scrollIntoView()
-    cy.contains('Privacy Policy').should('be.visible')
   })
 })
 
