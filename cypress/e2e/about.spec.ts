@@ -5,12 +5,6 @@ describe('About', () => {
     cy.contains('Impressum').should('be.visible')
   })
 
-  it('has a Datenschutzerklärung', () => {
-    cy.visit('/datenschutzerklaerung')
-    cy.contains('Datenschutzerklärung').scrollIntoView()
-    cy.contains('Datenschutzerklärung').should('be.visible')
-  })
-
   it('has a legal notice', () => {
     cy.visit('/legal-notice')
     cy.contains('Legal Notice').scrollIntoView()

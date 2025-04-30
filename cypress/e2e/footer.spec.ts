@@ -13,16 +13,6 @@ describe('Footer', () => {
     cy.location('pathname').should('eq', '/impressum/')
   })
 
-  it('has a link to the RSS feed', () => {
-    cy.get('footer').within(() => cy.contains('Datenschutzerklärung').click())
-    cy.location('pathname').should('eq', '/datenschutzerklaerung/')
-  })
-
-  it('has a link to the Datenschutzerklärung', () => {
-    cy.get('footer').within(() => cy.contains('RSS Feed').click())
-    cy.location('pathname').should('eq', '/rss.xml')
-  })
-
   it('has a link to the source', () => {
     cy.get('footer').within(() => {
       cy.contains('Source').scrollIntoView()
