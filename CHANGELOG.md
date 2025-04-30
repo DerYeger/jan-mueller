@@ -1,3 +1,11 @@
+## [3.58.1](https://github.com/DerYeger/jan-mueller/compare/v3.58.0...v3.58.1) (2025-04-30)
+
+
+### Bug Fixes
+
+* remove duplicate text ([9cdf346](https://github.com/DerYeger/jan-mueller/commit/9cdf346aa422c33abc08087d07abe6aa949f2047))
+* remove superfluous page ([3921543](https://github.com/DerYeger/jan-mueller/commit/3921543a220ed6d6d4becac07522095678274a43))
+
 # [3.58.0](https://github.com/DerYeger/jan-mueller/compare/v3.57.0...v3.58.0) (2025-03-23)
 
 
