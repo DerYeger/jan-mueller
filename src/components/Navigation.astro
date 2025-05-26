@@ -1,9 +1,15 @@
 ---
 import HeaderLink from '~/components/HeaderLink.astro'
+import type { Link } from '~/links'
+
+interface Props {
+  links: Link[]
+  isSub?: boolean
+}
+
+const { links, isSub = false } = Astro.props
 ---
 
-<nav class="flex flex-1 select-none justify-evenly gap-2 sm:justify-normal">
-  <HeaderLink href="/">Home</HeaderLink>
-  <HeaderLink href="/blog">Blog</HeaderLink>
-  <HeaderLink href="/photography">Photography</HeaderLink>
+<nav class="flex w-full flex-1 select-none justify-evenly gap-2 sm:justify-normal">
+  {links.map((link) => (<HeaderLink href={link.href} exact={isSub}>{link.label}</HeaderLink>))}
 </nav>

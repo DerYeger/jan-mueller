@@ -1,16 +1,18 @@
 ---
 // eslint-disable-next-line no-undef
-export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
+  exact?: boolean
+}
 
-const { href, ...props } = Astro.props as Props
+const { href, exact, ...props } = Astro.props as Props
 
 const isHome = href === '/'
-const isExact = href === Astro.url.pathname
+const isExact = href === Astro.url.pathname || `${href}/` === Astro.url.pathname
 const isSub = typeof href === 'string' && Astro.url.pathname.startsWith(href)
-const isActive = isExact || (!isHome && isSub)
+const isActive = isExact || (!exact && !isHome && isSub)
 ---
 
-<div class="flex flex-1 justify-center md:grow-0">
+<div class="flex flex-1 items-center justify-center md:grow-0">
   <a
     href={href}
     rel="prefetch"

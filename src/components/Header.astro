@@ -1,20 +1,25 @@
 ---
 import Navigation from '~/components/Navigation.astro'
+import { mainLinks } from '~/links'
+import type { Link } from '~/links'
 
 interface Props {
   class?: string
+  sublinks?: Link[]
 }
 
-const { class: extraClasses = '' } = Astro.props
+const { class: extraClasses = '', sublinks } = Astro.props
 ---
 
 <header
   class:list={[
-    'surface-border glass sticky top-0 z-50 flex items-center justify-between border-b p-4',
+    'surface-border glass sticky top-0 z-50 flex items-center justify-between border-b px-4 py-2',
     extraClasses,
+    sublinks ? 'with-sublinks flex-col gap-2' : 'items-start',
   ]}
 >
-  <Navigation />
+  <Navigation links={mainLinks} />
+  {sublinks ? (<Navigation links={sublinks} isSub />) : null}
 </header>
 
 <style is:global>
@@ -24,5 +29,9 @@ const { class: extraClasses = '' } = Astro.props
 
   header {
     height: var(--header-height);
+  }
+
+  header.with-sublinks {
+    height: calc(var(--header-height) + 30px + 8px);
   }
 </style>

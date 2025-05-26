@@ -1,0 +1,12 @@
+---
+import Gallery from '~/components/Gallery.vue'
+import MainLayout from '~/layouts/MainLayout.astro'
+import { photographyLinks } from '~/links'
+import { getGalleryImages } from '~/photographyUtils'
+
+const images = await getGalleryImages(import.meta.glob('/src/assets/photos/*'))
+---
+
+<MainLayout title="Photography" sublinks={photographyLinks}>
+  <Gallery client:load images={images} />
+</MainLayout>

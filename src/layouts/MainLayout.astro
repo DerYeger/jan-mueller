@@ -4,20 +4,31 @@ import BaseHead from '~/components/BaseHead.astro'
 import Footer from '~/components/Footer.astro'
 import Header from '~/components/Header.astro'
 import Main from '~/components/Main.astro'
+import type { Link } from '~/links'
 
-export interface Props extends Partial<BaseHeadProps> {}
+export interface Props extends Partial<BaseHeadProps> {
+  fitScreen?: boolean
+  sublinks?: Link[]
+}
 
-const { title, description, image } = Astro.props as Props
+const { title, description, image, sublinks, fitScreen = false } = Astro.props as Props
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} image={image} />
+    {fitScreen ? (<style>
+      html,
+      body {
+        height: 100vh;
+        height: 100dvh;
+      }
+    </style>) : null}
   </head>
-  <body class="max-w-full overflow-x-hidden bg-white text-black">
-    <Header />
-    <Main>
+  <body class:list={['max-w-full overflow-x-hidden bg-white text-black', fitScreen ? 'flex flex-col' : '']}>
+    <Header sublinks={sublinks} />
+    <Main class={fitScreen ? 'grow' : ''}>
       <slot />
     </Main>
     <Footer />

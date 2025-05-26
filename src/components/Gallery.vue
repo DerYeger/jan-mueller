@@ -1,14 +1,9 @@
 <script setup lang="ts">
 import MasonryWall from '@yeger/vue-masonry-wall'
 
-const props = defineProps<{ images: GalleryImage[] }>()
+import type { GalleryImage } from '~/photographyUtils'
 
-export interface GalleryImage {
-  src: string
-  alt: string
-  aspectRatio: number
-  lazy: boolean
-}
+const props = defineProps<{ images: GalleryImage[] }>()
 </script>
 
 <template>

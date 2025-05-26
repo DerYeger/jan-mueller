@@ -1,0 +1,105 @@
+import { icon } from 'leaflet'
+import type { MapOptions } from 'leaflet'
+import type { FunctionalComponent } from 'preact'
+import { Suspense, lazy, useState } from 'preact/compat'
+import { MapContainer, TileLayer, useMap } from 'react-leaflet'
+
+import { LazyMarker, LazyMarkerCluster } from '~/components/blog/examples/LeafletMap.lazy'
+import type { MapImage } from '~/photographyUtils'
+
+import 'leaflet/dist/leaflet.css'
+
+const LazyPopup = lazy(async () => (await import('react-leaflet')).Popup)
+
+const PhotoMarker: FunctionalComponent<{ image: MapImage }> = ({ image }) => {
+  const map = useMap()
+
+  const [width, _setWidth] = useState(getImageWidth(image, map.getContainer()))
+
+  // Changes to width are unfortunately not picked up by react-leaflet when a popup is re-opened
+  // useEffect(() => {
+  //   const onResize = () => {
+  //     setWidth(getImageWidth(image, map.getContainer()))
+  //   }
+  //   map.addEventListener('resize', onResize)
+  //   return () => {
+  //     map.removeEventListener('resize', onResize)
+  //   }
+  // }, [map, image])
+
+  return (
+    <LazyMarker
+      position={image.location}
+      interactive
+      icon={icon({
+        iconUrl: image.thumbnail,
+        iconRetinaUrl: image.thumbnail,
+        iconSize: [40, 40],
+        iconAnchor: [20, 20],
+      })}
+    >
+      <LazyPopup minWidth={width} maxWidth={width} closeButton={false}>
+        <div
+          class="h-0 w-full"
+          style={{ paddingBottom: `${100 * (1 / image.aspectRatio)}%` }}
+        >
+          <img
+            src={image.src}
+            alt={image.alt}
+            draggable={false}
+            decoding="async"
+            class="select-none"
+            style="pointer-events: none !important;"
+          />
+        </div>
+      </LazyPopup>
+    </LazyMarker>
+  )
+}
+
+const PADDING_FACTOR = 0.8
+const MAX_SIZE = 1024
+
+function getImageWidth(image: MapImage, mapContainer: HTMLElement) {
+  const isVertical = image.aspectRatio < 1
+  const mapSize = mapContainer.getBoundingClientRect()
+  const maxWidth = Math.min(mapSize.width * PADDING_FACTOR, MAX_SIZE)
+  const maxHeight = image.aspectRatio * Math.min(mapSize.height * PADDING_FACTOR, MAX_SIZE)
+  if (maxWidth * image.aspectRatio > PADDING_FACTOR * mapSize.height) {
+    return maxHeight
+  }
+  if (isVertical && maxHeight / image.aspectRatio <= PADDING_FACTOR * mapSize.width) {
+    return maxHeight
+  }
+  return maxWidth
+}
+
+export const PhotographyMap: FunctionalComponent<
+  { images: MapImage[], bounds?: [[number, number], [number, number]] } & Omit<MapOptions, 'zoom'>
+> = ({ images, bounds, ...props }) => {
+  return (
+    <Suspense fallback={<></>}>
+      <MapContainer
+        className="photography-map relative isolate size-full transition-all"
+        scrollWheelZoom
+        bounds={bounds}
+        boundsOptions={{ padding: [5, 5] }}
+        maxZoom={18}
+        {...props}
+        {...props}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+        />
+        <Suspense fallback={<></>}>
+          <LazyMarkerCluster>
+            {images.map((image) => (
+              <PhotoMarker key={image.src} image={image} />
+            ))}
+          </LazyMarkerCluster>
+        </Suspense>
+      </MapContainer>
+    </Suspense>
+  )
+}

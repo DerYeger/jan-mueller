@@ -72,7 +72,7 @@ const LeafletMap: FunctionalComponent<
     <MapContainer
       className="card relative isolate h-[200px] w-full transition-all sm:h-[300px] md:h-[400px]"
       scrollWheelZoom={false}
-      maxZoo={18}
+      maxZoom={18}
       {...options}
     >
       <TileLayer
