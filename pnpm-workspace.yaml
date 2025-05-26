@@ -1,3 +1,4 @@
+packages: null
 onlyBuiltDependencies:
   - cypress
-packages:
+  - exifreader

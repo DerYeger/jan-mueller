@@ -35,6 +35,9 @@ importers:
       baklavajs:
         specifier: 2.6.0
         version: 2.6.0
+      exifreader:
+        specifier: 4.30.1
+        version: 4.30.1
       leaflet:
         specifier: 1.9.4
         version: 1.9.4
@@ -1794,6 +1797,10 @@ packages:
   '@vue/shared@3.5.14':
     resolution: {integrity: sha512-oXTwNxVfc9EtP1zzXAlSlgARLXNC84frFYkS0HHz0h3E4WZSP9sywqjqzGCP9Y34M8ipNmd380pVgmMuwELDyQ==}
 
+  '@xmldom/xmldom@0.9.8':
+    resolution: {integrity: sha512-p96FSY54r+WJ50FIOsCOjyj/wavs8921hG5+kVMmZgKcvIKxMXHTrjNJvRgWa/zuX3B6t2lijLNFaOyuxUH+2A==}
+    engines: {node: '>=14.6'}
+
   '@yeger/debounce@2.0.12':
     resolution: {integrity: sha512-codFun59TrOW9a9g80VDCOlRsP77+hb/DT4aXXxROpCbz2OrdMZAemkzM69c4RhwUG3pTkztiqNEbsSRqSuxBg==}
 
@@ -3237,6 +3244,9 @@ packages:
   executable@4.1.1:
     resolution: {integrity: sha512-8iA79xD3uAch729dUG8xaaBBFGaEa0wdD2VkYLFHwlqosEj/jT66AzcreRDSgV7ehnNLBW2WR5jIXwGKjVdTLg==}
     engines: {node: '>=4'}
+
+  exifreader@4.30.1:
+    resolution: {integrity: sha512-XoEKKQ0FmJwCKHnuErceFAM+MSfZ+px7Nci5BhBP1cgEHi/fHSBvQySsdfd0MaFHzNh8ITsRNwpnvkMuIPicrg==}
 
   extend@3.0.2:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
@@ -8690,6 +8700,9 @@ snapshots:
 
   '@vue/shared@3.5.14': {}
 
+  '@xmldom/xmldom@0.9.8':
+    optional: true
+
   '@yeger/debounce@2.0.12': {}
 
   '@yeger/eslint-config@2.6.0(@typescript-eslint/parser@8.22.0(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(@typescript-eslint/utils@8.23.0(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.14)(eslint-plugin-import-x@4.6.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2))(svelte-eslint-parser@0.43.0)(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.15.18)(typescript@5.8.3)))(ts-api-utils@2.0.1(typescript@5.8.3))(ts-node@10.9.2(@types/node@22.15.18)(typescript@5.8.3))(turbo@2.5.3)(typescript@5.8.3)':
@@ -10674,6 +10687,10 @@ snapshots:
   executable@4.1.1:
     dependencies:
       pify: 2.3.0
+
+  exifreader@4.30.1:
+    optionalDependencies:
+      '@xmldom/xmldom': 0.9.8
 
   extend@3.0.2: {}
 

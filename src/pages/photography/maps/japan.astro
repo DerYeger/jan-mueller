@@ -1,0 +1,15 @@
+---
+import { PhotographyMap } from '~/components/PhotographyMap'
+import MainLayout from '~/layouts/MainLayout.astro'
+import { photographyLinks } from '~/links'
+import { calculateBounds, calculateCenter, getMapImages } from '~/photographyUtils'
+
+const images = await getMapImages(import.meta.glob('/src/assets/photos/japan/*'))
+const locations = images.map((image) => image.location)
+const center = calculateCenter(locations)
+const bounds = calculateBounds(locations)
+---
+
+<MainLayout title="Photography" sublinks={photographyLinks} fitScreen>
+  <PhotographyMap client:only="preact" images={images} center={center} bounds={bounds} />
+</MainLayout>
