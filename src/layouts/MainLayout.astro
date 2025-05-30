@@ -31,6 +31,6 @@ const { title, description, image, sublinks, fitScreen = false } = Astro.props a
     <Main class={fitScreen ? 'grow' : ''}>
       <slot />
     </Main>
-    <Footer />
+    <Footer compact={fitScreen} />
   </body>
 </html>
