@@ -1,3 +1,16 @@
+# [3.59.0](https://github.com/DerYeger/jan-mueller/compare/v3.58.1...v3.59.0) (2025-05-30)
+
+
+### Features
+
+* add images ([11f4a41](https://github.com/DerYeger/jan-mueller/commit/11f4a41c323e6ec1e7a979165d37b839173446f4))
+* add images ([506a07b](https://github.com/DerYeger/jan-mueller/commit/506a07bb9a270f5bcc2ca419625fabc2114a11da))
+* add images ([08fb041](https://github.com/DerYeger/jan-mueller/commit/08fb04142eaa48bb59281aafbfcdaf9712480511))
+* add images ([eb9b626](https://github.com/DerYeger/jan-mueller/commit/eb9b6263d52e872dbb8a5be84a67b45b0f623226))
+* add images ([a0d55d0](https://github.com/DerYeger/jan-mueller/commit/a0d55d0b701becee0442c4c1c5b079dea41982ba))
+* implement compact footer ([851cb09](https://github.com/DerYeger/jan-mueller/commit/851cb09d69e78b35957a3b381bce0cdcef47ffe4))
+* implement photography map ([a3d9666](https://github.com/DerYeger/jan-mueller/commit/a3d9666435343aa0d91bba2ace1dbaf6424c60ac))
+
 ## [3.58.1](https://github.com/DerYeger/jan-mueller/compare/v3.58.0...v3.58.1) (2025-04-30)
 
 
