@@ -14,9 +14,8 @@ export interface GalleryImage extends BaseImage {
 }
 
 export async function getGalleryImages(globResult: GlobResult): Promise<GalleryImage[]> {
-  const rawImages = await getRawImages(globResult)
-  const sortedImages = rawImages.toSorted((a, b) => b.date.localeCompare(a.date)) // newest first
-  return Promise.all(sortedImages.map(async (rawImage, index) => {
+  const rawImages = (await getRawImages(globResult)).sort((a, b) => b.date.localeCompare(a.date)) // newest first
+  return Promise.all(rawImages.map(async (rawImage, index) => {
     const baseImage = await getBaseImage(rawImage)
     return {
       ...baseImage,
