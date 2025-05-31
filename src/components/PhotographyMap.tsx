@@ -63,15 +63,16 @@ const MAX_SIZE = 1024
 function getImageWidth(image: MapImage, mapContainer: HTMLElement) {
   const isVertical = image.aspectRatio < 1
   const mapSize = mapContainer.getBoundingClientRect()
-  const maxWidth = Math.min(mapSize.width * PADDING_FACTOR, MAX_SIZE)
-  const maxHeight = image.aspectRatio * Math.min(mapSize.height * PADDING_FACTOR, MAX_SIZE)
-  if (maxWidth * image.aspectRatio > PADDING_FACTOR * mapSize.height) {
-    return maxHeight
+  const maxWidth = mapSize.width * PADDING_FACTOR
+  const maxHeight = mapSize.height * PADDING_FACTOR
+  const maxWidthByHeight = maxHeight * image.aspectRatio
+  return Math.min(maxWidth, maxWidthByHeight, MAX_SIZE)
+  if (isVertical) {
+    const inferredWidth = maxHeight / image.aspectRatio
+    return Math.min(inferredWidth, maxWidth, MAX_SIZE)
   }
-  if (isVertical && maxHeight / image.aspectRatio <= PADDING_FACTOR * mapSize.width) {
-    return maxHeight
-  }
-  return maxWidth
+  const inferredWidth = maxWidth * image.aspectRatio
+  return Math.min(inferredWidth, maxWidth, MAX_SIZE)
 }
 
 export const PhotographyMap: FunctionalComponent<
