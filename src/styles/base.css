@@ -144,6 +144,9 @@ html {
 
 .photography-map .leaflet-popup-content {
   margin: 0px !important;
-  border-radius: 4px !important;
   overflow: hidden;
+}
+
+.photography-map .leaflet-popup-content img {
+  border-radius: 4px !important;
 }

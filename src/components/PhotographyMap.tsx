@@ -52,6 +52,17 @@ const PhotoMarker: FunctionalComponent<{ image: MapImage }> = ({ image }) => {
             style="pointer-events: none !important;"
           />
         </div>
+        <div className="mx-auto mt-1 flex max-w-sm justify-evenly gap-1 text-xs font-semibold [&>*]:flex [&>*]:grow [&>*]:justify-center">
+          <div>
+            {image.focalLength}
+          </div>
+          <div>
+            {`ƒ${image.aperture}`}
+          </div>
+          <div>
+            {`${image.shutterSpeed} s`}
+          </div>
+        </div>
       </LazyPopup>
     </LazyMarker>
   )
