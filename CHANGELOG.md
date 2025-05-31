@@ -1,3 +1,15 @@
+# [3.60.0](https://github.com/DerYeger/jan-mueller/compare/v3.59.0...v3.60.0) (2025-05-31)
+
+
+### Bug Fixes
+
+* improve image sizing ([86fc03c](https://github.com/DerYeger/jan-mueller/commit/86fc03cbe13c223076c5f4405ccded339fefb485))
+
+
+### Features
+
+* read more image metadata ([9484c74](https://github.com/DerYeger/jan-mueller/commit/9484c74ef0fbac26936921b096badb823f61e6cd))
+
 # [3.59.0](https://github.com/DerYeger/jan-mueller/compare/v3.58.1...v3.59.0) (2025-05-30)
 
 
