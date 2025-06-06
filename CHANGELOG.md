@@ -1,3 +1,10 @@
+## [3.60.2](https://github.com/DerYeger/jan-mueller/compare/v3.60.1...v3.60.2) (2025-06-06)
+
+
+### Bug Fixes
+
+* update cm2ml deployment url ([dfdd7aa](https://github.com/DerYeger/jan-mueller/commit/dfdd7aaf6c1c939a7d5f40e6558953db64efb838))
+
 ## [3.60.1](https://github.com/DerYeger/jan-mueller/compare/v3.60.0...v3.60.1) (2025-06-04)
 
 
