@@ -1,6 +1,4 @@
-/* eslint-disable import/order */
 import rss from '@astrojs/rss'
-
 import { getCollection } from 'astro:content'
 
 export async function GET(context) {
