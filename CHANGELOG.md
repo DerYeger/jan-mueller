@@ -1,3 +1,10 @@
+## [3.60.6](https://github.com/DerYeger/jan-mueller/compare/v3.60.5...v3.60.6) (2025-06-21)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#273](https://github.com/DerYeger/jan-mueller/issues/273)) ([fb2f4b6](https://github.com/DerYeger/jan-mueller/commit/fb2f4b67f1cd0485921527bebfdfccb67d1d3771))
+
 ## [3.60.5](https://github.com/DerYeger/jan-mueller/compare/v3.60.4...v3.60.5) (2025-06-14)
 
 
