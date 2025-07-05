@@ -9,5 +9,8 @@
     },
     "types": ["preact/jsx-runtime", "vite/client"],
     "skipLibCheck": true
+  },
+  "vueCompilerOptions": {
+    "strictTemplates": true
   }
 }

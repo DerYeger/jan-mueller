@@ -1,4 +1,6 @@
 packages: null
+
 onlyBuiltDependencies:
   - cypress
   - exifreader
+  - unrs-resolver

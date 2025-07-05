@@ -29,7 +29,7 @@
     "@iconify-json/ic": "1.2.2",
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/radix-icons": "1.2.2",
-    "@yeger/vue-masonry-wall": "5.0.20",
+    "@yeger/vue-masonry-wall": "5.0.21",
     "baklavajs": "2.7.0",
     "exifreader": "4.31.1",
     "leaflet": "1.9.4",
@@ -86,7 +86,7 @@
     "vite": "6.3.5",
     "vite-plugin-lib": "3.0.2",
     "vue": "3.5.17",
-    "vue-tsc": "2.2.10"
+    "vue-tsc": "3.0.1"
   },
   "lint-staged": {
     "*.{astro,cjs,html,js,jsx,json,md,mjs,mts,svelte,ts,tsx,vue,yaml,yml}": "eslint --fix"
