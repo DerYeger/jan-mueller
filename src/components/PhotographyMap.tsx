@@ -14,7 +14,7 @@ const LazyPopup = lazy(async () => (await import('react-leaflet')).Popup)
 const PhotoMarker: FunctionalComponent<{ image: MapImage }> = ({ image }) => {
   const map = useMap()
 
-  const [width, _setWidth] = useState(getImageWidth(image, map.getContainer()))
+  const [width, _setWidth] = useState(() => getImageWidth(image, map.getContainer()))
 
   // Changes to width are unfortunately not picked up by react-leaflet when a popup is re-opened
   // useEffect(() => {
@@ -72,18 +72,11 @@ const PADDING_FACTOR = 0.8
 const MAX_SIZE = 1024
 
 function getImageWidth(image: MapImage, mapContainer: HTMLElement) {
-  const isVertical = image.aspectRatio < 1
   const mapSize = mapContainer.getBoundingClientRect()
   const maxWidth = mapSize.width * PADDING_FACTOR
   const maxHeight = mapSize.height * PADDING_FACTOR
   const maxWidthByHeight = maxHeight * image.aspectRatio
   return Math.min(maxWidth, maxWidthByHeight, MAX_SIZE)
-  if (isVertical) {
-    const inferredWidth = maxHeight / image.aspectRatio
-    return Math.min(inferredWidth, maxWidth, MAX_SIZE)
-  }
-  const inferredWidth = maxWidth * image.aspectRatio
-  return Math.min(inferredWidth, maxWidth, MAX_SIZE)
 }
 
 export const PhotographyMap: FunctionalComponent<

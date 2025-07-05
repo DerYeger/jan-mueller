@@ -47,7 +47,6 @@
     "@astrojs/sitemap": "3.4.1",
     "@astrojs/tailwind": "6.0.2",
     "@astrojs/vue": "5.1.0",
-    "@babel/core": "7",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
     "@preact/preset-vite": "2.10.2",

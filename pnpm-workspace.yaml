@@ -2,5 +2,7 @@ packages: null
 
 onlyBuiltDependencies:
   - cypress
+  - esbuild
   - exifreader
+  - sharp
   - unrs-resolver

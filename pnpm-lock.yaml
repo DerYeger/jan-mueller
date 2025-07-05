@@ -78,9 +78,6 @@ importers:
       '@astrojs/vue':
         specifier: 5.1.0
         version: 5.1.0(@types/node@22.15.34)(astro@5.10.1(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(typescript@5.8.3)(yaml@2.8.0))(jiti@2.4.2)(rollup@4.44.1)(vue@3.5.17(typescript@5.8.3))(yaml@2.8.0)
-      '@babel/core':
-        specifier: '7'
-        version: 7.27.7
       '@commitlint/cli':
         specifier: 19.8.1
         version: 19.8.1(@types/node@22.15.34)(typescript@5.8.3)
