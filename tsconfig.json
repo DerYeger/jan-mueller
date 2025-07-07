@@ -11,6 +11,7 @@
     "skipLibCheck": true
   },
   "vueCompilerOptions": {
+    "strictCssModules": true,
     "strictTemplates": true
   }
 }
