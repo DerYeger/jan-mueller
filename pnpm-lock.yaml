@@ -86,7 +86,7 @@ importers:
         version: 19.8.1
       '@preact/preset-vite':
         specifier: 2.10.2
-        version: 2.10.2(@babel/core@7.27.7)(preact@10.26.9)(vite@6.3.5(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0))
+        version: 2.10.2(@babel/core@7.27.7)(preact@10.26.9)(vite@7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0))
       '@tailwindcss/typography':
         specifier: 0.5.16
         version: 0.5.16(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.16.3)(typescript@5.8.3)))
@@ -184,11 +184,11 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
       vite:
-        specifier: 6.3.5
-        version: 6.3.5(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)
+        specifier: 7.0.4
+        version: 7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)
       vite-plugin-lib:
         specifier: 3.0.2
-        version: 3.0.2(@types/node@22.16.3)(rollup@4.44.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0))
+        version: 3.0.2(@types/node@22.16.3)(rollup@4.44.2)(typescript@5.8.3)(vite@7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0))
       vue:
         specifier: 3.5.17
         version: 3.5.17(typescript@5.8.3)
@@ -3712,6 +3712,14 @@ packages:
       picomatch:
         optional: true
 
+  fdir@6.4.6:
+    resolution: {integrity: sha512-hiFoqpyZcfNm1yc4u8oWCf9A2c4D3QjCrks3zmoVKVxpQRzmPNar1hUJcBG2RQHvEVGDN+Jm81ZheVLAQMK6+w==}
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
+
   figures@3.2.0:
     resolution: {integrity: sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==}
     engines: {node: '>=8'}
@@ -6821,6 +6829,46 @@ packages:
       yaml:
         optional: true
 
+  vite@7.0.4:
+    resolution: {integrity: sha512-SkaSguuS7nnmV7mfJ8l81JGBFV7Gvzp8IzgE8A8t23+AxuNX61Q5H1Tpz5efduSN7NHC8nQXD3sKQKZAu5mNEA==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^20.19.0 || >=22.12.0
+      jiti: '>=1.21.0'
+      less: ^4.0.0
+      lightningcss: ^1.21.0
+      sass: ^1.70.0
+      sass-embedded: ^1.70.0
+      stylus: '>=0.54.8'
+      sugarss: ^5.0.0
+      terser: ^5.16.0
+      tsx: ^4.8.1
+      yaml: ^2.4.2
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      jiti:
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+      tsx:
+        optional: true
+      yaml:
+        optional: true
+
   vitefu@1.0.6:
     resolution: {integrity: sha512-+Rex1GlappUyNN6UfwbVZne/9cYC4+R2XDk9xkNXBKMw6HQagdX9PgZ8V2v1WUSK1wfBLp7qbI1+XSNIlB1xmA==}
     peerDependencies:
@@ -8532,7 +8580,7 @@ snapshots:
   '@napi-rs/wasm-runtime@0.2.11':
     dependencies:
       '@emnapi/core': 1.4.3
-      '@emnapi/runtime': 1.4.3
+      '@emnapi/runtime': 1.4.4
       '@tybys/wasm-util': 0.9.0
     optional: true
 
@@ -8583,6 +8631,22 @@ snapshots:
       - preact
       - supports-color
 
+  '@preact/preset-vite@2.10.2(@babel/core@7.27.7)(preact@10.26.9)(vite@7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0))':
+    dependencies:
+      '@babel/core': 7.27.7
+      '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.27.7)
+      '@babel/plugin-transform-react-jsx-development': 7.25.9(@babel/core@7.27.7)
+      '@prefresh/vite': 2.4.6(preact@10.26.9)(vite@7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0))
+      '@rollup/pluginutils': 4.2.1
+      babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.27.7)
+      debug: 4.4.1(supports-color@8.1.1)
+      picocolors: 1.1.1
+      vite: 7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)
+      vite-prerender-plugin: 0.5.5
+    transitivePeerDependencies:
+      - preact
+      - supports-color
+
   '@preact/signals-core@1.8.0': {}
 
   '@preact/signals@2.0.4(preact@10.26.9)':
@@ -8607,6 +8671,18 @@ snapshots:
       '@rollup/pluginutils': 4.2.1
       preact: 10.26.9
       vite: 6.3.5(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)
+    transitivePeerDependencies:
+      - supports-color
+
+  '@prefresh/vite@2.4.6(preact@10.26.9)(vite@7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0))':
+    dependencies:
+      '@babel/core': 7.27.7
+      '@prefresh/babel-plugin': 0.5.1
+      '@prefresh/core': 1.5.3(preact@10.26.9)
+      '@prefresh/utils': 1.2.0
+      '@rollup/pluginutils': 4.2.1
+      preact: 10.26.9
+      vite: 7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -11680,6 +11756,10 @@ snapshots:
       pend: 1.2.0
 
   fdir@6.4.4(picomatch@4.0.2):
+    optionalDependencies:
+      picomatch: 4.0.2
+
+  fdir@6.4.6(picomatch@4.0.2):
     optionalDependencies:
       picomatch: 4.0.2
 
@@ -15513,7 +15593,7 @@ snapshots:
     dependencies:
       vite: 6.3.5(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)
 
-  vite-plugin-dts@4.5.4(@types/node@22.16.3)(rollup@4.44.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)):
+  vite-plugin-dts@4.5.4(@types/node@22.16.3)(rollup@4.44.2)(typescript@5.8.3)(vite@7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)):
     dependencies:
       '@microsoft/api-extractor': 7.52.4(@types/node@22.16.3)
       '@rollup/pluginutils': 5.1.4(rollup@4.44.2)
@@ -15526,7 +15606,7 @@ snapshots:
       magic-string: 0.30.17
       typescript: 5.8.3
     optionalDependencies:
-      vite: 6.3.5(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)
+      vite: 7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)
     transitivePeerDependencies:
       - '@types/node'
       - rollup
@@ -15548,12 +15628,12 @@ snapshots:
       - rollup
       - supports-color
 
-  vite-plugin-lib@3.0.2(@types/node@22.16.3)(rollup@4.44.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)):
+  vite-plugin-lib@3.0.2(@types/node@22.16.3)(rollup@4.44.2)(typescript@5.8.3)(vite@7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)):
     dependencies:
       picocolors: 1.1.1
       typescript: 5.8.3
-      vite: 6.3.5(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)
-      vite-plugin-dts: 4.5.4(@types/node@22.16.3)(rollup@4.44.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0))
+      vite: 7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0)
+      vite-plugin-dts: 4.5.4(@types/node@22.16.3)(rollup@4.44.2)(typescript@5.8.3)(vite@7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0))
     transitivePeerDependencies:
       - '@types/node'
       - rollup
@@ -15606,6 +15686,20 @@ snapshots:
       postcss: 8.5.3
       rollup: 4.44.2
       tinyglobby: 0.2.13
+    optionalDependencies:
+      '@types/node': 22.16.3
+      fsevents: 2.3.3
+      jiti: 2.4.2
+      yaml: 2.8.0
+
+  vite@7.0.4(@types/node@22.16.3)(jiti@2.4.2)(yaml@2.8.0):
+    dependencies:
+      esbuild: 0.25.0
+      fdir: 6.4.6(picomatch@4.0.2)
+      picomatch: 4.0.2
+      postcss: 8.5.6
+      rollup: 4.44.2
+      tinyglobby: 0.2.14
     optionalDependencies:
       '@types/node': 22.16.3
       fsevents: 2.3.3
