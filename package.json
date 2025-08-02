@@ -32,6 +32,8 @@
     "@yeger/vue-masonry-wall": "5.0.22",
     "astro-expressive-code": "0.41.3",
     "baklavajs": "2.7.0",
+    "bidc": "0.0.2",
+    "comlink": "4.4.2",
     "exifreader": "4.31.1",
     "leaflet": "1.9.4",
     "react-leaflet": "4.2.1",
@@ -85,6 +87,7 @@
     "turbo": "2.5.6",
     "typescript": "5.9.2",
     "vite": "6.3.5",
+    "vite-plugin-comlink": "5.3.0",
     "vite-plugin-lib": "3.0.2",
     "vue": "3.5.19",
     "vue-tsc": "3.0.6"

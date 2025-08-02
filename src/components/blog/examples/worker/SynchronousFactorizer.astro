@@ -1,0 +1,17 @@
+---
+import Factorizer from '~/components/blog/examples/worker/Factorizer.astro'
+---
+
+<Factorizer id="no-worker" title="Synchronous Factorizer">
+  <script>
+    import { setupFactorizer } from '~/components/blog/examples/worker/setupFactorizer'
+    import { getPrimeFactors } from '~/components/blog/examples/worker/getPrimeFactors'
+
+    const { addClickHandler, onResult } = setupFactorizer('no-worker')
+
+    addClickHandler((input) => {
+      const result = getPrimeFactors(input)
+      onResult(result)
+    })
+  </script>
+</Factorizer>
