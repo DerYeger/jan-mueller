@@ -1,0 +1,17 @@
+---
+import Factorizer from '~/components/blog/examples/worker/Factorizer.astro';
+---
+
+<Factorizer id="comlink-worker" title="Comlink Worker Factorizer">
+  <script>
+    import { setupFactorizer } from '~/components/blog/examples/worker/setupFactorizer'
+
+    const worker = new ComlinkWorker<typeof import('./getPrimeFactors')>(new URL('./getPrimeFactors', import.meta.url))
+
+    const { addClickHandler, onResult } = setupFactorizer('comlink-worker')
+
+    addClickHandler((input) => {
+      worker.getPrimeFactors(input).then(onResult)
+    })
+  </script>
+</Factorizer>

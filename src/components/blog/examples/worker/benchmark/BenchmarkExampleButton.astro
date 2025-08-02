@@ -1,0 +1,40 @@
+---
+
+type Type = 'safe' | 'danger'
+
+interface Props {
+  size: number
+  text: string
+  compact?: boolean
+  type?: Type
+}
+
+const { size, text, compact, type = 'safe' } = Astro.props
+
+const classes: Record<Type, string> = {
+  safe: 'bg-green-500 text-white border-green-600 hover:bg-green-400',
+  danger: 'bg-red-500 text-white border-red-600 hover:bg-red-400',
+}
+---
+<button id={`benchmark-${size}`} type="button" class={`rounded border px-1 text-sm transition-colors ${classes[type]} ${compact ? '-mr-1' : ''}`}>{text}</button>
+<script is:inline define:vars={{ size }}>
+  const button = document.getElementById(`benchmark-${size}`)
+  button.addEventListener('click', () => {
+    const input = document.getElementById('benchmark-size-input')
+    if (!input) {
+      throw new Error(`Input element not found: benchmark-size-input`)
+    }
+    if (input.disabled) {
+      return
+    }
+    input.value = size
+    const submitButton = document.getElementById('benchmark-submit-button')
+    if (!submitButton) {
+      throw new Error(`Button element not found: benchmark-submit-button`)
+    }
+    if (submitButton.disabled) {
+      return
+    }
+    submitButton.click()
+  })
+</script>

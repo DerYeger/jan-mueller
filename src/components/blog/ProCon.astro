@@ -1,0 +1,72 @@
+---
+type Entry = [string, string] | string
+
+interface Props {
+  title?: string
+  pro: Entry[]
+  con: Entry[]
+}
+
+const { title, pro, con } = Astro.props
+
+const rowCount = Math.max(pro.length, con.length)
+
+function getEntryText(entry: Entry) {
+  if (Array.isArray(entry)) {
+    return entry[0]
+  }
+  return entry
+}
+
+function hasEntryLink(entry: Entry) {
+  if (Array.isArray(entry)) {
+    return !!entry[1]
+  }
+  return false
+}
+
+function getEntryLink(entry: Entry) {
+  if (Array.isArray(entry)) {
+    return entry[1]
+  }
+  return undefined
+}
+---
+
+<div class="ga-2 flex flex-col items-center">
+  {title ? <div class="font-semibold">{ title }</div> : null}
+  <table class="pro-cons">
+    <thead>
+      <tr>
+        <th>Pro</th>
+        <th>Con</th>
+      </tr>
+    </thead>
+    <tbody>
+      {Array.from({ length: rowCount }).map((_, index) => (
+        <tr>
+          <td class="w-1/2 text-green-700">
+            {pro[index] ? <span>
+              {getEntryText(pro[index])}
+              {hasEntryLink(pro[index]) ? (
+                <a href={getEntryLink(pro[index])} class="not-prose transition-colors hover:text-green-500">
+                  (read more)
+                </a>
+              ) : null}
+            </span> : null}
+          </td>
+          <td class="w-1/2 text-red-700">
+            {con[index] ? <span>
+              {getEntryText(con[index])}
+              {hasEntryLink(con[index]) ? (
+                <a href={getEntryLink(con[index])} class="not-prose transition-colors hover:text-red-500">
+                  (read more)
+                </a>
+              ) : null}
+            </span> : null}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

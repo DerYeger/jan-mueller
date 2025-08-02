@@ -1,0 +1,382 @@
+---
+title: Working wonders with web workers
+description: 'Exploring web workers in JavaScript and TypeScript — Different approaches and their trade-offs'
+heroImage: '/assets/blog/web.jpg'
+pubDate: 2026-01-01
+layout: '~/layouts/MarkdownLayout.astro'
+openGraphImage: 'https://og-image-deryeger.vercel.app/%23%23%20Working%20wonders%20with%20web%20workers.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fjan-mueller.at%2Fog-image.svg'
+---
+import FactorizerExampleButton from '~/components/blog/examples/worker/FactorizerExampleButton.astro'
+import BenchmarkExampleButton from '~/components/blog/examples/worker/benchmark/BenchmarkExampleButton.astro'
+import ProCon from '~/components/blog/ProCon.astro'
+
+## Introduction
+
+- What are web workers?
+- When should you use web workers?
+- How can you use web workers?
+
+In this post, I attempt to answer these questions based on interactive and real-world examples.
+While not providing a tutorial in the traditional sense, I will first introduce web workers with code examples and then present libraries that improve the developer experience around them.
+
+> Note: This blog post does not provide a comprehensive guide to web workers, but rather explores their use cases and practical implementations.
+> It does not cover the full API of web workers, but focuses on the most common use cases and patterns.
+> [SharedWorkers](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker) are also not covered.
+
+[Web workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) are a way to run JavaScript code in the background, separate from the main thread of a web application.
+This allows for parallel execution of tasks, which can improve performance and responsiveness.
+In particular computationally-expensive operations, that block the main thread for a long time and result in a frozen UI, can benefit from being offloaded to a web worker.
+
+To illustrate when web workers should be used, I'll use prime factorization (and a very inefficient implementation at that!) as my running example.
+First, lets quickly go over the implementation of the factorization algorithm itself:
+
+```ts
+export interface PrimeFactorsResult {
+  factors: number[]
+  time: number
+}
+
+export function getPrimeFactors(n: number): PrimeFactorsResult {
+  const start = performance.now()
+  const factors: number[] = []
+  for (let i = 2; i <= n; i++) {
+    while (n % i === 0) {
+      factors.push(i)
+      n /= i
+    }
+  }
+  const uniqueFactors = [...new Set(factors)]
+  const end = performance.now()
+  return { factors: uniqueFactors, time: end - start }
+}
+```
+
+As I said, it's neither efficient nor beautiful, but let's have a look at what happens when we run this code in the main thread of a web application.
+Below, you'll find an interactive factorizer, but you can also try some selected examples with the following buttons.
+You'll see that it works fine for <FactorizerExampleButton id="no-worker" value={42} text="small factors" /> and, although slower, for <FactorizerExampleButton id="no-worker" value={1000036000099} text="large factors" /> with no tangible effects on the UI's performance.
+However, if you're ready to deal with a frozen UI for around 40 seconds, you can try it out with <FactorizerExampleButton id="no-worker" value={100001000013699905017} text="very large factors" type="danger" compact />.
+Note that in neither case you'll see the loading animation of the result view due to the synchronous execution that blocks any updates on the main thread.
+
+import SynchronousFactorizer from '~/components/blog/examples/worker/SynchronousFactorizer.astro'
+
+<SynchronousFactorizer />
+
+Let's summarize the characteristics of our synchronous factorizer:
+
+<ProCon pro={["Simple functional call", "No libraries or bundler required"]} con={["Blocks main thread"]} />
+
+## Using web workers
+
+Now that we have a use case for web workers, let's see how we implement and use them.
+
+### Writing workers
+
+Web workers are JavaScript files that run in a separate thread.
+To create a worker, you need to write a JavaScript file that contains the code you want to run in the worker.
+These workers have a different global scope than the main thread, so you cannot access the DOM or any global variables defined in the main thread (e.g., `window`).
+However, you do have access to certain APIs, such as `fetch` and `XMLHttpRequest`, which can be used for making network requests.
+
+The [WorkerGlobalScope](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope)'s `onmessage` event handler receives messages from the main thread, while the worker can send messages back to the main thread via the `postMessage` function.
+Let's have a look how our factorization would look like in a worker:
+
+```ts
+onmessage = (e) => {
+  const input = e.data
+  if (typeof input !== 'number' || input <= 0) {
+    postMessage({ error: 'Invalid input' })
+    return
+  }
+  const workerResult = getPrimeFactors(input)
+  postMessage(workerResult)
+}
+
+function getPrimeFactors(n: number): PrimeFactorsResult {
+  // ...
+}
+```
+
+### Creating worker instances
+
+We'll start with the most basic approach for creating workers and enhance it step by step.
+Assuming we have a file called `worker.js` that contains our worker code, we can create a new worker like this:
+
+```ts
+const worker = new Worker('./worker.js')
+```
+
+Looks simple enough, but there are a few things to consider.
+First the path of the worker file is relative to the HTML page, which is not ideal in complex and large applications.
+Thankfully, there's an easy workaround available if you're using Vite (and some other bundlers):
+
+```ts
+const worker = new Worker(new URL('./worker.js', import.meta.url))
+```
+
+By using `new URL()` with `import.meta.url`, Vite will resolve the path to the worker file relative to the current module, which is much more reliable and works with code splitting.
+Additionally, this also allows us to write workers in TypeScript.
+
+We are still not quite done though.
+If you have any `import` statements in your worker file, you'll notice that it cannot be parsed.
+Fortunately, we have two workarounds available.
+For modern browsers, we can use the `type: 'module'` option when creating the worker.
+This allows us to use `import` statements in our worker file and treat it as any other module.
+
+```ts
+const worker = new Worker(new URL('./worker.ts', import.meta.url), { type: 'module' })
+```
+
+For older browsers, you can fall back to the [`importScripts`](https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts) function, which allows you to import scripts in the worker file.
+It's quite unfortunate that this approach is not as elegant as using modules, but it gets the job done.
+
+With Vite, we have one more option in the form of [query suffixes](https://v3.vitejs.dev/guide/features.html#import-with-query-suffixes).
+While the documentation recommends the approach from above, adding the `?worker` suffix to a worker import will result in a synthetic default export that is a worker constructor.
+
+```ts
+import MyWorker from './worker?worker'
+
+const worker = new MyWorker()
+```
+
+### Communication
+
+Communication with our previously created worker instance is handled by the `postMessage` function, for sending data, and `onmessage` callback, for receiving data.
+While similar to the communication handling on the worker's side, on the main thread we access both on the worker instance itself.
+
+```ts
+import MyWorker from './worker?worker'
+
+const worker = new MyWorker()
+
+worker.onmessage = (result) => {
+  console.log(result) // [2, 3, 7]
+}
+
+worker.postMessage(42)
+```
+
+> **Important:** Don't forget to terminate the worker with `worker.terminate()` once it is no longer used.
+
+For demonstration, the interactive prime factorization below uses such a worker to offload the computation to a background thread.
+
+import ManualWorkerFactorizer from '~/components/blog/examples/worker/ManualWorkerFactorizer.astro'
+
+<ManualWorkerFactorizer />
+
+This time, it's also safe to try out the <FactorizerExampleButton id="manual-worker" value={100001000013699905017} text="very large factors" type="danger"/> example, and the loading animation will properly be updated on the main thread.
+For completion, you can also try the <FactorizerExampleButton id="manual-worker" value={42} text="small factors" /> and <FactorizerExampleButton id="manual-worker" value={1000036000099} text="large factors" /> examples.
+
+<ProCon pro={["Main thread is not blocked", "No libraries or bundler required"]} con={["Increased complexity", "Separate worker file with specialized code", ["Reduced type safety", "#type-safety"], ["Limited data type support", "#support-for-complex-data-types"], ["Communication overhead", "#communication-overhead"]]}/>
+
+## Comlink workers
+
+While the above worker does the job, it requires boilerplate code on both the worker and main thread to handle the communication.
+As a result, we can't just call functions from a worker file directly.
+A workaround that maintains testability of implementations is having the function in a separate file that is imported in the worker's file.
+However, we can do better than that with [Comlink](https://github.com/GoogleChromeLabs/comlink), a lightweight wrapper for workers that hides the `postMessage` and `onmessage` communication and turns worker communication into `async` function calls through proxy objects.
+Comlink can be used as a standalone library, but here I'll present `vite-plugin-comlink`, a Vite plugin that simplifies the integration of Comlink with Vite projects.
+
+First, we have to add the plugin to both Vite's plugin list and the worker plugins:
+
+```ts
+import { defineConfig } from 'vite'
+import { comlink } from 'vite-plugin-comlink'
+
+export default defineConfig({
+  plugins: [comlink()],
+  worker: {
+    plugins: () => [comlink()],
+  }
+})
+```
+
+Afterward, a new class `ComlinkWorker` is globally available, which takes the worker's URL as an argument.
+However, we don't actually need to use a worker file here, but can provide the file containing the function implementation.
+Comlink returns a proxy object that allows us to call our function as if it were a regular function, but it will be executed in the worker thread.
+In addition, the function is now `async` since worker communication is not synchronous.
+A main benefit here is that a request and its response are clearly linked.
+
+```ts
+/// <reference types="vite-plugin-comlink/client" />
+const workerUrl = new URL('./getPrimeFactors', import.meta.url)
+const worker = new ComlinkWorker(workerUrl)
+
+worker.getPrimeFactors(42).then((factors) => {
+  console.log(factors) // [2, 3, 7]
+})
+```
+
+Here's the running example with <FactorizerExampleButton id="comlink-worker" value={42} text="small factors" compact />, <FactorizerExampleButton id="comlink-worker" value={1000036000099} text="large factors" compact />, and <FactorizerExampleButton id="comlink-worker" value={100001000013699905017} text="very large factors" type="danger" /> for completion.
+Note that there is no difference in the UI's performance, but the code is much cleaner and easier to read.
+
+import ComlinkWorkerFactorizer from '~/components/blog/examples/worker/ComlinkWorkerFactorizer.astro'
+
+<ComlinkWorkerFactorizer />
+
+<ProCon pro={["Main thread is not blocked", "Worker communication through async function calls", "No specialized worker file", ["Type safety (with exceptions)", "#type-safety"]]} con={["Increased complexity (but less than plain web workers)", ["Limited data type support", "#support-for-complex-data-types"], ["Communication overhead", "#communication-overhead"]]} />
+
+## `bidc` workers
+
+Since August 2025, we have a new option for improving web worker usage thanks to Vercel's [`bidc`](https://github.com/vercel/bidc).
+While this library deals with **bid**irectional **c**hannels in general, it can also be used with web workers.
+It provides a simple `send` and `receive` API, analogous to `postMessage` and `onmessage`, but with extended serialization support for complex data types.
+
+A web worker using `bidc` would look very similar to a regular web worker, but drops `postMessage` and `onmessage` in favor of `send` and `receive`.
+
+```ts
+import { createChannel } from 'bidc'
+import { getPrimeFactors } from './getPrimeFactors'
+
+const { send, receive } = createChannel()
+
+receive((input) => {
+  if (typeof input !== 'number' || input <= 0) {
+    send('Invalid input')
+    return
+  }
+  const workerResult = getPrimeFactors(input)
+  send(workerResult)
+})
+```
+
+On the main thread, a worker instance would have to be created as usual, and provided to `createChannel` as an argument.
+
+```ts
+import FactorizerWorker from './bidcWorker?worker'
+import { createChannel } from 'bidc'
+
+const worker = new FactorizerWorker()
+
+const { send, receive } = createChannel(worker)
+
+receive((result) => {
+  console.log(result) // [2, 3, 7]
+})
+
+send(42)
+```
+
+> **Important:** Don't forget to cleanup the channel with the returned `cleanup()` method once it is no longer used.
+
+> `bidc` also supports other event channels such as embedded iframes.
+
+One more time, here's the previous example with <FactorizerExampleButton id="bidc-worker" value={42} text="small factors" compact />, <FactorizerExampleButton id="bidc-worker" value={1000036000099} text="large factors" compact />, and <FactorizerExampleButton id="bidc-worker" value={100001000013699905017} text="very large factors" type="danger"/> again.
+Just like above, the UI's performance is not affected, but the code is cleaner and easier to read.
+
+import BIDCWorkerFactorizer from '~/components/blog/examples/worker/BIDCWorkerFactorizer.astro'
+
+<BIDCWorkerFactorizer />
+
+<ProCon pro={["Main thread is not blocked", "Extended support for complex data types", "Supports other channel types, e.g., iframes"]} con={["Increased complexity (but less than plain web workers)", "Separate worker file with specialized code", ["Large communication overhead", "#communication-overhead"]]} />
+
+## Comparison
+
+The following table provides an overview for the synchronous approach, plain web workers, Comlink workers, and `bidc` workers.
+It's my subjective opinion based on my findings during the implementation of this blog post's examples and previous experience with web workers.
+The reasons for the comparison results are detailed in the following sections.
+
+import Comparison from '~/components/blog/examples/worker/Comparison.astro'
+
+<Comparison />
+
+### Type safety
+
+Plain web workers have essentially no type safety.
+It is possible to annotate both `postMessage` and `onmessage` with TypeScript types, but they are not inferred and override an `any` type.
+Hence, TypeScript's algorithm will not detect any type errors if parameter and argument types do not match.
+
+With Comlink, the library is generally able to infer the correct types in most situations.
+All you have to do is provide the correct generic to `ComlinkWorker` as follows:
+
+```ts
+const worker = new ComlinkWorker<typeof import('./getPrimeFactors')>(new URL('./getPrimeFactors', import.meta.url))
+
+typeof worker.getPrimeFactors // (n: number) => Promise<PrimeFactorsResult>
+```
+
+However, a few limitations exist, where type casting is required and safety is lost.
+For example, generic function generally lose their type.
+E.g., `function test<T>(input: T): T { return input }` will be exposed as `function test(input: unknown): unknown` on the worker.
+
+While `bidc`'s documentation mentions "Easy to infer types for the RPC-style method calls", I was not yet able to find any examples or documentation for that feature.
+In my testing, the type safety of `bidc` was identical to that of plain web workers.
+
+### Support for complex data types
+
+Messages that are sent between the main thread and a worker must be support by the [structured clone algorithm](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone).
+This algorithm maintains the structure of complex data types and even resolves cyclic references.
+However, it does not support all data types.
+For example, classes, functions, and DOM nodes cannot be cloned.
+Because `structuredClone` is also extensively used by Comlink, both plain web workers and Comlink workers have the same [limitations](https://github.com/GoogleChromeLabs/comlink/blob/main/structured-clone-table.md).
+
+`bidc` on the other hand leverages the [`devalue`](https://github.com/sveltejs/devalue) library for serialization, which supports a wider range of data types.
+For example, with `bidc` it is possible to send functions, although they will be transformed to `async` functions.
+
+### Communication overhead
+
+To identify the overhead of the three worker types, I have provided an interactive benchmark.
+It uses three simple workers that receive and arbitrary input and return it to the sender.
+The main thread uses those worker via plain web workers, Comlink, and `bidc` to measure how much time exceeded between the workers invocation and the result being received.
+
+To simulate a actual overhead, this benchmark first creates an array of the specific size (using a worker to not block the main thread), and then sends it to each worker.
+The array is recreated each time and each test is executed in sequence, ensuring that the runs don't affect each other.
+You can also change the order of the workers to validate that it does not impact their performance.
+
+One way of improving the overhead of a worker call's structured cloning is to use [transferable objects](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
+Transferable objects are a special type of object that can be transferred between the main thread and a worker without being copied.
+This can significantly reduce the overhead of sending large amounts of data, but a transferred object is no longer available in the original thread.
+Both plain web workers and Comlink workers support transferable objects.
+
+Again, you can play around with different numbers or try <BenchmarkExampleButton size={42} text="small arrays" compact />, <BenchmarkExampleButton size={1000000} text="medium arrays" compact />, and <BenchmarkExampleButton size={10000000} text="very large arrays" type="danger" compact />.
+
+import WorkerBenchmark from '~/components/blog/examples/worker/benchmark/WorkerBenchmark.astro'
+
+<WorkerBenchmark />
+
+If you gave the benchmark a try, you'll notice that plain web workers and Comlink workers perform almost identically.
+With transferable objects, web workers have a huge advantage for large message data, while `bidc` generally performs worst.
+You'll also notice that the `bidc` run freezes the UI for a short time.
+This additional overhead is the result of `bidc`'s usage of `devalue` over `structuredClone`, which is necessary for supporting additional complex data types.
+
+## Bonus: Comlink workers with TanStack Query
+
+A personal favorite of mine is combining Comlink workers with [TanStack Query](https://tanstack.com/query/latest), which is also what I did in my thesis.
+With this combination, the `async` worker functions perfectly integrate with `useQuery` and `useMutation`, adding caching, deduplication, and the other amazing features of TanStack Query to our worker calls.
+
+For example, in my master's thesis I used a web worker to compute an optimized tree layout for a graph that minimizes edge crossings.
+Handling that computation in a web worker allowed the main thread to remain responsive, even for large graphs with hundreds of nodes.
+You can see the result [here](https://cm2ml.yeger.eu/#H4sIAAAAAAAAE61W73PaOBD9Vxh_BkwozFGGu47DQeMrDiSBJpnSyQh7MUpkyZVkfuSm__utAYMBO016-Wavdt_b91aW_M1ofVoGrDAHqajgf46Ns3JlbBSAu8Kj3MfAaNgtNcbGp7_GvBUFrOkID1hhGdDmvqhaOftwVqmcYSWicdXEZQzPtA6bprlYLMoi8MtC-qYKwTXvHNs8KUHswxJwGQ0VrMtwsWrWy5VyxRw5vXUNbVIPCx4Gw25dubV-B6qXi3Aprh_VpX2FKZwEgAkhcZ-ID2MDBRQKre2r12EQANdrIL0K48xY3SDJTjFcfb4v1Zx8BisM8WV0beOzK4IyLEkQMiiTOL5mRV7Y8NlBKKROgdetyB8NeAnBVeDU68_RxWi2QDzCKFEb9B6JuDsDiVG6rt-1HyP4UaPkZyHMqaITyqhexTZIOicahZlJR1snTjqKzu-etnJvp5Pwuf-HbpSsFPfWozj3-r4-FxnWHJPk2d1mRKkDs7_ILqhphpqt2Q6hPMFvmUfwvz3iPB0Ja49OMkfM4viRVgekDynsqt09rw3urxG7_9H2wHr48nkVYwdxYtrNp8d228lw_tjNY4bana9fx8D-CW4ar2B4_bxyd1_i3G7vvvfM8txKmEeaMnUynTyGvyEE7uG5tzogqX-cfxhlkeDhtP3-cvtQURhillyPqHPh5o_2_UzJG_BuHMKn7okpJ2fAj6lduXrlGZCr_6Xz5_0U5zmbKL7RXi_jK30LhRNE1acBf8jb423BGLga78L9fnvhyPf9ErUGwjqByzjcvYvHuZ2Ra-5p3vzJDha39cYLciwpyapHlf5_NKPajyv_BZoNQ4Eqa6K0JG6sV8sofUVlbpJf95I1w_5jpT96oRuH6Fl6eG-WmzephMDm-lfKsqItc_fThW9GMWY3iv8aHkwi32hOCVNQNNBA6mqjGftXNARnq7bgGq_KGMVSSriUrPfnrkIC20Rm-JNlqY7nw36RI93tjGpgOCOj-e37JnTOsL19CLDmKCsOHWURjb1NIn2cuosf5UvCPRHQZ_BsbyBhSpcHbQ2Jbykrqd0txcQ5SxGn09UQR5fo-1nEfQYQuyjJogtERzIlPnavE___gneyhvltPMV8Ielh9FwIBoQfxC4jvH-pexC7we64f-j0nsUwNkoOI1MhA4LuGEy4BIePswvRM7jEWtvbY-H_-ESopPgrYVGqRxf3A-UR9HlHSiF38YWQnhqKNA71bjSR2sbrEL2v_Pz-Hx0Igp4mDAAA) or reference the code below.
+
+```ts
+import type { Id2WordMapping, RecursiveTreeNode, TreeModel, TreeNodeValue } from '@cm2ml/builtin'
+import { useQuery } from '@tanstack/react-query'
+
+type TreeWorker = typeof import('./treeEncodingTreeWorker')
+
+const worker = new ComlinkWorker<TreeWorker>(new URL('./treeEncodingTreeWorker', import.meta.url))
+
+export function useTreeEncodingTree(tree: TreeModel<RecursiveTreeNode>, idWordMapping: Id2WordMapping, staticVocabulary: TreeNodeValue[]) {
+  return useQuery({
+    queryKey: ['tree', tree, idWordMapping, staticVocabulary],
+    queryFn: () => worker.createFlowGraphFromTree(tree, idWordMapping, staticVocabulary)
+  })
+}
+```
+
+
+## Conclusion
+
+Web workers are a powerful tool for improving the performance and responsiveness of web applications.
+They enable an execution of computationally intensive without negative impacts on UI performance.
+This extends the capabilities of web applications by allowing them to handle more complex tasks, such as PDF merging, image processing, or data analysis.
+Vite's query suffixes remove a lot of boilerplate code for setting up web workers and improves DX massively.
+Comlink makes it easy to use web workers and removes the mental overhead that is usually required by their communication model.
+`bidc` extends the capabilities by supporting additional data types in messages, at the cost of additional performance overhead for sending data.
+
+Web workers can *and should** be used more often than one might think.
+While overkill for a singular API call, any client-side computations that are heavy enough to freeze the user interface can benefit from being moved to a web worker.
+
+In most cases, I would recommend using Comlink workers due to their type safety and ease of use.
+Hiding the underlying worker through the proxy object reduces complexity and thus maintainability in my eyes.
+
+For long lived workers with small message payloads that do not fit Comlink's approach, I'd personally use `bidc` due to the extended support for complex data types.
+In all other scenarios, Comlink is my go-to choice.

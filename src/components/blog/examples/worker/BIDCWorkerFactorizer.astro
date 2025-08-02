@@ -1,0 +1,30 @@
+---
+import Factorizer from '~/components/blog/examples/worker/Factorizer.astro';
+---
+
+<Factorizer id="bidc-worker" title="bidc Worker Factorizer">
+  <script>
+    import { setupFactorizer } from '~/components/blog/examples/worker/setupFactorizer'
+    import FactorizerWorker from './bidcWorker?worker'
+    import { createChannel } from 'bidc'
+    import type { PrimeFactorsResult } from '~/components/blog/examples/worker/getPrimeFactors'
+
+    const worker = new FactorizerWorker()
+
+    const { addClickHandler, onResult, result } = setupFactorizer('bidc-worker')
+
+    const { send, receive } = createChannel(worker)
+
+    addClickHandler((input) => {
+      send(input)
+    })
+
+    receive((data) => {
+      if (typeof data === 'string') {
+        result.textContent = `Error: ${data}`
+      } else {
+        onResult(data as unknown as PrimeFactorsResult)
+      }
+    })
+  </script>
+</Factorizer>

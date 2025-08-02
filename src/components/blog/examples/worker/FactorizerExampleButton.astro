@@ -1,0 +1,41 @@
+---
+
+type Type = 'safe' | 'danger'
+
+interface Props {
+  id: string
+  value: number
+  text: string
+  compact?: boolean
+  type?: Type
+}
+
+const { id, value, text, compact, type = 'safe' } = Astro.props
+
+const classes: Record<Type, string> = {
+  safe: 'bg-green-500 text-white border-green-600 hover:bg-green-400',
+  danger: 'bg-red-500 text-white border-red-600 hover:bg-red-400',
+}
+---
+<button id={`factorize-${id}-${value}`} type="button" class={`rounded border px-1 text-sm transition-colors ${classes[type]} ${compact ? '-mr-1' : ''}`}>{text}</button>
+<script is:inline define:vars={{ id, value }}>
+  const button = document.getElementById(`factorize-${id}-${value}`)
+  button.addEventListener('click', () => {
+    const input = document.getElementById(`${id}-input`)
+    if (!input) {
+      throw new Error(`Input element not found: ${id}-input`)
+    }
+    if (input.disabled) {
+      return
+    }
+    input.value = value
+    const submitButton = document.getElementById(`${id}-button`)
+    if (!submitButton) {
+      throw new Error(`Button element not found: ${id}-button`)
+    }
+    if (submitButton.disabled) {
+      return
+    }
+    submitButton.click()
+  })
+</script>
