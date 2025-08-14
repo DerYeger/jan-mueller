@@ -1,0 +1,26 @@
+---
+import Factorizer from '~/components/blog/examples/worker/Factorizer.astro';
+---
+
+<Factorizer id="manual-worker" title="Worker Factorizer">
+  <script>
+    import { setupFactorizer } from '~/components/blog/examples/worker/setupFactorizer'
+    import FactorizerWorker from './worker?worker'
+
+    const worker = new FactorizerWorker()
+
+    const { addClickHandler, onResult, result } = setupFactorizer('manual-worker')
+
+    addClickHandler((input) => {
+      worker.postMessage(input)
+    })
+
+    worker.onmessage = (e) => {
+      if (e.data.error) {
+        result.textContent = `Error: ${e.data.error}`
+      } else {
+        onResult(e.data)
+      }
+    }
+  </script>
+</Factorizer>

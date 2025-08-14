@@ -1,0 +1,215 @@
+<div class="flex flex-col gap-2 rounded border border-neutral-300 p-2">
+  <div class="font-bold">Worker Benchmark</div>
+  <div class="flex flex-wrap gap-2">
+    <input type="number" id="benchmark-size-input" placeholder="Array size" class="grow rounded border border-neutral-300 px-2 py-1 text-sm" />
+    <div class="flex items-center gap-1 text-sm">
+      <input type="checkbox" id="benchmark-reversed-checkbox" class="rounded border border-neutral-300 px-2 py-1" />
+      Reverse
+    </div>
+    <button id="benchmark-submit-button" type="button" class="rounded border border-neutral-300 bg-neutral-50 px-2 text-sm transition-colors hover:bg-neutral-300 disabled:cursor-default disabled:bg-neutral-200 disabled:hover:bg-neutral-200">Run</button>
+  </div>
+  <table class="m-0 mt-4">
+    <thead>
+      <tr>
+        <th>Worker</th>
+        <th>Time (ms)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="w-2/3">Web Worker</td>
+        <td id="web-worker-time" class="w-1/3">-</td>
+      </tr>
+      <tr>
+        <td class="w-2/3">Web Worker (transferred)</td>
+        <td id="web-worker-transfer-time" class="w-1/3">-</td>
+      </tr>
+      <tr>
+        <td class="w-2/3">Comlink Worker</td>
+        <td id="comlink-worker-time" class="w-1/3">-</td>
+      </tr>
+      <tr>
+        <td class="w-2/3">Comlink Worker (transferred)</td>
+        <td id="comlink-worker-transfer-time" class="w-1/3">-</td>
+      </tr>
+      <tr>
+        <td class="w-2/3"><code>bidc</code> Worker</td>
+        <td id="bidc-worker-time" class="w-1/3">-</td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    import { createChannel } from "bidc"
+    import { transfer } from "comlink"
+
+    const sizeInput = document.getElementById('benchmark-size-input')! as HTMLInputElement
+    const reversedCheckbox = document.getElementById('benchmark-reversed-checkbox')! as HTMLInputElement
+    const submitButton = document.getElementById('benchmark-submit-button')! as HTMLButtonElement
+
+    sizeInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        submitButton.click()
+      }
+    })
+
+    function disableInputs() {
+      sizeInput.disabled = true
+      reversedCheckbox.disabled = true
+      submitButton.disabled = true
+    }
+
+    function enableInputs() {
+      sizeInput.disabled = false
+      reversedCheckbox.disabled = false
+      submitButton.disabled = false
+    }
+
+    const arrayBuilder = new ComlinkWorker<typeof import('./arrayBuilder.ts')>(new URL('./arrayBuilder.ts', import.meta.url))
+
+    const worker = new Worker(new URL('./worker.ts', import.meta.url))
+    const workerTransferred = new Worker(new URL('./workerTransferred.ts', import.meta.url))
+    const comlinkWorker = new ComlinkWorker<typeof import('./comlinkWorker.ts')>(new URL('./comlinkWorker.ts', import.meta.url))
+    const comlinkWorkerTransferred = new ComlinkWorker<typeof import('./comlinkWorkerTransferred.ts')>(new URL('./comlinkWorkerTransferred.ts', import.meta.url))
+    const bidcWorker = new Worker(new URL('./bidcWorker.ts', import.meta.url), { type: 'module'})
+
+    const bidcChannel = createChannel(bidcWorker)
+
+    const workerToCell = {
+      'web-worker': document.getElementById('web-worker-time')!,
+      'web-worker-transfer': document.getElementById('web-worker-transfer-time')!,
+      'comlink-worker': document.getElementById('comlink-worker-time')!,
+      'comlink-worker-transfer': document.getElementById('comlink-worker-transfer-time')!,
+      'bidc-worker': document.getElementById('bidc-worker-time')!,
+    } as const
+
+    type WorkerId = keyof typeof workerToCell
+
+    const workerIds = Object.keys(workerToCell) as WorkerId[]
+
+    const workerLoadingAnimationTimeouts: Record<WorkerId, ReturnType<typeof setTimeout> | undefined> = {
+      'web-worker': undefined,
+      'web-worker-transfer': undefined,
+      'comlink-worker': undefined,
+      'comlink-worker-transfer': undefined,
+      'bidc-worker': undefined
+    }
+
+    const workerCalls: Record<WorkerId, (data: number[]) => Promise<void>> = {
+      'web-worker': (data) => {
+        worker.postMessage({ start: performance.now(), data, size: data.length })
+        return Promise.resolve()
+      },
+      'web-worker-transfer': (data) => {
+        const start = performance.now()
+        const buffer = new ArrayBuffer(data.length * 4)
+        const view = new Float32Array(buffer)
+        for (let i = 0; i < data.length; i++) {
+          view[i] = data[i]
+        }
+        workerTransferred.postMessage({ start, data: buffer, size: data.length }, [buffer])
+        return Promise.resolve()
+      },
+      'comlink-worker': async (data) => {
+        const result: { start: number, size: number } = await comlinkWorker.identity({ start: performance.now(), data, size: data.length })
+        showResult('comlink-worker', result.start, result.size)
+      },
+      'comlink-worker-transfer': async (data) => {
+        const start = performance.now()
+        const buffer = new ArrayBuffer(data.length * 4)
+        const view = new Float32Array(buffer)
+        for (let i = 0; i < data.length; i++) {
+          view[i] = data[i]
+        }
+        const result: { start: number, size: number } = await comlinkWorkerTransferred.identity(transfer({ start, data: buffer, size: data.length }, [buffer]))
+        showResult('comlink-worker-transfer', result.start, result.size)
+      },
+      'bidc-worker': (data) => bidcChannel.send({ start: performance.now(), data, size: data.length })
+
+    }
+
+    function getNextWorker(currentWorker: WorkerId | undefined): WorkerId | undefined {
+      const orderedWorkerIds = reversedCheckbox.checked ? workerIds.toReversed() : workerIds
+      if (!currentWorker) {
+        return orderedWorkerIds[0]
+      }
+      return orderedWorkerIds[orderedWorkerIds.indexOf(currentWorker) + 1]
+    }
+
+    async function startWorker(id: WorkerId, size: number) {
+      clearResult(id)
+      const data = await arrayBuilder.buildArray(size)
+      updateLoadingIndicator(id)
+      workerCalls[id](data)
+    }
+
+    worker.onmessage = (event) => {
+      showResult('web-worker', event.data.start, event.data.size)
+    }
+
+    workerTransferred.onmessage = (event) => {
+      showResult('web-worker-transfer', event.data.start, event.data.size)
+    }
+
+    bidcChannel.receive((data: { start: number, size: number }) => {
+      showResult('bidc-worker', data.start, data.size)
+    })
+
+    function updateLoadingIndicator(id: WorkerId, step: number = 0) {
+      const loadingIndicatorTimeout = workerLoadingAnimationTimeouts[id]
+      if (loadingIndicatorTimeout) {
+        clearTimeout(loadingIndicatorTimeout)
+      }
+      workerLoadingAnimationTimeouts[id] = setTimeout(() => {
+        workerToCell[id]!.textContent = '.'.repeat(step % 3 + 1)
+        updateLoadingIndicator(id, step + 1)
+      }, 300)
+    }
+
+    function showResult(id: WorkerId, start: number, size: number) {
+      if (workerLoadingAnimationTimeouts[id]) {
+        clearTimeout(workerLoadingAnimationTimeouts[id])
+        workerLoadingAnimationTimeouts[id] = undefined
+      }
+      const result = performance.now() - start
+      workerToCell[id]!.textContent = result.toFixed(0) + ' ms'
+      const nextWorker = getNextWorker(id)
+      if (nextWorker) {
+        startWorker(nextWorker, size)
+      } else {
+        enableInputs()
+      }
+    }
+
+    function clearResult(id: WorkerId) {
+      workerToCell[id]!.textContent = '-'
+    }
+
+    if (!sizeInput || !submitButton) {
+      throw new Error('Input or button element not found')
+    }
+
+    submitButton.addEventListener('click', async () => {
+      if (submitButton.disabled) {
+        return
+      }
+      const size = parseInt(sizeInput.value)
+      if (size > 10000000) {
+        alert('Input is too large, please enter a smaller number.')
+        return
+      }
+
+      if (isNaN(size) || size <= 0) {
+        alert('Please enter a valid positive integer.')
+        return
+      }
+
+      disableInputs()
+
+      workerIds.forEach((id) => {
+        clearResult(id)
+      })
+
+      startWorker(getNextWorker(undefined)!, size)
+    })
+  </script>
+</div>
