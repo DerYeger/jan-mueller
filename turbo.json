@@ -41,6 +41,19 @@
       ],
       "outputs": []
     },
+    "e2e": {
+      "dependsOn": [
+        "build"
+      ],
+      "inputs": [
+        "playwright.config.ts",
+        "tests"
+      ],
+      "outputs": [
+        "playwright-report",
+        "test-results"
+      ]
+    },
     "lint": {
       "dependsOn": [
         "sync"

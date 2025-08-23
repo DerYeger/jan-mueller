@@ -9,7 +9,7 @@ export interface Props {
 const { experience } = Astro.props as Props
 ---
 
-<div class="lh-6 flex flex-col">
+<div class="lh-6 flex flex-col" data-testid={experience.name}>
   {
     experience.href && (
       <a href={experience.href} rel="noreferrer" target="_blank" class="w-fit font-bold">

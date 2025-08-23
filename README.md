@@ -28,9 +28,9 @@
 - Astro, Vue and Preact
 - Tailwind
 - MDX
-- E2E testing with [Cypress](https://www.cypress.io/)
+- E2E testing with [Playwright](https://playwright.dev/)
 - Automated CI/CD pipeline using GitHub Actions
-- Hosted by GitHub Pages at [jan-mueller.at](https://jan-mueller.at)
+- Hosted on Vercel at [jan-mueller.at](https://jan-mueller.at)
 
 ## Build Setup
 

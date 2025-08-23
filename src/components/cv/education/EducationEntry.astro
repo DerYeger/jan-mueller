@@ -9,7 +9,7 @@ export interface Props {
 const { education } = Astro.props as Props
 ---
 
-<div class="lh-6 flex flex-col">
+<div class="lh-6 flex flex-col" data-testid={education.name}>
   <span class="font-semibold text-black">{education.name}</span>
   <span>
     {education.institution}, {education.grade}

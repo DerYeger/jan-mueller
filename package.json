@@ -10,16 +10,16 @@
     "check:astro": "astro check",
     "check:tsc": "tsc --noEmit",
     "check:vue": "vue-tsc --noEmit",
-    "ci": "pnpm turbo build check lint",
+    "ci": "pnpm turbo build check e2e lint",
     "dev": "astro dev",
+    "e2e": "playwright test",
     "fix": "pnpm lint --fix ",
     "lint": "yeger-lint",
+    "postinstall": "playwright install",
     "prepare": "is-ci || husky",
     "preview": "astro preview",
     "sync": "astro sync",
-    "test:e2e": "cypress open",
-    "test:e2e:run": "cypress run",
-    "turbo": "FORCE_COLOR=1 turbo"
+    "turbo": "CI=true FORCE_COLOR=1 turbo"
   },
   "dependencies": {
     "@changey/react-leaflet-markercluster": "4.0.0-rc1",
@@ -39,6 +39,7 @@
     "vue-marmoset-viewer": "4.0.18"
   },
   "devDependencies": {
+    "@antfu/ni": "25.0.0",
     "@astrojs/check": "0.9.4",
     "@astrojs/mdx": "4.3.4",
     "@astrojs/preact": "4.1.0",
@@ -49,6 +50,7 @@
     "@astrojs/vue": "5.1.0",
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
+    "@playwright/test": "1.55.0",
     "@preact/preset-vite": "2.10.2",
     "@tailwindcss/typography": "0.5.16",
     "@types/html-escaper": "3.0.4",
@@ -62,7 +64,6 @@
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "5.1.0",
     "canvaskit-wasm": "0.40.0",
-    "cypress": "14.5.4",
     "eslint": "9.34.0",
     "hast-util-to-string": "3.0.1",
     "hastscript": "9.0.1",

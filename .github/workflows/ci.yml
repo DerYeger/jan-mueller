@@ -16,28 +16,6 @@ jobs:
           node-version-file: .node-version
       - name: Build, check, and lint
         run: pnpm run ci
-      - name: Install cypress
-        run: pnpm dlx cypress install
-      - name: Test
-        uses: cypress-io/github-action@v4
-        with:
-          install: false
-          start: pnpm preview
-          browser: chrome
-          record: false
-          config: video=true
-      - name: Upload Screenshots
-        uses: actions/upload-artifact@v4
-        if: failure()
-        with:
-          name: cypress-screenshots-chrome
-          path: cypress/screenshots
-      - name: Upload Videos
-        uses: actions/upload-artifact@v4
-        if: failure()
-        with:
-          name: cypress-videos-chrome
-          path: cypress/videos
   release:
     name: Release
     runs-on: ubuntu-latest

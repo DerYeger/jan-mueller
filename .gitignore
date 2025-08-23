@@ -1,10 +1,14 @@
 .DS_Store
 *.local
-cypress/screenshots
-cypress/videos
 dist
 node_modules
 .astro
 .idea/
 *.log
 .turbo/*
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

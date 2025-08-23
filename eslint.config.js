@@ -7,7 +7,6 @@ export default yeger(
   {
     rules: {
       'antfu/no-top-level-await': 'off',
-      'cypress/no-async-tests': 'off',
     },
   },
 )
