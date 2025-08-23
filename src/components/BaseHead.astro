@@ -13,16 +13,14 @@ export interface Props {
   image?: string | undefined
 }
 
-const { title, description, image } = Astro.props as Props
+const { title, description, image = '/open-graph/default.png' } = Astro.props as Props
 
 const finalTitle = title ? `${title} – Jan Müller` : 'Jan Müller'
 const finalDescription =
   description ??
   'Personal website of Jan Müller, a passionate software engineer.'
-const finalImage = new URL(
-  image ??
-    'https://og-image-deryeger.vercel.app/**Jan%20M%C3%BCller**.png?theme=dark&md=1&fontSize=225px&images=https%3A%2F%2Fjan-mueller.at%2Fog-image-light.svg',
-)
+
+const imageURL = new URL(`${image}`, Astro.site)
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 ---
 
@@ -69,7 +67,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={finalTitle} />
 <meta property="og:description" content={finalDescription} />
-<meta property="og:image" content={finalImage} />
+<meta property="og:image" content={imageURL} />
 
 <!-- Twitter -->
 <meta property="twitter:creator" content="@DerYeger" />
@@ -77,6 +75,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={finalTitle} />
 <meta property="twitter:description" content={finalDescription} />
-<meta property="twitter:image" content={finalImage} />
+<meta property="twitter:image" content={imageURL} />
 
 <Schema item={LinkedData} />
