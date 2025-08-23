@@ -6,7 +6,7 @@ import tailwind from '@astrojs/tailwind'
 import vue from '@astrojs/vue'
 import vitePreact from '@preact/preset-vite'
 import { defineConfig } from 'astro/config'
-import critters from 'astro-critters'
+import expressiveCode from 'astro-expressive-code'
 import icon from 'astro-icon'
 import robotsTxt from 'astro-robots-txt'
 import autolinkHeadings from 'rehype-autolink-headings'
@@ -28,21 +28,22 @@ export default defineConfig({
   },
   integrations: [
     icon(),
+    expressiveCode({
+      themes: ['gruvbox-dark-medium'],
+    }),
     mdx({
-      extendMarkdownConfig: true,
-    }),
+        extendMarkdownConfig: true,
+      }),
     tailwind({
-      applyBaseStyles: false,
-    }),
+        applyBaseStyles: false,
+      }),
     vue(),
     preact({
-      compat: true,
-    }),
+        compat: true,
+      }),
     prefetch(),
     sitemap(),
     robotsTxt(),
-    // Critters is disabled because it doesn't support some selectors used by Tailwind
-    critters({ Critters: false && { pruneSource: true } }),
   ],
   vite: {
     plugins: [vitePreact(), tsconfigPaths({ verbose: true })],
@@ -61,8 +62,5 @@ export default defineConfig({
         },
       ],
     ],
-    shikiConfig: {
-      theme: 'monokai',
-    },
   },
 })
