@@ -26,6 +26,10 @@ const BLOG_POSTS: BlogPostData[] = [
     slug: 'vue-masonry-wall',
     title: 'Masonry layout for Vue 2 and Vue 3',
   },
+  {
+    slug: 'web-components',
+    title: 'Working wonders with web workers',
+  },
 ]
 
 test.describe('Posts', () => {
