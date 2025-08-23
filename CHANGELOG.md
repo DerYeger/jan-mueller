@@ -1,3 +1,12 @@
+# [3.63.0](https://github.com/DerYeger/jan-mueller/compare/v3.62.0...v3.63.0) (2025-08-23)
+
+
+### Features
+
+* create blog post ([5ccacc4](https://github.com/DerYeger/jan-mueller/commit/5ccacc42e53e73d0eddd0e7e9e2cced33d95fa7f))
+* minor rewording ([149541f](https://github.com/DerYeger/jan-mueller/commit/149541f88cb6be2254b18d9cc351fe9623a9dba3))
+* use `astro-expressive-code` for code blocks ([f591ee1](https://github.com/DerYeger/jan-mueller/commit/f591ee103f4576a70ac935b4a7329eefaa803e8e))
+
 # [3.62.0](https://github.com/DerYeger/jan-mueller/compare/v3.61.0...v3.62.0) (2025-08-23)
 
 
