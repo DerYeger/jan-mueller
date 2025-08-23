@@ -1,0 +1,18 @@
+---
+import DateRange from '~/components/date/DateRange.astro'
+import type { ExperienceRole } from '~/types'
+
+interface Props {
+  role: ExperienceRole
+}
+
+const { role } = Astro.props
+---
+
+<div class="font-medium">
+  {role.title}
+</div>
+{role.description ? <div>{role.description}</div> : null}
+<div class="text-lighter">
+  <DateRange startDate={role.startDate} endDate={role.endDate} />
+</div>

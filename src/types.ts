@@ -13,11 +13,16 @@ export interface Education {
   grade: string
 }
 
-export interface Experience {
-  name: string
-  description: string
+export interface ExperienceRole {
+  title: string
+  description?: string
   startDate: string
   endDate?: string
+}
+
+export interface Experience {
+  name: string
+  roles: ExperienceRole[]
   href?: string
 }
 

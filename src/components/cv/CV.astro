@@ -6,10 +6,12 @@ import Experience from '~/components/cv/experience/Experience.astro'
 
 <section class="my-32 px-4">
   <div
-    class="mx-auto flex max-w-3xl flex-col items-start gap-16 children:w-full children:flex-1 md:flex-row md:gap-8 2xl:max-w-7xl"
+    class="mx-auto flex max-w-3xl flex-col items-start gap-16 children:w-full children:flex-1 md:flex-row 2xl:max-w-7xl"
   >
     <Experience />
-    <Education />
-    <Awards />
+    <div class="flex flex-col gap-16">
+      <Education />
+      <Awards />
+    </div>
   </div>
 </section>

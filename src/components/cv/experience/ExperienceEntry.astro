@@ -1,5 +1,5 @@
 ---
-import DateRange from '~/components/date/DateRange.astro'
+import ExperienceRoleEntry from '~/components/cv/experience/ExperienceRoleEntry.astro'
 import type { Experience as ExperienceType } from '~/types'
 
 export interface Props {
@@ -12,16 +12,18 @@ const { experience } = Astro.props as Props
 <div class="lh-6 flex flex-col">
   {
     experience.href && (
-      <a href={experience.href} rel="noreferrer" target="_blank" class="w-fit">
+      <a href={experience.href} rel="noreferrer" target="_blank" class="w-fit font-bold">
         {experience.name}
       </a>
     )
   }
-  {!experience.href && <span class="text-black">{experience.name}</span>}
-  <span>
-    {experience.description}
-  </span>
-  <div class="text-lighter">
-    <DateRange startDate={experience.startDate} endDate={experience.endDate} />
-  </div>
+  {!experience.href && <span class="font-bold text-black">{experience.name}</span>}
+  {experience.roles.length !== 1 ? <ul class="my-0 py-0">
+    {experience.roles.map((role) => (
+      <li class="mb-0">
+        <ExperienceRoleEntry role={role} />
+      </li>
+    ))}
+  </ul> : null}
+  {experience.roles.length === 1 ? <ExperienceRoleEntry role={experience.roles[0]} /> : null}
 </div>

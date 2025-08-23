@@ -41,11 +41,12 @@ describe('Home', () => {
           .should('be.visible')
           .parentsUntil('li')
           .within(() => {
-            cy.contains('Software Engineer (Internship)').should('be.visible')
+            cy.contains('Software Engineer').should('be.visible')
+            cy.contains('Internship').should('be.visible')
             cy.contains('Nov 2020').should('be.visible')
             cy.contains('Dec 2020').should('be.visible')
           })
-        cy.get('ul').find('li').its('length').should('eq', 6)
+        cy.get('ul').find('li').its('length').should('eq', 4 + 5)
       })
   })
 

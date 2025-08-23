@@ -7,10 +7,10 @@ const { id } = Astro.props
 ---
 
 <div class="prose prose-xl flex flex-col">
-  <h2 class="scroll-mt-20 text-center" id={id}>
+  <h2 class="ml-8 scroll-mt-20" id={id}>
     <slot name="title" />
   </h2>
-  <ul class="prose">
+  <ul class="prose my-0 py-0">
     <slot />
   </ul>
 </div>
