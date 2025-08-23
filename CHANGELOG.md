@@ -1,3 +1,11 @@
+# [3.61.0](https://github.com/DerYeger/jan-mueller/compare/v3.60.10...v3.61.0) (2025-08-23)
+
+
+### Features
+
+* update awards ([5a9e20a](https://github.com/DerYeger/jan-mueller/commit/5a9e20a1424e12cae3ec78e99b7eff4f2e173e4c))
+* update experience ([a56d3d4](https://github.com/DerYeger/jan-mueller/commit/a56d3d47f2e68921645d59c063f82deedf323ce5))
+
 ## [3.60.10](https://github.com/DerYeger/jan-mueller/compare/v3.60.9...v3.60.10) (2025-08-23)
 
 
