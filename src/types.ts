@@ -1,6 +1,7 @@
 export interface Award {
   name: string
   date: string
+  by: string
   href?: string
 }
 
