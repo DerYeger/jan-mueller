@@ -1,3 +1,10 @@
+# [3.62.0](https://github.com/DerYeger/jan-mueller/compare/v3.61.0...v3.62.0) (2025-08-23)
+
+
+### Features
+
+* generate og images within project ([074d8fe](https://github.com/DerYeger/jan-mueller/commit/074d8feb701a93d7a9cc30f3d0ec5248ad821eee))
+
 # [3.61.0](https://github.com/DerYeger/jan-mueller/compare/v3.60.10...v3.61.0) (2025-08-23)
 
 
