@@ -27,7 +27,7 @@ const BLOG_POSTS: BlogPostData[] = [
     title: 'Masonry layout for Vue 2 and Vue 3',
   },
   {
-    slug: 'web-components',
+    slug: 'web-workers',
     title: 'Working wonders with web workers',
   },
 ]
