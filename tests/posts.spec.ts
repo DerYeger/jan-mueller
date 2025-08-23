@@ -15,6 +15,10 @@ const BLOG_POSTS: BlogPostData[] = [
     title: 'React, Leaflet, and SSR',
   },
   {
+    slug: 'vue-composable-testing',
+    title: 'Testing advanced Vue composables',
+  },
+  {
     slug: 'vue-marmoset-viewer',
     title: 'Displaying 3D models with Vue',
   },

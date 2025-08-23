@@ -1,0 +1,197 @@
+---
+title: Testing advanced Vue composables
+description: A utility for testing advanced Vue composables with lifecycle hooks, plugins, and inject calls.
+heroImage: '/assets/blog/reflection.jpeg'
+pubDate: 2025-08-23
+layout: '~/layouts/MarkdownLayout.astro'
+openGraphImage: '/open-graph/vue-composable-testing.png'
+---
+
+## The Problem
+
+Writing unit tests for Vue composables that only deal with simple reactive state (`ref`, `computed`, etc.) is trivial.
+However, once component lifecycle (`onMounted`, `onUnmounted`, etc.), plugins (`vue-router`, '@tanstack/vue-query'), or `inject` calls are involved, any tests without additional setup will fail.
+
+From the example tests below, only the first one passes while the other three will fail.
+The assertion failures and warnings are included as comments.
+
+```ts
+// @vitest-environment jsdom
+import { inject, onMounted, ref } from 'vue'
+import { useQuery } from '@tanstack/vue-query'
+import { flushPromises } from '@vue/test-utils'
+import { describe, it, expect } from 'vitest'
+
+describe('Testing Vue Composables', () => {
+  it('simple composables work', () => {
+    function useCounter() {
+      const count = ref(0)
+      const increment = () => count.value++
+      return { count, increment }
+    }
+    const { count, increment } = useCounter()
+    expect(count.value).toBe(0)
+    increment()
+    expect(count.value).toBe(1)
+  })
+
+  it.fails('composables with lifecycle hooks fail', () => {
+    function useLifecycleCounter() {
+      const count = ref(0)
+      // [Vue warn]: onMounted is called when there is no active component instance to be associated with.
+      // Lifecycle injection APIs can only be used during execution of setup().
+      // If you are using async setup(), make sure to register lifecycle hooks before the first await statement.
+      onMounted(() => {
+        count.value++
+      })
+      return { count }
+    }
+    const { count } = useLifecycleCounter()
+    // AssertionError: expected +0 to be 1 // Object.is equality
+    expect(count.value).toBe(1)
+  })
+
+  it.fails('composables with plugins fail', async () => {
+    function useQueryCounter() {
+      // Error: vue-query hooks can only be used inside setup() function or functions that support injection context.
+      return useQuery({ queryKey: ['counter'], queryFn: async () => Promise.resolve(42) })
+    }
+    const query = useQueryCounter()
+    await flushPromises()
+    expect(query.data.value).toBe(42)
+  })
+
+  it.fails('composables with inject fail', () => {
+    function useInjectCounter() {
+      // [Vue warn]: inject() can only be used inside setup() or functional components.
+      const count = inject<number>('count')
+      return { count }
+    }
+    const { count } = useInjectCounter()
+    // AssertionError: expected undefined to be + 0 // Object.is equality
+    expect(count).toBe(0)
+  })
+})
+```
+
+## The Solution
+
+I copy-and-own the below `withComponentLifecycle` utility in each of my Vue projects.
+It runs a provided composable in a dummy component, which is mounted within an `App` instance.
+The utility can be configured to load plugins, `provide` values, and perform automatic cleanup after each test.
+
+```ts
+import { flushPromises } from '@vue/test-utils'
+import { onTestFinished } from 'vitest'
+import type { App, Plugin } from 'vue'
+import { createApp, defineComponent, h, provide } from 'vue'
+
+export interface Options {
+  plugins?: Plugin[]
+  autoCleanup?: boolean
+  provided?: Record<string, unknown>
+}
+
+export function withComponentLifecycle<T>(
+  composable: () => T,
+  options: Options = {},
+): { result: T, app: App, cleanup: () => Promise<void> } {
+  const { plugins = [], autoCleanup = true, provided = {} } = options
+  let result: T
+
+  const component = defineComponent(() => {
+    result = composable()
+    return () => null
+  })
+
+  const app = createApp({
+    setup() {
+      Object.entries(provided).forEach(([key, value]) => {
+        provide(key, value)
+      })
+      return () => h(component)
+    },
+  })
+
+  plugins.forEach((plugin) => app.use(plugin))
+  app.mount(document.createElement('div'))
+
+  const cleanup = async () => {
+    app.unmount()
+    await flushPromises()
+  }
+
+  if (autoCleanup) {
+    onTestFinished(cleanup)
+  }
+
+  return {
+    // @ts-expect-error We know that result will be assigned
+    result,
+    app,
+    cleanup: autoCleanup
+      ? () => {
+        throw new Error('Auto cleanup is enabled, no manual cleanup is possible')
+      }
+      : cleanup,
+  }
+}
+```
+
+## The Result
+
+Using `withComponentLifecycle` is straightforward.
+Below are the same tests as above, but now all tests pass thanks to this utility.
+
+```ts
+// @vitest-environment jsdom
+import { inject, onMounted, ref } from 'vue'
+import { useQuery, VueQueryPlugin } from '@tanstack/vue-query'
+import { flushPromises } from '@vue/test-utils'
+import { describe, it, expect } from 'vitest'
+import { withComponentLifecycle } from '~test/vue-test-utils'
+
+describe('Testing Vue Composables', () => {
+  it('simple composables work', () => {
+    function useCounter() {
+      const count = ref(0)
+      const increment = () => count.value++
+      return { count, increment }
+    }
+    const { result: { count, increment } } = withComponentLifecycle(useCounter)
+    expect(count.value).toBe(0)
+    increment()
+    expect(count.value).toBe(1)
+  })
+
+  it('composables with lifecycle hooks work', () => {
+    function useLifecycleCounter() {
+      const count = ref(0)
+      onMounted(() => {
+        count.value++
+      })
+      return { count }
+    }
+    const { result: { count } } = withComponentLifecycle(useLifecycleCounter)
+    expect(count.value).toBe(1)
+  })
+
+  it('composables with plugins work', async () => {
+    function useQueryCounter() {
+      return useQuery({ queryKey: ['counter'], queryFn: async () => Promise.resolve(42) })
+    }
+    const { result: query } = withComponentLifecycle(useQueryCounter, { plugins: [VueQueryPlugin] })
+    await flushPromises()
+    expect(query.data.value).toBe(42)
+  })
+
+  it('composables with inject work', () => {
+    function useInjectCounter() {
+      const count = inject<number>('count')
+      return { count }
+    }
+    const { result: { count } } = withComponentLifecycle(useInjectCounter, { provided: { count: 0 } })
+    expect(count).toBe(0)
+  })
+})
+```
