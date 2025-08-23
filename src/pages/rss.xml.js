@@ -13,7 +13,7 @@ export async function GET(context) {
       description: post.data.description,
       customData: post.data.customData,
       link: `/blog/${post.slug}/`,
-    })),
+    })).sort((a, b) => b.pubDate - a.pubDate),
     customData: `<language>en-us</language>`,
     stylesheet: '/rss/pretty-feed-v3.xsl',
   })
