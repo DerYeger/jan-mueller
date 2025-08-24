@@ -15,7 +15,6 @@ export interface Props {
     heroImage?: string
     file?: string
     noToc?: boolean
-    openGraphImage?: string
     readingTime: string
   }
   headings: {
@@ -33,7 +32,6 @@ const {
     updatedDate,
     heroImage,
     noToc,
-    openGraphImage,
     readingTime,
   },
   headings,
@@ -45,9 +43,12 @@ function removeSRLabel(text: string) {
   const labelStart = text.indexOf('Section titled')
   return text.substring(0, labelStart)
 }
+
+const { slug } = Astro.params
+const image = slug ? `/open-graph/${slug}.png` : undefined
 ---
 
-<MainLayout title={title} description={description} image={openGraphImage}>
+<MainLayout title={title} description={description} image={image}>
   <article class="container prose mx-auto px-4 py-8">
     {
       heroImageAsset && (
