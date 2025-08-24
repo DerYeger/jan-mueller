@@ -7,14 +7,18 @@ const DateSchema = z.preprocess((arg) => {
   }
 }, z.date())
 
+const BlogPostSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  heroImage: z.string().startsWith('/assets/blog/'),
+  pubDate: DateSchema,
+  updatedDate: DateSchema.optional(),
+  layout: z.literal('~/layouts/MarkdownLayout.astro'),
+}).strict()
+export type BlogPost = z.infer<typeof BlogPostSchema>
+
 const blog = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    heroImage: z.string(),
-    pubDate: DateSchema,
-    updatedDate: DateSchema.optional(),
-  }),
+  schema: BlogPostSchema,
 })
 
 export const collections = { blog }

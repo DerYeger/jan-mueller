@@ -3,20 +3,18 @@ import { Image } from 'astro:assets'
 
 import DateComponent from '~/components/date/DateComponent.astro'
 import Dot from '~/components/Dot.astro'
+import type { BlogPost } from '~/content/config'
 import MainLayout from '~/layouts/MainLayout.astro'
 import { getImageAsset } from '~/lib'
 
+type GenericMarkdownContent = {
+  title?: string
+  noToc?: boolean
+  readingTime: string
+}
+
 export interface Props {
-  content: {
-    title?: string
-    description?: string
-    pubDate?: string
-    updatedDate?: string
-    heroImage?: string
-    file?: string
-    noToc?: boolean
-    readingTime: string
-  }
+  content: GenericMarkdownContent & Partial<BlogPost>
   headings: {
     depth: number
     slug: string
