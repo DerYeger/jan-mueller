@@ -1,0 +1,118 @@
+---
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+import { getCollection } from 'astro:content'
+
+import DateComponent from '~/components/date/DateComponent.astro'
+import Dot from '~/components/Dot.astro'
+import type { BlogPost } from '~/content/config'
+import MainLayout from '~/layouts/MainLayout.astro'
+import { getImageAsset } from '~/lib'
+
+export interface Props {
+  content: BlogPost & { readingTime: string }
+  headings: {
+    depth: number
+    slug: string
+    text: string
+  }[]
+}
+
+const {
+  content: {
+    title,
+    description,
+    pubDate,
+    updatedDate,
+    heroImage,
+    readingTime,
+  },
+  headings,
+} = Astro.props as Props
+
+const heroImageAsset = await getImageAsset(heroImage)
+if (!heroImageAsset) {
+  throw new Error(`Failed to load hero image: ${heroImage}`)
+}
+
+function removeSRLabel(text: string) {
+  const labelStart = text.indexOf('Section titled')
+  return text.substring(0, labelStart)
+}
+
+const { slug } = Astro.params
+if (!slug) {
+  throw new Error('No slug provided')
+}
+const openGraphImage = `/open-graph/${slug}.png`
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+
+const currentPostIndex = posts.findIndex((post) => post.slug === Astro.params.slug)
+const previousPost = currentPostIndex + 1 === posts.length ? undefined : posts[currentPostIndex + 1]
+const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1]
+---
+
+<MainLayout title={title} description={description} image={openGraphImage}>
+  <article class="container prose mx-auto max-w-[80ch] px-4 py-8">
+    <Image
+      class="card h-[200px] w-full border-0 object-cover"
+      src={heroImageAsset}
+      width={Math.min(heroImageAsset.width, 1300)}
+      height={Math.min(heroImageAsset.height, 400)}
+      quality="high"
+      format="webp"
+      loading="eager"
+      alt={title ?? ''}
+    />
+    <h1>{title}</h1>
+    <div class="mb-4 mt-8 flex flex-wrap gap-1">
+      {pubDate && <DateComponent date={pubDate} format="MMM DD, YYYY" />}
+      {updatedDate && (
+        <>
+          <Dot />
+          <div>
+            Last updated on{' '}
+            <DateComponent date={updatedDate} format="MMM DD, YYYY" />
+          </div>
+        </>
+      )}
+      <Dot />
+      {readingTime}
+    </div>
+    <blockquote>{description}</blockquote>
+    <aside>
+      <h2>Contents</h2>
+      <ul>
+        {headings.map(({ depth, slug, text }) => (
+          <li style={{ marginLeft: `${2 * (depth - 2)}rem` }}>
+            <a href={`#${slug}`}>{removeSRLabel(text)}</a>
+          </li>
+        ))}
+      </ul>
+    </aside>
+    <slot />
+    <div class="mt-16 flex justify-between gap-2 text-sm">
+      { previousPost && (
+          <a href={`/blog/${previousPost.slug}/`} class="flex flex-col items-start gap-1 rounded border border-neutral-300 p-2 no-underline">
+          <div class="flex items-center gap-1 font-normal text-[var(--tw-prose-body)]">
+            <Icon name="akar-icons:arrow-left" />
+            Previous
+          </div>
+          <div class="underline">{previousPost.data.title}</div>
+        </a>
+      ) }
+      <div class="grow-1" />
+      { nextPost && (
+        <a href={`/blog/${nextPost.slug}/`} class="flex flex-col items-end gap-1 rounded border border-neutral-300 p-2 no-underline">
+          <div class="flex items-center gap-1 font-normal text-[var(--tw-prose-body)]">
+            Next
+            <Icon name="akar-icons:arrow-right" />
+          </div>
+          <div class="underline">{nextPost.data.title}</div>
+        </a>
+      )}
+    </div>
+  </article>
+</MainLayout>

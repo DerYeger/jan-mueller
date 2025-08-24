@@ -1,4 +1,4 @@
-export async function getImageAsset(imagePath: string): Promise<any> {
+export async function getImageAsset(imagePath: string): Promise<ImageMetadata | undefined> {
   const assets = import.meta.glob('~/assets/**/*')
   const asset = Object.entries(assets).find(([fileName]) =>
     fileName.endsWith(imagePath),
@@ -6,7 +6,8 @@ export async function getImageAsset(imagePath: string): Promise<any> {
   if (!asset) {
     return undefined
   }
-  return await asset[1]()
+  const imageImport = await asset[1]() as { default: ImageMetadata }
+  return imageImport.default
 }
 
 export const accounts = [

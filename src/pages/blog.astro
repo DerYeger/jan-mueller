@@ -36,7 +36,7 @@ const posts = (await getCollection('blog')).sort(
                 {post.data.heroImage && (
                   <Image
                     class="h-[100px] w-full object-cover"
-                    src={getImageAsset(post.data.heroImage)}
+                    src={(await getImageAsset(post.data.heroImage))!}
                     width={1200}
                     height={200}
                     quality="high"

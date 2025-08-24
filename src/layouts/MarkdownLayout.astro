@@ -1,20 +1,8 @@
 ---
-import { Image } from 'astro:assets'
-
-import DateComponent from '~/components/date/DateComponent.astro'
-import Dot from '~/components/Dot.astro'
-import type { BlogPost } from '~/content/config'
 import MainLayout from '~/layouts/MainLayout.astro'
-import { getImageAsset } from '~/lib'
-
-type GenericMarkdownContent = {
-  title?: string
-  noToc?: boolean
-  readingTime: string
-}
 
 export interface Props {
-  content: GenericMarkdownContent & Partial<BlogPost>
+  content: { title?: string }
   headings: {
     depth: number
     slug: string
@@ -25,77 +13,13 @@ export interface Props {
 const {
   content: {
     title,
-    description,
-    pubDate,
-    updatedDate,
-    heroImage,
-    noToc,
-    readingTime,
   },
-  headings,
 } = Astro.props as Props
-
-const heroImageAsset = heroImage ? (await getImageAsset(heroImage)).default : undefined
-
-function removeSRLabel(text: string) {
-  const labelStart = text.indexOf('Section titled')
-  return text.substring(0, labelStart)
-}
-
-const { slug } = Astro.params
-const image = slug ? `/open-graph/${slug}.png` : undefined
 ---
 
-<MainLayout title={title} description={description} image={image}>
-  <article class="container prose mx-auto max-w-[80ch] px-4 py-8">
-    {
-      heroImageAsset && (
-        <Image
-          class="card h-[200px] w-full border-0 object-cover"
-          src={heroImageAsset}
-          width={Math.min(heroImageAsset.width, 1300)}
-          height={Math.min(heroImageAsset.height, 400)}
-          quality="high"
-          format="webp"
-          loading="eager"
-          alt={title ?? ''}
-        />
-      )
-    }
+<MainLayout title={title}>
+  <article class="container prose mx-auto px-4 py-8">
     {title && <h1>{title}</h1>}
-    {
-      pubDate && (
-        <div class="mb-4 mt-8 flex flex-wrap gap-1">
-          {pubDate && <DateComponent date={pubDate} format="MMM DD, YYYY" />}
-          {updatedDate && (
-            <>
-              <Dot />
-              <div>
-                Last updated on{' '}
-                <DateComponent date={updatedDate} format="MMM DD, YYYY" />
-              </div>
-            </>
-          )}
-          <Dot />
-          {readingTime}
-        </div>
-      )
-    }
-    {description && <blockquote>{description}</blockquote>}
-    {
-      !noToc && (
-        <aside>
-          <h2>Contents</h2>
-          <ul>
-            {headings.map(({ depth, slug, text }) => (
-              <li style={{ marginLeft: `${2 * (depth - 2)}rem` }}>
-                <a href={`#${slug}`}>{removeSRLabel(text)}</a>
-              </li>
-            ))}
-          </ul>
-        </aside>
-      )
-    }
     <slot />
   </article>
 </MainLayout>
