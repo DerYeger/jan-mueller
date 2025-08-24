@@ -35,7 +35,7 @@ const {
   headings,
 } = Astro.props as Props
 
-const heroImageAsset = heroImage ? getImageAsset(heroImage) : undefined
+const heroImageAsset = heroImage ? (await getImageAsset(heroImage)).default : undefined
 
 function removeSRLabel(text: string) {
   const labelStart = text.indexOf('Section titled')
@@ -47,14 +47,14 @@ const image = slug ? `/open-graph/${slug}.png` : undefined
 ---
 
 <MainLayout title={title} description={description} image={image}>
-  <article class="container prose mx-auto px-4 py-8">
+  <article class="container prose mx-auto max-w-[80ch] px-4 py-8">
     {
       heroImageAsset && (
         <Image
           class="card h-[200px] w-full border-0 object-cover"
           src={heroImageAsset}
-          width={1300}
-          height={400}
+          width={Math.min(heroImageAsset.width, 1300)}
+          height={Math.min(heroImageAsset.height, 400)}
           quality="high"
           format="webp"
           loading="eager"
