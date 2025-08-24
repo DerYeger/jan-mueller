@@ -1,3 +1,15 @@
+# [3.66.0](https://github.com/DerYeger/jan-mueller/compare/v3.65.0...v3.66.0) (2025-08-24)
+
+
+### Bug Fixes
+
+* use correct shadow ([5ea088c](https://github.com/DerYeger/jan-mueller/commit/5ea088ca80344b40015b4bd810165e48d34b4a9b))
+
+
+### Features
+
+* highlight next and previous links on hover ([b1884d3](https://github.com/DerYeger/jan-mueller/commit/b1884d304b24404e44b331a692bf0b94e524e54c))
+
 # [3.65.0](https://github.com/DerYeger/jan-mueller/compare/v3.64.0...v3.65.0) (2025-08-24)
 
 
