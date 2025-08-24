@@ -54,7 +54,10 @@ describe('Testing Vue Composables', () => {
   it.fails('composables with plugins fail', async () => {
     function useQueryCounter() {
       // Error: vue-query hooks can only be used inside setup() function or functions that support injection context.
-      return useQuery({ queryKey: ['counter'], queryFn: async () => Promise.resolve(42) })
+      return useQuery({
+        queryKey: ['counter'],
+        queryFn: async () => Promise.resolve(42)
+      })
     }
     const query = useQueryCounter()
     await flushPromises()
@@ -178,9 +181,15 @@ describe('Testing Vue Composables', () => {
 
   it('composables with plugins work', async () => {
     function useQueryCounter() {
-      return useQuery({ queryKey: ['counter'], queryFn: async () => Promise.resolve(42) })
+      return useQuery({
+        queryKey: ['counter'],
+        queryFn: async () => Promise.resolve(42)
+      })
     }
-    const { result: query } = withComponentLifecycle(useQueryCounter, { plugins: [VueQueryPlugin] })
+    const { result: query } = withComponentLifecycle(
+      useQueryCounter,
+      { plugins: [VueQueryPlugin] }
+    )
     await flushPromises()
     expect(query.data.value).toBe(42)
   })
@@ -190,7 +199,10 @@ describe('Testing Vue Composables', () => {
       const count = inject<number>('count')
       return { count }
     }
-    const { result: { count } } = withComponentLifecycle(useInjectCounter, { provided: { count: 0 } })
+    const { result: { count } } = withComponentLifecycle(
+      useInjectCounter,
+      { provided: { count: 0 } }
+    )
     expect(count).toBe(0)
   })
 })
