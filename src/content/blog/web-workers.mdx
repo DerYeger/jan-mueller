@@ -50,7 +50,7 @@ export function getPrimeFactors(n: number): PrimeFactorsResult {
 }
 ```
 
-As I said, it's neither efficient nor beautiful, but let's have a look at what happens when we run this code in the main thread of a web application.
+It's neither efficient nor elegant, but let's have a look at what happens when we run this code in the main thread of a web application.
 Below, you'll find an interactive factorizer, but you can also try some selected examples with the following buttons.
 You'll see that it works fine for <FactorizerExampleButton id="no-worker" value={42} text="small factors" /> and, although slower, for <FactorizerExampleButton id="no-worker" value={1000036000099} text="large factors" /> with no tangible effects on the UI's performance.
 However, if you're ready to deal with a frozen UI for around 40 seconds, you can try it out with <FactorizerExampleButton id="no-worker" value={100001000013699905017} text="very large factors" type="danger" compact />.
@@ -164,7 +164,7 @@ import ManualWorkerFactorizer from '~/components/blog/examples/worker/ManualWork
 This time, it's also safe to try out the <FactorizerExampleButton id="manual-worker" value={100001000013699905017} text="very large factors" type="danger"/> example, and the loading animation will properly be updated on the main thread.
 For completion, you can also try the <FactorizerExampleButton id="manual-worker" value={42} text="small factors" /> and <FactorizerExampleButton id="manual-worker" value={1000036000099} text="large factors" /> examples.
 
-<ProCon pro={["Main thread is not blocked", "No libraries or bundler required"]} con={["Increased complexity", "Separate worker file with specialized code", ["Reduced type safety", "#type-safety"], ["Limited data type support", "#support-for-complex-data-types"], ["Communication overhead", "#communication-overhead"]]}/>
+<ProCon pro={["Main thread is not blocked", "No libraries or bundler required"]} con={["Increased complexity", "Separate worker file with specialized code", ["Reduced type-safety", "#type-safety"], ["Limited data type support", "#support-for-complex-data-types"], ["Communication overhead", "#communication-overhead"]]}/>
 
 ## Comlink workers
 
@@ -211,7 +211,7 @@ import ComlinkWorkerFactorizer from '~/components/blog/examples/worker/ComlinkWo
 
 <ComlinkWorkerFactorizer />
 
-<ProCon pro={["Main thread is not blocked", "Worker communication through async function calls", "No specialized worker file", ["Type safety (with exceptions)", "#type-safety"]]} con={["Increased complexity (but less than plain web workers)", ["Limited data type support", "#support-for-complex-data-types"], ["Communication overhead", "#communication-overhead"]]} />
+<ProCon pro={["Main thread is not blocked", "Worker communication through async function calls", "No specialized worker file", ["Type-safety (with exceptions)", "#type-safety"]]} con={["Increased complexity (but less than plain web workers)", ["Limited data type support", "#support-for-complex-data-types"], ["Communication overhead", "#communication-overhead"]]} />
 
 ## `bidc` workers
 
@@ -277,9 +277,9 @@ import Comparison from '~/components/blog/examples/worker/Comparison.astro'
 
 <Comparison />
 
-### Type safety
+### Type-safety
 
-Plain web workers have essentially no type safety.
+Plain web workers have essentially no type-safety.
 It is possible to annotate both `postMessage` and `onmessage` with TypeScript types, but they are not inferred and override an `any` type.
 Hence, TypeScript's algorithm will not detect any type errors if parameter and argument types do not match.
 
@@ -297,7 +297,7 @@ For example, generic function generally lose their type.
 E.g., `function test<T>(input: T): T { return input }` will be exposed as `function test(input: unknown): unknown` on the worker.
 
 While `bidc`'s documentation mentions "Easy to infer types for the RPC-style method calls", I was not yet able to find any examples or documentation for that feature.
-In my testing, the type safety of `bidc` was identical to that of plain web workers.
+In my testing, the type-safety of `bidc` was identical to that of plain web workers.
 
 ### Support for complex data types
 
@@ -338,7 +338,7 @@ This additional overhead is the result of `bidc`'s usage of `devalue` over `stru
 
 ## Bonus: Comlink workers with TanStack Query
 
-A personal favorite of mine is combining Comlink workers with [TanStack Query](https://tanstack.com/query/latest), which is also what I did in my thesis.
+A personal favorite of mine is combining Comlink workers with [TanStack Query](https://tanstack.com/query/latest), which is also what I did for my thesis.
 With this combination, the `async` worker functions perfectly integrate with `useQuery` and `useMutation`, adding caching, deduplication, and the other amazing features of TanStack Query to our worker calls.
 
 For example, in my master's thesis I used a web worker to compute an optimized tree layout for a graph that minimizes edge crossings.
@@ -374,7 +374,7 @@ Comlink makes it easy to use web workers and removes the mental overhead that is
 Web workers can *and should** be used more often than one might think.
 While overkill for a singular API call, any client-side computations that are heavy enough to freeze the user interface can benefit from being moved to a web worker.
 
-In most cases, I would recommend using Comlink workers due to their type safety and ease of use.
+In most cases, I would recommend using Comlink workers due to their type-safety and ease of use.
 Hiding the underlying worker through the proxy object reduces complexity and thus maintainability in my eyes.
 
 For long lived workers with small message payloads that do not fit Comlink's approach, I'd personally use `bidc` due to the extended support for complex data types.
