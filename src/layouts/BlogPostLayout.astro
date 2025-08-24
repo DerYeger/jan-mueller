@@ -95,7 +95,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
     <slot />
     <div class="mt-16 flex justify-between gap-2 text-sm">
       { previousPost && (
-          <a href={`/blog/${previousPost.slug}/`} class="flex flex-col items-start gap-1 rounded border border-neutral-300 p-2 no-underline">
+          <a href={`/blog/${previousPost.slug}/`} class="flex flex-col items-start gap-1 rounded border border-neutral-300 p-2 no-underline transition-colors hover:bg-neutral-200">
           <div class="flex items-center gap-1 font-normal text-[var(--tw-prose-body)]">
             <Icon name="akar-icons:arrow-left" />
             Previous
@@ -105,7 +105,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
       ) }
       <div class="grow-1" />
       { nextPost && (
-        <a href={`/blog/${nextPost.slug}/`} class="flex flex-col items-end gap-1 rounded border border-neutral-300 p-2 no-underline">
+        <a href={`/blog/${nextPost.slug}/`} class="flex flex-col items-end gap-1 rounded border border-neutral-300 p-2 no-underline transition-colors hover:bg-neutral-200">
           <div class="flex items-center gap-1 font-normal text-[var(--tw-prose-body)]">
             Next
             <Icon name="akar-icons:arrow-right" />
