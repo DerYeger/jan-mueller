@@ -1,3 +1,15 @@
+# [3.64.0](https://github.com/DerYeger/jan-mueller/compare/v3.63.0...v3.64.0) (2025-08-24)
+
+
+### Bug Fixes
+
+* improve formatting ([7e79edc](https://github.com/DerYeger/jan-mueller/commit/7e79edc0110773bd70dff3b913bef5760d3bcfe7))
+
+
+### Features
+
+* migrate to built-in prefetch ([10015f0](https://github.com/DerYeger/jan-mueller/commit/10015f0291d00bfa906879b8d4fecaa4150e194a))
+
 # [3.63.0](https://github.com/DerYeger/jan-mueller/compare/v3.62.0...v3.63.0) (2025-08-23)
 
 
