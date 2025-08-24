@@ -29,17 +29,23 @@ export default defineConfig({
     icon(),
     expressiveCode({
       themes: ['gruvbox-dark-medium'],
+      styleOverrides: {
+        frames: {
+          // matches shadow-md
+          frameBoxShadowCssValue: 'rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px',
+        },
+      },
     }),
     mdx({
-        extendMarkdownConfig: true,
-      }),
+      extendMarkdownConfig: true,
+    }),
     tailwind({
-        applyBaseStyles: false,
-      }),
+      applyBaseStyles: false,
+    }),
     vue(),
     preact({
-        compat: true,
-      }),
+      compat: true,
+    }),
     sitemap(),
     robotsTxt(),
   ],
