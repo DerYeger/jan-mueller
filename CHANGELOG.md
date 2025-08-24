@@ -1,3 +1,12 @@
+# [3.65.0](https://github.com/DerYeger/jan-mueller/compare/v3.64.0...v3.65.0) (2025-08-24)
+
+
+### Features
+
+* add previous and next links to blog posts ([c806e0d](https://github.com/DerYeger/jan-mueller/commit/c806e0da272b7d2393ae3b227af9b76d49d64066))
+* make articles wider ([322bff2](https://github.com/DerYeger/jan-mueller/commit/322bff258f8bbcfd3a64e757fade1b01d0786d23))
+* set open graph image automatically ([5b37396](https://github.com/DerYeger/jan-mueller/commit/5b373968ee65915970d8591099984a65eb1dc78e))
+
 # [3.64.0](https://github.com/DerYeger/jan-mueller/compare/v3.63.0...v3.64.0) (2025-08-24)
 
 
