@@ -31,7 +31,6 @@ const posts = (await getCollection('blog')).sort(
             <li class="card card-hover overflow-hidden" data-testid={`blog-post-${post.slug}`}>
               <a
                 href={`/blog/${post.slug}/`}
-                rel="prefetch"
                 class="block no-underline"
               >
                 {post.data.heroImage && (

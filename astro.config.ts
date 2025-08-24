@@ -1,6 +1,5 @@
 import mdx from '@astrojs/mdx'
 import preact from '@astrojs/preact'
-import prefetch from '@astrojs/prefetch'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import vue from '@astrojs/vue'
@@ -41,12 +40,14 @@ export default defineConfig({
     preact({
         compat: true,
       }),
-    prefetch(),
     sitemap(),
     robotsTxt(),
   ],
   vite: {
     plugins: [vitePreact(), tsconfigPaths({ verbose: true })],
+  },
+  prefetch: {
+    prefetchAll: true,
   },
   markdown: {
     gfm: true,
