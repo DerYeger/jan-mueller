@@ -11,6 +11,50 @@ test.describe('Home', () => {
     await expect(avatar).toBeVisible()
   })
 
+  test('has badges and buttons', async ({ page }) => {
+    const badges = page.getByTestId('badges')
+    await badges.scrollIntoViewIfNeeded()
+    await expect(badges).toBeVisible()
+
+    const badgeIcons = [
+      {
+        name: 'GitHub',
+        href: 'https://github.com/DerYeger',
+      },
+      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jan-müller-644144249/' },
+      {
+        name: 'XING',
+        href: 'https://www.xing.com/profile/Jan_Mueller1092/cv',
+      },
+      {
+        name: 'Twitter',
+        href: 'https://twitter.com/DerYeger',
+      },
+    ]
+    for (const badgeIcon of badgeIcons) {
+      const icon = badges.getByTestId(`badge-${badgeIcon.name}`)
+      await expect(icon).toBeVisible()
+      await expect(icon).toHaveAttribute('href', badgeIcon.href)
+    }
+
+    const badgeButtons = [{
+      href: '#experience',
+      text: 'CV',
+    }, {
+      href: '/blog',
+      text: 'Blog',
+    }, {
+      href: '/photography',
+      text: 'Photography',
+    }]
+    for (const badgeButton of badgeButtons) {
+      const button = badges.getByTestId(`badge-button-${badgeButton.href}`)
+      await expect(button).toBeVisible()
+      await expect(button).toContainText(badgeButton.text)
+      await expect(button).toHaveAttribute('href', badgeButton.href)
+    }
+  })
+
   test('shows about me section', async ({ page }) => {
     const aboutMe = page.locator('text=About Me')
     await aboutMe.scrollIntoViewIfNeeded()
