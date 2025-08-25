@@ -7,6 +7,7 @@ import { accounts } from '~/lib'
 
 <section
   class="prose prose-2xl relative my-32 w-full max-w-none border-y border-zinc-300 bg-zinc-200 px-4 py-8 shadow-lg"
+  data-testid="badges"
 >
   <div class="flex justify-center gap-8">
     {
@@ -17,13 +18,18 @@ import { accounts } from '~/lib'
           target="_blank"
           title={account.name}
           class="hover:box-shadow-2xl size-6 text-light transition-all hover:text-black"
+          data-testid={`badge-${account.name}`}
         >
           <Icon name={account.icon} class="size-6" />
         </a>
       ))
     }
   </div>
-  <div class="mt-8 flex justify-center gap-4">
+  <div class="mt-8 flex flex-wrap justify-center gap-4">
+    <BadgeButton to="#experience">
+      CV
+      <Icon name="akar-icons:arrow-right" class="size-[20px]" />
+    </BadgeButton>
     <BadgeButton to="/blog">
       Blog
       <Icon name="akar-icons:arrow-right" class="size-[20px]" />
