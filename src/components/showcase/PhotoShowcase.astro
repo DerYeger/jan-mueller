@@ -61,11 +61,11 @@ const photos: PhotoData[] = [
       })
     })
 
-    container.addEventListener('pointerenter', clearQueuedImage)
-    container.addEventListener('pointerleave', queueNextImage)
+    container.addEventListener('pointerenter', clearQueuedImage, { passive: true })
+    container.addEventListener('pointerleave', queueNextImage, { passive: true })
 
-    container.addEventListener('touchstart', startTouchSwipe)
-    container.addEventListener('touchend', endTouchSwipe)
+    container.addEventListener('touchstart', startTouchSwipe, { passive: true })
+    container.addEventListener('touchend', endTouchSwipe, { passive: true })
 
     let touchStart: Touch | undefined
 
