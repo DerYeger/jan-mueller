@@ -1,3 +1,24 @@
+# [3.67.0](https://github.com/DerYeger/jan-mueller/compare/v3.66.0...v3.67.0) (2025-08-26)
+
+
+### Bug Fixes
+
+* address lighthouse issues ([2e9d455](https://github.com/DerYeger/jan-mueller/commit/2e9d4559fdc7005351c3b80d82474e4d07f7c176))
+* create dedicated style for single column gallery ([7ae2645](https://github.com/DerYeger/jan-mueller/commit/7ae264527dd81b842ad73964e49fc715d464767b))
+* disable pointer events for all images ([53a22a0](https://github.com/DerYeger/jan-mueller/commit/53a22a0e30f6f03c138aa97f7e6aaf760fc23559))
+* do not include external redirects in sitemap ([5531868](https://github.com/DerYeger/jan-mueller/commit/5531868726ee7439b6f2eaef46e04df414da3700))
+* sort rss items ([0038985](https://github.com/DerYeger/jan-mueller/commit/00389855d8405180f74d03dad5a4d282dfa72445))
+* use passive listeners ([b01e944](https://github.com/DerYeger/jan-mueller/commit/b01e944e5dca208b2946f4be01bd697a6e4b3c69))
+
+
+### Features
+
+* add cv link button ([691bf88](https://github.com/DerYeger/jan-mueller/commit/691bf88eec331f8ddae0cef903fb7bc003d4bee2))
+* create blog post ([75d8257](https://github.com/DerYeger/jan-mueller/commit/75d82571a99a4f174aebbb4c6f731af3a3d99c17))
+* improve showcase layout ([8a2b19a](https://github.com/DerYeger/jan-mueller/commit/8a2b19a828888b20e4ba0c51a977782b8b1be4b3))
+* optimize images ([92a313d](https://github.com/DerYeger/jan-mueller/commit/92a313d8bf5a84c04e1b4c23b6262c1e448ef8a4))
+* update description ([21d193b](https://github.com/DerYeger/jan-mueller/commit/21d193b5e5c6bb6f10ac414924a3fd262d213149))
+
 # [3.66.0](https://github.com/DerYeger/jan-mueller/compare/v3.65.0...v3.66.0) (2025-08-24)
 
 
