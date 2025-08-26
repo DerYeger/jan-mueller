@@ -40,8 +40,8 @@ const PhotoMarker: FunctionalComponent<{ image: MapImage }> = ({ image }) => {
     >
       <LazyPopup minWidth={width} maxWidth={width} closeButton={false}>
         <div
-          class="h-0 w-full"
-          style={{ paddingBottom: `${100 * (1 / image.aspectRatio)}%` }}
+          class="w-full"
+          style={{ aspectRatio: String(image.aspectRatio) }}
         >
           <img
             src={image.src}
