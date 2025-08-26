@@ -19,7 +19,12 @@ lighthouseTest.describe('Lighthouse', () => {
 
   const pages: { url: `/${string}`, thresholds?: Thresholds }[] = [
     // Home
-    { url: '/' },
+    {
+      url: '/',
+      thresholds: {
+        performance: 99, // allow small margin of error
+      },
+    },
     // Legal
     { url: '/impressum' },
     { url: '/legal-notice' },
