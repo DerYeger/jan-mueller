@@ -1,12 +1,11 @@
 ---
-import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import moment from 'moment'
+import BlogHeroImage from '~/components/BlogHeroImage.astro'
 
 import DateComponent from '~/components/date/DateComponent.astro'
 import Dot from '~/components/Dot.astro'
 import MainLayout from '~/layouts/MainLayout.astro'
-import { getImageAsset } from '~/lib'
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -33,17 +32,7 @@ const posts = (await getCollection('blog')).sort(
                 href={`/blog/${post.slug}/`}
                 class="block no-underline"
               >
-                {post.data.heroImage && (
-                  <Image
-                    class="h-[100px] w-full object-cover"
-                    src={(await getImageAsset(post.data.heroImage))!}
-                    width={1200}
-                    height={200}
-                    quality="high"
-                    format="webp"
-                    alt={post.data.title}
-                  />
-                )}
+                <BlogHeroImage heroImage={post.data.heroImage} title={post.data.title} height={100} />
                 <div class="prose prose-sm flex flex-col gap-4 p-6">
                   <h2 class="my-0">{post.data.title}</h2>
                   <span class="text-neutral-500">

@@ -29,7 +29,7 @@ async function getBaseImage(rawImage: RawImage): Promise<BaseImage> {
   const {
     src,
     attributes: { width, height },
-  } = await getImage({ src: rawImage, format: 'webp', quality: 'max' })
+  } = await getImage({ src: rawImage, format: 'webp', quality: 'high' })
   return {
     src,
     alt,

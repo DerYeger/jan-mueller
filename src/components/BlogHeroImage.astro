@@ -1,0 +1,32 @@
+---
+import { getImageAsset } from '~/lib'
+import { Image } from 'astro:assets'
+
+interface Props {
+  heroImage: string
+  title: string
+  loading?: 'eager' | 'lazy'
+  height: number
+  class?: string
+}
+
+const { heroImage, title, height, loading = 'lazy', class: className = '' } = Astro.props
+
+const heroImageAsset = await getImageAsset(heroImage)
+if (!heroImageAsset) {
+  throw new Error(`Failed to load hero image: ${heroImage}`)
+}
+---
+
+<Image
+  class={`${className} w-full object-cover`}
+  src={heroImageAsset}
+  width={749}
+  quality="high"
+  layout="full-width"
+  object-fit="cover"
+  format="webp"
+  loading={loading}
+  alt={title}
+  style={{ height: `${height}px` }}
+/>

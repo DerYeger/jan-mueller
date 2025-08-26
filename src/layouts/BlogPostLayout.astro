@@ -1,7 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components'
-import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
+import BlogHeroImage from '~/components/BlogHeroImage.astro'
 
 import DateComponent from '~/components/date/DateComponent.astro'
 import Dot from '~/components/Dot.astro'
@@ -56,16 +56,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
 
 <MainLayout title={title} description={description} image={openGraphImage}>
   <article class="container prose mx-auto max-w-[80ch] px-4 py-8">
-    <Image
-      class="card h-[200px] w-full border-0 object-cover"
-      src={heroImageAsset}
-      width={Math.min(heroImageAsset.width, 1300)}
-      height={Math.min(heroImageAsset.height, 400)}
-      quality="high"
-      format="webp"
-      loading="eager"
-      alt={title ?? ''}
-    />
+    <BlogHeroImage class="card border-0" heroImage={heroImage} title={title} height={200} loading="eager" />
     <h1>{title}</h1>
     <div class="mb-4 mt-8 flex flex-wrap gap-1">
       {pubDate && <DateComponent date={pubDate} format="MMM DD, YYYY" />}

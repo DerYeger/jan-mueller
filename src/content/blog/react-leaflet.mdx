@@ -52,7 +52,7 @@ I'll explain the important points in detail.
    In this example, I used Tailwind's utility `h-[200px]`.
 4. `TileLayer` handles the visualization and design of our map.
    Leaflet allows us to specify a [provider](https://github.com/leaflet-extras/leaflet-providers) for tile layers.
-   Previews and instructions for various providers can be found [here](https://leaflet-extras.github.io/leaflet-providers/preview/).
+   Previews and instructions for various providers can be found on [leaflet-extras.github.io](https://leaflet-extras.github.io/leaflet-providers/preview/).
    Keep in mind that not all of them are free, so always check their individual terms and conditions.
    (And don't forget to add the correct attribution!)
    In this blog, I am using [Basemaps styles from CARTO](https://github.com/CartoDB/basemap-styles).
@@ -305,7 +305,7 @@ import { LeafletMap } from './LeafletMap.lazy.tsx'
 ```
 
 > Note: At the time of writing, Astro may throw an error when importing your Preact component this way, see [withastro/astro#3833](https://github.com/withastro/astro/issues/3833).
-> As described [here](https://github.com/withastro/astro/issues/3833#issuecomment-1175827464), a workaround is importing `preact` in the offending file.
+> As described in [this issue](https://github.com/withastro/astro/issues/3833#issuecomment-1175827464), a workaround is importing `preact` in the offending file.
 
 > 13th January 2023: This issue has been fixed.
 
