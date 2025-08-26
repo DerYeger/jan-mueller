@@ -47,7 +47,9 @@ export default defineConfig({
     preact({
       compat: true,
     }),
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.includes('/external/'),
+    }),
     robotsTxt(),
   ],
   vite: {
