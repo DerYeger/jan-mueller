@@ -6,7 +6,7 @@ test.describe('Home', () => {
   })
 
   test('has an avatar', async ({ page }) => {
-    const avatar = page.locator('.avatar')
+    const avatar = page.getByTestId('avatar')
     await avatar.scrollIntoViewIfNeeded()
     await expect(avatar).toBeVisible()
   })

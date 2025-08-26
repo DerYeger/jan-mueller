@@ -19,12 +19,7 @@ lighthouseTest.describe('Lighthouse', () => {
 
   const pages: { url: `/${string}`, thresholds?: Thresholds }[] = [
     // Home
-    {
-      url: '/',
-      thresholds: {
-        performance: 98, // preview serves images inefficiently
-      },
-    },
+    { url: '/' },
     // Legal
     { url: '/impressum' },
     { url: '/legal-notice' },
@@ -35,7 +30,6 @@ lighthouseTest.describe('Lighthouse', () => {
       url: '/blog/react-leaflet',
       thresholds: {
         accessibility: 0, // OpenStreetMap drops accessibility to 0
-        performance: 98, // OpenStreetMap overhead
       },
      },
     { url: '/blog/vue-composable-testing' },
