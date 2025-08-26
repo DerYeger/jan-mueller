@@ -48,8 +48,7 @@ const PhotoMarker: FunctionalComponent<{ image: MapImage }> = ({ image }) => {
             alt={image.alt}
             draggable={false}
             decoding="async"
-            class="select-none"
-            style="pointer-events: none !important;"
+            class="pointer-events-none select-none"
           />
         </div>
         <div className="mx-auto mt-1 flex max-w-sm justify-evenly gap-1 text-xs font-semibold [&>*]:flex [&>*]:grow [&>*]:justify-center">
