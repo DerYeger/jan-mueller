@@ -1,3 +1,10 @@
+# [3.68.0](https://github.com/DerYeger/jan-mueller/compare/v3.67.0...v3.68.0) (2025-08-27)
+
+
+### Features
+
+* optimize css ([cea1042](https://github.com/DerYeger/jan-mueller/commit/cea104223d426c47d8e07d8af5780aa5a79182a7))
+
 # [3.67.0](https://github.com/DerYeger/jan-mueller/compare/v3.66.0...v3.67.0) (2025-08-26)
 
 
