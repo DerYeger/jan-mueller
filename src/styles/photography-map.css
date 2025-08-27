@@ -1,0 +1,19 @@
+.photography-map .leaflet-marker-icon {
+  background: #E74C3C;
+  border: 4px solid #E74C3C;
+  border-radius: 9999px;
+}
+
+.photography-map .leaflet-popup-content-wrapper {
+  padding: 8px !important;
+  border-radius: 12px !important;
+}
+
+.photography-map .leaflet-popup-content {
+  margin: 0px !important;
+  overflow: hidden;
+}
+
+.photography-map .leaflet-popup-content img {
+  border-radius: 4px !important;
+}

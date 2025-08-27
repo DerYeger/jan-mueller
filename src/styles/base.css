@@ -36,42 +36,14 @@
   }
 }
 
-.prose div.language-id {
-  display: none;
-}
-
 .drop-shadow-sharp {
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 50, 0.35));
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
+@media screen and not (prefers-reduced-motion: reduce) {
   html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
   }
-}
-
-/* Fix for animating elements in Safari  */
-.overflow-hidden {
-  -webkit-transform: translate3d(0, 0, 0);
-}
-
-.leaflet-bottom,
-.leaflet-control,
-.leaflet-pane,
-.leaflet-top {
-  z-index: 0 !important;
-}
-
-#marmosetUI > img {
-  height: 100%;
-  object-fit: cover;
-  position: static !important;
-  transform: none !important;
-  width: 100%;
 }
 
 .prose blockquote > p::before,
@@ -92,22 +64,3 @@ html {
   }
 }
 
-.photography-map .leaflet-marker-icon {
-  background: #E74C3C;
-  border: 4px solid #E74C3C;
-  border-radius: 9999px;
-}
-
-.photography-map .leaflet-popup-content-wrapper {
-  padding: 8px !important;
-  border-radius: 12px !important;
-}
-
-.photography-map .leaflet-popup-content {
-  margin: 0px !important;
-  overflow: hidden;
-}
-
-.photography-map .leaflet-popup-content img {
-  border-radius: 4px !important;
-}

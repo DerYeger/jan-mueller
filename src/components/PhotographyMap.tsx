@@ -8,6 +8,7 @@ import { LazyMarker, LazyMarkerCluster } from '~/components/blog/examples/Leafle
 import type { MapImage } from '~/photographyUtils'
 
 import 'leaflet/dist/leaflet.css'
+import '~/styles/photography-map.css'
 
 const LazyPopup = lazy(async () => (await import('react-leaflet')).Popup)
 
