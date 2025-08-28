@@ -371,7 +371,7 @@ Vite's query suffixes remove a lot of boilerplate code for setting up web worker
 Comlink makes it easy to use web workers and removes the mental overhead that is usually required by their communication model.
 `bidc` extends the capabilities by supporting additional data types in messages, at the cost of additional performance overhead for sending data.
 
-Web workers can *and should** be used more often than one might think.
+Web workers can *and should* be used more often than one might think.
 While overkill for a singular API call, any client-side computations that are heavy enough to freeze the user interface can benefit from being moved to a web worker.
 
 In most cases, I would recommend using Comlink workers due to their type-safety and ease of use.

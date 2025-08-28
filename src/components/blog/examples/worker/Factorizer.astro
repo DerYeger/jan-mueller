@@ -12,7 +12,7 @@ const { id, title } = Astro.props
     <div class="font-bold">{title}</div>
   </div>
   <div class="flex gap-2">
-    <input type="number" id={`${id}-input`} placeholder="Enter a positive integer" class="grow rounded-sm border border-neutral-300 px-2 py-1 text-sm" />
+    <input type="number" id={`${id}-input`} placeholder="Enter a positive integer" class="grow bg-white rounded-sm border border-neutral-300 px-2 py-1 text-sm" />
     <button id={`${id}-button`} type="button" class="rounded-sm border border-neutral-300 bg-neutral-50 px-2 text-sm transition-colors hover:bg-neutral-300 disabled:cursor-default disabled:bg-neutral-200 disabled:hover:bg-neutral-200">Calculate</button>
   </div>
   <div id={`${id}-result`} class="min-h-[30px] overflow-x-auto overflow-y-hidden rounded-sm border border-neutral-300 bg-neutral-200 px-2 py-1 font-mono text-sm">Awaiting input</div>
