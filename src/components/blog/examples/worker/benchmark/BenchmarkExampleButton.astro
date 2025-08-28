@@ -16,7 +16,7 @@ const classes: Record<Type, string> = {
   danger: 'bg-red-500 text-white border-red-600 hover:bg-red-400',
 }
 ---
-<button id={`benchmark-${size}`} type="button" class={`rounded border px-1 text-sm transition-colors ${classes[type]} ${compact ? '-mr-1' : ''}`}>{text}</button>
+<button id={`benchmark-${size}`} type="button" class={`rounded-sm border px-1 text-sm transition-colors ${classes[type]} ${compact ? '-mr-1' : ''}`}>{text}</button>
 <script is:inline define:vars={{ size }}>
   const button = document.getElementById(`benchmark-${size}`)
   button.addEventListener('click', () => {

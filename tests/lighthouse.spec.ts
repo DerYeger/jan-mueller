@@ -20,6 +20,7 @@ lighthouseTest.describe('Lighthouse', () => {
           directory: 'lighthouse-reports',
           name: url.replace(/\//g, '_').replace(/^_/, ''),
         },
+        disableLogs: true,
         thresholds: { ...BASE_THRESHOLDS, ...(thresholds ?? {}) },
       })
     })

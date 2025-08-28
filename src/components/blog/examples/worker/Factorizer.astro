@@ -7,14 +7,14 @@ interface Props {
 const { id, title } = Astro.props
 ---
 
-<div class="flex flex-col gap-2 rounded border border-neutral-300 p-2">
+<div class="flex flex-col gap-2 rounded-sm border border-neutral-300 p-2">
   <div class="flex gap-2">
     <div class="font-bold">{title}</div>
   </div>
   <div class="flex gap-2">
-    <input type="number" id={`${id}-input`} placeholder="Enter a positive integer" class="grow rounded border border-neutral-300 px-2 py-1 text-sm" />
-    <button id={`${id}-button`} type="button" class="rounded border border-neutral-300 bg-neutral-50 px-2 text-sm transition-colors hover:bg-neutral-300 disabled:cursor-default disabled:bg-neutral-200 disabled:hover:bg-neutral-200">Calculate</button>
+    <input type="number" id={`${id}-input`} placeholder="Enter a positive integer" class="grow rounded-sm border border-neutral-300 px-2 py-1 text-sm" />
+    <button id={`${id}-button`} type="button" class="rounded-sm border border-neutral-300 bg-neutral-50 px-2 text-sm transition-colors hover:bg-neutral-300 disabled:cursor-default disabled:bg-neutral-200 disabled:hover:bg-neutral-200">Calculate</button>
   </div>
-  <div id={`${id}-result`} class="min-h-[30px] overflow-x-auto overflow-y-hidden rounded border border-neutral-300 bg-neutral-200 px-2 py-1 font-mono text-sm">Awaiting input</div>
+  <div id={`${id}-result`} class="min-h-[30px] overflow-x-auto overflow-y-hidden rounded-sm border border-neutral-300 bg-neutral-200 px-2 py-1 font-mono text-sm">Awaiting input</div>
   <slot />
 </div>

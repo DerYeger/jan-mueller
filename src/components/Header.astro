@@ -15,7 +15,7 @@ const { class: extraClasses = '', sublinks } = Astro.props
   class:list={[
     'surface-border glass sticky top-0 z-50 flex items-center justify-between border-b px-4 py-2',
     extraClasses,
-    sublinks ? 'with-sublinks flex-col gap-2' : 'items-start',
+    sublinks ? 'with-sublinks flex-col gap-2' : 'h-fit',
   ]}
 >
   <Navigation links={mainLinks} />

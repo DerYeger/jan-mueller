@@ -9,14 +9,14 @@ import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
 const name = 'Apollo'
 
 type Star =
-  `top-${number} right-${number} w-${number} !animation-delay-[${number}ms]`
+  `top-${number} right-${number} w-${number} animation-delay-${number}!`
 const stars: Star[] = [
-  'top-4 right-7 w-4 !animation-delay-[0ms]',
-  'top-10 right-12 w-3 !animation-delay-[200ms]',
-  'top-6 right-16 w-2 !animation-delay-[400ms]',
-  'top-12 right-20 w-4 !animation-delay-[600ms]',
-  'top-9 right-36 w-2 !animation-delay-[800ms]',
-  'top-16 right-48 w-3 !animation-delay-[1000ms]',
+  'top-4 right-7 w-4 animation-delay-0!',
+  'top-10 right-12 w-3 animation-delay-200!',
+  'top-6 right-16 w-2 animation-delay-400!',
+  'top-12 right-20 w-4 animation-delay-600!',
+  'top-9 right-36 w-2 animation-delay-800!',
+  'top-16 right-48 w-3 animation-delay-1000!',
 ]
 
 const { default: moon } = await import(`~/assets/projects/Moon.svg?raw`)
@@ -27,7 +27,7 @@ const { default: earth } = await import(`~/assets/projects/Earth.svg?raw`)
 <Showcase
   name={name}
   link="https://apollo.yeger.eu"
-  class="apollo dark !bg-gradient-to-tr from-slate-900 to-violet-900 transition-all"
+  class="apollo bg-linear-to-tr! dark from-slate-900 to-violet-900 transition-all"
 >
   {
     stars.map((star) => (

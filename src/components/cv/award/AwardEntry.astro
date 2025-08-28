@@ -16,13 +16,13 @@ const { award } = Astro.props as Props
     {award.by}
   </span>
   <span>
-    <span class="text-lighter">
+    <span class="text-neutral-600">
       <DateComponent date={award.date} />
     </span>
     {
       award.href && (
         <>
-          <span class="text-lighter">
+          <span class="text-neutral-600">
             <Dot />
           </span>
           <a href={award.href} rel="noreferrer" target="_blank">

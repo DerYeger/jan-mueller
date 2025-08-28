@@ -1,6 +1,7 @@
 packages: null
 
 onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
   - esbuild
   - exifreader
   - sharp

@@ -2,19 +2,19 @@
 import Experiment from '~/components/experiments/Experiment.astro'
 ---
 
-<Experiment class="grid grid-cols-2 grid-rows-2 !bg-neutral-200">
+<Experiment class="grid grid-cols-2 grid-rows-2 bg-neutral-200!">
   <div
-    class="m-auto size-full max-h-24 max-w-24 rounded-3xl bg-gradient-to-b from-neutral-300 via-neutral-200 to-neutral-100 p-2 outline outline-1 outline-neutral-300"
+    class="m-auto size-full max-h-24 max-w-24 rounded-3xl bg-linear-to-b from-neutral-300 via-neutral-200 to-neutral-100 p-2 outline-solid outline-1 outline-neutral-300"
   >
     <button
       aria-label="Release an ant"
-      class="ant-trigger group/button size-full rounded-2xl bg-gradient-to-b from-neutral-100 via-neutral-200 to-neutral-200 p-2 outline outline-1 outline-neutral-200 drop-shadow-md transition-all hover:to-neutral-300 hover:outline-neutral-300 hover:drop-shadow-sm"
+      class="ant-trigger group/button size-full rounded-2xl bg-linear-to-b from-neutral-100 via-neutral-200 to-neutral-200 p-2 outline-solid outline-1 outline-neutral-200 drop-shadow-md transition-all hover:to-neutral-300 hover:outline-neutral-300 hover:drop-shadow-xs"
     >
       <div
-        class="h-full rounded-xl bg-neutral-100 p-2 outline outline-1 outline-neutral-100 transition-all group-hover/button:bg-neutral-200 group-hover/button:outline-neutral-200"
+        class="h-full rounded-xl bg-neutral-100 p-2 outline-solid outline-1 outline-neutral-100 transition-all group-hover/button:bg-neutral-200 group-hover/button:outline-neutral-200"
       >
         <div
-          class="flex h-full items-center justify-center rounded-full bg-neutral-200 shadow-inner outline outline-1 outline-neutral-200 transition-all group-hover/button:bg-neutral-300 group-hover/button:outline-neutral-300"
+          class="flex h-full items-center justify-center rounded-full bg-neutral-200 shadow-inner outline-solid outline-1 outline-neutral-200 transition-all group-hover/button:bg-neutral-300 group-hover/button:outline-neutral-300"
         >
           <span class="select-none">🐜</span>
         </div>
@@ -22,7 +22,7 @@ import Experiment from '~/components/experiments/Experiment.astro'
     </button>
   </div>
   <div
-    class="relative m-auto h-12 w-full max-w-24 rounded-full bg-gradient-to-b from-neutral-300 via-neutral-200 to-neutral-100 p-2 outline outline-1 outline-neutral-300"
+    class="relative m-auto h-12 w-full max-w-24 rounded-full bg-linear-to-b from-neutral-300 via-neutral-200 to-neutral-100 p-2 outline-solid outline-1 outline-neutral-300"
   >
     <input
       type="checkbox"
@@ -33,11 +33,11 @@ import Experiment from '~/components/experiments/Experiment.astro'
     />
     <label
       for="neon-bar-toggle"
-      class="relative block h-8 cursor-pointer rounded-full bg-gradient-to-br from-red-500 to-neutral-500 shadow-inner outline outline-1 outline-neutral-300 transition-all peer-checked:bg-gradient-to-bl peer-checked:from-green-500 peer-checked:to-neutral-500"
+      class="relative block h-8 cursor-pointer rounded-full bg-linear-to-br from-red-500 to-neutral-500 shadow-inner outline-solid outline-1 outline-neutral-300 transition-all peer-checked:bg-linear-to-bl peer-checked:from-green-500 peer-checked:to-neutral-500"
     >
     </label>
     <div
-      class="pointer-events-none absolute inset-y-2 right-2 size-8 rounded-full bg-neutral-600 bg-gradient-to-b from-neutral-100 to-neutral-300 p-1 shadow-md transition-all peer-checked:mr-[calc(100%-12*0.25rem)]"
+      class="pointer-events-none absolute inset-y-2 right-2 size-8 rounded-full bg-neutral-600 bg-linear-to-b from-neutral-100 to-neutral-300 p-1 shadow-md transition-all peer-checked:mr-[calc(100%-12*0.25rem)]"
     >
       <div class="h-full rounded-full bg-neutral-200"></div>
     </div>

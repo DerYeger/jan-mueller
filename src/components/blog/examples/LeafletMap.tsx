@@ -20,7 +20,7 @@ function createClusterCustomIcon(cluster: any) {
   return divIcon({
     html: `<span>${cluster.getChildCount()}</span>`,
     className:
-      'bg-[#e74c3c] bg-opacity-100 text-white font-bold !flex items-center justify-center rounded-3xl border-white border-4 border-opacity-50',
+      'bg-[#e74c3c]/100 text-white font-bold flex! items-center justify-center rounded-3xl border-white/50 border-4',
     iconSize: point(40, 40, true),
   })
 }
@@ -53,7 +53,7 @@ export const MapCenter: FunctionalComponent = () => {
   })
   return (
     <span
-      className="button z-101 absolute right-2 top-2 rounded border-2 border-neutral-400 bg-white px-2 py-1 text-black"
+      className="button absolute right-2 top-2 rounded-sm border-2 border-neutral-400 bg-white px-2 py-1 text-black z-400"
       onClick={() => map.setZoom(13)}
     >
       {text}

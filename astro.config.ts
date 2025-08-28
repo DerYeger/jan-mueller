@@ -1,7 +1,6 @@
 import mdx from '@astrojs/mdx'
 import preact from '@astrojs/preact'
 import sitemap from '@astrojs/sitemap'
-import tailwind from '@astrojs/tailwind'
 import vue from '@astrojs/vue'
 import vitePreact from '@preact/preset-vite'
 import { defineConfig } from 'astro/config'
@@ -13,6 +12,7 @@ import rehypeExternalLinks from 'rehype-external-links'
 import rehypeSlug from 'rehype-slug'
 import { comlink } from 'vite-plugin-comlink'
 import { tsconfigPaths } from 'vite-plugin-lib'
+import tailwindcss from '@tailwindcss/vite'
 
 import { autolinkConfig } from './plugins/rehype-autolink-config'
 import { remarkReadingTime } from './plugins/remark-reading-time.js'
@@ -40,9 +40,6 @@ export default defineConfig({
     mdx({
       extendMarkdownConfig: true,
     }),
-    tailwind({
-      applyBaseStyles: false,
-    }),
     vue(),
     preact({
       compat: true,
@@ -53,7 +50,12 @@ export default defineConfig({
     robotsTxt(),
   ],
   vite: {
-    plugins: [comlink(), vitePreact(), tsconfigPaths({ verbose: true })],
+    plugins: [
+      comlink(),
+      vitePreact(),
+      tailwindcss(),
+      tsconfigPaths({ verbose: true }),
+    ],
     worker: {
       plugins: () => [comlink()],
     },

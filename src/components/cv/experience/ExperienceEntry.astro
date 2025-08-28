@@ -18,7 +18,7 @@ const { experience } = Astro.props as Props
     )
   }
   {!experience.href && <span class="font-bold text-black">{experience.name}</span>}
-  {experience.roles.length !== 1 ? <ul class="my-0 py-0">
+  {experience.roles.length !== 1 ? <ul class="my-0! py-0">
     {experience.roles.map((role) => (
       <li class="mb-0">
         <ExperienceRoleEntry role={role} />
