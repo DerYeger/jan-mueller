@@ -1,3 +1,10 @@
+# [3.69.0](https://github.com/DerYeger/jan-mueller/compare/v3.68.0...v3.69.0) (2025-08-28)
+
+
+### Features
+
+* migrate to tailwind v4 ([1a16c91](https://github.com/DerYeger/jan-mueller/commit/1a16c910be8982b0f71c0c8cb9cc9804feaf5801))
+
 # [3.68.0](https://github.com/DerYeger/jan-mueller/compare/v3.67.0...v3.68.0) (2025-08-27)
 
 
