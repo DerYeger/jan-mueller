@@ -38,13 +38,10 @@ export const BASE_THRESHOLDS: Thresholds = {
   pwa: undefined,
 }
 
-export interface ScreenshotOptions extends PageAssertionsToHaveScreenshotOptions {
-  skip?: boolean
-}
+export type ScreenshotOptions = Omit<PageAssertionsToHaveScreenshotOptions, 'mask'>
 
 export const BASE_SCREENSHOT: ScreenshotOptions = {
   fullPage: true,
-  skip: false,
 }
 
 export const PAGES: { url: `/${string}`, thresholds?: Thresholds, screenshot?: ScreenshotOptions }[] = [
@@ -67,7 +64,7 @@ export const PAGES: { url: `/${string}`, thresholds?: Thresholds, screenshot?: S
       accessibility: 0, // OpenStreetMap drops accessibility to 0
     },
     screenshot: {
-      maxDiffPixelRatio: 0.01,
+      // maxDiffPixelRatio: 0.01,
     },
   },
   { url: '/blog/vue-composable-testing' },
@@ -103,6 +100,6 @@ export const PAGES: { url: `/${string}`, thresholds?: Thresholds, screenshot?: S
     },
   },
   // Experiments
-  { url: '/experiments', screenshot: { skip: true } },
-  { url: '/experiments/vector-nodes', screenshot: { skip: true } },
+  { url: '/experiments' },
+  { url: '/experiments/vector-nodes' },
 ]
