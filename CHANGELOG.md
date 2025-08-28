@@ -1,3 +1,11 @@
+## [3.69.1](https://github.com/DerYeger/jan-mueller/compare/v3.69.0...v3.69.1) (2025-08-28)
+
+
+### Bug Fixes
+
+* restore button cursor ([90257d3](https://github.com/DerYeger/jan-mueller/commit/90257d3d452c14388eba42b50296d4e0d85e72c7))
+* restore correct padding ([da3f74b](https://github.com/DerYeger/jan-mueller/commit/da3f74bc6003a15761b18707b5c35b3bfc9b4de1))
+
 # [3.69.0](https://github.com/DerYeger/jan-mueller/compare/v3.68.0...v3.69.0) (2025-08-28)
 
 
