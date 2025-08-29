@@ -1,0 +1,23 @@
+---
+import Button from '~/components/ui/Button.astro'
+import { cn } from '~/components/ui/cn'
+
+type Type = 'safe' | 'danger'
+
+// eslint-disable-next-line no-undef
+interface Props extends Omit<astroHTML.JSX.ButtonHTMLAttributes, 'type'> {
+  compact?: boolean
+  type?: Type
+}
+
+const { class: className, compact, type = 'safe', ...props } = Astro.props
+
+const classes: Record<Type, string> = {
+  safe: 'bg-green-500 text-white border-green-600 hover:bg-green-400',
+  danger: 'bg-red-500 text-white border-red-600 hover:bg-red-400',
+}
+---
+
+<Button class={cn('rounded-sm border px-1 text-sm transition-colors', compact ? '-mr-1' : undefined, classes[type], className)} {...props}>
+  <slot />
+</Button>

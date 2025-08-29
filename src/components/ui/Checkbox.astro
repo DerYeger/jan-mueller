@@ -1,0 +1,11 @@
+---
+import { cn } from '~/components/ui/cn'
+
+// eslint-disable-next-line no-undef
+interface Props extends Omit<astroHTML.JSX.InputHTMLAttributes, 'type'> {
+}
+
+const { class: className, ...props } = Astro.props
+---
+
+<input type="checkbox" class={cn('rounded-sm bg-white border border-neutral-300 px-2 py-1 disabled:bg-neutral-200', className)} {...props} />

@@ -1,0 +1,13 @@
+---
+import { cn } from '~/components/ui/cn'
+
+// eslint-disable-next-line no-undef
+interface Props extends astroHTML.JSX.InputHTMLAttributes {
+  type: 'number' | 'text'
+  placeholder: string
+}
+
+const { class: className, ...props } = Astro.props
+---
+
+<input class={cn('grow bg-white rounded-sm border border-neutral-300 px-2 py-1 text-sm disabled:bg-neutral-200 transition-colors', className)} {...props} />

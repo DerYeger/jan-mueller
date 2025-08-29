@@ -1,12 +1,18 @@
+---
+import Button from '~/components/ui/Button.astro'
+import Checkbox from '~/components/ui/Checkbox.astro'
+import Input from '~/components/ui/Input.astro'
+---
+
 <div class="flex flex-col gap-2 rounded-sm border border-neutral-300 p-2">
   <div class="font-bold">Worker Benchmark</div>
   <div class="flex flex-wrap gap-2">
-    <input type="number" id="benchmark-size-input" placeholder="Array size" class="grow rounded-sm bg-white border border-neutral-300 px-2 py-1 text-sm" />
+    <Input type="number" id="benchmark-size-input" placeholder="Array size" />
     <div class="flex items-center gap-1 text-sm">
-      <input type="checkbox" id="benchmark-reversed-checkbox" class="rounded-sm bg-white border border-neutral-300 px-2 py-1" />
+      <Checkbox id="benchmark-reversed-checkbox" />
       <label for="benchmark-reversed-checkbox">Reverse</label>
     </div>
-    <button id="benchmark-submit-button" type="button" class="rounded-sm border border-neutral-300 bg-neutral-50 px-2 text-sm transition-colors hover:bg-neutral-300 disabled:cursor-default disabled:bg-neutral-200 disabled:hover:bg-neutral-200">Run</button>
+    <Button id="benchmark-submit-button">Run</Button>
   </div>
   <table class="m-0 mt-4">
     <thead>

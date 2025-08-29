@@ -1,4 +1,5 @@
 ---
+import ExampleButton from '~/components/ui/ExampleButton.astro'
 
 type Type = 'safe' | 'danger'
 
@@ -10,14 +11,14 @@ interface Props {
   type?: Type
 }
 
-const { id, value, text, compact, type = 'safe' } = Astro.props
+const { id, value, text, compact, type } = Astro.props
 
 const classes: Record<Type, string> = {
   safe: 'bg-green-500 text-white border-green-600 hover:bg-green-400',
   danger: 'bg-red-500 text-white border-red-600 hover:bg-red-400',
 }
 ---
-<button id={`factorize-${id}-${value}`} type="button" class={`rounded-sm border px-1 text-sm transition-colors ${classes[type]} ${compact ? '-mr-1' : ''}`}>{text}</button>
+<ExampleButton id={`factorize-${id}-${value}`} type={type} compact={compact}>{text}</ExampleButton>
 <script is:inline define:vars={{ id, value }}>
   const button = document.getElementById(`factorize-${id}-${value}`)
   button.addEventListener('click', () => {
