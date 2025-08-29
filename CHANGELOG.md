@@ -1,3 +1,17 @@
+# [3.70.0](https://github.com/DerYeger/jan-mueller/compare/v3.69.1...v3.70.0) (2025-08-29)
+
+
+### Bug Fixes
+
+* restore input background color ([e60b40a](https://github.com/DerYeger/jan-mueller/commit/e60b40a745547944412e6c727f52b269d74bdce5))
+* restore link hover color ([d2e8b82](https://github.com/DerYeger/jan-mueller/commit/d2e8b82daf1e2a7c6b70c9bcb7232ed0c4def96b))
+
+
+### Features
+
+* create reusable inputs ([4dd88aa](https://github.com/DerYeger/jan-mueller/commit/4dd88aa55ce67dded4bc43839f97e8085a4bfc59))
+* use thead ([a0cd484](https://github.com/DerYeger/jan-mueller/commit/a0cd4840aadeeadd3c2e3184021492c33341e665))
+
 ## [3.69.1](https://github.com/DerYeger/jan-mueller/compare/v3.69.0...v3.69.1) (2025-08-28)
 
 
