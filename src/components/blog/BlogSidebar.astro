@@ -11,16 +11,17 @@ const { position, title } = Astro.props
 
 <div class={cn('sticky top-(--header-height) max-h-[calc(100dvh-var(--header-height))] hidden w-64 xl:flex grow', position === 'left' ? 'justify-end' : 'justify-start')}>
   <div class="flex flex-col p-2 pt-8 text-sm max-h-full gap-2">
-      <div class="font-semibold text-lg text-black">
+      <div class={cn('font-semibold text-lg text-black', position === 'left' ? 'text-right' : undefined)}>
         {title}
       </div>
-      <div class="flex flex-col sidebar grow overflow-y-auto">
+      <div class={cn('flex flex-col sidebar grow overflow-y-auto gap-1 text-black', position === 'left' ? 'text-right' : undefined)}>
         <slot />
       </div>
 </div>
 <style>
   .sidebar {
     --padding: 1rem;
+    padding-block: var(--padding);
     mask-image: linear-gradient(
       to top,
       transparent 0px, black var(--padding),

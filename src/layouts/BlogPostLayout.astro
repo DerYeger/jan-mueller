@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components'
 import { getCollection } from 'astro:content'
+import moment from 'moment'
 import BlogSidebar from '~/components/blog/BlogSidebar.astro'
 import BlogHeroImage from '~/components/BlogHeroImage.astro'
 
@@ -60,8 +61,14 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
   <div class="max-w-[1920px] mx-auto flex items-start gap-12">
     <BlogSidebar position="left" title="Posts">
       {posts.map((post) => (
-        <a href={`/blog/${post.slug}/`} class={cn('border-b border-neutral-200 py-2 hover:bg-neutral-100', post.slug === slug ? 'text-blue-600' : undefined)}>
-          {post.data.title}
+        <a href={`/blog/${post.slug}/`} class={cn('py-1 no-underline', post.slug === slug ? 'text-blue-600 hover:text-blue-500' : undefined)}>
+          <div class="underline">{post.data.title}</div>
+          <div class="text-neutral-600">
+            <DateComponent
+              date={moment(post.data.pubDate).toISOString()}
+              format="MMM DD, YYYY"
+            />
+          </div>
         </a>
       ))}
     </BlogSidebar>
@@ -120,7 +127,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
     </article>
     <BlogSidebar position="right" title="Contents">
       {headings.map(({ depth, slug, text }) => (
-        <a style={{ marginLeft: `${2 * (depth - 2)}rem` }} id={`heading-link-${slug}`} href={`#${slug}`} class={cn('border-b border-neutral-200 py-2 hover:bg-neutral-100')}>{removeSRLabel(text)}</a>
+        <a style={{ marginLeft: `${2 * (depth - 2)}rem` }} id={`heading-link-${slug}`} href={`#${slug}`} class="py-1">{removeSRLabel(text)}</a>
       ))}
     </BlogSidebar>
   </div>
@@ -151,6 +158,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
       const targetHeadingLinkId = `heading-link-${bestMatch.target.id}`
       headingLinks.forEach((link) => {
         link.classList.toggle('text-blue-600', link.id === targetHeadingLinkId)
+         link.classList.toggle('hover:text-blue-500', link.id === targetHeadingLinkId)
       })
     }
 
