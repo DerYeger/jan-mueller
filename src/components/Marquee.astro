@@ -2,18 +2,29 @@
   class="marquee my-[-0.25em] inline-block h-[1.25em] overflow-hidden bg-inherit"
 >
   <div
-    class="[&>*]:gradient-text flex flex-col gap-4 whitespace-nowrap bg-inherit py-2 text-end"
+    class="[&>*]:gradient-text flex flex-col gap-4 whitespace-nowrap bg-inherit text-end"
   >
     <span class="from-blue-500 to-blue-600">Software</span>
-    <span class="from-rose-500 to-rose-600"> Web</span>
-    <span class="from-teal-500 to-teal-600"> Mobile</span>
-    <span class="from-blue-500 to-blue-600" aria-hidden="true"> Software</span>
+    <span class="from-rose-500 to-rose-600">Web</span>
+    <span class="from-teal-500 to-teal-600">Mobile</span>
+    <span class="from-blue-500 to-blue-600" aria-hidden="true">Software</span>
   </div>
 </div>
 
 <style scoped>
+  .marquee {
+    --padding: 0.5rem;
+    mask-image: linear-gradient(
+      to top,
+      transparent 0px, black var(--padding),
+      black calc(100% - var(--padding)),
+      transparent 100%
+    );
+  }
+
   .marquee > div {
-    animation: vertical-marquee 8s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    animation: vertical-marquee 8s cubic-bezier(0.25, 0.85, 0.4, 1) infinite;
+    padding: var(--padding) 0;
     --offset: -5.5px;
   }
 
