@@ -12,7 +12,7 @@ const isSub = typeof href === 'string' && Astro.url.pathname.startsWith(href)
 const isActive = isExact || (!exact && !isHome && isSub)
 ---
 
-<div class="flex flex-1 items-center justify-center md:grow-0">
+<div class="flex flex-1 md:grow-0 items-center justify-center">
   <a
     href={href}
     class:list={[

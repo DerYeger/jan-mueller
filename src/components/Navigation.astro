@@ -1,15 +1,17 @@
 ---
 import HeaderLink from '~/components/HeaderLink.astro'
+import { cn } from '~/components/ui/cn'
 import type { Link } from '~/links'
 
 interface Props {
+  align: 'left' | 'center'
   links: Link[]
   isSub?: boolean
 }
 
-const { links, isSub = false } = Astro.props
+const { links, isSub = false, align } = Astro.props
 ---
 
-<nav class="flex w-full flex-1 justify-evenly gap-2 sm:justify-normal">
+<nav class={cn('flex w-full flex-1 gap-2 md:gap-4', align === 'left' ? 'justify-start' : 'justify-center')}>
   {links.map((link) => (<HeaderLink href={link.href} exact={isSub}>{link.label}</HeaderLink>))}
 </nav>
