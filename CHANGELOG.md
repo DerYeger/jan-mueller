@@ -1,3 +1,15 @@
+# [3.71.0](https://github.com/DerYeger/jan-mueller/compare/v3.70.0...v3.71.0) (2025-08-31)
+
+
+### Features
+
+* implement blog sidebar ([144f1fd](https://github.com/DerYeger/jan-mueller/commit/144f1fdad53df0db3ee4f2ced5ba6959674d8c42))
+* improve scroll alignment ([dcb4eb1](https://github.com/DerYeger/jan-mueller/commit/dcb4eb135e54128e7dd65d2ba4f360bf838714a0))
+* improve sidebar ([1f80771](https://github.com/DerYeger/jan-mueller/commit/1f807717a4fd8a1e1265bf86d00c48a50a975dc8))
+* limit max ants ([3005512](https://github.com/DerYeger/jan-mueller/commit/3005512648ccdff8f44565837f362f793b08ae5a))
+* prevent CLS ([d96abaa](https://github.com/DerYeger/jan-mueller/commit/d96abaa7bd71dab424181aa6c85e2bc07b0c4282))
+* various style improvements ([8c46f6d](https://github.com/DerYeger/jan-mueller/commit/8c46f6d8e030f5b8fa490160c7fa272e71e3d923))
+
 # [3.70.0](https://github.com/DerYeger/jan-mueller/compare/v3.69.1...v3.70.0) (2025-08-29)
 
 
