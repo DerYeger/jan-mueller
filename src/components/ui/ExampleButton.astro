@@ -2,7 +2,7 @@
 import Button from '~/components/ui/Button.astro'
 import { cn } from '~/components/ui/cn'
 
-type Type = 'safe' | 'danger'
+export type Type = 'safe' | 'danger'
 
 // eslint-disable-next-line no-undef
 interface Props extends Omit<astroHTML.JSX.ButtonHTMLAttributes, 'type'> {

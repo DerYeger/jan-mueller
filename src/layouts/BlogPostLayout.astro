@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import moment from 'moment'
 import BlogSidebar from '~/components/blog/BlogSidebar.astro'
@@ -59,20 +60,40 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
 
 <MainLayout title={title} description={description} image={openGraphImage}>
   <div class="max-w-[1920px] mx-auto flex items-start gap-12">
-    <BlogSidebar position="left" title="Posts">
-      {posts.map((post) => (
-        <a href={`/blog/${post.slug}/`} class={cn('py-1 no-underline', post.slug === slug ? 'text-blue-600 hover:text-blue-500' : undefined)}>
-          <div class="underline">{post.data.title}</div>
-          <div class="text-neutral-600">
-            <DateComponent
-              date={moment(post.data.pubDate).toISOString()}
-              format="MMM DD, YYYY"
-            />
+    <BlogSidebar position="left" title="Posts" class="order-1">
+      {posts.map(async (post) => (
+        <a href={`/blog/${post.slug}/`} class={cn('py-1 no-underline flex gap-2 items-center justify-end', post.slug === slug ? 'text-blue-600 hover:text-blue-500' : undefined)}>
+          <div>
+             <div class="underline text-balance">{post.data.title}</div>
+              <div class="text-neutral-600">
+                <DateComponent
+                  date={moment(post.data.pubDate).toISOString()}
+                  format="MMM DD, YYYY"
+                />
+            </div>
           </div>
+          <Image
+            src={(await getImageAsset(post.data.heroImage))!}
+            class="hidden 2xl:block w-10 h-10 rounded-full shadow-lg pointer-events-none select-none"
+            layout="fixed"
+            quality="high"
+            format="webp"
+            loading="lazy"
+            width={48}
+            height={48}
+            alt={post.data.title}
+          />
         </a>
       ))}
     </BlogSidebar>
-    <article class="mx-auto container prose max-w-[80ch] xl:w-fit px-4 py-8">
+    <BlogSidebar position="right" title="Contents" class="order-3">
+      {headings.map(({ depth, slug, text }) => (
+        <a style={{ marginLeft: `${2 * (depth - 2)}rem` }} id={`heading-link-${slug}`} href={`#${slug}`} class="py-1 text-balance">
+          {removeSRLabel(text)}
+        </a>
+      ))}
+    </BlogSidebar>
+    <article class="mx-auto container prose max-w-[80ch] xl:w-fit px-4 py-8 order-2">
       <BlogHeroImage class="card border-0" heroImage={heroImage} title={title} height={200} loading="eager" />
       <h1>{title}</h1>
       <div class="mb-4 mt-8 flex flex-wrap gap-1">
@@ -125,11 +146,6 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
         )}
       </div>
     </article>
-    <BlogSidebar position="right" title="Contents">
-      {headings.map(({ depth, slug, text }) => (
-        <a style={{ marginLeft: `${2 * (depth - 2)}rem` }} id={`heading-link-${slug}`} href={`#${slug}`} class="py-1">{removeSRLabel(text)}</a>
-      ))}
-    </BlogSidebar>
   </div>
 </MainLayout>
 <script>

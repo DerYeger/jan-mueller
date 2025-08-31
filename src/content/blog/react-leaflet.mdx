@@ -24,7 +24,7 @@ Please note that I'm using type imports of [Preact](https://preactjs.com) instea
 Preact has a React compatibility mode, so the imports are the only difference from a React implementation.
 In the following code snippets, I'll add notes about differences to React as comments.
 
-## Creating a Reusable Component
+## Creating a reusable component
 
 <LeafletMap client:only="preact" />
 
@@ -123,7 +123,7 @@ A simple fix for this issue is settings the `z-index` of the offending elements 
 }
 ```
 
-## Adding Markers
+## Adding markers
 
 <LeafletMapWithMarkers client:only="preact" />
 
@@ -169,7 +169,7 @@ const markers: [number, number][] = [center, [48.2, 16.37], [48.1987, 16.3685]]
 </LeafletMap>
 ```
 
-### Improving Performance
+### Improving performance
 
 <LeafletMapWithClusters client:only="preact" />
 

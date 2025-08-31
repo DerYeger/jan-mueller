@@ -6,7 +6,7 @@ pubDate: 2025-08-23
 layout: '~/layouts/BlogPostLayout.astro'
 ---
 
-## The Problem
+## The problem
 
 Writing unit tests for Vue composables that only deal with simple reactive state (`ref`, `computed`, etc.) is trivial.
 However, once component lifecycle (`onMounted`, `onUnmounted`, etc.), plugins (`vue-router`, `@tanstack/vue-query`), or `inject` calls are involved, any tests without additional setup will fail.
@@ -76,7 +76,7 @@ describe('Testing Vue Composables', () => {
 })
 ```
 
-## The Solution
+## The solution
 
 I use the below `withComponentLifecycle` utility in each of my Vue projects.
 It runs a provided composable in a dummy component, which is mounted within an `App` instance.
@@ -140,7 +140,7 @@ export function withComponentLifecycle<T>(
 }
 ```
 
-## The Result
+## The result
 
 Using `withComponentLifecycle` is straightforward.
 Below are the same tests as above, but now all tests pass thanks to this utility.

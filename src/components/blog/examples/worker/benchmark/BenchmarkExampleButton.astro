@@ -1,7 +1,6 @@
 ---
 import ExampleButton from '~/components/ui/ExampleButton.astro'
-
-type Type = 'safe' | 'danger'
+import type { Type } from '~/components/ui/ExampleButton.astro'
 
 interface Props {
   size: number
@@ -11,12 +10,8 @@ interface Props {
 }
 
 const { size, text, compact, type = 'safe' } = Astro.props
-
-const classes: Record<Type, string> = {
-  safe: 'bg-green-500 text-white border-green-600 hover:bg-green-400',
-  danger: 'bg-red-500 text-white border-red-600 hover:bg-red-400',
-}
 ---
+
 <ExampleButton id={`benchmark-${size}`} type={type} compact={compact}>{text}</ExampleButton>
 <script is:inline define:vars={{ size }}>
   const button = document.getElementById(`benchmark-${size}`)

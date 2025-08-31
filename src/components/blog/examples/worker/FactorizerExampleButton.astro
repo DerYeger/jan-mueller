@@ -1,7 +1,6 @@
 ---
 import ExampleButton from '~/components/ui/ExampleButton.astro'
-
-type Type = 'safe' | 'danger'
+import type { Type } from '~/components/ui/ExampleButton.astro'
 
 interface Props {
   id: string
@@ -12,12 +11,8 @@ interface Props {
 }
 
 const { id, value, text, compact, type } = Astro.props
-
-const classes: Record<Type, string> = {
-  safe: 'bg-green-500 text-white border-green-600 hover:bg-green-400',
-  danger: 'bg-red-500 text-white border-red-600 hover:bg-red-400',
-}
 ---
+
 <ExampleButton id={`factorize-${id}-${value}`} type={type} compact={compact}>{text}</ExampleButton>
 <script is:inline define:vars={{ id, value }}>
   const button = document.getElementById(`factorize-${id}-${value}`)

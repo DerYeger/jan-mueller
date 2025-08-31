@@ -101,14 +101,14 @@ The labels for screen readers are already hidden by Tailwind's styles for the `.
 Unfortunately, icons will not be aligned with their headings, and navigating to a heading via its slug will result in it being obstructed by the header.
 We will fix that in the next section!
 
-## Issues and Workarounds
+## Issues and workarounds
 
 Here's what we need to achieve:
 
 1. Align the anchor icon with the heading's text
 2. Prevent a sticky header from obstructing headings when navigating by slugs
 
-### Anchor Icon Alignment
+### Anchor icon alignment
 
 Fixing the alignment of anchor icons is trivial using Flexbox.
 An intuitive solution for the problem are the following Tailwind utilities:
@@ -121,7 +121,7 @@ An intuitive solution for the problem are the following Tailwind utilities:
 }
 ```
 
-### Heading Offset
+### Heading offset
 
 Next, we will prevent a sticky header from overlaying headings by using the `scroll-margin-top` property.
 In addition to the height of the header, you may also consider adding any `padding` of the Markdown's container element to the scroll-margin.
