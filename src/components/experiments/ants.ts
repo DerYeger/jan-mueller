@@ -6,11 +6,20 @@ function randomInRange(min: number, max: number) {
 
 type Direction = [number, number]
 
+const maxAntCount = 6
+let activeAntCount = 0
+
 function randomDirection(): Direction {
-  return [randomInRange(-5, 5), randomInRange(-5, 5)]
+  return [randomInRange(-5, 5), randomInRange(-10, 0) + 3]
 }
 
+const antButtons = document
+  .querySelectorAll<HTMLButtonElement>('button.ant-trigger')
+
 function letThemLoose(container: HTMLElement) {
+  if (activeAntCount >= maxAntCount) {
+    return
+  }
   // create a canvas, add it to the dom and set its width and height to the window width and height
   const canvas = document.createElement('canvas')
   canvas.width = container.getBoundingClientRect().width
@@ -38,6 +47,13 @@ function letThemLoose(container: HTMLElement) {
     return
   }
 
+  activeAntCount++
+  if (activeAntCount >= maxAntCount) {
+    antButtons.forEach((button) => {
+      button.disabled = true
+    })
+    return
+  }
   const interval = window.setInterval(() => {
     // direction is a tuple of two numbers, the first one is the x direction and the second one is the y direction. add a black dot relative to the coordinates x and y to the canvas
     const [xDirection, yDirection] = ant.direction
@@ -62,6 +78,10 @@ function letThemLoose(container: HTMLElement) {
     }
     if (ant.y + yDirection <= 0) {
       window.clearInterval(interval)
+      activeAntCount--
+      antButtons.forEach((button) => {
+        button.disabled = false
+      })
       return
     }
     // if the y coordinate is bigger than the window height or smaller than 0, change the y direction
@@ -74,9 +94,7 @@ function letThemLoose(container: HTMLElement) {
   }, 100)
 }
 
-document
-  .querySelectorAll<HTMLButtonElement>('button.ant-trigger')
-  .forEach((button) => {
+antButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const container = document.querySelector<HTMLElement>('.ant-container')
       if (!container) {
