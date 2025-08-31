@@ -46,11 +46,15 @@
 
 @layer components {
   article.prose *:is(h1, h2, h3, h4, h5, h6) {
-    @apply flex items-center gap-2 scroll-mt-20;
+    @apply flex items-center gap-2 scroll-mt-19.5;
   }
 
   .anchor-icon {
     @apply text-neutral-600 hover:text-neutral-700 transition-colors;
+
+    & > svg {
+      @apply overflow-visible;
+    }
   }
 
   article.prose * {

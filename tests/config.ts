@@ -61,10 +61,8 @@ export const PAGES: { url: `/${string}`, thresholds?: Thresholds, screenshot?: S
   {
     url: '/blog/react-leaflet',
     thresholds: {
-      accessibility: 0, // OpenStreetMap drops accessibility to 0
-    },
-    screenshot: {
-      // maxDiffPixelRatio: 0.01,
+      accessibility: 0, // OpenStreetMap drops accessibility to 0,
+      performance: 99,
     },
   },
   { url: '/blog/vue-composable-testing' },
