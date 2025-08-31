@@ -1,3 +1,10 @@
+# [3.73.0](https://github.com/DerYeger/jan-mueller/compare/v3.72.0...v3.73.0) (2025-08-31)
+
+
+### Features
+
+* improve header layout ([40a6d28](https://github.com/DerYeger/jan-mueller/commit/40a6d287e0135a6370aafa3c7987f91c1b8e7571))
+
 # [3.72.0](https://github.com/DerYeger/jan-mueller/compare/v3.71.0...v3.72.0) (2025-08-31)
 
 
