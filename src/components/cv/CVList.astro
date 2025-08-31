@@ -6,7 +6,7 @@ interface Props {
 const { id } = Astro.props
 ---
 
-<div class="prose prose-xl flex flex-col" data-testid={id}>
+<div class="prose prose-xl flex flex-col select-text" data-testid={id}>
   <h2 class="ml-8 scroll-mt-20" id={id}>
     <slot name="title" />
   </h2>

@@ -5,12 +5,12 @@ import Input from '~/components/ui/Input.astro'
 ---
 
 <div class="flex flex-col gap-2 rounded-sm border border-neutral-300 p-2">
-  <div class="font-bold">Worker Benchmark</div>
+  <div class="font-bold select-none">Worker Benchmark</div>
   <div class="flex flex-wrap gap-2">
     <Input type="number" id="benchmark-size-input" placeholder="Array size" />
     <div class="flex items-center gap-1 text-sm">
       <Checkbox id="benchmark-reversed-checkbox" />
-      <label for="benchmark-reversed-checkbox">Reverse</label>
+      <label for="benchmark-reversed-checkbox" class="select-none">Reverse</label>
     </div>
     <Button id="benchmark-submit-button">Run</Button>
   </div>

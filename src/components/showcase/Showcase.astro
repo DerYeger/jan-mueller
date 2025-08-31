@@ -11,7 +11,7 @@ const { name, class: extraClasses = '', link } = Astro.props
 ---
 
 <div
-  class={`showcase card group relative flex size-full flex-col justify-between gap-6 overflow-hidden p-6 ${extraClasses}`}
+  class={`showcase card group relative flex size-full flex-col justify-between gap-6 overflow-hidden p-6 select-text ${extraClasses}`}
 >
   <slot />
   {link ? <ShowcaseLink href={link} label={name} /> : null}

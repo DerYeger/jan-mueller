@@ -28,7 +28,7 @@ const props = defineProps<{ images: GalleryImage[] }>()
           :loading="image.lazy ? 'lazy' : 'eager'"
           draggable="false"
           decoding="async"
-          class="pointer-events-none w-full select-none shadow-2xl"
+          class="w-full shadow-2xl"
         >
       </div>
     </MasonryWall>

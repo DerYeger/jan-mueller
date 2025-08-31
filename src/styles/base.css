@@ -38,6 +38,10 @@
   a {
     @apply transition-colors underline;
   }
+
+  img {
+    @apply select-none pointer-events-none;
+  }
 }
 
 @layer components {
@@ -47,6 +51,14 @@
 
   .anchor-icon {
     @apply text-neutral-600 hover:text-neutral-700 transition-colors;
+  }
+
+  article.prose * {
+    @apply select-text;
+  }
+
+  article.prose p {
+    @apply text-justify;
   }
 }
 

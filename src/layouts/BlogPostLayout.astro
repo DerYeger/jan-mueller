@@ -59,7 +59,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
 ---
 
 <MainLayout title={title} description={description} image={openGraphImage}>
-  <div class="max-w-[1920px] mx-auto flex items-start gap-12">
+  <div class="max-w-[1920px] mx-auto flex items-start gap-8 2xl:gap-16">
     <BlogSidebar position="left" title="Posts" class="order-1">
       {posts.map(async (post) => (
         <a href={`/blog/${post.slug}/`} class={cn('py-1 no-underline flex gap-2 items-center justify-end', post.slug === slug ? 'text-blue-600 hover:text-blue-500' : undefined)}>
@@ -74,7 +74,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
           </div>
           <Image
             src={(await getImageAsset(post.data.heroImage))!}
-            class="hidden 2xl:block w-10 h-10 rounded-full shadow-lg pointer-events-none select-none"
+            class="hidden bg-neutral-200 2xl:block w-10 h-10 rounded-full shadow-lg"
             layout="fixed"
             quality="high"
             format="webp"
@@ -94,7 +94,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
       ))}
     </BlogSidebar>
     <article class="mx-auto container prose max-w-[80ch] xl:w-fit px-4 py-8 order-2">
-      <BlogHeroImage class="card border-0" heroImage={heroImage} title={title} height={200} loading="eager" />
+      <BlogHeroImage class="card border-0 bg-neutral-200" heroImage={heroImage} title={title} height={200} loading="eager" />
       <h1>{title}</h1>
       <div class="mb-4 mt-8 flex flex-wrap gap-1">
         {pubDate && <DateComponent date={pubDate} format="MMM DD, YYYY" />}

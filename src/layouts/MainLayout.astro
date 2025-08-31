@@ -26,7 +26,7 @@ const { title, description, image, sublinks, fitScreen = false } = Astro.props a
       }
     </style>) : null}
   </head>
-  <body class:list={['max-w-full overflow-x-hidden bg-white text-black', fitScreen ? 'flex flex-col' : '']}>
+  <body class:list={['max-w-full overflow-x-hidden bg-white text-black select-none', fitScreen ? 'flex flex-col' : '']}>
     <Header sublinks={sublinks} />
     <Main class={fitScreen ? 'grow' : ''}>
       <slot />
