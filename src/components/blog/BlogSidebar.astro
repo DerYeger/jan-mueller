@@ -1,0 +1,31 @@
+---
+import { cn } from '~/components/ui/cn'
+
+interface Props {
+  position: 'left' | 'right'
+  title: string
+}
+
+const { position, title } = Astro.props
+---
+
+<div class={cn('sticky top-(--header-height) max-h-[calc(100dvh-var(--header-height))] hidden w-64 xl:flex grow', position === 'left' ? 'justify-end' : 'justify-start')}>
+  <div class="flex flex-col p-2 pt-8 text-sm max-h-full gap-2">
+      <div class="font-semibold text-lg text-black">
+        {title}
+      </div>
+      <div class="flex flex-col sidebar grow overflow-y-auto">
+        <slot />
+      </div>
+</div>
+<style>
+  .sidebar {
+    --padding: 1rem;
+    mask-image: linear-gradient(
+      to top,
+      transparent 0px, black var(--padding),
+      black calc(100% - var(--padding)),
+      transparent 100%
+    );
+  }
+</style>
