@@ -1,3 +1,15 @@
+# [3.72.0](https://github.com/DerYeger/jan-mueller/compare/v3.71.0...v3.72.0) (2025-08-31)
+
+
+### Bug Fixes
+
+* adjust cv width ([0cc5f64](https://github.com/DerYeger/jan-mueller/commit/0cc5f64a53101d37df149bbb0f337dcb11291d91))
+
+
+### Features
+
+* improve marquee animation ([0b64c28](https://github.com/DerYeger/jan-mueller/commit/0b64c28987da2225986c58b452f9f8ebe0741e9e))
+
 # [3.71.0](https://github.com/DerYeger/jan-mueller/compare/v3.70.0...v3.71.0) (2025-08-31)
 
 
