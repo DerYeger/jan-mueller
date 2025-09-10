@@ -89,7 +89,7 @@
     "ts-node": "10.9.2",
     "turbo": "2.5.6",
     "typescript": "5.9.2",
-    "vite": "6.3.5",
+    "vite": "6.3.6",
     "vite-plugin-comlink": "5.3.0",
     "vite-plugin-lib": "3.0.2",
     "vue": "3.5.20",
