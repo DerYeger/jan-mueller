@@ -1,5 +1,15 @@
+---
+import { cn } from '~/components/ui/cn'
+
+interface Props {
+  class?: string
+}
+
+const props = Astro.props
+---
+
 <p
-  class="showcase-animate max-w-none text-pretty text-sm font-semibold leading-8! text-neutral-500 dark:text-neutral-400 md:text-base"
+  class={cn('showcase-animate max-w-none text-pretty grow text-sm font-semibold leading-8! text-neutral-500 dark:text-neutral-400 md:text-base', props.class)}
 >
   <slot />
 </p>

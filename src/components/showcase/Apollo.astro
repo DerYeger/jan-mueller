@@ -48,16 +48,10 @@ const { default: earth } = await import(`~/assets/projects/Earth.svg?raw`)
     <Fragment set:html={earth} />
   </div>
   <div class="prose dark:prose-invert">
-    <ShowcaseTitle>{name} 🚀</ShowcaseTitle>
+    <ShowcaseTitle class="font-black">{name} 🚀</ShowcaseTitle>
     <ShowcaseDescription>
       A <Mark>graph-based first-order-logic model checker</Mark> and the result of
-      my <Mark>bachelor thesis.</Mark>
+      my <Mark class="-mr-1">bachelor thesis</Mark>.
     </ShowcaseDescription>
   </div>
 </Showcase>
-
-<style is:global>
-  .apollo a {
-    background-color: transparent !important;
-  }
-</style>

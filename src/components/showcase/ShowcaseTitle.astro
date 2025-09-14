@@ -1,3 +1,12 @@
-<h2 class="showcase-animate mt-0 text-xl font-bold md:text-2xl">
+---
+import { cn } from '~/components/ui/cn'
+
+interface Props {
+  class?: string
+}
+
+const props = Astro.props
+---
+<h2 class={cn('showcase-animate mt-0 text-xl font-bold md:text-2xl dark:text-white', props.class)}>
   <slot />
 </h2>

@@ -9,6 +9,7 @@ import Monorepo from '~/components/showcase/Monorepo.astro'
 import Noted from '~/components/showcase/Noted.astro'
 import PhotoShowcase from '~/components/showcase/PhotoShowcase.astro'
 import Refunk from '~/components/showcase/Refunk.astro'
+import TurboGraph from '~/components/showcase/TurboGraph.astro'
 import WienerTime from '~/components/showcase/WienerTime.astro'
 ---
 
@@ -31,15 +32,13 @@ import WienerTime from '~/components/showcase/WienerTime.astro'
     <div class="md:col-span-2 md:row-start-2 2xl:col-span-1 2xl:row-start-auto">
       <CM2ML />
     </div>
-    <div
-      class="md:col-span-2 md:row-span-2 2xl:col-start-1 2xl:row-span-1 2xl:row-start-3"
-    >
+    <div class="2xl:col-span-2">
       <WienerTime />
     </div>
-    <div class="md:max-2xl:row-start-4 2xl:row-start-3">
+    <div>
       <Refunk />
     </div>
-    <div class="2xl:row-start-3">
+    <div>
       <Noted />
     </div>
     <div
@@ -50,8 +49,11 @@ import WienerTime from '~/components/showcase/WienerTime.astro'
     <div>
       <Monorepo />
     </div>
-    <div class="sm:col-span-2 md:col-span-3 2xl:col-span-4">
+    <div>
       <ExperimentsShowcase />
+    </div>
+    <div class="sm:col-span-2 2xl:col-span-3">
+     <TurboGraph />
     </div>
   </div>
 </section>
