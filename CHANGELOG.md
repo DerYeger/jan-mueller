@@ -1,3 +1,10 @@
+# [3.74.0](https://github.com/DerYeger/jan-mueller/compare/v3.73.0...v3.74.0) (2025-09-14)
+
+
+### Features
+
+* add showcases ([148aec8](https://github.com/DerYeger/jan-mueller/commit/148aec84ddd05b0a46d8c981b20c7474d9e143d8))
+
 # [3.73.0](https://github.com/DerYeger/jan-mueller/compare/v3.72.0...v3.73.0) (2025-08-31)
 
 
