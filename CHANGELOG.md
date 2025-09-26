@@ -1,3 +1,10 @@
+# [3.75.0](https://github.com/DerYeger/jan-mueller/compare/v3.74.1...v3.75.0) (2025-09-26)
+
+
+### Features
+
+* update urls ([0dff00c](https://github.com/DerYeger/jan-mueller/commit/0dff00c2babe5a25dbf92e664482cd5e22532b40))
+
 ## [3.74.1](https://github.com/DerYeger/jan-mueller/compare/v3.74.0...v3.74.1) (2025-09-20)
 
 
