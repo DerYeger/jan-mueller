@@ -19,7 +19,7 @@ import { remarkReadingTime } from './plugins/remark-reading-time.js'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jan-mueller.at',
+  site: 'https://janmueller.dev',
   server: {
     host: true,
   },

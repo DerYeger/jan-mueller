@@ -10,7 +10,7 @@ const universityOfKassel: CollegeOrUniversity = {
   name: ['University of Kassel'],
 }
 
-const url = 'https://jan-mueller.at'
+const url = 'https://janmueller.dev'
 
 const author: Person = {
   '@type': 'Person',
@@ -18,7 +18,7 @@ const author: Person = {
   additionalName: 'Patrick',
   alumniOf: [universityOfKassel],
   birthDate: '1998-06-03',
-  email: ['janmueller3698@gmail.com', 'mail@jan-mueller.at'],
+  email: ['janmueller3698@gmail.com', 'mail@janmueller.dev'],
   gender: 'Male',
   image: `${url}/avatar.webp`,
   jobTitle: 'Software Engineer',

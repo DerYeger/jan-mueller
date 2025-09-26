@@ -18,8 +18,8 @@
 </p>
 
 <p align="center">
-  <a href="https://jan-mueller.at">
-    jan-mueller.at
+  <a href="https://janmueller.dev">
+    janmueller.dev
   </a>
 </p>
 
@@ -30,7 +30,7 @@
 - MDX
 - E2E testing with [Playwright](https://playwright.dev/)
 - Automated CI/CD pipeline using GitHub Actions
-- Hosted on Vercel at [jan-mueller.at](https://jan-mueller.at)
+- Hosted on Vercel at [janmueller.dev](https://janmueller.dev)
 
 ## Build Setup
 
