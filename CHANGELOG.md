@@ -1,3 +1,10 @@
+# [3.76.0](https://github.com/DerYeger/jan-mueller/compare/v3.75.0...v3.76.0) (2025-09-26)
+
+
+### Features
+
+* update linkedin url ([032f03d](https://github.com/DerYeger/jan-mueller/commit/032f03db8a2d5b570ba3365a8b421ded88b96772))
+
 # [3.75.0](https://github.com/DerYeger/jan-mueller/compare/v3.74.1...v3.75.0) (2025-09-26)
 
 
