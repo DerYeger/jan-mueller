@@ -19,7 +19,7 @@ export const accounts = [
   {
     name: 'LinkedIn',
     icon: 'akar-icons:linkedin-fill',
-    href: 'https://www.linkedin.com/in/jan-müller-644144249/',
+    href: 'https://www.linkedin.com/in/jan-patrick-mueller/',
   },
   {
     name: 'XING',

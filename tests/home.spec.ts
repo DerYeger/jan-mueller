@@ -21,7 +21,7 @@ test.describe('Home', () => {
         name: 'GitHub',
         href: 'https://github.com/DerYeger',
       },
-      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jan-müller-644144249/' },
+      { name: 'LinkedIn', href: 'https://www.linkedin.com/in/jan-patrick-mueller/' },
       {
         name: 'XING',
         href: 'https://www.xing.com/profile/Jan_Mueller1092/cv',
