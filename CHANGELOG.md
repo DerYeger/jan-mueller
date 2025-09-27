@@ -1,3 +1,10 @@
+## [3.76.1](https://github.com/DerYeger/jan-mueller/compare/v3.76.0...v3.76.1) (2025-09-27)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([14adbae](https://github.com/DerYeger/jan-mueller/commit/14adbaede5a4e94b23b74d6abed1009400adebe9))
+
 # [3.76.0](https://github.com/DerYeger/jan-mueller/compare/v3.75.0...v3.76.0) (2025-09-26)
 
 
