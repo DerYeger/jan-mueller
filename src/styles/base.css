@@ -70,7 +70,7 @@
   }
 
   .card {
-    @apply border-medium bg-base text-black dark:text-neutral-100 rounded-xl shadow-xl;
+    @apply border-medium bg-base dark:bg-linear-to-br dark:from-neutral-900 dark:to-neutral-950 text-black dark:text-neutral-100 rounded-xl shadow-xl;
   }
 }
 

@@ -2,13 +2,15 @@ import { icon } from 'leaflet'
 import type { MapOptions } from 'leaflet'
 import type { FunctionalComponent } from 'preact'
 import { Suspense, lazy, useState } from 'preact/compat'
-import { MapContainer, TileLayer, useMap } from 'react-leaflet'
+import { MapContainer, TileLayer, useMap, ZoomControl } from 'react-leaflet'
 
 import { LazyMarker, LazyMarkerCluster } from '~/components/blog/examples/LeafletMap.lazy'
 import type { MapImage } from '~/photographyUtils'
 
 import 'leaflet/dist/leaflet.css'
 import '~/styles/photography-map.css'
+
+const HEADER_HEIGHT = 90 + 2 * 16
 
 const LazyPopup = lazy(async () => (await import('react-leaflet')).Popup)
 
@@ -39,7 +41,7 @@ const PhotoMarker: FunctionalComponent<{ image: MapImage }> = ({ image }) => {
         iconAnchor: [20, 20],
       })}
     >
-      <LazyPopup minWidth={width} maxWidth={width} closeButton={false}>
+      <LazyPopup minWidth={width} maxWidth={width} closeButton={false} autoPanPadding={[8, HEADER_HEIGHT]}>
         <div
           class="w-full"
           style={{ aspectRatio: String(image.aspectRatio) }}
@@ -73,7 +75,7 @@ const MAX_SIZE = 1024
 function getImageWidth(image: MapImage, mapContainer: HTMLElement) {
   const mapSize = mapContainer.getBoundingClientRect()
   const maxWidth = mapSize.width * PADDING_FACTOR
-  const maxHeight = mapSize.height * PADDING_FACTOR
+  const maxHeight = (mapSize.height - HEADER_HEIGHT) * PADDING_FACTOR
   const maxWidthByHeight = maxHeight * image.aspectRatio
   return Math.min(maxWidth, maxWidthByHeight, MAX_SIZE)
 }
@@ -89,13 +91,14 @@ export const PhotographyMap: FunctionalComponent<
         bounds={bounds}
         boundsOptions={{ padding: [5, 5] }}
         maxZoom={18}
-        {...props}
+        zoomControl={false}
         {...props}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
           url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
         />
+        <ZoomControl position="bottomleft" />
         <Suspense fallback={<></>}>
           <LazyMarkerCluster>
             {images.map((image) => (

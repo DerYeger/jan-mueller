@@ -21,6 +21,7 @@ test.describe('Screenshots', () => {
             page.locator('.leaflet-container'),
             page.locator('.neon-bar-experiment'),
             page.locator('.baklava-node'),
+            page.locator('.turbo-graph'),
           ]
           await expect(page).toHaveScreenshot({ ...BASE_SCREENSHOT, ...(screenshot ?? {}), mask })
         })

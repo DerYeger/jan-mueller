@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
+import { cn } from '~/components/ui/cn'
 
 interface Props {
   name?: string
@@ -11,7 +12,7 @@ const { name, class: extraClasses = '', href } = Astro.props
 ---
 
 <div
-  class={`experiment card group relative flex size-full flex-col justify-between gap-6 overflow-hidden p-6 no-underline ${extraClasses}`}
+  class={cn('experiment card bg-none group relative flex size-full flex-col justify-between gap-6 overflow-hidden p-6 no-underline', extraClasses)}
   aria-label={name}
 >
   <slot />
