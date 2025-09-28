@@ -1,3 +1,10 @@
+# [3.77.0](https://github.com/DerYeger/jan-mueller/compare/v3.76.1...v3.77.0) (2025-09-28)
+
+
+### Features
+
+* implement dark theme ([44d79ac](https://github.com/DerYeger/jan-mueller/commit/44d79acffbfa114dca8939a25d6a400bcff1b0cc))
+
 ## [3.76.1](https://github.com/DerYeger/jan-mueller/compare/v3.76.0...v3.76.1) (2025-09-27)
 
 
