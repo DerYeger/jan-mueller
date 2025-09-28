@@ -10,7 +10,7 @@ const { default: refunkLogo } = await import(`~/assets/projects/Refunk.svg?raw`)
 ---
 
 <Showcase name={name} class="refunk" link="https://refunk.janmueller.dev">
-  <div class="prose">
+  <div>
     <ShowcaseTitle>
       {name}
     </ShowcaseTitle>
@@ -20,7 +20,7 @@ const { default: refunkLogo } = await import(`~/assets/projects/Refunk.svg?raw`)
   >
     <Fragment set:html={refunkLogo} />
   </div>
-  <div class="prose">
+  <div>
     <ShowcaseDescription>
       A Kotlin library for studying <Mark>primitive recursive functions</Mark> using
       a mathematical <Mark class="-mr-1">DSL</Mark>.

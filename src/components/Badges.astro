@@ -2,11 +2,12 @@
 import { Icon } from 'astro-icon/components'
 
 import BadgeButton from '~/components/BadgeButton.astro'
+import { cn } from '~/components/ui/cn'
 import { accounts } from '~/lib'
 ---
 
 <section
-  class="prose prose-2xl relative my-32 w-full max-w-none border-y border-zinc-300 bg-zinc-200 px-4 py-8 shadow-lg"
+  class="relative my-32 w-full max-w-none border-y border-medium bg-neutral-200 dark:bg-neutral-900 px-4 py-8 shadow-lg"
   data-testid="badges"
 >
   <div class="flex justify-center gap-8">
@@ -17,7 +18,9 @@ import { accounts } from '~/lib'
           rel="noreferrer"
           target="_blank"
           title={account.name}
-          class="hover:box-shadow-2xl size-6 text-neutral-700 transition-all hover:text-black"
+          class={cn(
+            'hover:box-shadow-2xl size-6 text-light hover:text-black dark:hover:text-white',
+          )}
           data-testid={`badge-${account.name}`}
         >
           <Icon name={account.icon} class="size-6" />

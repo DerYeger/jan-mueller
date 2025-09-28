@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<button
+  id="theme-toggle"
+  class="relative size-6 hover:text-black dark:hover:text-white flex items-center"
+  aria-label="Toggle theme"
+  title="Toggle dark/light mode"
+  type="button"
+>
+  <Icon name="akar-icons:sun" class="size-5 absolute inset-0.5 opacity-100 dark:opacity-0 transition-opacity" />
+  <Icon name="akar-icons:moon" class="size-5 absolute inset-0.5 opacity-0 dark:opacity-100 transition-opacity" />
+</button>
+
+<script>
+  const themeToggle = document.getElementById('theme-toggle')
+
+  themeToggle?.addEventListener('click', toggleTheme)
+
+  function toggleTheme() {
+    const html = document.documentElement
+    if (html.classList.contains('dark')) {
+      html.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
+    } else {
+      html.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    }
+  }
+</script>

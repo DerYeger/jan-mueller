@@ -1,5 +1,6 @@
 ---
 import ExperienceRoleEntry from '~/components/cv/experience/ExperienceRoleEntry.astro'
+import DateRange from '~/components/date/DateRange.astro'
 import type { Experience as ExperienceType } from '~/types'
 
 export interface Props {
@@ -7,20 +8,27 @@ export interface Props {
 }
 
 const { experience } = Astro.props as Props
+
+const startDate = experience.roles.map((r) => r.startDate).sort()[0]
+const endDate = experience.roles.map((r) => r.endDate).sort().reverse()[0]
 ---
 
-<div class="lh-6 flex flex-col" data-testid={experience.name}>
+<div class="flex flex-col" data-testid={experience.name}>
   {
     experience.href && (
-      <a href={experience.href} rel="noreferrer" target="_blank" class="w-fit font-bold">
+      <a href={experience.href} rel="noreferrer" target="_blank" class="w-fit text-lg font-bold text-black dark:text-white">
         {experience.name}
       </a>
     )
   }
-  {!experience.href && <span class="font-bold text-black">{experience.name}</span>}
-  {experience.roles.length !== 1 ? <ul class="my-0! py-0">
+  {!experience.href && <span class="font-bold text-lg text-black dark:text-white">{experience.name}</span>}
+  {experience.roles.length > 1 ? <div class="text-light">
+    <DateRange startDate={startDate} endDate={endDate} />
+  </div> : null}
+  <div class="h-4" />
+  {experience.roles.length !== 1 ? <ul class="flex flex-col md:flex-row gap-4 md:gap-16">
     {experience.roles.map((role) => (
-      <li class="mb-0">
+      <li class="">
         <ExperienceRoleEntry role={role} />
       </li>
     ))}

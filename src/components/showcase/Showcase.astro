@@ -1,5 +1,6 @@
 ---
 import ShowcaseLink from '~/components/showcase/ShowcaseLink.astro'
+import { cn } from '~/components/ui/cn'
 
 interface Props {
   name: string
@@ -11,7 +12,7 @@ const { name, class: extraClasses = '', link } = Astro.props
 ---
 
 <div
-  class={`showcase card group relative flex size-full flex-col justify-between gap-6 overflow-hidden p-6 select-text ${extraClasses}`}
+  class={cn('showcase card group relative flex size-full flex-col justify-between gap-6 overflow-hidden p-6 select-text dark:bg-linear-to-br dark:from-neutral-900 dark:to-neutral-950', extraClasses)}
 >
   <slot />
   {link ? <ShowcaseLink href={link} label={name} /> : null}

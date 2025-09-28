@@ -5,21 +5,21 @@ import type { Education } from '~/types'
 
 const education: Education[] = [
   {
-    name: 'Software Engineering and Internet Computing (M.Sc.)',
+    name: 'M.Sc. · Software Engineering and Internet Computing',
     institution: 'TU Wien',
     startDate: '2021-10',
     endDate: '2025-02',
     grade: '1.1 with distinction',
   },
   {
-    name: 'Computer Science (B.Sc.)',
+    name: 'B.Sc. · Computer Science',
     institution: 'University of Kassel',
     startDate: '2016-10',
     endDate: '2021-03',
     grade: '1.0 with distinction',
   },
   {
-    name: 'University-entrance diploma (Abitur)',
+    name: 'GCE A-Levels / Abitur · University-entrance diploma',
     institution: 'Wilhelmsgymnasium Kassel',
     startDate: '2009-09',
     endDate: '2016-07',
@@ -30,11 +30,13 @@ const education: Education[] = [
 
 <CVList id="education">
   <span slot="title">Education</span>
-  {
-    education.map((entry) => (
-      <li class="mb-0">
-        <EducationEntry education={entry} />
-      </li>
-    ))
-  }
+  <ul class="flex flex-col md:flex-row gap-8 md:gap-16">
+    {
+      education.map((entry) => (
+        <li class="flex-1">
+          <EducationEntry education={entry} />
+        </li>
+      ))
+    }
+  </ul>
 </CVList>

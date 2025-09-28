@@ -12,7 +12,7 @@ const { default: logo } = await import(`~/assets/projects/CM2ML.svg?raw`)
 <Showcase name={name} link="/external/cm2ml">
   <div class="flex justify-between">
     <ShowcaseTitle>{name}</ShowcaseTitle>
-    <div class="size-8">
+    <div class="size-8 dark:invert">
       <Fragment set:html={logo} />
     </div>
   </div>

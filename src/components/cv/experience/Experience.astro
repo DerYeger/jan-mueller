@@ -72,11 +72,13 @@ const experience: Experience[] = [
 
 <CVList id="experience">
   <span slot="title">Experience</span>
+  <ul class="flex flex-col gap-16">
   {
-    experience.map((entry) => (
-      <li class="mb-0">
+    experience.map((entry, index) => (
+      <li>
         <ExperienceEntry experience={entry} />
       </li>
     ))
   }
+  </ul>
 </CVList>

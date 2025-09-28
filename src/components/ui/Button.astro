@@ -9,6 +9,15 @@ interface Props extends astroHTML.JSX.ButtonHTMLAttributes {
 const { class: className, ...props } = Astro.props
 ---
 
-<button type="button" class={cn('select-none rounded-sm border border-neutral-300 bg-neutral-50 px-2 text-sm transition-colors hover:bg-neutral-300 disabled:cursor-default disabled:bg-neutral-200 disabled:hover:bg-neutral-200', className)} {...props}>
+<button
+  type="button"
+  class={cn(
+  'select-none rounded-sm border border-medium bg-base',
+    'px-2 text-sm transition-colors disabled:cursor-default',
+    'hover:bg-neutral-300 disabled:bg-neutral-200 disabled:hover:bg-neutral-200',
+    'dark:hover:bg-neutral-700 dark:disabled:bg-neutral-800 dark:disabled:hover:bg-neutral-800',
+    className,
+  )}
+  {...props}>
   <slot />
 </button>

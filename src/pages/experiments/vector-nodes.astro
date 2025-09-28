@@ -5,9 +5,9 @@ import Header from '~/components/Header.astro'
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark overscroll-none">
   <head>
-    <BaseHead />
+    <BaseHead loadTheme={false} />
     <style>
       html,
       body {
@@ -25,12 +25,13 @@ import Header from '~/components/Header.astro'
       }
     </style>
   </head>
-  <body class="dark relative max-w-full overflow-x-hidden text-white">
+  <body class="relative max-w-full overflow-x-hidden">
     <Header
-      class="border-b-0 bg-(--baklava-toolbar-background)! backdrop-filter-none!"
+      class="border-transparent bg-(--baklava-toolbar-background)! backdrop-filter-none!"
       align="left"
+      showThemeToggle={false}
     />
-    <main class="absolute inset-x-0 bottom-0 bg-neutral-100">
+    <main class="absolute inset-x-0 bottom-0">
       <VectorNodesComponent client:only="vue" />
     </main>
   </body>

@@ -45,21 +45,21 @@ function getEntryLink(entry: Entry) {
     <tbody>
       {Array.from({ length: rowCount }).map((_, index) => (
         <tr>
-          <td class="w-1/2 text-green-700">
+          <td class="w-1/2 text-green-700 dark:text-green-500">
             {pro[index] ? <span>
               {getEntryText(pro[index])}
               {hasEntryLink(pro[index]) ? (
-                <a href={getEntryLink(pro[index])} class="not-prose transition-colors hover:text-green-500">
+                <a href={getEntryLink(pro[index])} class="transition-colors hover:text-green-500">
                   (read more)
                 </a>
               ) : null}
             </span> : null}
           </td>
-          <td class="w-1/2 text-red-700">
+          <td class="w-1/2 text-red-700 dark:text-red-500">
             {con[index] ? <span>
               {getEntryText(con[index])}
               {hasEntryLink(con[index]) ? (
-                <a href={getEntryLink(con[index])} class="not-prose transition-colors hover:text-red-500">
+                <a href={getEntryLink(con[index])} class="transition-colors hover:text-red-500">
                   (read more)
                 </a>
               ) : null}

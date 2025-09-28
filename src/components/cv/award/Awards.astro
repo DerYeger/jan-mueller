@@ -26,11 +26,13 @@ const awards: Award[] = [
 
 <CVList id="awards">
   <span slot="title">Awards</span>
-  {
-    awards.map((entry) => (
-      <li class="mb-0">
-        <AwardEntry award={entry} />
-      </li>
-    ))
-  }
+  <ul class="flex flex-col md:flex-row gap-8 md:gap-16">
+    {
+      awards.map((entry) => (
+        <li class="flex-1">
+          <AwardEntry award={entry} />
+        </li>
+      ))
+    }
+  </ul>
 </CVList>

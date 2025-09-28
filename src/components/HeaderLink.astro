@@ -1,4 +1,6 @@
 ---
+import { cn } from '~/components/ui/cn'
+
 // eslint-disable-next-line no-undef
 export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
   exact?: boolean
@@ -12,20 +14,14 @@ const isSub = typeof href === 'string' && Astro.url.pathname.startsWith(href)
 const isActive = isExact || (!exact && !isHome && isSub)
 ---
 
-<div class="flex flex-1 md:grow-0 items-center justify-center">
+<div class={cn('flex flex-1 items-center justify-center', isActive ? 'border-b-3 border-neutral-current pb-1.25 -mb-2' : undefined)}>
   <a
     href={href}
-    class:list={[
-      'inline-block transition-none no-underline px-3 py-1 rounded-sm text-sm border',
-      'hover:text-black hover:bg-neutral-50  hover:border-neutral-400', // light hover state
-      'dark:hover:text-white dark:hover:bg-transparent dark:hover:border-neutral-600', // dark hover state
-      'hover:active:border-neutral-600 hover:active:bg-neutral-100', // light active state
-      'dark:hover:active:border-neutral-400 dark:hover:active:bg-transparent', // dark active state
-      {
-        'border-transparent': !isActive,
-        'border-neutral-200 dark:border-neutral-800': isActive,
-      },
-    ]}
+    class={cn(
+      'inline-block font-bold transition-none no-underline px-3 py-1 rounded-sm text-sm',
+      'hover:text-black dark:hover:text-white',
+      isActive ? 'text-black dark:text-white' : 'text-light',
+    )}
     {...props}
   >
     <slot />

@@ -3,30 +3,26 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@utility surface-border {
-  @apply border-neutral-300;
+@layer utilities {
+  a:not([class*="text-neutral"]):not([class*="text-light"]):not([class*="anchor-blue"]):hover {
+    @apply text-neutral-600 dark:text-neutral-300;
+  }
 }
 
-@utility surface {
-  @apply surface-border bg-white text-black;
+@utility border-medium {
+  @apply border-neutral-300 dark:border-neutral-700;
 }
 
-@utility card {
-  @apply surface rounded-3xl shadow-xl;
-}
-
-@utility card-hover {
-  @apply hover:shadow-2xl transition-shadow;
+@utility text-light {
+  @apply text-neutral-600 dark:text-neutral-300;
 }
 
 @utility gradient-text {
   @apply text-transparent bg-clip-text bg-linear-to-r;
 }
 
-@layer utilities {
-  a:not([class*="text-"]):hover {
-    @apply text-neutral-600;
-  }
+@utility bg-base {
+  @apply bg-white dark:bg-neutral-900;
 }
 
 @layer base {
@@ -46,11 +42,11 @@
 
 @layer components {
   article.prose *:is(h1, h2, h3, h4, h5, h6) {
-    @apply flex items-center gap-2 scroll-mt-19.5;
+    @apply flex items-center gap-2 scroll-mt-20
   }
 
   .anchor-icon {
-    @apply text-neutral-600 hover:text-neutral-700 transition-colors;
+    @apply text-light hover:text-neutral-700 dark:hover:text-white transition-colors;
 
     & > svg {
       @apply overflow-visible;
@@ -63,6 +59,18 @@
 
   article.prose p {
     @apply text-justify;
+  }
+
+  .title {
+    @apply font-black text-black dark:text-white;
+  }
+
+  .anchor-blue {
+    @apply text-blue-600 dark:text-blue-500 hover:text-blue-500 dark:hover:text-blue-400;
+  }
+
+  .card {
+    @apply border-medium bg-base text-black dark:text-neutral-100 rounded-xl shadow-xl;
   }
 }
 
@@ -83,14 +91,22 @@
 
 @supports (backdrop-filter: none) {
   .glass {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  .dark .glass {
+    background-color: rgba(20, 20, 20, 0.6);
   }
 }
 
 @supports not (backdrop-filter: none) {
   .glass {
     background-color: white;
+  }
+
+  .dark .glass {
+    background-color: #141414;
   }
 }
 

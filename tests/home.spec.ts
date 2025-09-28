@@ -99,7 +99,7 @@ test.describe('Home', () => {
     const education = page.getByTestId('education')
     await expect(education).toBeVisible()
 
-    const computerScience = education.getByTestId('Computer Science (B.Sc.)')
+    const computerScience = education.getByTestId('B.Sc. · Computer Science')
     await expect(computerScience).toBeVisible()
     await expect(computerScience).toContainText('University of Kassel')
     await expect(computerScience).toContainText('Oct 2016')
@@ -119,5 +119,56 @@ test.describe('Home', () => {
     await expect(dpgAward.locator('a')).toHaveAttribute('href')
 
     await expect(awards.locator('li')).toHaveCount(3)
+  })
+
+  test.describe('theme', () => {
+    test('loads light theme from local storage', async ({ page }) => {
+      await page.emulateMedia({ colorScheme: 'dark' })
+      await page.evaluate(() => window.localStorage.setItem('theme', 'light'))
+      await page.reload()
+      const html = page.locator('html')
+      await expect(html).not.toHaveClass('dark')
+    })
+
+    test('loads dark theme from local storage', async ({ page }) => {
+      await page.emulateMedia({ colorScheme: 'light' })
+      await page.evaluate(() => window.localStorage.setItem('theme', 'dark'))
+      await page.reload()
+      const html = page.locator('html')
+      await expect(html).toHaveClass('dark')
+    })
+
+    test('loads light system theme if no local storage is set', async ({ page }) => {
+      await page.emulateMedia({ colorScheme: 'light' })
+      await page.reload()
+      const html = page.locator('html')
+      await expect(html).not.toHaveClass('dark')
+    })
+
+    test('loads dark system theme if no local storage is set', async ({ page }) => {
+      await page.emulateMedia({ colorScheme: 'dark' })
+      await page.reload()
+      const html = page.locator('html')
+      await expect(html).toHaveClass('dark')
+    })
+
+    test('can toggle theme', async ({ page }) => {
+      const themeToggle = page.locator('#theme-toggle')
+      const html = page.locator('html')
+
+      await expect(html).not.toHaveClass('dark')
+
+      await themeToggle.click()
+      await expect(html).toHaveClass('dark')
+
+      await page.reload()
+      await expect(html).toHaveClass('dark')
+
+      await themeToggle.click()
+      await expect(html).not.toHaveClass('dark')
+
+      await page.reload()
+      await expect(html).not.toHaveClass('dark')
+    })
   })
 })

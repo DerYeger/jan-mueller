@@ -9,10 +9,10 @@ interface Props {
 const { role } = Astro.props
 ---
 
-<div class="font-medium text-neutral-800">
+<div class="font-medium text-black dark:text-white">
   {role.title}
 </div>
 {role.description ? <div>{role.description}</div> : null}
-<div class="text-neutral-600">
+<div class="text-light">
   <DateRange startDate={role.startDate} endDate={role.endDate} />
 </div>

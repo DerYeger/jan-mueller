@@ -10,7 +10,7 @@ interface Props {
 const { id, title } = Astro.props
 ---
 
-<div class="flex flex-col gap-2 rounded-sm border border-neutral-300 p-2">
+<div class="flex flex-col gap-2 rounded-sm border border-medium p-2">
   <div class="flex gap-2">
     <div class="font-bold select-none">{title}</div>
   </div>
@@ -18,7 +18,7 @@ const { id, title } = Astro.props
     <Input type="number" id={`${id}-input`} placeholder="Enter a positive integer" />
     <Button id={`${id}-button`}>Calculate</Button>
   </div>
-  <div id={`${id}-result`} class="min-h-[30px] overflow-x-auto overflow-y-hidden rounded-sm border border-neutral-300 bg-neutral-200 px-2 py-1 font-mono text-sm">
+  <div id={`${id}-result`} class="min-h-[30px] overflow-x-auto overflow-y-hidden rounded-sm border border-medium bg-neutral-200 dark:bg-neutral-800 px-2 py-1 font-mono text-sm">
     Awaiting input
   </div>
   <slot />

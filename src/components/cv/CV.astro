@@ -4,14 +4,8 @@ import Education from '~/components/cv/education/Education.astro'
 import Experience from '~/components/cv/experience/Experience.astro'
 ---
 
-<section class="my-32 px-4">
-  <div
-    class="mx-auto flex max-w-3xl flex-col items-start gap-16 [&>*]:w-full [&>*]:flex-1 md:flex-row md:max-w-5xl 2xl:max-w-7xl"
-  >
+<section class="my-32 px-4 mx-auto flex flex-col gap-16 md:gap-32 md:max-w-5xl 2xl:max-w-7xl text-pretty">
     <Experience />
-    <div class="flex flex-col gap-16">
-      <Education />
-      <Awards />
-    </div>
-  </div>
+    <Education />
+    <Awards />
 </section>

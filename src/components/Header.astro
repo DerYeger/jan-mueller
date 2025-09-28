@@ -1,5 +1,6 @@
 ---
 import Navigation from '~/components/Navigation.astro'
+import ThemeToggle from '~/components/ThemeToggle.astro'
 import { cn } from '~/components/ui/cn'
 import { mainLinks } from '~/links'
 import type { Link } from '~/links'
@@ -8,26 +9,41 @@ interface Props {
   align: 'left' | 'center'
   class?: string
   sublinks?: Link[]
+  floating?: boolean
+  showThemeToggle?: boolean
 }
 
-const { class: extraClasses = '', sublinks, align } = Astro.props
+const { class: extraClasses = '', sublinks, align, floating = false, showThemeToggle = true } = Astro.props
 ---
 
 <header
   class={cn(
-    'surface-border glass sticky top-0 z-50 flex items-center gap-2 border-b px-4 py-2',
-    extraClasses,
-    sublinks ? 'with-sublinks flex-col gap-2' : 'h-fit',
+    'border-medium glass sticky z-50 flex items-center gap-4 px-4 py-2',
+    floating ? 'top-0 w-full sm:w-fit sm:top-4 sm:mx-auto sm:rounded-lg shadow-lg border-b sm:border' : 'top-0 border-b',
+    sublinks ? 'with-sublinks flex flex-col' : 'h-fit',
     align === 'left' ? 'justify-start' : 'justify-center',
+    extraClasses,
   )}
 >
-  <Navigation links={mainLinks} align={align} />
-  {sublinks ? (<Navigation links={sublinks} isSub align={align} />) : null}
+  <div class={cn('flex justify-between items-center w-full sm:w-fit', !floating && 'sm:w-full')}>
+    {!floating && align !== 'left' ? <div class="md:grow" /> : null}
+    <Navigation links={mainLinks} align={align} />
+    {showThemeToggle ?
+      (<>
+        <div class={cn('grow min-w-8', !floating && '-mr-6')} />
+        <ThemeToggle />
+      </>) : null}
+  </div>
+  {sublinks ? (<div class={cn('pb-1.5 -mb-1.5 w-fit max-sm:mr-auto', floating && 'mr-auto')}>
+      <Navigation links={sublinks} isSub align={align} />
+    </div>
+  ) : null}
 </header>
 
 <style is:global>
   :root {
-    --header-height: 48px;
+    --header-height: 46px;
+    --header-height-with-sublinks: calc(2 * var(--header-height) - 2px);
   }
 
   header {
@@ -35,6 +51,6 @@ const { class: extraClasses = '', sublinks, align } = Astro.props
   }
 
   header.with-sublinks {
-    height: calc(var(--header-height) + 30px + 8px);
+    height: var(--header-height-with-sublinks);
   }
 </style>

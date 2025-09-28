@@ -7,7 +7,7 @@ const props = defineProps<{ images: GalleryImage[] }>()
 </script>
 
 <template>
-  <div class="flex justify-center bg-white py-2 md:px-2">
+  <div class="flex justify-center max-sm:py-2 md:px-2">
     <MasonryWall
       v-slot="{ item: image, columnCount }"
       :items="props.images"

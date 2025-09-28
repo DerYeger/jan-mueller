@@ -16,10 +16,8 @@ const posts = (await getCollection('blog')).sort(
   title="Blog"
   image="/open-graph/blog.png"
 >
-  <div class="mx-auto max-w-7xl px-4 py-8">
-    <div class="prose mb-8">
-      <h1>Jan's Blog</h1>
-    </div>
+  <div class="mx-auto max-w-7xl px-4 mt-8 mb-16">
+    <h1 class="title max-sm:mt-12 mb-16 text-5xl w-fit mx-auto">Jan's Blog</h1>
     <ul
       class="grid grid-flow-row grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4"
     >
@@ -27,15 +25,15 @@ const posts = (await getCollection('blog')).sort(
         posts.map(async (post) => {
           const { remarkPluginFrontmatter } = await post.render()
           return (
-            <li class="card card-hover overflow-hidden" data-testid={`blog-post-${post.slug}`}>
+            <li class="card hover:shadow-2xl transition-shadow overflow-hidden" data-testid={`blog-post-${post.slug}`}>
               <a
                 href={`/blog/${post.slug}/`}
                 class="block no-underline"
               >
                 <BlogHeroImage heroImage={post.data.heroImage} title={post.data.title} height={100} />
-                <div class="prose prose-sm flex flex-col gap-4 p-6">
-                  <h2 class="my-0!">{post.data.title}</h2>
-                  <span class="text-neutral-500">
+                <div class="flex flex-col gap-4 p-6">
+                  <h2 class="my-0! font-bold">{post.data.title}</h2>
+                  <span class="text-neutral-500 dark:text-neutral-400">
                     <DateComponent
                       date={moment(post.data.pubDate).toISOString()}
                       format="MMM DD, YYYY"
@@ -47,9 +45,7 @@ const posts = (await getCollection('blog')).sort(
                       </>
                     )}
                   </span>
-                  <div class="prose">
-                    <span class="text-neutral-600">{post.data.description}</span>
-                  </div>
+                  <span class="text-light text-pretty">{post.data.description}</span>
                 </div>
               </a>
             </li>

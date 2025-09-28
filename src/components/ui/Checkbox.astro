@@ -8,4 +8,4 @@ interface Props extends Omit<astroHTML.JSX.InputHTMLAttributes, 'type'> {
 const { class: className, ...props } = Astro.props
 ---
 
-<input type="checkbox" class={cn('rounded-sm bg-white border border-neutral-300 px-2 py-1 disabled:bg-neutral-200', className)} {...props} />
+<input type="checkbox" class={cn('rounded-sm bg-base checked:bg-blue-500 border border-medium px-2 py-1 disabled:bg-neutral-200', className)} {...props} />
