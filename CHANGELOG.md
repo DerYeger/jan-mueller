@@ -1,3 +1,10 @@
+# [3.78.0](https://github.com/DerYeger/jan-mueller/compare/v3.77.0...v3.78.0) (2025-09-28)
+
+
+### Features
+
+* improve photography map header ([109d1cb](https://github.com/DerYeger/jan-mueller/commit/109d1cb5ba324557ac2200c6cdb89394c555c6a9))
+
 # [3.77.0](https://github.com/DerYeger/jan-mueller/compare/v3.76.1...v3.77.0) (2025-09-28)
 
 
