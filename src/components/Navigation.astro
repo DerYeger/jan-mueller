@@ -12,6 +12,6 @@ interface Props {
 const { links, isSub = false, align } = Astro.props
 ---
 
-<nav class={cn('flex flex-0 w-full gap-4 justify-evenly')}>
+<nav class={cn('flex flex-0 w-full min-xxs:gap-4 justify-evenly')}>
   {links.map((link) => (<HeaderLink href={link.href} exact={isSub}>{link.label}</HeaderLink>))}
 </nav>

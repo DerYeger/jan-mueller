@@ -25,13 +25,13 @@ const { class: extraClasses = '', sublinks, align, floating = false, showThemeTo
     extraClasses,
   )}
 >
-  <div class={cn('flex justify-between items-center w-full sm:w-fit', !floating && 'sm:w-full')}>
+  <div class={cn('flex justify-between items-center w-full', floating && 'sm:w-fit')}>
     {!floating && align !== 'left' ? <div class="md:grow" /> : null}
     <Navigation links={mainLinks} align={align} />
     {showThemeToggle ?
       (<>
-        <div class={cn('grow min-w-8', !floating && '-mr-6')} />
-        <ThemeToggle />
+        <div class={cn('grow sm:min-w-8', !floating && '-mr-6')} />
+        <ThemeToggle class="max-xxs:hidden shrink-0" />
       </>) : null}
   </div>
   {sublinks ? (<div class={cn('pb-1.5 -mb-1.5 w-fit max-sm:mr-auto', floating && 'mr-auto')}>

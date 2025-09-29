@@ -1,10 +1,17 @@
 ---
 import { Icon } from 'astro-icon/components'
+import { cn } from '~/components/ui/cn'
+
+interface Props {
+  class?: string
+}
+
+const { class: className } = Astro.props as Props
 ---
 
 <button
   id="theme-toggle"
-  class="relative size-6 hover:text-black dark:hover:text-white flex items-center"
+  class={cn('relative size-6 hover:text-black dark:hover:text-white flex items-center', className)}
   aria-label="Toggle theme"
   title="Toggle dark/light mode"
   type="button"

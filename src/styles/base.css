@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --breakpoint-xxs: 330px;
+}
+
 @layer utilities {
   a:not([class*="text-neutral"]):not([class*="text-light"]):not([class*="anchor-blue"]):hover {
     @apply text-neutral-600 dark:text-neutral-300;
