@@ -1,3 +1,10 @@
+## [3.78.1](https://github.com/DerYeger/jan-mueller/compare/v3.78.0...v3.78.1) (2025-09-29)
+
+
+### Bug Fixes
+
+* prevent header overflow on small screens ([f79c127](https://github.com/DerYeger/jan-mueller/commit/f79c1270fbc06e57e76c4bcd96781d6a17b794c9))
+
 # [3.78.0](https://github.com/DerYeger/jan-mueller/compare/v3.77.0...v3.78.0) (2025-09-28)
 
 
