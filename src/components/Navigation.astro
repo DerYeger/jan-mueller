@@ -4,12 +4,11 @@ import { cn } from '~/components/ui/cn'
 import type { Link } from '~/links'
 
 interface Props {
-  align: 'left' | 'center'
   links: Link[]
   isSub?: boolean
 }
 
-const { links, isSub = false, align } = Astro.props
+const { links, isSub = false } = Astro.props
 ---
 
 <nav class={cn('flex flex-0 w-full min-xxs:gap-4 justify-evenly')}>

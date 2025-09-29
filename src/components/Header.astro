@@ -6,36 +6,29 @@ import { mainLinks } from '~/links'
 import type { Link } from '~/links'
 
 interface Props {
-  align: 'left' | 'center'
   class?: string
   sublinks?: Link[]
   floating?: boolean
   showThemeToggle?: boolean
 }
 
-const { class: extraClasses = '', sublinks, align, floating = false, showThemeToggle = true } = Astro.props
+const { class: extraClasses = '', sublinks, floating = false, showThemeToggle = true } = Astro.props
 ---
 
 <header
   class={cn(
-    'border-medium glass sticky z-50 flex items-center gap-4 px-4 py-2',
-    floating ? 'top-0 w-full sm:w-fit sm:top-4 sm:mx-auto sm:rounded-lg shadow-lg border-b sm:border' : 'top-0 border-b',
-    sublinks ? 'with-sublinks flex flex-col' : 'h-fit',
-    align === 'left' ? 'justify-start' : 'justify-center',
+    'border-b border-medium glass sticky top-0 z-50 flex items-center gap-4 px-4 py-2',
+    floating && 'w-full sm:w-fit sm:top-4 sm:mx-auto sm:rounded-lg shadow-lg sm:border',
+    sublinks && 'with-sublinks flex flex-col',
     extraClasses,
   )}
 >
   <div class={cn('flex justify-between items-center w-full', floating && 'sm:w-fit')}>
-    {!floating && align !== 'left' ? <div class="md:grow" /> : null}
-    <Navigation links={mainLinks} align={align} />
-    {showThemeToggle ?
-      (<>
-        <div class={cn('grow sm:min-w-8', !floating && '-mr-6')} />
-        <ThemeToggle class="max-xxs:hidden shrink-0" />
-      </>) : null}
+    <Navigation links={mainLinks} />
+    {showThemeToggle ? <ThemeToggle class="ml-8 max-xxs:hidden" /> : null}
   </div>
   {sublinks ? (<div class={cn('pb-1.5 -mb-1.5 w-fit max-sm:mr-auto', floating && 'mr-auto')}>
-      <Navigation links={sublinks} isSub align={align} />
+      <Navigation links={sublinks} isSub />
     </div>
   ) : null}
 </header>
@@ -48,9 +41,9 @@ const { class: extraClasses = '', sublinks, align, floating = false, showThemeTo
 
   header {
     height: var(--header-height);
-  }
 
-  header.with-sublinks {
-    height: var(--header-height-with-sublinks);
+    &.with-sublinks {
+      height: var(--header-height-with-sublinks);
+    }
   }
 </style>
