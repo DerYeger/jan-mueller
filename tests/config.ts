@@ -100,4 +100,6 @@ export const PAGES: { url: `/${string}`, thresholds?: Thresholds, screenshot?: S
   // Experiments
   { url: '/experiments' },
   { url: '/experiments/vector-nodes' },
+  // Simulated 404
+  { url: '/404' },
 ]

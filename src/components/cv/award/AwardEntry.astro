@@ -10,7 +10,7 @@ export interface Props {
 const { award } = Astro.props as Props
 ---
 
-<div class="flex flex-col" data-testid={award.name}>
+<div class="flex flex-col md:items-center md:text-center" data-testid={award.name}>
   <span class="font-semibold text-lg text-black dark:text-white">{award.name}</span>
   <span>
     {award.by}

@@ -1,4 +1,6 @@
 ---
+import { cn } from '~/components/ui/cn'
+
 interface Props {
   to: string
 }
@@ -8,7 +10,7 @@ const { to } = Astro.props
 
 <a
   href={to}
-  class="flex font-bold items-center gap-2 bg-linear-to-br px-4 py-2 rounded-3xl from-blue-700 to-blue-500 text-white! no-underline shadow-lg transition-shadow hover:brightness-125 hover:drop-shadow-lg translate-z-0"
+  class={cn('flex font-bold items-center gap-2 bg-linear-to-br px-4 py-2 rounded-full from-blue-700 to-blue-500 text-white! no-underline shadow-lg transition-shadow hover:brightness-125 hover:drop-shadow-lg translate-z-0')}
   style="transition-property: filter, box-shadow;"
   data-testid={`badge-button-${to}`}
 >

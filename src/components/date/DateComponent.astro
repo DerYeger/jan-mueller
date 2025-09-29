@@ -1,5 +1,5 @@
 ---
-import moment from 'moment'
+import { formatDate } from '~/lib'
 
 export interface Props {
   date: string | Date
@@ -8,7 +8,7 @@ export interface Props {
 
 const { date, format } = Astro.props as Props
 
-const formattedDate = moment(date).format(format ?? 'MMM YYYY')
+const formattedDate = formatDate(date, format)
 ---
 
 <time>{formattedDate}</time>

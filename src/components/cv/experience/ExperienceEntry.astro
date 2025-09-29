@@ -1,6 +1,7 @@
 ---
 import ExperienceRoleEntry from '~/components/cv/experience/ExperienceRoleEntry.astro'
 import DateRange from '~/components/date/DateRange.astro'
+import { cn } from '~/components/ui/cn'
 import type { Experience as ExperienceType } from '~/types'
 
 export interface Props {
@@ -16,7 +17,7 @@ const endDate = experience.roles.map((r) => r.endDate).sort().reverse()[0]
 <div class="flex flex-col" data-testid={experience.name}>
   {
     experience.href && (
-      <a href={experience.href} rel="noreferrer" target="_blank" class="w-fit text-lg font-bold text-black dark:text-white">
+      <a href={experience.href} rel="noreferrer" target="_blank" class="text-lg font-bold text-black dark:text-white">
         {experience.name}
       </a>
     )
@@ -25,13 +26,18 @@ const endDate = experience.roles.map((r) => r.endDate).sort().reverse()[0]
   {experience.roles.length > 1 ? <div class="text-light">
     <DateRange startDate={startDate} endDate={endDate} />
   </div> : null}
-  <div class="h-4" />
-  {experience.roles.length !== 1 ? <ul class="flex flex-col md:flex-row gap-4 md:gap-16">
-    {experience.roles.map((role) => (
-      <li class="">
-        <ExperienceRoleEntry role={role} />
+  <ul class="mt-4 flex flex-col gap-4">
+    {experience.roles.map((role, index) => (
+      <li class="flex-1 flex gap-3 relative">
+        <div class={cn('relative size-2 shrink-0 mt-2')}>
+          {!role.endDate ? <div class={cn('absolute inset-0 rounded-full motion-safe:animate-ping [animation-duration:2s]! bg-green-600 dark:bg-green-300')} /> : null }
+          <div class={cn('absolute inset-0 bg-neutral-400 dark:bg-neutral-600 rounded-full ', !role.endDate && 'bg-green-500 dark:bg-green-400')} />
+        </div>
+        { index < experience.roles.length - 1 ? <div class={cn('absolute left-0.75 top-2 -bottom-6 w-0.5 bg-neutral-300 dark:bg-neutral-800 -z-10', !role.endDate && 'bg-gradient-to-t from-neutral-300 dark:from-neutral-800 from-30% to-green-600 dark:bg-green-300')} /> : null}
+        <div>
+          <ExperienceRoleEntry role={role} />
+        </div>
       </li>
     ))}
-  </ul> : null}
-  {experience.roles.length === 1 ? <ExperienceRoleEntry role={experience.roles[0]} /> : null}
+  </ul>
 </div>

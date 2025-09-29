@@ -1,5 +1,6 @@
 ---
 import DateComponent from '~/components/date/DateComponent.astro'
+import { formatDate } from '~/lib'
 
 export interface Props {
   startDate: string
@@ -8,16 +9,17 @@ export interface Props {
 }
 
 const { startDate, endDate, format } = Astro.props as Props
+
+const isIdentical = !!endDate && formatDate(startDate, format) === formatDate(endDate, format)
 ---
 
 <span>
   <DateComponent date={startDate} format={format} />
-  –
+  {isIdentical ? null : ' – '}
+  {!endDate ? 'Today' : null}
   {
-    endDate ? (
+    endDate && !isIdentical ? (
       <DateComponent date={endDate} format={format} />
-    ) : (
-      <span>Today</span>
-    )
+    ) : null
   }
 </span>

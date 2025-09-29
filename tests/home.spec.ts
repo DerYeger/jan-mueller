@@ -92,14 +92,14 @@ test.describe('Home', () => {
     await expect(yattaExperience).toContainText('Dec 2020')
     await expect(yattaExperience.locator('a')).toHaveAttribute('href')
 
-    await expect(experience.locator('li')).toHaveCount(4 + 5)
+    await expect(experience.locator('li')).toHaveCount(11)
   })
 
   test('shows education', async ({ page }) => {
     const education = page.getByTestId('education')
     await expect(education).toBeVisible()
 
-    const computerScience = education.getByTestId('B.Sc. · Computer Science')
+    const computerScience = education.getByTestId('B.Sc. – Computer Science')
     await expect(computerScience).toBeVisible()
     await expect(computerScience).toContainText('University of Kassel')
     await expect(computerScience).toContainText('Oct 2016')

@@ -1,3 +1,5 @@
+import moment from 'moment'
+
 export async function getImageAsset(imagePath: string): Promise<ImageMetadata | undefined> {
   const assets = import.meta.glob('~/assets/**/*')
   const asset = Object.entries(assets).find(([fileName]) =>
@@ -32,3 +34,7 @@ export const accounts = [
     href: 'https://twitter.com/DerYeger',
   },
 ]
+
+export function formatDate(date: string | Date, format?: string): string {
+  return moment(date).format(format ?? 'MMM YYYY')
+}

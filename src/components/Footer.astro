@@ -1,4 +1,5 @@
 ---
+import FooterColumn from '~/components/FooterColumn.astro'
 import OpenInNew from '~/components/icons/OpenInNew.astro'
 import { cn } from '~/components/ui/cn'
 import { accounts } from '~/lib'
@@ -14,34 +15,31 @@ const year = new Date().getFullYear()
 
 <footer
   class={cn(
-    'flex items-start justify-center gap-0 px-2 text-sm [&>*]:flex [&>*]:w-1/3 [&>*]:max-w-40 [&>*]:flex-col [&>*]:px-2 [&>*_*:not(:first-child)]:w-fit',
+    'flex gap-4 items-start justify-center p-4 pt-6 pb-8 text-sm',
     'border-t border-medium',
-    'py-8 [&>*>*:first-child]:mb-4 [&>*>*:not(:first-child)]:py-2',
     className,
   )}
 >
-  <div>
-    <span class="font-bold">Legal</span>
+  <FooterColumn title="Legal">
     <a href="/impressum/" lang="de">Impressum</a>
     <a href="/legal-notice/">Legal Notice</a>
     <span>
       {year} &copy; Jan M&uuml;ller
     </span>
-  </div>
-  <div>
-    <span class="font-bold">Resources</span>
+  </FooterColumn>
+  <FooterColumn title="Resources">
     <a href="/rss.xml"> RSS Feed</a>
     <a
       href="https://github.com/DerYeger/jan-mueller"
       rel="noreferrer"
       target="_blank"
+
     >
       Source
       <OpenInNew />
     </a>
-  </div>
-  <div>
-    <span class="font-bold">Contact</span>
+  </FooterColumn>
+  <FooterColumn title="Contact">
     {
       accounts.map((account) => (
         <a href={account.href} rel="noreferrer" target="_blank">
@@ -51,5 +49,5 @@ const year = new Date().getFullYear()
       ))
     }
     <a href="mailto:mail@janmueller.dev" title="Mail">Mail</a>
-  </div>
+  </FooterColumn>
 </footer>

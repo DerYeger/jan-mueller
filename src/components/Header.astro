@@ -28,7 +28,7 @@ const { class: extraClasses = '', sublinks, floating = false, showThemeToggle = 
     <Navigation links={mainLinks} />
     {showThemeToggle ? <ThemeToggle class="sm:ml-8 max-xxs:hidden" /> : null}
   </div>
-  {sublinks ? (<div class={cn('pb-1.5 -mb-1.5 w-fit max-sm:mr-auto', floating && 'mr-auto')}>
+  {sublinks ? (<div class={cn('pb-1.5 -mb-1.5 w-fit max-xxs:ml-auto mr-auto')}>
       <Navigation links={sublinks} isSub />
     </div>
   ) : null}
