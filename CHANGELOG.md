@@ -1,3 +1,10 @@
+## [3.79.1](https://github.com/DerYeger/jan-mueller/compare/v3.79.0...v3.79.1) (2025-09-29)
+
+
+### Bug Fixes
+
+* improve header ([f22da67](https://github.com/DerYeger/jan-mueller/commit/f22da67b8a7b303c04a73cef691f7ae543b6f4dd))
+
 # [3.79.0](https://github.com/DerYeger/jan-mueller/compare/v3.78.1...v3.79.0) (2025-09-29)
 
 
