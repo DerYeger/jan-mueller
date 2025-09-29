@@ -1,3 +1,10 @@
+# [3.80.0](https://github.com/DerYeger/jan-mueller/compare/v3.79.1...v3.80.0) (2025-09-29)
+
+
+### Features
+
+* improve layout ([9a2deba](https://github.com/DerYeger/jan-mueller/commit/9a2debae620fa2f6acceb4bdb837e992b8178b8b))
+
 ## [3.79.1](https://github.com/DerYeger/jan-mueller/compare/v3.79.0...v3.79.1) (2025-09-29)
 
 
