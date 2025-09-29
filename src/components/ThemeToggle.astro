@@ -27,12 +27,15 @@ const { class: className } = Astro.props as Props
 
   function toggleTheme() {
     const html = document.documentElement
+    const metaTag = document.querySelector('meta[name="theme-color"]')!
     if (html.classList.contains('dark')) {
       html.classList.remove('dark')
       localStorage.setItem('theme', 'light')
+      metaTag.setAttribute('content', '#FAFAFA')
     } else {
       html.classList.add('dark')
       localStorage.setItem('theme', 'dark')
+      metaTag.setAttribute('content', '#000000')
     }
   }
 </script>
