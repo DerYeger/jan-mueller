@@ -1,3 +1,16 @@
+# [3.79.0](https://github.com/DerYeger/jan-mueller/compare/v3.78.1...v3.79.0) (2025-09-29)
+
+
+### Bug Fixes
+
+* prevent icon bounce on safari ([f57330e](https://github.com/DerYeger/jan-mueller/commit/f57330e89fc8c83220c02520f47aafdd744a5bfd))
+
+
+### Features
+
+* remove footer on fit screen pages ([afa31ee](https://github.com/DerYeger/jan-mueller/commit/afa31ee02e3d3112f84601fe1c767b51e2fc1c24))
+* update theme-color dynamically ([32bd026](https://github.com/DerYeger/jan-mueller/commit/32bd026f607028adeadbb2a96438952f144d7029))
+
 ## [3.78.1](https://github.com/DerYeger/jan-mueller/compare/v3.78.0...v3.78.1) (2025-09-29)
 
 
