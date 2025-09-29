@@ -9,8 +9,9 @@ export interface Education {
   name: string
   institution: string
   startDate: string
-  endDate?: string
+  endDate: string
   grade: string
+  href: string
 }
 
 export interface ExperienceRole {

@@ -10,6 +10,7 @@ const education: Education[] = [
     startDate: '2021-10',
     endDate: '2025-02',
     grade: '1.1 with distinction',
+    href: 'https://www.tuwien.at/en/',
   },
   {
     name: 'B.Sc. – Computer Science',
@@ -17,20 +18,22 @@ const education: Education[] = [
     startDate: '2016-10',
     endDate: '2021-03',
     grade: '1.0 with distinction',
+    href: 'https://www.uni-kassel.de/uni/en/index.html',
   },
   {
-    name: 'GCE A-Levels / Abitur · University-entrance diploma',
+    name: 'GCE A-Levels / Abitur',
     institution: 'Wilhelmsgymnasium Kassel',
     startDate: '2009-09',
     endDate: '2016-07',
     grade: '1.7',
+    href: 'https://www.wgkassel.de',
   },
 ].sort((a, b) => b.startDate.localeCompare(a.startDate))
 ---
 
 <CVList id="education">
   <span slot="title">Education</span>
-  <ul class="flex flex-col md:flex-row gap-8 md:gap-16">
+  <ul class="flex flex-col md:flex-row gap-16">
     {
       education.map((entry) => (
         <li class="flex-1">

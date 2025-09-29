@@ -10,21 +10,19 @@ export interface Props {
 const { award } = Astro.props as Props
 ---
 
-<div class="flex flex-col md:items-center md:text-center" data-testid={award.name}>
-  <span class="font-semibold text-lg text-black dark:text-white">{award.name}</span>
-  <span>
+<div class="flex flex-col gap-1 md:items-center md:text-center" data-testid={award.name}>
+  <span class="font-semibold text-xl text-black dark:text-white mb-1">{award.name}</span>
+  <span class="text-light text-lg">
     {award.by}
   </span>
   <span>
-    <span class="text-light">
+    <span>
       <DateComponent date={award.date} />
     </span>
     {
       award.href && (
         <>
-          <span class="text-light">
-            <Dot />
-          </span>
+          <Dot />
           <a href={award.href} rel="noreferrer" target="_blank">
             Details
           </a>
