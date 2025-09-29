@@ -17,15 +17,16 @@ const { class: extraClasses = '', sublinks, floating = false, showThemeToggle = 
 
 <header
   class={cn(
-    'border-b border-medium glass sticky top-0 z-50 flex items-center gap-4 px-4 py-2',
-    floating && 'w-full sm:w-fit sm:top-4 sm:mx-auto sm:rounded-lg shadow-lg sm:border',
-    sublinks && 'with-sublinks flex flex-col',
+    'border-medium glass sticky top-0 z-50 flex items-center gap-4 px-4 py-2',
+    !floating && 'border-b',
+    floating && 'top-4 max-w-full sm:min-w-sm sm:w-fit mx-2 sm:mx-auto rounded-lg shadow-lg border',
+    sublinks && 'with-sublinks flex-col',
     extraClasses,
   )}
 >
-  <div class={cn('flex justify-between items-center w-full', floating && 'sm:w-fit')}>
+  <div class={cn('flex max-xxs:justify-center justify-between items-center w-full')}>
     <Navigation links={mainLinks} />
-    {showThemeToggle ? <ThemeToggle class="ml-8 max-xxs:hidden" /> : null}
+    {showThemeToggle ? <ThemeToggle class="sm:ml-8 max-xxs:hidden" /> : null}
   </div>
   {sublinks ? (<div class={cn('pb-1.5 -mb-1.5 w-fit max-sm:mr-auto', floating && 'mr-auto')}>
       <Navigation links={sublinks} isSub />
@@ -36,14 +37,14 @@ const { class: extraClasses = '', sublinks, floating = false, showThemeToggle = 
 <style is:global>
   :root {
     --header-height: 46px;
-    --header-height-with-sublinks: calc(2 * var(--header-height) - 2px);
+    --header-height-sublinks: calc(2 * var(--header-height) - 2px);
   }
 
   header {
     height: var(--header-height);
 
     &.with-sublinks {
-      height: var(--header-height-with-sublinks);
+      height: var(--header-height-sublinks);
     }
   }
 </style>

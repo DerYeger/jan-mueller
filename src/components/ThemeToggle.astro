@@ -31,7 +31,7 @@ const { class: className } = Astro.props as Props
     if (html.classList.contains('dark')) {
       html.classList.remove('dark')
       localStorage.setItem('theme', 'light')
-      metaTag.setAttribute('content', '#FAFAFA')
+      metaTag.setAttribute('content', '#FFFFFF')
     } else {
       html.classList.add('dark')
       localStorage.setItem('theme', 'dark')

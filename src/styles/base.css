@@ -4,7 +4,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --breakpoint-xxs: 330px;
+  --breakpoint-xxs: 350px;
 }
 
 @layer utilities {
@@ -95,7 +95,7 @@
 
 @supports (backdrop-filter: none) {
   .glass {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px) saturate(180%);
   }
 

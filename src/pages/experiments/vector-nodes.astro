@@ -15,7 +15,7 @@ import Header from '~/components/Header.astro'
       floating={false}
       showThemeToggle={false}
     />
-    <main class="absolute inset-x-0 bottom-0 top-(--header-height) h-[calc(100%-var(--header-height))]">
+    <main class="absolute inset-x-0 bottom-0 top-[calc(var(--header-height)-1px)] h-[calc(100%-var(--header-height)+1px)]">
       <VectorNodesComponent client:only="vue" />
     </main>
   </body>

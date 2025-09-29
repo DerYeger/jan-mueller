@@ -23,7 +23,7 @@ const { title, description, image, sublinks, fitScreen = false, floatingHeader =
   </head>
   <body class={cn('max-w-full overflow-x-hidden bg-neutral-50 dark:bg-black text-neutral-800 dark:text-neutral-200 select-none', fitScreen ? 'h-full flex flex-col' : '')}>
     <Header sublinks={sublinks} floating={floatingHeader} />
-    <Main class={cn(fitScreen && 'grow', fitScreen ? '-mt-[90px]' : 'sm:pt-8')}>
+    <Main class={cn(fitScreen && 'grow', fitScreen ? '-mt-[90px]' : 'pt-6')}>
       <slot />
     </Main>
     <Footer class={cn(fitScreen && 'hidden')} />
