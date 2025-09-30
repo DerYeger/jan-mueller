@@ -21,7 +21,7 @@ const author: Person = {
   email: ['janmueller3698@gmail.com', 'mail@janmueller.dev'],
   gender: 'Male',
   image: `${url}/avatar.webp`,
-  jobTitle: 'Software Engineer',
+  jobTitle: 'Senior Software Engineer',
   knowsAbout: [
     'Computer Science',
     'Mobile Engineering',

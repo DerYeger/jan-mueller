@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets'
+import InlineAnchor from '~/components/showcase/InlineAnchor.astro'
 
 import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
@@ -23,8 +24,12 @@ const name = 'Formi'
       <Mark>First-order-logic model checking</Mark> with interactive graph visualization,
       real-time validation, and textual input.
     </ShowcaseDescription>
+    <ShowcaseDescription>
+      Formi is a purely <Mark>client-side re-implementation</Mark> of my bachelor thesis.
+      The model checker and parser are published in the <InlineAnchor to="https://github.com/DerYeger/yeger/tree/main/packages/fol" openInNew>@yeger/fol</InlineAnchor> package.
+    </ShowcaseDescription>
   </div>
-  <div class="relative size-36 self-center 2xl:scale-[2]">
+  <div class="relative self-center size-36 my-8 scale-150 xl:scale-200">
     <Image
       src={first.default}
       alt="Formi Logo"

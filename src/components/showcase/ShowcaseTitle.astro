@@ -7,6 +7,6 @@ interface Props {
 
 const props = Astro.props
 ---
-<h2 class={cn('showcase-animate mt-0 text-xl font-bold md:text-2xl dark:text-white', props.class)}>
+<h2 class={cn('showcase-animate text-xl title md:text-2xl', props.class)}>
   <slot />
 </h2>

@@ -4,7 +4,7 @@
   "version": "3.81.0",
   "private": true,
   "packageManager": "pnpm@10.17.1",
-  "description": "Personal website of Jan Müller, a passionate software engineer.",
+  "description": "Personal website of Jan Müller, a passionate senior software engineer.",
   "scripts": {
     "build": "astro build",
     "check:astro": "astro check",

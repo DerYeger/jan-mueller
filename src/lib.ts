@@ -38,3 +38,9 @@ export const accounts = [
 export function formatDate(date: string | Date, format?: string): string {
   return moment(date).format(format ?? 'MMM YYYY')
 }
+
+export function formatDuration(startDate: string | Date, endDate?: string | Date): string {
+  const start = moment(startDate)
+  const end = endDate ? moment(endDate) : moment()
+  return moment.duration(end.diff(start)).humanize()
+}

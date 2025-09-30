@@ -1,9 +1,9 @@
 ---
-import Experiment from '~/components/experiments/Experiment.astro'
+import Showcase from '~/components/showcase/Showcase.astro'
 ---
 
 <!-- TODO: Add plants -->
-<Experiment class="rounded-xs bg-neutral-200 dark:bg-neutral-500 p-0!">
+<Showcase name="ants" class="rounded-xs bg-none bg-neutral-200 dark:bg-neutral-500 p-0!">
   <div class="relative h-full">
     <div
       class="ant-container absolute inset-x-2 bottom-2 top-[35%] bg-linear-to-t from-neutral-800 to-yellow-900"
@@ -26,6 +26,6 @@ import Experiment from '~/components/experiments/Experiment.astro'
       <span class="text-bold uppercase">Ants</span>
     </div>
   </div>
-</Experiment>
+</Showcase>
 
 <script src="~/components/experiments/ants.ts"></script>

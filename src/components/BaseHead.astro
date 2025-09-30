@@ -19,7 +19,7 @@ const { title, description, image = '/open-graph/default.png', loadTheme = true 
 const finalTitle = title ? `${title} – Jan Müller` : 'Jan Müller'
 const finalDescription =
   description ??
-  'Personal website of Jan Müller, a passionate software engineer.'
+  'Personal website of Jan Müller, a passionate senior software engineer.'
 
 const imageURL = new URL(`${image}`, Astro.site)
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)

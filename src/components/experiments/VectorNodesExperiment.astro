@@ -1,10 +1,10 @@
 ---
 import { Vector } from 'vecti'
 
-import Experiment from '~/components/experiments/Experiment.astro'
-import ExperimentDescription from '~/components/experiments/ExperimentDescription.astro'
-import ExperimentTitle from '~/components/experiments/ExperimentTitle.astro'
+import Showcase from '~/components/showcase/Showcase.astro'
 import VisualizerInterface from '~/components/experiments/VisualizerInterface.vue'
+import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
+import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 
 const name = 'Vector Nodes'
 
@@ -15,20 +15,20 @@ const vectors: Vector[] = (() => {
 })()
 ---
 
-<Experiment
+<Showcase
   name={name}
-  href="/experiments/vector-nodes"
+  link="/experiments/vector-nodes"
   class="dark bg-linear-to-tr from-[#0e1016] to-[#2b344e]"
 >
-  <div class="prose dark:prose-invert">
-    <ExperimentTitle>{name}</ExperimentTitle>
-    <ExperimentDescription>
+  <div>
+    <ShowcaseTitle>{name}</ShowcaseTitle>
+    <ShowcaseDescription>
       Node-based editor for 2D vector calculations, built with <a
-        class="no-underline"
+        class="no-underline text-white"
         href="https://github.com/newcat/baklavajs"
       >BaklavaJS</a
       >.
-    </ExperimentDescription>
+    </ShowcaseDescription>
   </div>
   <div class="mx-auto w-48 max-w-full sm:w-64">
     <style is:inline>
@@ -38,4 +38,4 @@ const vectors: Vector[] = (() => {
     </style>
     <VisualizerInterface modelValue={vectors} />
   </div>
-</Experiment>
+</Showcase>

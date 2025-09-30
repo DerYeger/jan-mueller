@@ -74,7 +74,7 @@ test.describe('Home', () => {
       'yeger monorepo',
     ]
     for (const project of projects) {
-      const projectLocator = page.locator(`text=${project}`)
+      const projectLocator = page.locator(`text=${project}`).first()
       await projectLocator.scrollIntoViewIfNeeded()
       await expect(projectLocator).toBeVisible()
     }
@@ -92,7 +92,7 @@ test.describe('Home', () => {
     await expect(yattaExperience).toContainText('Dec 2020')
     await expect(yattaExperience.locator('a')).toHaveAttribute('href')
 
-    await expect(experience.locator('li')).toHaveCount(11)
+    await expect(experience.locator('li')).toHaveCount(12)
   })
 
   test('shows education', async ({ page }) => {

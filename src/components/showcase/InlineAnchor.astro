@@ -1,11 +1,12 @@
 ---
 interface Props {
   to: string
+  openInNew?: boolean
 }
 
-const { to } = Astro.props
+const { to, openInNew } = Astro.props
 ---
 
-<a href={to} class="inline-block font-bold anchor-blue no-underline">
+<a href={to} target={openInNew ? '_blank' : undefined} rel={openInNew ? 'noreferrer' : undefined} class="inline-block font-bold anchor-blue no-underline">
   <slot />
 </a>

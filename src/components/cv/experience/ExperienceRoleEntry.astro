@@ -1,18 +1,27 @@
 ---
 import DateRange from '~/components/date/DateRange.astro'
+import Dot from '~/components/Dot.astro'
+import { formatDuration } from '~/lib'
 import type { ExperienceRole } from '~/types'
 
 interface Props {
   role: ExperienceRole
+  isOnlyRole: boolean
 }
 
-const { role } = Astro.props
+const { role, isOnlyRole } = Astro.props
+
+const duration = !role.endDate ? undefined : formatDuration(role.startDate, role.endDate)
 ---
 
 <div class="font-medium text-black dark:text-white mb-1 text-lg">
   {role.title}
 </div>
-{role.description ? <div class="text-light text-sm mb-1">{role.description}</div> : null}
-<div>
+{role.description ? <div class="text-light text-sm mb-1 md:whitespace-nowrap">{role.description}</div> : null}
+{!isOnlyRole ? <div class="xxs:whitespace-nowrap">
   <DateRange startDate={role.startDate} endDate={role.endDate} />
-</div>
+    {duration ? <>
+      <Dot />
+      <span>{duration}</span>
+    </> : null}
+</div> : null }

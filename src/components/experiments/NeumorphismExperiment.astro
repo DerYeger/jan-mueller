@@ -1,8 +1,8 @@
 ---
-import Experiment from '~/components/experiments/Experiment.astro'
+import Showcase from '~/components/showcase/Showcase.astro'
 ---
 
-<Experiment class="grid grid-cols-2 grid-rows-2 bg-neutral-200!">
+<Showcase name="neumorphism" class="grid grid-cols-2 grid-rows-2 bg-none bg-neutral-200">
   <div
     class="m-auto size-full max-h-24 max-w-24 rounded-3xl bg-linear-to-b from-neutral-300 via-neutral-200 to-neutral-100 p-2 outline-solid outline-1 outline-neutral-300"
   >
@@ -44,6 +44,6 @@ import Experiment from '~/components/experiments/Experiment.astro'
     </div>
   </div>
   <div class="noisy pointer-events-none absolute inset-0 opacity-40"></div>
-</Experiment>
+</Showcase>
 
 <script src="~/components/experiments/neumorphism.ts"></script>
