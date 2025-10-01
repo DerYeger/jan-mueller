@@ -11,6 +11,21 @@ interface Props {
 const { links, isSub = false } = Astro.props
 ---
 
-<nav class={cn('flex flex-0 w-full min-xxs:gap-4 justify-evenly')}>
+<nav class={cn('nav-with-indicator flex flex-0 w-full min-xxs:gap-4 justify-evenly relative')}>
+  <div class="nav-indicator" aria-hidden="true"></div>
   {links.map((link) => (<HeaderLink href={link.href} exact={isSub}>{link.label}</HeaderLink>))}
 </nav>
+
+<style>
+  .nav-indicator {
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    height: 3px;
+    background: currentColor;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    width: var(--indicator-width, 0);
+    transform: translateX(var(--indicator-left, 0));
+  }
+</style>

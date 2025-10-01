@@ -11,8 +11,8 @@ const { education } = Astro.props as Props
 ---
 
 <div class="flex flex-col gap-1 md:items-center md:text-center" data-testid={education.name}>
-  <span class="font-semibold text-xl text-black dark:text-white mb-1">{education.name}</span>
-  <span class="text-light text-lg">
+  <span class="font-semibold text-xl text-strong mb-1">{education.name}</span>
+  <span class="text-lighter text-lg">
     <a href={education.href} rel="noreferrer" target="_blank" class="hover:text-black! dark:hover:text-white!">{education.institution}</a>
     <Dot />
     {education.grade}

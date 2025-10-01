@@ -14,10 +14,10 @@ const { role, isOnlyRole } = Astro.props
 const duration = !role.endDate ? undefined : formatDuration(role.startDate, role.endDate)
 ---
 
-<div class="font-medium text-black dark:text-white mb-1 text-lg">
+<div class="font-medium text-strong mb-1 text-lg">
   {role.title}
 </div>
-{role.description ? <div class="text-light text-sm mb-1 md:whitespace-nowrap">{role.description}</div> : null}
+{role.description ? <div class="text-lighter text-sm mb-1 md:whitespace-nowrap">{role.description}</div> : null}
 {!isOnlyRole ? <div class="xxs:whitespace-nowrap">
   <DateRange startDate={role.startDate} endDate={role.endDate} />
     {duration ? <>

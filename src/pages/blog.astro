@@ -33,7 +33,7 @@ const posts = (await getCollection('blog')).sort(
                 <BlogHeroImage heroImage={post.data.heroImage} title={post.data.title} height={100} />
                 <div class="flex flex-col gap-4 p-6">
                   <h2 class="my-0! font-bold">{post.data.title}</h2>
-                  <span class="text-neutral-500 dark:text-neutral-400">
+                  <span class="text-lighter">
                     <DateComponent
                       date={moment(post.data.pubDate).toISOString()}
                       format="MMM DD, YYYY"
@@ -45,7 +45,7 @@ const posts = (await getCollection('blog')).sort(
                       </>
                     )}
                   </span>
-                  <span class="text-light text-pretty">{post.data.description}</span>
+                  <span class="text-pretty">{post.data.description}</span>
                 </div>
               </a>
             </li>

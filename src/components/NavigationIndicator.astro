@@ -1,0 +1,46 @@
+<script>
+  function initNavIndicator() {
+    const navs = document.querySelectorAll('.nav-with-indicator')
+
+    navs.forEach((navElement) => {
+      const nav = navElement as HTMLElement
+      const indicator = nav.querySelector('.nav-indicator') as HTMLElement
+      if (!indicator) return
+
+      const links = nav.querySelectorAll('a')
+      let activeLink: HTMLAnchorElement | null = null
+
+      // Find the currently active link
+      links.forEach((link) => {
+        const parent = link.closest('[data-active="true"]')
+        if (parent) {
+          activeLink = link
+        }
+      })
+
+      const moveIndicatorToLink = (link: HTMLAnchorElement) => {
+        const rect = link.getBoundingClientRect()
+        const navRect = nav.getBoundingClientRect()
+        nav.style.setProperty('--indicator-width', `${rect.width}px`)
+        nav.style.setProperty('--indicator-left', `${rect.left - navRect.left}px`)
+        indicator.style.opacity = '1'
+      }
+
+      links.forEach((link) => {
+        link.addEventListener('mouseenter', () => {
+          moveIndicatorToLink(link)
+        })
+      })
+
+      nav.addEventListener('mouseleave', () => {
+        if (activeLink) {
+          moveIndicatorToLink(activeLink)
+        } else {
+          indicator.style.opacity = '0'
+        }
+      })
+    })
+  }
+
+  initNavIndicator()
+</script>

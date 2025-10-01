@@ -6,6 +6,6 @@ interface Props {
 const { class: extraClasses = '' } = Astro.props
 ---
 
-<main class:list={['text-neutral-800 dark:text-neutral-200', extraClasses]}>
+<main class:list={['text-medium', extraClasses]}>
   <slot />
 </main>

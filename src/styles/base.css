@@ -17,8 +17,20 @@
   @apply border-neutral-300 dark:border-neutral-700;
 }
 
+@utility text-medium {
+  @apply text-neutral-800 dark:text-neutral-200;
+}
+
 @utility text-light {
   @apply text-neutral-600 dark:text-neutral-300;
+}
+
+@utility text-lighter {
+  @apply text-neutral-500 dark:text-neutral-400;
+}
+
+@utility text-strong {
+  @apply text-black dark:text-white;
 }
 
 @utility gradient-text {
@@ -66,7 +78,7 @@
   }
 
   .title {
-    @apply font-black text-black dark:text-white;
+    @apply font-black text-strong;
   }
 
   .anchor-blue {
