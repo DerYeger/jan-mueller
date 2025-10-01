@@ -1,3 +1,10 @@
+## [3.82.1](https://github.com/DerYeger/jan-mueller/compare/v3.82.0...v3.82.1) (2025-10-01)
+
+
+### Bug Fixes
+
+* adjust line breaks ([8dbd4ee](https://github.com/DerYeger/jan-mueller/commit/8dbd4ee24349eea47fca430c4282ae9f03bcc0fd))
+
 # [3.82.0](https://github.com/DerYeger/jan-mueller/compare/v3.81.0...v3.82.0) (2025-09-30)
 
 
