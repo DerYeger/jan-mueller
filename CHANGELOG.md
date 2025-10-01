@@ -1,3 +1,11 @@
+# [3.83.0](https://github.com/DerYeger/jan-mueller/compare/v3.82.1...v3.83.0) (2025-10-01)
+
+
+### Features
+
+* implement dynamic nav indicator ([bd7369d](https://github.com/DerYeger/jan-mueller/commit/bd7369d6cfaf6ead843a2b8839b9a5b01b635884))
+* improve design ([4313801](https://github.com/DerYeger/jan-mueller/commit/43138015230d9ce3c90ad5c3d4ad9c7c0c2c9176))
+
 ## [3.82.1](https://github.com/DerYeger/jan-mueller/compare/v3.82.0...v3.82.1) (2025-10-01)
 
 
