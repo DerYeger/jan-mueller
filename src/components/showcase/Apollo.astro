@@ -1,7 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
 
-import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
@@ -50,8 +49,8 @@ const { default: earth } = await import(`~/assets/projects/Earth.svg?raw`)
   <div>
     <ShowcaseTitle>{name} 🚀</ShowcaseTitle>
     <ShowcaseDescription>
-      A <Mark>graph-based first-order-logic model checker</Mark> and the result of
-      my <Mark class="-mr-1">bachelor thesis</Mark>.
+      A <mark>graph-based first-order-logic model checker</mark> and the result of
+      my <mark>bachelor thesis</mark>.
     </ShowcaseDescription>
   </div>
 </Showcase>

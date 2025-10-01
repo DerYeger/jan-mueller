@@ -1,6 +1,4 @@
 ---
-import InlineAnchor from '~/components/showcase/InlineAnchor.astro'
-import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
@@ -13,17 +11,17 @@ const name = 'About Me'
     <ShowcaseTitle>{name}</ShowcaseTitle>
     <ShowcaseDescription>
       Hey!
-      I'm a German <Mark class="-mr-1">senior full-stack developer living in Vienna</Mark>.
-      My professional experience is centered around <Mark class="-mr-1">web development in the sectors of banking and financial technologies</Mark>.
-      Below, you'll find details about my <InlineAnchor to="#experience">experience</InlineAnchor>, <InlineAnchor to="#education">education</InlineAnchor>, and <InlineAnchor to="#awards">awards</InlineAnchor>.
+      I'm a German <mark>senior full-stack developer living in Vienna</mark>.
+      My professional experience is centered around <mark>web development in the sectors of banking and financial technologies</mark>.
+      Below, you'll find details about my <a href="#experience" class="anchor-blue anchor-text">experience</a>, <a href="#education" class="anchor-blue anchor-text">education</a>, and <a href="#awards" class="anchor-blue anchor-text">awards</a>.
     </ShowcaseDescription>
     <ShowcaseDescription>
-      As an <Mark class="-mr-1">Open Source enthusiast</Mark>, I maintain a variety of projects with a focus on web development.
-      My work includes <Mark class="-mr-1">websites, APIs, libraries, mobile apps, and CLIs</Mark>.
+      As an <mark>Open Source enthusiast</mark>, I maintain a variety of projects with a focus on web development.
+      My work includes <mark>websites, APIs, libraries, mobile apps, and CLIs</mark>.
     </ShowcaseDescription>
     <ShowcaseDescription>
-      Beyond development, I enjoy <Mark class="-mr-1">cycling</Mark>, <Mark class="-mr-1">hiking</Mark>, and <Mark class="-mr-1">photography</Mark>.
-      A selection of my photos is available in my <InlineAnchor to="/photography">gallery</InlineAnchor>.
+      Beyond development, I enjoy <mark>cycling</mark>, <mark>hiking</mark>, and <mark>photography</mark>.
+      A selection of my photos is available in my <a href="/photography" class="anchor-blue anchor-text">gallery</a>.
     </ShowcaseDescription>
   </div>
 </Showcase>

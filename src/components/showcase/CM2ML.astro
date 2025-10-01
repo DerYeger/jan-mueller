@@ -1,5 +1,4 @@
 ---
-import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
@@ -18,8 +17,8 @@ const { default: logo } = await import(`~/assets/projects/CM2ML.svg?raw`)
   <div class="mb-[calc(var(--logo-size)/2-4rem)]">
     <ShowcaseTitle>{name}</ShowcaseTitle>
     <ShowcaseDescription>
-      A generic, portable, and extensible <Mark>framework for encoding the structure of conceptual models</Mark> and the result of
-      my <Mark class="-mr-1">master thesis</Mark>.
+      A generic, portable, and extensible <mark>framework for encoding the structure of conceptual models</mark> and the result of
+      my <mark>master thesis</mark>.
     </ShowcaseDescription>
   </div>
 </Showcase>

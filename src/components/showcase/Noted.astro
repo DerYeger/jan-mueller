@@ -1,5 +1,4 @@
 ---
-import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
@@ -13,7 +12,7 @@ const { default: logo } = await import(`~/assets/projects/Noted.svg?raw`)
   <div>
     <ShowcaseTitle>{name} ✏️</ShowcaseTitle>
     <ShowcaseDescription>
-      A PWA for <Mark>Markdown-based note-taking</Mark> built with Nuxt.js.
+      A PWA for <mark>markdown-based note-taking</mark> built with Nuxt.js.
     </ShowcaseDescription>
   </div>
   <div class="mx-auto size-32 translate-z-0">

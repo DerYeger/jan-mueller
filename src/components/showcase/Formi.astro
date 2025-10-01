@@ -1,8 +1,6 @@
 ---
 import { Image } from 'astro:assets'
-import InlineAnchor from '~/components/showcase/InlineAnchor.astro'
 
-import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
@@ -21,12 +19,12 @@ const name = 'Formi'
   <div>
     <ShowcaseTitle>{name}</ShowcaseTitle>
     <ShowcaseDescription>
-      <Mark>First-order-logic model checking</Mark> with interactive graph visualization,
+      <mark>First-order-logic model checking</mark> with interactive graph visualization,
       real-time validation, and textual input.
     </ShowcaseDescription>
     <ShowcaseDescription>
-      Formi is a purely <Mark>client-side re-implementation</Mark> of my bachelor thesis.
-      The model checker and parser are published in the <InlineAnchor to="https://github.com/DerYeger/yeger/tree/main/packages/fol" openInNew>@yeger/fol</InlineAnchor> package.
+      Formi is a purely <mark>client-side re-implementation</mark> of my bachelor thesis.
+      The model checker and parser are published via the <a href="https://github.com/DerYeger/yeger/tree/main/packages/fol" target="_blank" rel="noreferrer" class="anchor-blue anchor-text">@yeger/fol</a> package.
     </ShowcaseDescription>
   </div>
   <div class="relative self-center size-36 my-8 scale-150 xl:scale-200">

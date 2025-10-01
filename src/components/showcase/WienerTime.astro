@@ -1,5 +1,4 @@
 ---
-import Mark from '~/components/showcase/Mark.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
@@ -15,11 +14,11 @@ const { default: wienerLinien } = await import(
   <div>
     <ShowcaseTitle>{name}</ShowcaseTitle>
     <ShowcaseDescription>
-      A Next.js web app for <Mark>real-time traffic data</Mark> of Wiener Linien's
+      A Next.js web app for <mark>real-time traffic data</mark> of Wiener Linien's
       public transportation monitors.
     </ShowcaseDescription>
   </div>
-  <div class="max-h-64 grow p-6 opacity-75 dark:opacity-90 dark:brightness-125 sm:max-md:p-0">
+  <div class="max-h-64 grow p-6 opacity-75 translate-z-0 dark:opacity-90 dark:brightness-125 sm:max-md:p-0">
     <Fragment set:html={wienerLinien} />
   </div>
 </Showcase>
