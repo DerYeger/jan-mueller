@@ -12,7 +12,7 @@ const { links, isSub = false } = Astro.props
 ---
 
 <nav class={cn('nav-with-indicator flex flex-0 w-full justify-evenly relative')}>
-  <div class="nav-indicator absolute -bottom-2 left-0 h-[3px] bg-current pointer-events-none" aria-hidden="true"></div>
+  <div style="opacity: 0;" class="nav-indicator transition-all duration-150 absolute -bottom-2 left-2 h-[3px] bg-current pointer-events-none" aria-hidden="true"></div>
   {links.map((link, index) => (
     <HeaderLink
       href={link.href}
@@ -27,8 +27,8 @@ const { links, isSub = false } = Astro.props
 
 <style>
   .nav-indicator {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    width: var(--indicator-width, 0);
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    width: calc(var(--indicator-width, 16px) - 16px);
     transform: translateX(var(--indicator-left, 0));
   }
 </style>

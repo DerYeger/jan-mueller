@@ -5,7 +5,9 @@
     navs.forEach((navElement) => {
       const nav = navElement as HTMLElement
       const indicator = nav.querySelector('.nav-indicator') as HTMLElement
-      if (!indicator) return
+      if (!indicator) {
+        return
+      }
 
       const links = nav.querySelectorAll('a')
       let activeLink: HTMLAnchorElement | null = null
@@ -21,9 +23,15 @@
       const moveIndicatorToLink = (link: HTMLAnchorElement) => {
         const rect = link.getBoundingClientRect()
         const navRect = nav.getBoundingClientRect()
-        nav.style.setProperty('--indicator-width', `${rect.width - 16}px`)
-        nav.style.setProperty('--indicator-left', `${rect.left + 8 - navRect.left}px`)
+        nav.style.setProperty('--indicator-width', `${rect.width}px`)
+        nav.style.setProperty('--indicator-left', `${rect.left - navRect.left}px`)
         indicator.style.opacity = '1'
+      }
+
+      // Position indicator on active link on load
+      if (activeLink) {
+        moveIndicatorToLink(activeLink)
+        indicator.style.opacity = '0'
       }
 
       links.forEach((link) => {
