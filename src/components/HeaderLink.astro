@@ -4,9 +4,11 @@ import { cn } from '~/components/ui/cn'
 // eslint-disable-next-line no-undef
 export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
   exact?: boolean
+  first: boolean
+  last: boolean
 }
 
-const { href, exact, ...props } = Astro.props as Props
+const { href, exact, first, last, ...props } = Astro.props as Props
 
 const isHome = href === '/'
 const isExact = href === Astro.url.pathname || `${href}/` === Astro.url.pathname
@@ -14,11 +16,11 @@ const isSub = typeof href === 'string' && Astro.url.pathname.startsWith(href)
 const isActive = isExact || (!exact && !isHome && isSub)
 ---
 
-<div class={cn('flex flex-1 items-center justify-center', isActive ? 'border-b-3 border-neutral-current pb-1.25 -mb-2' : undefined)}>
+<div class={cn('flex flex-1 relative items-center justify-center', first && '-ml-2', last && '-mr-2')}>
   <a
     href={href}
     class={cn(
-      'inline-block font-bold transition-none no-underline px-3 py-1 rounded-sm text-sm',
+      'inline-block font-bold transition-none no-underline px-5 py-1 text-sm',
       'hover:text-black! dark:hover:text-white!',
       isActive ? 'active-link text-strong' : 'text-lighter',
     )}
@@ -26,5 +28,6 @@ const isActive = isExact || (!exact && !isHome && isSub)
     {...props}
   >
     <slot />
+    {isActive && <div class="absolute bg-current h-[3px] -bottom-2 left-2 right-2 pointer-events-none" aria-hidden="true" />}
   </a>
 </div>

@@ -10,9 +10,9 @@ const { class: className, ...props } = Astro.props
 
 <input
   type="checkbox"
-  class={cn('appearance-none rounded-sm bg-base checked:bg-blue-500 border border-medium size-4 disabled:bg-neutral-200', `relative  checked:before:content-['✓'] checked:before:absolute
+  class={cn(`appearance-none rounded-sm bg-base transition-colors checked:bg-blue-500 checked:border-blue-600 border border-medium size-4 disabled:bg-neutral-200 relative checked:before:content-['✓'] checked:before:absolute
          checked:before:inset-0 checked:before:flex
          checked:before:items-center checked:before:justify-center
          checked:before:text-white checked:before:text-sm
-         checked:before:font-bold"`, className)}
+         checked:before:font-bold`, className)}
   {...props} />

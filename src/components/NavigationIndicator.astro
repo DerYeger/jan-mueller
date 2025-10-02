@@ -21,8 +21,8 @@
       const moveIndicatorToLink = (link: HTMLAnchorElement) => {
         const rect = link.getBoundingClientRect()
         const navRect = nav.getBoundingClientRect()
-        nav.style.setProperty('--indicator-width', `${rect.width}px`)
-        nav.style.setProperty('--indicator-left', `${rect.left - navRect.left}px`)
+        nav.style.setProperty('--indicator-width', `${rect.width - 16}px`)
+        nav.style.setProperty('--indicator-left', `${rect.left + 8 - navRect.left}px`)
         indicator.style.opacity = '1'
       }
 
