@@ -1,3 +1,10 @@
+# [3.86.0](https://github.com/DerYeger/jan-mueller/compare/v3.85.0...v3.86.0) (2025-10-02)
+
+
+### Features
+
+* improve visual hierarchy ([0641a60](https://github.com/DerYeger/jan-mueller/commit/0641a607185fb3f786cd3c78be082818bdb3ac47))
+
 # [3.85.0](https://github.com/DerYeger/jan-mueller/compare/v3.84.0...v3.85.0) (2025-10-02)
 
 
