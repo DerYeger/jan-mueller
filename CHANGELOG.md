@@ -1,3 +1,10 @@
+# [3.85.0](https://github.com/DerYeger/jan-mueller/compare/v3.84.0...v3.85.0) (2025-10-02)
+
+
+### Features
+
+* improve indicator ([fb98009](https://github.com/DerYeger/jan-mueller/commit/fb98009295068292c7620a6f585a02a99455b960))
+
 # [3.84.0](https://github.com/DerYeger/jan-mueller/compare/v3.83.0...v3.84.0) (2025-10-02)
 
 
