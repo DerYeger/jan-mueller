@@ -22,6 +22,6 @@ const duration = !role.endDate ? undefined : formatDuration(role.startDate, role
   <DateRange startDate={role.startDate} endDate={role.endDate} />
     {duration ? <>
       <Dot />
-      <span>{duration}</span>
+      <span class="whitespace-nowrap">{duration}</span>
     </> : null}
 </div> : null }

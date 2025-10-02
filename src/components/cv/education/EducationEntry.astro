@@ -12,12 +12,13 @@ const { education } = Astro.props as Props
 
 <div class="flex flex-col gap-1 md:items-center md:text-center" data-testid={education.name}>
   <span class="font-semibold text-xl text-strong mb-1">{education.name}</span>
-  <span class="text-lighter text-lg">
+   <div class="text-lighter">
+    <DateRange startDate={education.startDate} endDate={education.endDate} />
+  </div>
+  <span class="text-lg">
     <a href={education.href} rel="noreferrer" target="_blank" class="hover:text-black! dark:hover:text-white!">{education.institution}</a>
     <Dot />
     {education.grade}
   </span>
-  <div>
-    <DateRange startDate={education.startDate} endDate={education.endDate} />
-  </div>
+
 </div>

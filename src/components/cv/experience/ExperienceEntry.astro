@@ -26,7 +26,7 @@ const duration = !endDate ? undefined : formatDuration(startDate, endDate)
     <DateRange startDate={startDate} endDate={endDate} />
     {duration ? <>
       <Dot />
-      <span>{duration}</span>
+      <span class="whitespace-nowrap">{duration}</span>
     </> : null}
   </div>
   <ul class="mt-4 flex flex-col gap-8">
