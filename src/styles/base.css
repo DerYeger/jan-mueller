@@ -8,12 +8,6 @@
   --breakpoint-xxs: 350px;
 }
 
-@layer utilities {
-  a:not([class*="text-neutral"]):not([class*="text-light"]):not([class*="anchor-blue"]):hover {
-    @apply text-neutral-600 dark:text-neutral-300;
-  }
-}
-
 @utility border-medium {
   @apply border-neutral-300 dark:border-neutral-700;
 }
@@ -38,8 +32,16 @@
   @apply text-transparent bg-clip-text bg-linear-to-r;
 }
 
+@utility bg-body {
+  @apply bg-neutral-50 dark:bg-neutral-950;
+}
+
 @utility bg-base {
   @apply bg-white dark:bg-neutral-900;
+}
+
+@utility bg-disabled {
+  @apply bg-neutral-200 dark:bg-neutral-800;
 }
 
 @utility bg-glass {
@@ -54,6 +56,10 @@
 
   a {
     @apply transition-colors underline;
+
+    &:not([class*="anchor-blue"]):not([class*="anchor-custom"]):not([class*="anchor-icon"]):hover {
+      @apply text-light;
+    }
   }
 
   img {
@@ -87,7 +93,7 @@
   }
 
   .anchor-blue {
-    @apply text-blue-600 dark:text-blue-500 hover:text-blue-500 dark:hover:text-blue-400;
+    @apply text-blue-600 dark:text-blue-500 hover:text-blue-500 dark:hover:text-blue-400 active:text-blue-700 dark:active:text-blue-300;
   }
 
   .anchor-text {

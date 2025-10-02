@@ -43,7 +43,7 @@
         }
       })
 
-      window.matchMedia('(min-width: 350px)').addEventListener('change', (e) => {
+      window.matchMedia('(min-width: 350px)').addEventListener('change', () => {
         if (currentLink) {
           // Force recalculation of indicator width
           moveIndicatorToLink(currentLink)

@@ -4,18 +4,19 @@ import { Icon } from 'astro-icon/components'
 import Showcase from '~/components/showcase/Showcase.astro'
 import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
 import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
+import { cn } from '~/components/ui/cn'
 
 const name = 'Apollo'
 
 type Star =
-  `top-${number} right-${number} w-${number} animation-delay-${number}!`
+  `top-${number} right-${number} w-${number} [animation-delay:${number}ms]!`
 const stars: Star[] = [
-  'top-4 right-7 w-4 animation-delay-0!',
-  'top-10 right-12 w-3 animation-delay-200!',
-  'top-6 right-16 w-2 animation-delay-400!',
-  'top-12 right-20 w-4 animation-delay-600!',
-  'top-9 right-36 w-2 animation-delay-800!',
-  'top-16 right-48 w-3 animation-delay-1000!',
+  'top-4 right-7 w-4 [animation-delay:0ms]!',
+  'top-10 right-12 w-3 [animation-delay:200ms]!',
+  'top-6 right-16 w-2 [animation-delay:400ms]!',
+  'top-12 right-20 w-4 [animation-delay:600ms]!',
+  'top-9 right-36 w-2 [animation-delay:800ms]!',
+  'top-16 right-48 w-3 [animation-delay:1000ms]!',
 ]
 
 const { default: moon } = await import(`~/assets/projects/Moon.svg?raw`)
@@ -26,12 +27,12 @@ const { default: earth } = await import(`~/assets/projects/Earth.svg?raw`)
 <Showcase
   name={name}
   link="https://apollo.janmueller.dev"
-  class="apollo bg-linear-to-tr! dark dark:from-slate-900 dark:to-violet-900 transition-all"
+  class="apollo bg-linear-to-tr dark dark:from-slate-900 dark:to-violet-900 transition-all"
 >
   {
     stars.map((star) => (
       <Icon
-        class={`absolute text-yellow-500 ${star} transition-transform duration-500 group-hover:-translate-x-2 group-hover:translate-y-1 group-hover:scale-50 motion-safe:animate-[pulse_2000ms_ease-in-out_infinite]`}
+        class={cn('absolute text-yellow-500 transition-transform duration-500 group-hover:-translate-x-2 group-hover:translate-y-1 group-hover:scale-50 motion-safe:animate-[pulse_2000ms_ease-in-out_infinite]', star)}
         name="mdi:star"
       />
     ))

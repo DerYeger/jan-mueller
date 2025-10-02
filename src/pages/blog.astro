@@ -25,14 +25,14 @@ const posts = (await getCollection('blog')).sort(
         posts.map(async (post) => {
           const { remarkPluginFrontmatter } = await post.render()
           return (
-            <li class="card hover:shadow-2xl transition-shadow overflow-hidden" data-testid={`blog-post-${post.slug}`}>
+            <li class="card hover:shadow-2xl transition-all overflow-hidden" data-testid={`blog-post-${post.slug}`}>
               <a
                 href={`/blog/${post.slug}/`}
-                class="block no-underline"
+                class="block no-underline hover:text-light"
               >
                 <BlogHeroImage heroImage={post.data.heroImage} title={post.data.title} height={100} />
                 <div class="flex flex-col gap-4 p-6">
-                  <h2 class="my-0! font-bold">{post.data.title}</h2>
+                  <h2 class="font-bold">{post.data.title}</h2>
                   <span class="text-lighter">
                     <DateComponent
                       date={moment(post.data.pubDate).toISOString()}

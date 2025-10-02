@@ -16,7 +16,7 @@ const { education } = Astro.props as Props
     <DateRange startDate={education.startDate} endDate={education.endDate} />
   </div>
   <span class="text-lg">
-    <a href={education.href} rel="noreferrer" target="_blank" class="hover:text-black! dark:hover:text-white!">{education.institution}</a>
+    <a href={education.href} rel="noreferrer" target="_blank">{education.institution}</a>
     <Dot />
     {education.grade}
   </span>

@@ -20,8 +20,8 @@ const isActive = isExact || (!exact && !isHome && isSub)
   <a
     href={href}
     class={cn(
-      'inline-block font-bold transition-none no-underline max-xxs:px-3 px-5 py-2 -my-1 text-sm',
-      'hover:text-black! dark:hover:text-white!',
+      'inline-block font-bold no-underline max-xxs:px-3 px-5 py-2 -my-1 text-sm',
+      'hover:text-strong',
       isActive ? 'active-link text-strong' : 'text-lighter',
     )}
     data-active={isActive ? 'true' : undefined}

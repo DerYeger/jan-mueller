@@ -74,7 +74,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
           </div>
           <Image
             src={(await getImageAsset(post.data.heroImage))!}
-            class="hidden bg-neutral-200 dark:bg-neutral-900 2xl:block w-10 h-10 rounded-full shadow-lg"
+            class="max-2xl:hidden card w-10 h-10 rounded-full shadow-lg"
             layout="fixed"
             quality="high"
             format="webp"
@@ -93,8 +93,8 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
         </a>
       ))}
     </BlogSidebar>
-    <article class="mx-auto container prose dark:prose-invert max-w-[80ch] xl:w-fit px-4 py-8 order-2">
-      <BlogHeroImage class="card border-0 bg-neutral-200 dark:bg-neutral-900" heroImage={heroImage} title={title} height={200} loading="eager" />
+    <article class="mx-auto container prose prose-neutral prose-a:text-medium prose-a:hover:text-light dark:prose-invert max-w-[80ch] xl:w-fit px-4 py-8 order-2">
+      <BlogHeroImage class="card border-0" heroImage={heroImage} title={title} height={200} loading="eager" />
       <h1>{title}</h1>
       <div class="mb-4 mt-8 flex flex-wrap gap-1">
         {pubDate && <DateComponent date={pubDate} format="MMM DD, YYYY" />}
@@ -126,7 +126,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
       </div>
       <div class="mt-16 flex justify-between gap-2 text-sm">
         { previousPost && (
-            <a href={`/blog/${previousPost.slug}/`} class="flex flex-col items-start gap-1 rounded-sm border border-medium p-2 no-underline transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-950">
+          <a href={`/blog/${previousPost.slug}/`} class="flex flex-col items-start gap-1 rounded-sm border border-medium p-2 no-underline transition-all hover:bg-base hover:shadow-md">
             <div class="flex items-center gap-1 font-normal text-(--tw-prose-body)">
               <Icon name="akar-icons:arrow-left" />
               Previous
@@ -136,7 +136,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
         ) }
         <div class="grow-1" />
         { nextPost && (
-          <a href={`/blog/${nextPost.slug}/`} class="flex flex-col items-end gap-1 rounded-sm border border-medium p-2 no-underline transition-colors hover:bg-neutral-200 dark:hover:bg-neutral-950">
+          <a href={`/blog/${nextPost.slug}/`} class="flex flex-col items-end gap-1 rounded-sm border border-medium p-2 no-underline transition-all hover:bg-base hover:shadow-md">
             <div class="flex items-center gap-1 font-normal text-(--tw-prose-body)">
               Next
               <Icon name="akar-icons:arrow-right" />
