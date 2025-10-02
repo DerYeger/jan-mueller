@@ -59,5 +59,4 @@ function setDashoffset(line: SVGPathElement, percentage: number) {
   line.style.strokeDashoffset = `${length - length * percentage}px`
 }
 
-// window.onload = setUpListeners
-setUpListeners()
+window.addEventListener('load', setUpListeners, { once: true })

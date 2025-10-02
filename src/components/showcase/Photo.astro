@@ -43,7 +43,7 @@ function getNumberWithOrdinal(n: number) {
         >
           <div
             class={`size-2 rounded-full ${
-              i === index ? 'bg-white' : 'glass opacity-75'
+              i === index ? 'bg-white' : 'bg-glass'
             }`}
           />
         </button>
@@ -61,7 +61,7 @@ function getNumberWithOrdinal(n: number) {
     class="m-0 size-full object-cover"
   />
   <div
-    class="glass absolute inset-x-3 bottom-2 rounded-3xl px-2 py-1 text-center text-xs opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+    class="bg-glass absolute inset-x-3 bottom-2 rounded-3xl px-2 py-1 text-center text-xs opacity-0 transition-opacity duration-500 group-hover:opacity-100"
   >
     {location}
   </div>

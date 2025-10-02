@@ -20,7 +20,7 @@ const isActive = isExact || (!exact && !isHome && isSub)
   <a
     href={href}
     class={cn(
-      'inline-block font-bold transition-none no-underline px-5 py-1 text-sm',
+      'inline-block font-bold transition-none no-underline max-xxs:px-3 px-5 py-2 -my-1 text-sm',
       'hover:text-black! dark:hover:text-white!',
       isActive ? 'active-link text-strong' : 'text-lighter',
     )}
@@ -28,6 +28,6 @@ const isActive = isExact || (!exact && !isHome && isSub)
     {...props}
   >
     <slot />
-    {isActive && <div class="absolute bg-current h-[3px] -bottom-2 left-2 right-2 pointer-events-none" aria-hidden="true" />}
+    {isActive && <div class="absolute bg-current h-[3px] -bottom-2 max-xxs:left-1 left-2 max-xxs:right-1 right-2 pointer-events-none" aria-hidden="true" />}
   </a>
 </div>

@@ -51,6 +51,7 @@ import Input from '~/components/ui/Input.astro'
     const sizeInput = document.getElementById('benchmark-size-input')! as HTMLInputElement
     const reversedCheckbox = document.getElementById('benchmark-reversed-checkbox')! as HTMLInputElement
     const submitButton = document.getElementById('benchmark-submit-button')! as HTMLButtonElement
+    const exampleButtons = document.querySelectorAll(`button[data-target="benchmark"]`) as NodeListOf<HTMLButtonElement>
 
     sizeInput.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
@@ -62,12 +63,18 @@ import Input from '~/components/ui/Input.astro'
       sizeInput.disabled = true
       reversedCheckbox.disabled = true
       submitButton.disabled = true
+      exampleButtons.forEach((btn) => {
+        btn.disabled = true
+      })
     }
 
     function enableInputs() {
       sizeInput.disabled = false
       reversedCheckbox.disabled = false
       submitButton.disabled = false
+      exampleButtons.forEach((btn) => {
+        btn.disabled = false
+      })
     }
 
     const arrayBuilder = new ComlinkWorker<typeof import('./arrayBuilder.ts')>(new URL('./arrayBuilder.ts', import.meta.url))

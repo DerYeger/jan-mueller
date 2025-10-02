@@ -41,7 +41,7 @@ const PhotoMarker: FunctionalComponent<{ image: MapImage }> = ({ image }) => {
         iconAnchor: [20, 20],
       })}
     >
-      <LazyPopup minWidth={width} maxWidth={width} closeButton={false} autoPanPadding={[8, HEADER_HEIGHT]}>
+      <LazyPopup minWidth={width} maxWidth={width} className="[&_*:is(.leaflet-popup-content-wrapper,.leaflet-popup-tip)]:bg-base!" closeButton={false} autoPanPadding={[8, HEADER_HEIGHT]}>
         <div
           class="w-full"
           style={{ aspectRatio: String(image.aspectRatio) }}
@@ -53,7 +53,7 @@ const PhotoMarker: FunctionalComponent<{ image: MapImage }> = ({ image }) => {
             decoding="async"
           />
         </div>
-        <div className="mx-auto mt-1 flex max-w-sm justify-evenly gap-1 text-xs font-semibold *:flex *:grow *:justify-center">
+        <div className="text-strong mx-auto mt-1 flex max-w-sm justify-evenly gap-1 text-xs font-semibold *:flex *:grow *:justify-center">
           <div>
             {image.focalLength}
           </div>
@@ -86,7 +86,7 @@ export const PhotographyMap: FunctionalComponent<
   return (
     <Suspense fallback={<></>}>
       <MapContainer
-        className="photography-map relative isolate size-full transition-all"
+        className="photography-map relative isolate size-full transition-all [&_.leaflet-control-zoom]:dark:invert"
         scrollWheelZoom
         bounds={bounds}
         boundsOptions={{ padding: [5, 5] }}

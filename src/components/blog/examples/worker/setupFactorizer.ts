@@ -4,6 +4,7 @@ export function setupFactorizer(id: string) {
   const input = document.getElementById(`${id}-input`) as HTMLInputElement | null
   const button = document.getElementById(`${id}-button`) as HTMLButtonElement | null
   const result = document.getElementById(`${id}-result`) as HTMLDivElement | null
+  const exampleButtons = document.querySelectorAll(`button[data-target="${id}"]`) as NodeListOf<HTMLButtonElement>
 
   if (!input || !button || !result) {
     throw new Error('One or more elements not found')
@@ -12,11 +13,17 @@ export function setupFactorizer(id: string) {
   function disableInputs() {
     input!.disabled = true
     button!.disabled = true
+    exampleButtons.forEach((btn) => {
+      btn.disabled = true
+    })
   }
 
   function enableInputs() {
     input!.disabled = false
     button!.disabled = false
+    exampleButtons.forEach((btn) => {
+      btn.disabled = false
+    })
   }
 
   let loadingIndicatorTimeout: ReturnType<typeof setTimeout> | null = null

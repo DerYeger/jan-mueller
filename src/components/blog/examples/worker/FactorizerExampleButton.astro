@@ -13,7 +13,7 @@ interface Props {
 const { id, value, text, compact, type } = Astro.props
 ---
 
-<ExampleButton id={`factorize-${id}-${value}`} type={type} compact={compact}>{text}</ExampleButton>
+<ExampleButton id={`factorize-${id}-${value}`} data-target={id} type={type} compact={compact}>{text}</ExampleButton>
 <script is:inline define:vars={{ id, value }}>
   const button = document.getElementById(`factorize-${id}-${value}`)
   button.addEventListener('click', () => {
