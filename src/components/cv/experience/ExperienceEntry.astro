@@ -3,7 +3,7 @@ import ExperienceRoleEntry from '~/components/cv/experience/ExperienceRoleEntry.
 import DateRange from '~/components/date/DateRange.astro'
 import Dot from '~/components/Dot.astro'
 import { cn } from '~/components/ui/cn'
-import { formatDuration } from '~/lib'
+import { DateFormats, formatDuration, getDuration, getToday } from '~/lib'
 import type { Experience as ExperienceType } from '~/types'
 
 export interface Props {
@@ -15,21 +15,25 @@ const { experience } = Astro.props as Props
 const startDate = experience.roles.map((r) => r.startDate).sort()[0]
 const endDate = experience.roles.map((r) => r.endDate).sort().reverse()[0]
 
-const duration = !endDate ? undefined : formatDuration(startDate, endDate)
+const duration = getDuration(experience.roles.map((role) => ({ from: role.startDate, to: role.endDate ?? getToday() })))
+const formattedDuration = formatDuration(duration)
 ---
 
-<div class="flex flex-col" data-testid={experience.name}>
+<div class="flex flex-col gap-2" data-testid={experience.name}>
   <a href={experience.href} rel="noreferrer" target="_blank" class="font-bold text-xl text-strong hover:text-light w-fit md:whitespace-nowrap">
     {experience.name}
   </a>
-  <div class="mt-2">
-    <DateRange startDate={startDate} endDate={endDate} />
+  <div class="text-lighter">
+    {experience.location}
+  </div>
+  <div>
+    <DateRange startDate={startDate} endDate={endDate} format={DateFormats.Month} />
     {duration ? <>
       <Dot />
-      <span class="whitespace-nowrap">{duration}</span>
+      <span class="whitespace-nowrap">{formattedDuration}</span>
     </> : null}
   </div>
-  <ul class="mt-4 flex flex-col gap-8">
+  <ul class="mt-2 flex flex-col gap-8">
     {experience.roles.map((role, index) => (
       <li class="flex-1 flex gap-3 relative">
         <div class={cn('relative size-2 shrink-0 mt-2.5')}>

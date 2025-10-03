@@ -1,11 +1,11 @@
 ---
 import { getCollection } from 'astro:content'
-import moment from 'moment'
 import BlogHeroImage from '~/components/BlogHeroImage.astro'
 
 import DateComponent from '~/components/date/DateComponent.astro'
 import Dot from '~/components/Dot.astro'
 import MainLayout from '~/layouts/MainLayout.astro'
+import { DateFormats } from '~/lib'
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -35,8 +35,8 @@ const posts = (await getCollection('blog')).sort(
                   <h2 class="font-bold">{post.data.title}</h2>
                   <span class="text-lighter">
                     <DateComponent
-                      date={moment(post.data.pubDate).toISOString()}
-                      format="MMM DD, YYYY"
+                      date={post.data.pubDate}
+                      format={DateFormats.Day}
                     />
                     {remarkPluginFrontmatter && (
                       <>

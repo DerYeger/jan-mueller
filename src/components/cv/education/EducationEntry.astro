@@ -1,6 +1,7 @@
 ---
 import DateRange from '~/components/date/DateRange.astro'
 import Dot from '~/components/Dot.astro'
+import { DateFormats } from '~/lib'
 import type { Education } from '~/types'
 
 export interface Props {
@@ -13,7 +14,7 @@ const { education } = Astro.props as Props
 <div class="flex flex-col gap-1 md:items-center md:text-center" data-testid={education.name}>
   <span class="font-semibold text-xl text-strong mb-1">{education.name}</span>
    <div class="text-lighter">
-    <DateRange startDate={education.startDate} endDate={education.endDate} />
+    <DateRange startDate={education.startDate} endDate={education.endDate} format={DateFormats.Month} />
   </div>
   <span class="text-lg">
     <a href={education.href} rel="noreferrer" target="_blank">{education.institution}</a>

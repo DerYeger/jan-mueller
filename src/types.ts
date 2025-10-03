@@ -24,6 +24,7 @@ export interface ExperienceRole {
 export interface Experience {
   name: string
   roles: ExperienceRole[]
+  location: string
   href?: string
 }
 

@@ -5,7 +5,7 @@ import { formatDate } from '~/lib'
 export interface Props {
   startDate: string
   endDate: string | undefined
-  format?: string | undefined
+  format: string
 }
 
 const { startDate, endDate, format } = Astro.props as Props

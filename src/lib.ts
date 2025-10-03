@@ -1,4 +1,5 @@
-import moment from 'moment'
+import { formatDate as formatDateBase, formatDuration as formatDurationBase, intervalToDuration } from 'date-fns'
+import type { Duration } from 'date-fns'
 
 export async function getImageAsset(imagePath: string): Promise<ImageMetadata | undefined> {
   const assets = import.meta.glob('~/assets/**/*')
@@ -35,12 +36,61 @@ export const accounts = [
   },
 ]
 
-export function formatDate(date: string | Date, format?: string): string {
-  return moment(date).format(format ?? 'MMM YYYY')
+export const DateFormats = {
+  Day: 'MMM dd, yyyy',
+  Month: 'MMM yyyy',
 }
 
-export function formatDuration(startDate: string | Date, endDate?: string | Date): string {
-  const start = moment(startDate)
-  const end = endDate ? moment(endDate) : moment()
-  return moment.duration(end.diff(start)).humanize()
+export type DateLike = string | Date
+
+export function formatDate(date: DateLike, format: string): string {
+  return formatDateBase(date, format)
+}
+
+export interface TimeRange { from: DateLike, to: DateLike }
+
+export function getDuration(ranges: TimeRange[]): Duration {
+  return ranges
+    .map((r) => intervalToDuration({ start: r.from, end: r.to }))
+    .map(normalizeDuration)
+  .reduce((acc, curr) => {
+    return {
+      years: (acc.years ?? 0) + (curr.years ?? 0),
+      months: (acc.months ?? 0) + (curr.months ?? 0),
+      days: (acc.days ?? 0) + (curr.days ?? 0),
+      hours: (acc.hours ?? 0) + (curr.hours ?? 0),
+      minutes: (acc.minutes ?? 0) + (curr.minutes ?? 0),
+      seconds: (acc.seconds ?? 0) + (curr.seconds ?? 0),
+    }
+  }, {})
+}
+
+function normalizeDuration(duration: Duration): Duration {
+  if (duration.days && duration.days > 14) {
+    duration.months = (duration.months ?? 0) + 1
+    duration.days = 0
+  }
+
+  if (!duration.years && !duration.months) {
+    duration.months = 1
+    duration.days = 0
+  }
+
+  if (duration.months && duration.months > 12) {
+    duration.years = (duration.years ?? 0) + Math.floor((duration.months ?? 0) / 12)
+    duration.months = (duration.months ?? 0) % 12
+  }
+
+  return duration
+}
+
+export function formatDuration(duration: Duration) {
+  const normalized = normalizeDuration(duration)
+  return formatDurationBase(normalized, { format: ['years', 'months'] })
+}
+
+const today = new Date()
+
+export function getToday() {
+  return new Date(today)
 }

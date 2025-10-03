@@ -1,9 +1,8 @@
 import { defineCollection, z } from 'astro:content'
-import moment from 'moment'
 
 const DateSchema = z.preprocess((arg) => {
   if (typeof arg == 'string' || arg instanceof Date) {
-    return moment(arg).toDate()
+    return new Date(arg)
   }
 }, z.date())
 

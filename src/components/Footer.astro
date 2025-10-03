@@ -2,7 +2,7 @@
 import FooterColumn from '~/components/FooterColumn.astro'
 import OpenInNew from '~/components/icons/OpenInNew.astro'
 import { cn } from '~/components/ui/cn'
-import { accounts } from '~/lib'
+import { accounts, getToday } from '~/lib'
 
 interface Props {
   class?: string
@@ -10,7 +10,7 @@ interface Props {
 
 const { class: className } = Astro.props
 
-const year = new Date().getFullYear()
+const year = getToday().getFullYear()
 ---
 
 <footer

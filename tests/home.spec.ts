@@ -86,10 +86,12 @@ test.describe('Home', () => {
 
     const yattaExperience = experience.getByTestId('Yatta Solutions GmbH')
     await expect(yattaExperience).toBeVisible()
-    await expect(yattaExperience).toContainText('Software Engineer')
+    await expect(yattaExperience).toContainText('Software Developer')
     await expect(yattaExperience).toContainText('Internship')
+    await expect(yattaExperience).toContainText('Kassel, Germany')
     await expect(yattaExperience).toContainText('Nov 2020')
     await expect(yattaExperience).toContainText('Dec 2020')
+    await expect(yattaExperience).toContainText('2 months')
     await expect(yattaExperience.locator('a')).toHaveAttribute('href')
 
     await expect(experience.locator('li')).toHaveCount(12)

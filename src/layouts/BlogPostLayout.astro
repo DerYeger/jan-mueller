@@ -2,7 +2,6 @@
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
-import moment from 'moment'
 import BlogSidebar from '~/components/blog/BlogSidebar.astro'
 import BlogHeroImage from '~/components/BlogHeroImage.astro'
 
@@ -11,7 +10,7 @@ import Dot from '~/components/Dot.astro'
 import { cn } from '~/components/ui/cn'
 import type { BlogPost } from '~/content/config'
 import MainLayout from '~/layouts/MainLayout.astro'
-import { getImageAsset } from '~/lib'
+import { getImageAsset, DateFormats } from '~/lib'
 
 export interface Props {
   content: BlogPost & { readingTime: string }
@@ -67,8 +66,8 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
              <div class="underline text-balance">{post.data.title}</div>
               <div class="text-light">
                 <DateComponent
-                  date={moment(post.data.pubDate).toISOString()}
-                  format="MMM DD, YYYY"
+                  date={post.data.pubDate}
+                  format={DateFormats.Day}
                 />
             </div>
           </div>
@@ -97,13 +96,13 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
       <BlogHeroImage class="card border-0" heroImage={heroImage} title={title} height={200} loading="eager" />
       <h1>{title}</h1>
       <div class="mb-4 mt-8 flex flex-wrap gap-1">
-        {pubDate && <DateComponent date={pubDate} format="MMM DD, YYYY" />}
+        {pubDate && <DateComponent date={pubDate} format={DateFormats.Day} />}
         {updatedDate && (
           <>
             <Dot />
             <div>
               Last updated on{' '}
-              <DateComponent date={updatedDate} format="MMM DD, YYYY" />
+              <DateComponent date={updatedDate} format={DateFormats.Day} />
             </div>
           </>
         )}
