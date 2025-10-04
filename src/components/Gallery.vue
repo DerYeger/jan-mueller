@@ -26,6 +26,7 @@ const props = defineProps<{ images: GalleryImage[] }>()
           :src="image.src"
           :alt="image.alt"
           :loading="image.lazy ? 'lazy' : 'eager'"
+          :fetchpriority="image.lazy ? 'auto' : 'high'"
           draggable="false"
           decoding="async"
           class="w-full shadow-2xl"
