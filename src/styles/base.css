@@ -82,11 +82,15 @@
   img {
     @apply select-none pointer-events-none;
   }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 @layer components {
   article.prose *:is(h1, h2, h3, h4, h5, h6) {
-    @apply flex items-center gap-2 scroll-mt-20
+    @apply flex items-center gap-2 scroll-mt-24;
   }
 
   .anchor-icon {
@@ -151,3 +155,6 @@
   }
 }
 
+html.dark {
+  color-scheme: dark;
+}

@@ -34,16 +34,19 @@ const { default: earth } = await import(`~/assets/projects/Earth.svg?raw`)
       <Icon
         class={cn('absolute text-yellow-500 transition-transform duration-500 group-hover:-translate-x-2 group-hover:translate-y-1 group-hover:scale-50 motion-safe:animate-[pulse_2000ms_ease-in-out_infinite]', star)}
         name="mdi:star"
+        aria-hidden="true"
       />
     ))
   }
   <div
     class="absolute -bottom-6 -left-6 size-24 transition-transform duration-500 group-hover:-translate-y-4 group-hover:translate-x-28 group-hover:scale-50"
+    aria-hidden="true"
   >
     <Fragment set:html={moon} />
   </div>
   <div
     class="absolute -bottom-12 -left-24 size-24 brightness-125 transition-transform duration-500 group-hover:-translate-y-6 group-hover:translate-x-24"
+    aria-hidden="true"
   >
     <Fragment set:html={earth} />
   </div>

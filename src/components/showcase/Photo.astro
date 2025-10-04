@@ -40,6 +40,7 @@ function getNumberWithOrdinal(n: number) {
           class="dot cursor-pointer p-1 touch-manipulation"
           data-index={i}
           tabindex="-1"
+          aria-hidden="true"
           aria-label={`Show ${getNumberWithOrdinal(i + 1)} image.`}
         >
           <div
@@ -62,6 +63,7 @@ function getNumberWithOrdinal(n: number) {
     class="m-0 size-full object-cover"
   />
   <div
+    aria-hidden="true"
     class="bg-glass absolute inset-x-3 bottom-2 rounded-3xl px-2 py-1 text-center text-xs opacity-0 transition-opacity duration-500 group-hover:opacity-100"
   >
     {location}

@@ -7,7 +7,7 @@ import Input from '~/components/ui/Input.astro'
 <div class="flex flex-col gap-2 rounded-sm border border-medium p-2">
   <div class="font-bold select-none">Worker Benchmark</div>
   <div class="flex flex-wrap gap-2">
-    <Input type="number" id="benchmark-size-input" placeholder="Array size" />
+    <Input type="number" id="benchmark-size-input" placeholder="Array size" inputmode="numeric" autocomplete="off" />
     <div class="flex items-center gap-1 text-sm">
       <Checkbox id="benchmark-reversed-checkbox" />
       <label for="benchmark-reversed-checkbox" class="select-none">Reverse</label>

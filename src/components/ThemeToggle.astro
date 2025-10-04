@@ -16,8 +16,8 @@ const { class: className } = Astro.props as Props
   title="Toggle dark/light mode"
   type="button"
 >
-  <Icon name="akar-icons:sun" class="size-5 absolute inset-1 opacity-100 dark:opacity-0 transition-opacity" />
-  <Icon name="akar-icons:moon" class="size-5 absolute inset-1 opacity-0 dark:opacity-100 transition-opacity" />
+  <Icon aria-hidden="true" name="akar-icons:sun" class="size-5 absolute inset-1 opacity-100 dark:opacity-0 transition-opacity" />
+  <Icon aria-hidden="true" name="akar-icons:moon" class="size-5 absolute inset-1 opacity-0 dark:opacity-100 transition-opacity" />
 </button>
 
 <script>
@@ -31,11 +31,11 @@ const { class: className } = Astro.props as Props
     if (html.classList.contains('dark')) {
       html.classList.remove('dark')
       localStorage.setItem('theme', 'light')
-      metaTag.setAttribute('content', '#FFFFFF')
+      metaTag.setAttribute('content', '#FAFAFA')
     } else {
       html.classList.add('dark')
       localStorage.setItem('theme', 'dark')
-      metaTag.setAttribute('content', '#000000')
+      metaTag.setAttribute('content', '#0A0A0A')
     }
   }
 </script>
