@@ -37,7 +37,7 @@ function getNumberWithOrdinal(n: number) {
     {
       Array.from({ length: total }, (_, i) => (
         <button
-          class="dot cursor-pointer p-1"
+          class="dot cursor-pointer p-1 touch-manipulation"
           data-index={i}
           aria-label={`Show ${getNumberWithOrdinal(i + 1)} image.`}
         >
