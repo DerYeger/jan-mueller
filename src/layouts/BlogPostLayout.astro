@@ -62,7 +62,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
   <div class="max-w-[1920px] mx-auto flex items-start gap-8 2xl:gap-16">
     <BlogSidebar position="left" title="Posts" class="order-1">
       {posts.map(async (post) => (
-        <a href={`/blog/${post.slug}/`} class={cn('py-1 no-underline flex gap-2 items-center justify-end', post.slug === slug && 'anchor-blue')}>
+        <a href={`/blog/${post.slug}/`} class={cn('py-1 no-underline flex gap-2 items-center justify-end w-fit ml-auto', post.slug === slug && 'anchor-blue')}>
           <div>
              <div class="underline text-balance">{post.data.title}</div>
               <div class="text-light">
@@ -88,7 +88,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
     </BlogSidebar>
     <BlogSidebar position="right" title="Contents" class="order-3">
       {headings.map(({ depth, slug, text }) => (
-        <a style={{ marginLeft: `${2 * (depth - 2)}rem` }} id={`heading-link-${slug}`} href={`#${slug}`} class="py-1 text-balance">
+        <a style={{ marginLeft: `${2 * (depth - 2)}rem` }} id={`heading-link-${slug}`} href={`#${slug}`} class="py-1 w-fit text-balance">
           {removeSRLabel(text)}
         </a>
       ))}

@@ -12,8 +12,8 @@ const { education } = Astro.props as Props
 ---
 
 <div class="flex flex-col gap-1 md:items-center md:text-center" data-testid={education.name}>
-  <span class="font-semibold text-xl text-strong mb-1">{education.name}</span>
-   <div class="text-lighter">
+  <h3 class="font-semibold text-xl text-strong mb-1">{education.name}</h3>
+  <div class="text-lighter">
     <DateRange startDate={education.startDate} endDate={education.endDate} format={DateFormats.Month} />
   </div>
   <span class="text-lg">

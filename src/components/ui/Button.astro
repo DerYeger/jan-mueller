@@ -12,12 +12,12 @@ const { class: className, ...props } = Astro.props
 <button
   type="button"
   class={cn(
-  'select-none rounded-sm border border-blue-700 dark:border-blue-600 bg-blue-600 dark:bg-blue-500 text-white',
-    'px-2 text-sm transition-colors disabled:cursor-default',
-    'hover:bg-blue-500 dark:hover:bg-blue-400',
-    'active:bg-blue-700 dark:active:bg-blue-600',
+  'select-none rounded-sm min-w-16',
+    'px-2 transition-colors border border-transparent',
+    'bg-neutral-900 text-white hover:bg-neutral-700 active:bg-neutral-800',
+    'dark:bg-neutral-100 dark:text-black dark:hover:bg-neutral-300 dark:active:bg-neutral-200',
     'disabled:bg-disabled disabled:border-medium disabled:text-lighter dark:disabled:bg-disabled',
-    'touch-manipulation focus-visible:focus-ring focus-visible:ring-white',
+    'touch-manipulation focus-visible:focus-ring',
     className,
   )}
   {...props}>
