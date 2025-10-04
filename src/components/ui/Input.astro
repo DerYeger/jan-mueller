@@ -10,4 +10,4 @@ interface Props extends astroHTML.JSX.InputHTMLAttributes {
 const { class: className, ...props } = Astro.props
 ---
 
-<input class={cn('select-none grow bg-base rounded-sm border border-medium px-2 py-1 text-sm disabled:bg-disabled transition-colors', className)} {...props} />
+<input class={cn('select-none grow bg-base rounded-sm border border-medium px-2 py-1 text-sm disabled:bg-disabled transition-colors focus-visible:focus-ring', className)} {...props} />

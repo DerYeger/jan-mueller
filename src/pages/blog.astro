@@ -25,10 +25,10 @@ const posts = (await getCollection('blog')).sort(
         posts.map(async (post, index) => {
           const { remarkPluginFrontmatter } = await post.render()
           return (
-            <li class="card hover:shadow-2xl transition-all overflow-hidden" data-testid={`blog-post-${post.slug}`}>
+            <li class="card has-[*:focus-visible]:focus-ring hover:shadow-2xl transition-all overflow-hidden" data-testid={`blog-post-${post.slug}`}>
               <a
                 href={`/blog/${post.slug}/`}
-                class="block no-underline hover:text-light"
+                class="block no-underline hover:text-light focus-visible:ring-0 focus-visible:ring-offset-0"
               >
                 <BlogHeroImage heroImage={post.data.heroImage} title={post.data.title} height={100} loading={index === 0 ? 'eager' : 'lazy'} />
                 <div class="flex flex-col gap-4 p-6">

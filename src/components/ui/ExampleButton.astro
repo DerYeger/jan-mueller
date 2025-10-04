@@ -18,6 +18,6 @@ const classes: Record<Type, string> = {
 }
 ---
 
-<Button class={cn('rounded-sm px-1 text-sm transition-colors select-none', compact && '-mr-1', classes[type], className)} {...props}>
+<Button class={cn('rounded-sm px-1 text-sm transition-colors select-none focus-visible:ring-black dark:focus-visible:ring-white', compact && '-mr-1', classes[type], className)} {...props}>
   <slot />
 </Button>

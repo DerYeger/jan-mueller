@@ -23,25 +23,29 @@
         indicator.style.opacity = '1'
       }
 
+      const removeIndicatorFromLink = () => {
+         if (activeLink) {
+            moveIndicatorToLink(activeLink)
+          } else {
+            indicator.style.opacity = '0'
+          }
+      }
+
       if (activeLink) {
         moveIndicatorToLink(activeLink)
         indicator.style.opacity = '0'
         currentLink = null
       }
 
+      const indicatorGainEvents = ['focusin', 'mouseenter']
       links.forEach((link) => {
-        link.addEventListener('mouseenter', () => {
-          moveIndicatorToLink(link)
-        })
+        indicatorGainEvents.forEach((event) =>
+          link.addEventListener(event, () => moveIndicatorToLink(link))
+        )
+        link.addEventListener('focusout', removeIndicatorFromLink)
       })
 
-      nav.addEventListener('mouseleave', () => {
-        if (activeLink) {
-          moveIndicatorToLink(activeLink)
-        } else {
-          indicator.style.opacity = '0'
-        }
-      })
+      nav.addEventListener('mouseleave', removeIndicatorFromLink)
 
       window.matchMedia('(min-width: 350px)').addEventListener('change', () => {
         if (currentLink) {

@@ -11,13 +11,13 @@ const { class: className } = Astro.props as Props
 
 <button
   id="theme-toggle"
-  class={cn('relative size-6 hover:text-strong flex items-center translate-z-0 touch-manipulation', className)}
+  class={cn('relative size-7 hover:text-strong flex items-center translate-z-0 touch-manipulation focus-visible:focus-ring rounded-full', className)}
   aria-label="Toggle theme"
   title="Toggle dark/light mode"
   type="button"
 >
-  <Icon name="akar-icons:sun" class="size-5 absolute inset-0.5 opacity-100 dark:opacity-0 transition-opacity" />
-  <Icon name="akar-icons:moon" class="size-5 absolute inset-0.5 opacity-0 dark:opacity-100 transition-opacity" />
+  <Icon name="akar-icons:sun" class="size-5 absolute inset-1 opacity-100 dark:opacity-0 transition-opacity" />
+  <Icon name="akar-icons:moon" class="size-5 absolute inset-1 opacity-0 dark:opacity-100 transition-opacity" />
 </button>
 
 <script>
