@@ -20,14 +20,14 @@ const year = getToday().getFullYear()
     className,
   )}
 >
-  <FooterColumn title="Legal">
+  <FooterColumn title="Legal" role="navigation">
     <a href="/impressum/" lang="de">Impressum</a>
     <a href="/legal-notice/">Legal Notice</a>
     <span>
       {year} &copy; Jan M&uuml;ller
     </span>
   </FooterColumn>
-  <FooterColumn title="Resources">
+  <FooterColumn title="Resources" role="navigation">
     <a href="/rss.xml"> RSS Feed</a>
     <a
       href="https://github.com/DerYeger/jan-mueller"
@@ -39,7 +39,7 @@ const year = getToday().getFullYear()
       <OpenInNew />
     </a>
   </FooterColumn>
-  <FooterColumn title="Contact">
+  <FooterColumn title="Contact" role="navigation">
     {
       accounts.map((account) => (
         <a href={account.href} rel="noreferrer" target="_blank">
@@ -48,6 +48,8 @@ const year = getToday().getFullYear()
         </a>
       ))
     }
-    <a href="mailto:mail@janmueller.dev" title="Mail">Mail</a>
+    <address class="not-italic">
+      <a href="mailto:mail@janmueller.dev" title="Mail">Mail</a>
+    </address>
   </FooterColumn>
 </footer>

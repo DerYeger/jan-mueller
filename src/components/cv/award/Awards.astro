@@ -26,7 +26,7 @@ const awards: Award[] = [
 
 <CVList id="awards">
   <span slot="title">Awards</span>
-  <ul class="flex flex-col md:flex-row gap-16">
+  <ol aria-labelledby="awards" class="flex flex-col md:flex-row gap-16">
     {
       awards.map((entry) => (
         <li class="flex-1">
@@ -34,5 +34,5 @@ const awards: Award[] = [
         </li>
       ))
     }
-  </ul>
+  </ol>
 </CVList>

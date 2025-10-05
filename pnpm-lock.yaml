@@ -84,6 +84,9 @@ importers:
       '@astrojs/vue':
         specifier: 5.1.1
         version: 5.1.1(@types/node@24.6.2)(astro@5.14.1(@types/node@24.6.2)(jiti@2.6.1)(lightningcss@1.30.1)(rollup@4.47.1)(typescript@5.9.3)(yaml@2.8.1))(jiti@2.6.1)(lightningcss@1.30.1)(rollup@4.47.1)(vue@3.5.22(typescript@5.9.3))(yaml@2.8.1)
+      '@axe-core/playwright':
+        specifier: 4.10.2
+        version: 4.10.2(playwright-core@1.55.1)
       '@commitlint/cli':
         specifier: 20.1.0
         version: 20.1.0(@types/node@24.6.2)(typescript@5.9.3)
@@ -360,6 +363,11 @@ packages:
 
   '@astrojs/yaml2ts@0.2.2':
     resolution: {integrity: sha512-GOfvSr5Nqy2z5XiwqTouBBpy5FyI6DEe+/g/Mk5am9SjILN1S5fOEvYK0GuWHg98yS/dobP4m8qyqw/URW35fQ==}
+
+  '@axe-core/playwright@4.10.2':
+    resolution: {integrity: sha512-6/b5BJjG6hDaRNtgzLIfKr5DfwyiLHO4+ByTLB0cJgWSM8Ll7KqtdblIS6bEkwSF642/Ex91vNqIl3GLXGlceg==}
+    peerDependencies:
+      playwright-core: '>= 1.0.0'
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
@@ -7376,6 +7384,11 @@ snapshots:
   '@astrojs/yaml2ts@0.2.2':
     dependencies:
       yaml: 2.8.1
+
+  '@axe-core/playwright@4.10.2(playwright-core@1.55.1)':
+    dependencies:
+      axe-core: 4.10.3
+      playwright-core: 1.55.1
 
   '@babel/code-frame@7.27.1':
     dependencies:

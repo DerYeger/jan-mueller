@@ -1,6 +1,8 @@
+// import AxeBuilder from '@axe-core/playwright'
 import { BASE_THRESHOLDS, lighthouseTest, PAGES } from 'tests/config'
 import { playAudit } from 'playwright-lighthouse'
 import process from 'node:process'
+// import { expect } from '@playwright/test'
 
 lighthouseTest.describe('Lighthouse', () => {
   lighthouseTest.beforeEach(async ({ browserName }) => {
@@ -10,6 +12,10 @@ lighthouseTest.describe('Lighthouse', () => {
   for (const { url, thresholds } of PAGES) {
     lighthouseTest(url, async ({ page, port }) => {
       await page.goto(url)
+
+      // const accessibilityScanResults = await new AxeBuilder({ page }).analyze()
+      // expect(accessibilityScanResults.violations).toEqual([])
+
       await playAudit({
         page,
         port,

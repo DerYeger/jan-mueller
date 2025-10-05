@@ -1,11 +1,14 @@
 ---
+import { Icon } from 'astro-icon/components'
+
 import { cn } from '~/components/ui/cn'
 
 interface Props {
   to: string
+  text: string
 }
 
-const { to } = Astro.props
+const { to, text } = Astro.props
 ---
 
 <a
@@ -14,5 +17,6 @@ const { to } = Astro.props
   style="transition-property: filter, box-shadow;"
   data-testid={`badge-button-${to}`}
 >
-  <slot />
+  {text}
+  <Icon aria-hidden="true" name="akar-icons:arrow-right" class="size-5" />
 </a>

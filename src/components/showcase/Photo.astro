@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets'
+import { cn } from '~/components/ui/cn'
 
 export type Location = `${string}, ${string}`
 
@@ -18,40 +19,12 @@ interface Props {
 
 const { photo, initial = false, index, total } = Astro.props
 const { src, alt, location } = photo
-
-function getNumberWithOrdinal(n: number) {
-  const s = ['th', 'st', 'nd', 'rd']
-  const v = n % 100
-  return n + (s[(v - 20) % 10] || s[v] || s[0])
-}
 ---
 
 <div
-  class={`photo group absolute inset-0 transition-opacity duration-1000 ${
-    initial ? 'z-10' : 'opacity-0'
-  }`}
+  class={cn(`photo absolute inset-0 transition-opacity duration-1000 data-[active='true']:z-10 data-[active='false']:opacity-0`)}
+  data-active={initial ? 'true' : 'false'}
 >
-  <div
-    class="absolute inset-x-0 top-2 flex justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-  >
-    {
-      Array.from({ length: total }, (_, i) => (
-        <button
-          class="dot cursor-pointer p-1 touch-manipulation"
-          data-index={i}
-          tabindex="-1"
-          aria-hidden="true"
-          aria-label={`Show ${getNumberWithOrdinal(i + 1)} image.`}
-        >
-          <div
-            class={`size-2 rounded-full ${
-              i === index ? 'bg-white' : 'bg-glass'
-            }`}
-          />
-        </button>
-      ))
-    }
-  </div>
   <Image
     src={src}
     alt={alt(location)}
@@ -64,8 +37,10 @@ function getNumberWithOrdinal(n: number) {
   />
   <div
     aria-hidden="true"
-    class="bg-glass absolute inset-x-3 bottom-2 rounded-3xl px-2 py-1 text-center text-xs opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+    class="absolute inset-x-3 bottom-2 transition-opacity opacity-0 group-hover:opacity-100 duration-500"
   >
-    {location}
+    <div class="bg-glass rounded-3xl px-2 py-1 text-center text-xs">
+      {location}
+    </div>
   </div>
 </div>

@@ -27,7 +27,7 @@ const name = 'Formi'
       The model checker and parser are published via the <a href="https://github.com/DerYeger/yeger/tree/main/packages/fol" target="_blank" rel="noreferrer" class="anchor-blue anchor-text">@yeger/fol</a> package.
     </ShowcaseDescription>
   </div>
-  <div class="relative self-center size-36 my-8 scale-150 xl:scale-200">
+  <div aria-hidden="true" class="relative self-center size-36 my-8 scale-150 xl:scale-200">
     <Image
       src={first.default}
       alt="Formi Logo"
@@ -52,26 +52,30 @@ const name = 'Formi'
 </Showcase>
 
 <script>
-const durations = ['duration-500', 'duration-700']
-const animationClasses = ['translate-x-[1000%]']
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      const images = [...entry.target.getElementsByTagName('img')]
-      if (!entry.isIntersecting) {
-        images.forEach((image) => image.classList.add(...animationClasses))
-        return
-      }
-      observer.unobserve(entry.target)
-      images.forEach((image, index) => {
-        image.classList.add('transition-transform', durations[index % 2])
-        image.classList.remove(...animationClasses)
+function initialize() {
+  const durations = ['duration-500', 'duration-700']
+  const animationClasses = ['translate-x-[1000%]']
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const images = [...entry.target.getElementsByTagName('img')]
+        if (!entry.isIntersecting) {
+          images.forEach((image) => image.classList.add(...animationClasses))
+          return
+        }
+        observer.unobserve(entry.target)
+        images.forEach((image, index) => {
+          image.classList.add('transition-transform', durations[index % 2])
+          image.classList.remove(...animationClasses)
+        })
       })
-    })
-  },
-  { threshold: 0.5 },
-)
+    },
+    { threshold: 0.5 },
+  )
 
-const formiContainers = [...document.getElementsByClassName('formi')]
-formiContainers.forEach((logo) => observer.observe(logo))
+  const formiContainers = [...document.getElementsByClassName('formi')]
+  formiContainers.forEach((logo) => observer.observe(logo))
+}
+
+window.addEventListener('load', initialize, { once: true })
 </script>

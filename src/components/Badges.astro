@@ -6,9 +6,10 @@ import { cn } from '~/components/ui/cn'
 import { accounts } from '~/lib'
 ---
 
-<section
+<nav
   class={cn('relative my-32 w-full max-w-none border-y border-medium bg-neutral-200 dark:bg-neutral-900 px-4 py-8 shadow-lg')}
   data-testid="badges"
+  aria-label="Links to social accounts and other pages"
 >
   <div class="flex justify-center gap-8">
     {
@@ -29,17 +30,8 @@ import { accounts } from '~/lib'
     }
   </div>
   <div class={cn('mt-8 flex flex-wrap justify-center gap-4')}>
-    <BadgeButton to="#experience">
-      CV
-      <Icon name="akar-icons:arrow-right" class="size-5" />
-    </BadgeButton>
-    <BadgeButton to="/blog">
-      Blog
-      <Icon name="akar-icons:arrow-right" class="size-5" />
-    </BadgeButton>
-    <BadgeButton to="/photography">
-      Photography
-      <Icon name="akar-icons:arrow-right" class="size-5" />
-    </BadgeButton>
+    <BadgeButton to="#experience" text="CV" />
+    <BadgeButton to="/blog" text="Blog" />
+    <BadgeButton to="/photography" text="Photography" />
   </div>
-</section>
+</nav>

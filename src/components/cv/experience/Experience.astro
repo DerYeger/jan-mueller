@@ -82,7 +82,7 @@ const experience: Experience[] = [
 
 <CVList id="experience">
   <span slot="title">Experience</span>
-  <ul class="flex flex-col md:max-w-64 md:whitespace-nowrap gap-16 md:mx-auto text-pretty">
+  <ol aria-label="Experience timeline" class="flex flex-col md:max-w-64 md:whitespace-nowrap gap-16 md:mx-auto text-pretty">
   {
     experience.map((entry) => (
       <li>
@@ -90,5 +90,5 @@ const experience: Experience[] = [
       </li>
     ))
   }
-  </ul>
+  </ol>
 </CVList>

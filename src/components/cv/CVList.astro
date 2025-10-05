@@ -6,9 +6,9 @@ interface Props {
 const { id } = Astro.props
 ---
 
-<div class="flex flex-col gap-20 select-text" data-testid={id}>
+<section aria-labelledby={id} class="flex flex-col gap-20 select-text" data-testid={id}>
   <h2 class="title text-5xl scroll-mt-24 md:mx-auto" id={id}>
     <slot name="title" />
   </h2>
   <slot />
-</div>
+</section>

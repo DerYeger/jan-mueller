@@ -1,5 +1,5 @@
 <script>
-  function initNavIndicator() {
+  function initialize() {
     const navs = document.querySelectorAll('.nav-with-indicator')
 
     navs.forEach((navElement) => {
@@ -56,5 +56,5 @@
     })
   }
 
-  window.addEventListener('load', () => initNavIndicator(), { once: true })
+window.addEventListener('load', initialize, { once: true })
 </script>

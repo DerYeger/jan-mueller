@@ -111,7 +111,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
         {readingTime}
       </div>
       <blockquote>{description}</blockquote>
-      <aside aria-hidden="true" class="xl:hidden">
+      <aside class="xl:hidden">
         <h2>Contents</h2>
         <ul>
           {headings.map(({ depth, slug, text }) => (
@@ -149,36 +149,36 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
   </div>
 </MainLayout>
 <script>
-  window.addEventListener('load', () => {
-    const blogPostContent = document.getElementById('blog-post-content')
-    const headingElements = blogPostContent?.querySelectorAll('h2, h3')
-    const headingLinks = document.querySelectorAll('[id^="heading-link-"]')
+window.addEventListener('load', () => {
+  const blogPostContent = document.getElementById('blog-post-content')
+  const headingElements = blogPostContent?.querySelectorAll('h2, h3')
+  const headingLinks = document.querySelectorAll('[id^="heading-link-"]')
 
-    const states: Record<string, IntersectionObserverEntry> = {}
+  const states: Record<string, IntersectionObserverEntry> = {}
 
-    const headingObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        states[entry.target.id] = entry
-      })
-      onStateChange()
+  const headingObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      states[entry.target.id] = entry
     })
+    onStateChange()
+  })
 
-    function onStateChange() {
-      const entries = Object.values(states)
-      const bestMatch = entries
-        .filter((entry) => entry.target.id !== undefined && entry.isIntersecting)
-        .sort((a, b) => a.target.getBoundingClientRect().top - b.target.getBoundingClientRect().top)[0]
-      if (!bestMatch) {
-        return
-      }
-      const targetHeadingLinkId = `heading-link-${bestMatch.target.id}`
-      headingLinks.forEach((link) => {
-        link.classList.toggle('anchor-blue', link.id === targetHeadingLinkId)
-      })
+  function onStateChange() {
+    const entries = Object.values(states)
+    const bestMatch = entries
+      .filter((entry) => entry.target.id !== undefined && entry.isIntersecting)
+      .sort((a, b) => a.target.getBoundingClientRect().top - b.target.getBoundingClientRect().top)[0]
+    if (!bestMatch) {
+      return
     }
-
-    headingElements?.forEach((heading) => {
-      headingObserver.observe(heading)
+    const targetHeadingLinkId = `heading-link-${bestMatch.target.id}`
+    headingLinks.forEach((link) => {
+      link.classList.toggle('anchor-blue', link.id === targetHeadingLinkId)
     })
-  },  { once: true })
+  }
+
+  headingElements?.forEach((heading) => {
+    headingObserver.observe(heading)
+  })
+},  { once: true })
 </script>

@@ -9,15 +9,16 @@ import MainLayout from '~/layouts/MainLayout.astro'
 
 <MainLayout title="Experiments">
   <div class="mx-auto max-w-3xl px-4 mt-8 mb-16 md:max-w-5xl">
-    <div class="mb-8 max-w-none">
+    <hgroup class="mb-8 max-w-none">
       <h1 class="mb-4 title text-4xl">Jan's Experiments</h1>
       <span class="mt-0 text-2xl font-bold text-lighter">
         A space for ideas and doodles that don't fit the scope of a dedicated
         project.
       </span>
-    </div>
+    </hgroup>
     <div
       class="grid grid-flow-row grid-cols-2 gap-4 md:grid-cols-3"
+      role="list"
     >
       <div class="row-span-2 max-md:col-span-2">
         <VectorNodesExperiment />

@@ -42,36 +42,40 @@ if (bricks.length !== 9) {
 </Showcase>
 
 <script>
-const className = 'brick-hidden'
-const animationClasses = ['translate-y-[-3000%]']
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      const bricks = [...entry.target.getElementsByClassName(className)]
-      if (!entry.isIntersecting) {
-        bricks.forEach((brick) => {
-          brick.classList.add(
-            ...animationClasses,
-          )
-        })
-        return
-      }
-      observer.unobserve(entry.target)
-      makeBrickVisible(bricks)
-    })
-  },
-  { threshold: 0.9 },
-)
+function initialize() {
+  const className = 'brick-hidden'
+  const animationClasses = ['translate-y-[-3000%]']
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const bricks = [...entry.target.getElementsByClassName(className)]
+        if (!entry.isIntersecting) {
+          bricks.forEach((brick) => {
+            brick.classList.add(
+              ...animationClasses,
+            )
+          })
+          return
+        }
+        observer.unobserve(entry.target)
+        makeBrickVisible(bricks)
+      })
+    },
+    { threshold: 0.9 },
+  )
 
-const containers = [...document.getElementsByClassName('bricks')]
-containers.forEach((brickContainer) => observer.observe(brickContainer))
+  const containers = [...document.getElementsByClassName('bricks')]
+  containers.forEach((brickContainer) => observer.observe(brickContainer))
 
-function makeBrickVisible(bricks: Element[]) {
-  const [brick, ...rest] = bricks
-  brick.classList.add('transition-transform', 'duration-1000')
-  brick.classList.remove(className, ...animationClasses)
-  if (rest.length > 0) {
-    setTimeout(() => makeBrickVisible(rest), Math.random() * 25 + 75)
+  function makeBrickVisible(bricks: Element[]) {
+    const [brick, ...rest] = bricks
+    brick.classList.add('transition-transform', 'duration-1000')
+    brick.classList.remove(className, ...animationClasses)
+    if (rest.length > 0) {
+      setTimeout(() => makeBrickVisible(rest), Math.random() * 25 + 75)
+    }
   }
 }
+
+window.addEventListener('load', initialize, { once: true })
 </script>

@@ -18,7 +18,7 @@ const { default: wienerLinien } = await import(
       public transportation monitors.
     </ShowcaseDescription>
   </div>
-  <div class="max-h-64 grow p-6 opacity-75 translate-z-0 dark:opacity-90 dark:brightness-125 sm:max-md:p-0">
+  <div aria-hidden="true" class="max-h-64 grow p-6 opacity-75 translate-z-0 dark:opacity-90 dark:brightness-125 sm:max-md:p-0">
     <Fragment set:html={wienerLinien} />
   </div>
 </Showcase>

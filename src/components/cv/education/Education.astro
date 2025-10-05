@@ -33,7 +33,7 @@ const education: Education[] = [
 
 <CVList id="education">
   <span slot="title">Education</span>
-  <ul class="flex flex-col md:flex-row gap-16">
+  <ol aria-label="Education timeline" class="flex flex-col md:flex-row gap-16">
     {
       education.map((entry) => (
         <li class="flex-1">
@@ -41,5 +41,5 @@ const education: Education[] = [
         </li>
       ))
     }
-  </ul>
+  </ol>
 </CVList>

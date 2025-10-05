@@ -9,24 +9,24 @@ import MainLayout from '~/layouts/MainLayout.astro'
 
 <MainLayout>
   <div class="py-8">
-    <section
+    <div
       class="mx-auto mb-32 mt-8 grid max-w-xl grid-cols-1 px-4 md:-mb-32 md:grid-cols-3 md:items-center"
     >
-      <h1
-        class="relative mb-0 flex flex-col items-center text-center md:items-end md:text-end"
-      >
-        <span class="mb-4 title text-6xl">Jan Müller</span>
+      <hgroup class="relative mb-0 flex flex-col items-center text-center md:items-end md:text-end">
+        <h1 class="mb-4 title text-6xl">
+         Jan Müller
+        </h1>
         <span class="-mb-2 w-fit pb-2 text-4xl font-medium">
           <Marquee />
           <span class="gradient-text from-neutral-500 to-neutral-700 dark:from-neutral-100 dark:to-neutral-300">Engineer</span>
         </span>
-      </h1>
+      </hgroup>
       <div
         class="mx-auto -mb-32 mt-0 h-[calc(min(400px,100vw)*0.9614)] w-[min(400px,100vw)] md:col-span-2 md:mb-0 md:h-0 md:w-full md:pb-[96.14%]"
       >
         <Avatar />
       </div>
-    </section>
+    </div>
     <Badges />
     <ShowcaseSection />
     <CV />

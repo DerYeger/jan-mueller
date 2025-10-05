@@ -2,6 +2,7 @@
 import type { PhotoData } from '~/components/showcase/Photo.astro'
 import Photo from '~/components/showcase/Photo.astro'
 import Showcase from '~/components/showcase/Showcase.astro'
+import { cn } from '~/components/ui/cn'
 
 const photos: PhotoData[] = [
   {
@@ -30,12 +31,40 @@ const photos: PhotoData[] = [
     location: 'Semmering, Austria',
   },
 ]
+
+function getNumberWithOrdinal(n: number) {
+  const s = ['th', 'st', 'nd', 'rd']
+  const v = n % 100
+  return n + (s[(v - 20) % 10] || s[v] || s[0])
+}
 ---
 
 <Showcase
   name="Photos"
-  class="photos h-0 border-0 bg-transparent p-0 pb-[100%]"
+  class="photos group h-0 border-0 bg-transparent p-0 pb-[100%]"
 >
+  <div
+    class="z-20 transition-opacity focus-within:opacity-100 duration-500 opacity-0 group-hover:opacity-100"
+    role="presentation"
+  >
+    <div
+      class="absolute inset-x-0 mx-auto w-fit top-2 flex justify-center bg-glass p-1 rounded-full"
+    >
+      {
+        photos.map((_photo, index) => (
+          <button
+            type="button"
+            class={cn('dot group/btn focus-visible:focus-ring cursor-pointer p-1 touch-manipulation rounded-full')}
+            data-index={index}
+            data-active={index === 0 ? 'true' : 'false'}
+            title={`Show ${getNumberWithOrdinal(index + 1)} image.`}
+          >
+            <div class="size-2 rounded-full bg-neutral-400 dark:bg-neutral-400 group-data-[active='true']/btn:bg-neutral-600 dark:group-data-[active='true']/btn:bg-white" />
+          </button>
+        ))
+      }
+    </div>
+  </div>
   {
     photos.map((photo, index) => (
       <Photo photo={photo} initial={index === 0} index={index} total={photos.length} />
@@ -44,16 +73,18 @@ const photos: PhotoData[] = [
 </Showcase>
 
 <script>
+function initialize() {
   ;[...document.getElementsByClassName('photos')].forEach((container) => {
-    const images = container.getElementsByClassName('photo')
+    const images = container.getElementsByClassName('photo') as HTMLCollectionOf<HTMLImageElement>
     const length = images.length
     let timeout: number | undefined
     let current = 0
 
-    const dots = [...container.getElementsByClassName('dot')] as HTMLElement[]
-    dots.forEach((dot) => {
-      dot.addEventListener('click', () => {
-        const index = dot.dataset.index
+    const buttons = container.getElementsByTagName('button')
+
+    Array.from(buttons).forEach((button) => {
+      button.addEventListener('click', () => {
+        const index = button.dataset.index
         if (!index) {
           return
         }
@@ -120,8 +151,8 @@ const photos: PhotoData[] = [
     }
 
     function toggleImage(index: number) {
-      images[index].classList.toggle('opacity-0')
-      images[index].classList.toggle('z-10')
+      images[index].dataset.active = String(buttons[index].dataset.active !== 'true')
+      buttons[index].dataset.active = String(buttons[index].dataset.active !== 'true')
     }
 
     // Replace the modulo operator with a function that works with negative numbers.
@@ -129,4 +160,7 @@ const photos: PhotoData[] = [
       return ((index % length) + length) % length
     }
   })
+}
+
+window.addEventListener('load', initialize, { once: true })
 </script>

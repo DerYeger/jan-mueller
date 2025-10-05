@@ -10,7 +10,7 @@ const { default: logo } = await import(`~/assets/projects/CM2ML.svg?raw`)
 
 <Showcase name={name} link="/external/cm2ml" class="relative [--logo-size:32rem]">
   <div class="absolute -left-[calc(var(--logo-size)/2)] will-change-transform -bottom-[calc(var(--logo-size)/2)] size-(--logo-size) drop-shadow-2xl drop-shadow-neutral-900 dark:drop-shadow-neutral-600">
-    <div class="dark:invert">
+    <div class="dark:invert" aria-hidden="true">
       <Fragment set:html={logo} />
     </div>
   </div>
