@@ -111,7 +111,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
         {readingTime}
       </div>
       <blockquote>{description}</blockquote>
-      <aside class="xl:hidden">
+      <aside aria-hidden="true" class="xl:hidden">
         <h2>Contents</h2>
         <ul>
           {headings.map(({ depth, slug, text }) => (
@@ -128,7 +128,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
         { previousPost && (
           <a href={`/blog/${previousPost.slug}/`} class="flex flex-col items-start gap-1 rounded-sm border border-medium p-2 no-underline transition-all hover:bg-base hover:shadow-md">
             <div class="flex items-center gap-1 font-normal text-(--tw-prose-body)">
-              <Icon name="akar-icons:arrow-left" />
+              <Icon aria-hidden="true" name="akar-icons:arrow-left" />
               Previous
             </div>
             <div class="underline">{previousPost.data.title}</div>
@@ -139,7 +139,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
           <a href={`/blog/${nextPost.slug}/`} class="flex flex-col items-end gap-1 rounded-sm border border-medium p-2 no-underline transition-all hover:bg-base hover:shadow-md">
             <div class="flex items-center gap-1 font-normal text-(--tw-prose-body)">
               Next
-              <Icon name="akar-icons:arrow-right" />
+              <Icon aria-hidden="true" name="akar-icons:arrow-right" />
             </div>
             <div class="underline">{nextPost.data.title}</div>
           </a>
