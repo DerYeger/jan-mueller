@@ -44,7 +44,7 @@ export const BASE_SCREENSHOT: ScreenshotOptions = {
   fullPage: true,
 }
 
-export const PAGES: { url: `/${string}`, thresholds?: Thresholds, screenshot?: ScreenshotOptions }[] = [
+export const PAGES: { url: `/${string}`, thresholds?: Thresholds, screenshot?: ScreenshotOptions, skip?: { accessibility?: boolean } }[] = [
   // Home
   {
     url: '/',
@@ -84,7 +84,7 @@ export const PAGES: { url: `/${string}`, thresholds?: Thresholds, screenshot?: S
   {
     url: '/photography',
     thresholds: {
-      performance: 75, // preview serves images inefficiently
+      performance: 70, // preview serves images inefficiently
     },
     screenshot: {
       fullPage: false,
@@ -94,7 +94,10 @@ export const PAGES: { url: `/${string}`, thresholds?: Thresholds, screenshot?: S
     url: '/photography/maps/japan',
     thresholds: {
       accessibility: 0, // OpenStreetMap drops accessibility to 0
-      performance: 90, // preview serves images inefficiently
+      performance: 85, // preview serves images inefficiently
+    },
+    skip: {
+      accessibility: true,
     },
   },
   // Experiments

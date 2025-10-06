@@ -7,7 +7,7 @@ const { id } = Astro.props
 ---
 
 <section aria-labelledby={id} class="flex flex-col gap-20 select-text" data-testid={id}>
-  <h2 class="title text-5xl scroll-mt-24 md:mx-auto" id={id}>
+  <h2 class="title max-xxs:text-3xl text-5xl scroll-mt-24 md:mx-auto" id={id}>
     <slot name="title" />
   </h2>
   <slot />

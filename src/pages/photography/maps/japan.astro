@@ -11,5 +11,6 @@ const bounds = calculateBounds(locations)
 ---
 
 <MainLayout title="Photography" sublinks={photographyLinks} fitScreen>
+  <h1 class="sr-only">Map of Jan's Photos in Japan</h1>
   <PhotographyMap client:only="preact" images={images} center={center} bounds={bounds} />
 </MainLayout>

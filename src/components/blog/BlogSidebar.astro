@@ -8,14 +8,16 @@ interface Props {
 }
 
 const { position, title, class: className } = Astro.props
+
+const id = `blog-sidebar-${title}`
 ---
 
-<aside aria-label={title} class={cn('sticky top-20 max-h-[calc(100dvh-80px)] hidden w-64 xl:flex grow', position === 'left' ? 'justify-end' : 'justify-start', className)}>
+<aside aria-labelledby={id} class={cn('sticky top-20 max-h-[calc(100dvh-80px)] hidden w-64 xl:flex grow', position === 'left' ? 'justify-end' : 'justify-start', className)}>
   <div class="flex flex-col pt-8 text-sm max-h-full text-black dark:text-inherit">
-      <div class={cn('font-semibold text-lg px-2', position === 'left' ? 'text-right 2xl:mr-12' : 'text-start')}>
+      <div id={id} class={cn('font-semibold text-lg px-2', position === 'left' ? 'text-right 2xl:mr-12' : 'text-start')}>
         {title}
       </div>
-    <nav class={cn('flex flex-col sidebar px-2 grow gap-1 overflow-y-auto', position === 'left' ? 'text-end' : 'text-start')}>
+    <nav aria-labelledby={id} class={cn('flex flex-col sidebar px-2 grow gap-1 overflow-y-auto', position === 'left' ? 'text-end' : 'text-start')}>
       <slot />
     </nav>
   </div>

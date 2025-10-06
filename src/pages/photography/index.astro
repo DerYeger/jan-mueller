@@ -8,5 +8,6 @@ const images = await getGalleryImages(import.meta.glob('/src/assets/photos/*'))
 ---
 
 <MainLayout title="Photography" sublinks={photographyLinks}>
+  <h1 class="sr-only">Gallery of Jan's Photos</h1>
   <Gallery client:load images={images} />
 </MainLayout>

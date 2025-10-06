@@ -26,11 +26,11 @@ const { class: extraClasses = '', sublinks, floating = false, showThemeToggle = 
   )}
 >
   <div class={cn('flex max-xxs:justify-center justify-between items-center w-full')}>
-    <Navigation links={mainLinks} />
+    <Navigation links={mainLinks} label="Main navigation" />
     {showThemeToggle ? <ThemeToggle class="sm:ml-8 max-xxs:hidden" /> : null}
   </div>
   {sublinks ? (<div class={cn('pb-1.5 -mb-1.5 w-fit max-xxs:ml-auto mr-auto')}>
-      <Navigation links={sublinks} isSub />
+      <Navigation links={sublinks} isSub label="Sub navigation" />
     </div>
   ) : null}
 </header>
