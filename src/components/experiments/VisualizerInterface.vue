@@ -81,7 +81,7 @@ const data = computed(() => {
         </marker>
       </defs>
       <g
-        class="grid-lines [&>*]:stroke-neutral-700 [&>*]:stroke-[0.25px] [&>*]:opacity-75"
+        class="grid-lines *:stroke-neutral-700 *:stroke-[0.25px] *:opacity-75"
       >
         <line
           v-for="point of data.gridLines"
@@ -116,11 +116,11 @@ const data = computed(() => {
           :y2="100"
         />
       </g>
-      <g class="[&>*]:stroke-white">
+      <g class="*:stroke-white">
         <line x1="0" y1="50" x2="99" y2="50" marker-end="url(#arrow-axis)" />
         <line x1="50" y1="100" x2="50" y2="1" marker-end="url(#arrow-axis)" />
       </g>
-      <g class="[&>*]:fill-neutral-400 [&>*]:text-[4px]">
+      <g class="*:fill-neutral-400 *:text-[4px]">
         <text x="50%" y="-3" text-anchor="middle" dominant-baseline="top">
           y
         </text>
@@ -148,7 +148,7 @@ const data = computed(() => {
           0
         </text>
       </g>
-      <g class="[&>*]:stroke-red-500">
+      <g class="*:stroke-red-500">
         <line
           v-for="(vector, index) of data.vectors"
           :key="index"

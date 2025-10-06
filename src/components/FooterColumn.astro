@@ -7,7 +7,7 @@ interface Props extends astroHTML.JSX.HTMLAttributes {
 const { title, role } = Astro.props as Props;
 ---
 
-<div aria-label={title} role={role} class="flex flex-col flex-1 max-w-40 [&>*]:w-fit [&>*]:py-2">
+<div aria-label={title} role={role} class="flex flex-col flex-1 max-w-40 *:w-fit *:py-2">
   <span class="font-bold mb-2">
     {title}
   </span>
