@@ -92,7 +92,7 @@ test.describe('Home', () => {
     await expect(yattaExperience).toContainText('Nov 2020')
     await expect(yattaExperience).toContainText('Dec 2020')
     await expect(yattaExperience).toContainText('2 months')
-    await expect(yattaExperience.locator('a')).toHaveAttribute('href')
+    await expect(yattaExperience.locator('a').first()).toHaveAttribute('href')
 
     await expect(experience.locator('li')).toHaveCount(12)
   })
@@ -118,7 +118,7 @@ test.describe('Home', () => {
     await expect(dpgAward).toBeVisible()
     await expect(dpgAward).toContainText('DPG-Abiturpreis')
     await expect(dpgAward).toContainText('Jul 2016')
-    await expect(dpgAward.locator('a')).toHaveAttribute('href')
+    await expect(dpgAward.locator('a').first()).toHaveAttribute('href')
 
     await expect(awards.locator('li')).toHaveCount(3)
   })

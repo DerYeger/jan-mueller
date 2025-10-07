@@ -1,22 +1,24 @@
 ---
 import DateRange from '~/components/date/DateRange.astro'
 import Dot from '~/components/Dot.astro'
+import Heading from '~/components/Heading.astro'
 import { DateFormats, formatDuration, getDuration, getToday } from '~/lib'
 import type { ExperienceRole } from '~/types'
 
 interface Props {
   role: ExperienceRole
+  id: string
   isOnlyRole: boolean
 }
 
-const { role, isOnlyRole } = Astro.props
+const { role, id, isOnlyRole } = Astro.props
 
 const duration = formatDuration(getDuration([{ from: role.startDate, to: role.endDate ?? getToday() }]))
 ---
 
-<h4 class="font-medium text-strong mb-1 text-lg">
+<Heading id={id} level={4} class="font-medium text-strong mb-1 text-lg" id={id} isGroup={false}>
   {role.title}
-</h4>
+</Heading>
 {role.description ? <div class="text-lighter text-sm mb-1 md:whitespace-nowrap">{role.description}</div> : null}
 {!isOnlyRole ? <div>
   <DateRange startDate={role.startDate} endDate={role.endDate} format={DateFormats.Month} />

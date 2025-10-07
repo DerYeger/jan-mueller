@@ -94,3 +94,7 @@ const today = new Date()
 export function getToday() {
   return new Date(today)
 }
+
+export function getElementId(input: string) {
+  return input.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '')
+}

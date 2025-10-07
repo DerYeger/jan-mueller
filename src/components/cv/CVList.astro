@@ -1,14 +1,19 @@
 ---
+import Heading from '~/components/Heading.astro'
+
 interface Props {
   id: string
+  title: string
 }
 
-const { id } = Astro.props
+const { id, title } = Astro.props
 ---
 
 <section aria-labelledby={id} class="flex flex-col gap-20 select-text" data-testid={id}>
-  <h2 class="title max-xxs:text-3xl text-5xl scroll-mt-24 md:mx-auto" id={id}>
-    <slot name="title" />
-  </h2>
+  <div class="md:mx-auto">
+    <Heading id={id} level={2} class="group/heading title max-xxs:text-3xl text-5xl md:mx-auto md:anchor-heading-margin" isGroup={false}>
+      {title}
+    </Heading>
+  </div>
   <slot />
 </section>

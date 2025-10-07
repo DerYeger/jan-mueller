@@ -1,4 +1,5 @@
 export interface Award {
+  id: string
   name: string
   date: string
   by: string
@@ -6,6 +7,7 @@ export interface Award {
 }
 
 export interface Education {
+  id: string
   name: string
   institution: string
   startDate: string
@@ -22,6 +24,7 @@ export interface ExperienceRole {
 }
 
 export interface Experience {
+  id: string
   name: string
   roles: ExperienceRole[]
   location: string

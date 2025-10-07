@@ -2,6 +2,7 @@
 import ExperienceRoleEntry from '~/components/cv/experience/ExperienceRoleEntry.astro'
 import DateRange from '~/components/date/DateRange.astro'
 import Dot from '~/components/Dot.astro'
+import Heading from '~/components/Heading.astro'
 import { cn } from '~/components/ui/cn'
 import { DateFormats, formatDuration, getDuration, getToday } from '~/lib'
 import type { Experience as ExperienceType } from '~/types'
@@ -17,25 +18,25 @@ const endDate = experience.roles.map((r) => r.endDate).sort().reverse()[0]
 
 const duration = getDuration(experience.roles.map((role) => ({ from: role.startDate, to: role.endDate ?? getToday() })))
 const formattedDuration = formatDuration(duration)
-
-const experienceId = experience.name.toLowerCase().replace(/\s+/g, '-')
 ---
 
 <div class="flex flex-col gap-2" data-testid={experience.name}>
-  <h3 id={experienceId}>
-    <a href={experience.href} rel="noreferrer" target="_blank" class="font-bold text-xl text-strong hover:text-light w-fit md:whitespace-nowrap">
-      {experience.name}
-    </a>
-  </h3>
-  <div class="text-lighter">
-    {experience.location}
-  </div>
-  <div>
-    <DateRange startDate={startDate} endDate={endDate} format={DateFormats.Month} />
-    {duration ? <>
-      <Dot />
-      <span class="whitespace-nowrap">{formattedDuration}</span>
-    </> : null}
+  <div class="flex flex-col gap-2 group/heading">
+    <Heading level={3} id={`experience-${experience.id}`} isGroup={false}>
+      <a href={experience.href} rel="noreferrer" target="_blank" class="font-bold text-xl text-strong hover:text-light w-fit md:whitespace-nowrap">
+        {experience.name}
+      </a>
+    </Heading>
+    <div class="text-lighter">
+      {experience.location}
+    </div>
+    <div>
+      <DateRange startDate={startDate} endDate={endDate} format={DateFormats.Month} />
+      {duration ? <>
+        <Dot />
+        <span class="whitespace-nowrap">{formattedDuration}</span>
+      </> : null}
+    </div>
   </div>
   <ol aria-label="Individual roles" class="mt-2 flex flex-col gap-8">
     {experience.roles.map((role, index) => (
@@ -48,8 +49,8 @@ const experienceId = experience.name.toLowerCase().replace(/\s+/g, '-')
           {!role.endDate ? <div class={cn('absolute inset-0.75 rounded-full bg-white/10')} /> : null }
         </div>
         { index < experience.roles.length - 1 ? <div aria-hidden="true" class={cn('absolute drop-shadow-md left-0.75 top-2.5 -bottom-11 w-0.5 bg-neutral-300 dark:bg-neutral-700 -z-10', !role.endDate && 'bg-gradient-to-t from-neutral-300 dark:from-neutral-700 from-30% to-green-600 dark:bg-green-300')} /> : null}
-        <div>
-          <ExperienceRoleEntry role={role} isOnlyRole={experience.roles.length === 1} />
+        <div class="group/heading">
+          <ExperienceRoleEntry role={role} id={`experience-${experience.id}-${experience.roles.length - index}`} isOnlyRole={experience.roles.length === 1} />
         </div>
       </li>
     ))}

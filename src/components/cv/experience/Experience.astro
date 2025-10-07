@@ -5,6 +5,7 @@ import type { Experience } from '~/types'
 
 const experience: Experience[] = [
   {
+    id: 'senacor',
     name: 'Senacor Technologies AG',
     location: 'Vienna, Austria',
     href: 'https://senacor.com/',
@@ -27,6 +28,7 @@ const experience: Experience[] = [
     ],
   },
   {
+    id: 'yatta',
     name: 'Yatta Solutions GmbH',
     location: 'Kassel, Germany',
     href: 'https://website.yatta.de/en/start/',
@@ -40,6 +42,7 @@ const experience: Experience[] = [
     ],
   },
   {
+    id: 'university-kassel',
     name: 'University of Kassel',
     location: 'Kassel, Germany',
     href: 'https://www.uni-kassel.de/uni/en/index.html',
@@ -65,6 +68,7 @@ const experience: Experience[] = [
     ],
   },
   {
+    id: 'manserv',
     name: 'Management Services Helwig Schmitt GmbH',
     location: 'Hofgeismar, Germany',
     href: 'https://www.manserv.com/',
@@ -80,8 +84,7 @@ const experience: Experience[] = [
 ].sort((a, b) => b.roles.at(-1)!.startDate.localeCompare(a.roles.at(-1)!.startDate))
 ---
 
-<CVList id="experience">
-  <span slot="title">Experience</span>
+<CVList id="experience" title="Experience">
   <ol aria-label="Experience timeline" class="flex flex-col md:max-w-64 md:whitespace-nowrap gap-16 md:mx-auto text-pretty">
   {
     experience.map((entry) => (

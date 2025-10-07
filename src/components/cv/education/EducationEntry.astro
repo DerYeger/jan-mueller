@@ -1,6 +1,7 @@
 ---
 import DateRange from '~/components/date/DateRange.astro'
 import Dot from '~/components/Dot.astro'
+import Heading from '~/components/Heading.astro'
 import { DateFormats } from '~/lib'
 import type { Education } from '~/types'
 
@@ -11,8 +12,8 @@ export interface Props {
 const { education } = Astro.props as Props
 ---
 
-<div class="flex flex-col gap-1 md:items-center md:text-center" data-testid={education.name}>
-  <h3 class="font-semibold text-xl text-strong mb-1">{education.name}</h3>
+<div class="group/heading flex flex-col gap-1 md:items-center md:text-center" data-testid={education.name}>
+  <Heading id={`education-${education.id}`} level={3} class="font-semibold text-xl text-strong mb-1 md:anchor-heading-margin" isGroup={false}>{education.name}</Heading>
   <div class="text-lighter">
     <DateRange startDate={education.startDate} endDate={education.endDate} format={DateFormats.Month} />
   </div>

@@ -1,5 +1,7 @@
 ---
+import Heading from '~/components/Heading.astro'
 import MainLayout from '~/layouts/MainLayout.astro'
+import { getElementId } from '~/lib'
 
 export interface Props {
   content: { title?: string }
@@ -19,7 +21,7 @@ const {
 
 <MainLayout title={title}>
   <article class="container prose prose-neutral prose-a:text-medium prose-a:hover:text-light dark:prose-invert mx-auto px-4 py-8">
-    {title && <h1>{title}</h1>}
+    {title && <Heading level={1} id={getElementId(title)} alwaysVisible>{title}</Heading>}
     <slot />
   </article>
 </MainLayout>

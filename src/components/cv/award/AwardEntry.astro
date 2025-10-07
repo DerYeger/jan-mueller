@@ -1,6 +1,7 @@
 ---
 import DateComponent from '~/components/date/DateComponent.astro'
 import Dot from '~/components/Dot.astro'
+import Heading from '~/components/Heading.astro'
 import { DateFormats } from '~/lib'
 import type { Award } from '~/types'
 
@@ -11,8 +12,8 @@ export interface Props {
 const { award } = Astro.props as Props
 ---
 
-<div class="flex flex-col gap-1 md:items-center md:text-center" data-testid={award.name}>
-  <h3 class="font-semibold text-xl text-strong mb-1">{award.name}</h3>
+<div class="group/heading flex flex-col gap-1 md:items-center md:text-center" data-testid={award.name}>
+  <Heading id={`award-${award.id}`} level={3} class="font-semibold text-xl text-strong mb-1 md:anchor-heading-margin" isGroup={false}>{award.name}</Heading>
   <span class="text-lighter ">
     <DateComponent date={award.date} format={DateFormats.Month} />
   </span>

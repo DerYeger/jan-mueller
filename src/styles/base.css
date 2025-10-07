@@ -60,6 +60,15 @@
   @apply outline-none ring-2 ring-offset-1 ring-offset-transparent ring-blue-600 dark:ring-blue-500;
 }
 
+@utility anchor-heading-size {
+  --size: max(1rem,0.5em);
+}
+
+@utility anchor-heading-margin {
+  @apply anchor-heading-size;
+  margin-right: calc(-1 * (var(--size) + 0.25em));
+}
+
 
 @layer base {
   button:not(:disabled),
@@ -74,7 +83,7 @@
       @apply focus-ring;
     }
 
-    &:not([class*="anchor-blue"]):not([class*="anchor-custom"]):not([class*="anchor-icon"]):hover {
+    &:not([class*="anchor-blue"]):not([class*="anchor-custom"]):not([class*="anchor-heading"]):hover {
       @apply text-light;
     }
   }
@@ -89,16 +98,19 @@
 }
 
 @layer components {
+  h1, h2, h3, h4, h5, h6 {
+    @apply scroll-mt-24;
+  }
   article.prose *:is(h1, h2, h3, h4, h5, h6) {
-    @apply flex items-center gap-2 scroll-mt-24;
+    @apply flex items-center size-fit;
   }
 
-  .anchor-icon {
-    @apply text-light hover:text-neutral-700 dark:hover:text-white transition-colors;
+  .anchor-heading {
+    @apply anchor-heading-size ml-[0.25em] size-(--size) my-auto translate-z-0 inline-flex items-center rounded-full;
+  }
 
-    & > svg {
-      @apply overflow-visible;
-    }
+  article .anchor-heading {
+    @apply text-lighter! hover:text-strong!
   }
 
   article.prose * {

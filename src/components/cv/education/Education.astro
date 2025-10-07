@@ -5,6 +5,7 @@ import type { Education } from '~/types'
 
 const education: Education[] = [
   {
+    id: 'msc',
     name: 'M.Sc. – Software Engineering and Internet Computing',
     institution: 'TU Wien',
     startDate: '2021-10',
@@ -13,6 +14,7 @@ const education: Education[] = [
     href: 'https://www.tuwien.at/en/',
   },
   {
+    id: 'bsc',
     name: 'B.Sc. – Computer Science',
     institution: 'University of Kassel',
     startDate: '2016-10',
@@ -21,6 +23,7 @@ const education: Education[] = [
     href: 'https://www.uni-kassel.de/uni/en/index.html',
   },
   {
+    id: 'abitur',
     name: 'GCE A-Levels / Abitur',
     institution: 'Wilhelmsgymnasium Kassel',
     startDate: '2009-09',
@@ -31,8 +34,7 @@ const education: Education[] = [
 ].sort((a, b) => b.startDate.localeCompare(a.startDate))
 ---
 
-<CVList id="education">
-  <span slot="title">Education</span>
+<CVList id="education" title="Education">
   <ol aria-label="Education timeline" class="flex flex-col md:flex-row gap-16">
     {
       education.map((entry) => (
