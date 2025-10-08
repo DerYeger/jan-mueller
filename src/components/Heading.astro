@@ -17,7 +17,7 @@ const Tag = `h${level}` as const
 
 <Tag id={id} class={cn('size-fit flex items-center', isGroup && 'group/heading', className)}>
   <slot />
-  <a href={`#${id}`} aria-labelledby={id} class={cn('anchor-heading', !alwaysVisible && 'transition-opacity opacity-0 focus-visible:opacity-100 group-hover/heading:opacity-100')}>
+  <a href={`#${id}`} aria-labelledby={id} class={cn('anchor-heading', !alwaysVisible && 'transition-opacity opacity-0 pointer-events-none focus-visible:pointer-events-auto group-hover/heading:pointer-events-auto focus-visible:opacity-100 group-hover/heading:opacity-100')}>
     <Icon aria-hidden="true" name="akar-icons:link-chain" class="text-(--size)" />
   </a>
 </Tag>
