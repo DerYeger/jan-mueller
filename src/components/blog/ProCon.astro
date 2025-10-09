@@ -49,7 +49,7 @@ function getEntryLink(entry: Entry) {
             {pro[index] ? <span>
               {getEntryText(pro[index])}
               {hasEntryLink(pro[index]) ? (
-                <a href={getEntryLink(pro[index])} class="transition-colors hover:text-green-500">
+                <a href={getEntryLink(pro[index])}>
                   (read more)
                 </a>
               ) : null}
@@ -59,7 +59,7 @@ function getEntryLink(entry: Entry) {
             {con[index] ? <span>
               {getEntryText(con[index])}
               {hasEntryLink(con[index]) ? (
-                <a href={getEntryLink(con[index])} class="transition-colors hover:text-red-500">
+                <a href={getEntryLink(con[index])}>
                   (read more)
                 </a>
               ) : null}

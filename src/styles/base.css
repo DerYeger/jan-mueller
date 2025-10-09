@@ -3,6 +3,8 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@custom-variant hocus (&:where(:hover, :focus-visible));
+
 @theme {
   /* IMPORTANT: Keep in sync with matchMedia in NavigationIndicator */
   --breakpoint-xxs: 350px;
@@ -83,8 +85,8 @@
       @apply focus-ring;
     }
 
-    &:not([class*="anchor-blue"]):not([class*="anchor-custom"]):not([class*="anchor-heading"]):hover {
-      @apply text-light;
+    &:not([class*="anchor-blue"]):not([class*="anchor-custom"]):not([class*="anchor-heading"]) {
+      @apply hocus:text-light;
     }
   }
 
@@ -110,7 +112,7 @@
   }
 
   article .anchor-heading {
-    @apply text-lighter! hover:text-strong!
+    @apply text-lighter! hocus:text-strong!
   }
 
   article.prose * {
@@ -126,7 +128,7 @@
   }
 
   .anchor-blue {
-    @apply text-blue-600 dark:text-blue-500 hover:text-blue-500 dark:hover:text-blue-400 active:text-blue-700 dark:active:text-blue-300 ring-black dark:ring-white;
+    @apply text-blue-600 dark:text-blue-500 hocus:text-blue-500 dark:hocus:text-blue-400 active:text-blue-700 dark:active:text-blue-300 ring-black dark:ring-white;
   }
 
   .anchor-text {

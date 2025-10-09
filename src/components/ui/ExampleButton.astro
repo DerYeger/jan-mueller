@@ -13,8 +13,8 @@ interface Props extends Omit<astroHTML.JSX.ButtonHTMLAttributes, 'type'> {
 const { class: className, compact, type = 'safe', ...props } = Astro.props
 
 const classes: Record<Type, string> = {
-  safe: 'bg-green-500 dark:bg-green-600 border-green-600 dark:border-green-500 hover:bg-green-400 dark:hover:bg-green-500 active:bg-green-600 dark:active:bg-green-700 disabled:bg-green-300 disabled:dark:bg-green-800 disabled:border-green-400 disabled:dark:border-green-700',
-  danger: 'bg-red-500 dark:bg-red-600 border-red-600 dark:border-red-500 hover:bg-red-400 dark:hover:bg-red-500 active:bg-red-600 dark:active:bg-red-700 disabled:bg-red-300 disabled:dark:bg-red-800 disabled:border-red-400 disabled:dark:border-red-700',
+  safe: 'bg-green-500 dark:bg-green-600 border-green-600 dark:border-green-500 focus:bg-green-400 dark:focus:bg-green-500 active:bg-green-600 dark:active:bg-green-700 disabled:bg-green-300 disabled:dark:bg-green-800 disabled:border-green-400 disabled:dark:border-green-700',
+  danger: 'bg-red-500 dark:bg-red-600 border-red-600 dark:border-red-500 focus:bg-red-400 dark:focus:bg-red-500 active:bg-red-600 dark:active:bg-red-700 disabled:bg-red-300 disabled:dark:bg-red-800 disabled:border-red-400 disabled:dark:border-red-700',
 }
 ---
 

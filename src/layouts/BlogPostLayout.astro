@@ -96,7 +96,7 @@ const titleId = getElementId(title)
         </a>
       ))}
     </BlogSidebar>
-    <article id="blog-post-content" class="mx-auto container prose prose-neutral prose-a:text-medium prose-a:hover:text-light dark:prose-invert max-w-[80ch] xl:w-fit px-4 py-8 order-2">
+    <article id="blog-post-content" class="mx-auto container prose prose-neutral prose-a:text-medium prose-a:hocus:text-light dark:prose-invert max-w-[80ch] xl:w-fit px-4 py-8 order-2">
       <BlogHeroImage class="card border-0" heroImage={heroImage} title={title} height={200} loading="eager" />
       <Heading id={titleId} level={1} alwaysVisible>{title}</Heading>
       <div class="mb-4 mt-8 flex flex-wrap gap-1">
@@ -129,7 +129,7 @@ const titleId = getElementId(title)
       </div>
       <nav aria-label="Previous and next posts" class="mt-16 flex justify-between gap-2 text-sm">
         { previousPost && (
-          <a href={`/blog/${previousPost.slug}/`} class="flex flex-col items-start gap-1 rounded-sm border border-medium p-2 no-underline transition-all hover:bg-base hover:shadow-md">
+          <a href={`/blog/${previousPost.slug}/`} class="flex flex-col items-start gap-1 rounded-sm border border-medium p-2 no-underline transition-all hocus:bg-base hocus:shadow-md">
             <div class="flex items-center gap-1 font-normal text-(--tw-prose-body)">
               <Icon aria-hidden="true" name="akar-icons:arrow-left" />
               Previous
@@ -139,7 +139,7 @@ const titleId = getElementId(title)
         ) }
         <div class="grow-1" />
         { nextPost && (
-          <a href={`/blog/${nextPost.slug}/`} class="flex flex-col items-end gap-1 rounded-sm border border-medium p-2 no-underline transition-all hover:bg-base hover:shadow-md">
+          <a href={`/blog/${nextPost.slug}/`} class="flex flex-col items-end gap-1 rounded-sm border border-medium p-2 no-underline transition-all hocus:bg-base hocus:shadow-md">
             <div class="flex items-center gap-1 font-normal text-(--tw-prose-body)">
               Next
               <Icon aria-hidden="true" name="akar-icons:arrow-right" />

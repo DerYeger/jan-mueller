@@ -14,8 +14,8 @@ const { class: className, ...props } = Astro.props
   class={cn(
   'select-none rounded-sm min-w-16',
     'px-2 transition-colors border border-transparent',
-    'bg-neutral-900 text-white hover:bg-neutral-700 active:bg-neutral-800',
-    'dark:bg-neutral-100 dark:text-black dark:hover:bg-neutral-300 dark:active:bg-neutral-200',
+    'bg-neutral-900 text-white focus:bg-neutral-700 active:bg-neutral-800',
+    'dark:bg-neutral-100 dark:text-black dark:focus:bg-neutral-300 dark:active:bg-neutral-200',
     'disabled:bg-disabled disabled:border-medium disabled:text-lighter dark:disabled:bg-disabled',
     'touch-manipulation focus-visible:focus-ring',
     className,
