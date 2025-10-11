@@ -60,7 +60,7 @@
     "@types/leaflet": "1.9.20",
     "@types/node": "24.6.2",
     "@yeger/eslint-config": "3.0.0",
-    "astro": "5.14.1",
+    "astro": "5.14.3",
     "astro-icon": "1.1.5",
     "astro-og-canvas": "0.7.0",
     "astro-robots-txt": "1.0.0",
