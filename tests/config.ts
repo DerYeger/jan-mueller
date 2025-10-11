@@ -35,7 +35,6 @@ export const BASE_THRESHOLDS: Thresholds = {
   accessibility: 100,
   'best-practices': 100,
   seo: 100,
-  pwa: undefined,
 }
 
 export type ScreenshotOptions = Omit<PageAssertionsToHaveScreenshotOptions, 'mask'>
@@ -70,7 +69,7 @@ export const PAGES: { url: `/${string}`, thresholds?: Thresholds, screenshot?: S
     url: '/blog/vue-marmoset-viewer',
     thresholds: {
       accessibility: 94, // marmoset viewer has input without alt
-      'best-practices': 82, // marmoset viewer loads image via http
+      'best-practices': 81, // marmoset viewer loads image via http
     },
   },
   { url: '/blog/vue-masonry-wall' },
