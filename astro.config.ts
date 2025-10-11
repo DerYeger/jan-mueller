@@ -1,8 +1,7 @@
 import mdx from '@astrojs/mdx'
-import preact from '@astrojs/preact'
+import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import vue from '@astrojs/vue'
-import vitePreact from '@preact/preset-vite'
 import { defineConfig } from 'astro/config'
 import expressiveCode from 'astro-expressive-code'
 import icon from 'astro-icon'
@@ -41,9 +40,7 @@ export default defineConfig({
       extendMarkdownConfig: true,
     }),
     vue(),
-    preact({
-      compat: true,
-    }),
+    react(),
     sitemap({
       filter: (page) => !page.includes('/external/'),
     }),
@@ -52,7 +49,6 @@ export default defineConfig({
   vite: {
     plugins: [
       comlink(),
-      vitePreact(),
       tailwindcss(),
       tsconfigPaths({ verbose: true }),
     ],

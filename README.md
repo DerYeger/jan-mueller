@@ -25,7 +25,7 @@
 
 ## Features
 
-- Astro, Vue and Preact
+- Astro, Vue and React
 - Tailwind
 - MDX
 - E2E testing with [Playwright](https://playwright.dev/)
@@ -46,7 +46,7 @@ $ pnpm build
 $ pnpm preview
 
 # run e2e tests
-$ pnpm test:e2e
+$ pnpm e2e
 
 # lint
 $ pnpm lint

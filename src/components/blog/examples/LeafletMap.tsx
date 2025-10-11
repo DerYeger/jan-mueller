@@ -1,8 +1,8 @@
-import BaseMarkerCluster from '@changey/react-leaflet-markercluster'
+import BaseMarkerCluster from 'react-leaflet-markercluster'
 import type { MapOptions } from 'leaflet'
 import { Marker, divIcon, icon, point } from 'leaflet'
-import type { ComponentChildren, FunctionalComponent } from 'preact'
-import { useState } from 'preact/hooks'
+import type { FC } from 'react'
+import React, { useState } from 'react'
 import { MapContainer, TileLayer, useMap, useMapEvents } from 'react-leaflet'
 
 Marker.prototype.options.icon = icon({
@@ -25,8 +25,8 @@ function createClusterCustomIcon(cluster: any) {
   })
 }
 
-export const MarkerCluster: FunctionalComponent<{
-  children: ComponentChildren
+export const MarkerCluster: FC<{
+  children: React.ReactNode | React.ReactNode[]
 }> = ({ children }) => {
   return (
     <BaseMarkerCluster
@@ -38,7 +38,7 @@ export const MarkerCluster: FunctionalComponent<{
   )
 }
 
-export const MapCenter: FunctionalComponent = () => {
+export const MapCenter: FC = () => {
   const map = useMap()
   const [location, setLocation] = useState(map.getCenter())
   const { lat, lng } = location
@@ -61,16 +61,16 @@ export const MapCenter: FunctionalComponent = () => {
   )
 }
 
-const LeafletMap: FunctionalComponent<
+const LeafletMap: FC<
   {
     center: [number, number]
-    children: ComponentChildren
+    children: React.ReactNode | React.ReactNode[]
     zoom: number
   } & MapOptions
 > = ({ children, ...options }) => {
   return (
     <MapContainer
-      className="card relative isolate h-[200px] w-full transition-all sm:h-[300px] md:h-[400px] [&_.leaflet-control-zoom]:dark:invert"
+      className="card relative isolate h-[200px] w-full sm:h-[300px] md:h-[400px]"
       scrollWheelZoom={false}
       maxZoom={18}
       {...options}

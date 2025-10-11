@@ -1,8 +1,9 @@
 import { icon } from 'leaflet'
 import type { MapOptions } from 'leaflet'
-import type { FunctionalComponent } from 'preact'
-import { Suspense, lazy, useState } from 'preact/compat'
+import type { FC } from 'react'
+import { Suspense, lazy, useEffect, useRef } from 'react'
 import { MapContainer, TileLayer, useMap, ZoomControl } from 'react-leaflet'
+import { debounce } from '@yeger/debounce'
 
 import { LazyMarker, LazyMarkerCluster } from '~/components/blog/examples/LeafletMap.lazy'
 import type { MapImage } from '~/photographyUtils'
@@ -12,23 +13,51 @@ import '~/styles/photography-map.css'
 
 const HEADER_HEIGHT = 90 + 2 * 16
 
-const LazyPopup = lazy(async () => (await import('react-leaflet')).Popup)
+const LazyPopup = lazy(async () => ({ default: (await import('react-leaflet')).Popup }))
 
-const PhotoMarker: FunctionalComponent<{ image: MapImage }> = ({ image }) => {
+const PhotoMarker: FC<{ image: MapImage }> = ({ image }) => {
   const map = useMap()
+  const popupRef = useRef<L.Popup>(null)
 
-  const [width, _setWidth] = useState(() => getImageWidth(image, map.getContainer()))
+  useEffect(() => {
+    const initialWidth = getImageWidth(image, map.getContainer())
+    if (popupRef.current) {
+      popupRef.current.options.minWidth = initialWidth
+      popupRef.current.options.maxWidth = initialWidth
+    }
+    const updateWidth = debounce(() => {
+      if (!popupRef.current) {
+        return
+      }
 
-  // Changes to width are unfortunately not picked up by react-leaflet when a popup is re-opened
-  // useEffect(() => {
-  //   const onResize = () => {
-  //     setWidth(getImageWidth(image, map.getContainer()))
-  //   }
-  //   map.addEventListener('resize', onResize)
-  //   return () => {
-  //     map.removeEventListener('resize', onResize)
-  //   }
-  // }, [map, image])
+      const width = getImageWidth(image, map.getContainer())
+      popupRef.current.options.minWidth = width
+      popupRef.current.options.maxWidth = width
+
+      if (!popupRef.current.isOpen()) {
+        return
+      }
+      popupRef.current.update()
+
+      const popupPane = popupRef.current.getElement()
+      if (!popupPane) {
+        return
+      }
+
+      const latLng = popupRef.current.getLatLng()
+      if (!latLng) {
+        return
+      }
+
+      map.panInside(latLng, {
+        padding: popupRef.current.options.autoPanPadding,
+      })
+    })
+    map.on('resize', updateWidth)
+    return () => {
+      map.off('resize', updateWidth)
+    }
+  }, [map, image])
 
   return (
     <LazyMarker
@@ -41,9 +70,9 @@ const PhotoMarker: FunctionalComponent<{ image: MapImage }> = ({ image }) => {
         iconAnchor: [20, 20],
       })}
     >
-      <LazyPopup minWidth={width} maxWidth={width} className="[&_*:is(.leaflet-popup-content-wrapper,.leaflet-popup-tip)]:bg-base!" closeButton={false} autoPanPadding={[8, HEADER_HEIGHT]}>
+      <LazyPopup ref={popupRef} className="[&_*:is(.leaflet-popup-content-wrapper,.leaflet-popup-tip)]:bg-base!" closeButton={false} autoPanPadding={[8, HEADER_HEIGHT]}>
         <div
-          class="w-full"
+          className="w-full"
           style={{ aspectRatio: String(image.aspectRatio) }}
         >
           <img
@@ -80,13 +109,13 @@ function getImageWidth(image: MapImage, mapContainer: HTMLElement) {
   return Math.min(maxWidth, maxWidthByHeight, MAX_SIZE)
 }
 
-export const PhotographyMap: FunctionalComponent<
+export const PhotographyMap: FC<
   { images: MapImage[], bounds?: [[number, number], [number, number]] } & Omit<MapOptions, 'zoom'>
 > = ({ images, bounds, ...props }) => {
   return (
     <Suspense fallback={<></>}>
       <MapContainer
-        className="photography-map relative isolate size-full transition-all [&_.leaflet-control-zoom]:dark:invert"
+        className="photography-map relative isolate size-full transition-all"
         scrollWheelZoom
         bounds={bounds}
         boundsOptions={{ padding: [5, 5] }}

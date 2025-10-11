@@ -3,6 +3,7 @@ title: React, Leaflet, and SSR
 description: 'A guide on using Leaflet for adding OpenStreetMap to a React application, with a hint of SSR and Preact thrown in the mix.'
 heroImage: '/assets/blog/maps.jpg'
 pubDate: 2022-08-24
+updatedDate: 2025-10-11
 layout: '~/layouts/BlogPostLayout.astro'
 ---
 
@@ -20,13 +21,15 @@ import {
 [OpenStreetMap](https://www.openstreetmap.org) is a great free alternative to Google Maps and Apple Maps.
 In this blog post, I demonstrate how to use [Leaflet](https://leafletjs.com) for adding interactive maps to React websites, implementing performant markers, and finally supporting SSR environments such as Astro and Next.js.
 
+> Update: As of October 11, 2025 this website uses React and dropped Preact.
+
 Please note that I'm using type imports of [Preact](https://preactjs.com) instead of React, since it decreases the size of my blog's client-side JavaScript bundles.
 Preact has a React compatibility mode, so the imports are the only difference from a React implementation.
 In the following code snippets, I'll add notes about differences to React as comments.
 
 ## Creating a reusable component
 
-<LeafletMap client:only="preact" />
+<LeafletMap client:only="react" />
 
 ### Installation
 
@@ -125,7 +128,7 @@ A simple fix for this issue is settings the `z-index` of the offending elements 
 
 ## Adding markers
 
-<LeafletMapWithMarkers client:only="preact" />
+<LeafletMapWithMarkers client:only="react" />
 
 The default marker icons of Leaflet will not work with Next.js out of the box, since they are imported with `require` statements.
 In this section, I will create a custom marker icon for my maps.
@@ -171,7 +174,7 @@ const markers: [number, number][] = [center, [48.2, 16.37], [48.1987, 16.3685]]
 
 ### Improving performance
 
-<LeafletMapWithClusters client:only="preact" />
+<LeafletMapWithClusters client:only="react" />
 
 The code above works fine for the few example markers, but it has various downsides:
 
@@ -189,6 +192,8 @@ It can be installed as follows:
 ```bash
 pnpm install @changey/react-leaflet-markercluster
 ```
+
+> Update: For React 19 and `react-leaflet` v5, the original [react-leaflet-markercluster](https://www.npmjs.com/package/react-leaflet-markercluster) now works as well.
 
 And there are more good news; using this library is not difficult either.
 Analogously to our map, we'll create a reusable `<MarkerCluster>` component.
@@ -301,7 +306,7 @@ For example, an import of the first example map in this `.mdx` blog looks like t
 ```mdx
 import { LeafletMap } from './LeafletMap.lazy.tsx'
 
-<LeafletMap client:only="preact" />
+<LeafletMap client:only="react" />
 ```
 
 > Note: At the time of writing, Astro may throw an error when importing your Preact component this way, see [withastro/astro#3833](https://github.com/withastro/astro/issues/3833).
@@ -406,7 +411,7 @@ export const LeafletMapWithCenterText: FunctionalComponent<
 
 Try it out in the map below, by moving, zooming, or clicking the text in the top right corner (after changing the zoom level).
 
-<LeafletMapWithCenterText client:only="preact" />
+<LeafletMapWithCenterText client:only="react" />
 
 ## Conclusion
 

@@ -2,12 +2,12 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "preact",
+    "jsxImportSource": "react",
     "baseUrl": "./",
     "paths": {
       "~/*": ["src/*"]
     },
-    "types": ["preact/jsx-runtime", "vite/client"],
+    "types": ["vite/client"],
     "skipLibCheck": true
   },
   "exclude": ["playwright-report", "dist", "node_modules"],

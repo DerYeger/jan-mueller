@@ -142,6 +142,18 @@
   .showcase mark {
     @apply bg-transparent font-bold text-black dark:text-white
   }
+
+  .leaflet-marker-icon {
+    @apply focus-visible:focus-ring;
+  }
+
+  .leaflet-control-zoom  {
+    @apply bg-glass!;
+
+    & > * {
+      @apply bg-transparent! text-light! hocus:text-strong! border-b-0!;
+    }
+  }
 }
 
 .drop-shadow-sharp {
