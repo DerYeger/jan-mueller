@@ -10,22 +10,29 @@ const universityOfKassel: CollegeOrUniversity = {
   name: ['University of Kassel'],
 }
 
+const tuWien: CollegeOrUniversity = {
+  '@type': 'CollegeOrUniversity',
+  name: ['TU Wien'],
+}
+
 const url = 'https://janmueller.dev'
 
 const author: Person = {
   '@type': 'Person',
   name: 'Jan Müller',
   additionalName: 'Patrick',
-  alumniOf: [universityOfKassel],
-  birthDate: '1998-06-03',
+  alumniOf: [universityOfKassel, tuWien],
   email: ['janmueller3698@gmail.com', 'mail@janmueller.dev'],
   gender: 'Male',
-  image: `${url}/avatar.webp`,
   jobTitle: 'Senior Software Engineer',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Senacor Technologies AG',
+  },
   knowsAbout: [
     'Computer Science',
-    'Mobile Engineering',
     'Software Engineering',
+    'Full-stack Engineering',
     'Web Engineering',
   ],
   knowsLanguage: ['English', 'German'],

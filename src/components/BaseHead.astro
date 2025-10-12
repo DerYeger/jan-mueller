@@ -1,6 +1,4 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
 import '~/styles/base.css'
 
 import { Schema } from 'astro-seo-schema'
@@ -52,7 +50,6 @@ html.dark {
 </script>
 ) : null}
 
-<!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -61,20 +58,17 @@ html.dark {
 <meta name="theme-color" content="#FAFAFA" />
 <link rel="sitemap" href="/sitemap-index.xml" />
 
-<!-- Primary Meta Tags -->
 <title>{finalTitle}</title>
 <meta name="title" content={finalTitle} />
 <meta name="description" content={finalDescription} />
 <link rel="canonical" href={canonicalURL} />
 
-<!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={finalTitle} />
 <meta property="og:description" content={finalDescription} />
 <meta property="og:image" content={imageURL} />
 
-<!-- Twitter -->
 <meta property="twitter:creator" content="@DerYeger" />
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
