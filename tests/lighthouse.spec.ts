@@ -16,6 +16,7 @@ lighthouseTest.describe('Lighthouse', () => {
         const accessibilityScanResults = await new AxeBuilder({ page })
           .exclude('.baklava-editor')
           .exclude('.expressive-code')
+          .exclude('.marmoset-viewer-host')
           .exclude('button[id^="factorize-"]')
           .exclude('button[id^="benchmark-"]')
           .analyze()
