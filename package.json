@@ -62,7 +62,7 @@
     "@types/react-dom": "19.2.2",
     "@yeger/debounce": "2.0.16",
     "@yeger/eslint-config": "3.0.1",
-    "astro": "5.15.4",
+    "astro": "5.15.6",
     "astro-icon": "1.1.5",
     "astro-og-canvas": "0.7.2",
     "astro-robots-txt": "1.0.0",
