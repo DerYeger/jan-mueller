@@ -1,3 +1,5 @@
 {
-  "extends": ["github>DerYeger/renovate-config"]
+  "extends": [
+    "github>DerYeger/yeger:renovate"
+  ]
 }
