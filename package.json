@@ -3,7 +3,7 @@
   "type": "module",
   "version": "3.88.0",
   "private": true,
-  "packageManager": "pnpm@10.23.0",
+  "packageManager": "pnpm@10.24.0",
   "description": "Personal website of Jan Müller, a passionate senior software engineer.",
   "scripts": {
     "build": "astro build",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@antfu/ni": "27.0.1",
-    "@astrojs/check": "0.9.5",
+    "@astrojs/check": "0.9.6",
     "@astrojs/mdx": "4.3.12",
     "@astrojs/react": "4.4.2",
     "@astrojs/rss": "4.0.14",
@@ -52,17 +52,17 @@
     "@axe-core/playwright": "4.11.0",
     "@commitlint/cli": "20.1.0",
     "@commitlint/config-conventional": "20.0.0",
-    "@playwright/test": "1.56.1",
+    "@playwright/test": "1.57.0",
     "@tailwindcss/typography": "0.5.19",
     "@tailwindcss/vite": "4.1.17",
     "@types/html-escaper": "3.0.4",
     "@types/leaflet": "1.9.21",
     "@types/node": "24.10.1",
-    "@types/react": "19.2.6",
+    "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "@yeger/debounce": "2.0.17",
     "@yeger/eslint-config": "3.0.1",
-    "astro": "5.16.0",
+    "astro": "5.16.2",
     "astro-icon": "1.1.5",
     "astro-og-canvas": "0.7.2",
     "astro-robots-txt": "1.0.0",
@@ -94,8 +94,8 @@
     "vite": "6.4.1",
     "vite-plugin-comlink": "5.3.0",
     "vite-plugin-lib": "4.0.1",
-    "vue": "3.5.24",
-    "vue-tsc": "3.1.4"
+    "vue": "3.5.25",
+    "vue-tsc": "3.1.5"
   },
   "lint-staged": {
     "*.{astro,cjs,html,js,jsx,json,md,mjs,mts,svelte,ts,tsx,vue,yaml,yml}": "eslint --fix"
