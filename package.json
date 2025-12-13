@@ -42,7 +42,7 @@
     "vue-marmoset-viewer": "4.0.22"
   },
   "devDependencies": {
-    "@antfu/ni": "27.0.1",
+    "@antfu/ni": "28.0.0",
     "@astrojs/check": "0.9.6",
     "@astrojs/mdx": "4.3.12",
     "@astrojs/react": "4.4.2",
