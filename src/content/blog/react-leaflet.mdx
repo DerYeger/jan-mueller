@@ -77,7 +77,7 @@ const LeafletMap: FunctionalComponent<
 > = ({ children, ...options }) => {
   return (
     <MapContainer
-      className="h-[200px] w-full relative"
+      className="h-50 w-full relative"
       maxZoom={18}
       {...options}
     >
@@ -278,7 +278,7 @@ export const LeafletMapWithClusters: FunctionalComponent<
   } & MapOptions
 > = ({ center, markers, ...options }) => {
   return (
-    <Suspense fallback={<div className="h-[200px]" />}>
+    <Suspense fallback={<div className="h-50" />}>
       <LazyLeafletMap center={center} zoom={13} {...options}>
         <Suspense fallback={<></>}>
           <LazyMarkerCluster>
@@ -393,7 +393,7 @@ export const LeafletMapWithCenterText: FunctionalComponent<
   Omit<MapOptions, 'center' | 'zoom'>
 > = (props) => {
   return (
-    <Suspense fallback={<div className="h-[200px]" />}>
+    <Suspense fallback={<div className="h-50" />}>
       <LazyLeafletMap center={center} zoom={13} {...props}>
         <Suspense fallback={<></>}>
           <LazyMapCenter />

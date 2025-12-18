@@ -17,12 +17,14 @@ test.describe('Screenshots', () => {
           await page.emulateMedia({ reducedMotion: 'reduce', colorScheme })
           await page.goto(url)
           const mask: Locator[] = [
+            page.locator('.map-fallback'),
+            page.locator('.marquee .gradient-text:first-child'),
             page.locator('.marmoset-viewer-host'),
             page.locator('.leaflet-container'),
             page.locator('.neon-bar-experiment'),
             page.locator('.baklava-node'),
           ]
-          await expect(page).toHaveScreenshot({ ...BASE_SCREENSHOT, ...(screenshot ?? {}), mask })
+          await expect(page).toHaveScreenshot({ ...BASE_SCREENSHOT, ...screenshot, mask })
         })
       }
     })

@@ -70,7 +70,7 @@ const LeafletMap: FC<
 > = ({ children, ...options }) => {
   return (
     <MapContainer
-      className="card relative isolate h-[200px] w-full sm:h-[300px] md:h-[400px]"
+      className="card relative isolate h-50 w-full sm:h-75 md:h-100"
       scrollWheelZoom={false}
       maxZoom={18}
       {...options}
