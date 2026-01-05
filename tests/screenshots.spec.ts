@@ -23,6 +23,7 @@ test.describe('Screenshots', () => {
             page.locator('.leaflet-container'),
             page.locator('.neon-bar-experiment'),
             page.locator('.baklava-node'),
+            page.locator('footer .copyright'),
           ]
           await expect(page).toHaveScreenshot({ ...BASE_SCREENSHOT, ...screenshot, mask })
         })
