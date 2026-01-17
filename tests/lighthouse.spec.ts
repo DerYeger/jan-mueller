@@ -34,7 +34,7 @@ lighthouseTest.describe('Lighthouse', () => {
           name: url.replace(/\//g, '_').replace(/^_/, ''),
         },
         disableLogs: true,
-        thresholds: { ...BASE_THRESHOLDS, ...(thresholds ?? {}) },
+        thresholds: { ...BASE_THRESHOLDS, ...thresholds },
       })
     })
   }

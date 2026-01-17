@@ -70,28 +70,19 @@ const PhotoMarker: FC<{ image: MapImage }> = ({ image }) => {
         iconAnchor: [20, 20],
       })}
     >
-      <LazyPopup ref={popupRef} className="[&_*:is(.leaflet-popup-content-wrapper,.leaflet-popup-tip)]:bg-base!" closeButton={false} autoPanPadding={[8, HEADER_HEIGHT]}>
-        <div
-          className="w-full"
-          style={{ aspectRatio: String(image.aspectRatio) }}
-        >
-          <img
-            src={image.src}
-            alt={image.alt}
-            draggable={false}
-            decoding="async"
-          />
+      <LazyPopup
+        ref={popupRef}
+        className="[&_*:is(.leaflet-popup-content-wrapper,.leaflet-popup-tip)]:bg-base!"
+        closeButton={false}
+        autoPanPadding={[8, HEADER_HEIGHT]}
+      >
+        <div className="w-full" style={{ aspectRatio: String(image.aspectRatio) }}>
+          <img src={image.src} alt={image.alt} draggable={false} decoding="async" />
         </div>
         <div className="text-strong mx-auto mt-1 flex max-w-sm justify-evenly gap-1 text-xs font-semibold *:flex *:grow *:justify-center">
-          <div>
-            {image.focalLength}
-          </div>
-          <div>
-            {`ƒ${image.aperture}`}
-          </div>
-          <div>
-            {`${image.shutterSpeed} s`}
-          </div>
+          <div>{image.focalLength}</div>
+          <div>{`ƒ${image.aperture}`}</div>
+          <div>{`${image.shutterSpeed} s`}</div>
         </div>
       </LazyPopup>
     </LazyMarker>
@@ -110,7 +101,7 @@ function getImageWidth(image: MapImage, mapContainer: HTMLElement) {
 }
 
 export const PhotographyMap: FC<
-  { images: MapImage[], bounds?: [[number, number], [number, number]] } & Omit<MapOptions, 'zoom'>
+  { images: MapImage[]; bounds?: [[number, number], [number, number]] } & Omit<MapOptions, 'zoom'>
 > = ({ images, bounds, ...props }) => {
   return (
     <Suspense fallback={<></>}>

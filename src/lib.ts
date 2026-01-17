@@ -1,15 +1,17 @@
-import { formatDate as formatDateBase, formatDuration as formatDurationBase, intervalToDuration } from 'date-fns'
+import {
+  formatDate as formatDateBase,
+  formatDuration as formatDurationBase,
+  intervalToDuration,
+} from 'date-fns'
 import type { Duration } from 'date-fns'
 
 export async function getImageAsset(imagePath: string): Promise<ImageMetadata | undefined> {
   const assets = import.meta.glob('~/assets/**/*')
-  const asset = Object.entries(assets).find(([fileName]) =>
-    fileName.endsWith(imagePath),
-  )
+  const asset = Object.entries(assets).find(([fileName]) => fileName.endsWith(imagePath))
   if (!asset) {
     return undefined
   }
-  const imageImport = await asset[1]() as { default: ImageMetadata }
+  const imageImport = (await asset[1]()) as { default: ImageMetadata }
   return imageImport.default
 }
 
@@ -47,22 +49,25 @@ export function formatDate(date: DateLike, format: string): string {
   return formatDateBase(date, format)
 }
 
-export interface TimeRange { from: DateLike, to: DateLike }
+export interface TimeRange {
+  from: DateLike
+  to: DateLike
+}
 
 export function getDuration(ranges: TimeRange[]): Duration {
   return ranges
     .map((r) => intervalToDuration({ start: r.from, end: r.to }))
     .map(normalizeDuration)
-  .reduce((acc, curr) => {
-    return {
-      years: (acc.years ?? 0) + (curr.years ?? 0),
-      months: (acc.months ?? 0) + (curr.months ?? 0),
-      days: (acc.days ?? 0) + (curr.days ?? 0),
-      hours: (acc.hours ?? 0) + (curr.hours ?? 0),
-      minutes: (acc.minutes ?? 0) + (curr.minutes ?? 0),
-      seconds: (acc.seconds ?? 0) + (curr.seconds ?? 0),
-    }
-  }, {})
+    .reduce((acc, curr) => {
+      return {
+        years: (acc.years ?? 0) + (curr.years ?? 0),
+        months: (acc.months ?? 0) + (curr.months ?? 0),
+        days: (acc.days ?? 0) + (curr.days ?? 0),
+        hours: (acc.hours ?? 0) + (curr.hours ?? 0),
+        minutes: (acc.minutes ?? 0) + (curr.minutes ?? 0),
+        seconds: (acc.seconds ?? 0) + (curr.seconds ?? 0),
+      }
+    }, {})
 }
 
 function normalizeDuration(duration: Duration): Duration {
@@ -96,5 +101,8 @@ export function getToday() {
 }
 
 export function getElementId(input: string) {
-  return input.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '')
+  return input
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
 }

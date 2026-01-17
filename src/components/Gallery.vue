@@ -30,7 +30,7 @@ const props = defineProps<{ images: GalleryImage[] }>()
           draggable="false"
           decoding="async"
           class="w-full shadow-2xl"
-        >
+        />
       </div>
     </MasonryWall>
   </div>

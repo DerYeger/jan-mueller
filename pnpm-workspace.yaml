@@ -1,6 +1,4 @@
-packages: null
-
-minimumReleaseAge: 1440
+minimumReleaseAge: 2880
 trustPolicy: no-downgrade
 trustPolicyExclude:
   - chokidar@4.0.3

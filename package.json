@@ -1,22 +1,24 @@
 {
   "name": "jan-mueller",
-  "type": "module",
   "version": "3.88.0",
   "private": true,
-  "packageManager": "pnpm@10.27.0",
   "description": "Personal website of Jan Müller, a passionate senior software engineer.",
+  "type": "module",
   "scripts": {
     "build": "astro build",
     "check:astro": "astro check",
     "check:tsc": "tsc --noEmit",
     "check:vue": "vue-tsc --noEmit",
-    "ci": "pnpm turbo build check e2e lint",
+    "ci": "pnpm turbo build check e2e quality",
     "dev": "astro dev",
     "e2e": "playwright test",
-    "fix": "pnpm lint --fix ",
-    "lint": "yeger-lint",
+    "fix": "nr turbo run quality:fix",
+    "format": "oxfmt --check",
+    "format:fix": "oxfmt",
+    "install-hooks": "husky",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
     "postinstall": "playwright install",
-    "prepare": "is-ci || husky",
     "preview": "astro preview",
     "sync": "astro sync",
     "turbo": "CI=true FORCE_COLOR=1 turbo"
@@ -61,7 +63,6 @@
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "@yeger/debounce": "2.0.17",
-    "@yeger/eslint-config": "3.0.1",
     "astro": "5.16.7",
     "astro-icon": "1.1.5",
     "astro-og-canvas": "0.10.0",
@@ -69,16 +70,16 @@
     "astro-seo-schema": "5.1.0",
     "canvaskit-wasm": "0.40.0",
     "clsx": "2.1.1",
-    "eslint": "9.39.2",
     "get-port": "7.1.0",
     "hast-util-to-string": "3.0.1",
     "hastscript": "9.0.1",
     "html-escaper": "3.0.3",
     "husky": "9.1.7",
-    "is-ci": "4.1.0",
     "lighthouse": "13.0.1",
     "lint-staged": "16.2.7",
     "mdast-util-to-string": "4.0.0",
+    "oxfmt": "0.24.0",
+    "oxlint": "1.39.0",
     "playwright-lighthouse": "4.0.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -98,6 +99,7 @@
     "vue-tsc": "3.2.2"
   },
   "lint-staged": {
-    "*.{astro,cjs,html,js,jsx,json,md,mjs,mts,svelte,ts,tsx,vue,yaml,yml}": "eslint --fix"
-  }
+    "*": "pnpm run turbo quality:fix --"
+  },
+  "packageManager": "pnpm@10.27.0"
 }

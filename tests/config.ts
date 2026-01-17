@@ -3,12 +3,9 @@ import type { Browser, PageAssertionsToHaveScreenshotOptions } from '@playwright
 import getPort from 'get-port'
 import type { playwrightLighthouseConfig } from 'playwright-lighthouse'
 
-export const lighthouseTest = test.extend<
-  object,
-  { port: number, browser: Browser }
->({
+export const lighthouseTest = test.extend<object, { port: number; browser: Browser }>({
   port: [
-    // eslint-disable-next-line no-empty-pattern
+    // oxlint-disable-next-line no-empty-pattern
     async ({}, use) => {
       // Assign a unique port for each playwright worker to support parallel tests
       const port = await getPort()
@@ -43,7 +40,12 @@ export const BASE_SCREENSHOT: ScreenshotOptions = {
   fullPage: true,
 }
 
-export const PAGES: { url: `/${string}`, thresholds?: Thresholds, screenshot?: ScreenshotOptions, skip?: { accessibility?: boolean } }[] = [
+export const PAGES: {
+  url: `/${string}`
+  thresholds?: Thresholds
+  screenshot?: ScreenshotOptions
+  skip?: { accessibility?: boolean }
+}[] = [
   // Home
   {
     url: '/',
@@ -78,7 +80,7 @@ export const PAGES: { url: `/${string}`, thresholds?: Thresholds, screenshot?: S
     thresholds: {
       accessibility: 96, // example button color contrast
     },
-    },
+  },
   // Photography
   {
     url: '/photography',

@@ -61,11 +61,7 @@ For example, the example used in this post looks as follows:
 
 ```vue
 <template>
-  <MarmosetViewer
-    src="/static/files/models/an-26.mview"
-    responsive
-    :height="300"
-  />
+  <MarmosetViewer src="/static/files/models/an-26.mview" responsive :height="300" />
 </template>
 ```
 
@@ -83,8 +79,4 @@ By using this component, using the Marmoset Viewer with Vue websites (or Astro, 
 Below is a high-res version of my plane model.
 **Load it at your own discretion, it comes in at almost 36 MB!**
 
-<VueMarmosetViewer
-  client:only="vue"
-  src="/static/files/models/an-26-high-res.mview"
-  height={500}
-/>
+<VueMarmosetViewer client:only="vue" src="/static/files/models/an-26-high-res.mview" height={500} />

@@ -1,9 +1,4 @@
-import type {
-  CollegeOrUniversity,
-  Person,
-  WebSite,
-  WithContext,
-} from 'schema-dts'
+import type { CollegeOrUniversity, Person, WebSite, WithContext } from 'schema-dts'
 
 const universityOfKassel: CollegeOrUniversity = {
   '@type': 'CollegeOrUniversity',

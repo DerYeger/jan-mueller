@@ -112,10 +112,7 @@ export default defineComponent({
 <template>
   <MasonryWall :items="items" :ssr-columns="1" :column-width="100" :gap="16">
     <template #default="{ item, index }">
-      <div
-        :style="{ height: `${item}px` }"
-        class="card flex items-center justify-center"
-      >
+      <div :style="{ height: `${item}px` }" class="card flex items-center justify-center">
         {{ index }}
       </div>
     </template>

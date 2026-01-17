@@ -13,8 +13,7 @@ function randomDirection(): Direction {
   return [randomInRange(-5, 5), randomInRange(-10, 0) + 3]
 }
 
-const antButtons = document
-  .querySelectorAll<HTMLButtonElement>('button.ant-trigger')
+const antButtons = document.querySelectorAll<HTMLButtonElement>('button.ant-trigger')
 
 function letThemLoose(container: HTMLElement) {
   if (activeAntCount >= maxAntCount) {
@@ -95,11 +94,11 @@ function letThemLoose(container: HTMLElement) {
 }
 
 antButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const container = document.querySelector<HTMLElement>('.ant-container')
-      if (!container) {
-        return
-      }
-      letThemLoose(container)
-    })
+  button.addEventListener('click', () => {
+    const container = document.querySelector<HTMLElement>('.ant-container')
+    if (!container) {
+      return
+    }
+    letThemLoose(container)
   })
+})

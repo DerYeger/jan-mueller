@@ -76,11 +76,7 @@ const LeafletMap: FunctionalComponent<
   } & MapOptions
 > = ({ children, ...options }) => {
   return (
-    <MapContainer
-      className="h-50 w-full relative"
-      maxZoom={18}
-      {...options}
-    >
+    <MapContainer className="h-50 w-full relative" maxZoom={18} {...options}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
@@ -220,10 +216,7 @@ export const MarkerCluster: FunctionalComponent<{
   children: ComponentChildren
 }> = ({ children }) => {
   return (
-    <BaseMarkerCluster
-      iconCreateFunction={createClusterCustomIcon}
-      showCoverageOnHover={false}
-    >
+    <BaseMarkerCluster iconCreateFunction={createClusterCustomIcon} showCoverageOnHover={false}>
       {children}
     </BaseMarkerCluster>
   )
@@ -257,9 +250,7 @@ import { Suspense, lazy } from 'preact/compat'
 
 const LazyLeafletMap = lazy(() => import('./LeafletMap'))
 const LazyMarker = lazy(async () => (await import('react-leaflet')).Marker)
-const LazyMarkerCluster = lazy(
-  async () => (await import('./LeafletMap')).MarkerCluster
-)
+const LazyMarkerCluster = lazy(async () => (await import('./LeafletMap')).MarkerCluster)
 ```
 
 In the same file, declare a new component as follows:
@@ -324,19 +315,13 @@ import dynamic from 'next/dynamic'
 
 export const LazyMap = dynamic(() => import('./LeafletMap'), { ssr: false })
 
-export const LazyMarker = dynamic(
-  async () => (await import('react-leaflet')).Marker,
-  {
-    ssr: false,
-  }
-)
+export const LazyMarker = dynamic(async () => (await import('react-leaflet')).Marker, {
+  ssr: false,
+})
 
-export const LazyMarkerCluster = dynamic(
-  async () => (await import('./LeafletMap')).MarkerCluster,
-  {
-    ssr: false,
-  }
-)
+export const LazyMarkerCluster = dynamic(async () => (await import('./LeafletMap')).MarkerCluster, {
+  ssr: false,
+})
 ```
 
 Now, all the `<Lazy...>` components can be used even without `<Suspense>` in any other component or page.
@@ -389,9 +374,9 @@ Reference the [Next.js guide](#nextjs) on how this import should look like for N
 ```tsx
 const LazyMapCenter = lazy(async () => (await import('./LeafletMap')).MapCenter)
 
-export const LeafletMapWithCenterText: FunctionalComponent<
-  Omit<MapOptions, 'center' | 'zoom'>
-> = (props) => {
+export const LeafletMapWithCenterText: FunctionalComponent<Omit<MapOptions, 'center' | 'zoom'>> = (
+  props,
+) => {
   return (
     <Suspense fallback={<div className="h-50" />}>
       <LazyLeafletMap center={center} zoom={13} {...props}>

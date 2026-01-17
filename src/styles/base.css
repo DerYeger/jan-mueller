@@ -63,7 +63,7 @@
 }
 
 @utility anchor-heading-size {
-  --size: max(1rem,0.5em);
+  --size: max(1rem, 0.5em);
 }
 
 @utility anchor-heading-margin {
@@ -71,10 +71,9 @@
   margin-right: calc(-1 * (var(--size) + 0.25em));
 }
 
-
 @layer base {
   button:not(:disabled),
-  [role="button"]:not(:disabled) {
+  [role='button']:not(:disabled) {
     cursor: pointer;
   }
 
@@ -85,7 +84,7 @@
       @apply focus-ring;
     }
 
-    &:not([class*="anchor-blue"]):not([class*="anchor-custom"]):not([class*="anchor-heading"]) {
+    &:not([class*='anchor-blue']):not([class*='anchor-custom']):not([class*='anchor-heading']) {
       @apply hocus:text-light;
     }
   }
@@ -100,7 +99,12 @@
 }
 
 @layer components {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply scroll-mt-24;
   }
   article.prose *:is(h1, h2, h3, h4, h5, h6) {
@@ -112,7 +116,7 @@
   }
 
   article .anchor-heading {
-    @apply text-lighter! hocus:text-strong!
+    @apply text-lighter! hocus:text-strong!;
   }
 
   article.prose * {
@@ -140,14 +144,14 @@
   }
 
   .showcase mark {
-    @apply bg-transparent font-bold text-black dark:text-white
+    @apply bg-transparent font-bold text-black dark:text-white;
   }
 
   .leaflet-marker-icon {
     @apply focus-visible:focus-ring;
   }
 
-  .leaflet-control-zoom  {
+  .leaflet-control-zoom {
     @apply bg-glass!;
 
     & > * {
@@ -173,11 +177,11 @@
 
 @supports not (backdrop-filter: none) {
   .bg-glass {
-    background-color: #FEFEFE;
+    background-color: #fefefe;
   }
 
   .dark .bg-glass {
-    background-color: #0E0E0E;
+    background-color: #0e0e0e;
   }
 }
 

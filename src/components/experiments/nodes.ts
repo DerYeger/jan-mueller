@@ -1,4 +1,3 @@
-// eslint-disable-next-line ts/ban-ts-comment
 // @ts-nocheck baklavsjs types are not up to date
 import type { IBaklavaViewModel } from 'baklavajs'
 import {
@@ -249,10 +248,7 @@ const RotateNode = defineNode({
   inputs: {
     vector: () => new VectorInterface('Vector'),
     angle: () => new ScalarInterface('Angle'),
-    unit: () =>
-      new SelectInterface('Unit', 'Degrees', ['Degrees', 'Radians']).setPort(
-        false,
-      ),
+    unit: () => new SelectInterface('Unit', 'Degrees', ['Degrees', 'Radians']).setPort(false),
   },
   outputs: {
     output,
@@ -407,11 +403,7 @@ const WaveNode = defineNode({
   inputs: {
     scalar: () => new ScalarInterface('A'),
     type: () =>
-      new SelectInterface(
-        'Type',
-        waveTypes[0],
-        waveTypes as unknown as string[],
-      ).setPort(false),
+      new SelectInterface('Type', waveTypes[0], waveTypes as unknown as string[]).setPort(false),
   },
   outputs: {
     output: () => new ScalarInterface('Output'),
@@ -488,15 +480,9 @@ export function createExample(baklava: IBaklavaViewModel) {
   rotate.position = { x: 1100, y: 80 }
   baklava.editor.graph.addNode(rotate)
 
-  baklava.editor.graph.addConnection(
-    vector.outputs.output,
-    rotate.inputs.vector,
-  )
+  baklava.editor.graph.addConnection(vector.outputs.output, rotate.inputs.vector)
 
   baklava.editor.graph.addConnection(time.outputs.output, modulo.inputs.a)
   baklava.editor.graph.addConnection(modulo.outputs.output, multiply.inputs.a)
-  baklava.editor.graph.addConnection(
-    multiply.outputs.output,
-    rotate.inputs.angle,
-  )
+  baklava.editor.graph.addConnection(multiply.outputs.output, rotate.inputs.angle)
 }

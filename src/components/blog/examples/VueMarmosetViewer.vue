@@ -1,11 +1,14 @@
 <script lang="ts" setup>
 import { MarmosetViewer } from 'vue-marmoset-viewer'
 
-const { height = 300 } = defineProps<{ src: string, height?: number }>()
+const { height = 300 } = defineProps<{ src: string; height?: number }>()
 </script>
 
 <template>
-  <div class="not-prose overflow-hidden rounded-sm shadow-md will-change-transform" :style="{ height: `${height}px` }">
+  <div
+    class="not-prose overflow-hidden rounded-sm shadow-md will-change-transform"
+    :style="{ height: `${height}px` }"
+  >
     <MarmosetViewer :src="src" responsive :height="height" />
   </div>
 </template>
