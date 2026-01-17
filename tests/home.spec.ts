@@ -37,16 +37,20 @@ test.describe('Home', () => {
       await expect(icon).toHaveAttribute('href', badgeIcon.href)
     }
 
-    const badgeButtons = [{
-      href: '#experience',
-      text: 'CV',
-    }, {
-      href: '/blog',
-      text: 'Blog',
-    }, {
-      href: '/photography',
-      text: 'Photography',
-    }]
+    const badgeButtons = [
+      {
+        href: '#experience',
+        text: 'CV',
+      },
+      {
+        href: '/blog',
+        text: 'Blog',
+      },
+      {
+        href: '/photography',
+        text: 'Photography',
+      },
+    ]
     for (const badgeButton of badgeButtons) {
       const button = badges.getByTestId(`badge-button-${badgeButton.href}`)
       await expect(button).toBeVisible()

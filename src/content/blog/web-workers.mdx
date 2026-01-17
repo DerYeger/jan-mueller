@@ -5,6 +5,7 @@ heroImage: '/assets/blog/web.jpg'
 pubDate: 2025-08-26
 layout: '~/layouts/BlogPostLayout.astro'
 ---
+
 import FactorizerExampleButton from '~/components/blog/examples/worker/FactorizerExampleButton.astro'
 import BenchmarkExampleButton from '~/components/blog/examples/worker/benchmark/BenchmarkExampleButton.astro'
 import ProCon from '~/components/blog/ProCon.astro'
@@ -62,7 +63,10 @@ import SynchronousFactorizer from '~/components/blog/examples/worker/Synchronous
 
 Let's summarize the characteristics of our synchronous factorizer:
 
-<ProCon pro={["Simple functional call", "No libraries or bundler required"]} con={["Blocks main thread"]} />
+<ProCon
+  pro={['Simple functional call', 'No libraries or bundler required']}
+  con={['Blocks main thread']}
+/>
 
 ## Using web workers
 
@@ -164,7 +168,16 @@ import ManualWorkerFactorizer from '~/components/blog/examples/worker/ManualWork
 This time, it's also safe to try out the <FactorizerExampleButton id="manual-worker" value={100001000013699905017} text="very large factors" type="danger"/> example, and the loading animation will properly be updated on the main thread.
 For completion, you can also try the <FactorizerExampleButton id="manual-worker" value={42} text="small factors" /> and <FactorizerExampleButton id="manual-worker" value={1000036000099} text="large factors" /> examples.
 
-<ProCon pro={["Main thread is not blocked", "No libraries or bundler required"]} con={["Increased complexity", "Separate worker file with specialized code", ["Reduced type-safety", "#type-safety"], ["Limited data type support", "#support-for-complex-data-types"], ["Communication overhead", "#communication-overhead"]]}/>
+<ProCon
+  pro={['Main thread is not blocked', 'No libraries or bundler required']}
+  con={[
+    'Increased complexity',
+    'Separate worker file with specialized code',
+    ['Reduced type-safety', '#type-safety'],
+    ['Limited data type support', '#support-for-complex-data-types'],
+    ['Communication overhead', '#communication-overhead'],
+  ]}
+/>
 
 ## Comlink workers
 
@@ -184,7 +197,7 @@ export default defineConfig({
   plugins: [comlink()],
   worker: {
     plugins: () => [comlink()],
-  }
+  },
 })
 ```
 
@@ -211,7 +224,19 @@ import ComlinkWorkerFactorizer from '~/components/blog/examples/worker/ComlinkWo
 
 <ComlinkWorkerFactorizer />
 
-<ProCon pro={["Main thread is not blocked", "Worker communication through async function calls", "No specialized worker file", ["Type-safety (with exceptions)", "#type-safety"]]} con={["Increased complexity (but less than plain web workers)", ["Limited data type support", "#support-for-complex-data-types"], ["Communication overhead", "#communication-overhead"]]} />
+<ProCon
+  pro={[
+    'Main thread is not blocked',
+    'Worker communication through async function calls',
+    'No specialized worker file',
+    ['Type-safety (with exceptions)', '#type-safety'],
+  ]}
+  con={[
+    'Increased complexity (but less than plain web workers)',
+    ['Limited data type support', '#support-for-complex-data-types'],
+    ['Communication overhead', '#communication-overhead'],
+  ]}
+/>
 
 ## `bidc` workers
 
@@ -265,7 +290,18 @@ import BIDCWorkerFactorizer from '~/components/blog/examples/worker/BIDCWorkerFa
 
 <BIDCWorkerFactorizer />
 
-<ProCon pro={["Main thread is not blocked", "Extended support for complex data types", "Supports other channel types, e.g., iframes"]} con={["Increased complexity (but less than plain web workers)", "Separate worker file with specialized code", ["Large communication overhead", "#communication-overhead"]]} />
+<ProCon
+  pro={[
+    'Main thread is not blocked',
+    'Extended support for complex data types',
+    'Supports other channel types, e.g., iframes',
+  ]}
+  con={[
+    'Increased complexity (but less than plain web workers)',
+    'Separate worker file with specialized code',
+    ['Large communication overhead', '#communication-overhead'],
+  ]}
+/>
 
 ## Comparison
 
@@ -287,7 +323,9 @@ With Comlink, the library is generally able to infer the correct types in most s
 All you have to do is provide the correct generic to `ComlinkWorker` as follows:
 
 ```ts
-const worker = new ComlinkWorker<typeof import('./getPrimeFactors')>(new URL('./getPrimeFactors', import.meta.url))
+const worker = new ComlinkWorker<typeof import('./getPrimeFactors')>(
+  new URL('./getPrimeFactors', import.meta.url),
+)
 
 typeof worker.getPrimeFactors // (n: number) => Promise<PrimeFactorsResult>
 ```
@@ -353,14 +391,17 @@ type TreeWorker = typeof import('./treeEncodingTreeWorker')
 
 const worker = new ComlinkWorker<TreeWorker>(new URL('./treeEncodingTreeWorker', import.meta.url))
 
-export function useTreeEncodingTree(tree: TreeModel<RecursiveTreeNode>, idWordMapping: Id2WordMapping, staticVocabulary: TreeNodeValue[]) {
+export function useTreeEncodingTree(
+  tree: TreeModel<RecursiveTreeNode>,
+  idWordMapping: Id2WordMapping,
+  staticVocabulary: TreeNodeValue[],
+) {
   return useQuery({
     queryKey: ['tree', tree, idWordMapping, staticVocabulary],
-    queryFn: () => worker.createFlowGraphFromTree(tree, idWordMapping, staticVocabulary)
+    queryFn: () => worker.createFlowGraphFromTree(tree, idWordMapping, staticVocabulary),
   })
 }
 ```
-
 
 ## Conclusion
 
@@ -371,7 +412,7 @@ Vite's query suffixes remove a lot of boilerplate code for setting up web worker
 Comlink makes it easy to use web workers and removes the mental overhead that is usually required by their communication model.
 `bidc` extends the capabilities by supporting additional data types in messages, at the cost of additional performance overhead for sending data.
 
-Web workers can *and should* be used more often than one might think.
+Web workers can _and should_ be used more often than one might think.
 While overkill for a singular API call, any client-side computations that are heavy enough to freeze the user interface can benefit from being moved to a web worker.
 
 In most cases, I would recommend using Comlink workers due to their type-safety and ease of use.

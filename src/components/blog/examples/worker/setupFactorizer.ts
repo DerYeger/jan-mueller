@@ -4,7 +4,9 @@ export function setupFactorizer(id: string) {
   const input = document.getElementById(`${id}-input`) as HTMLInputElement | null
   const button = document.getElementById(`${id}-button`) as HTMLButtonElement | null
   const result = document.getElementById(`${id}-result`) as HTMLDivElement | null
-  const exampleButtons = document.querySelectorAll(`button[data-target="${id}"]`) as NodeListOf<HTMLButtonElement>
+  const exampleButtons = document.querySelectorAll(
+    `button[data-target="${id}"]`,
+  ) as NodeListOf<HTMLButtonElement>
 
   if (!input || !button || !result) {
     throw new Error('One or more elements not found')
@@ -55,7 +57,7 @@ export function setupFactorizer(id: string) {
       clearTimeout(loadingIndicatorTimeout)
     }
     loadingIndicatorTimeout = setTimeout(() => {
-      result!.textContent = '.'.repeat(step % 3 + 1)
+      result!.textContent = '.'.repeat((step % 3) + 1)
       updateLoadingIndicator(step + 1)
     }, 300)
   }

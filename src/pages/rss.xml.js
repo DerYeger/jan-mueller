@@ -7,13 +7,15 @@ export async function GET(context) {
     title: `Jan's Blog`,
     description: `Jan's personal blog is all about Software Engineering.`,
     site: context.site,
-    items: blog.map((post) => ({
-      title: post.data.title,
-      pubDate: post.data.pubDate,
-      description: post.data.description,
-      customData: post.data.customData,
-      link: `/blog/${post.slug}/`,
-    })).sort((a, b) => b.pubDate - a.pubDate),
+    items: blog
+      .map((post) => ({
+        title: post.data.title,
+        pubDate: post.data.pubDate,
+        description: post.data.description,
+        customData: post.data.customData,
+        link: `/blog/${post.slug}/`,
+      }))
+      .sort((a, b) => b.pubDate - a.pubDate),
     customData: `<language>en-us</language>`,
     stylesheet: '/rss/pretty-feed-v3.xsl',
   })

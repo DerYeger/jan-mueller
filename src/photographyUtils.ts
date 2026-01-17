@@ -15,13 +15,15 @@ export interface GalleryImage extends BaseImage {
 
 export async function getGalleryImages(globResult: GlobResult): Promise<GalleryImage[]> {
   const rawImages = (await getRawImages(globResult)).sort((a, b) => b.date.localeCompare(a.date)) // newest first
-  return Promise.all(rawImages.map(async (rawImage, index) => {
-    const baseImage = await getBaseImage(rawImage)
-    return {
-      ...baseImage,
-      lazy: index >= 10,
-    }
-  }))
+  return Promise.all(
+    rawImages.map(async (rawImage, index) => {
+      const baseImage = await getBaseImage(rawImage)
+      return {
+        ...baseImage,
+        lazy: index >= 10,
+      }
+    }),
+  )
 }
 
 async function getBaseImage(rawImage: RawImage): Promise<BaseImage> {
@@ -44,19 +46,27 @@ export interface MapImage extends BaseImage, EXIFData {
 
 export async function getMapImages(globResult: GlobResult): Promise<MapImage[]> {
   const rawImages = await getRawImages(globResult)
-  return Promise.all(rawImages.map(async (rawImage) => {
-    const metadata = await extractMetadata(`.${rawImage.buildTimePath}`)
-    if (!metadata) {
-      throw new Error(`Missing metadata for image ${rawImage.src}`)
-    }
-    const baseImage = await getBaseImage(rawImage)
-    const thumbnail = await getImage({ src: rawImage, format: 'webp', quality: 'mid', width: 64, height: 64 })
-    return {
-      ...baseImage,
-      ...metadata,
-      thumbnail: thumbnail.src,
-    }
-  }))
+  return Promise.all(
+    rawImages.map(async (rawImage) => {
+      const metadata = await extractMetadata(`.${rawImage.buildTimePath}`)
+      if (!metadata) {
+        throw new Error(`Missing metadata for image ${rawImage.src}`)
+      }
+      const baseImage = await getBaseImage(rawImage)
+      const thumbnail = await getImage({
+        src: rawImage,
+        format: 'webp',
+        quality: 'mid',
+        width: 64,
+        height: 64,
+      })
+      return {
+        ...baseImage,
+        ...metadata,
+        thumbnail: thumbnail.src,
+      }
+    }),
+  )
 }
 
 interface RawImage extends ImageMetadata {
@@ -65,15 +75,17 @@ interface RawImage extends ImageMetadata {
 }
 
 async function getRawImages(globResult: GlobResult): Promise<RawImage[]> {
-  return Promise.all(Object.entries(globResult).map(async ([name, importAsset]) => {
-    const module = await importAsset()
-    if (typeof module !== 'object' || module === null || !('default' in module)) {
-      throw new Error(`Invalid photo: ${name}`)
-    }
-    const fileNameIndex = name.lastIndexOf('/') + 1
-    const date = name.substring(fileNameIndex, fileNameIndex + 10)
-    return { ...module.default as ImageMetadata, buildTimePath: name, date }
-  }))
+  return Promise.all(
+    Object.entries(globResult).map(async ([name, importAsset]) => {
+      const module = await importAsset()
+      if (typeof module !== 'object' || module === null || !('default' in module)) {
+        throw new Error(`Invalid photo: ${name}`)
+      }
+      const fileNameIndex = name.lastIndexOf('/') + 1
+      const date = name.substring(fileNameIndex, fileNameIndex + 10)
+      return { ...(module.default as ImageMetadata), buildTimePath: name, date }
+    }),
+  )
 }
 
 function getAltFromFilename(filename: string): string {
@@ -109,7 +121,9 @@ async function extractMetadata(image: string): Promise<EXIFData | null> {
   }
 }
 
-const exactApertures = [1.8, 2, 2.2, 2.5, 2.8, 3.2, 3.5, 4, 4.5, 5, 5.6, 6.3, 7.1, 8, 9, 10, 11, 13, 14, 16, 18, 20, 22]
+const exactApertures = [
+  1.8, 2, 2.2, 2.5, 2.8, 3.2, 3.5, 4, 4.5, 5, 5.6, 6.3, 7.1, 8, 9, 10, 11, 13, 14, 16, 18, 20, 22,
+]
 
 function normalizeAperture(rawAperture: string) {
   const parsedAperture = parseFloat(rawAperture)
@@ -207,9 +221,7 @@ function parseFraction(floatString: string) {
   return parseFloat(floatString)
 }
 
-export function calculateCenter(
-  locations: [number, number][],
-): [number, number] | undefined {
+export function calculateCenter(locations: [number, number][]): [number, number] | undefined {
   if (locations.length === 0) {
     return undefined
   }

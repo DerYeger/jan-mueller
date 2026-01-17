@@ -80,9 +80,7 @@ const data = computed(() => {
           <path d="M 0 0 L 10 5 L 0 10 z" class="fill-red-500 stroke-none" />
         </marker>
       </defs>
-      <g
-        class="grid-lines *:stroke-neutral-700 *:stroke-[0.25px] *:opacity-75"
-      >
+      <g class="grid-lines *:stroke-neutral-700 *:stroke-[0.25px] *:opacity-75">
         <line
           v-for="point of data.gridLines"
           :key="point"
@@ -121,32 +119,21 @@ const data = computed(() => {
         <line x1="50" y1="100" x2="50" y2="1" marker-end="url(#arrow-axis)" />
       </g>
       <g class="*:fill-neutral-400 *:text-[4px]">
-        <text x="50%" y="-3" text-anchor="middle" dominant-baseline="top">
-          y
-        </text>
+        <text x="50%" y="-3" text-anchor="middle" dominant-baseline="top">y</text>
         <text x="53%" y="4" text-anchor="start" dominant-baseline="top">
           {{ data.limit.toFixed(0) }}
         </text>
         <text x="53%" y="99" text-anchor="start" dominant-baseline="bottom">
           -{{ data.limit.toFixed(0) }}
         </text>
-        <text x="102" y="50%" text-anchor="start" dominant-baseline="middle">
-          x
-        </text>
+        <text x="102" y="50%" text-anchor="start" dominant-baseline="middle">x</text>
         <text x="99" y="55%" text-anchor="end" dominant-baseline="middle">
           {{ data.limit.toFixed(0) }}
         </text>
         <text x="0.5" y="55%" text-anchor="start" dominant-baseline="middle">
           -{{ data.limit.toFixed(0) }}
         </text>
-        <text
-          x="51.75"
-          y="48.75"
-          text-anchor="start"
-          dominant-baseline="bottom"
-        >
-          0
-        </text>
+        <text x="51.75" y="48.75" text-anchor="start" dominant-baseline="bottom">0</text>
       </g>
       <g class="*:stroke-red-500">
         <line

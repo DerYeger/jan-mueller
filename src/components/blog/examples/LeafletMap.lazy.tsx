@@ -1,19 +1,15 @@
-/* eslint-disable react/no-array-index-key */
 import type { MapOptions } from 'leaflet'
 import type { FC } from 'react'
 import { Suspense, lazy } from 'react'
 
-export const LazyLeafletMap = lazy(
-  () => import('~/components/blog/examples/LeafletMap'),
-)
+export const LazyLeafletMap = lazy(() => import('~/components/blog/examples/LeafletMap'))
 export const LazyMarker = lazy(async () => ({ default: (await import('react-leaflet')).Marker }))
-const LazyMapCenter = lazy(
-  async () => ({ default: (await import('~/components/blog/examples/LeafletMap')).MapCenter }),
-)
-export const LazyMarkerCluster = lazy(
-  async () =>
-  ({ default: (await import('~/components/blog/examples/LeafletMap')).MarkerCluster }),
-)
+const LazyMapCenter = lazy(async () => ({
+  default: (await import('~/components/blog/examples/LeafletMap')).MapCenter,
+}))
+export const LazyMarkerCluster = lazy(async () => ({
+  default: (await import('~/components/blog/examples/LeafletMap')).MarkerCluster,
+}))
 
 const center: [number, number] = [48.2082, 16.3738]
 
@@ -27,9 +23,7 @@ const markers: [number, number][] = [
   [48.202613, 16.36890834],
 ]
 
-export const LeafletMap: FC<
-  Omit<MapOptions, 'center' | 'zoom'>
-> = (props) => {
+export const LeafletMap: FC<Omit<MapOptions, 'center' | 'zoom'>> = (props) => {
   return (
     <Suspense fallback={<div className="map-fallback h-50 sm:h-75 md:h-100" />}>
       <LazyLeafletMap center={center} zoom={13} {...props}>
@@ -39,9 +33,7 @@ export const LeafletMap: FC<
   )
 }
 
-export const LeafletMapWithMarkers: FC<
-  Omit<MapOptions, 'center' | 'zoom'>
-> = (props) => {
+export const LeafletMapWithMarkers: FC<Omit<MapOptions, 'center' | 'zoom'>> = (props) => {
   return (
     <Suspense fallback={<div className="map-fallback h-50 sm:h-75 md:h-100" />}>
       <LazyLeafletMap center={center} zoom={13} {...props}>
@@ -55,9 +47,7 @@ export const LeafletMapWithMarkers: FC<
   )
 }
 
-export const LeafletMapWithClusters: FC<
-  Omit<MapOptions, 'center' | 'zoom'>
-> = (props) => {
+export const LeafletMapWithClusters: FC<Omit<MapOptions, 'center' | 'zoom'>> = (props) => {
   return (
     <Suspense fallback={<div className="map-fallback h-50 sm:h-75 md:h-100" />}>
       <LazyLeafletMap center={center} zoom={13} {...props}>
@@ -73,9 +63,7 @@ export const LeafletMapWithClusters: FC<
   )
 }
 
-export const LeafletMapWithCenterText: FC<
-  Omit<MapOptions, 'center' | 'zoom'>
-> = (props) => {
+export const LeafletMapWithCenterText: FC<Omit<MapOptions, 'center' | 'zoom'>> = (props) => {
   return (
     <Suspense fallback={<div className="map-fallback h-50 sm:h-75 md:h-100" />}>
       <LazyLeafletMap center={center} zoom={13} {...props}>

@@ -31,13 +31,16 @@ export default defineConfig({
     },
     ...(isCI
       ? []
-      : [{
-        name: 'webkit',
-        use: { ...devices['Desktop Safari'] },
-      }, {
-        name: 'Mobile Safari',
-        use: { ...devices['iPhone 12'] },
-      }]),
+      : [
+          {
+            name: 'webkit',
+            use: { ...devices['Desktop Safari'] },
+          },
+          {
+            name: 'Mobile Safari',
+            use: { ...devices['iPhone 12'] },
+          },
+        ]),
   ],
   webServer: {
     command: `nr ${isCI ? 'preview' : 'dev'} --port=${port}`,

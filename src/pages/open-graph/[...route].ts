@@ -11,7 +11,9 @@ interface PageInfo {
   description?: string
 }
 
-const pages: Record<string, PageInfo> = Object.fromEntries(collectionEntries.map(({ slug, data }) => [slug, data]))
+const pages: Record<string, PageInfo> = Object.fromEntries(
+  collectionEntries.map(({ slug, data }) => [slug, data]),
+)
 
 pages.default = {
   title: 'Jan Müller',

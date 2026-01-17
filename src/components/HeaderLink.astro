@@ -1,7 +1,6 @@
 ---
 import { cn } from '~/components/ui/cn'
 
-// eslint-disable-next-line no-undef
 export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {
   exact?: boolean
   first: boolean
@@ -28,6 +27,6 @@ const isActive = isExact || (!exact && !isHome && isSub)
     {...props}
   >
     <slot />
-    {isActive && <div class="absolute bg-current h-[3px] -bottom-2 max-xxs:left-1 left-2 max-xxs:right-1 right-2 pointer-events-none" aria-hidden="true" />}
+    {isActive && <div class="absolute bg-current h-0.75 -bottom-2 max-xxs:left-1 left-2 max-xxs:right-1 right-2 pointer-events-none" aria-hidden="true" />}
   </a>
 </div>

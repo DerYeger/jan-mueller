@@ -5,6 +5,7 @@ import Factorizer from '~/components/blog/examples/worker/Factorizer.astro';
 <Factorizer id="bidc-worker" title="bidc Worker Factorizer">
   <script>
     import { setupFactorizer } from '~/components/blog/examples/worker/setupFactorizer'
+    // oxlint-disable-next-line import/default
     import FactorizerWorker from './bidcWorker?worker'
     import { createChannel } from 'bidc'
     import type { PrimeFactorsResult } from '~/components/blog/examples/worker/getPrimeFactors'

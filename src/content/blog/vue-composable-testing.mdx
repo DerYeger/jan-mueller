@@ -55,7 +55,7 @@ describe('Testing Vue Composables', () => {
       // Error: vue-query hooks can only be used inside setup() function or functions that support injection context.
       return useQuery({
         queryKey: ['counter'],
-        queryFn: async () => Promise.resolve(42)
+        queryFn: async () => Promise.resolve(42),
       })
     }
     const query = useQueryCounter()
@@ -97,7 +97,7 @@ export interface Options {
 export function withComponentLifecycle<T>(
   composable: () => T,
   options: Options = {},
-): { result: T, app: App, cleanup: () => Promise<void> } {
+): { result: T; app: App; cleanup: () => Promise<void> } {
   const { plugins = [], autoCleanup = true, provided = {} } = options
   let result: T
 
@@ -133,8 +133,8 @@ export function withComponentLifecycle<T>(
     app,
     cleanup: autoCleanup
       ? () => {
-        throw new Error('Auto cleanup is enabled, no manual cleanup is possible')
-      }
+          throw new Error('Auto cleanup is enabled, no manual cleanup is possible')
+        }
       : cleanup,
   }
 }
@@ -160,7 +160,9 @@ describe('Testing Vue Composables', () => {
       const increment = () => count.value++
       return { count, increment }
     }
-    const { result: { count, increment } } = withComponentLifecycle(useCounter)
+    const {
+      result: { count, increment },
+    } = withComponentLifecycle(useCounter)
     expect(count.value).toBe(0)
     increment()
     expect(count.value).toBe(1)
@@ -174,7 +176,9 @@ describe('Testing Vue Composables', () => {
       })
       return { count }
     }
-    const { result: { count } } = withComponentLifecycle(useLifecycleCounter)
+    const {
+      result: { count },
+    } = withComponentLifecycle(useLifecycleCounter)
     expect(count.value).toBe(1)
   })
 
@@ -182,13 +186,10 @@ describe('Testing Vue Composables', () => {
     function useQueryCounter() {
       return useQuery({
         queryKey: ['counter'],
-        queryFn: async () => Promise.resolve(42)
+        queryFn: async () => Promise.resolve(42),
       })
     }
-    const { result: query } = withComponentLifecycle(
-      useQueryCounter,
-      { plugins: [VueQueryPlugin] }
-    )
+    const { result: query } = withComponentLifecycle(useQueryCounter, { plugins: [VueQueryPlugin] })
     await flushPromises()
     expect(query.data.value).toBe(42)
   })
@@ -198,10 +199,9 @@ describe('Testing Vue Composables', () => {
       const count = inject<number>('count')
       return { count }
     }
-    const { result: { count } } = withComponentLifecycle(
-      useInjectCounter,
-      { provided: { count: 0 } }
-    )
+    const {
+      result: { count },
+    } = withComponentLifecycle(useInjectCounter, { provided: { count: 0 } })
     expect(count).toBe(0)
   })
 })
