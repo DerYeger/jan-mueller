@@ -1,10 +1,10 @@
 ---
-import Factorizer from '~/components/blog/examples/worker/Factorizer.astro';
+import Factorizer from '@components/blog/examples/worker/Factorizer.astro';
 ---
 
 <Factorizer id="manual-worker" title="Worker Factorizer">
   <script>
-    import { setupFactorizer } from '~/components/blog/examples/worker/setupFactorizer'
+    import { setupFactorizer } from '@components/blog/examples/worker/setupFactorizer'
     // oxlint-disable-next-line import/default
     import FactorizerWorker from './worker?worker'
 

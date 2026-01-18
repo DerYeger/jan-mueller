@@ -94,7 +94,6 @@
     "typescript": "5.9.3",
     "vite": "6.4.1",
     "vite-plugin-comlink": "5.3.0",
-    "vite-plugin-lib": "4.0.1",
     "vue": "3.5.26",
     "vue-tsc": "3.2.2"
   },

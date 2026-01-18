@@ -5,11 +5,11 @@ import { Suspense, lazy, useEffect, useRef } from 'react'
 import { MapContainer, TileLayer, useMap, ZoomControl } from 'react-leaflet'
 import { debounce } from '@yeger/debounce'
 
-import { LazyMarker, LazyMarkerCluster } from '~/components/blog/examples/LeafletMap.lazy'
-import type { MapImage } from '~/photographyUtils'
+import { LazyMarker, LazyMarkerCluster } from '@components/blog/examples/LeafletMap.lazy'
+import type { MapImage } from '@utils/photographyUtils'
 
 import 'leaflet/dist/leaflet.css'
-import '~/styles/photography-map.css'
+import '@styles/photography-map.css'
 
 const HEADER_HEIGHT = 90 + 2 * 16
 

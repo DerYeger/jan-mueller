@@ -1,5 +1,5 @@
 import AxeBuilder from '@axe-core/playwright'
-import { BASE_THRESHOLDS, lighthouseTest, PAGES } from 'tests/config'
+import { BASE_THRESHOLDS, lighthouseTest, PAGES } from './config'
 import { playAudit } from 'playwright-lighthouse'
 import { expect } from '@playwright/test'
 

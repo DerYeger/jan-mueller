@@ -1,11 +1,11 @@
 ---
-import ExperienceRoleEntry from '~/components/cv/experience/ExperienceRoleEntry.astro'
-import DateRange from '~/components/date/DateRange.astro'
-import Dot from '~/components/Dot.astro'
-import Heading from '~/components/Heading.astro'
-import { cn } from '~/components/ui/cn'
-import { DateFormats, formatDuration, getDuration, getToday } from '~/lib'
-import type { Experience as ExperienceType } from '~/types'
+import ExperienceRoleEntry from '@components/cv/experience/ExperienceRoleEntry.astro'
+import DateRange from '@components/date/DateRange.astro'
+import Dot from '@components/Dot.astro'
+import Heading from '@components/Heading.astro'
+import { cn } from '@components/ui/cn'
+import { DateFormats, formatDuration, getDuration, getToday } from '@utils/lib'
+import type { Experience as ExperienceType } from '@utils/types'
 
 export interface Props {
   experience: ExperienceType

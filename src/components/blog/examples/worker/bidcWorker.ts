@@ -1,5 +1,5 @@
 import { createChannel } from 'bidc'
-import { getPrimeFactors } from '~/components/blog/examples/worker/getPrimeFactors'
+import { getPrimeFactors } from './getPrimeFactors'
 
 const { send, receive } = createChannel()
 

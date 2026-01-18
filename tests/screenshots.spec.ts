@@ -1,4 +1,4 @@
-import { BASE_SCREENSHOT, PAGES } from 'tests/config'
+import { BASE_SCREENSHOT, PAGES } from './config'
 import test, { expect } from '@playwright/test'
 import type { Locator } from '@playwright/test'
 import process from 'node:process'

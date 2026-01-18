@@ -1,32 +1,32 @@
 ---
-import type { PhotoData } from '~/components/showcase/Photo.astro'
-import Photo from '~/components/showcase/Photo.astro'
-import Showcase from '~/components/showcase/Showcase.astro'
-import { cn } from '~/components/ui/cn'
+import type { PhotoData } from '@components/showcase/Photo.astro'
+import Photo from '@components/showcase/Photo.astro'
+import Showcase from '@components/showcase/Showcase.astro'
+import { cn } from '@components/ui/cn'
 
 const photos: PhotoData[] = [
   {
-    src: import('~/assets/photos/2024-08-19__helsinki-klippan.jpg'),
+    src: import('@assets/photos/2024-08-19__helsinki-klippan.jpg'),
     alt: (location) => `Luoto island in ${location}.`,
     location: 'Helsinki, Finland',
   },
   {
-    src: import('~/assets/photos/2024-07-06__heron-on-lake-in-forest.jpeg'),
+    src: import('@assets/photos/2024-07-06__heron-on-lake-in-forest.jpeg'),
     alt: (location) => `Heron on the Silver Lake in ${location}.`,
     location: 'Vienna, Austria',
   },
   {
-    src: import('~/assets/photos/2024-06-29__sunflower-field.jpeg'),
+    src: import('@assets/photos/2024-06-29__sunflower-field.jpeg'),
     alt: (location) => `Sunflower field next to ${location}.`,
     location: 'Mödling, Austria',
   },
   {
-    src: import('~/assets/photos/2024-04-15__pigeon-in-tree-looking-at-camera.jpg'),
+    src: import('@assets/photos/2024-04-15__pigeon-in-tree-looking-at-camera.jpg'),
     alt: (location) => `Pigeon in a tree, ${location}.`,
     location: 'Brunn am Gebirge, Austria',
   },
   {
-    src: import('~/assets/photos/2024-05-11__purple-star-trails.jpeg'),
+    src: import('@assets/photos/2024-05-11__purple-star-trails.jpeg'),
     alt: (location) => `Star trails during solar flare, ${location}.`,
     location: 'Semmering, Austria',
   },

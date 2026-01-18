@@ -15,7 +15,7 @@ import { Vector } from 'vecti'
 import type { ComponentOptions } from 'vue'
 import { markRaw } from 'vue'
 
-import VisualizerInterfaceComponent from '~/components/experiments/VisualizerInterface.vue'
+import VisualizerInterfaceComponent from '@components/experiments/VisualizerInterface.vue'
 
 const vectorType = new NodeInterfaceType<Vector>('vector')
 export class VectorInterface extends NodeInterface<Vector> {

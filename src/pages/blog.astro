@@ -1,11 +1,11 @@
 ---
 import { getCollection } from 'astro:content'
-import BlogHeroImage from '~/components/BlogHeroImage.astro'
+import BlogHeroImage from '@components/BlogHeroImage.astro'
 
-import DateComponent from '~/components/date/DateComponent.astro'
-import Dot from '~/components/Dot.astro'
-import MainLayout from '~/layouts/MainLayout.astro'
-import { DateFormats } from '~/lib'
+import DateComponent from '@components/date/DateComponent.astro'
+import Dot from '@components/Dot.astro'
+import MainLayout from '@layouts/MainLayout.astro'
+import { DateFormats } from '@utils/lib'
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),

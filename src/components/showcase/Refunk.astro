@@ -1,11 +1,11 @@
 ---
-import Showcase from '~/components/showcase/Showcase.astro'
-import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
-import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
+import Showcase from '@components/showcase/Showcase.astro'
+import ShowcaseDescription from '@components/showcase/ShowcaseDescription.astro'
+import ShowcaseTitle from '@components/showcase/ShowcaseTitle.astro'
 
 const name = 'Refunk'
 
-const { default: refunkLogo } = await import(`~/assets/projects/Refunk.svg?raw`)
+const { default: refunkLogo } = await import(`@assets/projects/Refunk.svg?raw`)
 ---
 
 <Showcase name={name} class="refunk" link="https://refunk.janmueller.dev">

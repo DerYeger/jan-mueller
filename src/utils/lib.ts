@@ -6,7 +6,7 @@ import {
 import type { Duration } from 'date-fns'
 
 export async function getImageAsset(imagePath: string): Promise<ImageMetadata | undefined> {
-  const assets = import.meta.glob('~/assets/**/*')
+  const assets = import.meta.glob('@assets/**/*')
   const asset = Object.entries(assets).find(([fileName]) => fileName.endsWith(imagePath))
   if (!asset) {
     return undefined

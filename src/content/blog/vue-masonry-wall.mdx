@@ -4,7 +4,7 @@ description: Responsive masonry layout with SSR support and zero dependencies fo
 heroImage: '/assets/blog/masonry.jpg'
 pubDate: 2021-08-16
 updatedDate: 2022-08-15
-layout: '~/layouts/BlogPostLayout.astro'
+layout: '@layouts/BlogPostLayout.astro'
 ---
 
 ## Introduction
@@ -122,6 +122,6 @@ export default defineComponent({
 
 The above code results in the following output.
 
-import VueMasonryWall from '~/components/blog/examples/VueMasonryWall.vue'
+import VueMasonryWall from '@components/blog/examples/VueMasonryWall.vue'
 
 <VueMasonryWall client:idle />

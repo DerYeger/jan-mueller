@@ -10,7 +10,6 @@ import autolinkHeadings from 'rehype-autolink-headings'
 import rehypeExternalLinks from 'rehype-external-links'
 import rehypeSlug from 'rehype-slug'
 import { comlink } from 'vite-plugin-comlink'
-import { tsconfigPaths } from 'vite-plugin-lib'
 import tailwindcss from '@tailwindcss/vite'
 
 import { autolinkConfig } from './plugins/rehype-autolink-config'
@@ -48,7 +47,7 @@ export default defineConfig({
     robotsTxt(),
   ],
   vite: {
-    plugins: [comlink(), tailwindcss(), tsconfigPaths({ verbose: true })],
+    plugins: [comlink(), tailwindcss()],
     worker: {
       plugins: () => [comlink()],
     },

@@ -1,8 +1,8 @@
 ---
-import { PhotographyMap } from '~/components/PhotographyMap'
-import MainLayout from '~/layouts/MainLayout.astro'
-import { photographyLinks } from '~/links'
-import { calculateBounds, calculateCenter, getMapImages } from '~/photographyUtils'
+import { PhotographyMap } from '@components/PhotographyMap'
+import MainLayout from '@layouts/MainLayout.astro'
+import { photographyLinks } from '@utils/links'
+import { calculateBounds, calculateCenter, getMapImages } from '@utils/photographyUtils'
 
 const images = await getMapImages(import.meta.glob('/src/assets/photos/japan/*'))
 const locations = images.map((image) => image.location)

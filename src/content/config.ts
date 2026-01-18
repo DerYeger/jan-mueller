@@ -13,7 +13,7 @@ const BlogPostSchema = z
     heroImage: z.string().startsWith('/assets/blog/'),
     pubDate: DateSchema,
     updatedDate: DateSchema.optional(),
-    layout: z.literal('~/layouts/BlogPostLayout.astro'),
+    layout: z.literal('@layouts/BlogPostLayout.astro'),
   })
   .strict()
 export type BlogPost = z.infer<typeof BlogPostSchema>

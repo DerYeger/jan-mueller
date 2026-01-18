@@ -2,16 +2,16 @@
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
-import BlogSidebar from '~/components/blog/BlogSidebar.astro'
-import BlogHeroImage from '~/components/BlogHeroImage.astro'
+import BlogSidebar from '@components/blog/BlogSidebar.astro'
+import BlogHeroImage from '@components/BlogHeroImage.astro'
 
-import DateComponent from '~/components/date/DateComponent.astro'
-import Dot from '~/components/Dot.astro'
-import Heading from '~/components/Heading.astro'
-import { cn } from '~/components/ui/cn'
-import type { BlogPost } from '~/content/config'
-import MainLayout from '~/layouts/MainLayout.astro'
-import { getImageAsset, DateFormats, getElementId } from '~/lib'
+import DateComponent from '@components/date/DateComponent.astro'
+import Dot from '@components/Dot.astro'
+import Heading from '@components/Heading.astro'
+import { cn } from '@components/ui/cn'
+import type { BlogPost } from '@content/config'
+import MainLayout from '@layouts/MainLayout.astro'
+import { getImageAsset, DateFormats, getElementId } from '@utils/lib'
 
 export interface Props {
   content: BlogPost & { readingTime: string }

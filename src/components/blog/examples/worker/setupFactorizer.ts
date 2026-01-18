@@ -1,4 +1,4 @@
-import type { PrimeFactorsResult } from '~/components/blog/examples/worker/getPrimeFactors'
+import type { PrimeFactorsResult } from '@components/blog/examples/worker/getPrimeFactors'
 
 export function setupFactorizer(id: string) {
   const input = document.getElementById(`${id}-input`) as HTMLInputElement | null
