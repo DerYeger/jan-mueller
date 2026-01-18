@@ -2,13 +2,13 @@ import type { MapOptions } from 'leaflet'
 import type { FC } from 'react'
 import { Suspense, lazy } from 'react'
 
-export const LazyLeafletMap = lazy(() => import('~/components/blog/examples/LeafletMap'))
+export const LazyLeafletMap = lazy(() => import('@components/blog/examples/LeafletMap'))
 export const LazyMarker = lazy(async () => ({ default: (await import('react-leaflet')).Marker }))
 const LazyMapCenter = lazy(async () => ({
-  default: (await import('~/components/blog/examples/LeafletMap')).MapCenter,
+  default: (await import('@components/blog/examples/LeafletMap')).MapCenter,
 }))
 export const LazyMarkerCluster = lazy(async () => ({
-  default: (await import('~/components/blog/examples/LeafletMap')).MarkerCluster,
+  default: (await import('@components/blog/examples/LeafletMap')).MarkerCluster,
 }))
 
 const center: [number, number] = [48.2082, 16.3738]

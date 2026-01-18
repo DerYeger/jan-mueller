@@ -1,12 +1,12 @@
 ---
-import Showcase from '~/components/showcase/Showcase.astro'
-import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
-import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
+import Showcase from '@components/showcase/Showcase.astro'
+import ShowcaseDescription from '@components/showcase/ShowcaseDescription.astro'
+import ShowcaseTitle from '@components/showcase/ShowcaseTitle.astro'
 
 const name = 'WienerTime'
 
 const { default: wienerLinien } = await import(
-  `~/assets/projects/WienerLinien.svg?raw`
+  `@assets/projects/WienerLinien.svg?raw`
 )
 ---
 
@@ -23,4 +23,4 @@ const { default: wienerLinien } = await import(
   </div>
 </Showcase>
 
-<script src="~/components/showcase/WienerTime"></script>
+<script src="@components/showcase/WienerTime"></script>

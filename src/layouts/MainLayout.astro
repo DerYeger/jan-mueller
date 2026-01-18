@@ -1,12 +1,12 @@
 ---
-import type { Props as BaseHeadProps } from '~/components/BaseHead.astro'
-import BaseHead from '~/components/BaseHead.astro'
-import Footer from '~/components/Footer.astro'
-import Header from '~/components/Header.astro'
-import Main from '~/components/Main.astro'
-import NavigationIndicator from '~/components/NavigationIndicator.astro'
-import { cn } from '~/components/ui/cn'
-import type { Link } from '~/links'
+import type { Props as BaseHeadProps } from '@components/BaseHead.astro'
+import BaseHead from '@components/BaseHead.astro'
+import Footer from '@components/Footer.astro'
+import Header from '@components/Header.astro'
+import Main from '@components/Main.astro'
+import NavigationIndicator from '@components/NavigationIndicator.astro'
+import { cn } from '@components/ui/cn'
+import type { Link } from '@utils/links'
 
 export interface Props extends Partial<BaseHeadProps> {
   fitScreen?: boolean

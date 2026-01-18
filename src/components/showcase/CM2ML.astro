@@ -1,11 +1,11 @@
 ---
-import Showcase from '~/components/showcase/Showcase.astro'
-import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
-import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
+import Showcase from '@components/showcase/Showcase.astro'
+import ShowcaseDescription from '@components/showcase/ShowcaseDescription.astro'
+import ShowcaseTitle from '@components/showcase/ShowcaseTitle.astro'
 
 const name = 'CM2ML'
 
-const { default: logo } = await import(`~/assets/projects/CM2ML.svg?raw`)
+const { default: logo } = await import(`@assets/projects/CM2ML.svg?raw`)
 ---
 
 <Showcase name={name} link="/external/cm2ml" class="relative [--logo-size:32rem]">

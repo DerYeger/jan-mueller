@@ -4,7 +4,7 @@ import '@baklavajs/themes/dist/syrup-dark.css'
 import { DependencyEngine, EditorComponent, applyResult, useBaklava } from 'baklavajs'
 import { onBeforeUnmount } from 'vue'
 
-import { createExample, registerAllNodeTypes } from '~/components/experiments/nodes'
+import { createExample, registerAllNodeTypes } from '@components/experiments/nodes'
 
 const baklava = useBaklava()
 registerAllNodeTypes(baklava)

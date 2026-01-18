@@ -1,10 +1,10 @@
 ---
 import { Icon } from 'astro-icon/components'
 
-import Showcase from '~/components/showcase/Showcase.astro'
-import ShowcaseDescription from '~/components/showcase/ShowcaseDescription.astro'
-import ShowcaseTitle from '~/components/showcase/ShowcaseTitle.astro'
-import { cn } from '~/components/ui/cn'
+import Showcase from '@components/showcase/Showcase.astro'
+import ShowcaseDescription from '@components/showcase/ShowcaseDescription.astro'
+import ShowcaseTitle from '@components/showcase/ShowcaseTitle.astro'
+import { cn } from '@components/ui/cn'
 
 const name = 'Apollo'
 
@@ -19,9 +19,9 @@ const stars: Star[] = [
   'top-16 right-48 w-3 [animation-delay:1000ms]!',
 ]
 
-const { default: moon } = await import(`~/assets/projects/Moon.svg?raw`)
+const { default: moon } = await import(`@assets/projects/Moon.svg?raw`)
 
-const { default: earth } = await import(`~/assets/projects/Earth.svg?raw`)
+const { default: earth } = await import(`@assets/projects/Earth.svg?raw`)
 ---
 
 <Showcase

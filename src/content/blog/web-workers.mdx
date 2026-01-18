@@ -3,12 +3,12 @@ title: Working wonders with web workers
 description: 'An overview of three different approaches for using Web Workers in TypeScript.'
 heroImage: '/assets/blog/web.jpg'
 pubDate: 2025-08-26
-layout: '~/layouts/BlogPostLayout.astro'
+layout: '@layouts/BlogPostLayout.astro'
 ---
 
-import FactorizerExampleButton from '~/components/blog/examples/worker/FactorizerExampleButton.astro'
-import BenchmarkExampleButton from '~/components/blog/examples/worker/benchmark/BenchmarkExampleButton.astro'
-import ProCon from '~/components/blog/ProCon.astro'
+import FactorizerExampleButton from '@components/blog/examples/worker/FactorizerExampleButton.astro'
+import BenchmarkExampleButton from '@components/blog/examples/worker/benchmark/BenchmarkExampleButton.astro'
+import ProCon from '@components/blog/ProCon.astro'
 
 ## Introduction
 
@@ -57,7 +57,7 @@ You'll see that it works fine for <FactorizerExampleButton id="no-worker" value=
 However, if you're ready to deal with a frozen UI for around 40 seconds, you can try it out with <FactorizerExampleButton id="no-worker" value={100001000013699905017} text="very large factors" type="danger" compact />.
 Note that in neither case you'll see the loading animation of the result view due to the synchronous execution that blocks any updates on the main thread.
 
-import SynchronousFactorizer from '~/components/blog/examples/worker/SynchronousFactorizer.astro'
+import SynchronousFactorizer from '@components/blog/examples/worker/SynchronousFactorizer.astro'
 
 <SynchronousFactorizer />
 
@@ -161,7 +161,7 @@ worker.postMessage(42)
 
 For demonstration, the interactive prime factorization below uses such a worker to offload the computation to a background thread.
 
-import ManualWorkerFactorizer from '~/components/blog/examples/worker/ManualWorkerFactorizer.astro'
+import ManualWorkerFactorizer from '@components/blog/examples/worker/ManualWorkerFactorizer.astro'
 
 <ManualWorkerFactorizer />
 
@@ -220,7 +220,7 @@ worker.getPrimeFactors(42).then((factors) => {
 Here's the running example with <FactorizerExampleButton id="comlink-worker" value={42} text="small factors" compact />, <FactorizerExampleButton id="comlink-worker" value={1000036000099} text="large factors" compact />, and <FactorizerExampleButton id="comlink-worker" value={100001000013699905017} text="very large factors" type="danger" /> for completion.
 Note that there is no difference in the UI's performance, but the code is much cleaner and easier to read.
 
-import ComlinkWorkerFactorizer from '~/components/blog/examples/worker/ComlinkWorkerFactorizer.astro'
+import ComlinkWorkerFactorizer from '@components/blog/examples/worker/ComlinkWorkerFactorizer.astro'
 
 <ComlinkWorkerFactorizer />
 
@@ -286,7 +286,7 @@ send(42)
 One more time, here's the previous example with <FactorizerExampleButton id="bidc-worker" value={42} text="small factors" compact />, <FactorizerExampleButton id="bidc-worker" value={1000036000099} text="large factors" compact />, and <FactorizerExampleButton id="bidc-worker" value={100001000013699905017} text="very large factors" type="danger"/> again.
 Just like above, the UI's performance is not affected, but the code is cleaner and easier to read.
 
-import BIDCWorkerFactorizer from '~/components/blog/examples/worker/BIDCWorkerFactorizer.astro'
+import BIDCWorkerFactorizer from '@components/blog/examples/worker/BIDCWorkerFactorizer.astro'
 
 <BIDCWorkerFactorizer />
 
@@ -309,7 +309,7 @@ The following table provides an overview for the synchronous approach, plain web
 It's my subjective opinion based on my findings during the implementation of this blog post's examples and previous experience with web workers.
 The reasons for the comparison results are detailed in the following sections.
 
-import WorkerComparison from '~/components/blog/examples/worker/WorkerComparison.astro'
+import WorkerComparison from '@components/blog/examples/worker/WorkerComparison.astro'
 
 <WorkerComparison />
 
@@ -365,7 +365,7 @@ Both plain web workers and Comlink workers support transferable objects.
 
 Again, you can play around with different numbers or try <BenchmarkExampleButton size={42} text="small arrays" compact />, <BenchmarkExampleButton size={1000000} text="medium arrays" compact />, and <BenchmarkExampleButton size={10000000} text="very large arrays" type="danger" compact />.
 
-import WorkerBenchmark from '~/components/blog/examples/worker/benchmark/WorkerBenchmark.astro'
+import WorkerBenchmark from '@components/blog/examples/worker/benchmark/WorkerBenchmark.astro'
 
 <WorkerBenchmark />
 
