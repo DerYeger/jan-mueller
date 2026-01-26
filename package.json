@@ -18,6 +18,7 @@
     "install-hooks": "husky",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
+    "lint-staged": "lint-staged",
     "postinstall": "playwright install",
     "preview": "astro preview",
     "sync": "astro sync",
@@ -98,7 +99,7 @@
     "vue-tsc": "3.2.2"
   },
   "lint-staged": {
-    "*": "pnpm run turbo quality:fix --"
+    "*": "oxfmt --no-error-on-unmatched-pattern"
   },
   "packageManager": "pnpm@10.28.1"
 }
