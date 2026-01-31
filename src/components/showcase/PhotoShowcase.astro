@@ -67,7 +67,7 @@ function getNumberWithOrdinal(n: number) {
   </div>
   {
     photos.map((photo, index) => (
-      <Photo photo={photo} initial={index === 0} index={index} total={photos.length} />
+      <Photo photo={photo} initial={index === 0} />
     ))
   }
 </Showcase>

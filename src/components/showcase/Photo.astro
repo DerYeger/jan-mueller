@@ -12,12 +12,10 @@ export interface PhotoData {
 
 interface Props {
   photo: PhotoData
-  index: number
-  total: number
-  initial?: boolean
+  initial: boolean
 }
 
-const { photo, initial = false, index, total } = Astro.props
+const { photo, initial } = Astro.props
 const { src, alt, location } = photo
 ---
 

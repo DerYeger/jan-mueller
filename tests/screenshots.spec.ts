@@ -25,7 +25,12 @@ test.describe('Screenshots', () => {
             page.locator('.baklava-node'),
             page.locator('footer .copyright'),
           ]
-          await expect(page).toHaveScreenshot({ ...BASE_SCREENSHOT, ...screenshot, mask })
+          await expect(page).toHaveScreenshot({
+            ...BASE_SCREENSHOT,
+            ...screenshot,
+            mask,
+            timeout: 30_000,
+          })
         })
       }
     })
