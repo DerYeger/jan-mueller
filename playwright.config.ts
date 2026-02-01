@@ -11,7 +11,7 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: isCI,
   retries: isCI ? 2 : 0,
-  workers: os.availableParallelism(),
+  workers: Math.ceil(os.availableParallelism() / 2),
   reporter: 'html',
   use: {
     baseURL,
