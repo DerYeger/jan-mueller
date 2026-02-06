@@ -1,4 +1,5 @@
 ---
+import { CLASSES } from '@components/ui/classes'
 import { cn } from '@components/ui/cn'
 
 interface Props extends astroHTML.JSX.InputHTMLAttributes {
@@ -10,7 +11,7 @@ const { class: className, placeholder, ...props } = Astro.props
 ---
 
 <input
-  class={cn('select-none grow bg-base rounded-sm border border-medium px-2 py-1 text-base disabled:bg-disabled disabled:text-lighter transition-colors focus-visible:focus-ring', className)}
+  class={cn(CLASSES.INPUT, className)}
   placeholder={placeholder ? `${placeholder}…` : undefined}
   {...props}
- />
+/>

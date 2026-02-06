@@ -1,0 +1,13 @@
+---
+import Showcase from '@components/showcase/Showcase.astro'
+import ShowcaseTitle from '@components/showcase/ShowcaseTitle.astro'
+import ShowcaseDescription from '@components/showcase/ShowcaseDescription.astro'
+const name = 'Stock Charts'
+---
+
+<Showcase name={name} link='/experiments/stock-charts'>
+  <div>
+    <ShowcaseTitle>{name}</ShowcaseTitle>
+    <ShowcaseDescription>Customizable generator for stock chart SVGs. Supports CSV and XLSX file uploads.</ShowcaseDescription>
+  </div>
+</Showcase>

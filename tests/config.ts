@@ -104,6 +104,7 @@ export const PAGES: {
   },
   // Experiments
   { url: '/experiments' },
+  { url: '/experiments/stock-charts', thresholds: { performance: 95 } },
   {
     url: '/experiments/vector-nodes',
     thresholds: {

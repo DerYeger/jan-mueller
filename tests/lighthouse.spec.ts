@@ -19,6 +19,7 @@ lighthouseTest.describe('Lighthouse', () => {
           .exclude('.expressive-code')
           .exclude('.marmoset-viewer-host')
           .exclude('.mermaid')
+          .exclude('[data-testid="stock-charts"]')
           .exclude('button[id^="factorize-"]')
           .exclude('button[id^="benchmark-"]')
           .analyze()
