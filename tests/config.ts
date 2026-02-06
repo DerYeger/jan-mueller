@@ -103,6 +103,7 @@ export const PAGES: {
   },
   // Experiments
   { url: '/experiments' },
+  { url: '/experiments/stock-charts', thresholds: { performance: 95 } },
   { url: '/experiments/vector-nodes' },
   // Simulated 404
   { url: '/404' },

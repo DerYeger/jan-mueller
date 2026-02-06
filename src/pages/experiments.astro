@@ -2,39 +2,43 @@
 import AntExperiment from '@components/experiments/AntExperiment.astro'
 import NeonBarExperiment from '@components/experiments/NeonBarExperiment.astro'
 import NeumorphismExperiment from '@components/experiments/NeumorphismExperiment.astro'
+import StockChartsExperiment from '@components/experiments/StockChartsExperiment.astro'
 import VectorNodesExperiment from '@components/experiments/VectorNodesExperiment.astro'
 import ShowcaseAnimation from '@components/showcase/ShowcaseAnimation.astro'
 import MainLayout from '@layouts/MainLayout.astro'
 ---
 
-<MainLayout title="Experiments">
-  <div class="mx-auto max-w-3xl px-4 mt-8 mb-16 md:max-w-5xl">
-    <hgroup class="mb-8 max-w-none">
-      <h1 class="mb-4 title text-4xl">Jan's Experiments</h1>
-      <span class="mt-0 text-2xl font-bold text-lighter">
+<MainLayout title='Experiments'>
+  <div class='mx-auto max-w-3xl px-4 mt-8 mb-16 md:max-w-5xl'>
+    <hgroup class='mb-8 max-w-none'>
+      <h1 class='mb-4 title text-4xl'>Jan's Experiments</h1>
+      <span class='mt-0 text-2xl font-bold text-lighter'>
         A space for ideas and doodles that don't fit the scope of a dedicated
         project.
       </span>
     </hgroup>
     <div
-      class="grid grid-flow-row grid-cols-2 gap-4 md:grid-cols-3"
-      role="list"
+      class='grid grid-flow-row grid-cols-2 gap-4 md:grid-cols-3'
+      role='list'
     >
-      <div class="row-span-2 max-md:col-span-2">
+      <div class='row-span-2 max-md:col-span-2'>
         <VectorNodesExperiment />
       </div>
-      <div class="relative w-full pb-[100%] max-sm:col-span-2">
-        <div class="absolute inset-0">
+      <div class='relative w-full pb-[100%] max-sm:col-span-2'>
+        <div class='absolute inset-0'>
           <NeonBarExperiment />
         </div>
       </div>
-      <div class="relative w-full pb-[100%] max-sm:col-span-2">
-        <div class="absolute inset-0">
+      <div class='relative w-full pb-[100%] max-sm:col-span-2'>
+        <div class='absolute inset-0'>
           <NeumorphismExperiment />
         </div>
       </div>
-      <div class="col-span-2 h-64 max-h-full max-w-full">
+      <div class='col-span-2 h-64 max-h-full max-w-full'>
         <AntExperiment />
+      </div>
+      <div class='col-span-2 md:col-span-3 h-64 max-h-full max-w-full'>
+        <StockChartsExperiment />
       </div>
     </div>
   </div>

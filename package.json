@@ -37,12 +37,16 @@
     "bidc": "0.0.4",
     "comlink": "4.4.2",
     "date-fns": "4.1.0",
+    "echarts": "6.0.0",
     "exifreader": "4.36.1",
     "leaflet": "1.9.4",
+    "papaparse": "5.5.3",
     "react-leaflet": "5.0.0",
     "react-leaflet-markercluster": "5.0.0-rc.0",
     "vecti": "3.1.5",
-    "vue-marmoset-viewer": "4.0.23"
+    "vue-echarts": "8.0.1",
+    "vue-marmoset-viewer": "4.0.23",
+    "xlsx": "0.18.5"
   },
   "devDependencies": {
     "@antfu/ni": "28.2.0",
@@ -61,6 +65,7 @@
     "@types/html-escaper": "3.0.4",
     "@types/leaflet": "1.9.21",
     "@types/node": "24.10.11",
+    "@types/papaparse": "5.5.2",
     "@types/react": "19.2.13",
     "@types/react-dom": "19.2.3",
     "@yeger/debounce": "2.0.17",
