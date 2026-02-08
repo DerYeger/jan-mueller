@@ -55,7 +55,7 @@
     "@axe-core/playwright": "4.11.1",
     "@commitlint/cli": "20.4.1",
     "@commitlint/config-conventional": "20.4.1",
-    "@playwright/test": "1.58.1",
+    "@playwright/test": "1.58.2",
     "@tailwindcss/typography": "0.5.19",
     "@tailwindcss/vite": "4.1.18",
     "@types/html-escaper": "3.0.4",
