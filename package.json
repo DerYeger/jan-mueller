@@ -55,12 +55,12 @@
     "@axe-core/playwright": "4.11.1",
     "@commitlint/cli": "20.4.1",
     "@commitlint/config-conventional": "20.4.1",
-    "@playwright/test": "1.58.1",
+    "@playwright/test": "1.58.2",
     "@tailwindcss/typography": "0.5.19",
     "@tailwindcss/vite": "4.1.18",
     "@types/html-escaper": "3.0.4",
     "@types/leaflet": "1.9.21",
-    "@types/node": "24.10.11",
+    "@types/node": "24.10.13",
     "@types/react": "19.2.13",
     "@types/react-dom": "19.2.3",
     "@yeger/debounce": "2.0.17",
@@ -76,11 +76,11 @@
     "hastscript": "9.0.1",
     "html-escaper": "3.0.3",
     "husky": "9.1.7",
-    "lighthouse": "13.0.1",
+    "lighthouse": "13.0.2",
     "lint-staged": "16.2.7",
     "mdast-util-to-string": "4.0.0",
-    "oxfmt": "0.28.0",
-    "oxlint": "1.43.0",
+    "oxfmt": "0.31.0",
+    "oxlint": "1.46.0",
     "playwright-lighthouse": "4.0.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -91,15 +91,15 @@
     "sharp": "0.34.5",
     "tailwind-merge": "3.4.0",
     "tailwindcss": "4.1.18",
-    "turbo": "2.8.3",
+    "turbo": "2.8.5",
     "typescript": "5.9.3",
     "vite": "6.4.1",
     "vite-plugin-comlink": "5.3.0",
-    "vue": "3.5.27",
+    "vue": "3.5.28",
     "vue-tsc": "3.2.4"
   },
   "lint-staged": {
     "*": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@10.28.2"
+  "packageManager": "pnpm@10.29.2"
 }
