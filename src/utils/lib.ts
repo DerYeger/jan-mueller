@@ -1,5 +1,4 @@
 import type { Duration } from 'date-fns'
-
 import {
   formatDate as formatDateBase,
   formatDuration as formatDurationBase,

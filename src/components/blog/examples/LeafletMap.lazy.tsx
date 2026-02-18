@@ -1,6 +1,5 @@
 import type { MapOptions } from 'leaflet'
 import type { FC } from 'react'
-
 import { Suspense, lazy } from 'react'
 
 export const LazyLeafletMap = lazy(() => import('@components/blog/examples/LeafletMap'))

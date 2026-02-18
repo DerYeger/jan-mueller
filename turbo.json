@@ -6,7 +6,7 @@
       "outputs": ["dist/**"]
     },
     "check": {
-      "dependsOn": ["check:astro", "check:tsc", "check:vue"],
+      "dependsOn": ["check:astro", "check:tsc"],
       "outputs": []
     },
     "check:astro": {
@@ -16,11 +16,6 @@
     },
     "check:tsc": {
       "dependsOn": ["sync"],
-      "outputs": []
-    },
-    "check:vue": {
-      "dependsOn": ["sync"],
-      "inputs": ["src/**/*.vue"],
       "outputs": []
     },
     "e2e": {

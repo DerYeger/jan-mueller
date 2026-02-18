@@ -1,12 +1,12 @@
-import type { MapImage } from '@utils/photographyUtils'
-import type { MapOptions } from 'leaflet'
-import type { FC } from 'react'
-
 import { LazyMarker, LazyMarkerCluster } from '@components/blog/examples/LeafletMap.lazy'
+import type { MapImage } from '@utils/photographyUtils'
 import { debounce } from '@yeger/debounce'
+import type { MapOptions } from 'leaflet'
 import { icon } from 'leaflet'
+import type { FC } from 'react'
 import { Suspense, lazy, useEffect, useRef } from 'react'
 import { MapContainer, TileLayer, useMap, ZoomControl } from 'react-leaflet'
+
 import 'leaflet/dist/leaflet.css'
 import '@styles/photography-map.css'
 

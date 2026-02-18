@@ -1,8 +1,7 @@
 import type { Browser, PageAssertionsToHaveScreenshotOptions } from '@playwright/test'
-import type { playwrightLighthouseConfig } from 'playwright-lighthouse'
-
 import test, { chromium } from '@playwright/test'
 import getPort from 'get-port'
+import type { playwrightLighthouseConfig } from 'playwright-lighthouse'
 
 export const lighthouseTest = test.extend<object, { port: number; browser: Browser }>({
   port: [

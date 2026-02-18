@@ -1,7 +1,6 @@
 import type { MapOptions } from 'leaflet'
-import type { FC } from 'react'
-
 import { Marker, divIcon, icon, point } from 'leaflet'
+import type { FC } from 'react'
 import React, { useState } from 'react'
 import { MapContainer, TileLayer, useMap, useMapEvents } from 'react-leaflet'
 import BaseMarkerCluster from 'react-leaflet-markercluster'
@@ -50,7 +49,7 @@ export const MapCenter: FC = () => {
     },
   })
   return (
-    // oxlint-disable-next-line jsx_a11y/click-events-have-key-events
+    // oxlint-disable-next-line jsx_a11y/click-events-have-key-events jsx_a11y/no-static-element-interactions
     <span
       className="button absolute right-2 top-2 rounded-sm border-2 border-medium bg-base px-2 py-1 text-strong z-400"
       onClick={() => map.setZoom(13)}

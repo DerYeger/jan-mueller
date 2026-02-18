@@ -1,7 +1,7 @@
-import type { Locator } from '@playwright/test'
-
-import test, { expect } from '@playwright/test'
 import process from 'node:process'
+
+import type { Locator } from '@playwright/test'
+import test, { expect } from '@playwright/test'
 
 import { BASE_SCREENSHOT, PAGES } from './config'
 
