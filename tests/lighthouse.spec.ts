@@ -1,7 +1,8 @@
 import AxeBuilder from '@axe-core/playwright'
-import { BASE_THRESHOLDS, lighthouseTest, PAGES } from './config'
-import { playAudit } from 'playwright-lighthouse'
 import { expect } from '@playwright/test'
+import { playAudit } from 'playwright-lighthouse'
+
+import { BASE_THRESHOLDS, lighthouseTest, PAGES } from './config'
 
 lighthouseTest.describe('Lighthouse', () => {
   lighthouseTest.beforeEach(async ({ browserName }) => {

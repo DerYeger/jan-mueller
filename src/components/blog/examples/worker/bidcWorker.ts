@@ -1,4 +1,5 @@
 import { createChannel } from 'bidc'
+
 import { getPrimeFactors } from './getPrimeFactors'
 
 const { send, receive } = createChannel()

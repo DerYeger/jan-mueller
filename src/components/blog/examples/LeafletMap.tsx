@@ -1,9 +1,10 @@
-import BaseMarkerCluster from 'react-leaflet-markercluster'
 import type { MapOptions } from 'leaflet'
-import { Marker, divIcon, icon, point } from 'leaflet'
 import type { FC } from 'react'
+
+import { Marker, divIcon, icon, point } from 'leaflet'
 import React, { useState } from 'react'
 import { MapContainer, TileLayer, useMap, useMapEvents } from 'react-leaflet'
+import BaseMarkerCluster from 'react-leaflet-markercluster'
 
 Marker.prototype.options.icon = icon({
   iconUrl: '/static/leaflet/map-marker.svg',

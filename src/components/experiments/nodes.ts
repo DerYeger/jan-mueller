@@ -1,5 +1,8 @@
 // @ts-nocheck baklavsjs types are not up to date
 import type { IBaklavaViewModel } from 'baklavajs'
+import type { ComponentOptions } from 'vue'
+
+import VisualizerInterfaceComponent from '@components/experiments/VisualizerInterface.vue'
 import {
   BaklavaInterfaceTypes,
   NodeInterface,
@@ -12,10 +15,7 @@ import {
   setType,
 } from 'baklavajs'
 import { Vector } from 'vecti'
-import type { ComponentOptions } from 'vue'
 import { markRaw } from 'vue'
-
-import VisualizerInterfaceComponent from '@components/experiments/VisualizerInterface.vue'
 
 const vectorType = new NodeInterfaceType<Vector>('vector')
 export class VectorInterface extends NodeInterface<Vector> {

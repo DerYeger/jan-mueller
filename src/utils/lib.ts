@@ -1,9 +1,10 @@
+import type { Duration } from 'date-fns'
+
 import {
   formatDate as formatDateBase,
   formatDuration as formatDurationBase,
   intervalToDuration,
 } from 'date-fns'
-import type { Duration } from 'date-fns'
 
 export async function getImageAsset(imagePath: string): Promise<ImageMetadata | undefined> {
   const assets = import.meta.glob('@assets/**/*')

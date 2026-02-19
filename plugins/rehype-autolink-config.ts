@@ -1,7 +1,8 @@
+import type { Options } from 'rehype-autolink-headings'
+
 import { toString } from 'hast-util-to-string'
 import { h } from 'hastscript'
 import { escape } from 'html-escaper'
-import type { Options } from 'rehype-autolink-headings'
 
 // The following configuration for rehype-autolink-headings was taken from https://github.com/withastro/docs/blob/main/astro.config.ts
 const AnchorLinkIcon = h(

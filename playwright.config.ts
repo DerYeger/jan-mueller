@@ -1,6 +1,6 @@
+import { defineConfig, devices } from '@playwright/test'
 import os from 'node:os'
 import process from 'node:process'
-import { defineConfig, devices } from '@playwright/test'
 
 const isCI = !!process.env.CI
 const port = 4321

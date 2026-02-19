@@ -2,6 +2,7 @@
 
 import { OGImageRoute } from 'astro-og-canvas'
 import { getCollection } from 'astro:content'
+
 import Package from '../../../package.json'
 
 const collectionEntries = await getCollection('blog')
