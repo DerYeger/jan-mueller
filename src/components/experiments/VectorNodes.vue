@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// @ts-nocheck baklavajs types are incomplete
 import '@baklavajs/themes/dist/syrup-dark.css'
 import { DependencyEngine, EditorComponent, applyResult, useBaklava } from 'baklavajs'
 import { onBeforeUnmount } from 'vue'
