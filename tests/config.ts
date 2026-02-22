@@ -103,7 +103,12 @@ export const PAGES: {
   },
   // Experiments
   { url: '/experiments' },
-  { url: '/experiments/vector-nodes' },
+  {
+    url: '/experiments/vector-nodes',
+    thresholds: {
+      performance: 95,
+    },
+  },
   // Simulated 404
   { url: '/404' },
 ]
