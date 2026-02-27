@@ -1,4 +1,7 @@
 minimumReleaseAge: 2880
+minimumReleaseAgeExclusions:
+  - '@yeger/*'
+
 trustPolicy: no-downgrade
 trustPolicyExclude:
   - chokidar@4.0.3
