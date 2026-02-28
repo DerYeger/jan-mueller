@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MasonryWall from '@yeger/vue-masonry-wall'
+import { MasonryWall } from '@yeger/vue-masonry-wall'
 
 import type { GalleryImage } from '@utils/photographyUtils'
 
@@ -15,11 +15,11 @@ const props = defineProps<{ images: GalleryImage[] }>()
       :column-width="448"
       :gap="8"
       :max-columns="undefined"
-      :key-mapper="(image: GalleryImage) => image.src"
+      :key-mapper="(image) => image.src"
       class="w-full"
     >
       <div
-        :class="{ 'mx-auto max-w-[448px]': columnCount === 1 }"
+        :class="{ 'mx-auto max-w-md': columnCount === 1 }"
         :style="{ aspectRatio: String(image.aspectRatio) }"
       >
         <img
