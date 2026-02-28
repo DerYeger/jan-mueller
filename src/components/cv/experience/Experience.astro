@@ -5,6 +5,22 @@ import type { Experience } from '@utils/types'
 
 const experience: Experience[] = [
   {
+    id: 'parqet',
+    name: 'Parqet Fintech GmbH',
+    location: 'Remote',
+    href: 'https://parqet.com/',
+    intermediate: {
+      name: 'Deel',
+      link: 'https://deel.com/',
+    },
+    roles: [
+      {
+        title: 'Senior Frontend Engineer',
+        startDate: '2026-06-01',
+      },
+    ],
+  },
+  {
     id: 'senacor',
     name: 'Senacor Technologies AG',
     location: 'Vienna, Austria',
@@ -13,13 +29,14 @@ const experience: Experience[] = [
       {
         title: 'Senior Software Engineer',
         startDate: '2025-10-01',
+        endDate: '2026-05-31',
       },
       {
         title: 'Software Engineer',
         startDate: '2025-01-01',
         endDate: '2025-09-30',
       },
-       {
+      {
         title: 'Software Engineer',
         description: 'Part-time',
         startDate: '2021-10-01',
@@ -61,7 +78,8 @@ const experience: Experience[] = [
       },
       {
         title: 'Tutor',
-        description: 'Automative EE Systems and Fundamentals of Electrical Engineering',
+        description:
+          'Automative EE Systems and Fundamentals of Electrical Engineering',
         startDate: '2017-11-01',
         endDate: '2018-03-03',
       },
@@ -81,17 +99,22 @@ const experience: Experience[] = [
       },
     ],
   },
-].sort((a, b) => b.roles.at(-1)!.startDate.localeCompare(a.roles.at(-1)!.startDate))
+].sort((a, b) =>
+  b.roles.at(-1)!.startDate.localeCompare(a.roles.at(-1)!.startDate),
+)
 ---
 
-<CVList id="experience" title="Experience">
-  <ol aria-label="Experience timeline" class="flex flex-col md:max-w-64 md:whitespace-nowrap gap-16 md:mx-auto text-pretty">
-  {
-    experience.map((entry) => (
-      <li>
-        <ExperienceEntry experience={entry} />
-      </li>
-    ))
-  }
+<CVList id='experience' title='Experience'>
+  <ol
+    aria-label='Experience timeline'
+    class='flex flex-col md:max-w-64 md:whitespace-nowrap gap-16 md:mx-auto text-pretty'
+  >
+    {
+      experience.map((entry) => (
+        <li>
+          <ExperienceEntry experience={entry} />
+        </li>
+      ))
+    }
   </ol>
 </CVList>

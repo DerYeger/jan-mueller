@@ -14,45 +14,122 @@ export interface Props {
 const { experience } = Astro.props as Props
 
 const startDate = experience.roles.map((r) => r.startDate).sort()[0]
-const endDate = experience.roles.map((r) => r.endDate).sort().reverse()[0]
+const endDate = experience.roles
+  .map((r) => r.endDate)
+  .sort()
+  .reverse()[0]
 
-const duration = getDuration(experience.roles.map((role) => ({ from: role.startDate, to: role.endDate ?? getToday() })))
+const duration = getDuration(
+  experience.roles.map((role) => ({
+    from: role.startDate,
+    to: role.endDate ?? getToday(),
+  })),
+)
 const formattedDuration = formatDuration(duration)
+
+function isActive(role: ExperienceType['roles'][number]) {
+  return !role.endDate
+}
 ---
 
-<div class="flex flex-col gap-2" data-testid={experience.name}>
-  <div class="flex flex-col gap-2 group/heading">
+<div class='flex flex-col gap-2' data-testid={experience.name}>
+  <div class='flex flex-col gap-2 group/heading'>
     <Heading level={3} id={`experience-${experience.id}`} isGroup={false}>
-      <a href={experience.href} rel="noreferrer" target="_blank" class="font-bold text-xl text-strong hocus:text-light w-fit md:whitespace-nowrap">
+      <a
+        href={experience.href}
+        rel='noreferrer'
+        target='_blank'
+        class='font-bold text-xl text-strong hocus:text-light w-fit md:whitespace-nowrap'
+      >
         {experience.name}
       </a>
     </Heading>
-    <div class="text-lighter">
+    <div class='text-lighter'>
       {experience.location}
+      {
+        experience.intermediate ? (
+          <>
+            <Dot />
+            via
+            <a
+              href={experience.intermediate.link}
+              rel='noreferrer'
+              target='_blank'
+              class='hocus:text-light'
+            >
+              {experience.intermediate.name}
+            </a>
+          </>
+        ) : null
+      }
     </div>
-    <div>
-      <DateRange startDate={startDate} endDate={endDate} format={DateFormats.Month} />
-      {duration ? <>
-        <Dot />
-        <span class="whitespace-nowrap">{formattedDuration}</span>
-      </> : null}
-    </div>
+    {
+      (
+        <div>
+          <DateRange
+            startDate={startDate}
+            endDate={endDate}
+            format={DateFormats.Month}
+          />
+          {duration ? (
+            <>
+              <Dot />
+              <span class='whitespace-nowrap'>{formattedDuration}</span>
+            </>
+          ) : null}
+        </div>
+      )
+    }
   </div>
-  <ol aria-label="Individual roles" class="mt-2 flex flex-col gap-8">
-    {experience.roles.map((role, index) => (
-      <li class="flex-1 flex gap-3 relative">
-        <div aria-hidden="true" class={cn('relative size-2 shrink-0 mt-2.5')}>
-          {!role.endDate ? <div class={cn('absolute -inset-0.5 rounded-full motion-safe:animate-ping [animation-duration:2s]! bg-green-600 dark:bg-green-300')} /> : null }
-          <div class={cn('absolute inset-0 rounded-full drop-shadow-md', role.endDate ? 'bg-neutral-400 dark:bg-neutral-600' : 'bg-green-500 dark:bg-green-400')} />
-          {!role.endDate ? <div class={cn('absolute inset-0.25 rounded-full bg-white/15')} /> : null }
-          {!role.endDate ? <div class={cn('absolute inset-0.5 rounded-full bg-white/15')} /> : null }
-          {!role.endDate ? <div class={cn('absolute inset-0.75 rounded-full bg-white/10')} /> : null }
-        </div>
-        { index < experience.roles.length - 1 ? <div aria-hidden="true" class={cn('absolute drop-shadow-md left-0.75 top-2.5 -bottom-11 w-0.5 bg-neutral-300 dark:bg-neutral-700 -z-10', !role.endDate && 'bg-gradient-to-t from-neutral-300 dark:from-neutral-700 from-30% to-green-600 dark:bg-green-300')} /> : null}
-        <div class="group/heading">
-          <ExperienceRoleEntry role={role} id={`experience-${experience.id}-${experience.roles.length - index}`} isOnlyRole={experience.roles.length === 1} />
-        </div>
-      </li>
-    ))}
+  <ol aria-label='Individual roles' class='mt-2 flex flex-col gap-8'>
+    {
+      experience.roles.map((role, index) => (
+        <li class='flex-1 flex gap-3 relative'>
+          <div aria-hidden='true' class={cn('relative size-2 shrink-0 mt-2.5')}>
+            {isActive(role) ? (
+              <div
+                class={cn(
+                  'absolute -inset-0.5 rounded-full motion-safe:animate-ping [animation-duration:2s]! bg-green-600 dark:bg-green-300',
+                )}
+              />
+            ) : null}
+            <div
+              class={cn(
+                'absolute inset-0 rounded-full drop-shadow-md',
+                isActive(role)
+                  ? 'bg-green-500 dark:bg-green-400'
+                  : 'bg-neutral-400 dark:bg-neutral-600',
+              )}
+            />
+            {!role.endDate ? (
+              <div class={cn('absolute inset-0.25 rounded-full bg-white/15')} />
+            ) : null}
+            {!role.endDate ? (
+              <div class={cn('absolute inset-0.5 rounded-full bg-white/15')} />
+            ) : null}
+            {!role.endDate ? (
+              <div class={cn('absolute inset-0.75 rounded-full bg-white/10')} />
+            ) : null}
+          </div>
+          {index < experience.roles.length - 1 ? (
+            <div
+              aria-hidden='true'
+              class={cn(
+                'absolute drop-shadow-md left-0.75 top-2.5 -bottom-11 w-0.5 bg-neutral-300 dark:bg-neutral-700 -z-10',
+                isActive(role) &&
+                  'bg-gradient-to-t from-neutral-300 dark:from-neutral-700 from-30% to-green-600 dark:bg-green-300',
+              )}
+            />
+          ) : null}
+          <div class='group/heading'>
+            <ExperienceRoleEntry
+              role={role}
+              id={`experience-${experience.id}-${experience.roles.length - index}`}
+              isOnlyRole={experience.roles.length === 1}
+            />
+          </div>
+        </li>
+      ))
+    }
   </ol>
 </div>

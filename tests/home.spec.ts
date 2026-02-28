@@ -98,7 +98,7 @@ test.describe('Home', () => {
     await expect(yattaExperience).toContainText('2 months')
     await expect(yattaExperience.locator('a').first()).toHaveAttribute('href')
 
-    await expect(experience.locator('li')).toHaveCount(12)
+    await expect(experience.locator('li')).toHaveCount(14)
   })
 
   test('shows education', async ({ page }) => {
