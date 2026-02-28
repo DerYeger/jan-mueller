@@ -158,6 +158,14 @@
       @apply bg-transparent! text-light! hocus:text-strong! border-b-0!;
     }
   }
+
+  .mermaid {
+    @apply dark:invert bg-neutral-50;
+
+    & .edgeLabel p {
+      @apply bg-neutral-50!;
+    }
+  }
 }
 
 .drop-shadow-sharp {

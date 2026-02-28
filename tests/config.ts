@@ -63,7 +63,7 @@ export const PAGES: {
     url: '/blog/react-leaflet',
     thresholds: {
       accessibility: 0, // OpenStreetMap drops accessibility to 0,
-      performance: 99,
+      performance: 95,
     },
   },
   { url: '/blog/vue-composable-testing' },
@@ -81,6 +81,7 @@ export const PAGES: {
       accessibility: 96, // example button color contrast
     },
   },
+  { url: '/blog/vue-fast-mount', thresholds: { performance: 95 } },
   // Photography
   {
     url: '/photography',

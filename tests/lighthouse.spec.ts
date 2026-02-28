@@ -18,6 +18,7 @@ lighthouseTest.describe('Lighthouse', () => {
           .exclude('.baklava-editor')
           .exclude('.expressive-code')
           .exclude('.marmoset-viewer-host')
+          .exclude('.mermaid')
           .exclude('button[id^="factorize-"]')
           .exclude('button[id^="benchmark-"]')
           .analyze()

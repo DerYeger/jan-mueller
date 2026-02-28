@@ -5,6 +5,7 @@ import vue from '@astrojs/vue'
 import tailwindcss from '@tailwindcss/vite'
 import expressiveCode from 'astro-expressive-code'
 import icon from 'astro-icon'
+import mermaid from 'astro-mermaid'
 import robotsTxt from 'astro-robots-txt'
 import { defineConfig } from 'astro/config'
 import autolinkHeadings from 'rehype-autolink-headings'
@@ -26,6 +27,10 @@ export default defineConfig({
   },
   integrations: [
     icon(),
+    mermaid({
+      autoTheme: false,
+      theme: 'neutral',
+    }),
     expressiveCode({
       themes: ['gruvbox-dark-medium'],
       styleOverrides: {
