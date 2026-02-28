@@ -41,7 +41,7 @@
     "react-leaflet": "5.0.0",
     "react-leaflet-markercluster": "5.0.0-rc.0",
     "vecti": "3.1.5",
-    "vue-marmoset-viewer": "4.0.23"
+    "vue-marmoset-viewer": "5.0.0"
   },
   "devDependencies": {
     "@antfu/ni": "28.2.0",

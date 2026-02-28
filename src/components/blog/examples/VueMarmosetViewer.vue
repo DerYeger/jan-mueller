@@ -9,7 +9,7 @@ const { height = 300 } = defineProps<{ src: string; height?: number }>()
     class="not-prose overflow-hidden rounded-sm shadow-md will-change-transform"
     :style="{ height: `${height}px` }"
   >
-    <MarmosetViewer :src="src" responsive :height="height" />
+    <MarmosetViewer :src="src" responsive />
   </div>
 </template>
 

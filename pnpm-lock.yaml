@@ -60,8 +60,8 @@ importers:
         specifier: 3.1.5
         version: 3.1.5
       vue-marmoset-viewer:
-        specifier: 4.0.23
-        version: 4.0.23(vue@3.5.29(typescript@5.9.3))
+        specifier: 5.0.0
+        version: 5.0.0(vue@3.5.29(typescript@5.9.3))
     devDependencies:
       '@antfu/ni':
         specifier: 28.2.0
@@ -4752,8 +4752,8 @@ packages:
   vscode-uri@3.1.0:
     resolution: {integrity: sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==}
 
-  vue-marmoset-viewer@4.0.23:
-    resolution: {integrity: sha512-PdI6VAXtIsDSrZiYns2CrxKUR64gQsSDDheULwoDJtRXbo7SNDmOk/8UiUbGpaTCoytVBDcbre2UHWZIlBbyvQ==}
+  vue-marmoset-viewer@5.0.0:
+    resolution: {integrity: sha512-cz4TASJP42t2uHfGtlpL4wpAEktrnFoPfjIK67UWkx53Gpplo9GTPawOMuW9poA4NDeJO2nr0oKQhALYxyj1EQ==}
     engines: {node: '>=12'}
     peerDependencies:
       vue: ^3.0.5
@@ -10121,7 +10121,7 @@ snapshots:
 
   vscode-uri@3.1.0: {}
 
-  vue-marmoset-viewer@4.0.23(vue@3.5.29(typescript@5.9.3)):
+  vue-marmoset-viewer@5.0.0(vue@3.5.29(typescript@5.9.3)):
     dependencies:
       '@yeger/debounce': 2.0.17
       vue: 3.5.29(typescript@5.9.3)
