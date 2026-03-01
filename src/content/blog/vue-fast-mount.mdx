@@ -140,7 +140,7 @@ test('...', async ({ expect }) => {
 ```
 
 The plugin detects `fastMount` calls and marks the contained `import` as a "fast mount entry".
-When the plugin encounters an import marked as a "fast mount entry", it generates local stubs for child components used **exclusively** in that component's template.
+When the plugin encounters an import marked as a "fast mount entry", it generates local stubs for child components used in that component's template.
 Then, it omits the respective imports.
 The result is a huge reduction in the time spent on the `import` phase of tests, as the chains of imports are effectively broken.
 
