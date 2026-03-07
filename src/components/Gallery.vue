@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { MasonryWall } from '@yeger/vue-masonry-wall'
-
 import type { GalleryImage } from '@utils/photographyUtils'
+import { MasonryWall } from '@yeger/vue-masonry-wall'
 
 const props = defineProps<{ images: GalleryImage[] }>()
 </script>

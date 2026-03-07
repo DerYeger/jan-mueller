@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@iconify-json/akar-icons": "1.2.7",
-    "@iconify-json/carbon": "1.2.18",
+    "@iconify-json/carbon": "1.2.19",
     "@iconify-json/fa-brands": "1.2.2",
     "@iconify-json/ic": "1.2.4",
     "@iconify-json/mdi": "1.2.3",
@@ -54,14 +54,14 @@
     "@astrojs/sitemap": "3.7.0",
     "@astrojs/vue": "5.1.4",
     "@axe-core/playwright": "4.11.1",
-    "@commitlint/cli": "20.4.2",
-    "@commitlint/config-conventional": "20.4.2",
+    "@commitlint/cli": "20.4.3",
+    "@commitlint/config-conventional": "20.4.3",
     "@playwright/test": "1.58.2",
     "@tailwindcss/typography": "0.5.19",
     "@tailwindcss/vite": "4.2.1",
     "@types/html-escaper": "3.0.4",
     "@types/leaflet": "1.9.21",
-    "@types/node": "24.10.14",
+    "@types/node": "24.11.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@yeger/debounce": "2.0.17",
@@ -78,10 +78,10 @@
     "html-escaper": "3.0.3",
     "husky": "9.1.7",
     "lighthouse": "13.0.3",
-    "lint-staged": "16.2.7",
+    "lint-staged": "16.3.2",
     "mdast-util-to-string": "4.0.0",
-    "oxfmt": "0.35.0",
-    "oxlint": "1.50.0",
+    "oxfmt": "0.36.0",
+    "oxlint": "1.51.0",
     "playwright-lighthouse": "4.0.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -92,7 +92,7 @@
     "sharp": "0.34.5",
     "tailwind-merge": "3.5.0",
     "tailwindcss": "4.2.1",
-    "turbo": "2.8.11",
+    "turbo": "2.8.13",
     "typescript": "5.9.3",
     "vite": "6.4.1",
     "vite-plugin-comlink": "5.3.0",
@@ -102,5 +102,5 @@
   "lint-staged": {
     "*": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@10.30.2"
+  "packageManager": "pnpm@10.30.3"
 }
