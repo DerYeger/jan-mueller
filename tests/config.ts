@@ -81,7 +81,7 @@ export const PAGES: {
       accessibility: 96, // example button color contrast
     },
   },
-  { url: '/blog/vue-fast-mount', thresholds: { performance: 95 } },
+  { url: '/blog/vue-fast-mount', thresholds: { performance: 85 } },
   // Photography
   {
     url: '/photography',

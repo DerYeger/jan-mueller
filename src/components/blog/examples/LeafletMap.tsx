@@ -51,7 +51,7 @@ export const MapCenter: FC = () => {
   return (
     // oxlint-disable-next-line jsx_a11y/click-events-have-key-events jsx_a11y/no-static-element-interactions
     <span
-      className="button absolute right-2 top-2 rounded-sm border-2 border-medium bg-base px-2 py-1 text-strong z-400"
+      className="button absolute top-2 right-2 z-400 rounded-sm border-2 border-medium bg-base px-2 py-1 text-strong"
       onClick={() => map.setZoom(13)}
     >
       {text}

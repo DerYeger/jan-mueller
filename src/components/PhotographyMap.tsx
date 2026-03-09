@@ -78,7 +78,7 @@ const PhotoMarker: FC<{ image: MapImage }> = ({ image }) => {
         <div className="w-full" style={{ aspectRatio: String(image.aspectRatio) }}>
           <img src={image.src} alt={image.alt} draggable={false} decoding="async" />
         </div>
-        <div className="text-strong mx-auto mt-1 flex max-w-sm justify-evenly gap-1 text-xs font-semibold *:flex *:grow *:justify-center">
+        <div className="mx-auto mt-1 flex max-w-sm justify-evenly gap-1 text-xs font-semibold text-strong *:flex *:grow *:justify-center">
           <div>{image.focalLength}</div>
           <div>{`ƒ${image.aperture}`}</div>
           <div>{`${image.shutterSpeed} s`}</div>

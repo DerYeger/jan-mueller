@@ -31,7 +31,7 @@
 }
 
 @utility gradient-text {
-  @apply text-transparent bg-clip-text bg-linear-to-r;
+  @apply bg-linear-to-r bg-clip-text text-transparent;
 }
 
 @utility bg-body {
@@ -47,7 +47,7 @@
 }
 
 @utility bg-glass {
-  @apply backdrop-blur-xl saturate-180 bg-white/70 dark:bg-neutral-900/60;
+  @apply bg-white/70 saturate-180 backdrop-blur-xl dark:bg-neutral-900/60;
 }
 
 @utility no-scrollbar {
@@ -59,7 +59,7 @@
 }
 
 @utility focus-ring {
-  @apply outline-none ring-2 ring-offset-1 ring-offset-transparent ring-blue-600 dark:ring-blue-500;
+  @apply ring-2 ring-blue-600 ring-offset-1 ring-offset-transparent outline-none dark:ring-blue-500;
 }
 
 @utility anchor-heading-size {
@@ -78,7 +78,7 @@
   }
 
   a {
-    @apply transition-colors underline rounded-sm;
+    @apply rounded-sm underline transition-colors;
 
     &:focus-visible {
       @apply focus-ring;
@@ -90,7 +90,7 @@
   }
 
   img {
-    @apply select-none pointer-events-none;
+    @apply pointer-events-none select-none;
   }
 
   html {
@@ -108,11 +108,11 @@
     @apply scroll-mt-24;
   }
   article.prose *:is(h1, h2, h3, h4, h5, h6) {
-    @apply flex items-center size-fit;
+    @apply flex size-fit items-center;
   }
 
   .anchor-heading {
-    @apply anchor-heading-size ml-[0.25em] size-(--size) my-auto translate-z-0 inline-flex items-center rounded-full;
+    @apply my-auto ml-[0.25em] inline-flex size-(--size) translate-z-0 items-center rounded-full anchor-heading-size;
   }
 
   article .anchor-heading {
@@ -132,7 +132,7 @@
   }
 
   .anchor-blue {
-    @apply text-blue-600 dark:text-blue-500 hocus:text-blue-500 dark:hocus:text-blue-400 active:text-blue-700 dark:active:text-blue-300 ring-black dark:ring-white;
+    @apply text-blue-600 ring-black active:text-blue-700 dark:text-blue-500 dark:ring-white dark:active:text-blue-300 hocus:text-blue-500 dark:hocus:text-blue-400;
   }
 
   .anchor-text {
@@ -140,7 +140,7 @@
   }
 
   .card {
-    @apply border-medium bg-base dark:bg-linear-to-br dark:from-neutral-900 dark:to-neutral-950 text-black dark:text-neutral-100 rounded-xl shadow-xl;
+    @apply rounded-xl border-medium bg-base text-black shadow-xl dark:bg-linear-to-br dark:from-neutral-900 dark:to-neutral-950 dark:text-neutral-100;
   }
 
   .showcase mark {
@@ -155,12 +155,12 @@
     @apply bg-glass!;
 
     & > * {
-      @apply bg-transparent! text-light! hocus:text-strong! border-b-0!;
+      @apply border-b-0! bg-transparent! text-light! hocus:text-strong!;
     }
   }
 
   .mermaid {
-    @apply dark:invert bg-neutral-50;
+    @apply bg-neutral-50 dark:invert;
 
     & .edgeLabel p {
       @apply bg-neutral-50!;
