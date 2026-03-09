@@ -1,5 +1,5 @@
 {
-  "$schema": "https://turbo.build/schema.json",
+  "$schema": "./node_modules/turbo/schema.json",
   "tasks": {
     "build": {
       "dependsOn": ["sync"],
@@ -33,10 +33,14 @@
       "dependsOn": ["sync"]
     },
     "lint:fix": {
+      "cache": false,
       "dependsOn": ["sync"]
     },
     "format": {},
-    "format:fix": {},
+    "format:fix": {
+      "cache": false,
+      "dependsOn": ["lint:fix"]
+    },
     "preview": {
       "dependsOn": ["build"],
       "cache": false,
