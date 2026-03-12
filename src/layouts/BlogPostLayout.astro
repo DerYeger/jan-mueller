@@ -9,7 +9,7 @@ import DateComponent from '@components/date/DateComponent.astro'
 import Dot from '@components/Dot.astro'
 import Heading from '@components/Heading.astro'
 import { cn } from '@components/ui/cn'
-import type { BlogPost } from '@content/config'
+import type { BlogPost } from '../content.config'
 import MainLayout from '@layouts/MainLayout.astro'
 import { getImageAsset, DateFormats, getElementId } from '@utils/lib'
 
@@ -23,14 +23,7 @@ export interface Props {
 }
 
 const {
-  content: {
-    title,
-    description,
-    pubDate,
-    updatedDate,
-    heroImage,
-    readingTime,
-  },
+  content: { title, description, pubDate, updatedDate, heroImage, readingTime },
   headings,
 } = Astro.props as Props
 
@@ -50,138 +43,196 @@ if (!slug) {
 }
 const openGraphImage = `/open-graph/${slug}.png`
 
-const posts = (await getCollection('blog'))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+)
 
-const currentPostIndex = posts.findIndex((post) => post.slug === Astro.params.slug)
-const previousPost = currentPostIndex + 1 === posts.length ? undefined : posts[currentPostIndex + 1]
-const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1]
+const currentPostIndex = posts.findIndex(
+  (post) => post.id === Astro.params.slug,
+)
+const previousPost =
+  currentPostIndex + 1 === posts.length
+    ? undefined
+    : posts[currentPostIndex + 1]
+const nextPost =
+  currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1]
 
 const titleId = getElementId(title)
 ---
 
 <MainLayout title={title} description={description} image={openGraphImage}>
-  <a href={`#${titleId}`} tabindex="-1" class="sr-only">Skip to content</a>
-  <div class="max-w-[1920px] mx-auto flex items-start gap-8 2xl:gap-16">
-    <BlogSidebar position="left" title="Posts" class="order-1">
-      {posts.map(async (post) => (
-        <a href={`/blog/${post.slug}/`} class={cn('py-1 no-underline flex gap-2 items-center justify-end w-fit ml-auto', post.slug === slug && 'anchor-blue')}>
-          <div>
-             <div class="underline text-balance">{post.data.title}</div>
-              <div class="text-light">
+  <a href={`#${titleId}`} tabindex='-1' class='sr-only'>Skip to content</a>
+  <div class='max-w-[1920px] mx-auto flex items-start gap-8 2xl:gap-16'>
+    <BlogSidebar position='left' title='Posts' class='order-1'>
+      {
+        posts.map(async (post) => (
+          <a
+            href={`/blog/${post.id}/`}
+            class={cn(
+              'py-1 no-underline flex gap-2 items-center justify-end w-fit ml-auto',
+              post.id === slug && 'anchor-blue',
+            )}
+          >
+            <div>
+              <div class='underline text-balance'>{post.data.title}</div>
+              <div class='text-light'>
                 <DateComponent
                   date={post.data.pubDate}
                   format={DateFormats.Day}
                 />
+              </div>
             </div>
-          </div>
-          <Image
-            src={(await getImageAsset(post.data.heroImage))!}
-            class="max-2xl:hidden card w-10 h-10 rounded-full shadow-lg"
-            layout="fixed"
-            quality="high"
-            format="webp"
-            loading="lazy"
-            width={48}
-            height={48}
-            alt={post.data.title}
-          />
-        </a>
-      ))}
+            <Image
+              src={(await getImageAsset(post.data.heroImage))!}
+              class='max-2xl:hidden card w-10 h-10 rounded-full shadow-lg'
+              layout='fixed'
+              quality='high'
+              format='webp'
+              loading='lazy'
+              width={48}
+              height={48}
+              alt={post.data.title}
+            />
+          </a>
+        ))
+      }
     </BlogSidebar>
-    <BlogSidebar position="right" title="Contents" class="order-3">
-      {headings.map(({ depth, slug, text }) => (
-        <a style={{ marginLeft: `${2 * (depth - 2)}rem` }} id={`heading-link-${slug}`} href={`#${slug}`} class="py-1 w-fit text-balance">
-          {removeSRLabel(text)}
-        </a>
-      ))}
+    <BlogSidebar position='right' title='Contents' class='order-3'>
+      {
+        headings.map(({ depth, slug, text }) => (
+          <a
+            style={{ marginLeft: `${2 * (depth - 2)}rem` }}
+            id={`heading-link-${slug}`}
+            href={`#${slug}`}
+            class='py-1 w-fit text-balance'
+          >
+            {removeSRLabel(text)}
+          </a>
+        ))
+      }
     </BlogSidebar>
-    <article id="blog-post-content" class="mx-auto container prose prose-neutral prose-a:text-medium prose-a:hocus:text-light dark:prose-invert max-w-[80ch] xl:w-fit px-4 py-8 order-2">
-      <BlogHeroImage class="card border-0" heroImage={heroImage} title={title} height={200} loading="eager" />
+    <article
+      id='blog-post-content'
+      class='mx-auto container prose prose-neutral prose-a:text-medium prose-a:hocus:text-light dark:prose-invert max-w-[80ch] xl:w-fit px-4 py-8 order-2'
+    >
+      <BlogHeroImage
+        class='card border-0'
+        heroImage={heroImage}
+        title={title}
+        height={200}
+        loading='eager'
+      />
       <Heading id={titleId} level={1} alwaysVisible>{title}</Heading>
-      <div class="mb-4 mt-8 flex flex-wrap gap-1">
+      <div class='mb-4 mt-8 flex flex-wrap gap-1'>
         {pubDate && <DateComponent date={pubDate} format={DateFormats.Day} />}
-        {updatedDate && (
-          <>
-            <Dot />
-            <div>
-              Last updated on{' '}
-              <DateComponent date={updatedDate} format={DateFormats.Day} />
-            </div>
-          </>
-        )}
+        {
+          updatedDate && (
+            <>
+              <Dot />
+              <div>
+                Last updated on{' '}
+                <DateComponent date={updatedDate} format={DateFormats.Day} />
+              </div>
+            </>
+          )
+        }
         <Dot />
         {readingTime}
       </div>
       <blockquote>{description}</blockquote>
-      <aside aria-labelledby="contents" class="xl:hidden">
-        <Heading id="contents" level={2} alwaysVisible>Contents</Heading>
+      <aside aria-labelledby='contents' class='xl:hidden'>
+        <Heading id='contents' level={2} alwaysVisible>Contents</Heading>
         <ul>
-          {headings.map(({ depth, slug, text }) => (
-            <li style={{ marginLeft: `${2 * (depth - 2)}rem` }}>
-              <a href={`#${slug}`}>{removeSRLabel(text)}</a>
-            </li>
-          ))}
+          {
+            headings.map(({ depth, slug, text }) => (
+              <li style={{ marginLeft: `${2 * (depth - 2)}rem` }}>
+                <a href={`#${slug}`}>{removeSRLabel(text)}</a>
+              </li>
+            ))
+          }
         </ul>
       </aside>
-      <div id="blog-post-content">
+      <div id='blog-post-content'>
         <slot />
       </div>
-      <nav aria-label="Previous and next posts" class="mt-16 flex justify-between gap-2 text-sm">
-        { previousPost && (
-          <a href={`/blog/${previousPost.slug}/`} class="flex flex-col items-start gap-1 rounded-sm border border-medium p-2 no-underline transition-all hocus:bg-base hocus:shadow-md">
-            <div class="flex items-center gap-1 font-normal text-(--tw-prose-body)">
-              <Icon aria-hidden="true" name="akar-icons:arrow-left" />
-              Previous
-            </div>
-            <div class="underline">{previousPost.data.title}</div>
-          </a>
-        ) }
-        <div class="grow-1" />
-        { nextPost && (
-          <a href={`/blog/${nextPost.slug}/`} class="flex flex-col items-end gap-1 rounded-sm border border-medium p-2 no-underline transition-all hocus:bg-base hocus:shadow-md">
-            <div class="flex items-center gap-1 font-normal text-(--tw-prose-body)">
-              Next
-              <Icon aria-hidden="true" name="akar-icons:arrow-right" />
-            </div>
-            <div class="underline">{nextPost.data.title}</div>
-          </a>
-        )}
+      <nav
+        aria-label='Previous and next posts'
+        class='mt-16 flex justify-between gap-2 text-sm'
+      >
+        {
+          previousPost && (
+            <a
+              href={`/blog/${previousPost.id}/`}
+              class='flex flex-col items-start gap-1 rounded-sm border border-medium p-2 no-underline transition-all hocus:bg-base hocus:shadow-md'
+            >
+              <div class='flex items-center gap-1 font-normal text-(--tw-prose-body)'>
+                <Icon aria-hidden='true' name='akar-icons:arrow-left' />
+                Previous
+              </div>
+              <div class='underline'>{previousPost.data.title}</div>
+            </a>
+          )
+        }
+        <div class='grow-1'></div>
+        {
+          nextPost && (
+            <a
+              href={`/blog/${nextPost.id}/`}
+              class='flex flex-col items-end gap-1 rounded-sm border border-medium p-2 no-underline transition-all hocus:bg-base hocus:shadow-md'
+            >
+              <div class='flex items-center gap-1 font-normal text-(--tw-prose-body)'>
+                Next
+                <Icon aria-hidden='true' name='akar-icons:arrow-right' />
+              </div>
+              <div class='underline'>{nextPost.data.title}</div>
+            </a>
+          )
+        }
       </nav>
     </article>
   </div>
 </MainLayout>
 <script>
-window.addEventListener('load', () => {
-  const blogPostContent = document.getElementById('blog-post-content')
-  const headingElements = blogPostContent?.querySelectorAll('h2, h3')
-  const headingLinks = document.querySelectorAll('[id^="heading-link-"]')
+  window.addEventListener(
+    'load',
+    () => {
+      const blogPostContent = document.getElementById('blog-post-content')
+      const headingElements = blogPostContent?.querySelectorAll('h2, h3')
+      const headingLinks = document.querySelectorAll('[id^="heading-link-"]')
 
-  const states: Record<string, IntersectionObserverEntry> = {}
+      const states: Record<string, IntersectionObserverEntry> = {}
 
-  const headingObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      states[entry.target.id] = entry
-    })
-    onStateChange()
-  })
+      const headingObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          states[entry.target.id] = entry
+        })
+        onStateChange()
+      })
 
-  function onStateChange() {
-    const entries = Object.values(states)
-    const bestMatch = entries
-      .filter((entry) => entry.target.id !== undefined && entry.isIntersecting)
-      .sort((a, b) => a.target.getBoundingClientRect().top - b.target.getBoundingClientRect().top)[0]
-    if (!bestMatch) {
-      return
-    }
-    const targetHeadingLinkId = `heading-link-${bestMatch.target.id}`
-    headingLinks.forEach((link) => {
-      link.classList.toggle('anchor-blue', link.id === targetHeadingLinkId)
-    })
-  }
+      function onStateChange() {
+        const entries = Object.values(states)
+        const bestMatch = entries
+          .filter(
+            (entry) => entry.target.id !== undefined && entry.isIntersecting,
+          )
+          .sort(
+            (a, b) =>
+              a.target.getBoundingClientRect().top -
+              b.target.getBoundingClientRect().top,
+          )[0]
+        if (!bestMatch) {
+          return
+        }
+        const targetHeadingLinkId = `heading-link-${bestMatch.target.id}`
+        headingLinks.forEach((link) => {
+          link.classList.toggle('anchor-blue', link.id === targetHeadingLinkId)
+        })
+      }
 
-  headingElements?.forEach((heading) => {
-    headingObserver.observe(heading)
-  })
-},  { once: true })
+      headingElements?.forEach((heading) => {
+        headingObserver.observe(heading)
+      })
+    },
+    { once: true },
+  )
 </script>

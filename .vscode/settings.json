@@ -1,5 +1,8 @@
 {
   "files.associations": {
     "*.css": "tailwindcss"
+  },
+  "search.exclude": {
+    "**/*.{jpeg,jpg,png,webp}": true
   }
 }

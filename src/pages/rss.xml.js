@@ -13,7 +13,7 @@ export async function GET(context) {
         pubDate: post.data.pubDate,
         description: post.data.description,
         customData: post.data.customData,
-        link: `/blog/${post.slug}/`,
+        link: `/blog/${post.id}/`,
       }))
       .sort((a, b) => b.pubDate - a.pubDate),
     customData: `<language>en-us</language>`,

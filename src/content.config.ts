@@ -1,4 +1,6 @@
-import { defineCollection, z } from 'astro:content'
+import { glob } from 'astro/loaders'
+import * as z from 'astro/zod'
+import { defineCollection } from 'astro:content'
 
 const DateSchema = z.preprocess((arg) => {
   if (typeof arg == 'string' || arg instanceof Date) {
@@ -20,6 +22,7 @@ export type BlogPost = z.infer<typeof BlogPostSchema>
 
 const blog = defineCollection({
   schema: BlogPostSchema,
+  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/content/blog' }),
 })
 
 export const collections = { blog }

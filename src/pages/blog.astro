@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content'
+import { getCollection, render } from 'astro:content'
 import BlogHeroImage from '@components/BlogHeroImage.astro'
 
 import DateComponent from '@components/date/DateComponent.astro'
@@ -12,29 +12,36 @@ const posts = (await getCollection('blog')).sort(
 )
 ---
 
-<MainLayout
-  title="Blog"
-  image="/open-graph/blog.png"
->
-  <div class="mx-auto max-w-7xl px-4 mt-8 mb-16">
-    <h1 class="title mt-16 mb-16 text-5xl w-fit mx-auto text-center">Jan's Blog</h1>
+<MainLayout title='Blog' image='/open-graph/blog.png'>
+  <div class='mx-auto max-w-7xl px-4 mt-8 mb-16'>
+    <h1 class='title mt-16 mb-16 text-5xl w-fit mx-auto text-center'>
+      Jan's Blog
+    </h1>
     <ul
-      aria-label="Blog posts"
-      class="grid grid-flow-row grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4"
+      aria-label='Blog posts'
+      class='grid grid-flow-row grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4'
     >
       {
         posts.map(async (post, index) => {
-          const { remarkPluginFrontmatter } = await post.render()
+          const { remarkPluginFrontmatter } = await render(post)
           return (
-            <li class="card has-[*:focus-visible]:focus-ring hover:shadow-2xl focus-within:shadow-2xl transition-all overflow-hidden" data-testid={`blog-post-${post.slug}`}>
+            <li
+              class='card has-[*:focus-visible]:focus-ring hover:shadow-2xl focus-within:shadow-2xl transition-all overflow-hidden'
+              data-testid={`blog-post-${post.id}`}
+            >
               <a
-                href={`/blog/${post.slug}/`}
-                class="block no-underline focus:text-light focus-visible:ring-0 focus-visible:ring-offset-0"
+                href={`/blog/${post.id}/`}
+                class='block no-underline focus:text-light focus-visible:ring-0 focus-visible:ring-offset-0'
               >
-                <BlogHeroImage heroImage={post.data.heroImage} title={post.data.title} height={100} loading={index === 0 ? 'eager' : 'lazy'} />
-                <div class="flex flex-col gap-4 p-6">
-                  <h2 class="font-bold">{post.data.title}</h2>
-                  <span class="text-lighter">
+                <BlogHeroImage
+                  heroImage={post.data.heroImage}
+                  title={post.data.title}
+                  height={100}
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                />
+                <div class='flex flex-col gap-4 p-6'>
+                  <h2 class='font-bold'>{post.data.title}</h2>
+                  <span class='text-lighter'>
                     <DateComponent
                       date={post.data.pubDate}
                       format={DateFormats.Day}
@@ -46,7 +53,7 @@ const posts = (await getCollection('blog')).sort(
                       </>
                     )}
                   </span>
-                  <span class="text-pretty">{post.data.description}</span>
+                  <span class='text-pretty'>{post.data.description}</span>
                 </div>
               </a>
             </li>

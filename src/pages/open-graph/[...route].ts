@@ -13,7 +13,7 @@ interface PageInfo {
 }
 
 const pages: Record<string, PageInfo> = Object.fromEntries(
-  collectionEntries.map(({ slug, data }) => [slug, data]),
+  collectionEntries.map(({ id, data }) => [id, data]),
 )
 
 pages.default = {
