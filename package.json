@@ -80,7 +80,7 @@
     "lighthouse": "13.0.3",
     "lint-staged": "16.4.0",
     "mdast-util-to-string": "4.0.0",
-    "oxfmt": "0.40.0",
+    "oxfmt": "0.41.0",
     "oxlint": "1.56.0",
     "playwright-lighthouse": "4.0.0",
     "react": "19.2.4",
