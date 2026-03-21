@@ -70,8 +70,8 @@ importers:
         version: 5.0.0(vue@3.5.30(typescript@5.9.3))
     devDependencies:
       '@antfu/ni':
-        specifier: 28.3.0
-        version: 28.3.0
+        specifier: 29.0.0
+        version: 29.0.0
       '@astrojs/check':
         specifier: 0.9.8
         version: 0.9.8(prettier@3.8.1)(typescript@5.9.3)
@@ -231,8 +231,8 @@ packages:
   '@antfu/install-pkg@1.1.0':
     resolution: {integrity: sha512-MGQsmw10ZyI+EJo45CdSER4zEb+p31LpDAFp2Z3gkSd1yqVZGi0Ebx++YTEMonJy4oChEMLsxZ64j8FH6sSqtQ==}
 
-  '@antfu/ni@28.3.0':
-    resolution: {integrity: sha512-JbRijiCNAGcQcyPfV0EXOJYwV27e/srXfTvETqzbbh4jzHBV2pDYiBz8rj5SyzX27aTbCK+qXR3x6g2WKokcrA==}
+  '@antfu/ni@29.0.0':
+    resolution: {integrity: sha512-JbKx3nSr2HRLtchKfg6RCBB6lwJvYZIeGFTO0fzjXdaekIFHPMN6gfnRUZU1raPvXTVF7EqGTWEreDnZVvrzwQ==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -5018,7 +5018,7 @@ snapshots:
       package-manager-detector: 1.6.0
       tinyexec: 1.0.2
 
-  '@antfu/ni@28.3.0':
+  '@antfu/ni@29.0.0':
     dependencies:
       ansis: 4.2.0
       fzf: 0.5.2

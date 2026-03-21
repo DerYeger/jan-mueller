@@ -46,7 +46,7 @@
     "vue-marmoset-viewer": "5.0.0"
   },
   "devDependencies": {
-    "@antfu/ni": "28.3.0",
+    "@antfu/ni": "29.0.0",
     "@astrojs/check": "0.9.8",
     "@astrojs/mdx": "5.0.2",
     "@astrojs/react": "5.0.1",
