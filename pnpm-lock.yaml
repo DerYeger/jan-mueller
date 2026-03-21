@@ -139,8 +139,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       astro-seo-schema:
-        specifier: 5.2.0
-        version: 5.2.0(astro@6.0.4(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.59.0)(typescript@5.9.3)(yaml@2.8.2))(schema-dts@1.1.5)
+        specifier: 6.0.0
+        version: 6.0.0(astro@6.0.4(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.59.0)(typescript@5.9.3)(yaml@2.8.2))(schema-dts@1.1.5)
       canvaskit-wasm:
         specifier: 0.40.0
         version: 0.40.0
@@ -2262,10 +2262,10 @@ packages:
   astro-robots-txt@1.0.0:
     resolution: {integrity: sha512-6JQSLid4gMhoWjOm85UHLkgrw0+hHIjnJVIUqxjU2D6feKlVyYukMNYjH44ZDZBK1P8hNxd33PgWlHzCASvedA==}
 
-  astro-seo-schema@5.2.0:
-    resolution: {integrity: sha512-Qj8xQuBMuxlzahV9z8Eav7itAVDTZVoC7CxMnPtgBIHzfWZCRfRoIepwmuPcR5qgM8H3lcbM53JMFJioxKUuiw==}
+  astro-seo-schema@6.0.0:
+    resolution: {integrity: sha512-6Etg+9zu7XdlUa40BIZrZP3vd+lReeJ1rNgT8Jer+1bPyGdrA/itQwJOhIkX+t5PadVwTmpt6xZouDycrZys6w==}
     peerDependencies:
-      astro: ^5.0.0
+      astro: ^6.0.0
       schema-dts: ^1.1.0
 
   astro@6.0.4:
@@ -7232,7 +7232,7 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.25.76
 
-  astro-seo-schema@5.2.0(astro@6.0.4(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.59.0)(typescript@5.9.3)(yaml@2.8.2))(schema-dts@1.1.5):
+  astro-seo-schema@6.0.0(astro@6.0.4(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.59.0)(typescript@5.9.3)(yaml@2.8.2))(schema-dts@1.1.5):
     dependencies:
       astro: 6.0.4(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.59.0)(typescript@5.9.3)(yaml@2.8.2)
       schema-dts: 1.1.5
