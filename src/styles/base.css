@@ -8,6 +8,16 @@
 @theme {
   /* IMPORTANT: Keep in sync with matchMedia in NavigationIndicator */
   --breakpoint-xxs: 350px;
+
+  --animate-spin: spin 150ms ease-out;
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 @utility border-medium {

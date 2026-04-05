@@ -10,17 +10,29 @@ const { class: className } = Astro.props as Props
 ---
 
 <button
-  id="theme-toggle"
-  class={cn('relative size-7 text-lighter hocus:text-strong transition-colors flex items-center translate-z-0 touch-manipulation focus-visible:focus-ring rounded-full', className)}
-  aria-label="Toggle theme"
-  title="Toggle dark/light mode"
-  type="button"
+  id='theme-toggle'
+  class={cn(
+    'relative size-7 text-lighter hocus:text-strong transition-colors flex items-center translate-z-0 touch-manipulation focus-visible:focus-ring rounded-full',
+    className,
+  )}
+  aria-label='Toggle theme'
+  title='Toggle dark/light mode'
+  type='button'
 >
-  <Icon aria-hidden="true" name="akar-icons:sun" class="size-5 absolute inset-1 opacity-100 dark:opacity-0 transition-opacity" />
-  <Icon aria-hidden="true" name="akar-icons:moon" class="size-5 absolute inset-1 opacity-0 dark:opacity-100 transition-opacity" />
+  <Icon
+    aria-hidden='true'
+    name='akar-icons:sun'
+    class='size-5 absolute inset-1 opacity-100 dark:opacity-0 transition-opacity'
+  />
+  <Icon
+    aria-hidden='true'
+    name='akar-icons:moon'
+    class='size-5 absolute inset-1 opacity-0 dark:opacity-100 transition-opacity'
+  />
 </button>
 
 <script>
+  const ANIMATE_CLASS = 'motion-safe:animate-spin'
   const themeToggle = document.getElementById('theme-toggle')
 
   themeToggle?.addEventListener('click', toggleTheme)
@@ -28,6 +40,11 @@ const { class: className } = Astro.props as Props
   function toggleTheme() {
     const html = document.documentElement
     const metaTag = document.querySelector('meta[name="theme-color"]')!
+    if (themeToggle?.classList.contains(ANIMATE_CLASS)) {
+      themeToggle.classList.remove(ANIMATE_CLASS)
+      void themeToggle.offsetWidth
+    }
+    themeToggle?.classList.add(ANIMATE_CLASS)
     if (html.classList.contains('dark')) {
       html.classList.remove('dark')
       localStorage.setItem('theme', 'light')
@@ -39,3 +56,17 @@ const { class: className } = Astro.props as Props
     }
   }
 </script>
+
+<style is:global>
+  @keyframes theme-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
