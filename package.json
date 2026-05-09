@@ -80,7 +80,7 @@
     "html-escaper": "3.0.3",
     "husky": "9.1.7",
     "lighthouse": "13.1.0",
-    "lint-staged": "16.4.0",
+    "lint-staged": "17.0.2",
     "mdast-util-to-string": "4.0.0",
     "oxfmt": "0.47.0",
     "oxlint": "1.62.0",
