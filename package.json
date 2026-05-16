@@ -56,7 +56,7 @@
     "@astrojs/sitemap": "3.7.2",
     "@astrojs/vue": "6.0.1",
     "@axe-core/playwright": "4.11.3",
-    "@commitlint/cli": "20.5.3",
+    "@commitlint/cli": "21.0.1",
     "@commitlint/config-conventional": "20.5.3",
     "@playwright/test": "1.60.0",
     "@tailwindcss/typography": "0.5.19",
