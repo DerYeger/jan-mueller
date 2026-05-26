@@ -37,7 +37,7 @@
     "baklavajs": "2.8.1",
     "bidc": "0.0.4",
     "comlink": "4.4.2",
-    "date-fns": "4.2.1",
+    "date-fns": "4.3.0",
     "exifreader": "4.39.1",
     "leaflet": "1.9.4",
     "mermaid": "11.15.0",
@@ -104,5 +104,5 @@
   "lint-staged": {
     "*": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@11.2.2"
+  "packageManager": "pnpm@11.3.0"
 }
