@@ -1,3 +1,4 @@
+import { unified } from '@astrojs/markdown-remark'
 import mdx from '@astrojs/mdx'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
@@ -61,18 +62,20 @@ export default defineConfig({
     prefetchAll: true,
   },
   markdown: {
-    gfm: true,
-    remarkPlugins: [remarkReadingTime],
-    rehypePlugins: [
-      rehypeSlug,
-      [autolinkHeadings, autolinkConfig],
-      [
-        rehypeExternalLinks,
-        {
-          target: '_blank',
-          rel: 'noreferrer',
-        },
+    processor: unified({
+      gfm: true,
+      remarkPlugins: [remarkReadingTime],
+      rehypePlugins: [
+        rehypeSlug,
+        [autolinkHeadings, autolinkConfig],
+        [
+          rehypeExternalLinks,
+          {
+            target: '_blank',
+            rel: 'noreferrer',
+          },
+        ],
       ],
-    ],
+    }),
   },
 })
