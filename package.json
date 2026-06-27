@@ -55,7 +55,7 @@
     "@astrojs/react": "5.0.7",
     "@astrojs/rss": "4.0.18",
     "@astrojs/sitemap": "3.7.3",
-    "@astrojs/vue": "6.0.1",
+    "@astrojs/vue": "7.0.0",
     "@axe-core/playwright": "4.12.1",
     "@commitlint/cli": "21.1.0",
     "@commitlint/config-conventional": "21.1.0",
