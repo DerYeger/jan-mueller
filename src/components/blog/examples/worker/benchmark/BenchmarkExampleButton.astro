@@ -5,14 +5,15 @@ import type { Type } from '@components/ui/ExampleButton.astro'
 interface Props {
   size: number
   text: string
-  compact?: boolean
   type?: Type
 }
 
-const { size, text, compact, type = 'safe' } = Astro.props
+const { size, text, type = 'safe' } = Astro.props
 ---
 
-<ExampleButton id={`benchmark-${size}`} data-target="benchmark" type={type} compact={compact}>{text}</ExampleButton>
+<ExampleButton id={`benchmark-${size}`} data-target='benchmark' type={type}
+  >{text}</ExampleButton
+>
 <script is:inline define:vars={{ size }}>
   const button = document.getElementById(`benchmark-${size}`)
   button.addEventListener('click', () => {

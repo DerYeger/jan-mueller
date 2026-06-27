@@ -13,15 +13,36 @@ interface Props {
 
 const { role, id, isOnlyRole } = Astro.props
 
-const duration = formatDuration(getDuration([{ from: role.startDate, to: role.endDate ?? getToday() }]))
+const duration = formatDuration(
+  getDuration([{ from: role.startDate, to: role.endDate ?? getToday() }]),
+)
 ---
 
-<Heading id={id} level={4} class="font-medium text-strong mb-1 text-lg" id={id} isGroup={false}>
+<Heading
+  id={id}
+  level={4}
+  class='font-medium text-strong mb-1 text-lg'
+  id={id}
+  isGroup={false}
+>
   {role.title}
 </Heading>
-{role.description ? <div class="text-lighter text-sm mb-1 md:whitespace-nowrap">{role.description}</div> : null}
-{!isOnlyRole ? <div>
-  <DateRange startDate={role.startDate} endDate={role.endDate} format={DateFormats.Month} />
-  <Dot />
-  <span class="whitespace-nowrap">{duration}</span>
-</div> : null }
+{
+  role.description ? (
+    <div class='text-lighter text-sm mb-1 md:whitespace-nowrap'>
+      {role.description}
+    </div>
+  ) : null
+}
+{
+  !isOnlyRole ? (
+    <div>
+      <DateRange
+        startDate={role.startDate}
+        endDate={role.endDate}
+        format={DateFormats.Month}
+      />{' '}
+      <Dot /> <span class='whitespace-nowrap'>{duration}</span>
+    </div>
+  ) : null
+}

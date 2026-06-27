@@ -19,7 +19,7 @@ const { education } = Astro.props as Props
   </div>
   <span class="text-lg">
     <a href={education.href} rel="noreferrer" target="_blank">{education.institution}</a>
-    <Dot />
+    {' '}<Dot />{' '}
     {education.grade}
   </span>
 

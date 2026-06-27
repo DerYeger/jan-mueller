@@ -54,7 +54,7 @@ export function getPrimeFactors(n: number): PrimeFactorsResult {
 It's neither efficient nor elegant, but let's have a look at what happens when we run this code in the main thread of a web application.
 Below, you'll find an interactive factorizer, but you can also try some selected examples with the following buttons.
 You'll see that it works fine for <FactorizerExampleButton id="no-worker" value={42} text="small factors" /> and, although slower, for <FactorizerExampleButton id="no-worker" value={1000036000099} text="large factors" /> with no tangible effects on the UI's performance.
-However, if you're ready to deal with a frozen UI for around 40 seconds, you can try it out with <FactorizerExampleButton id="no-worker" value={100001000013699905017} text="very large factors" type="danger" compact />.
+However, if you're ready to deal with a frozen UI for around 40 seconds, you can try it out with <FactorizerExampleButton id="no-worker" value={100001000013699905017} text="very large factors" type="danger" />.
 Note that in neither case you'll see the loading animation of the result view due to the synchronous execution that blocks any updates on the main thread.
 
 import SynchronousFactorizer from '@components/blog/examples/worker/SynchronousFactorizer.astro'
@@ -217,7 +217,7 @@ worker.getPrimeFactors(42).then((factors) => {
 })
 ```
 
-Here's the running example with <FactorizerExampleButton id="comlink-worker" value={42} text="small factors" compact />, <FactorizerExampleButton id="comlink-worker" value={1000036000099} text="large factors" compact />, and <FactorizerExampleButton id="comlink-worker" value={100001000013699905017} text="very large factors" type="danger" /> for completion.
+Here's the running example with <FactorizerExampleButton id="comlink-worker" value={42} text="small factors" />, <FactorizerExampleButton id="comlink-worker" value={1000036000099} text="large factors" />, and <FactorizerExampleButton id="comlink-worker" value={100001000013699905017} text="very large factors" type="danger" /> for completion.
 Note that there is no difference in the UI's performance, but the code is much cleaner and easier to read.
 
 import ComlinkWorkerFactorizer from '@components/blog/examples/worker/ComlinkWorkerFactorizer.astro'
@@ -283,7 +283,7 @@ send(42)
 
 > `bidc` also supports other event channels such as embedded iframes.
 
-One more time, here's the previous example with <FactorizerExampleButton id="bidc-worker" value={42} text="small factors" compact />, <FactorizerExampleButton id="bidc-worker" value={1000036000099} text="large factors" compact />, and <FactorizerExampleButton id="bidc-worker" value={100001000013699905017} text="very large factors" type="danger"/> again.
+One more time, here's the previous example with <FactorizerExampleButton id="bidc-worker" value={42} text="small factors" />, <FactorizerExampleButton id="bidc-worker" value={1000036000099} text="large factors" />, and <FactorizerExampleButton id="bidc-worker" value={100001000013699905017} text="very large factors" type="danger"/> again.
 Just like above, the UI's performance is not affected, but the code is cleaner and easier to read.
 
 import BIDCWorkerFactorizer from '@components/blog/examples/worker/BIDCWorkerFactorizer.astro'
@@ -363,7 +363,7 @@ Transferable objects are a special type of object that can be transferred betwee
 This can significantly reduce the overhead of sending large amounts of data, but a transferred object is no longer available in the original thread.
 Both plain web workers and Comlink workers support transferable objects.
 
-Again, you can play around with different numbers or try <BenchmarkExampleButton size={42} text="small arrays" compact />, <BenchmarkExampleButton size={1000000} text="medium arrays" compact />, and <BenchmarkExampleButton size={10000000} text="very large arrays" type="danger" compact />.
+Again, you can play around with different numbers or try <BenchmarkExampleButton size={42} text="small arrays" />, <BenchmarkExampleButton size={1000000} text="medium arrays" />, and <BenchmarkExampleButton size={10000000} text="very large arrays" type="danger" />.
 
 import WorkerBenchmark from '@components/blog/examples/worker/benchmark/WorkerBenchmark.astro'
 

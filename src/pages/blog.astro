@@ -48,7 +48,8 @@ const posts = (await getCollection('blog')).sort(
                     />
                     {remarkPluginFrontmatter && (
                       <>
-                        <Dot />
+                        {' '}
+                        <Dot />{' '}
                         <span>{remarkPluginFrontmatter.readingTime}</span>
                       </>
                     )}

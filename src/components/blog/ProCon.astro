@@ -33,9 +33,9 @@ function getEntryLink(entry: Entry) {
 }
 ---
 
-<div class="ga-2 flex flex-col items-center">
-  {title ? <div class="font-semibold">{ title }</div> : null}
-  <table class="pro-cons">
+<div class='ga-2 flex flex-col items-center'>
+  {title ? <div class='font-semibold'>{title}</div> : null}
+  <table class='pro-cons'>
     <thead>
       <tr>
         <th>Pro</th>
@@ -43,30 +43,38 @@ function getEntryLink(entry: Entry) {
       </tr>
     </thead>
     <tbody>
-      {Array.from({ length: rowCount }).map((_, index) => (
-        <tr>
-          <td class="w-1/2 text-green-700 dark:text-green-500">
-            {pro[index] ? <span>
-              {getEntryText(pro[index])}
-              {hasEntryLink(pro[index]) ? (
-                <a href={getEntryLink(pro[index])}>
-                  (read more)
-                </a>
+      {
+        Array.from({ length: rowCount }).map((_, index) => (
+          <tr>
+            <td class='w-1/2 text-green-700 dark:text-green-500'>
+              {pro[index] ? (
+                <>
+                  {getEntryText(pro[index])}
+                  {hasEntryLink(pro[index]) ? (
+                    <>
+                      {' '}
+                      <a href={getEntryLink(pro[index])}>(read more)</a>
+                    </>
+                  ) : null}
+                </>
               ) : null}
-            </span> : null}
-          </td>
-          <td class="w-1/2 text-red-700 dark:text-red-500">
-            {con[index] ? <span>
-              {getEntryText(con[index])}
-              {hasEntryLink(con[index]) ? (
-                <a href={getEntryLink(con[index])}>
-                  (read more)
-                </a>
+            </td>
+            <td class='w-1/2 text-red-700 dark:text-red-500'>
+              {con[index] ? (
+                <>
+                  {getEntryText(con[index])}
+                  {hasEntryLink(con[index]) ? (
+                    <>
+                      {' '}
+                      <a href={getEntryLink(con[index])}>(read more)</a>
+                    </>
+                  ) : null}
+                </>
               ) : null}
-            </span> : null}
-          </td>
-        </tr>
-      ))}
+            </td>
+          </tr>
+        ))
+      }
     </tbody>
   </table>
 </div>

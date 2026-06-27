@@ -20,36 +20,35 @@ const year = getToday().getFullYear()
     className,
   )}
 >
-  <FooterColumn title="Legal" role="navigation">
-    <a href="/impressum/" lang="de">Impressum</a>
-    <a href="/legal-notice/">Legal Notice</a>
-    <span class="copyright">
+  <FooterColumn title='Legal' role='navigation'>
+    <a href='/impressum/' lang='de'>Impressum</a>
+    <a href='/legal-notice/'>Legal Notice</a>
+    <span class='copyright'>
       {year} &copy; Jan M&uuml;ller
     </span>
   </FooterColumn>
-  <FooterColumn title="Resources" role="navigation">
-    <a href="/rss.xml"> RSS Feed</a>
+  <FooterColumn title='Resources' role='navigation'>
+    <a href='/rss.xml'> RSS Feed</a>
     <a
-      href="https://github.com/DerYeger/jan-mueller"
-      rel="noreferrer"
-      target="_blank"
-
+      href='https://github.com/DerYeger/jan-mueller'
+      rel='noreferrer'
+      target='_blank'
     >
       Source
       <OpenInNew />
     </a>
   </FooterColumn>
-  <FooterColumn title="Contact" role="navigation">
+  <FooterColumn title='Contact' role='navigation'>
     {
       accounts.map((account) => (
-        <a href={account.href} rel="noreferrer" target="_blank">
+        <a href={account.href} rel='noreferrer' target='_blank'>
           {account.name}
           <OpenInNew />
         </a>
       ))
     }
-    <address class="not-italic">
-      <a href="mailto:mail@janmueller.dev" title="Mail">Mail</a>
+    <address class='not-italic'>
+      <a href='mailto:mail@janmueller.dev' title='Mail'>Mail</a>
     </address>
   </FooterColumn>
 </footer>

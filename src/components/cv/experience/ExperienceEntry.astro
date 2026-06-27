@@ -49,8 +49,8 @@ function isActive(role: ExperienceType['roles'][number]) {
       {
         experience.intermediate ? (
           <>
-            <Dot />
-            via
+            {' '}
+            <Dot /> via{' '}
             <a
               href={experience.intermediate.link}
               rel='noreferrer'
@@ -73,8 +73,8 @@ function isActive(role: ExperienceType['roles'][number]) {
           />
           {duration ? (
             <>
-              <Dot />
-              <span class='whitespace-nowrap'>{formattedDuration}</span>
+              {' '}
+              <Dot /> <span class='whitespace-nowrap'>{formattedDuration}</span>
             </>
           ) : null}
         </div>
