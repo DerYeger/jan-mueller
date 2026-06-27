@@ -72,7 +72,7 @@
     "astro-icon": "1.1.5",
     "astro-og-canvas": "0.11.1",
     "astro-robots-txt": "1.0.0",
-    "astro-seo-schema": "6.0.0",
+    "astro-seo-schema": "7.0.0",
     "canvaskit-wasm": "0.41.1",
     "clsx": "2.1.1",
     "get-port": "7.2.0",
