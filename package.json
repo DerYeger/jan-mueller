@@ -32,7 +32,7 @@
     "@iconify-json/mdi": "1.2.3",
     "@iconify-json/radix-icons": "1.2.6",
     "@yeger/vue-masonry-wall": "6.1.4",
-    "astro-expressive-code": "0.44.1",
+    "astro-expressive-code": "0.44.2",
     "astro-mermaid": "2.1.0",
     "baklavajs": "2.8.1",
     "bidc": "0.0.4",
@@ -50,11 +50,11 @@
   "devDependencies": {
     "@antfu/ni": "30.5.0",
     "@astrojs/check": "0.9.10",
-    "@astrojs/markdown-remark": "7.2.4",
+    "@astrojs/markdown-remark": "7.3.0",
     "@astrojs/mdx": "7.0.8",
-    "@astrojs/react": "6.0.4",
+    "@astrojs/react": "6.0.5",
     "@astrojs/rss": "4.0.19",
-    "@astrojs/sitemap": "3.7.3",
+    "@astrojs/sitemap": "3.7.4",
     "@astrojs/vue": "7.0.2",
     "@axe-core/playwright": "4.13.0",
     "@commitlint/cli": "21.2.2",
@@ -64,13 +64,13 @@
     "@tailwindcss/vite": "4.3.3",
     "@types/html-escaper": "3.0.4",
     "@types/leaflet": "1.9.22",
-    "@types/node": "26.4.0",
+    "@types/node": "26.4.1",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
     "@yeger/debounce": "2.0.20",
-    "astro": "7.2.9",
+    "astro": "7.2.10",
     "astro-icon": "1.2.0",
-    "astro-og-canvas": "0.13.0",
+    "astro-og-canvas": "0.13.1",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "7.0.0",
     "canvaskit-wasm": "0.42.0",
@@ -83,8 +83,8 @@
     "lighthouse": "13.4.1",
     "lint-staged": "17.4.1",
     "mdast-util-to-string": "4.0.0",
-    "oxfmt": "0.65.0",
-    "oxlint": "1.80.0",
+    "oxfmt": "0.66.0",
+    "oxlint": "1.81.0",
     "playwright-lighthouse": "4.0.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
@@ -105,5 +105,5 @@
   "lint-staged": {
     "*": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@11.24.0"
+  "packageManager": "pnpm@11.25.0"
 }
