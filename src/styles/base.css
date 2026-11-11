@@ -175,6 +175,10 @@
     & .edgeLabel p {
       @apply bg-neutral-50!;
     }
+
+    & .nodeLabel p {
+      text-align: center;
+    }
   }
 }
 
