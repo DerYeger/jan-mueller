@@ -7,6 +7,8 @@ minimumReleaseAge: 2880
 minimumReleaseAgeExclude:
   - '@yeger/*'
   - 'vue-marmoset-viewer'
+  # Renovate security update: astro@7.4.7
+  - astro@7.4.7
 
 trustPolicy: no-downgrade
 trustPolicyIgnoreAfter: 2880
