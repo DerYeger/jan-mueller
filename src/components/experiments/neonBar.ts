@@ -1,7 +1,5 @@
 import { Vector } from 'vecti'
 
-export {}
-
 const neonBars = document.querySelectorAll<HTMLElement>('.neon-bar')
 neonBars.forEach((neonBar) => {
   let percentage = 0
