@@ -62,7 +62,8 @@ export const PAGES: {
   {
     url: '/blog/react-leaflet',
     thresholds: {
-      accessibility: 0, // OpenStreetMap drops accessibility to 0,
+      accessibility: 0, // OpenStreetMap drops accessibility to 0
+      'best-practices': 96, // Carto is restricted to prod deployments
       performance: 95,
     },
   },
@@ -96,6 +97,7 @@ export const PAGES: {
     url: '/photography/maps/japan',
     thresholds: {
       accessibility: 0, // OpenStreetMap drops accessibility to 0
+      'best-practices': 96, // Carto is restricted to prod deployments
       performance: 85, // preview serves images inefficiently
     },
     skip: {

@@ -1,14 +1,15 @@
 import { LazyMarker, LazyMarkerCluster } from '@components/blog/examples/LeafletMap.lazy'
+import { CARTO_API_URL } from '@utils/carto'
 import type { MapImage } from '@utils/photographyUtils'
 import { debounce } from '@yeger/debounce'
 import type { MapOptions } from 'leaflet'
 import { icon } from 'leaflet'
 import type { FC } from 'react'
 import { Suspense, lazy, useEffect, useRef } from 'react'
-import { MapContainer, TileLayer, useMap, ZoomControl } from 'react-leaflet'
 
 import 'leaflet/dist/leaflet.css'
 import '@styles/photography-map.css'
+import { MapContainer, TileLayer, useMap, ZoomControl } from 'react-leaflet'
 
 const HEADER_HEIGHT = 90 + 2 * 16
 
@@ -115,7 +116,7 @@ export const PhotographyMap: FC<
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+          url={CARTO_API_URL}
         />
         <ZoomControl position="bottomleft" />
         <Suspense fallback={<></>}>
