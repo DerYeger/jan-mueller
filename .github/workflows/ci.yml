@@ -10,9 +10,9 @@ jobs:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v7
       - name: Setup
-        uses: DerYeger/pnpm-setup-action@master
-        with:
-          node-version-file: .node-version
-      - name: Build, check, lint, and test
+        uses: pnpm/setup@v3
+      - name: Checks
         run: pnpm run ci
